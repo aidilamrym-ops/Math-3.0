@@ -25,10 +25,14 @@ class LeanFormalExporter:
         lean_lines.append(f"  {joined} :=")
         lean_lines.append("by")
         # ponytail: single assertion closes with norm_num; conjunction via constructor split.
-        if len(assertions) <= 1:
+        if len(assertions) == 0:
+            lean_lines.append("  trivial")
+        elif len(assertions) == 1:
             lean_lines.append("  norm_num")
         else:
-            lean_lines.append("  refine ⟨?_, ?_⟩ <;> norm_num")
+            # Dynamic recursive constructor splitting for arbitrary conjunction size
+            splits = " <;> ".join(["constructor"] * (len(assertions) - 1))
+            lean_lines.append(f"  {splits} <;> norm_num")
         lean_lines.append("")
         try:
             os.makedirs(os.path.dirname(target_path), exist_ok=True)
