@@ -41,7 +41,7 @@ class IntervalEvolver:
         jitter = current_config.get("jitter", 0.0)
         gen = current_config.get("generation", 0) + 1
 
-        new_prec = min(prec * 2, 24000)
+        new_prec = min(prec * 2, 96000)
         new_jitter = jitter + 0.001
 
         mutated_config = {
