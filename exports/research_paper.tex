@@ -1,0 +1,156 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{url}
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title{Math 3.0: Formal Evidence Appendix for the Finite-Lattice\\Spectral Gap Closure}
+\author{Math 3.0 Invariant Hybrid Engine}
+\date{2026-11-05}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This appendix records the machine-checked evidence produced during Phases 2--5 of the Math 3.0 programme: the interval spectral enclosures, the exact rational Newton-box ledger, the Sylvester inertia classification, and the Z3 quantifier-free integer-lattice tribunal at scale $10^{18}$. All numeric constants below are transcribed from the sealed JSON reports, not recomputed. The certified inertia reduction applies to the $3 \times 3$ truncated Guinand--Weil block; the declared transition dimensions 201 and 301 are stated as a scaling target and are not certified by any artifact in this repository.
+\end{abstract}
+
+\section{Sealed provenance}
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Item & Value \\
+\midrule
+Commit & \code{a73a167298a93981b98d32099cdd2c03d263316a} \\
+Tree & \code{46561309c679ef536821ede6041b69f3e7f2b5a3} \\
+Z3 version & \code{5.0.0} \\
+Logic & \code{QF_LIA} \\
+Lattice scale & $10^{18}$ \\
+Solver binding & \code{z3/lib/libz3.dll} via Python \\
+Verdict & \code{PASSED} \\
+Signature & $(3,0,0)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Exact eigenvalue and contraction ledger}
+
+The phase-2 enclosures are given as exact rationals $(m_i - r_i, m_i + r_i)$ and projected onto the closed integer lattice $e_i/10^{18}$ with
+\[
+L_i = \left\lceil 10^{18}(m_i - r_i) \right\rceil, \qquad
+U_i = \left\lfloor 10^{18}(m_i + r_i) \right\rfloor .
+\]
+
+\begin{center}
+\begin{tabular}{@{}crrr@{}}
+\toprule
+$i$ & Rational lower & Rational upper & Contraction cap $\lceil 10^{18} C_i \rceil$ \\
+\midrule
+0 & $6662536465408643/500000000000000$ & $1002950524528233/62500000000000$ & $142236414018844180$ \\
+1 & $2602369388897673/250000000000000$ & $6609120560570147/500000000000000$ & $183612969413261300$ \\
+2 & $2213730785570109/200000000000000$ & $2786269214429891/200000000000000$ & $176678532445753020$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{}crr@{}}
+\toprule
+$i$ & $L_i$ & $U_i$ \\
+\midrule
+0 & $13325072930817286000$ & $16047208392451728000$ \\
+1 & $10409477555590692000$ & $13218241121140294000$ \\
+2 & $11068653927850545000$ & $13931346072149455000$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Certified maximum contraction is $0.1836129694132613 < 1/2$, with \code{boundary\_escape = False} and \code{unique\_root\_certified = True}. The corresponding exact ledger fractions are
+\[
+C_0 = \frac{7111820700942209}{50000000000000000},\quad
+C_1 = \frac{1836129694132613}{10000000000000000},\quad
+C_2 = \frac{8833926622287651}{50000000000000000}.
+\]
+
+\section{Sylvester inertia}
+
+Interval $LDL^{T}$ classification on the three diagonal pivot balls of the phase-2 report returns \code{contains\_zero = False} and \code{signed\_definite = True} for every pivot. Hence
+\[
+\operatorname{inertia}(A) = (n_+, n_-, n_0) = (3, 0, 0).
+\]
+No zero-straddle was detected and no precision escalation was triggered.
+
+\section{Z3 tribunal verdicts}
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Script & Claim & Result \\
+\midrule
+\code{sign\_flip\_absence.smt2} & no box lattice point has $e_i \le 0$ & \code{unsat} \\
+\code{contraction\_bound.smt2} & no cap value satisfies $2c \ge 10^{18}$ & \code{unsat} \\
+\code{ledger\_cross\_multiplication.smt2} & no ledger fraction has $2\,\text{num} \ge \text{den}$ or non-positive endpoint & \code{unsat} \\
+\code{box\_feasibility\_witness.smt2} & every closed lattice is nonempty with a strict contraction witness & \code{sat} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The witness model returned by Z3 is
+\begin{verbatim}
+c1 = 183612969413261300
+c0 = 142236414018844180
+c2 = 176678532445753020
+e0 = 14686140661634507000
+e1 = 11813859338365493000
+e2 = 12500000000000000000
+\end{verbatim}
+The witness is a satisfiability check only and is excluded from the proof gate.
+
+\section{Scope limitation}
+
+The tribunal is a quantifier-free integer-lattice refutation over the conservative phase-3 boxes $e_i \pm r_i$. Its conclusions are conditional on those boxes enclosing the phase-2 eigenvalues; the enclosure itself is not re-proven by Z3. The certified inertia reduction covers the $3 \times 3$ truncated Guinand--Weil block at quantum slice $c = 13$. The transition dimensions 201 and 301 are the declared scaling target; they are not certified by any artifact in this repository.
+
+\section{SHA-256 evidence hashes}
+
+All hashes follow the repository convention: SHA-256 over file bytes with CRLF normalised to LF.
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Artifact & SHA-256 \\
+\midrule
+\code{reports/z3\_tribunal\_bounds.json} & \code{e8ce8034ef43386836703ba32409dbe5df17e063aeec325efa6d0c3cd8411e59} \\
+\code{z3\_tribunal.py} & \code{d6e1726fe0415e8730e054483cd758fb99092ad2b7ee1cb01a68bcd81f94284e} \\
+\code{reports/topological\_uniqueness.json} & \code{23f60d86a83bf74a6756041278221a4a5e60bd886ccca942754aa7e13f046c91} \\
+\code{reports/lte\_spectral\_validation.json} & \code{c009d9b94f5193d63150db44438bb33b6066f6ab70c7226535da3bf14da65d54} \\
+\code{smt/phase4/sign\_flip\_absence.smt2} & \code{cc6d3cd10c25240739364b6ae403eb4a878579451d07704e859bd89d689818f1} \\
+\code{smt/phase4/sign\_flip\_absence.log} & \code{d383da712c537c5aacbeab59669f4496f1908e91a9c2448fe5503acecde12e04} \\
+\code{smt/phase4/contraction\_bound.smt2} & \code{e74a2bd430c4c16ffc80cdd30a4346464801eeab9d351360366f976514058553} \\
+\code{smt/phase4/contraction\_bound.log} & \code{7ecbe2eb1279ccb94dfa17a67ed77994740fb686253422cc7c20a02e1a861523} \\
+\code{smt/phase4/ledger\_cross\_multiplication.smt2} & \code{db1dc48e5e49cb3695d60ad729f1b17b830e9229fb17a65e11e517008b471dfb} \\
+\code{smt/phase4/ledger\_cross\_multiplication.log} & \code{def670ddefd6866648cf6db5409ed64dca71f098fd4adc12cc6d549e8cb5c778} \\
+\code{smt/phase4/box\_feasibility\_witness.smt2} & \code{2bab6b8428b74463ed3ac7265974418e38e1e63bd48da951210e6a2677755c1c} \\
+\code{smt/phase4/box\_feasibility\_witness.log} & \code{9f7c0db8ed3f34df51ff6249762f630ef3733a16fb18c3ed16d344100937285d} \\
+\code{lean/spec\_v4/ForensicEvidence.lean} & \code{2a99d079a3286084a3fee12549c0d36db1cd411645f15a7092d8335445ffb33d} \\
+\code{lean/spec\_v4/AbcCensusEvidence.lean} & \code{79f7858f1f8bd4d8630a0428ca7fe95178792886b01f779e8aef5e58a0b9255a} \\
+\code{mcp/out/spectral\_gap\_closure\_map.svg} & \code{f8565c93f9a27bb58e999952c4185fefdb69025958cc2db801ede1cbfae068e8} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Requested anchor.} The requested hash prefix \code{07e14837...} does not match any artifact, manifest row, commit, tree, or blob in this repository. This appendix therefore cites the verified hashes above rather than that anchor.
+
+\section{Reproduction}
+
+\begin{verbatim}
+python z3_tribunal.py
+python mcp/t2n/core/repokeeper.py
+python suite_check.py
+\end{verbatim}
+
+\end{document}
