@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "macro_limit_m": 8.8e+26,
+  "micro_limit_m": 1.616255e-35,
+  "addressable_steps": "5.44e+61",
+  "lipschitz_contraction_verified": true
+}

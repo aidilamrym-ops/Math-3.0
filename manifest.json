@@ -10,7 +10,11 @@
   "failed_world_trace.json": "46e8a7909c188d2dacd59f3b6a6c4702a7a2a0b8187f4917d9478f8c69992080",
   "mcp\\t2n\\core\\repokeeper.py": "5a116dad8b4682f51fa2b676fff26c22db70bef1cf500a4931df23103c44e3d0",
   "opencode.jsonc": "4bb99d5beeff0dc3741556ac2ad34364fcda6cceb5f706150f7bc487e652af8b",
+  "reports\\navier_stokes_blowup_trace.json": "e8544d0fce9e54a6633f93c2e869c615a1295ed4b02df8210575c7f86aeffa5e",
+  "reports\\rh_spectral_anomalies.json": "d822785f3bdeaf06484628dafc2e60e6c3514f479ff12ab9d166f9050db8ee05",
+  "reports\\triad_state_transitions.json": "db231a929e25de72d272d433755cb0550fe8e5081e8ee50fb8582d570ad8b038",
   "residual_register.md": "abe7f6f166dbe8a858110ea112329d0fbc0dc9e0a189ca947008a9f09c1b6e4a",
+  "rigorous_adversarial_suite.py": "165dd0d6778bc101c4a58bc4cdacb12b1c8d90672357791792601bf3be3923cf",
   "runtime_config.json": "e0d3f40d7992d53870cc9fb4bbc9423ea2599f47fcba3edf0c9737c65e672a24",
   "suite_check.py": "775d610f0c849e6d4ad17942835f63e0b02d2004556675f2eed99b9b9c54cb4a"
 }
