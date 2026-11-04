@@ -1,0 +1,18 @@
+# Math 3.0 Absolute Verification Pipeline Automation
+
+.PHONY: verify clean environment-audit
+
+verify: environment-audit
+	@echo "Executing Math 3.0 Universal Gate Suite..."
+	python3 suite_check.py
+
+environment-audit:
+	@echo "Checking system toolchain specifications..."
+	@python3 -c "import flint" || (echo "FATAL: python-flint package missing." && exit 2)
+	@z3 --version || (echo "FATAL: Z3 SMT CLI missing from path." && exit 2)
+	@lean --version || (echo "FATAL: Lean 4 compiler missing from path." && exit 2)
+
+clean:
+	@echo "Purging temporary run caches from tracking zones..."
+	find . -type d -name "__pycache__" -exec rm -rf {} +
+	rm -rf mcp/out/*

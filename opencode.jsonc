@@ -1,0 +1,60 @@
+{
+  "$schema": "https://open-code.json",
+  "mcp.servers": {
+    "t2n_repokeeper": {
+      "command": "C:\\Python314\\python.exe",
+      "args": ["-u", "mcp/t2n/core/repokeeper.py"],
+      "env": {
+        "MATH30_WORKSPACE_ENV": "PRODUCTION",
+        "PYTHONPATH": "."
+      },
+      "phase": "F1",
+      "description": "Infrastructure integrity layer, manifest pinning, and automated pytest hooks."
+    },
+    "t2n_archivist": {
+      "command": "C:\\Python314\\python.exe",
+      "args": ["-u", "mcp/t2n/core/archivist.py"],
+      "env": {
+        "PYTHONPATH": "."
+      },
+      "phase": "F1",
+      "description": "Rigorous corpus search engine and historical ledger tracking."
+    },
+    "t2n_scribe": {
+      "command": "C:\\Python314\\python.exe",
+      "args": ["-u", "mcp/t2n/core/scribe.py"],
+      "env": {
+        "PYTHONPATH": "."
+      },
+      "phase": "F2",
+      "description": "Append-only evidence ledger coordinator enforcing forced-release logging."
+    },
+    "t2n_watchtower": {
+      "command": "C:\\Python314\\python.exe",
+      "args": ["-u", "mcp/t2n/core/watchtower.py"],
+      "env": {
+        "PYTHONPATH": "."
+      },
+      "phase": "F2",
+      "description": "Sub-process hardware isolation supervisor guarding telemetry stream signatures."
+    },
+    "t2n_science": {
+      "command": "C:\\Python314\\python.exe",
+      "args": ["-u", "mcp/t2n/core/science.py"],
+      "env": {
+        "PYTHONPATH": "."
+      },
+      "phase": "F3",
+      "description": "Pure interval numerical evaluator and rational Fraction operations matrix."
+    },
+    "t2n_illumina": {
+      "command": "C:\\Python314\\python.exe",
+      "args": ["-u", "mcp/t2n/core/illumina.py"],
+      "env": {
+        "PYTHONPATH": "."
+      },
+      "phase": "F5",
+      "description": "Local standalone graph generator providing zero-CDN inline HTML visualization."
+    }
+  }
+}
