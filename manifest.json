@@ -26,11 +26,10 @@
   "runtime_config.json": "9472fcea5fdcb9825cf557bb5a590d2a64d9383fb607c6b4078ea2da2843dab1",
   "suite_check.py": "775d610f0c849e6d4ad17942835f63e0b02d2004556675f2eed99b9b9c54cb4a",
   "newton_box_validator.py": "5989db90d6a8c253ffb4c930038242527f512ff26133e7f5342df9db3158ecd1",
-  "reports\\topological_uniqueness.json": "03e3e990b4fb1a559a298a6cdf9342341752f4ac23a7f9b8cc61aaafadc39b4f",
+  "reports\\topological_uniqueness.json": "23f60d86a83bf74a6756041278221a4a5e60bd886ccca942754aa7e13f046c91",
   "reports\\\\topological_uniqueness.json": "23f60d86a83bf74a6756041278221a4a5e60bd886ccca942754aa7e13f046c91",
   "smt\\phase4\\box_feasibility_witness.log": "9f7c0db8ed3f34df51ff6249762f630ef3733a16fb18c3ed16d344100937285d",
   "smt\\phase4\\box_feasibility_witness.smt2": "2bab6b8428b74463ed3ac7265974418e38e1e63bd48da951210e6a2677755c1c",
-  "smt\\phase4\\box_lower_endpoint_positivity.smt2": "92dd010f0bb3a3e586dc324d1f6fb4031a9aa6809c83df8960593e01bbcbf24f",
   "smt\\phase4\\contraction_bound.log": "7ecbe2eb1279ccb94dfa17a67ed77994740fb686253422cc7c20a02e1a861523",
   "smt\\phase4\\contraction_bound.smt2": "e74a2bd430c4c16ffc80cdd30a4346464801eeab9d351360366f976514058553",
   "smt\\phase4\\ledger_cross_multiplication.log": "def670ddefd6866648cf6db5409ed64dca71f098fd4adc12cc6d549e8cb5c778",
@@ -38,6 +37,5 @@
   "smt\\phase4\\sign_flip_absence.log": "d383da712c537c5aacbeab59669f4496f1908e91a9c2448fe5503acecde12e04",
   "smt\\phase4\\sign_flip_absence.smt2": "cc6d3cd10c25240739364b6ae403eb4a878579451d07704e859bd89d689818f1",
   "z3_tribunal.py": "d6e1726fe0415e8730e054483cd758fb99092ad2b7ee1cb01a68bcd81f94284e",
-  "reports/z3_tribunal_bounds.json": "e8ce8034ef43386836703ba32409dbe5df17e063aeec325efa6d0c3cd8411e59",
-  "manifest.json": ""
+  "reports/z3_tribunal_bounds.json": "e8ce8034ef43386836703ba32409dbe5df17e063aeec325efa6d0c3cd8411e59"
 }
