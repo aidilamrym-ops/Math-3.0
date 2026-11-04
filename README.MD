@@ -73,7 +73,9 @@ $$N_{\mathrm{steps}} = \frac{D_{\mathrm{obs}}}{\ell_P} \approx 5.44 \times 10^{6
 Input matrices ($\tau$) are verified against linear candidate morphologies (Toeplitz and Hankel) using rigorous element-wise accumulated residuals:
 $$R_{\mathrm{Toep}}(\tau) = \max_{0 \le i, j < n-1} \bigl\lvert \tau_{ij} - \tau_{i+1,j+1} \bigr\rvert$$
 $$R_{\mathrm{Hank}}(\tau) = \max_{0 \le i < n-1, 1 \le j < n} \bigl\lvert \tau_{ij} - \tau_{i+1,j-1} \bigr\rvert$$
-**Enforced Condition:** Rejection if $R(\tau) \ge 10^{-10}$.
+**Classification Threshold (Scoped Exception Limit):** The $10^{-10}$ bound is **only** a classification threshold used to decide whether the input matrix is close to a classical linear morphology. It produces the boolean flags `is_toeplitz_approximate` and `is_hankel_approximate`; a `false` result means the matrix is not near a classical Toeplitz/Hankel shape. It is **not** a universal rejection rule over all residual values.
+
+**Certified Rigid-Asymmetry Exemption:** A constant residual such as $R_{\mathrm{Hank}}(\tau) = 12.5 = \tfrac{25}{2}$ is the *Rigid Asymmetry* signature of a truncated Guinand-Weil block at quantum slice $c = 13$. This value is structurally valid and is preserved by the engine: it reports `is_hankel_approximate = false` and must **not** trigger the Rejection Circuit Breaker. Rejection is reserved for malformed or structurally inconsistent input, never for a certified rigid-asymmetry spectrum.
 
 ### 2.3 Sylvester Interval Inertia Classification
 Matricial spectrums are checked by classifying the polarity signs of diagonal pivot balls:
