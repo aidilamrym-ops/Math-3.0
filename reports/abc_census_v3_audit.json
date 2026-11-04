@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "triples_audited": 17,
+  "data": [
+    {
+      "triple": [
+        3,
+        125,
+        128
+      ],
+      "radical": 30,
+      "quality_numerator": 64,
+      "quality_denominator": 15,
+      "valid": true
+    },
+    {
+      "triple": [
+        1,
+        8,
+        9
+      ],
+      "radical": 6,
+      "quality_numerator": 3,
+      "quality_denominator": 2,
+      "valid": true
+    },
+    {
+      "triple": [
+        5,
+        27,
+        32
+      ],
+      "radical": 30,
+      "quality_numerator": 16,
+      "quality_denominator": 15,
+      "valid": true
+    },
+    {
+      "triple": [
+        2,
+        49,
+        51
+      ],
+      "radical": 714,
+      "quality_numerator": 1,
+      "quality_denominator": 14,
+      "valid": false
+    },
+    {
+      "triple": [
+        1,
+        63,
+        64
+      ],
+      "radical": 42,
+      "quality_numerator": 32,
+      "quality_denominator": 21,
+      "valid": true
+    },
+    {
+      "triple": [
+        7,
+        121,
+        128
+      ],
+      "radical": 154,
+      "quality_numerator": 64,
+      "quality_denominator": 77,
+      "valid": false
+    },
+    {
+      "triple": [
+        2,
+        243,
+        245
+      ],
+      "radical": 210,
+      "quality_numerator": 7,
+      "quality_denominator": 6,
+      "valid": true
+    },
+    {
+      "triple": [
+        1,
+        512,
+        513
+      ],
+      "radical": 114,
+      "quality_numerator": 9,
+      "quality_denominator": 2,
+      "valid": true
+    },
+    {
+      "triple": [
+        3,
+        343,
+        346
+      ],
+      "radical": 7266,
+      "quality_numerator": 1,
+      "quality_denominator": 21,
+      "valid": false
+    },
+    {
+      "triple": [
+        1,
+        729,
+        730
+      ],
+      "radical": 2190,
+      "quality_numerator": 1,
+      "quality_denominator": 3,
+      "valid": false
+    },
+    {
+      "triple": [
+        11,
+        2401,
+        2412
+      ],
+      "radical": 30954,
+      "quality_numerator": 6,
+      "quality_denominator": 77,
+      "valid": false
+    },
+    {
+      "triple": [
+        5,
+        1331,
+        1336
+      ],
+      "radical": 18370,
+      "quality_numerator": 4,
+      "quality_denominator": 55,
+      "valid": false
+    },
+    {
+      "triple": [
+        17,
+        4913,
+        4930
+      ],
+      "radical": 4930,
+      "quality_numerator": 1,
+      "quality_denominator": 1,
+      "valid": false
+    },
+    {
+      "triple": [
+        7,
+        2197,
+        2204
+      ],
+      "radical": 100282,
+      "quality_numerator": 2,
+      "quality_denominator": 91,
+      "valid": false
+    },
+    {
+      "triple": [
+        1,
+        4096,
+        4097
+      ],
+      "radical": 8194,
+      "quality_numerator": 1,
+      "quality_denominator": 2,
+      "valid": false
+    },
+    {
+      "triple": [
+        23,
+        12167,
+        12190
+      ],
+      "radical": 12190,
+      "quality_numerator": 1,
+      "quality_denominator": 1,
+      "valid": false
+    },
+    {
+      "triple": [
+        13,
+        17576,
+        17589
+      ],
+      "radical": 35178,
+      "quality_numerator": 1,
+      "quality_denominator": 2,
+      "valid": false
+    }
+  ],
+  "z3_tribunal_status": "UNSAT_NO_COUNTEREXAMPLE_ABOVE_BOUND"
+}
