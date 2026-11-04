@@ -77,12 +77,5 @@
       ]
     }
   },
-  "verdict": "PASSED - Strict inclusion N(B) \u2286 B verified via inverse square root Newton contraction, unique structural root certified, no boundary escape",
-  "lean_verification": {
-    "file": "lean/spec_v4/ForensicEvidence.lean",
-    "theorem": "topological_root_uniqueness_newton_box",
-    "compiler": "Lean 4.33.1",
-    "exit_code": 0,
-    "imports": "none (core Lean only)"
-  }
+  "verdict": "PASSED - Strict inclusion N(B) \u2286 B verified via inverse square root Newton contraction, unique structural root certified, no boundary escape"
 }
