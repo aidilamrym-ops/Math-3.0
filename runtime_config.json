@@ -1,9 +1,9 @@
 {
   "precision_bits": 24000,
-  "jitter": 0.002,
+  "jitter": 0.012000000000000004,
   "constants": {
     "min_val": "1.32e-102"
   },
   "max_generations": 5,
-  "generation": 2
+  "generation": 12
 }

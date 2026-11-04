@@ -52,7 +52,9 @@ class UniversalSuiteRunner:
         
         try:
             n_pos, n_neg, _ = IntervalLDLTSolver(builder.get_matrix_snapshot()).compute_inertia()
-        except Exception: return False
+        except Exception as e:
+            print(f"DEBUG: Gate failure: {e}")
+            return False
         
         return LeanFormalExporter(self.root).export_bounds_theorem(
             "SuiteAutomaticBridge.lean", "verify_suite_gate", {"min_val": "1.32e-102"}, {"min_val": "1.63e-102"}
@@ -100,7 +102,21 @@ def run_adversarial_tests(root: str, config: dict = None) -> bool:
         return False
     else:
         print(f"[ADVERSARY C] Precision {prec} satisfies invariant floor. Anomaly contained.")
-        return True
+        # return True  <-- forgot this
+        pass
+
+    # ANOMALY D: Large dimension scaling test
+    builder_d = IntervalMatrixBuilder(100, prec)
+    for i in range(100): builder_d.set_entry_exact(i, i, "1")
+    try:
+        IntervalLDLTSolver(builder_d.get_matrix_snapshot()).compute_inertia()
+    except Exception as e:
+        print(f"[ADVERSARY D] Large matrix failed: {e}")
+        return False
+    print("[ADVERSARY D] Passed.")
+    return True
+
+
 
 if __name__ == "__main__":
     root = os.path.dirname(os.path.abspath(__file__))

@@ -1,0 +1,13 @@
+{
+  "anomaly_type": "ANOMALY_C_PRECISION_BREACH",
+  "context": {
+    "precision_bits": 24000,
+    "jitter": 0.011000000000000003,
+    "constants": {
+      "min_val": "1.32e-102"
+    },
+    "max_generations": 5,
+    "generation": 11
+  },
+  "timestamp_generation": 11
+}
