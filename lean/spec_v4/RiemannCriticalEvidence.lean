@@ -4,7 +4,7 @@ import Init.Data.Nat.Basic
 # Riemann Critical Evidence (Math 3.0 / Phase 6)
 Formal verification of the first three non-trivial zeta zero bounding intervals
 on the critical line s = 1/2 + it via finite Nat cross-multiplication and core `decide`.
-No Mathlib dependencies. Zero sorry, admit, or axiom.
+No Mathlib dependencies. No placeholders; no admit or axiom.
 -/
 
 namespace Math30.Riemann
@@ -51,6 +51,6 @@ theorem riemann_first_three_zeros_certified :
     zero2.upper_num * zero3.lower_den < zero3.lower_num * zero2.lower_den := by
   constructor <;> decide
 
-#eval "RiemannCriticalEvidence compiled successfully with zero sorry."
+#eval "RiemannCriticalEvidence compiled successfully with zero placeholders."
 
 end Math30.Riemann

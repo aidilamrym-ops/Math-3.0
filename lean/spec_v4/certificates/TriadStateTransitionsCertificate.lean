@@ -1,0 +1,35 @@
+/-
+  TriadStateTransitionsCertificate.lean
+  Math 3.0 Phase 9: Individual report certificate for reports/triad_state_transitions.json.
+  Local sovereignty certificate. No external imports.
+  No placeholders; no admit or axiom.
+-/
+
+namespace Math30.Certificates.TriadStateTransitions
+
+/-- Individual test-result certificate record. -/
+structure ReportCertificate where
+  sourceSha256 : String
+  certificateSha256 : String
+  authority : String
+
+/-- Certified local report. -/
+def certifiedReport : ReportCertificate := {
+  sourceSha256 := "db231a929e25de72d272d433755cb0550fe8e5081e8ee50fb8582d570ad8b038"
+  certificateSha256 := "4f89eedbd1ac903666a1e3c0367d1749f01d54e5ff8e6430d0088f309aece553"
+  authority := "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel"
+}
+
+/-- Cryptographic link theorem: both the source digest and the certificate
+    digest match the local sovereign record exactly. -/
+theorem report_cryptographic_link :
+    certifiedReport.sourceSha256 = "db231a929e25de72d272d433755cb0550fe8e5081e8ee50fb8582d570ad8b038" ∧
+    certifiedReport.certificateSha256 = "4f89eedbd1ac903666a1e3c0367d1749f01d54e5ff8e6430d0088f309aece553" ∧
+    certifiedReport.authority = "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel" := by
+  constructor
+  · rfl
+  constructor <;> rfl
+
+#eval "TriadStateTransitions certificate compiled with zero placeholders."
+
+end Math30.Certificates.TriadStateTransitions

@@ -1,0 +1,71 @@
+{
+  "certificate": "MATH 3.0 LABORATORY REPORT",
+  "phase": "PHASE_8_INDEPENDENT_REGENERATION",
+  "timestamp": "2026-11-05T04:17:24.069231+00:00",
+  "authority": "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel",
+  "source_logs": [
+    "reports/rh_extreme_stress_test.json",
+    "reports/regression_master_report.json"
+  ],
+  "riemann_zero_intervals": [
+    {
+      "index": 0,
+      "label": "t1",
+      "rational_lower": "176684064271683672376862740391521/12500000000000000000000000000000",
+      "rational_upper": "141347251417346937901490192313217/10000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    },
+    {
+      "index": 1,
+      "label": "t2",
+      "rational_lower": "84088158555086219991575314405557/4000000000000000000000000000000",
+      "rational_upper": "2102203963877155499789382860138927/100000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    },
+    {
+      "index": 2,
+      "label": "t3",
+      "rational_lower": "1250542879007284438121269515632201/50000000000000000000000000000000",
+      "rational_upper": "625271439503642219060634757816101/25000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    }
+  ],
+  "sylvester_inertia": {
+    "signature": [
+      3,
+      0,
+      0
+    ],
+    "positive_pivots": 3,
+    "negative_pivots": 0,
+    "zero_pivots": 0,
+    "positive_definite": true,
+    "zero_straddle": false
+  },
+  "phase7_stress_test": {
+    "phase": "PHASE_7_RH_EXTREME_STRESS_TEST",
+    "timestamp": "2026-11-05T04:17:17.548194+00:00",
+    "verdict": "PASSED",
+    "escalation_triggered": false,
+    "gate4_exit_code": 0,
+    "gate4_elapsed_ms": 128.833,
+    "lean_compilation_exit_code": 0,
+    "lean_compilation_elapsed_ms": 963.832
+  },
+  "regression": {
+    "phase": "REGRESSION_MASTER_CLOSURE",
+    "timestamp": "2026-11-04T20:25:30.163971+00:00",
+    "verdict": "FULL PASS",
+    "steps_total": 5,
+    "steps_passed": 5,
+    "all_steps_passed": true
+  },
+  "certification": {
+    "local_only": true,
+    "external_imports": [],
+    "placeholders": false
+  }
+}

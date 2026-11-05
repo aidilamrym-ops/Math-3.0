@@ -61,7 +61,7 @@
       "logic": "QF_LIA",
       "expected": "unsat",
       "result": "unsat",
-      "elapsed_ms": 5.82,
+      "elapsed_ms": 4.796,
       "model": null,
       "script": "; Phase 4 / Gate 3: no sign flip inside the three certified eigenvalue boxes.\n; Variables are eigenvalue numerators on the closed lattice e/10^18.\n(set-logic QF_LIA)\n(set-option :produce-models true)\n(declare-const e0 Int)\n(assert (and (<= 13325072930817286000 e0) (<= e0 16047208392451728000)))\n(declare-const e1 Int)\n(assert (and (<= 10409477555590692000 e1) (<= e1 13218241121140294000)))\n(declare-const e2 Int)\n(assert (and (<= 11068653927850545000 e2) (<= e2 13931346072149455000)))\n(assert (or (<= e0 0) (<= e1 0) (<= e2 0)))\n(check-sat)\n"
     },
@@ -70,7 +70,7 @@
       "logic": "QF_LIA",
       "expected": "unsat",
       "result": "unsat",
-      "elapsed_ms": 4.179,
+      "elapsed_ms": 4.033,
       "model": null,
       "script": "; Phase 4 / Gate 3: every contraction numerator on the closed lattice\n; [0, ceil(max_ratio*10^18)] stays strictly below 1/2.\n(set-logic QF_LIA)\n(set-option :produce-models true)\n(declare-const c0 Int)\n(assert (and (<= 0 c0) (<= c0 142236414018844180)))\n(declare-const c1 Int)\n(assert (and (<= 0 c1) (<= c1 183612969413261300)))\n(declare-const c2 Int)\n(assert (and (<= 0 c2) (<= c2 176678532445753020)))\n(assert (or (>= (* 2 c0) 1000000000000000000) (>= (* 2 c1) 1000000000000000000) (>= (* 2 c2) 1000000000000000000)))\n(check-sat)\n"
     },
@@ -79,7 +79,7 @@
       "logic": "QF_LIA",
       "expected": "unsat",
       "result": "unsat",
-      "elapsed_ms": 0.123,
+      "elapsed_ms": 0.127,
       "model": null,
       "script": "; Phase 4 / Gate 3: exact rational ledger cross-multiplication.\n; Refutes any contraction >= 1/2 or non-positive box lower endpoint.\n(set-logic QF_LIA)\n(assert (> 50000000000000000 0))\n(assert (> 10000000000000000 0))\n(assert (> 10000000000000000 0))\n(assert (> 200000000000000 0))\n(assert (> 50000000000000000 0))\n(assert (> 4000000000000000 0))\n(assert (or (>= (* 2 7111820700942209) 50000000000000000) (<= 2488515809935017 0) (>= (* 2 1836129694132613) 10000000000000000) (<= 54729512101731 0) (>= (* 2 8833926622287651) 50000000000000000) (<= 1066595521012613 0)))\n(check-sat)\n"
     },
@@ -88,7 +88,7 @@
       "logic": "QF_LIA",
       "expected": "sat",
       "result": "sat",
-      "elapsed_ms": 2.635,
+      "elapsed_ms": 2.261,
       "model": "[c1 = 183612969413261300,\n e0 = 14686140661634507000,\n e2 = 12500000000000000000,\n c0 = 142236414018844180,\n c2 = 176678532445753020,\n e1 = 11813859338365493000]",
       "script": "; Phase 4 / Gate 3: SAT witness proving each closed lattice is nonempty\n; and carries a strict contraction certificate.\n(set-logic QF_LIA)\n(set-option :produce-models true)\n(declare-const e0 Int)\n(assert (and (<= 13325072930817286000 e0) (<= e0 16047208392451728000)))\n(assert (= e0 14686140661634507000))\n(declare-const e1 Int)\n(assert (and (<= 10409477555590692000 e1) (<= e1 13218241121140294000)))\n(assert (= e1 11813859338365493000))\n(declare-const e2 Int)\n(assert (and (<= 11068653927850545000 e2) (<= e2 13931346072149455000)))\n(assert (= e2 12500000000000000000))\n(declare-const c0 Int)\n(assert (= c0 142236414018844180))\n(assert (< (* 2 c0) 1000000000000000000))\n(declare-const c1 Int)\n(assert (= c1 183612969413261300))\n(assert (< (* 2 c1) 1000000000000000000))\n(declare-const c2 Int)\n(assert (= c2 176678532445753020))\n(assert (< (* 2 c2) 1000000000000000000))\n(check-sat)\n(get-model)\n"
     }

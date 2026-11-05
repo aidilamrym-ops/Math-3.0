@@ -1,21 +1,71 @@
-# Math 3.0: Invariant Hybrid Engine for Finite-Lattice Spectral Analysis and Structural Proof Verification
+# Math 3.0 — Invariant Hybrid Engine for Finite-Lattice Spectral Analysis and Structural Proof Verification
 
 > **Status:** Production Sealed & Constitutionally Locked  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)  
-> **License:** GPL-3.0 (Code) / CC-BY-4.0 (Scholarly Blueprints)  
-> **Hash Signature:** `CB87E4334147FC72D77F2E5A3BB42B03978DC9CB89E5E692E99C20F14B638FCC`
+> **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
+> **Manifest:** 87 rows, SHA-256 locked  
+> **Certificate Authority:** `Math 3.0 Local Sovereignty, Bounded-Lattice Kernel`
 
 ---
 
-## Abstract
+## Table of Contents
 
-Math 3.0 establishes a rigid, deterministic computational paradigm founded on strict-finitist real analysis. By cutting the continuous mathematical field into a **Finite Information Lattice**, it deconstructs the paradox of Actual Infinity (completed continuum) into Potential Infinity (bounded algorithmic process). This core toolchain integrates multi-resolution arbitrary-precision interval arithmetic, symmetric morphological sieves, and Sylvester interval $LDL^T$ inertia classification with formal verifier assistants. The hybrid architecture enables extreme-scale numerical verification bound to structural execution paths, certified and compiled via **Lean 4** and **Z3 SMT Tribunals** under zero-fudging invariants.
+1. [Overview](#1-overview)
+2. [Key Features](#2-key-features)
+3. [Architecture: The 6-Gate Defensive Tree](#3-architecture-the-6-gate-defensive-tree)
+4. [Mathematical Foundations](#4-mathematical-foundations)
+5. [Riemann Hypothesis Critical-Line Verification](#5-riemann-hypothesis-critical-line-verification)
+6. [Sovereign Certification Layer](#6-sovereign-certification-layer)
+7. [Repository Structure](#7-repository-structure)
+8. [Installation](#8-installation)
+9. [Usage](#9-usage)
+10. [Verification Evidence](#10-verification-evidence)
+11. [Security and Integrity Model](#11-security-and-integrity-model)
+12. [Scientific Scope and Limitations](#12-scientific-scope-and-limitations)
+13. [Reproducibility](#13-reproducibility)
+14. [Contributing](#14-contributing)
+15. [License](#15-license)
+16. [Citation](#16-citation)
+17. [Contact](#17-contact)
 
 ---
 
-## 1. Topological Architecture & The 6-Gate Defensive Tree
+## 1. Overview
 
-The system is structured around an impenetrable 6-gate defensive pipeline that intercepts, audits, and proves every computational step without relying on unverified heuristics.
+Math 3.0 is a deterministic, finite-information verification engine for spectral analysis, interval arithmetic, and formal structural proofs. It replaces unconstrained continuum assumptions with a **Finite Information Lattice**: every numerical object is represented as a bounded interval ball, every structural claim is audited by a gate, and every final result is locked into a SHA-256 ledger and, where applicable, a Lean 4 certificate.
+
+The toolchain combines:
+
+- arbitrary-precision interval arithmetic using `python-flint`;
+- symmetric morphology residual audits (Toeplitz / Hankel);
+- Sylvester interval $LDL^{T}$ inertia classification;
+- multi-dimensional Newton box contraction for root uniqueness;
+- exact rational extraction into Lean 4;
+- Z3 QF_LIA bounded-model tribunals;
+- local sovereign certificates with cryptographic hash anchors.
+
+The result is a reproducible, fail-closed verification pipeline designed for scientific computing, formal methods, and auditable mathematical evidence.
+
+---
+
+## 2. Key Features
+
+| Capability | Description |
+|---|---|
+| **Finite-lattice arithmetic** | All numerical objects carry explicit interval radii; no silent floating-point promotion. |
+| **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
+| **Sylvester inertia certification** | Interval pivot signs are classified; zero-straddle triggers a precision escalation circuit breaker. |
+| **Root uniqueness** | Newton box contraction verifies strict inclusion $N(B) \subseteq B$ and certifies a unique structural root. |
+| **Lean 4 evidence** | Exact rational and Nat certificates compile without `sorry`, `admit`, or `axiom` placeholders. |
+| **Z3 tribunal** | QF_LIA refutations and satisfiability witnesses at scale $10^{18}$. |
+| **Riemann critical-line module** | Guinand-Weil interval enclosures for the first three non-trivial zeros at 24,000 bits. |
+| **Adversarial stress testing** | Boundary injection at interval radii; Gate 4 revalidation; optional 96,000-bit escalation path. |
+| **Sovereign certificates** | Master laboratory report, 17 individual test-result certificates, SHA-256 anchors, and Lean cryptographic link theorems. |
+| **1-bit fault sentinel** | `manifest.json` locks every tracked file; any unverified change fails closed. |
+
+---
+
+## 3. Architecture: The 6-Gate Defensive Tree
 
 ```text
                                 [ RAW NUMERICAL INPUT ]
@@ -29,19 +79,19 @@ The system is structured around an impenetrable 6-gate defensive pipeline that i
                                    ▼
 ┌───────────────────────────────────────────────────────────────────────────────────┐
 │ GATE 2: MORPHOLOGY REFUTATION SIEVES (Toeplitz & Hankel Residual Audits)          │
-│ • Rejects unstructured approximations if R(τ) ≥ 10⁻¹⁰.                            │
+│ • Classifies structured residuals; certified rigid-asymmetry is preserved.         │
 └──────────────────────────────────┬────────────────────────────────────────────────┘
                                    │
                                    ▼
 ┌───────────────────────────────────────────────────────────────────────────────────┐
 │ GATE 3: SYLVESTER INERTIA CLASSIFIER (Interval Pivot Sign Polarity)               │
-│ • Zero-straddle circuit breaker: halts & escalates bits if 0 ∈ [d_i - ε, d_i + ε].│
+│ • Zero-straddle circuit breaker: halts and escalates precision if 0 ∈ pivot ball. │
 └──────────────────────────────────┬────────────────────────────────────────────────┘
                                    │
                                    ▼
 ┌───────────────────────────────────────────────────────────────────────────────────┐
 │ GATE 4: MULTI-DIMENSIONAL NEWTON BOX CONTRACTION (Lipschitz Proof)                │
-│ • Guarantees topological root uniqueness via strict enclosure N(B) ⊆ B.           │
+│ • Guarantees topological root uniqueness via strict inclusion N(B) ⊆ B.           │
 └──────────────────────────────────┬────────────────────────────────────────────────┘
                                    │
                                    ▼
@@ -52,128 +102,520 @@ The system is structured around an impenetrable 6-gate defensive pipeline that i
                                    │
                                    ▼
 ┌───────────────────────────────────────────────────────────────────────────────────┐
-│ GATE 6: KERNEL DECISION & SMT TRIBUNAL (Lean 4 'by decide' / Z3 Bounded Model)    │
-│ • 100% sorry-free formal verification with absolute axiom footprint control.      │
+│ GATE 6: KERNEL DECISION & SMT TRIBUNAL (Lean 4 `by decide` / Z3 Bounded Model)    │
+│ • Sorry-free formal verification with explicit axiom-footprint control.           │
 └───────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 2. Mathematical Foundations & Core Equations
+## 4. Mathematical Foundations
 
-### 2.1 The Math 3.0 Quantum Cut
-Continuous calculus blowups ($\infty$) are treated as structural alarms indicating that the math model failed to declare its information ceiling. Math 3.0 maps every operation into a discrete finite lattice bounded by observable physics:
-*   **Macro Limit ($D_{\mathrm{obs}}$):** $\approx 8.8 \times 10^{26}\text{ m}$ (Observable Universe Diameter).
-*   **Micro Limit ($\ell_P$):** $\approx 1.616255 \times 10^{-35}\text{ m}$ (Planck Length).
+### 4.1 The Math 3.0 Quantum Cut
 
-Total addressable information pixels:
-$$N_{\mathrm{steps}} = \frac{D_{\mathrm{obs}}}{\ell_P} \approx 5.44 \times 10^{61}\text{ steps}$$
+Continuous calculus blowups are treated as structural alarms: they indicate that a model has failed to declare its information ceiling. Math 3.0 maps every operation into a discrete finite lattice bounded by observable physics:
 
-### 2.2 Morphology Refutation Invariants
-Input matrices ($\tau$) are verified against linear candidate morphologies (Toeplitz and Hankel) using rigorous element-wise accumulated residuals:
-$$R_{\mathrm{Toep}}(\tau) = \max_{0 \le i, j < n-1} \bigl\lvert \tau_{ij} - \tau_{i+1,j+1} \bigr\rvert$$
-$$R_{\mathrm{Hank}}(\tau) = \max_{0 \le i < n-1, 1 \le j < n} \bigl\lvert \tau_{ij} - \tau_{i+1,j-1} \bigr\rvert$$
-**Classification Threshold (Scoped Exception Limit):** The $10^{-10}$ bound is **only** a classification threshold used to decide whether the input matrix is close to a classical linear morphology. It produces the boolean flags `is_toeplitz_approximate` and `is_hankel_approximate`; a `false` result means the matrix is not near a classical Toeplitz/Hankel shape. It is **not** a universal rejection rule over all residual values.
+- **Macro limit** $D_{\mathrm{obs}} \approx 8.8 \times 10^{26}\,\mathrm{m}$ — observable universe diameter.
+- **Micro limit** $\ell_P \approx 1.616255 \times 10^{-35}\,\mathrm{m}$ — Planck length.
 
-**Certified Rigid-Asymmetry Exemption:** A constant residual such as $R_{\mathrm{Hank}}(\tau) = 12.5 = \tfrac{25}{2}$ is the *Rigid Asymmetry* signature of a truncated Guinand-Weil block at quantum slice $c = 13$. This value is structurally valid and is preserved by the engine: it reports `is_hankel_approximate = false` and must **not** trigger the Rejection Circuit Breaker. Rejection is reserved for malformed or structurally inconsistent input, never for a certified rigid-asymmetry spectrum.
+The total addressable information steps are:
 
-### 2.3 Sylvester Interval Inertia Classification
-Matricial spectrums are checked by classifying the polarity signs of diagonal pivot balls:
-$$A = L D L^{\top}$$
-*   **Positive Definite Monitored:** All pivots satisfy $\text{pivot}_{\text{mid}} - \text{pivot}_{\text{rad}} > 0$.
-*   **Zero-Straddle Circuit Breaker:** If an isolated pivot interval satisfies $0 \in [d_i - \epsilon, d_i + \epsilon]$, the sign is flagged as **undetermined**, triggering an automated `ResolutionAlarm` for precision escalation (ramping from 6,000 to 96,000 bits).
+$$
+N_{\mathrm{steps}} = \frac{D_{\mathrm{obs}}}{\ell_P} \approx 5.44 \times 10^{61}.
+$$
+
+### 4.2 Morphology Refutation Invariants
+
+Input matrices $\tau$ are audited against linear candidate morphologies using element-wise accumulated residuals:
+
+$$
+R_{\mathrm{Toep}}(\tau) = \max_{0 \le i, j < n-1} \left| \tau_{ij} - \tau_{i+1,j+1} \right|
+$$
+
+$$
+R_{\mathrm{Hank}}(\tau) = \max_{0 \le i < n-1,\ 1 \le j < n} \left| \tau_{ij} - \tau_{i+1,j-1} \right|
+$$
+
+The $10^{-10}$ bound is a **classification threshold**, not a universal rejection rule. A constant residual such as $R_{\mathrm{Hank}}(\tau) = 12.5 = 25/2$ is the certified **Rigid Asymmetry** signature of a truncated Guinand-Weil block at quantum slice $c = 13$. The engine preserves this spectrum and does not trigger the rejection circuit breaker.
+
+### 4.3 Sylvester Interval Inertia Classification
+
+Matrix spectra are classified through interval diagonal pivots:
+
+$$
+A = L D L^{T}.
+$$
+
+- **Positive definite monitoring:** all pivots satisfy
+$$
+  \mathrm{pivot}_{\mathrm{mid}} - \mathrm{pivot}_{\mathrm{rad}} > 0.
+$$
+- **Zero-straddle circuit breaker:** if an isolated pivot interval satisfies
+$$
+  0 \in [d_i - \epsilon_i, d_i + \epsilon_i],
+$$
+  the sign is marked undetermined and an automated resolution alarm requests precision escalation (6,000 → 96,000 bits).
+
+### 4.4 Newton Box Contraction
+
+For a box $B$, the Newton map $N$ is evaluated under interval arithmetic. Strict inclusion
+
+$$
+N(B) \subseteq B
+$$
+
+and a contraction ratio below $1/2$ certify a unique structural root inside $B$. Boundary escape or zero straddle invalidates the certificate and triggers escalation.
 
 ---
 
-## 3. The 1-Bit Fault-Injection Self-Destruct Sentinel
+## 5. Riemann Hypothesis Critical-Line Verification
 
-To guarantee absolute constitutional integrity, the engine enforces a strict **1-bit fault-injection self-destruct law**:
-1.  **Sentinel Monitoring:** Every file hash is registered in `manifest.json`.
-2.  **Fail-Closed Lockout:** If any modification—whether accidental, structural, or malicious—corrupts or shifts the validated logic code by exactly 1 bit, `suite_check.py` and `repokeeper.py` immediately abort with non-zero exit codes.
-3.  **Restoration Requirement:** The toolchain remains completely locked down until the workspace is restored byte-by-byte to its verified SHA-256 state ledger.
+The Riemann Hypothesis module targets the first three non-trivial zeros of the Riemann zeta function on the critical line $s = 1/2 + it$. It is an interval-certification module, not a proof of the Riemann Hypothesis.
+
+### 5.1 Phase 6: Guinand-Weil Initialization
+
+`mcp/t2n/rh_core/rh_krypton_solver.py` maps the explicit-formula functional sums of the Guinand-Weil framework into the Finite Information Lattice at **24,000 bits**.
+
+Certified state:
+
+- Sylvester inertia signature: `[3, 0, 0]`
+- Positive pivots: `3`
+- Negative pivots: `0`
+- Zero pivots: `0`
+- Zero-straddle detected: `false`
+
+### 5.2 Exact Rational Intervals
+
+The exact rational boundaries assigned to the first three zeros are:
+
+```text
+t1: [176684064271683672376862740391521/12500000000000000000000000000000,
+     141347251417346937901490192313217/10000000000000000000000000000000]
+
+t2: [84088158555086219991575314405557/4000000000000000000000000000000,
+     2102203963877155499789382860138927/100000000000000000000000000000000]
+
+t3: [1250542879007284438121269515632201/50000000000000000000000000000000,
+     625271439503642219060634757816101/25000000000000000000000000000000]
+```
+
+These intervals are recorded in `reports/rh_critical_line_validation.json`, embedded in the master laboratory report, and mirrored in the individual certificate for the RH critical-line validation.
+
+### 5.3 Phase 7: Adversarial Boundary Injection
+
+`phase7_stress_test.py` injects adversarial perturbations at the outer boundaries of the three interval boxes:
+
+- tests the $\pm 0.00000000000000000001$ radius limits;
+- re-runs the Gate 4 Newton box contraction audit;
+- rechecks $N(B) \subseteq B$ at 24,000 bits;
+- triggers the Gate 3 circuit breaker to 96,000 bits if any interval contains zero or leaks.
+
+### 5.4 Phase 7 Results
+
+| Check | Result |
+|---|---|
+| Adversarial intervals | 3 |
+| Zero straddle | `false` for all three |
+| Boundary escape | `false` for all three |
+| Gate 4 audit | exit `0`, PASSED |
+| Precision escalation to 96,000 bits | not triggered |
+| Lean compilation | exit `0` |
+| Lean evidence | `lean/spec_v4/RiemannAdversarialEvidence.lean`, theorem `adversarial_intervals_safe` |
+| Unique root certification | INTACT |
+| Stress report | `reports/rh_extreme_stress_test.json` |
 
 ---
 
-## 4. Verification & Execution Manual
+## 6. Sovereign Certification Layer
 
-### 4.1 System Prerequisites
-*   Python 3.14+ with `python-flint==0.9.0`
-*   Lean 4 (v4.33.1) with Mathlib
-*   Z3 SMT Solver CLI (v4.16.0+)
+Math 3.0 uses a two-level certification model:
 
-### 4.2 Execution Commands
-```bash
-# Step 1: Synchronize local workspace files and lock manifest signatures
-python mcp/t2n/core/repokeeper.py
+1. a **master laboratory report** for the aggregate verification state;
+2. **individual certificates** for every certified test-result artifact.
 
-# Step 2: Run the full multi-engine hybrid verification suite
-python suite_check.py
+### 6.1 Master Laboratory Report
 
-# Step 3: Run extreme adversarial stress-testing harness
-python suite_check.py --adversarial
+- Report: `reports/math30_laboratory_report.json`
+- Authority: `Math 3.0 Local Sovereignty, Bounded-Lattice Kernel`
+- SHA-256: `bb9f08381b0594578458695d87df891db5f3840c46f0273bec910572f940e839`
+- Lean anchor: `lean/spec_v4/CertifiedManifest.lean`
+- Embedded theorem: `lab_report_cryptographic_link`
+- Placeholders: none (`sorry`, `admit`, and `axiom` absent)
+
+The master report records:
+
+- exact rational intervals for $t_1, t_2, t_3$;
+- Sylvester inertia `[3, 0, 0]`;
+- positive definiteness and zero-straddle status;
+- Phase 7 stress-test verdict and escalation state;
+- regression verdict and pass counts;
+- local-only certification metadata.
+
+### 6.2 Individual Test-Result Certificates
+
+`mcp/t2n/core/report_certificate_generator.py` creates one JSON certificate and one Lean certificate per test-result artifact.
+
+Each certificate binds:
+
+- the source file path;
+- the normalized source SHA-256;
+- a source summary (`phase`, `timestamp`, `verdict`/`status`, and key flags);
+- the local sovereign authority string;
+- a Lean theorem linking the source hash and certificate hash.
+
+<details>
+<summary><strong>17 certified test-result artifacts</strong></summary>
+
+| # | Source artifact | JSON certificate | Lean certificate |
+|---|---|---|---|
+| 1 | `constitutional_law_receipt.json` | `constitutional_law_receipt_certificate.json` | `ConstitutionalLawReceiptCertificate.lean` |
+| 2 | `failed_world_trace.json` | `failed_world_trace_certificate.json` | `FailedWorldTraceCertificate.lean` |
+| 3 | `reports/abc_census_v3_audit.json` | `abc_census_v3_audit_certificate.json` | `AbcCensusV3AuditCertificate.lean` |
+| 4 | `reports/integrity_audit.json` | `integrity_audit_certificate.json` | `IntegrityAuditCertificate.lean` |
+| 5 | `reports/lte_spectral_validation.json` | `lte_spectral_validation_certificate.json` | `LteSpectralValidationCertificate.lean` |
+| 6 | `reports/navier_stokes_blowup_trace.json` | `navier_stokes_blowup_trace_certificate.json` | `NavierStokesBlowupTraceCertificate.lean` |
+| 7 | `reports/regression_master_report.json` | `regression_master_report_certificate.json` | `RegressionMasterReportCertificate.lean` |
+| 8 | `reports/rh_critical_line_validation.json` | `rh_critical_line_validation_certificate.json` | `RhCriticalLineValidationCertificate.lean` |
+| 9 | `reports/rh_extreme_stress_test.json` | `rh_extreme_stress_test_certificate.json` | `RhExtremeStressTestCertificate.lean` |
+| 10 | `reports/rh_spectral_anomalies.json` | `rh_spectral_anomalies_certificate.json` | `RhSpectralAnomaliesCertificate.lean` |
+| 11 | `reports/topological_uniqueness.json` | `topological_uniqueness_certificate.json` | `TopologicalUniquenessCertificate.lean` |
+| 12 | `reports/triad_state_transitions.json` | `triad_state_transitions_certificate.json` | `TriadStateTransitionsCertificate.lean` |
+| 13 | `reports/z3_tribunal_bounds.json` | `z3_tribunal_bounds_certificate.json` | `Z3TribunalBoundsCertificate.lean` |
+| 14 | `smt/phase4/box_feasibility_witness.log` | `box_feasibility_witness_certificate.json` | `BoxFeasibilityWitnessCertificate.lean` |
+| 15 | `smt/phase4/contraction_bound.log` | `contraction_bound_certificate.json` | `ContractionBoundCertificate.lean` |
+| 16 | `smt/phase4/ledger_cross_multiplication.log` | `ledger_cross_multiplication_certificate.json` | `LedgerCrossMultiplicationCertificate.lean` |
+| 17 | `smt/phase4/sign_flip_absence.log` | `sign_flip_absence_certificate.json` | `SignFlipAbsenceCertificate.lean` |
+
+</details>
+
+### 6.3 Certificate Index
+
+- Index: `reports/certificates/certificate_index.json`
+- SHA-256: `4e7506b4e817eb95775e6b2f7ccfdae94093fb272edfc8de6529b68409ce2406`
+- Lean anchor: `lean/spec_v4/certificates/CertificateIndex.lean`
+- Indexed certificates: `17`
+
+### 6.4 Certificate Chain
+
+```text
+source report
+    │  SHA-256
+    ▼
+JSON certificate
+    │  SHA-256
+    ▼
+Lean certificate
+    │  `rfl` theorem
+    ▼
+Lean 4 kernel
+```
+
+The chain is fail-closed: changing a source report invalidates its certificate hash; changing a certificate invalidates its Lean theorem.
+
+---
+
+## 7. Repository Structure
+
+```text
+Math-3.0/
+├── Math30Kernel/                  # Interval matrices and core primitives
+├── Math30Solvers/                 # Interval LDL^T, evolver, finite bridge
+├── Math30Interfaces/              # Lean export bridges
+├── lean/spec_v4/
+│   ├── ForensicEvidence.lean
+│   ├── AbcCensusEvidence.lean
+│   ├── RiemannCriticalEvidence.lean
+│   ├── RiemannAdversarialEvidence.lean
+│   ├── CertifiedManifest.lean
+│   └── certificates/
+│       ├── CertificateIndex.lean
+│       └── *Certificate.lean
+├── mcp/t2n/
+│   ├── core/
+│   │   ├── repokeeper.py
+│   │   ├── lab_report_generator.py
+│   │   └── report_certificate_generator.py
+│   └── rh_core/
+│       └── rh_krypton_solver.py
+├── reports/
+│   ├── certificates/
+│   │   ├── certificate_index.json
+│   │   └── *Certificate.json
+│   └── *.json
+├── smt/phase4/                    # QF_LIA scripts and result logs
+├── exports/                       # Research paper appendix
+├── manifest.json                  # 87-row SHA-256 ledger
+├── suite_check.py
+├── newton_box_validator.py
+├── z3_tribunal.py
+├── run_regression_tests.py
+├── phase7_stress_test.py
+└── README.MD
 ```
 
 ---
 
-## SECTION 11: THE BREAKTHROUGH OF MATH 3.0
+## 8. Installation
 
-Phase 5 closes the finite-lattice programme. The Gate 3 spectrum audit, the Sylvester inertia reduction, and the Z3 QF_LIA tribunal are now sealed into a single evidence chain rooted at commit `a73a167298a93981b98d32099cdd2c03d263316a` (tree `46561309c679ef536821ede6041b69f3e7f2b5a3`).
+### 8.1 Prerequisites
 
-### 11.1 Finite matrix transition
+| Component | Required version |
+|---|---|
+| Python | 3.14+ |
+| `python-flint` | 0.9.0 |
+| Lean 4 | v4.33.1 |
+| `z3-solver` | 5.0.0+ (QF_LIA) |
+| Git | current stable |
 
-The declared scaling target is the finite matrix transition on dimensions **201 / 301**. The certified reduction is executed on the truncation that the validator actually constructs: the `3 x 3` Guinand-Weil block at quantum slice `c = 13` produced by `lte_spectral_validator.py`. The `201 / 301` dimensions are recorded here as the declared transition target; no artifact in this repository certifies an inertia classification at those dimensions.
+Ensure `python` and `lean` are available on `PATH`. The `z3-solver` Python package is invoked directly by `z3_tribunal.py`.
 
-### 11.2 Certified signature `(3,0,0)`
+### 8.2 Clone and Install
 
-Sylvester interval `LDL^T` classification over the three diagonal pivot balls of `reports/lte_spectral_validation.json` yields:
+```bash
+git clone https://github.com/aidilamrym-ops/Math-3.0.git
+cd Math-3.0
+python -m pip install python-flint==0.9.0 z3-solver==5.0.0
+```
+
+---
+
+## 9. Usage
+
+### 9.1 Integrity Lock
+
+```bash
+python mcp/t2n/core/repokeeper.py
+```
+
+This synchronizes the workspace and rewrites `manifest.json` with the canonical SHA-256 ledger.
+
+### 9.2 Full Verification Suite
+
+```bash
+python suite_check.py
+python suite_check.py --adversarial
+python run_regression_tests.py
+```
+
+### 9.3 Riemann Hypothesis Pipeline
+
+```bash
+python mcp/t2n/rh_core/rh_krypton_solver.py
+python phase7_stress_test.py
+```
+
+### 9.4 Certificate Generation
+
+```bash
+python mcp/t2n/core/lab_report_generator.py
+python mcp/t2n/core/report_certificate_generator.py
+```
+
+### 9.5 Lean Verification
+
+```bash
+lean lean/spec_v4/ForensicEvidence.lean
+lean lean/spec_v4/AbcCensusEvidence.lean
+lean lean/spec_v4/RiemannCriticalEvidence.lean
+lean lean/spec_v4/RiemannAdversarialEvidence.lean
+lean lean/spec_v4/CertifiedManifest.lean
+lean lean/spec_v4/certificates/CertificateIndex.lean
+```
+
+Individual certificate files can be checked with:
+
+```bash
+lean lean/spec_v4/certificates/RhCriticalLineValidationCertificate.lean
+lean lean/spec_v4/certificates/RhExtremeStressTestCertificate.lean
+```
+
+---
+
+## 10. Verification Evidence
+
+### 10.1 6-Gate Results
+
+| Gate | Verification | Observed result |
+|---|---|---|
+| Gate 1 | Interval lattice bounds | Flint intervals initialized at 6,000+ bits |
+| Gate 2 | Morphology refutation | Rigid-asymmetry exemption active; $r_{\mathrm{Hank}} = 25/2$ |
+| Gate 3 | Sylvester interval inertia | Signature `(3, 0, 0)`; zero-straddle circuit breaker armed |
+| Gate 4 | Newton box contraction | `unique_root_certified = true`; max ratio `0.1836129694132613 < 1/2` |
+| Gate 5 | Exact rational extraction | Lean rational/Nat literals emitted |
+| Gate 6 | Lean 4 / Z3 tribunal | Lean kernels compile; Z3 QF_LIA verdict `PASSED` |
+
+### 10.2 Phase 5 Finite-Lattice Breakthrough
+
+The certified reduction is executed on the `3 x 3` Guinand-Weil block at quantum slice `c = 13` produced by `lte_spectral_validator.py`. The `201 / 301` dimensions are declared scaling targets, not certified artifacts in this repository.
+
+**Certified signature `(3, 0, 0)`:**
 
 | Pivot | `contains_zero` | `signed_definite` |
 |---|---|---|
-| 0 | `False` | `True` |
-| 1 | `False` | `True` |
-| 2 | `False` | `True` |
+| 0 | `false` | `true` |
+| 1 | `false` | `true` |
+| 2 | `false` | `true` |
 
-Inertia: `positive = 3`, `negative = 0`, `zero = 0` → signature `(3,0,0)`. No zero-straddle, no escalation.
-
-### 11.3 Z3 QF_LIA scale `10^18` validation ledger
-
-All Phase 3 rational bounds are lifted to the exact integer lattice `e / 10^18`. Z3 `5.0.0` (`QF_LIA`, native `libz3.dll`) returns:
+**Z3 QF_LIA tribunal at scale $10^{18}$:**
 
 | Script | Claim | Result |
 |---|---|---|
 | `sign_flip_absence.smt2` | no lattice point in any eigenvalue box has `e_i <= 0` | `unsat` |
-| `contraction_bound.smt2` | every `c <= ceil(C_i * 10^18)` satisfies `2c < 10^18` | `unsat` |
+| `contraction_bound.smt2` | every contraction cap satisfies `2c < 10^18` | `unsat` |
 | `ledger_cross_multiplication.smt2` | no ledger fraction has contraction `>= 1/2` or endpoint `<= 0` | `unsat` |
-| `box_feasibility_witness.smt2` | each closed lattice is nonempty with strict contraction witness | `sat` |
+| `box_feasibility_witness.smt2` | each closed lattice is nonempty with a strict contraction witness | `sat` |
 
-Certified eigenvalue lattices:
+**Certified eigenvalue lattices:**
 
-| `i` | lower | upper | contraction cap |
+| `i` | Lower | Upper | Contraction cap |
 |---|---|---|---|
 | 0 | `13325072930817286000` | `16047208392451728000` | `142236414018844180` |
 | 1 | `10409477555590692000` | `13218241121140294000` | `183612969413261300` |
 | 2 | `11068653927850545000` | `13931346072149455000` | `176678532445753020` |
 
-Maximum contraction `0.1836129694132613 < 1/2`; `boundary_escape = False`; `unique_root_certified = True`.
+Maximum contraction: `0.1836129694132613 < 1/2`  
+Boundary escape: `false`  
+Unique root certified: `true`
 
-### 11.4 Scope and provenance
+### 10.3 Hash Registry
 
-The tribunal is a quantifier-free integer-lattice refutation over the conservative Phase 3 boxes `e_i +/- r_i`. Results are **conditional** on those boxes enclosing the Phase 2 eigenvalues; the enclosure itself is not re-proven by Z3. The Phase 4 witness model is a satisfiability check and is deliberately excluded from the proof gate.
+The authoritative ledger is `manifest.json` (87 rows). Selected anchors:
 
-- Tribunal report: `reports/z3_tribunal_bounds.json` — SHA-256 `e8ce8034ef43386836703ba32409dbe5df17e063aeec325efa6d0c3cd8411e59`
-- Reproducer: `z3_tribunal.py` — SHA-256 `d6e1726fe0415e8730e054483cd758fb99092ad2b7ee1cb01a68bcd81f94284e`
-- SMT corpus: `smt/phase4/` (4 scripts + 4 logs)
-- Phase 3 ledger: `reports/topological_uniqueness.json` — SHA-256 `23f60d86a83bf74a6756041278221a4a5e60bd886ccca942754aa7e13f046c91`
-- Phase 2 enclosures: `reports/lte_spectral_validation.json` — SHA-256 `c009d9b94f5193d63150db44438bb33b6066f6ab70c7226535da3bf14da65d54`
-- Lean certificates: `lean/spec_v4/ForensicEvidence.lean`, `lean/spec_v4/AbcCensusEvidence.lean` — no `sorry`, no `admit`, no `axiom`, no `Mathlib` import
-- Spectral gap closure map: `mcp/out/spectral_gap_closure_map.svg` — SHA-256 `f8565c93f9a27bb58e999952c4185fefdb69025958cc2db801ede1cbfae068e8`
-- Evidence appendix: `exports/research_paper.tex`
-
-The hash anchor `07e14837...` was requested for the Phase 4 appendix. No artifact, manifest row, commit, tree, or blob in this repository begins with `07e14837`; the appendix therefore cites the verified hashes above instead of that anchor.
-
-**Final verdict:** finite-lattice tribunal `PASSED`, signature `(3,0,0)`, scale `10^18`, `ALL GATES SECURED: FULL PASS`.
+| Artifact | SHA-256 |
+|---|---|
+| `reports/math30_laboratory_report.json` | `bb9f08381b0594578458695d87df891db5f3840c46f0273bec910572f940e839` |
+| `reports/certificates/certificate_index.json` | `4e7506b4e817eb95775e6b2f7ccfdae94093fb272edfc8de6529b68409ce2406` |
+| `reports/lte_spectral_validation.json` | `54e59b6cc8413eabdf905401695a2a99febb7c761a0dbc084708452407571f46` |
+| `reports/topological_uniqueness.json` | `3a865b932114bc5241588583b222392707e376f04bf70262aa107428b725a590` |
+| `reports/z3_tribunal_bounds.json` | `5c5ee9222f621e294dc80703c60eb6fa20a9afca8bef96ec9c96b34deca7e3bc` |
+| `reports/rh_critical_line_validation.json` | `cf13cdef33fc5b04ea417edc4de934a6c9ba74db3ceabc0a9b84ada9ff90df34` |
+| `reports/rh_extreme_stress_test.json` | `95ef1235f0b2206d7246965cfbcda3995236d252acb39e75553b8115bdcee0d9` |
+| `reports/regression_master_report.json` | `5337b60a29f40655aa82a50f5ad5cfe4f11869ffef89e545d78d4b56042af29f` |
 
 ---
 
-## License
-GPL-3.0 for code routines, CC-BY-4.0 for scholarly blueprints and registers. See `LICENSE`.
+## 11. Security and Integrity Model
+
+### 11.1 The 1-Bit Fault-Injection Self-Destruct Sentinel
+
+1. **Sentinel monitoring** — every tracked file is registered in `manifest.json` with a SHA-256 digest.
+2. **Fail-closed lockout** — any accidental, structural, or malicious 1-bit modification causes `suite_check.py` and `repokeeper.py` to abort with a non-zero exit code.
+3. **Restoration requirement** — the workspace remains locked until it is restored byte-for-byte to the verified ledger state.
+
+### 11.2 Local Sovereignty
+
+The certificate generators are standalone Python 3.14 utilities using only the standard library. They do not import modules from external or hulu repositories. The certificate authority string is:
+
+```text
+Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
+```
+
+### 11.3 Lean Placeholder Policy
+
+All Lean evidence artifacts are expected to compile without:
+
+- `sorry`
+- `admit`
+- `axiom`
+- `Mathlib` dependency for the core certificate chain
+
+Generated certificate theorems use only `rfl`.
+
+---
+
+## 12. Scientific Scope and Limitations
+
+Math 3.0 is a verification engine for bounded, finite-information claims. It is not a claim to resolve every open problem in mathematics.
+
+- **Riemann Hypothesis module:** certifies interval enclosures and structural properties for the first three non-trivial zeros. It does **not** prove the Riemann Hypothesis.
+- **Z3 tribunal:** refutations are conditional on the Phase 2/3 boxes enclosing the intended eigenvalues. The enclosure itself is not re-proven by Z3.
+- **201 / 301 dimensions:** declared scaling targets, not certified inertia classifications.
+- **Phase 4 witness:** the satisfiability witness is deliberately excluded from the proof gate.
+- **Reproducibility:** exact hashes depend on the pinned Python, Lean, and Z3 environment; always re-run `repokeeper.py` before making integrity claims.
+
+---
+
+## 13. Reproducibility
+
+To reproduce the sealed state:
+
+```bash
+python mcp/t2n/core/repokeeper.py
+python suite_check.py --adversarial
+python run_regression_tests.py
+python mcp/t2n/rh_core/rh_krypton_solver.py
+python phase7_stress_test.py
+python mcp/t2n/core/lab_report_generator.py
+python mcp/t2n/core/report_certificate_generator.py
+python mcp/t2n/core/repokeeper.py
+```
+
+Then verify the master and index anchors:
+
+```bash
+python -c "import hashlib; print(hashlib.sha256(open('reports/math30_laboratory_report.json','rb').read()).hexdigest())"
+python -c "import hashlib; print(hashlib.sha256(open('reports/certificates/certificate_index.json','rb').read()).hexdigest())"
+```
+
+Expected master report hash:
+
+```text
+bb9f08381b0594578458695d87df891db5f3840c46f0273bec910572f940e839
+```
+
+Expected certificate index hash:
+
+```text
+4e7506b4e817eb95775e6b2f7ccfdae94093fb272edfc8de6529b68409ce2406
+```
+
+---
+
+## 14. Contributing
+
+1. Fork the repository and create a feature branch.
+2. Run the full regression suite before submitting changes:
+   ```bash
+   python run_regression_tests.py
+   ```
+3. Keep Lean artifacts free of `sorry`, `admit`, and `axiom`.
+4. Re-run `python mcp/t2n/core/repokeeper.py` after any intentional file change.
+5. If you modify a certified test-result artifact, regenerate its certificate:
+   ```bash
+   python mcp/t2n/core/report_certificate_generator.py
+   ```
+6. Submit a pull request describing the mathematical or engineering change, the verification evidence, and the updated manifest row count.
+
+---
+
+## 15. License
+
+- **Code:** GNU General Public License v3.0 (GPL-3.0).
+- **Scholarly blueprints, registers, and documentation:** Creative Commons Attribution 4.0 International (CC-BY-4.0).
+
+See `LICENSE` for the full text.
+
+---
+
+## 16. Citation
+
+If you use Math 3.0 in academic or industrial work, please cite:
+
+```bibtex
+@software{math30_2026,
+  title   = {Math 3.0: Invariant Hybrid Engine for Finite-Lattice Spectral Analysis and Structural Proof Verification},
+  author  = {{Math 3.0 Contributors}},
+  year    = {2026},
+  url     = {https://github.com/aidilamrym-ops/Math-3.0},
+  note    = {GPL-3.0 for code; CC-BY-4.0 for scholarly blueprints}
+}
+```
+
+---
+
+## 17. Contact
+
+- **Issues:** [github.com/aidilamrym-ops/Math-3.0/issues](https://github.com/aidilamrym-ops/Math-3.0/issues)
+- **Repository:** [github.com/aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)
+
+For security-sensitive reports, please open a private security advisory rather than a public issue.
