@@ -1,0 +1,9 @@
+{
+  "target_theorem": "Gödel's Incompleteness Theorems",
+  "test_phase": "Phase 11 Adversarial Case 3",
+  "verification_kernel": "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel",
+  "source_file": "lean/spec_v4/GoedelBoundaryContainment.lean",
+  "source_sha256": "1738c943a64f4c044850d5bdcbe586977dc3a92ad3676d68279c3b0e89e39d84",
+  "observed_anomaly": "GOEDEL_REPRESENTATION_ALARM triggered. Recursive self-reference loop exceeded memory/depth allocation coordinates.",
+  "verdict": "STRUCTURE_ALARM_SEALED"
+}
