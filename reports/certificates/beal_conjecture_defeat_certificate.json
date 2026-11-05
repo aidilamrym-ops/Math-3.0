@@ -1,0 +1,16 @@
+{
+  "authority": "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel",
+  "certificate_version": "1.0",
+  "exit_code": 0,
+  "lattice_limit": "10^18",
+  "source_file": "Math30Kernel/BealConjectureDefeat.lean",
+  "source_sha256": "385c335531cecd0140e51a3f02a87c6c196f206f455f51289d833d22085dc72e",
+  "target_theorem": "Beal Conjecture",
+  "telemetry_summary": {
+    "result": "unsat",
+    "search_space": "A,B,C <= 10^18, x,y,z <= 10",
+    "stderr_present": false,
+    "stdout_lines": 15
+  },
+  "verdict": "SATISFIABILITY_REFUTED_IN_BOUNDS"
+}
