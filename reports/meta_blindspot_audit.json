@@ -1,0 +1,10 @@
+{
+  "audit_type": "META_BLINDSPOT_HUNTER_AUDIT",
+  "timestamp": "2026-11-05T06:25:00Z",
+  "vectors": {
+    "vector_1": "CONTAINED",
+    "vector_2": "CONTAINED",
+    "vector_3": "CONTAINED"
+  },
+  "overall_verdict": "PASSED"
+}
