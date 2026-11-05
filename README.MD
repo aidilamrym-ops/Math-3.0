@@ -3,7 +3,7 @@
 > **Status:** Production Sealed & Constitutionally Locked  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 132 rows, SHA-256 locked  
+> **Manifest:** 134 rows, SHA-256 locked  
 > **Certificate Authority:** `Math 3.0 Local Sovereignty, Bounded-Lattice Kernel`
 
 ---
@@ -59,6 +59,7 @@ The result is a reproducible, fail-closed verification pipeline designed for sci
 | **Lean 4 evidence** | Exact rational and Nat certificates compile without `sorry`, `admit`, or `axiom` placeholders. |
 | **Rescued Foundations** | Verified modules for Density, FTC, Gödel Consistency, Density Fields, and Heisenberg Uncertainty. |
 | **Quantum Simulator** | Discrete amplitude state engine with unitary preservation invariants and Planck-limit measurement alarms. |
+| **Multi-Qubit Tensor** | Multi-qubit register architecture supporting exact Kronecker products, Bell state entanglement, and Shor modular exponentiation. |
 | **Z3 tribunal** | QF_LIA refutations and satisfiability witnesses at scale $10^{18}$. |
 | **Riemann critical-line module** | Guinand-Weil interval enclosures for the first ten non-trivial zeros at 24,000 bits, with a certified search boundary of $t \le 50.0$. |
 | **Adversarial stress testing** | Boundary injection at interval radii; Gate 4 revalidation; optional 96,000-bit escalation path. |
