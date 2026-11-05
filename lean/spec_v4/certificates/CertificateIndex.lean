@@ -15,16 +15,16 @@ structure CertificateIndex where
 
 /-- Certified local certificate index. -/
 def certifiedIndex : CertificateIndex := {
-  indexSha256 := "f98dd970dcf58008651ffb1c60f4da2505717c753ac5a190259940bfe9540228"
+  indexSha256 := "971c5e420e4abba69cbe0c554592e0e19f0a9f34c8e8bf655c6f19e096277096"
   authority := "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel"
-  totalCertificates := 17
+  totalCertificates := 24
 }
 
 /-- Cryptographic link theorem for the certificate index. -/
 theorem index_cryptographic_link :
-    certifiedIndex.indexSha256 = "f98dd970dcf58008651ffb1c60f4da2505717c753ac5a190259940bfe9540228" ∧
+    certifiedIndex.indexSha256 = "971c5e420e4abba69cbe0c554592e0e19f0a9f34c8e8bf655c6f19e096277096" ∧
     certifiedIndex.authority = "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel" ∧
-    certifiedIndex.totalCertificates = 17 := by
+    certifiedIndex.totalCertificates = 24 := by
   constructor
   · rfl
   constructor <;> rfl

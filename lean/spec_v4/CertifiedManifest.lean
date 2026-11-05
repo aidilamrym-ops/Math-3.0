@@ -200,7 +200,7 @@ structure LabReportCertificate where
 
 /-- The certified local laboratory report generated in Phase 8. -/
 def certifiedLabReport : LabReportCertificate := {
-  sha256 := "a1f6a9cf3d3563ebefe2a3ad2458506756b4e09f26f0376058db4873144554ad"
+  sha256 := "5703041e687e40ea1ba866d9fb14e4e24f60ade09917fe530e94eb2aabf9f5a6"
   authority := "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel"
   zeroCount := 10
 }
@@ -208,7 +208,7 @@ def certifiedLabReport : LabReportCertificate := {
 /-- Cryptographic and structural link theorem: the embedded SHA-256 digest,
     authority string, and zero count match the local laboratory report. -/
 theorem lab_report_cryptographic_link :
-    certifiedLabReport.sha256 = "a1f6a9cf3d3563ebefe2a3ad2458506756b4e09f26f0376058db4873144554ad" ∧
+    certifiedLabReport.sha256 = "5703041e687e40ea1ba866d9fb14e4e24f60ade09917fe530e94eb2aabf9f5a6" ∧
     certifiedLabReport.authority = "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel" ∧
     certifiedLabReport.zeroCount = 10 := by
   constructor

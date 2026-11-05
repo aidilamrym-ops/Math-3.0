@@ -3,7 +3,7 @@
 > **Status:** Production Sealed & Constitutionally Locked  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 141 rows, SHA-256 locked  
+> **Manifest:** 155 rows, SHA-256 locked  
 > **Certificate Authority:** `Math 3.0 Local Sovereignty, Bounded-Lattice Kernel`
 
 ---

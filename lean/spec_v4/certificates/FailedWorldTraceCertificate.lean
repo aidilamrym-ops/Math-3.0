@@ -16,7 +16,7 @@ structure ReportCertificate where
 /-- Certified local report. -/
 def certifiedReport : ReportCertificate := {
   sourceSha256 := "46e8a7909c188d2dacd59f3b6a6c4702a7a2a0b8187f4917d9478f8c69992080"
-  certificateSha256 := "455e46e36285aeb48081c3fffc667bc8f3a31cd7decf13ea47a9af9875974587"
+  certificateSha256 := "ad8b1de2830710e024b2a1501226f2b949b21f71e73a3f68a2e55ebf5fc23126"
   authority := "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel"
 }
 
@@ -24,7 +24,7 @@ def certifiedReport : ReportCertificate := {
     digest match the local sovereign record exactly. -/
 theorem report_cryptographic_link :
     certifiedReport.sourceSha256 = "46e8a7909c188d2dacd59f3b6a6c4702a7a2a0b8187f4917d9478f8c69992080" ∧
-    certifiedReport.certificateSha256 = "455e46e36285aeb48081c3fffc667bc8f3a31cd7decf13ea47a9af9875974587" ∧
+    certifiedReport.certificateSha256 = "ad8b1de2830710e024b2a1501226f2b949b21f71e73a3f68a2e55ebf5fc23126" ∧
     certifiedReport.authority = "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel" := by
   constructor
   · rfl
