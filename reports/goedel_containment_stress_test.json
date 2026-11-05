@@ -1,0 +1,6 @@
+{
+  "test": "GOEDEL_INCOMPLETENESS_BOUNDARY_CONTAINMENT",
+  "timestamp": "2026-11-05T07:00:00Z",
+  "overflow_detected": true,
+  "verdict": "GOEDEL_REPRESENTATION_ALARM_VERIFIED"
+}
