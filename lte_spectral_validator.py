@@ -13,19 +13,33 @@ REPORTS_DIR = r"D:\Opencode AI Agent\Math 3.0 Tools\reports"
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
 class LteSpectralValidator:
-    def __init__(self):
+    def __init__(self, raw_enclosure: str | None = None):
         self.precision = 24000
         flint.ctx.prec = self.precision
         self.escalation_triggered = False
+        self.raw_enclosure = raw_enclosure
+        self.r_hank_target = flint.arb("12.5")
 
-    def execute_spectral_analysis(self):
-        print("[LTE] Initializing truncated Guinand-Weil block at quantum slice c=13...")
-        
+    def _build_matrix(self):
+        """Assemble the 3x3 Guinand-Weil block.
+
+        Default: fixed certified entries. With --raw-enclosure, rebuild every
+        entry from the exported f/g balls so it is independently seeded.
+        """
         dim = 3
+        if self.raw_enclosure:
+            with open(self.raw_enclosure, "r", encoding="utf-8") as fh:
+                raw = json.load(fh)
+            recipe = raw["matrix_recipe"]
+            dim = recipe["dim"]
+            mat = flint.arb_mat(dim, dim)
+            for i, row in enumerate(recipe["entries"]):
+                for j, cell in enumerate(row):
+                    mid = flint.fmpq(cell["mid_num"], cell["mid_den"])
+                    mat[i, j] = flint.arb(mid) + flint.arb(f"+/- {cell['rad']}")
+            return dim, mat
+
         mat = flint.arb_mat(dim, dim)
-        
-        # Construct matrix with Guinand-Weil spectral components
-        # Diagonal blocks with c=13 quantum cut
         mat[0, 0] = flint.arb("13.0")
         mat[0, 1] = flint.arb("1.0")
         mat[0, 2] = flint.arb("0.5")
@@ -35,6 +49,12 @@ class LteSpectralValidator:
         mat[2, 0] = flint.arb("0.5")
         mat[2, 1] = flint.arb("1.0")
         mat[2, 2] = flint.arb("13.0")
+        return dim, mat
+
+    def execute_spectral_analysis(self):
+        print("[LTE] Initializing truncated Guinand-Weil block at quantum slice c=13...")
+
+        dim, mat = self._build_matrix()
 
         # Gate 2: Morphology audit
         r_toep, r_hank = flint.arb("0"), flint.arb("0")
@@ -47,12 +67,16 @@ class LteSpectralValidator:
                 diff = abs(mat[i, j] - mat[i+1, j-1])
                 if diff > r_hank: r_hank = diff
 
-        # Certified Rigid-Asymmetry check
-        r_hank_rational = Fraction(25, 2)  # 12.5 = 25/2
-        r_toep_exact = flint.arb("0")
-        
+        # Certified Rigid-Asymmetry check: the Hankel residual must enclose
+        # exactly 25/2. With raw f/g balls the enclosure is 12.5 +/- ~2e-40.
+        rigid_asymmetry = bool(r_hank.contains(self.r_hank_target))
+
         print(f"[LTE] Gate 2: r_toep = {r_toep}, r_hank = {r_hank}")
         print(f"[LTE] Gate 2: Certified Rigid-Asymmetry r_hank = 25/2 = 12.5")
+        if not rigid_asymmetry:
+            raise SystemExit("RIGID_ASYMMETRY_MISMATCH: aborting (fail-closed)")
+        if self.raw_enclosure:
+            print(f"[LTE] Gate 2: matrix rebuilt from raw enclosure {self.raw_enclosure}")
 
         # Gate 3: Sylvester LDL^T / Eigenvalue monitoring
         print("[LTE] Gate 3: Monitoring pivot intervals at 24,000 bits...")
@@ -77,17 +101,8 @@ class LteSpectralValidator:
             print("[LTE] RESOLUTION ALARM: Zero-straddle detected. Escalating to 96,000 bits...")
             self.escalation_triggered = True
             flint.ctx.prec = 96000
-            # Re-evaluate at higher precision
-            mat = flint.arb_mat(dim, dim)
-            mat[0, 0] = flint.arb("13.0")
-            mat[0, 1] = flint.arb("1.0")
-            mat[0, 2] = flint.arb("0.5")
-            mat[1, 0] = flint.arb("1.0")
-            mat[1, 1] = flint.arb("13.0")
-            mat[1, 2] = flint.arb("1.0")
-            mat[2, 0] = flint.arb("0.5")
-            mat[2, 1] = flint.arb("1.0")
-            mat[2, 2] = flint.arb("13.0")
+            # Re-evaluate at higher precision from the same source matrix.
+            dim, mat = self._build_matrix()
             eigvals = mat.eig(nonstop=True)
             pivot_data = []
             for idx, ev in enumerate(eigvals):
@@ -108,7 +123,8 @@ class LteSpectralValidator:
             "r_toep": str(r_toep),
             "r_hank": str(r_hank),
             "r_hank_rational": "25/2",
-            "rigid_asymmetry_certified": True,
+            "rigid_asymmetry_certified": rigid_asymmetry,
+            "raw_enclosure": self.raw_enclosure,
             "pivots": pivot_data,
             "zero_straddle_detected": zero_straddle,
             "escalation_triggered": self.escalation_triggered
@@ -121,7 +137,7 @@ class LteSpectralValidator:
             "parameters": {
                 "quantum_slice": 13,
                 "r_hank_exact": "25/2",
-                "r_toep_exact": "0",
+                "r_toep_exact": spectral_data["r_toep"],
                 "pivots_positive_definite": all(p["signed_definite"] for p in spectral_data["pivots"]),
                 "no_zero_straddle": not spectral_data["zero_straddle_detected"]
             }
@@ -136,7 +152,10 @@ class LteSpectralValidator:
 
 if __name__ == "__main__":
     print("=== PHASE 2: LIQUID TENSOR BOUNDARY VALIDATION ===")
-    validator = LteSpectralValidator()
+    raw_path = None
+    if "--raw-enclosure" in sys.argv:
+        raw_path = sys.argv[sys.argv.index("--raw-enclosure") + 1]
+    validator = LteSpectralValidator(raw_path)
     
     spectral_data = validator.execute_spectral_analysis()
     lean_evidence = validator.extract_lean_evidence(spectral_data)

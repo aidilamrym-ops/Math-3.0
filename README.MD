@@ -3,7 +3,7 @@
 > **Status:** Production Sealed & Constitutionally Locked  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 155 rows, SHA-256 locked  
+> **Manifest:** 160 rows, SHA-256 locked  
 > **Certificate Authority:** `Math 3.0 Local Sovereignty, Bounded-Lattice Kernel`
 
 ---
@@ -63,6 +63,7 @@ The result is a reproducible, fail-closed verification pipeline designed for sci
 | **Discrete QFT Engine** | Exact Quantum Fourier Transform for Shor period-finding using Gaussian Integer operators, zero continuous floats. |
 | **Beal Conjecture Tribunal** | SMT QF_LIA bounded search for A^x + B^y = C^z counterexamples up to 10^18 scale. |
 | **Beal Certificate Anchor** | Cryptographic seal binding SMT unsat verdict to Lean 4 kernel via SHA-256 reflexivity. |
+| **Fresh Ball Reinit** | Independent 24,000-bit python-flint re-seeding of raw f/g interval balls under the Planck micro cutoff, feeding the LTE morphology validator. |
 | **Z3 tribunal** | QF_LIA refutations and satisfiability witnesses at scale $10^{18}$. |
 | **Riemann critical-line module** | Guinand-Weil interval enclosures for the first ten non-trivial zeros at 24,000 bits, with a certified search boundary of $t \le 50.0$. |
 | **Adversarial stress testing** | Boundary injection at interval radii; Gate 4 revalidation; optional 96,000-bit escalation path. |

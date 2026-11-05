@@ -1,11 +1,11 @@
 {
   "certificate": "MATH 3.0 TEST RESULT CERTIFICATE",
   "phase": "PHASE_9_INDIVIDUAL_REPORT_CERTIFICATION",
-  "certified_at": "2026-11-05T15:42:08.614385+00:00",
+  "certified_at": "2026-11-05T15:56:52.881085+00:00",
   "authority": "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel",
   "source_file": "reports/z3_tribunal_bounds.json",
-  "source_sha256": "b2be78477f44d5c4bb8dfba794c3f1e6c3c614f2487c0d20c3773f880546ca83",
-  "source_size_bytes": 6619,
+  "source_sha256": "79fd6106f23979c2193c8a30baa6259b1242f1c6fcb1e44bffdfd73253c71130",
+  "source_size_bytes": 6620,
   "source_summary": {
     "phase": "PHASE_4_SYLVESTER_INERTIA_REDUCTION_Z3_TRIBUNAL",
     "timestamp": "2026-11-05T00:00:00Z",

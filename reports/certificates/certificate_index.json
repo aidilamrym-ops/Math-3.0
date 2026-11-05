@@ -1,16 +1,16 @@
 {
   "certificate": "MATH 3.0 CERTIFICATE INDEX",
   "phase": "PHASE_9_INDIVIDUAL_REPORT_CERTIFICATION",
-  "generated_at": "2026-11-05T15:42:13.424025+00:00",
+  "generated_at": "2026-11-05T15:56:57.818185+00:00",
   "authority": "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel",
-  "total_certificates": 24,
+  "total_certificates": 25,
   "certificates": [
     {
       "source_file": "constitutional_law_receipt.json",
       "source_type": "json",
       "source_sha256": "ae7e12bb9b690c51ad2be2a8c6f2f12634bba4902e09bae0e3e5036cf42a1795",
       "certificate_file": "reports/certificates/constitutional_law_receipt_certificate.json",
-      "certificate_sha256": "70463a3e09e21627e25ca4deb7b753b3cd5acfda7cb3a3e2869b21e232f9139a",
+      "certificate_sha256": "d46198197aa922f43427adcdc986bd9e28f6ccb6bcea5b200d37b59b3b98edd4",
       "lean_file": "lean/spec_v4/certificates/ConstitutionalLawReceiptCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -30,7 +30,7 @@
       "source_type": "json",
       "source_sha256": "46e8a7909c188d2dacd59f3b6a6c4702a7a2a0b8187f4917d9478f8c69992080",
       "certificate_file": "reports/certificates/failed_world_trace_certificate.json",
-      "certificate_sha256": "ad8b1de2830710e024b2a1501226f2b949b21f71e73a3f68a2e55ebf5fc23126",
+      "certificate_sha256": "8889869098253e199885df9c0a961ebf5af4729fca3e13191a81e12fd48a97ce",
       "lean_file": "lean/spec_v4/certificates/FailedWorldTraceCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -43,7 +43,7 @@
       "source_type": "json",
       "source_sha256": "2fc4d3f7de7f368a8ce9f512a292bac6b72dd9341ad5e53827998340b6b42dc0",
       "certificate_file": "reports/certificates/abc_census_v3_audit_certificate.json",
-      "certificate_sha256": "06093ebf58a9e5159acfeb5c701a1ce026c3e5e66ab39b1c16ec86e82257951b",
+      "certificate_sha256": "f34c8187359f9fc1241dcd0ffc4b59f9be21faff6adb26bb4875c40f891cff17",
       "lean_file": "lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -57,7 +57,7 @@
       "source_type": "json",
       "source_sha256": "06586eefd35b85bdc9d72b19fec05adc4407e038c0019c5113331a9a4c8dbab7",
       "certificate_file": "reports/certificates/anderson_enclosure_bounds_certificate.json",
-      "certificate_sha256": "4d5a8f199ee156b4fe7659eab92af1f6c4b9888177555f9027525b59685872e9",
+      "certificate_sha256": "02cbcdb32926c4a3cfeda2afcddb213585e9e845371cfdedadb1ba631d75b665",
       "lean_file": "lean/spec_v4/certificates/AndersonEnclosureBoundsCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -72,7 +72,7 @@
       "source_type": "json",
       "source_sha256": "ba76441b431cd1c71cfb1fbc7b0b76dda5037cb618de611197a069d7bbfdf2cf",
       "certificate_file": "reports/certificates/continuum_density_stress_test_certificate.json",
-      "certificate_sha256": "e162b84f21dfc9094ea56e7e8c1e3ff454ce32b1c2de0965f902a084d42b10e9",
+      "certificate_sha256": "11aa32c4b809eaabd210d400853df07df5e6576a4c73c085f782a2b7b299328a",
       "lean_file": "lean/spec_v4/certificates/ContinuumDensityStressTestCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -86,7 +86,7 @@
       "source_type": "json",
       "source_sha256": "f0ea6d6ed744fe876e77e175d1c0623f73f0a769ce207934f2c096cc11052333",
       "certificate_file": "reports/certificates/ftc_collapse_stress_test_certificate.json",
-      "certificate_sha256": "6a6bc53cb1bc141386fac024571b3699ebdfb0c8be04cd51a9a8dd0f784cff29",
+      "certificate_sha256": "299550dbdaa402c33a6c2d086bdb81c0b0ae4094aff77352374bf4667a66c853",
       "lean_file": "lean/spec_v4/certificates/FtcCollapseStressTestCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -100,7 +100,7 @@
       "source_type": "json",
       "source_sha256": "a67e4a42312ee0bc4c7a0dd8e8347e69bb8dc4fa348544cce0934bffd1da364d",
       "certificate_file": "reports/certificates/goedel_containment_stress_test_certificate.json",
-      "certificate_sha256": "842281eda2db153c8fa697af558ec1578acfdd9a3d649234e136f474011daa06",
+      "certificate_sha256": "51e08912544b1253423c2ec22ff2cad9429f764d3a4b163cd729f9fea6a4be0c",
       "lean_file": "lean/spec_v4/certificates/GoedelContainmentStressTestCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -113,7 +113,7 @@
       "source_type": "json",
       "source_sha256": "c68e2c019973f687a7da6c1333a6e0352a30d177527b699a948c334ba72d446a",
       "certificate_file": "reports/certificates/gravitational_singularity_stress_test_certificate.json",
-      "certificate_sha256": "4756cc099c9bc210b994fd91b7ed47df6af6d683eebbc89d864263d781c154e9",
+      "certificate_sha256": "d1ac6fc052a367de80c9b1fac9ef0e3249f2733d7c90e3c6552d7d3709cc647a",
       "lean_file": "lean/spec_v4/certificates/GravitationalSingularityStressTestCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -127,7 +127,7 @@
       "source_type": "json",
       "source_sha256": "5d5d63b481718ce1cb73feb9e7f7a432fbdf5b0835243b424dcbd75322eee543",
       "certificate_file": "reports/certificates/heisenberg_uncertainty_stress_test_certificate.json",
-      "certificate_sha256": "bc1b1db19b94a2626c77270f123c621115a7126c6487a6aa4cd991bc9edd649d",
+      "certificate_sha256": "c8acf8face07a0b794870e2d2ca852bf05213327595d167465c3cfd9c870a471",
       "lean_file": "lean/spec_v4/certificates/HeisenbergUncertaintyStressTestCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -141,7 +141,7 @@
       "source_type": "json",
       "source_sha256": "2e0f0e636015b7f0bb6a1ad9def5de65ad92bde1ffb548e3ca6ebfbb704e9b7a",
       "certificate_file": "reports/certificates/integrity_audit_certificate.json",
-      "certificate_sha256": "b3fd29f8044700026667d9c2d77264d65fc827e4beab8d7a348a336fbb2d9a60",
+      "certificate_sha256": "3109de67625cf0a2c4bcdab387bed3b3b35015a4af8c622d88a7ef65a650ee20",
       "lean_file": "lean/spec_v4/certificates/IntegrityAuditCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -158,9 +158,9 @@
     {
       "source_file": "reports/lte_spectral_validation.json",
       "source_type": "json",
-      "source_sha256": "54e59b6cc8413eabdf905401695a2a99febb7c761a0dbc084708452407571f46",
+      "source_sha256": "6df46c523c8ee80264f09a301cd02b50b1736e38e07c00cd8d54a885a10703d7",
       "certificate_file": "reports/certificates/lte_spectral_validation_certificate.json",
-      "certificate_sha256": "042d5e74f44c9c81d7c9d8bfa36d8fdc975bbe0070546ae9c0b651e2f06db6d6",
+      "certificate_sha256": "edb4c0e45115dae4a736de4bcb50ec1dbaf41dece9a0569b939f2ef311da242b",
       "lean_file": "lean/spec_v4/certificates/LteSpectralValidationCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -174,7 +174,7 @@
       "source_type": "json",
       "source_sha256": "2dc627b4d1a92c267e9516cd8851c87cb8f9a1a0253e9469e665c8d6da11727f",
       "certificate_file": "reports/certificates/meta_blindspot_audit_certificate.json",
-      "certificate_sha256": "06aa3225a18adf3cbd1e327421570d1f6b6dc761393f81e124e5f8c96673ed8b",
+      "certificate_sha256": "c9d10ad5fe767403a1b9fa3599841efa588001fbc3fd8414a63d3ec7d91967df",
       "lean_file": "lean/spec_v4/certificates/MetaBlindspotAuditCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -188,7 +188,7 @@
       "source_type": "json",
       "source_sha256": "e8544d0fce9e54a6633f93c2e869c615a1295ed4b02df8210575c7f86aeffa5e",
       "certificate_file": "reports/certificates/navier_stokes_blowup_trace_certificate.json",
-      "certificate_sha256": "41b9ac920e250aab6da36884587d9e4547b686b94a919495013bb9098cda5888",
+      "certificate_sha256": "f005c44a117a92adf3443e20047e7c01ceb463f8fe3fd08f53342e6f8d1a6e9c",
       "lean_file": "lean/spec_v4/certificates/NavierStokesBlowupTraceCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -197,16 +197,31 @@
       }
     },
     {
+      "source_file": "reports/raw_fg_initial_enclosure.json",
+      "source_type": "json",
+      "source_sha256": "781c59004bbae87adaf38ba3b2a11c557b0d48883f94fcda7a068e2b8b88ff1d",
+      "certificate_file": "reports/certificates/raw_fg_initial_enclosure_certificate.json",
+      "certificate_sha256": "e3f2906ac78b55244ef5afc0c7b87ed57ff35604e2b3763c9ee2228d5d57b4c2",
+      "lean_file": "lean/spec_v4/certificates/RawFgInitialEnclosureCertificate.lean",
+      "lean_compile_exit_code": 0,
+      "source_summary": {
+        "phase": "PHASE_6_FRESH_BALL_REINIT",
+        "timestamp": "2026-11-05T15:55:46.265823+00:00",
+        "verdict": "PASSED - raw f/g balls re-initialized at 24,000 bits; every radius within the Planck micro cutoff",
+        "precision_bits": 24000
+      }
+    },
+    {
       "source_file": "reports/regression_master_report.json",
       "source_type": "json",
-      "source_sha256": "359064be888320e76b11eddeb912572333cc6a81a59784e45f16604a0b8f608f",
+      "source_sha256": "d8879520167287cab23e5d2e2623b7120c9d9a6974f430dde32049ed94882c21",
       "certificate_file": "reports/certificates/regression_master_report_certificate.json",
-      "certificate_sha256": "d30c131c978b64f13dd0b8886e8ce9be595eadf83b64ca82d29fd185a7a811d1",
+      "certificate_sha256": "03612309e18e5e69c7cd576ec7a3e2885f8256714bd740d2e08cd68e7444cecb",
       "lean_file": "lean/spec_v4/certificates/RegressionMasterReportCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
         "phase": "REGRESSION_MASTER_CLOSURE",
-        "timestamp": "2026-11-05T05:52:05.208785+00:00",
+        "timestamp": "2026-11-05T15:43:39.226176+00:00",
         "verdict": "FULL PASS"
       }
     },
@@ -215,7 +230,7 @@
       "source_type": "json",
       "source_sha256": "64732930405543c94f6367a693d1c41ea449af28f8a212023fe3a416cf2228a9",
       "certificate_file": "reports/certificates/rh_critical_line_validation_certificate.json",
-      "certificate_sha256": "63301032a9b31b2742e9a8f5a0307b84e214767dad60c51c40a5bf6933db3a9b",
+      "certificate_sha256": "3408a49b4599dedda89d0247ddcc0006c1a65fb8f484257448ad32c2cb02dc6d",
       "lean_file": "lean/spec_v4/certificates/RhCriticalLineValidationCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -239,7 +254,7 @@
       "source_type": "json",
       "source_sha256": "1239622700bed5e1ea2a243a19a23958ea27c4b4155891ce8e0aa69bed657b9f",
       "certificate_file": "reports/certificates/rh_extreme_stress_test_certificate.json",
-      "certificate_sha256": "5bfc06e78bbb1ced963877bb3d0c43fb280ee9562bc6ac19de3de3efc7b5ccab",
+      "certificate_sha256": "de83410c66ef5783ae9c1df0b9298d97755a38e5d0d75f9da03eff41a4dd36bc",
       "lean_file": "lean/spec_v4/certificates/RhExtremeStressTestCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -264,7 +279,7 @@
       "source_type": "json",
       "source_sha256": "d822785f3bdeaf06484628dafc2e60e6c3514f479ff12ab9d166f9050db8ee05",
       "certificate_file": "reports/certificates/rh_spectral_anomalies_certificate.json",
-      "certificate_sha256": "21c878d16f15502b370201a56c5a14ee8bbaca14d43dfae0d2f22cf116c1b2a2",
+      "certificate_sha256": "bc35c1e9e1cc03415fc238dbd5cee02d34357f9548cee3fb462502da0cbf7d01",
       "lean_file": "lean/spec_v4/certificates/RhSpectralAnomaliesCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -280,7 +295,7 @@
       "source_type": "json",
       "source_sha256": "3a865b932114bc5241588583b222392707e376f04bf70262aa107428b725a590",
       "certificate_file": "reports/certificates/topological_uniqueness_certificate.json",
-      "certificate_sha256": "5bb0c91c6efe7c30f809c06482786664f8e4376d8a9b01d8e08b66700eae8bdc",
+      "certificate_sha256": "fb7a5d8004a5d5a9896a51e43cc9c8ff4478e148a88a13ae375a4f7c8813dfcd",
       "lean_file": "lean/spec_v4/certificates/TopologicalUniquenessCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -296,7 +311,7 @@
       "source_type": "json",
       "source_sha256": "db231a929e25de72d272d433755cb0550fe8e5081e8ee50fb8582d570ad8b038",
       "certificate_file": "reports/certificates/triad_state_transitions_certificate.json",
-      "certificate_sha256": "898d3dbfcb53bf42ce1cb0462a672ace6d853cb9b49a8fe77677dca1555ad964",
+      "certificate_sha256": "fa31bf3110bc39686aef70f11d69fcf2e54b86935909df9d9159727c3d6fae6e",
       "lean_file": "lean/spec_v4/certificates/TriadStateTransitionsCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -313,9 +328,9 @@
     {
       "source_file": "reports/z3_tribunal_bounds.json",
       "source_type": "json",
-      "source_sha256": "b2be78477f44d5c4bb8dfba794c3f1e6c3c614f2487c0d20c3773f880546ca83",
+      "source_sha256": "79fd6106f23979c2193c8a30baa6259b1242f1c6fcb1e44bffdfd73253c71130",
       "certificate_file": "reports/certificates/z3_tribunal_bounds_certificate.json",
-      "certificate_sha256": "dd35cb0f6a989c0228c04dcf5ce02ad25f0ba8288cec7b9a8e49f28d08b4ea30",
+      "certificate_sha256": "f58ef669438c944b93ad62f899528db8f5e3639dffb29cb1b3f7bd58f660ba3b",
       "lean_file": "lean/spec_v4/certificates/Z3TribunalBoundsCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -338,7 +353,7 @@
       "source_type": "log",
       "source_sha256": "9f7c0db8ed3f34df51ff6249762f630ef3733a16fb18c3ed16d344100937285d",
       "certificate_file": "reports/certificates/box_feasibility_witness_certificate.json",
-      "certificate_sha256": "865ecaafb9999f6fdebd7cd7d9bfd4d34fc6b08bf2a4fa11ef285636312ba5b6",
+      "certificate_sha256": "a38f59cfe21860371f742b3053cb911a8ec4ff801dcf3a14c8463cdc1e885be1",
       "lean_file": "lean/spec_v4/certificates/BoxFeasibilityWitnessCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -352,7 +367,7 @@
       "source_type": "log",
       "source_sha256": "7ecbe2eb1279ccb94dfa17a67ed77994740fb686253422cc7c20a02e1a861523",
       "certificate_file": "reports/certificates/contraction_bound_certificate.json",
-      "certificate_sha256": "3e9d1330dac0ed1f1163807d88087174df30af5f203733b88939cf14cb28d6bb",
+      "certificate_sha256": "3044111dca0b01ef4d25fa93b0f5c549b1661e46166f99077d696da4e5296dfd",
       "lean_file": "lean/spec_v4/certificates/ContractionBoundCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -366,7 +381,7 @@
       "source_type": "log",
       "source_sha256": "def670ddefd6866648cf6db5409ed64dca71f098fd4adc12cc6d549e8cb5c778",
       "certificate_file": "reports/certificates/ledger_cross_multiplication_certificate.json",
-      "certificate_sha256": "ee6867fdd72e837180d04f1bacd941c725b31a5860b50da335df332464beea5b",
+      "certificate_sha256": "0397596f61c85102c947e77c5c4949b556355c32391c9a320144d92c88df9d32",
       "lean_file": "lean/spec_v4/certificates/LedgerCrossMultiplicationCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
@@ -380,7 +395,7 @@
       "source_type": "log",
       "source_sha256": "d383da712c537c5aacbeab59669f4496f1908e91a9c2448fe5503acecde12e04",
       "certificate_file": "reports/certificates/sign_flip_absence_certificate.json",
-      "certificate_sha256": "da266f653a5a40a92f40f0a0c75b924455f3961fcc084778ab8a03ef95b62678",
+      "certificate_sha256": "8099a63da270fdae53c15db297d519db5d3a04d63b00597ca97f5364631b7174",
       "lean_file": "lean/spec_v4/certificates/SignFlipAbsenceCertificate.lean",
       "lean_compile_exit_code": 0,
       "source_summary": {
