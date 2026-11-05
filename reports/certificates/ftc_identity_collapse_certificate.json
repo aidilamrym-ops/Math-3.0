@@ -1,0 +1,9 @@
+{
+  "target_theorem": "Fundamental Theorem of Calculus (FTC) - Newton/Leibniz",
+  "test_phase": "Phase 11 Adversarial Case 2",
+  "verification_kernel": "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel",
+  "source_file": "lean/spec_v4/FtcIdentityCollapse.lean",
+  "source_sha256": "04565dfc065e0859030085042fa02cdd5d3e43387e48e07bfe739992fe1e0f34",
+  "observed_anomaly": "FTC_SINGULARITY_ALARM triggered. Zero-straddling non-Lipschitz spike detected inside interval pivot bounds.",
+  "verdict": "STRUCTURE_ALARM_SEALED"
+}
