@@ -58,7 +58,7 @@ The result is a reproducible, fail-closed verification pipeline designed for sci
 | **Root uniqueness** | Newton box contraction verifies strict inclusion $N(B) \subseteq B$ and certifies a unique structural root. |
 | **Lean 4 evidence** | Exact rational and Nat certificates compile without `sorry`, `admit`, or `axiom` placeholders. |
 | **Z3 tribunal** | QF_LIA refutations and satisfiability witnesses at scale $10^{18}$. |
-| **Riemann critical-line module** | Guinand-Weil interval enclosures for the first three non-trivial zeros at 24,000 bits. |
+| **Riemann critical-line module** | Guinand-Weil interval enclosures for the first ten non-trivial zeros at 24,000 bits, with a certified search boundary of $t \le 50.0$. |
 | **Adversarial stress testing** | Boundary injection at interval radii; Gate 4 revalidation; optional 96,000-bit escalation path. |
 | **Sovereign certificates** | Master laboratory report, 17 individual test-result certificates, SHA-256 anchors, and Lean cryptographic link theorems. |
 | **1-bit fault sentinel** | `manifest.json` locks every tracked file; any unverified change fails closed. |
@@ -170,54 +170,79 @@ and a contraction ratio below $1/2$ certify a unique structural root inside $B$.
 
 ## 5. Riemann Hypothesis Critical-Line Verification
 
-The Riemann Hypothesis module targets the first three non-trivial zeros of the Riemann zeta function on the critical line $s = 1/2 + it$. It is an interval-certification module, not a proof of the Riemann Hypothesis.
+The Riemann Hypothesis module targets the first ten non-trivial zeros of the Riemann zeta function on the critical line $s = 1/2 + it$. It is an interval-certification module, not a proof of the Riemann Hypothesis.
 
 ### 5.1 Phase 6: Guinand-Weil Initialization
 
-`mcp/t2n/rh_core/rh_krypton_solver.py` maps the explicit-formula functional sums of the Guinand-Weil framework into the Finite Information Lattice at **24,000 bits**.
+`mcp/t2n/rh_core/rh_krypton_solver.py` maps the explicit-formula functional sums of the Guinand-Weil framework into the Finite Information Lattice at **24,000 bits**. The search boundary is fixed at $t \le 50.0$, which encloses all ten target ordinates ($t_{10} \approx 49.7738324777$).
 
 Certified state:
 
-- Sylvester inertia signature: `[3, 0, 0]`
-- Positive pivots: `3`
+- Sylvester inertia signature: `[10, 0, 0]`
+- Positive pivots: `10`
 - Negative pivots: `0`
 - Zero pivots: `0`
 - Zero-straddle detected: `false`
+- Leading principal minors: all ten strictly positive at 24,000 bits
 
 ### 5.2 Exact Rational Intervals
 
-The exact rational boundaries assigned to the first three zeros are:
+The exact rational boundaries assigned to the first ten zeros are:
 
 ```text
-t1: [176684064271683672376862740391521/12500000000000000000000000000000,
-     141347251417346937901490192313217/10000000000000000000000000000000]
+t1:  [353368128543367344761431299589061756769603927892481/25000000000000000000000000000000000000000000000000,
+      353368128543367344761431299589061756769608927892481/25000000000000000000000000000000000000000000000000]
 
-t2: [84088158555086219991575314405557/4000000000000000000000000000000,
-     2102203963877155499789382860138927/100000000000000000000000000000000]
+t2:  [1051101981938577749631423979694845138866712026245139/50000000000000000000000000000000000000000000000000,
+      1051101981938577749631423979694845138866722026245139/50000000000000000000000000000000000000000000000000]
 
-t3: [1250542879007284438121269515632201/50000000000000000000000000000000,
-     625271439503642219060634757816101/25000000000000000000000000000000]
+t3:  [2501085758014568876321379099256282181865944967255799/100000000000000000000000000000000000000000000000000,
+      2501085758014568876321379099256282181865964967255799/100000000000000000000000000000000000000000000000000]
+
+t4:  [380310951573243915128898719132301141502268250296443/12500000000000000000000000000000000000000000000000,
+      380310951573243915128898719132301141502270750296443/12500000000000000000000000000000000000000000000000]
+
+t5:  [3293506158773918969066236896407490348881261560351703/100000000000000000000000000000000000000000000000000,
+      3293506158773918969066236896407490348881281560351703/100000000000000000000000000000000000000000000000000]
+
+t6:  [3758617815882567125721776348070533282140549735083079/100000000000000000000000000000000000000000000000000,
+      3758617815882567125721776348070533282140569735083079/100000000000000000000000000000000000000000000000000]
+
+t7:  [4091871901214749518739812691463325439572606596277727/100000000000000000000000000000000000000000000000000,
+      4091871901214749518739812691463325439572626596277727/100000000000000000000000000000000000000000000000000]
+
+t8:  [4332707328091499951949612216540680578264556837183687/100000000000000000000000000000000000000000000000000,
+      4332707328091499951949612216540680578264576837183687/100000000000000000000000000000000000000000000000000]
+
+t9:  [2400257544058357986397123637471375802084337200057221/50000000000000000000000000000000000000000000000000,
+      2400257544058357986397123637471375802084347200057221/50000000000000000000000000000000000000000000000000]
+
+t10: [2488691623883615109095839233928186202886153914983833/50000000000000000000000000000000000000000000000000,
+      2488691623883615109095839233928186202886163914983833/50000000000000000000000000000000000000000000000000]
 ```
 
 These intervals are recorded in `reports/rh_critical_line_validation.json`, embedded in the master laboratory report, and mirrored in the individual certificate for the RH critical-line validation.
 
 ### 5.3 Phase 7: Adversarial Boundary Injection
 
-`phase7_stress_test.py` injects adversarial perturbations at the outer boundaries of the three interval boxes:
+`phase7_stress_test.py` audits the outer boundaries of the ten interval boxes:
 
-- tests the $\pm 0.00000000000000000001$ radius limits;
-- re-runs the Gate 4 Newton box contraction audit;
-- rechecks $N(B) \subseteq B$ at 24,000 bits;
-- triggers the Gate 3 circuit breaker to 96,000 bits if any interval contains zero or leaks.
+- validates the $\pm 10^{-40}$ rational radius limits against 24,000-bit interval arithmetic;
+- verifies strict ordering and non-overlap of all ten boxes;
+- enforces the certified $t \le 50.0$ search boundary;
+- re-runs the independent Gate 4 Newton box contraction audit;
+- triggers the Gate 3 circuit breaker to 96,000 bits if any interval contains zero or escapes the boundary.
 
 ### 5.4 Phase 7 Results
 
 | Check | Result |
 |---|---|
-| Adversarial intervals | 3 |
-| Zero straddle | `false` for all three |
-| Boundary escape | `false` for all three |
-| Gate 4 audit | exit `0`, PASSED |
+| Adversarial intervals | 10 |
+| Zero straddle | `false` for all ten |
+| Boundary escape | `false` for all ten |
+| Strict ordering | `true` for all ten |
+| Search boundary | $t \le 50.0$ respected |
+| Gate 4 spectral audit | exit `0`, PASSED |
 | Precision escalation to 96,000 bits | not triggered |
 | Lean compilation | exit `0` |
 | Lean evidence | `lean/spec_v4/RiemannAdversarialEvidence.lean`, theorem `adversarial_intervals_safe` |
@@ -237,15 +262,15 @@ Math 3.0 uses a two-level certification model:
 
 - Report: `reports/math30_laboratory_report.json`
 - Authority: `Math 3.0 Local Sovereignty, Bounded-Lattice Kernel`
-- SHA-256: `bb9f08381b0594578458695d87df891db5f3840c46f0273bec910572f940e839`
+- SHA-256: `a1f6a9cf3d3563ebefe2a3ad2458506756b4e09f26f0376058db4873144554ad`
 - Lean anchor: `lean/spec_v4/CertifiedManifest.lean`
 - Embedded theorem: `lab_report_cryptographic_link`
 - Placeholders: none (`sorry`, `admit`, and `axiom` absent)
 
 The master report records:
 
-- exact rational intervals for $t_1, t_2, t_3$;
-- Sylvester inertia `[3, 0, 0]`;
+- exact rational intervals for $t_1, \ldots, t_{10}$;
+- Sylvester inertia `[10, 0, 0]`;
 - positive definiteness and zero-straddle status;
 - Phase 7 stress-test verdict and escalation state;
 - regression verdict and pass counts;
@@ -291,7 +316,7 @@ Each certificate binds:
 ### 6.3 Certificate Index
 
 - Index: `reports/certificates/certificate_index.json`
-- SHA-256: `4e7506b4e817eb95775e6b2f7ccfdae94093fb272edfc8de6529b68409ce2406`
+- SHA-256: `f98dd970dcf58008651ffb1c60f4da2505717c753ac5a190259940bfe9540228`
 - Lean anchor: `lean/spec_v4/certificates/CertificateIndex.lean`
 - Indexed certificates: `17`
 
@@ -483,14 +508,14 @@ The authoritative ledger is `manifest.json` (87 rows). Selected anchors:
 
 | Artifact | SHA-256 |
 |---|---|
-| `reports/math30_laboratory_report.json` | `bb9f08381b0594578458695d87df891db5f3840c46f0273bec910572f940e839` |
-| `reports/certificates/certificate_index.json` | `4e7506b4e817eb95775e6b2f7ccfdae94093fb272edfc8de6529b68409ce2406` |
+| `reports/math30_laboratory_report.json` | `a1f6a9cf3d3563ebefe2a3ad2458506756b4e09f26f0376058db4873144554ad` |
+| `reports/certificates/certificate_index.json` | `f98dd970dcf58008651ffb1c60f4da2505717c753ac5a190259940bfe9540228` |
 | `reports/lte_spectral_validation.json` | `54e59b6cc8413eabdf905401695a2a99febb7c761a0dbc084708452407571f46` |
 | `reports/topological_uniqueness.json` | `3a865b932114bc5241588583b222392707e376f04bf70262aa107428b725a590` |
-| `reports/z3_tribunal_bounds.json` | `5c5ee9222f621e294dc80703c60eb6fa20a9afca8bef96ec9c96b34deca7e3bc` |
-| `reports/rh_critical_line_validation.json` | `cf13cdef33fc5b04ea417edc4de934a6c9ba74db3ceabc0a9b84ada9ff90df34` |
-| `reports/rh_extreme_stress_test.json` | `95ef1235f0b2206d7246965cfbcda3995236d252acb39e75553b8115bdcee0d9` |
-| `reports/regression_master_report.json` | `5337b60a29f40655aa82a50f5ad5cfe4f11869ffef89e545d78d4b56042af29f` |
+| `reports/z3_tribunal_bounds.json` | `88a2235a1b6f4113ec988bf2f2ebeab22c202d2e1c86f1aef66172b4be3b227a` |
+| `reports/rh_critical_line_validation.json` | `64732930405543c94f6367a693d1c41ea449af28f8a212023fe3a416cf2228a9` |
+| `reports/rh_extreme_stress_test.json` | `1a5025e91bbcb49ad3dfca284da9446aa1b8955d15f624d83af857ec9cf4d5e3` |
+| `reports/regression_master_report.json` | `9d0ae52d6c3f80cdbe1a9cc844a9f99a54e9cd109fce60f6c9ade6d65e3f0df1` |
 
 ---
 
@@ -527,7 +552,7 @@ Generated certificate theorems use only `rfl`.
 
 Math 3.0 is a verification engine for bounded, finite-information claims. It is not a claim to resolve every open problem in mathematics.
 
-- **Riemann Hypothesis module:** certifies interval enclosures and structural properties for the first three non-trivial zeros. It does **not** prove the Riemann Hypothesis.
+- **Riemann Hypothesis module:** certifies interval enclosures and structural properties for the first ten non-trivial zeros. It does **not** prove the Riemann Hypothesis.
 - **Z3 tribunal:** refutations are conditional on the Phase 2/3 boxes enclosing the intended eigenvalues. The enclosure itself is not re-proven by Z3.
 - **201 / 301 dimensions:** declared scaling targets, not certified inertia classifications.
 - **Phase 4 witness:** the satisfiability witness is deliberately excluded from the proof gate.
@@ -560,13 +585,13 @@ python -c "import hashlib; print(hashlib.sha256(open('reports/certificates/certi
 Expected master report hash:
 
 ```text
-bb9f08381b0594578458695d87df891db5f3840c46f0273bec910572f940e839
+a1f6a9cf3d3563ebefe2a3ad2458506756b4e09f26f0376058db4873144554ad
 ```
 
 Expected certificate index hash:
 
 ```text
-4e7506b4e817eb95775e6b2f7ccfdae94093fb272edfc8de6529b68409ce2406
+f98dd970dcf58008651ffb1c60f4da2505717c753ac5a190259940bfe9540228
 ```
 
 ---

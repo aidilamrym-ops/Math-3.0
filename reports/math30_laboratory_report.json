@@ -1,63 +1,126 @@
 {
   "certificate": "MATH 3.0 LABORATORY REPORT",
   "phase": "PHASE_8_INDEPENDENT_REGENERATION",
-  "timestamp": "2026-11-05T04:17:24.069231+00:00",
+  "timestamp": "2026-11-05T04:36:08.832622+00:00",
   "authority": "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel",
   "source_logs": [
+    "reports/rh_critical_line_validation.json",
     "reports/rh_extreme_stress_test.json",
     "reports/regression_master_report.json"
   ],
+  "riemann_zero_count": 10,
+  "search_boundary": "50.0",
   "riemann_zero_intervals": [
     {
       "index": 0,
       "label": "t1",
-      "rational_lower": "176684064271683672376862740391521/12500000000000000000000000000000",
-      "rational_upper": "141347251417346937901490192313217/10000000000000000000000000000000",
+      "rational_lower": "353368128543367344761431299589061756769603927892481/25000000000000000000000000000000000000000000000000",
+      "rational_upper": "353368128543367344761431299589061756769608927892481/25000000000000000000000000000000000000000000000000",
       "contains_zero": false,
       "signed_definite": true
     },
     {
       "index": 1,
       "label": "t2",
-      "rational_lower": "84088158555086219991575314405557/4000000000000000000000000000000",
-      "rational_upper": "2102203963877155499789382860138927/100000000000000000000000000000000",
+      "rational_lower": "1051101981938577749631423979694845138866712026245139/50000000000000000000000000000000000000000000000000",
+      "rational_upper": "1051101981938577749631423979694845138866722026245139/50000000000000000000000000000000000000000000000000",
       "contains_zero": false,
       "signed_definite": true
     },
     {
       "index": 2,
       "label": "t3",
-      "rational_lower": "1250542879007284438121269515632201/50000000000000000000000000000000",
-      "rational_upper": "625271439503642219060634757816101/25000000000000000000000000000000",
+      "rational_lower": "2501085758014568876321379099256282181865944967255799/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "2501085758014568876321379099256282181865964967255799/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    },
+    {
+      "index": 3,
+      "label": "t4",
+      "rational_lower": "380310951573243915128898719132301141502268250296443/12500000000000000000000000000000000000000000000000",
+      "rational_upper": "380310951573243915128898719132301141502270750296443/12500000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    },
+    {
+      "index": 4,
+      "label": "t5",
+      "rational_lower": "3293506158773918969066236896407490348881261560351703/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "3293506158773918969066236896407490348881281560351703/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    },
+    {
+      "index": 5,
+      "label": "t6",
+      "rational_lower": "3758617815882567125721776348070533282140549735083079/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "3758617815882567125721776348070533282140569735083079/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    },
+    {
+      "index": 6,
+      "label": "t7",
+      "rational_lower": "4091871901214749518739812691463325439572606596277727/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "4091871901214749518739812691463325439572626596277727/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    },
+    {
+      "index": 7,
+      "label": "t8",
+      "rational_lower": "4332707328091499951949612216540680578264556837183687/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "4332707328091499951949612216540680578264576837183687/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    },
+    {
+      "index": 8,
+      "label": "t9",
+      "rational_lower": "2400257544058357986397123637471375802084337200057221/50000000000000000000000000000000000000000000000000",
+      "rational_upper": "2400257544058357986397123637471375802084347200057221/50000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true
+    },
+    {
+      "index": 9,
+      "label": "t10",
+      "rational_lower": "2488691623883615109095839233928186202886153914983833/50000000000000000000000000000000000000000000000000",
+      "rational_upper": "2488691623883615109095839233928186202886163914983833/50000000000000000000000000000000000000000000000000",
       "contains_zero": false,
       "signed_definite": true
     }
   ],
   "sylvester_inertia": {
     "signature": [
-      3,
+      10,
       0,
       0
     ],
-    "positive_pivots": 3,
+    "positive_pivots": 10,
     "negative_pivots": 0,
     "zero_pivots": 0,
     "positive_definite": true,
-    "zero_straddle": false
+    "zero_straddle": false,
+    "criterion": "All ten leading principal minors are strictly positive at 24,000 bits (Sylvester criterion)."
   },
   "phase7_stress_test": {
     "phase": "PHASE_7_RH_EXTREME_STRESS_TEST",
-    "timestamp": "2026-11-05T04:17:17.548194+00:00",
+    "timestamp": "2026-11-05T04:35:58.521915+00:00",
     "verdict": "PASSED",
+    "zero_count": 10,
+    "search_boundary": "50.0",
+    "rh_box_audit_verdict": "PASSED",
     "escalation_triggered": false,
     "gate4_exit_code": 0,
-    "gate4_elapsed_ms": 128.833,
+    "gate4_elapsed_ms": 128.685,
     "lean_compilation_exit_code": 0,
-    "lean_compilation_elapsed_ms": 963.832
+    "lean_compilation_elapsed_ms": 1064.396
   },
   "regression": {
     "phase": "REGRESSION_MASTER_CLOSURE",
-    "timestamp": "2026-11-04T20:25:30.163971+00:00",
+    "timestamp": "2026-11-05T04:36:01.280336+00:00",
     "verdict": "FULL PASS",
     "steps_total": 5,
     "steps_passed": 5,

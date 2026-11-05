@@ -70,17 +70,22 @@ def run_adversarial_tests(root: str, config: dict = None) -> bool:
 
     print(f"[ADVERSARY] Running adversarial stress tests at generation {gen}, precision {prec}...")
 
-    # ANOMALY A: Zero-straddle / near-singular matrix test
+    # ANOMALY A: Zero-straddle / singular matrix test.
+    # The 2x2 block [[1, 1], [1, 1]] has eigenvalues 0 and 2, so the
+    # Sylvester classifier must detect an eigenvalue interval containing 0.
     builder_a = IntervalMatrixBuilder(3, prec)
-    builder_a.set_entry_exact(0, 0, "0")
+    builder_a.set_entry_exact(0, 0, "1")
     builder_a.set_entry_exact(0, 1, "1")
     builder_a.set_entry_exact(1, 0, "1")
-    builder_a.set_entry_exact(1, 1, "0")
+    builder_a.set_entry_exact(1, 1, "1")
     builder_a.set_entry_exact(2, 2, "2")
     try:
         IntervalLDLTSolver(builder_a.get_matrix_snapshot()).compute_inertia()
     except ResolutionAlarm as e:
         print(f"[ADVERSARY A] Containment alarm triggered correctly: {e}")
+    else:
+        print("[ADVERSARY A] FAILED: zero-straddle alarm did not trigger.")
+        return False
 
     # ANOMALY B: Minkowski shift injection test
     exporter = LeanFormalExporter(root)
