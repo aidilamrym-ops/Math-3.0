@@ -1,0 +1,228 @@
+{
+  "phase": "PHASE_6_RH_CRITICAL_LINE_INITIALIZATION",
+  "timestamp": "2026-11-05T17:41:38.004933+00:00",
+  "precision_bits": 24000,
+  "search_boundary": "50.0",
+  "interval_radius": "1/5000000000000000000000000000000000000000",
+  "target": "Riemann Hypothesis First 10 Non-Trivial Zeros (s = 1/2 + it)",
+  "zero_count": 10,
+  "zeros": [
+    {
+      "index": 0,
+      "t_mid": "14.13472514173469379045725198356247027078425711569924",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "353368128543367344761431299589061756769601427892481/25000000000000000000000000000000000000000000000000",
+      "rational_upper": "353368128543367344761431299589061756769611427892481/25000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    },
+    {
+      "index": 1,
+      "t_mid": "21.02203963877155499262847959389690277733434052490278",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "1051101981938577749631423979694845138866707026245139/50000000000000000000000000000000000000000000000000",
+      "rational_upper": "1051101981938577749631423979694845138866727026245139/50000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    },
+    {
+      "index": 2,
+      "t_mid": "25.01085758014568876321379099256282181865954967255799",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "2501085758014568876321379099256282181865934967255799/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "2501085758014568876321379099256282181865974967255799/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    },
+    {
+      "index": 3,
+      "t_mid": "30.42487612585951321031189753058409132018156002371544",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "380310951573243915128898719132301141502267000296443/12500000000000000000000000000000000000000000000000",
+      "rational_upper": "380310951573243915128898719132301141502272000296443/12500000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    },
+    {
+      "index": 4,
+      "t_mid": "32.93506158773918969066236896407490348881271560351703",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "3293506158773918969066236896407490348881251560351703/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "3293506158773918969066236896407490348881291560351703/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    },
+    {
+      "index": 5,
+      "t_mid": "37.58617815882567125721776348070533282140559735083079",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "3758617815882567125721776348070533282140539735083079/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "3758617815882567125721776348070533282140579735083079/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    },
+    {
+      "index": 6,
+      "t_mid": "40.91871901214749518739812691463325439572616596277727",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "4091871901214749518739812691463325439572596596277727/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "4091871901214749518739812691463325439572636596277727/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    },
+    {
+      "index": 7,
+      "t_mid": "43.32707328091499951949612216540680578264566837183687",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "4332707328091499951949612216540680578264546837183687/100000000000000000000000000000000000000000000000000",
+      "rational_upper": "4332707328091499951949612216540680578264586837183687/100000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    },
+    {
+      "index": 8,
+      "t_mid": "48.00515088116715972794247274942751604168684400114442",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "2400257544058357986397123637471375802084332200057221/50000000000000000000000000000000000000000000000000",
+      "rational_upper": "2400257544058357986397123637471375802084352200057221/50000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    },
+    {
+      "index": 9,
+      "t_mid": "49.77383247767230218191678467856372405772317829967666",
+      "t_rad": "0.0000000000000000000000000000000000000002",
+      "rational_lower": "2488691623883615109095839233928186202886148914983833/50000000000000000000000000000000000000000000000000",
+      "rational_upper": "2488691623883615109095839233928186202886168914983833/50000000000000000000000000000000000000000000000000",
+      "contains_zero": false,
+      "signed_definite": true,
+      "within_search_boundary": true
+    }
+  ],
+  "sylvester_inertia": {
+    "positive_pivots": 10,
+    "negative_pivots": 0,
+    "zero_pivots": 0,
+    "signature": [
+      10,
+      0,
+      0
+    ],
+    "criterion": "All ten leading principal minors are strictly positive at 24,000 bits (Sylvester criterion)."
+  },
+  "leading_principal_minors": [
+    {
+      "order": 1,
+      "strictly_positive": true,
+      "midpoint_approx": 15.134725141734695
+    },
+    {
+      "order": 2,
+      "strictly_positive": true,
+      "midpoint_approx": 348.1822421349286
+    },
+    {
+      "order": 3,
+      "strictly_positive": true,
+      "midpoint_approx": 9749.099515091852
+    },
+    {
+      "order": 4,
+      "strictly_positive": true,
+      "midpoint_approx": 335524.49758518033
+    },
+    {
+      "order": 5,
+      "strictly_positive": true,
+      "midpoint_approx": 12725705.20521029
+    },
+    {
+      "order": 6,
+      "strictly_positive": true,
+      "midpoint_approx": 554580973.1465946
+    },
+    {
+      "order": 7,
+      "strictly_positive": true,
+      "midpoint_approx": 26571628395.39368
+    },
+    {
+      "order": 8,
+      "strictly_positive": true,
+      "midpoint_approx": 1363705272600.3267
+    },
+    {
+      "order": 9,
+      "strictly_positive": true,
+      "midpoint_approx": 77731581914925.97
+    },
+    {
+      "order": 10,
+      "strictly_positive": true,
+      "midpoint_approx": 4645973629289097.0
+    }
+  ],
+  "gershgorin_lower_bounds": [
+    {
+      "index": 0,
+      "strictly_positive": true,
+      "midpoint_approx": 14.634725141734695
+    },
+    {
+      "index": 1,
+      "strictly_positive": true,
+      "midpoint_approx": 22.022039638771556
+    },
+    {
+      "index": 2,
+      "strictly_positive": true,
+      "midpoint_approx": 27.01085758014569
+    },
+    {
+      "index": 3,
+      "strictly_positive": true,
+      "midpoint_approx": 33.42487612585951
+    },
+    {
+      "index": 4,
+      "strictly_positive": true,
+      "midpoint_approx": 36.93506158773919
+    },
+    {
+      "index": 5,
+      "strictly_positive": true,
+      "midpoint_approx": 42.586178158825675
+    },
+    {
+      "index": 6,
+      "strictly_positive": true,
+      "midpoint_approx": 46.9187190121475
+    },
+    {
+      "index": 7,
+      "strictly_positive": true,
+      "midpoint_approx": 50.327073280915
+    },
+    {
+      "index": 8,
+      "strictly_positive": true,
+      "midpoint_approx": 56.00515088116716
+    },
+    {
+      "index": 9,
+      "strictly_positive": true,
+      "midpoint_approx": 59.2738324776723
+    }
+  ],
+  "zero_straddle_detected": false,
+  "verdict": "PASSED - Ten-zone critical line lattice initialized, Sylvester inertia (10,0,0)"
+}

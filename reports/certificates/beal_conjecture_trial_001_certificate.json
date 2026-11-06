@@ -2,7 +2,7 @@
   "certificate_id": "cert_beal_001",
   "target": "Masalah #10 (Beal Conjecture)",
   "trial_file": "reports/beal_conjecture_trial_001.json",
-  "sha256": "6c4db45d5b2ec4cfae534cc2f468d749240a9422cc560a81a1c5b71c4431efa4",
+  "sha256": "f507b5bf90af5a65182b2a7b7ba66c39a82580a01bb3581caea3b305bbdfce9d",
   "precision_bits": 24000,
   "verdict": "PASSED"
 }

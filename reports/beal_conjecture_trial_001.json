@@ -1,6 +1,6 @@
 {
   "trial_id": "beal_conjecture_trial_001",
-  "timestamp": "2026-11-06T05:14:52.648557+00:00",
+  "timestamp": "2026-11-06T12:45:58.389893+00:00",
   "case_b_evaluation": {
     "case": "Case B (Certified Common Factor)",
     "inputs": {
@@ -44,7 +44,7 @@
     ],
     "sylvester_determinant": 8,
     "coprime_discrepancy_flag": false,
-    "contractibility_ratio": "3/10",
+    "contractibility_ratio": "3750000000000000000000000000000000000003/92500000000000000000000000000000000000000",
     "contractible": true
   },
   "case_a_evaluation": {
@@ -90,7 +90,7 @@
     ],
     "sylvester_determinant": 2,
     "coprime_discrepancy_flag": true,
-    "contractibility_ratio": "3/10",
+    "contractibility_ratio": "15000000000000000000000000000000000000003/85000000000000000000000000000000000000000",
     "contractible": true
   },
   "status": "VERIFIED"

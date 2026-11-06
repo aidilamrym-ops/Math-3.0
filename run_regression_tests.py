@@ -53,7 +53,7 @@ def main():
         lte_data = json.load(f)
     r_hank_val = lte_data["spectral_analysis"]["r_hank"]
     r_hank_rational = lte_data["spectral_analysis"]["r_hank_rational"]
-    r_hank_ok = (r_hank_rational == "25/2" and abs(float(r_hank_val) - 12.5) < 1e-9)
+    r_hank_ok = (r_hank_rational == "25/2" and abs(float(r_hank_val.split()[0].strip("[]")) - 12.5) < 1e-9)
 
     step1_success = (suite_res["exit_code"] == 0 and r_hank_ok)
     master_report["steps"].append({

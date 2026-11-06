@@ -1,0 +1,16 @@
+{
+  "phase": "OPENAI_RIEMANN_CONFRONTATION_ANOMALIES",
+  "target": "Re(s) > 11/12 zero-free region vs critical line lattice",
+  "discrepancy_detected": false,
+  "reason": "Zero-free half-plane Re(s) > 11/12 (approx 0.9167) is strictly disjoint from the critical line Re(s) = 0.5. Adversarial perturbation at +-2e-40 did not force sign-flip or Sylvester inertia violation.",
+  "inertia": {
+    "positive_pivots": 10,
+    "negative_pivots": 0,
+    "zero_pivots": 0,
+    "signature": [
+      10,
+      0,
+      0
+    ]
+  }
+}

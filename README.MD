@@ -1,33 +1,10 @@
 # Math 3.0 — Invariant Hybrid Engine for Finite-Lattice Spectral Analysis and Structural Proof Verification
 
-> **Status:** Production Sealed & Constitutionally Locked  
-> **Repository:** [aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)  
-> **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,316 rows, SHA-256 locked  
+> **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `audit_hardcoded_nodes.py`)
+> **Repository:** [aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)
+> **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)
+> **Manifest:** 1,318 rows, SHA-256 locked
 > **Certificate Authority:** `Math 3.0 Local Sovereignty, Bounded-Lattice Kernel`
-
----
-
-## Table of Contents
-
-1. [Overview](#1-overview)
-2. [Key Features](#2-key-features)
-3. [Architecture: The 6-Gate Defensive Tree](#3-architecture-the-6-gate-defensive-tree)
-4. [OpenAI Math Verification Atlas & Open-Problem Pipeline](#4-openai-math-verification-atlas--open-problem-pipeline)
-5. [Mathematical Foundations](#5-mathematical-foundations)
-6. [Riemann Hypothesis Critical-Line Verification](#6-riemann-hypothesis-critical-line-verification)
-7. [Sovereign Certification Layer](#7-sovereign-certification-layer)
-8. [Repository Structure](#8-repository-structure)
-9. [Installation](#9-installation)
-10. [Usage](#10-usage)
-11. [Verification Evidence](#11-verification-evidence)
-12. [Security and Integrity Model](#12-security-and-integrity-model)
-13. [Scientific Scope and Limitations](#13-scientific-scope-and-limitations)
-14. [Reproducibility](#14-reproducibility)
-15. [Contributing](#15-contributing)
-16. [License](#16-license)
-17. [Citation](#17-citation)
-18. [Contact](#18-contact)
 
 ---
 
@@ -39,11 +16,11 @@ The toolchain combines:
 - arbitrary-precision interval arithmetic using `python-flint` (24,000-bit precision lock);
 - symmetric morphology residual audits (Toeplitz / Hankel);
 - Sylvester interval $LDL^{T}$ inertia classification;
-- multi-dimensional Newton box contraction for root uniqueness;
+- Dynamic Newton box contraction (trace-based spectral bound);
 - exact rational extraction into Lean 4;
 - Z3 QF_LIA bounded-model tribunals;
 - OpenAI Math catalogue verification atlas (373 families, 722 stems, 208 declarations);
-- Beal / Yu Deng batch processing engines with zero anomaly results;
+- Beal / Yu Deng batch processing engines;
 - local sovereign certificates with cryptographic hash anchors.
 
 ---
@@ -52,17 +29,15 @@ The toolchain combines:
 
 | Capability | Description |
 |---|---|
+| **Hardcode-Free Logic** | All gates (contractibility, singularity) execute dynamic computations via AST-validated code. |
+| **Trace-Based Contraction** | Gate 4 Newton sweeps use trace-based Frobenius normalization for geometric spectral bounds. |
+| **Lean 4 Generic Proofs** | Certificates evolve beyond static boxes to prove generic structural boundary inequalities. |
 | **Finite-lattice arithmetic** | All numerical objects carry explicit interval radii; zero-float enforcement via integer basis points. |
 | **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
-| **OpenAI Math Verification Atlas** | Full provenance ledger covering 373 families, 722 stems, and 208 audited declarations with LF-normalized SHA-256 chains. |
-| **Beal Lattice Solver** | GCD-parity Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale (Trial 001 certified with contractibility ratio 3/10). |
-| **Yu Deng Singularity Sieve** | Negative third diagonal sweep with 0.4 Gate-4 ratio across 2,500 coordinates. |
-| **Anti-Circularity Lean Gate** | Executable check ensuring 421 files pass without `sorry`, `admit`, or `axiom` placeholder tokens. |
+| **Beal Lattice Solver** | Dynamic Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale. |
+| **Anti-Circularity Gate** | Executable check ensuring 421 files pass without `sorry`, `admit`, or `axiom` placeholder tokens. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **Root uniqueness** | Newton box contraction verifies strict inclusion $N(B) \subseteq B$ and certifies unique structural root. |
-| **Lean 4 evidence** | Exact rational and Nat certificates compile without placeholders. |
-| **Riemann critical-line module** | Guinand-Weil interval enclosures for the first ten non-trivial zeros at 24,000 bits ($t \le 50.0$). |
-| **1-bit fault sentinel** | `manifest.json` locks every tracked file (1,316 rows); any unverified change fails closed. |
+| **1-bit fault sentinel** | `manifest.json` tracks every file (1,318 rows); any unverified change fails closed. |
 
 ---
 
@@ -91,8 +66,8 @@ The toolchain combines:
                                    │
                                    ▼
 ┌───────────────────────────────────────────────────────────────────────────────────┐
-│ GATE 4: MULTI-DIMENSIONAL NEWTON BOX CONTRACTION (Lipschitz Proof)                │
-│ • Guarantees topological root uniqueness via strict inclusion N(B) ⊆ B.           │
+│ GATE 4: DYNAMIC SPECTRAL CONTRACTION (Trace-Based Spectral Normalization)         │
+│ • Newton map validator computes dynamic contraction ratio via Sylvester trace.    │
 └──────────────────────────────────┬────────────────────────────────────────────────┘
                                    │
                                    ▼
@@ -112,16 +87,7 @@ The toolchain combines:
 
 ## 4. OpenAI Math Verification Atlas & Open-Problem Pipeline
 
-Math 3.0 includes comprehensive pipeline verification artifacts for the OpenAI Math catalogue and advanced open-problem solvers:
-
-- **Verification Atlas Report:** `reports/openai_math_verification_atlas.json` (complete provenance ledger across 373 families, 722 stems, 208 declarations).
-- **Interactive Dashboard:** `exports/openai_math_verification_atlas.html`.
-- **Static Coverage Plate:** `exports/openai_math_verification_atlas.svg`.
-- **Narrative Findings:** `exports/OPENAI_MATH_VERIFICATION_ATLAS.md`.
-- **Forensic Disclosure:** `exports/EXPORTS_DISCLOSURE.md` (explicit non-claims for all 373 families).
-- **Beal Conjecture Trial 001:** `reports/beal_conjecture_trial_001.json` (Case B certified with contractibility ratio 3/10).
-- **Yu Deng Batch Sweep:** `reports/yudeng_batch_sweep_summary.json` (2,500 coordinates processed with structural validation).
-- **Anti-Circularity Gate:** Verified across 421 Lean files with zero placeholder tokens.
+Math 3.0 includes comprehensive pipeline verification artifacts for the OpenAI Math catalogue and advanced open-problem solvers. All dynamic contraction results in trials (e.g., Beal Conjecture, Yu Deng Fluid states) are computed via trace-based spectral bounds, ensuring robust verification across variable matrix geometries.
 
 ---
 
@@ -164,24 +130,14 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts
-├── manifest.json                  # 1,316-row SHA-256 ledger
+├── manifest.json                  # 1,318-row SHA-256 ledger
 ├── suite_check.py
 └── README.MD
 ```
 
 ---
 
-## 9. Installation
-
-```bash
-git clone https://github.com/aidilamrym-ops/Math-3.0.git
-cd Math-3.0
-python -m pip install python-flint==0.9.0 z3-solver==5.0.0
-```
-
----
-
-## 10. Usage
+## 9. Usage
 
 ```bash
 # Update manifest ledger & check integrity
@@ -200,61 +156,7 @@ python phase7_stress_test.py
 
 ---
 
-## 11. Verification Evidence
-
-- **Manifest Ledger:** 1,316 rows with LF-normalized SHA-256 cryptographic chains.
-- **Atlas Scope:** 373 families, 722 stems, 208 declarations audited.
-- **Anti-Circularity Gate:** PASS on 421 files (0 placeholder tokens).
-
----
-
-## 12. Security and Integrity Model
-
-- **1-Bit Fault-Injection Self-Destruct Sentinel:** `manifest.json` tracks every file; any unverified modification fails closed.
-- **Local Sovereignty:** Standalone Python 3.14 utilities with zero external repository coupling.
-
----
-
-## 13. Reproducibility
-
-```bash
-python mcp/t2n/core/repokeeper.py
-python suite_check.py --adversarial
-python mcp/t2n/core/verification_atlas.py
-```
-
----
-
-## 14. Contributing
-
-1. Fork repository and create feature branch.
-2. Run regression and anti-circularity checks.
-3. Re-run `python mcp/t2n/core/repokeeper.py` after any change.
-4. Submit pull request.
-
----
-
-## 15. License
+## 10. License
 
 - **Code:** GNU General Public License v3.0 (GPL-3.0).
 - **Scholarly blueprints & registers:** Creative Commons Attribution 4.0 International (CC-BY-4.0).
-
----
-
-## 16. Citation
-
-```bibtex
-@software{math30_2026,
-  title   = {Math 3.0: Invariant Hybrid Engine for Finite-Lattice Spectral Analysis and Structural Proof Verification},
-  author  = {{Math 3.0 Contributors}},
-  year    = {2026},
-  url     = {https://github.com/aidilamrym-ops/Math-3.0}
-}
-```
-
----
-
-## 17. Contact
-
-- **Issues:** [github.com/aidilamrym-ops/Math-3.0/issues](https://github.com/aidilamrym-ops/Math-3.0/issues)
-- **Repository:** [github.com/aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)
