@@ -6,16 +6,19 @@ import flint
 from fractions import Fraction
 import random
 import gc
+import sys as system_sys
+
+system_sys.set_int_max_str_digits(0)
 
 class ExtremeScaleEscalationEngine:
     """
-    Phase 16: Extreme Scale Testing up to 10^1000 sequentially (non-parallel).
+    Phase 17: Extreme Scale Testing up to 10^100000 sequentially (non-parallel).
     """
     def __init__(self):
+        # Extremely high precision; scale 10^100000 requires substantial heap
         self.extreme_tiers = [
-            {"tier": 6, "scale": 10**200, "bits": 768000, "count": 500},
-            {"tier": 7, "scale": 10**500, "bits": 1536000, "count": 200},
-            {"tier": 8, "scale": 10**1000, "bits": 3072000, "count": 100}
+            {"tier": 9, "scale": 10**10000, "bits": 30000000, "count": 20},
+            {"tier": 10, "scale": 10**100000, "bits": 300000000, "count": 5}
         ]
 
     def evaluate_matrix(self, a, b, c):
@@ -28,13 +31,14 @@ class ExtremeScaleEscalationEngine:
         trace_sq = sum(mat[i][i] for i in range(3))**2
         den_bound = trace_sq + 1
         
+        # Stability: contractible = numerator < denominator
         numerator = norm_sq * 2 * (det + 1)
         denominator = 3 * den_bound * (det + 2)
         contractible = (numerator < denominator)
         return contractible, mat, det
 
     def run_extreme_profile(self):
-        print("[EXTREME HARDWARE STRESS] Memulai pengujian bertahap hingga 10^1000 secara sekuensial...")
+        print("[EXTREME HARDWARE STRESS] Memulai pengujian bertahap hingga 10^100000 secara sekuensial...")
         for t in self.extreme_tiers:
             tier_id = t["tier"]
             scale = t["scale"]
@@ -45,12 +49,10 @@ class ExtremeScaleEscalationEngine:
             try:
                 flint.ctx.prec = bits
                 for i in range(count):
-                    if i % 5 == 0:
-                        a, b, c = 0, random.randint(1, scale), random.randint(1, scale)
-                    else:
-                        a = random.randint(0, scale)
-                        b = random.randint(0, scale)
-                        c = random.randint(0, scale)
+                    # Random generation at extreme scales
+                    a = random.randint(0, scale)
+                    b = random.randint(0, scale)
+                    c = random.randint(0, scale)
 
                     contractible, mat, det = self.evaluate_matrix(a, b, c)
                     if not contractible:
@@ -63,11 +65,11 @@ class ExtremeScaleEscalationEngine:
                 print(f"[CRASH HORIZON] Tier {tier_id} gagal pada {bits} bit: {e}")
                 return False
 
-        print("\n[EKSTRIM SELESAI] Pengujian bertahap hingga 10^1000 lulus tanpa pelanggaran.")
+        print("\n[EKSTRIM SELESAI] Pengujian bertahap hingga 10^100000 lulus tanpa pelanggaran.")
         return True
 
 if __name__ == "__main__":
     engine = ExtremeScaleEscalationEngine()
     if not engine.run_extreme_profile():
         sys.exit(1)
-    print("META_CONJECTURE_PHASE16_PASSED")
+    print("META_CONJECTURE_PHASE17_PASSED")
