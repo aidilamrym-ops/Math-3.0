@@ -1,10 +1,12 @@
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import importlib.util, json, os
 p = r'D:\Opencode AI Agent\Math 3.0 Tools\mcp\t2n\core\report_certificate_generator.py'
 spec = importlib.util.spec_from_file_location('rcg', p)
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)
 root = m.ROOT
-for idx in [209, 210]:
+for idx in [204, 205]:
     fn = f'openai_family_{idx}.json'
     src = os.path.join(root, 'reports', fn)
     raw = open(src, 'rb').read()

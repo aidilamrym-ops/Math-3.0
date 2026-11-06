@@ -8,6 +8,8 @@ compliance, and zero-straddle safety. It also runs the independent Gate 4
 Newton-box validator and generates Lean evidence with core `decide` proofs.
 """
 
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import json
 import os
 import subprocess

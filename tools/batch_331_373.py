@@ -1,9 +1,11 @@
-import subprocess, os
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import subprocess, os, json
 
 ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
 python_exe = r"C:\Python314\python.exe"
 
-for idx in range(211, 251):
+for idx in range(331, 374):
     f_mid = str(idx * 2 + 1)
     g_mid = str(idx + 5)
     json_out = os.path.join(ROOT, "reports", f"openai_family_{idx:03}.json")
@@ -58,4 +60,7 @@ if r.returncode != 0:
     
     print(f"Successfully processed and verified Family {idx}")
 
-print("Batch 211-250 complete!")
+print("Batch 331-373 complete!")
+with open(os.path.join(ROOT, "manifest.json"), "r") as mf:
+    manifest_data = json.load(mf)
+print("Manifest rows:", len(manifest_data))

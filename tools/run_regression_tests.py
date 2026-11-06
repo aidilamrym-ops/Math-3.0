@@ -3,6 +3,8 @@ Executes manifesto pre-audit, sequential gate testing pipeline (Gates 1-6),
 and compiles forensic Lean proofs, generating reports/regression_master_report.json.
 """
 
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import os
 import sys
 import json
@@ -10,7 +12,7 @@ import subprocess
 import time
 from datetime import datetime, timezone
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORTS = os.path.join(ROOT, "reports")
 os.makedirs(REPORTS, exist_ok=True)
 
@@ -45,8 +47,8 @@ def main():
     print("  -> Manifest audit PASSED.")
 
     # Step 1: Gate 1 & 2 (suite_check.py --adversarial & r_hank check)
-    print("[1/4] Running Gate 1 & 2 (suite_check.py --adversarial)...")
-    suite_res = run_cmd("python suite_check.py --adversarial")
+    print("[1/4] Running Gate 1 & 2 (tools/suite_check.py --adversarial)...")
+    suite_res = run_cmd(f"python {os.path.join('tools', 'suite_check.py')} --adversarial")
     # Verify r_hank in lte_spectral_validation.json
     lte_path = os.path.join(REPORTS, "lte_spectral_validation.json")
     with open(lte_path, "r", encoding="utf-8") as f:
@@ -69,8 +71,8 @@ def main():
     print("  -> Gate 1 & 2 PASSED (r_hank = 25/2).")
 
     # Step 2: Gate 3 & 4 (newton_box_validator.py)
-    print("[2/4] Running Gate 3 & 4 (newton_box_validator.py)...")
-    newton_res = run_cmd("python newton_box_validator.py")
+    print("[2/4] Running Gate 3 & 4 (tools/newton_box_validator.py)...")
+    newton_res = run_cmd(f"python {os.path.join('tools', 'newton_box_validator.py')}")
     topo_path = os.path.join(REPORTS, "topological_uniqueness.json")
     with open(topo_path, "r", encoding="utf-8") as f:
         topo_data = json.load(f)
@@ -91,8 +93,8 @@ def main():
     print(f"  -> Gate 3 & 4 PASSED (unique={unique_certified}, max_ratio={max_ratio} < 0.5).")
 
     # Step 3: Gate 5 & 6 (z3_tribunal.py)
-    print("[3/4] Running Gate 5 & 6 (z3_tribunal.py)...")
-    z3_res = run_cmd("python z3_tribunal.py")
+    print("[3/4] Running Gate 5 & 6 (tools/z3_tribunal.py)...")
+    z3_res = run_cmd(f"python {os.path.join('tools', 'z3_tribunal.py')}")
     z3_report_path = os.path.join(REPORTS, "z3_tribunal_bounds.json")
     with open(z3_report_path, "r", encoding="utf-8") as f:
         z3_data = json.load(f)

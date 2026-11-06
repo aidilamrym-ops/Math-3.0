@@ -5,6 +5,8 @@ Every bound is converted to an exact integer lattice at scale 10^18.
 Z3 is asked to refute the existence of a violating lattice point.
 """
 
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import json
 import math
 import os

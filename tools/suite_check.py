@@ -1,3 +1,5 @@
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import os
 import sys
 import json
@@ -19,7 +21,7 @@ def load_config() -> dict:
         "max_generations": 5,
         "generation": 0
     }
-    path = os.path.join(os.path.dirname(__file__), "runtime_config.json")
+    path = os.path.join(os.path.join(os.path.dirname(__file__), "../runtime_config.json"))
     try:
         with open(path, "r", encoding="utf-8") as f:
             cfg = json.load(f)
@@ -124,7 +126,7 @@ def run_adversarial_tests(root: str, config: dict = None) -> bool:
 
 
 if __name__ == "__main__":
-    root = os.path.dirname(os.path.abspath(__file__))
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     runner = UniversalSuiteRunner(root)
     # First, run the normal gates
     if not runner.run_all_gates():

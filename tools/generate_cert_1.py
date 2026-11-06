@@ -1,9 +1,11 @@
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import os
 import hashlib
 import json
 
 WORKSPACE_ROOT = r"D:\\Opencode AI Agent\\Math 3.0 Tools"
-lean_path = os.path.join(WORKSPACE_ROOT, "lean", "spec_v4", "GoedelBoundaryContainment.lean")
+lean_path = os.path.join(WORKSPACE_ROOT, "lean", "spec_v4", "ContinuumDensityDefeat.lean")
 
 with open(lean_path, "rb") as f:
     lean_bytes = f.read()
@@ -13,16 +15,16 @@ cert_dir = os.path.join(WORKSPACE_ROOT, "reports", "certificates")
 os.makedirs(cert_dir, exist_ok=True)
 
 cert_data = {
-    "target_theorem": "Gödel's Incompleteness Theorems",
-    "test_phase": "Phase 11 Adversarial Case 3",
+    "target_theorem": "Density of Real Numbers / Continuum Hypothesis",
+    "test_phase": "Phase 11 Adversarial Case 1",
     "verification_kernel": "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel",
-    "source_file": "lean/spec_v4/GoedelBoundaryContainment.lean",
+    "source_file": "lean/spec_v4/ContinuumDensityDefeat.lean",
     "source_sha256": lean_hash,
-    "observed_anomaly": "GOEDEL_REPRESENTATION_ALARM triggered. Recursive self-reference loop exceeded memory/depth allocation coordinates.",
+    "observed_anomaly": "LATTICE_RESOLUTION_ALARM triggered at 10^-35m floor. Loss of significance under unconstrained division.",
     "verdict": "STRUCTURE_ALARM_SEALED"
 }
 
-cert_path = os.path.join(cert_dir, "goedel_boundary_containment_certificate.json")
+cert_path = os.path.join(cert_dir, "continuum_density_defeat_certificate.json")
 with open(cert_path, "w", encoding="utf-8", newline="\n") as f:
     json.dump(cert_data, f, indent=2, ensure_ascii=False)
     f.write("\n")

@@ -1,6 +1,6 @@
 # Math 3.0 — Invariant Hybrid Engine for Finite-Lattice Spectral Analysis and Structural Proof Verification
 
-> **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `audit_hardcoded_nodes.py`)
+> **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)
 > **Manifest:** 1,318 rows, SHA-256 locked
@@ -127,11 +127,11 @@ Math-3.0/
 │   ├── core/                      # Atlas builder, repokeeper, lab generator
 │   ├── solvers/                   # Beal lattice solver & Yu Deng singularity sieve
 │   └── rh_core/                   # Riemann critical-line solver
+├── tools/                         # Unit tests, adversarial suites, and audit tools
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts
 ├── manifest.json                  # 1,318-row SHA-256 ledger
-├── suite_check.py
 └── README.MD
 ```
 
@@ -144,14 +144,20 @@ Math-3.0/
 python mcp/t2n/core/repokeeper.py
 
 # Run full verification suite
-python suite_check.py --adversarial
+python tools/suite_check.py --adversarial
+
+# Run regression test pipeline
+python tools/run_regression_tests.py
+
+# Run hardcode AST auditor
+python tools/audit_hardcoded_nodes.py
 
 # Run OpenAI Math verification atlas builder
 python mcp/t2n/core/verification_atlas.py
 
 # Run Riemann and Stress tests
 python mcp/t2n/rh_core/rh_krypton_solver.py
-python phase7_stress_test.py
+python tools/phase7_stress_test.py
 ```
 
 ---
