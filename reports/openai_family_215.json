@@ -1,0 +1,188 @@
+{
+  "phase": "PHASE_6_FRESH_BALL_REINIT",
+  "label": "OPENAI_FAMILY_215",
+  "timestamp": "2026-11-06T00:58:03.168992+00:00",
+  "precision_bits": 24000,
+  "computation_context": "flint.ctx.prec = 24000",
+  "coefficients": {
+    "f_convergent": "431",
+    "g_divergent": "220",
+    "coupling": "1/1000000"
+  },
+  "morphological_signature": {
+    "dim": 3,
+    "r_toep": "0",
+    "r_hank": "[211.000000000000000000000000000000000000000 +/- 2.01e-40]"
+  },
+  "r_toep": "0",
+  "r_hank": "[211.000000000000000000000000000000000000000 +/- 2.01e-40]",
+  "micro_cutoff": {
+    "planck_length_m": "1.616255e-35",
+    "planck_rational": "323251/20000000000000000000000000000000000000000",
+    "radius_rational": "1/10000000000000000000000000000000000000000",
+    "radius_leq_planck": true
+  },
+  "slice": [
+    "0",
+    "1",
+    "2"
+  ],
+  "paths": {
+    "f_convergent": {
+      "role": "convergent/collapsing",
+      "samples": [
+        {
+          "x": "0",
+          "mid": "431",
+          "mid_num": 431,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[431.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "x": "1",
+          "mid": "431",
+          "mid_num": 431,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[431.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "x": "2",
+          "mid": "431",
+          "mid_num": 431,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[431.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        }
+      ]
+    },
+    "g_divergent": {
+      "role": "divergent/repulsion",
+      "samples": [
+        {
+          "x": "0",
+          "mid": "220",
+          "mid_num": 220,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[220.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "x": "1",
+          "mid": "220",
+          "mid_num": 220,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[220.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "x": "2",
+          "mid": "220",
+          "mid_num": 220,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[220.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        }
+      ]
+    }
+  },
+  "coupling": {
+    "mid": "1/1000000",
+    "mid_num": 1,
+    "mid_den": 1000000,
+    "rad": "1e-40",
+    "ball_display": "[1.00000000000000000000000000000000e-6 +/- 1.01e-40]",
+    "rad_leq_planck": true
+  },
+  "matrix_recipe": {
+    "dim": 3,
+    "entries": [
+      [
+        {
+          "mid": "431",
+          "mid_num": 431,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[431.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "mid": "1/1000000",
+          "mid_num": 1,
+          "mid_den": 1000000,
+          "rad": "1e-40",
+          "ball_display": "[1.00000000000000000000000000000000e-6 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "mid": "220",
+          "mid_num": 220,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[220.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        }
+      ],
+      [
+        {
+          "mid": "1/1000000",
+          "mid_num": 1,
+          "mid_den": 1000000,
+          "rad": "1e-40",
+          "ball_display": "[1.00000000000000000000000000000000e-6 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "mid": "431",
+          "mid_num": 431,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[431.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "mid": "1/1000000",
+          "mid_num": 1,
+          "mid_den": 1000000,
+          "rad": "1e-40",
+          "ball_display": "[1.00000000000000000000000000000000e-6 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        }
+      ],
+      [
+        {
+          "mid": "220",
+          "mid_num": 220,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[220.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "mid": "1/1000000",
+          "mid_num": 1,
+          "mid_den": 1000000,
+          "rad": "1e-40",
+          "ball_display": "[1.00000000000000000000000000000000e-6 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        },
+        {
+          "mid": "431",
+          "mid_num": 431,
+          "mid_den": 1,
+          "rad": "1e-40",
+          "ball_display": "[431.000000000000000000000000000000000000000 +/- 1.01e-40]",
+          "rad_leq_planck": true
+        }
+      ]
+    ]
+  },
+  "verdict": "PASSED - raw f/g balls re-initialized at 24,000 bits; every radius within the Planck micro cutoff"
+}

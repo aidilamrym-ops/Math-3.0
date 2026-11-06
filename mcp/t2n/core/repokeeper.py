@@ -22,8 +22,10 @@ class RepoKeeper:
     def enforce_manifest_pin(self):
         if not self.verify_upstream_reset_status(): sys.exit(1)
         manifest = {}
-        excluded_dirs = ["mcp/out", "mcp\\out", ".git", "Math30Interfaces", "__pycache__"]
-        for root_dir, _, files in os.walk(self.root):
+        excluded_dirs = ["mcp/out", "mcp\\out", ".git", "Math30Interfaces", "__pycache__", "staging"]
+        for root_dir, dirnames, files in os.walk(self.root):
+            # Prune untracked staging data so the ledger matches Git's view.
+            dirnames[:] = [d for d in dirnames if d not in (".git", "__pycache__", "staging")]
             if any(x in root_dir for x in excluded_dirs): continue
             for file in files:
                 if file == "manifest.json" or file.endswith(".pyc"): continue
