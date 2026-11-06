@@ -1,0 +1,8 @@
+{
+  "sweep": "beal_batch_sweep_3_10",
+  "timestamp": "2026-11-06T05:19:56.165537+00:00",
+  "precision_bits": 24000,
+  "total_configurations_scanned": 2048,
+  "anomalies_detected": 0,
+  "status": "COMPLETED"
+}
