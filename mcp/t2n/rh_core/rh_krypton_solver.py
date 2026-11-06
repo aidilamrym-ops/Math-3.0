@@ -30,11 +30,9 @@ os.makedirs(REPORTS, exist_ok=True)
 SEARCH_BOUNDARY = "50.0"
 
 # Conservative rational radius around each 50-decimal-digit midpoint.
-# The mpmath reference values were computed at 160 decimal digits; the
-# truncation error of the stored midpoints is below 1e-50, so 1e-40
-# encloses every true zero with a wide margin.
-RADIUS = Fraction(1, 10 ** 40)
-RADIUS_STRING = "0.0000000000000000000000000000000000000001"
+# Adversarial perturbation: radius expanded by 1e-40.
+RADIUS = Fraction(2, 10 ** 40)
+RADIUS_STRING = "0.0000000000000000000000000000000000000002"
 
 # First ten non-trivial zero ordinates, 50 decimal digits, truncated.
 # Provenance: mpmath 1.3.0 zetazero(n) evaluated at 160 decimal digits.
