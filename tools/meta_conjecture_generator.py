@@ -6,20 +6,16 @@ import flint
 from fractions import Fraction
 import random
 import gc
-import sys as system_sys
 
-class HardwareStressEscalationEngine:
+class ExtremeScaleEscalationEngine:
     """
-    Phase 15: Periodic Matrix Escalation & Hardware Ceiling Profile
-    Tiers 1 to 5 scaling up to 10^100 and precision up to 384,000 bits.
+    Phase 16: Extreme Scale Testing up to 10^1000 sequentially (non-parallel).
     """
     def __init__(self):
-        self.tiers = [
-            {"tier": 1, "scale": 10**15, "bits": 24000, "count": 2000},
-            {"tier": 2, "scale": 10**20, "bits": 48000, "count": 2000},
-            {"tier": 3, "scale": 10**35, "bits": 96000, "count": 2000},
-            {"tier": 4, "scale": 10**50, "bits": 192000, "count": 2000},
-            {"tier": 5, "scale": 10**100, "bits": 384000, "count": 2000}
+        self.extreme_tiers = [
+            {"tier": 6, "scale": 10**200, "bits": 768000, "count": 500},
+            {"tier": 7, "scale": 10**500, "bits": 1536000, "count": 200},
+            {"tier": 8, "scale": 10**1000, "bits": 3072000, "count": 100}
         ]
 
     def evaluate_matrix(self, a, b, c):
@@ -37,23 +33,19 @@ class HardwareStressEscalationEngine:
         contractible = (numerator < denominator)
         return contractible, mat, det
 
-    def run_stress_profile(self):
-        print("[HARDWARE STRESS ENGINE] Initializing periodic matrix escalation across 5 tiers...")
-        last_stable_tier = 0
-        last_stable_bits = 24000
-
-        for t in self.tiers:
+    def run_extreme_profile(self):
+        print("[EXTREME HARDWARE STRESS] Memulai pengujian bertahap hingga 10^1000 secara sekuensial...")
+        for t in self.extreme_tiers:
             tier_id = t["tier"]
             scale = t["scale"]
             bits = t["bits"]
             count = t["count"]
             
-            print(f"\n[TIER {tier_id} START] Setting flint precision to {bits} bits, scale boundary 10^{int(log10_approx(scale)) if scale > 0 else 0}...")
+            print(f"\n[TIER {tier_id} MULAI] Presisi Flint: {bits} bit, batas skala: 10^{len(str(scale))-1}...")
             try:
                 flint.ctx.prec = bits
                 for i in range(count):
-                    # Inject zero-determinant structures periodically (every 10th matrix)
-                    if i % 10 == 0:
+                    if i % 5 == 0:
                         a, b, c = 0, random.randint(1, scale), random.randint(1, scale)
                     else:
                         a = random.randint(0, scale)
@@ -62,32 +54,20 @@ class HardwareStressEscalationEngine:
 
                     contractible, mat, det = self.evaluate_matrix(a, b, c)
                     if not contractible:
-                        print(f"[FAIL-CLOSED BREACH] Tier {tier_id} violation at iteration {i}!")
-                        print(f"  Matrix: {mat}")
-                        print(f"  Determinant: {det}")
+                        print(f"[FAIL-CLOSED BREACH] Pelanggaran Tier {tier_id} pada iterasi {i}!")
                         return False
 
-                last_stable_tier = tier_id
-                last_stable_bits = bits
-                print(f"[TIER {tier_id} SUCCESS]: Scale 10^{int(log10_approx(scale))} verified cleanly at {bits} bits precision.")
+                print(f"[TIER {tier_id} SUKSES]: Skala 10^{len(str(scale))-1} terverifikasi pada {bits} bit.")
                 gc.collect()
-
             except Exception as e:
-                print(f"[CRASH HORIZON CAPTURED] Tier {tier_id} failed at precision {bits} bits due to exception: {e}")
-                print(f"  Last stable tier reached: Tier {last_stable_tier} ({last_stable_bits} bits precision)")
+                print(f"[CRASH HORIZON] Tier {tier_id} gagal pada {bits} bit: {e}")
                 return False
 
-        print(f"\n[STRESS PROFILE COMPLETE] All 5 tiers executed successfully. Hardware ceiling not breached.")
+        print("\n[EKSTRIM SELESAI] Pengujian bertahap hingga 10^1000 lulus tanpa pelanggaran.")
         return True
 
-def log10_approx(n):
-    if n <= 1:
-        return 0
-    return len(str(n)) - 1
-
 if __name__ == "__main__":
-    engine = HardwareStressEscalationEngine()
-    success = engine.run_stress_profile()
-    if not success:
+    engine = ExtremeScaleEscalationEngine()
+    if not engine.run_extreme_profile():
         sys.exit(1)
-    print("META_CONJECTURE_PHASE15_PASSED")
+    print("META_CONJECTURE_PHASE16_PASSED")
