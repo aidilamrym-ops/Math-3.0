@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1090" viewBox="0 0 1500 1090">
+<rect x="0" y="0" width="1500" height="1090" fill="#ffffff"/>
+<rect x="0" y="0" width="1500" height="104" fill="#0b2545" stroke="none" stroke-width="1" rx="0" opacity="1"/>
+<text x="30" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="start" font-weight="bold">MATH 3.0 — LATTICE SPATIAL CONFINEMENT</text>
+<text x="30" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#c9d6e3" text-anchor="start" font-weight="normal">24,000-bit interval balls · Sylvester pivots · Planck micro-cutoff projection</text>
+<text x="30" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#9fb3c8" text-anchor="start" font-weight="normal">generated 2026-11-06T04:01:46.669005+00:00 · Planck 1.616255e-35 m · inner radius 1.0e-40 m · ratio ×161625.5 · exact Fraction arithmetic</text>
+<rect x="20" y="120" width="1460" height="450" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="10" opacity="1"/>
+<text x="34" y="148" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#1c7ed6" text-anchor="start" font-weight="bold">FAMILY 017 — π Irrationality Exponent Grid</text>
+<text x="34" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#495057" text-anchor="start" font-weight="normal">The irrationality exponent of π is 2.</text>
+<rect x="34" y="182" width="420" height="370" fill="#f8f9fa" stroke="#ced4da" stroke-width="1" rx="8" opacity="1"/>
+<text x="48" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0b2545" text-anchor="start" font-weight="bold">PLANCK CONFINEMENT</text>
+<text x="48" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6c757d" text-anchor="start" font-weight="normal">actual interval radii · inner ball magnified for visibility (not to scale)</text>
+<circle cx="244" cy="367" r="120" fill="#e7f5ff" stroke="#1c7ed6" stroke-width="3"/>
+<circle cx="244" cy="367" r="12" fill="#63e6be" stroke="#087f5b" stroke-width="2"/>
+<circle cx="244" cy="367" r="2" fill="#0b2545" stroke="none" stroke-width="1"/>
+<line x1="244" y1="367" x2="346" y2="367" stroke="#2b8a3e" stroke-width="3"/>
+<circle cx="346" cy="367" r="6" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="356" y="371" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#2b8a3e" text-anchor="start" font-weight="normal">d1 = 2</text>
+<line x1="244" y1="367" x2="183" y2="285" stroke="#2b8a3e" stroke-width="3"/>
+<circle cx="183" cy="285" r="6" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="173" y="289" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#2b8a3e" text-anchor="end" font-weight="normal">d2 = 2.000000</text>
+<line x1="244" y1="367" x2="222" y2="397" stroke="#c92a2a" stroke-width="3"/>
+<circle cx="222" cy="397" r="6" fill="#c92a2a" stroke="#ffffff" stroke-width="1"/>
+<text x="212" y="401" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#c92a2a" text-anchor="end" font-weight="normal">d3 = -0.205000</text>
+<text x="264" y="361" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#087f5b" text-anchor="start" font-weight="normal">inner ball 1.0e-40 m</text>
+<text x="48" y="494" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1c7ed6" text-anchor="start" font-weight="normal">outer: Planck cutoff 1.616255e-35 m (display radius 1.0)</text>
+<text x="48" y="510" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#087f5b" text-anchor="start" font-weight="normal">inner: 1.0e-40 m (display 0.1, true 2/323251)</text>
+<text x="48" y="526" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#495057" text-anchor="start" font-weight="normal">ratio ×161625.5 · display magnified ×16162.55</text>
+<text x="48" y="542" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#495057" text-anchor="start" font-weight="normal">Sylvester inertia: (+2, −1, 0)</text>
+<text x="440" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c92a2a" text-anchor="end" font-weight="bold">DISPLAY NOT TO SCALE</text>
+<text x="440" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="end" font-weight="normal">green = positive pivot</text>
+<text x="440" y="238" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c92a2a" text-anchor="end" font-weight="normal">red = negative pivot</text>
+<rect x="470" y="182" width="500" height="370" fill="#f8f9fa" stroke="#ced4da" stroke-width="1" rx="8" opacity="1"/>
+<text x="484" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0b2545" text-anchor="start" font-weight="bold">LDLᵀ SPECTRAL PROJECTION</text>
+<text x="484" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6c757d" text-anchor="start" font-weight="normal">surface: hyperboloid of one sheet · dimensionless, normalized axes</text>
+<polyline points="905,470 757,483 627,486 535,483 535,470 683,457 813,454 905,457 905,470" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="880,431 752,442 640,445 560,442 560,431 688,420 800,417 880,420 880,431" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="868,383 750,393 646,396 572,393 572,383 690,373 794,370 868,373 868,383" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="880,335 752,346 640,349 560,346 560,335 688,324 800,321 880,324 880,335" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="905,296 757,309 627,312 535,309 535,296 683,283 813,280 905,283 905,296" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="905,470 880,431 868,383 880,335 905,296" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="757,483 752,442 750,393 752,346 757,309" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="627,486 640,445 646,396 640,349 627,312" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="535,483 560,442 572,393 560,346 535,309" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="535,470 560,431 572,383 560,335 535,296" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="683,457 688,420 690,373 688,324 683,283" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="813,454 800,417 794,370 800,321 813,280" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="905,457 880,420 868,373 880,324 905,283" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<line x1="868" y1="383" x2="572" y2="383" stroke="#2b8a3e" stroke-width="2"/>
+<text x="876" y="387" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="start" font-weight="normal">d1 = 2</text>
+<line x1="646" y1="396" x2="794" y2="370" stroke="#2b8a3e" stroke-width="2"/>
+<text x="638" y="400" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="end" font-weight="normal">d2 = 2.000000</text>
+<line x1="720" y1="267" x2="720" y2="499" stroke="#c92a2a" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="728" y="503" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c92a2a" text-anchor="start" font-weight="normal">d3 = -0.205000</text>
+<text x="956" y="242" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#495057" text-anchor="end" font-weight="normal">inertia (+2, −1, 0)</text>
+<text x="956" y="256" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#495057" text-anchor="end" font-weight="normal">det = -0.820000</text>
+<text x="484" y="538" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6c757d" text-anchor="start" font-weight="normal">black axes are positive-definite directions; red dashed axis is the saddle direction</text>
+<rect x="986" y="182" width="480" height="370" fill="#f8f9fa" stroke="#ced4da" stroke-width="1" rx="8" opacity="1"/>
+<text x="1000" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0b2545" text-anchor="start" font-weight="bold">GATE 4 — NEWTON CONTRACTION</text>
+<text x="1000" y="224" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6c757d" text-anchor="start" font-weight="normal">exact rational flow for positive Sylvester pivots · limit max|N′| &lt; 1/2</text>
+<text x="1000" y="234" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#2b8a3e" text-anchor="start" font-weight="bold">pivot d1 = 2 (positive)</text>
+<line x1="1012" y1="268" x2="1440" y2="268" stroke="#adb5bd" stroke-width="1"/>
+<rect x="1261" y="257" width="140" height="22" fill="#d3f9d8" stroke="#2b8a3e" stroke-width="1" rx="0" opacity="0.9"/>
+<text x="1263" y="241" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="start" font-weight="normal">certified box</text>
+<circle cx="1261" cy="268" r="7" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1261" y="253" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="middle" font-weight="normal">x0</text>
+<line x1="1261" y1="268" x2="1331" y2="268" stroke="#40c057" stroke-width="1"/>
+<circle cx="1331" cy="268" r="6" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1327" y="253" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="end" font-weight="normal">x1</text>
+<line x1="1331" y1="268" x2="1323" y2="268" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="268" r="5" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="268" x2="1323" y2="268" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="268" r="4" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="268" x2="1323" y2="268" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="268" r="3" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="268" x2="1323" y2="268" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="268" r="2" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="268" x2="1323" y2="268" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="268" r="2" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1331" y="253" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="start" font-weight="normal">x6</text>
+<line x1="1012" y1="312" x2="1236" y2="312" stroke="#adb5bd" stroke-width="1"/>
+<rect x="1012" y="307" width="126" height="10" fill="#40c057" stroke="#2b8a3e" stroke-width="1" rx="0" opacity="1"/>
+<line x1="1236" y1="298" x2="1236" y2="326" stroke="#c92a2a" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1236" y="294" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#c92a2a" text-anchor="middle" font-weight="normal">1/2</text>
+<text x="1012" y="334" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="start" font-weight="normal">max|N′| = 0.281250 ≈ 0.281250 &lt; 1/2 · N(B)⊆B: True</text>
+<text x="1448" y="314" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#2b8a3e" text-anchor="end" font-weight="bold">GATE 4 PASS</text>
+<text x="1012" y="352" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#495057" text-anchor="start" font-weight="normal">r0=2.4093e-2  r1=3.0474e-4  r2=4.6461e-8  r3=1.0793e-15</text>
+<text x="1000" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#2b8a3e" text-anchor="start" font-weight="bold">pivot d2 = 2.000000 (positive)</text>
+<line x1="1012" y1="426" x2="1440" y2="426" stroke="#adb5bd" stroke-width="1"/>
+<rect x="1261" y="415" width="140" height="22" fill="#d3f9d8" stroke="#2b8a3e" stroke-width="1" rx="0" opacity="0.9"/>
+<text x="1263" y="399" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="start" font-weight="normal">certified box</text>
+<circle cx="1261" cy="426" r="7" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1261" y="411" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="middle" font-weight="normal">x0</text>
+<line x1="1261" y1="426" x2="1331" y2="426" stroke="#40c057" stroke-width="1"/>
+<circle cx="1331" cy="426" r="6" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1327" y="411" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="end" font-weight="normal">x1</text>
+<line x1="1331" y1="426" x2="1323" y2="426" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="426" r="5" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="426" x2="1323" y2="426" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="426" r="4" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="426" x2="1323" y2="426" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="426" r="3" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="426" x2="1323" y2="426" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="426" r="2" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="426" x2="1323" y2="426" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="426" r="2" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1331" y="411" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="start" font-weight="normal">x6</text>
+<line x1="1012" y1="470" x2="1236" y2="470" stroke="#adb5bd" stroke-width="1"/>
+<rect x="1012" y="465" width="126" height="10" fill="#40c057" stroke="#2b8a3e" stroke-width="1" rx="0" opacity="1"/>
+<line x1="1236" y1="456" x2="1236" y2="484" stroke="#c92a2a" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1236" y="452" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#c92a2a" text-anchor="middle" font-weight="normal">1/2</text>
+<text x="1012" y="492" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="start" font-weight="normal">max|N′| = 0.281250 ≈ 0.281250 &lt; 1/2 · N(B)⊆B: True</text>
+<text x="1448" y="472" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#2b8a3e" text-anchor="end" font-weight="bold">GATE 4 PASS</text>
+<text x="1012" y="510" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#495057" text-anchor="start" font-weight="normal">r0=2.4093e-2  r1=3.0474e-4  r2=4.6461e-8  r3=1.0793e-15</text>
+<text x="1000" y="536" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c92a2a" text-anchor="start" font-weight="normal">hyperbolic saddle: d3=-0.205000 · no real sqrt Newton flow · excluded from elliptic Gate 4</text>
+<rect x="20" y="580" width="1460" height="450" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="10" opacity="1"/>
+<text x="34" y="608" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#1c7ed6" text-anchor="start" font-weight="bold">FAMILY 087 — Mahler Convex Geometry</text>
+<text x="34" y="628" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#495057" text-anchor="start" font-weight="normal">The Mahler conjectures, functional inequalities and polar-product symplectic width.</text>
+<rect x="34" y="642" width="420" height="370" fill="#f8f9fa" stroke="#ced4da" stroke-width="1" rx="8" opacity="1"/>
+<text x="48" y="666" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0b2545" text-anchor="start" font-weight="bold">PLANCK CONFINEMENT</text>
+<text x="48" y="684" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6c757d" text-anchor="start" font-weight="normal">actual interval radii · inner ball magnified for visibility (not to scale)</text>
+<circle cx="244" cy="827" r="120" fill="#e7f5ff" stroke="#1c7ed6" stroke-width="3"/>
+<circle cx="244" cy="827" r="12" fill="#63e6be" stroke="#087f5b" stroke-width="2"/>
+<circle cx="244" cy="827" r="2" fill="#0b2545" stroke="none" stroke-width="1"/>
+<line x1="244" y1="827" x2="332" y2="827" stroke="#2b8a3e" stroke-width="3"/>
+<circle cx="332" cy="827" r="6" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="342" y="831" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#2b8a3e" text-anchor="start" font-weight="normal">d1 = 64/9</text>
+<line x1="244" y1="827" x2="191" y2="757" stroke="#2b8a3e" stroke-width="3"/>
+<circle cx="191" cy="757" r="6" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="181" y="761" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#2b8a3e" text-anchor="end" font-weight="normal">d2 = 7.111111</text>
+<line x1="244" y1="827" x2="183" y2="909" stroke="#c92a2a" stroke-width="3"/>
+<circle cx="183" cy="909" r="6" fill="#c92a2a" stroke="#ffffff" stroke-width="1"/>
+<text x="173" y="913" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#c92a2a" text-anchor="end" font-weight="normal">d3 = -8.888889</text>
+<text x="264" y="821" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#087f5b" text-anchor="start" font-weight="normal">inner ball 1.0e-40 m</text>
+<text x="48" y="954" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#1c7ed6" text-anchor="start" font-weight="normal">outer: Planck cutoff 1.616255e-35 m (display radius 1.0)</text>
+<text x="48" y="970" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#087f5b" text-anchor="start" font-weight="normal">inner: 1.0e-40 m (display 0.1, true 2/323251)</text>
+<text x="48" y="986" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#495057" text-anchor="start" font-weight="normal">ratio ×161625.5 · display magnified ×16162.55</text>
+<text x="48" y="1002" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#495057" text-anchor="start" font-weight="normal">Sylvester inertia: (+2, −1, 0)</text>
+<text x="440" y="666" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c92a2a" text-anchor="end" font-weight="bold">DISPLAY NOT TO SCALE</text>
+<text x="440" y="684" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="end" font-weight="normal">green = positive pivot</text>
+<text x="440" y="698" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c92a2a" text-anchor="end" font-weight="normal">red = negative pivot</text>
+<rect x="470" y="642" width="500" height="370" fill="#f8f9fa" stroke="#ced4da" stroke-width="1" rx="8" opacity="1"/>
+<text x="484" y="666" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0b2545" text-anchor="start" font-weight="bold">LDLᵀ SPECTRAL PROJECTION</text>
+<text x="484" y="684" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6c757d" text-anchor="start" font-weight="normal">surface: hyperboloid of one sheet · dimensionless, normalized axes</text>
+<polyline points="905,913 757,950 627,959 535,950 535,913 683,876 813,867 905,876 905,913" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="880,882 752,914 640,921 560,914 560,882 688,850 800,842 880,850 880,882" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="868,843 750,872 646,880 572,872 572,843 690,814 794,806 868,814 868,843" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="880,804 752,836 640,844 560,836 560,804 688,772 800,765 880,772 880,804" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="905,773 757,810 627,819 535,810 535,773 683,736 813,727 905,736 905,773" fill="none" stroke="#4c6ef5" stroke-width="1.4" opacity="0.65"/>
+<polyline points="905,913 880,882 868,843 880,804 905,773" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="757,950 752,914 750,872 752,836 757,810" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="627,959 640,921 646,880 640,844 627,819" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="535,950 560,914 572,872 560,836 535,810" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="535,913 560,882 572,843 560,804 535,773" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="683,876 688,850 690,814 688,772 683,736" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="813,867 800,842 794,806 800,765 813,727" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<polyline points="905,876 880,850 868,814 880,772 905,736" fill="none" stroke="#748ffc" stroke-width="0.9" opacity="0.55"/>
+<line x1="868" y1="843" x2="572" y2="843" stroke="#2b8a3e" stroke-width="2"/>
+<text x="876" y="847" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="start" font-weight="normal">d1 = 64/9</text>
+<line x1="646" y1="880" x2="794" y2="806" stroke="#2b8a3e" stroke-width="2"/>
+<text x="638" y="884" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="end" font-weight="normal">d2 = 7.111111</text>
+<line x1="720" y1="750" x2="720" y2="936" stroke="#c92a2a" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="728" y="940" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c92a2a" text-anchor="start" font-weight="normal">d3 = -8.888889</text>
+<text x="956" y="702" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#495057" text-anchor="end" font-weight="normal">inertia (+2, −1, 0)</text>
+<text x="956" y="716" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#495057" text-anchor="end" font-weight="normal">det = -449.492455</text>
+<text x="484" y="998" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#6c757d" text-anchor="start" font-weight="normal">black axes are positive-definite directions; red dashed axis is the saddle direction</text>
+<rect x="986" y="642" width="480" height="370" fill="#f8f9fa" stroke="#ced4da" stroke-width="1" rx="8" opacity="1"/>
+<text x="1000" y="666" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0b2545" text-anchor="start" font-weight="bold">GATE 4 — NEWTON CONTRACTION</text>
+<text x="1000" y="684" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6c757d" text-anchor="start" font-weight="normal">exact rational flow for positive Sylvester pivots · limit max|N′| &lt; 1/2</text>
+<text x="1000" y="694" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#2b8a3e" text-anchor="start" font-weight="bold">pivot d1 = 64/9 (positive)</text>
+<line x1="1012" y1="728" x2="1440" y2="728" stroke="#adb5bd" stroke-width="1"/>
+<rect x="1261" y="717" width="140" height="22" fill="#d3f9d8" stroke="#2b8a3e" stroke-width="1" rx="0" opacity="0.9"/>
+<text x="1263" y="701" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="start" font-weight="normal">certified box</text>
+<circle cx="1261" cy="728" r="7" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1261" y="713" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="middle" font-weight="normal">x0</text>
+<line x1="1261" y1="728" x2="1331" y2="728" stroke="#40c057" stroke-width="1"/>
+<circle cx="1331" cy="728" r="6" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1327" y="713" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="end" font-weight="normal">x1</text>
+<line x1="1331" y1="728" x2="1323" y2="728" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="728" r="5" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="728" x2="1323" y2="728" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="728" r="4" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="728" x2="1323" y2="728" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="728" r="3" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="728" x2="1323" y2="728" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="728" r="2" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="728" x2="1323" y2="728" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="728" r="2" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1331" y="713" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="start" font-weight="normal">x6</text>
+<line x1="1012" y1="772" x2="1236" y2="772" stroke="#adb5bd" stroke-width="1"/>
+<rect x="1012" y="767" width="126" height="10" fill="#40c057" stroke="#2b8a3e" stroke-width="1" rx="0" opacity="1"/>
+<line x1="1236" y1="758" x2="1236" y2="786" stroke="#c92a2a" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1236" y="754" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#c92a2a" text-anchor="middle" font-weight="normal">1/2</text>
+<text x="1012" y="794" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="start" font-weight="normal">max|N′| = 0.281250 ≈ 0.281250 &lt; 1/2 · N(B)⊆B: True</text>
+<text x="1448" y="774" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#2b8a3e" text-anchor="end" font-weight="bold">GATE 4 PASS</text>
+<text x="1012" y="812" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#495057" text-anchor="start" font-weight="normal">r0=2.4093e-2  r1=3.0474e-4  r2=4.6461e-8  r3=1.0793e-15</text>
+<text x="1000" y="852" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#2b8a3e" text-anchor="start" font-weight="bold">pivot d2 = 7.111111 (positive)</text>
+<line x1="1012" y1="886" x2="1440" y2="886" stroke="#adb5bd" stroke-width="1"/>
+<rect x="1261" y="875" width="140" height="22" fill="#d3f9d8" stroke="#2b8a3e" stroke-width="1" rx="0" opacity="0.9"/>
+<text x="1263" y="859" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="start" font-weight="normal">certified box</text>
+<circle cx="1261" cy="886" r="7" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1261" y="871" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="middle" font-weight="normal">x0</text>
+<line x1="1261" y1="886" x2="1331" y2="886" stroke="#40c057" stroke-width="1"/>
+<circle cx="1331" cy="886" r="6" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1327" y="871" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="end" font-weight="normal">x1</text>
+<line x1="1331" y1="886" x2="1323" y2="886" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="886" r="5" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="886" x2="1323" y2="886" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="886" r="4" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="886" x2="1323" y2="886" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="886" r="3" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="886" x2="1323" y2="886" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="886" r="2" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<line x1="1323" y1="886" x2="1323" y2="886" stroke="#40c057" stroke-width="1"/>
+<circle cx="1323" cy="886" r="2" fill="#2b8a3e" stroke="#ffffff" stroke-width="1"/>
+<text x="1331" y="871" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#2b8a3e" text-anchor="start" font-weight="normal">x6</text>
+<line x1="1012" y1="930" x2="1236" y2="930" stroke="#adb5bd" stroke-width="1"/>
+<rect x="1012" y="925" width="126" height="10" fill="#40c057" stroke="#2b8a3e" stroke-width="1" rx="0" opacity="1"/>
+<line x1="1236" y1="916" x2="1236" y2="944" stroke="#c92a2a" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1236" y="912" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#c92a2a" text-anchor="middle" font-weight="normal">1/2</text>
+<text x="1012" y="952" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#2b8a3e" text-anchor="start" font-weight="normal">max|N′| = 0.281250 ≈ 0.281250 &lt; 1/2 · N(B)⊆B: True</text>
+<text x="1448" y="932" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#2b8a3e" text-anchor="end" font-weight="bold">GATE 4 PASS</text>
+<text x="1012" y="970" font-family="Segoe UI, Arial, sans-serif" font-size="8" fill="#495057" text-anchor="start" font-weight="normal">r0=2.4093e-2  r1=3.0474e-4  r2=4.6461e-8  r3=1.0793e-15</text>
+<text x="1000" y="996" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#c92a2a" text-anchor="start" font-weight="normal">hyperbolic saddle: d3=-8.888889 · no real sqrt Newton flow · excluded from elliptic Gate 4</text>
+<line x1="30" y1="1046" x2="1470" y2="1046" stroke="#adb5bd" stroke-width="1"/>
+<text x="30" y="1066" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#495057" text-anchor="start" font-weight="normal">Engine: mcp/t2n/core/lattice_viewer.py · no matplotlib/numpy · binary float operations: 0 · payload floats: 0</text>
+<text x="30" y="1082" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#495057" text-anchor="start" font-weight="normal">JSON index: reports/lattice_spatial_confinement.json · vector asset: reports/lattice_spatial_confinement.svg</text>
+</svg>
