@@ -1,25 +1,13 @@
-<div align="center">
+# Math 3.0 
+Invariant Hybrid Engine for Finite-Lattice Spectral Analysis and Structural Proof Verification
 
-# Math 3.0 — Invariant Hybrid Engine for Finite-Lattice Spectral Analysis and Structural Proof Verification
-
-**Author:** Muhammad Aidil Amry (*Independent Researcher*) | **ORCID:** [0009-0002-9718-9710](https://orcid.org)
-
-[![DOI](https://zenodo.org)](https://doi.org)
-
----
-
-| Core Specifications | Architecture Status & Cryptographic Baseline |
-| :--- | :--- |
-| 🛡️ **Status** | Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`) |
-| 🌐 **Repository** | [aidilamrym-ops/Math-3.0](https://github.com) |
-| ⚖️ **License** | GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints) |
-| 🔑 **Manifest** | 1,327 rows, SHA-256 locked |
-| 🏛️ **Certificate Authority** | `Math 3.0 Local Sovereignty, Bounded-Lattice Kernel` |
-
----
-
-</div>
-
+> **Author:** Muhammad Aidil Amry (Independent Researcher) | ORCID: [0009-0002-9718-9710](https://orcid.org)
+> **Permanent DOI:** [![DOI](https://zenodo.org)](https://doi.org/10.5281/zenodo.24014902)
+> **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)
+> **Repository:** [aidilamrym-ops/Math-3.0](https://github.com/aidilamrym-ops/Math-3.0)
+> **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)
+> **Manifest:** 1,327 rows, SHA-256 locked
+> **Certificate Authority:** `Math 3.0 Local Sovereignty, Bounded-Lattice Kernel`
 
 ---
 
