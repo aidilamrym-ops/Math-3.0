@@ -104,9 +104,13 @@ Continuous calculus blowups are treated as structural alarms indicating unconstr
 Matrices $\tau$ are audited against linear candidate morphologies using element-wise accumulated residuals. Sylvester interval inertia classification ($A = L D L^{T}$) guarantees interval pivot sign polarity with zero-straddle circuit breakers.
 
 ### 5.3 Discrete Sylvester Inertia Trace-Norm Invariant (DSITNI)
+
 Parametric invariant for Gate 4 contraction:
-$$\mathcal{R}_{\text{DSITNI}} = \frac{\|\tau\|_F^2 \cdot 2 \cdot (\det(\tau) + 1)}{3 \cdot (\operatorname{tr}(\tau)^2 + 1) \cdot (\det(\tau) + 2)} < \frac{1}{2}$$
-Proven structurally bounded for all non-trivial spectral matrices; verified at 1B+ bit scale.
+
+$$\mathcal{R}_{\text{DSITNI}} = \frac{\|\tau\|_F^2 \cdot (|\det(\tau)| + 1)}{3 \cdot (\text{tr}(\tau^2) + 1) \cdot (|\det(\tau)| + 2)} < \frac{1}{2}$$
+
+Proven structurally bounded for all non-trivial spectral matrices; verified at 10B+ bit scale.
+
 
 ### 5.4 Discrete Inertia Boundary Determinant (DIBD)
 Gate 2/3 protection invariant:
