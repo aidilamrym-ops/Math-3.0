@@ -1310,6 +1310,7 @@
   "tools\\generate_cert_5.py": "413ec58fa756e2ff9df9d12b0d9ebe2a818b71da723fa4b97bcaa18a8b153d08",
   "tools\\lte_spectral_validator.py": "2dc0b00bc624c5d854bfd65d9bb3de1246fff4fde62335774ab1e0a8e004a3ea",
   "tools\\meta_blindspot_hunter.py": "4241e34f1d856e9b8393532412c87ba9cc0ba7ec011b6833130dd72755c2bd27",
+  "tools\\meta_conjecture_generator.py": "fe7a8b1655b5e1e48adcc67d19955d41a8968533298c261200b484550f653294",
   "tools\\newton_box_validator.py": "57e5525ce798349053cc34810a36a6726200faed354073d3878d84cec0197928",
   "tools\\phase7_stress_test.py": "d51297fa6361c505d7cf56f52eb204ea96c820264be2cef0729278d5f5a53343",
   "tools\\reports_to_lean.py": "cbce1814afd9adb8aa50e61e7125e5a5ec3304f0ba6e1c1aaea99f8068a9ba41",
