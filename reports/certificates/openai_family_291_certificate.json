@@ -1,0 +1,23 @@
+{
+  "certificate": "MATH 3.0 TEST RESULT CERTIFICATE",
+  "phase": "PHASE_9_INDIVIDUAL_REPORT_CERTIFICATION",
+  "certified_at": "2026-11-06T01:11:09.988437+00:00",
+  "authority": "Math 3.0 Local Sovereignty, Bounded-Lattice Kernel",
+  "source_file": "reports/openai_family_291.json",
+  "source_sha256": "6d4ecfdf3acf3a1ce343e0ad5862cf11a046614ba28fb45a5bcbe862cbf4107b",
+  "source_size_bytes": 5230,
+  "source_summary": {
+    "phase": "PHASE_6_FRESH_BALL_REINIT",
+    "timestamp": "2026-11-06T01:11:09.899703+00:00",
+    "verdict": "PASSED - raw f/g balls re-initialized at 24,000 bits; every radius within the Planck micro cutoff",
+    "precision_bits": 24000,
+    "r_hank": "[287.000000000000000000000000000000000000000 +/- 2.01e-40]",
+    "r_toep": "0"
+  },
+  "certification": {
+    "local_only": true,
+    "external_imports": [],
+    "placeholders": false
+  },
+  "source_type": "json"
+}

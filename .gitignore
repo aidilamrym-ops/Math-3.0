@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+
+# Absolute Exclusion for OpenAI Math Raw Data Staging
+staging/openai_math/
+staging/
