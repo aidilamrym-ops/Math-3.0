@@ -53,13 +53,13 @@ The toolchain combines:
                                             ▼
 ┌───────────────────────────────────────────────────────────────────────────────────┐
 │ GATE 1: INFORMATION LATTICE BOUNDS (Planck-Scale / Macro Cutoff)                  │
-│ • Bounded interval balls [x_mid ± x_rad] managed via arbitrary-precision Flint.    │
+│ • Bounded interval balls [x_mid ± x_rad] managed via arbitrary-precision Flint.   │
 └──────────────────────────────────┬────────────────────────────────────────────────┘
                                    │
                                    ▼
 ┌───────────────────────────────────────────────────────────────────────────────────┐
 │ GATE 2: MORPHOLOGY REFUTATION SIEVES (Toeplitz & Hankel Residual Audits)          │
-│ • Classifies structured residuals; certified rigid-asymmetry is preserved.         │
+│ • Classifies structured residuals; certified rigid-asymmetry is preserved.        │
 └──────────────────────────────────┬────────────────────────────────────────────────┘
                                    │
                                    ▼
@@ -76,7 +76,7 @@ The toolchain combines:
                                    │
                                    ▼
 ┌───────────────────────────────────────────────────────────────────────────────────┐
-│ GATE 5: FORMAL RATIONAL EXTRACTION (Exact Lean ℚ / ℕ Arithmetic)                  │
+│ GATE 5: FORMAL RATIONAL EXTRACTION (Exact Lean ℚ / ℕ Arithmetic)                 │
 │ • Translates numerical enclosures into exact decidable rational literals.         │
 └──────────────────────────────────┬────────────────────────────────────────────────┘
                                    │
