@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "total": 35,
+    "pass": 28,
+    "fail": 7
+  },
+  "failures": [
+    {
+      "target": "TEOREMA_BRANKAS_YANG_MILLS",
+      "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_BRANKAS_YANG_MILLS.typ",
+      "kind": "Z3_UNSAT_CONFIRMED",
+      "z3_actual": "sat",
+      "z3_expected": "unsat",
+      "counterexample_model": "[Extraction_Delta = 500/999999999,\n Penalty_Energy = 500,\n Universe_Energy_Limit = 1000]"
+    },
+    {
+      "target": "TEOREMA_GNASE_HYPERDIMENSIONAL_BMC",
+      "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_GNASE_HYPERDIMENSIONAL_BMC.typ",
+      "kind": "Z3_UNSAT_CONFIRMED",
+      "z3_actual": "sat",
+      "z3_expected": "unsat",
+      "counterexample_model": "[F_Dynamics = -99999999999999999899,\n Deviation_Energy = 1,\n Hardware_Limit = 1,\n V_bound = 100000000000000000000]"
+    },
+    {
+      "target": "TEOREMA_GRAND_SYNTHESIS",
+      "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_GRAND_SYNTHESIS.typ",
+      "kind": "Z3_UNSAT_CONFIRMED",
+      "z3_actual": "sat",
+      "z3_expected": "unsat",
+      "counterexample_model": "[F_Dynamics = -99999999999999999899,\n Hardware_Limit = 1,\n Deviation_Energy = 1,\n V_bound = 100000000000000000000]"
+    },
+    {
+      "target": "TEOREMA_INISIALISASI_SINGULARITAS",
+      "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_INISIALISASI_SINGULARITAS.typ",
+      "kind": "NO_SMT2_BLOCK"
+    },
+    {
+      "target": "TEOREMA_TRANSMUTASI_KOGNITIF",
+      "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_TRANSMUTASI_KOGNITIF.typ",
+      "kind": "NO_SMT2_BLOCK"
+    },
+    {
+      "target": "TEOREMA_VAMPIRISME_EPISTEMOLOGIS",
+      "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_VAMPIRISME_EPISTEMOLOGIS.typ",
+      "kind": "NO_SMT2_BLOCK"
+    },
+    {
+      "target": "The Holy Grail",
+      "source": "staging\\user_disertasi\\The Holy Grail.md",
+      "kind": "NO_SMT2_BLOCK"
+    }
+  ]
+}

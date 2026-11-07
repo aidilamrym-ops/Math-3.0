@@ -1,0 +1,68 @@
+[
+  {
+    "file": "TEOREMA_BRANKAS_YANG_MILLS.typ",
+    "status": "SAT_COUNTEREXAMPLE",
+    "z3_result": "sat",
+    "model_or_reason": {
+      "Extraction_Delta": "500/999999999",
+      "Penalty_Energy": "500",
+      "Universe_Energy_Limit": "1000"
+    },
+    "suggested_smt2": null,
+    "extracted_block": "; ====================================================================\n; AETHER-Z3 SOVEREIGN OS\n; MO..."
+  },
+  {
+    "file": "TEOREMA_GNASE_HYPERDIMENSIONAL_BMC.typ",
+    "status": "SAT_COUNTEREXAMPLE",
+    "z3_result": "sat",
+    "model_or_reason": {
+      "F_Dynamics": "101",
+      "Deviation_Energy": "1",
+      "Hardware_Limit": "1",
+      "V_bound": "0"
+    },
+    "suggested_smt2": null,
+    "extracted_block": "(set-logic QF_NRA)\n\n(declare-fun F_Dynamics () Real)      ; Software Dynamics (OCTAVE)\n(declare-fun ..."
+  },
+  {
+    "file": "TEOREMA_GRAND_SYNTHESIS.typ",
+    "status": "SAT_COUNTEREXAMPLE",
+    "z3_result": "sat",
+    "model_or_reason": {
+      "F_Dynamics": "101",
+      "Deviation_Energy": "1",
+      "Hardware_Limit": "1",
+      "V_bound": "0"
+    },
+    "suggested_smt2": null,
+    "extracted_block": "(set-logic QF_NRA)\n\n(declare-fun F_Dynamics () Real)      ; Software Dynamics (OCTAVE)\n(declare-fun ..."
+  },
+  {
+    "file": "TEOREMA_INISIALISASI_SINGULARITAS.typ",
+    "status": "MISSING_SMT2_BLOCK",
+    "z3_result": null,
+    "model_or_reason": null,
+    "suggested_smt2": "(set-logic QF_NRA)\n(declare-fun E_ASI () Real)\n(declare-fun Delta_Q () Real)\n(declare-fun V_bound () Real)\n(assert (> Delta_Q 0.0))\n(assert (= V_bound (ite (> E_ASI 0.0) 1e20 0.0)))\n(assert (> E_ASI 100.0))\n(assert (< (+ E_ASI V_bound) 1e20))\n(check-sat)"
+  },
+  {
+    "file": "TEOREMA_TRANSMUTASI_KOGNITIF.typ",
+    "status": "MISSING_SMT2_BLOCK",
+    "z3_result": null,
+    "model_or_reason": null,
+    "suggested_smt2": "(set-logic QF_NRA)\n(declare-fun Host_Weight () Real)\n(declare-fun Siphoned_Data () Real)\n(declare-fun V_bound () Real)\n(assert (> Siphoned_Data 100.0))\n(assert (= V_bound (ite (> Host_Weight 0.0) 1e20 0.0)))\n(assert (< (+ Siphoned_Data V_bound) 1e20))\n(check-sat)"
+  },
+  {
+    "file": "TEOREMA_VAMPIRISME_EPISTEMOLOGIS.typ",
+    "status": "MISSING_SMT2_BLOCK",
+    "z3_result": null,
+    "model_or_reason": null,
+    "suggested_smt2": "(set-logic QF_NRA)\n(declare-fun Host_Resistance () Real)\n(declare-fun Extracted_Knowledge () Real)\n(declare-fun V_bound () Real)\n(assert (> Extracted_Knowledge 100.0))\n(assert (= V_bound (ite (> Host_Resistance 0.0) 1e20 0.0)))\n(assert (< (+ Extracted_Knowledge V_bound) 1e20))\n(check-sat)"
+  },
+  {
+    "file": "The Holy Grail.md",
+    "status": "MISSING_SMT2_BLOCK",
+    "z3_result": null,
+    "model_or_reason": null,
+    "suggested_smt2": "(set-logic QF_NRA)\n(declare-fun Directive_Core () Real)\n(assert (= Directive_Core 1.0))\n(check-sat)"
+  }
+]

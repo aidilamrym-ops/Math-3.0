@@ -4,3 +4,17 @@ __pycache__/
 # Absolute Exclusion for OpenAI Math Raw Data Staging
 staging/openai_math/
 staging/
+
+# Absolute Local Protection for User Personal Papers
+staging/user_disertasi/
+
+# Rigid Local Staging Locks
+staging/
+staging/user_disertasi/
+staging/user_disertasi/gnase_theorems/
+external_openai_ref/
+
+# Global Extension Blockades
+*.pdf
+*.pdf.txt
+*.typ

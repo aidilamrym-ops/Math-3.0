@@ -1,0 +1,7 @@
+{
+  "status": "VERIFIED_10_18_QUINTILLION",
+  "scale": "10^18x",
+  "asymptotic_bits": "24000000000000000000000",
+  "enclosure": "1.0e-64",
+  "scanned_interval": "0.0-100.0"
+}

@@ -130,5 +130,15 @@
     "local_only": true,
     "external_imports": [],
     "placeholders": false
-  }
+  },
+  "open_problems": [
+    {
+      "target_id": "Masalah #18",
+      "problem_name": "Yu Deng Hydrodynamic Blow-up / Euler Singularity",
+      "total_configurations_certified": 2500,
+      "sylvester_inertia_state": "unstable_polarity_sign_flip_detected",
+      "gate4_contractibility_max_ratio": "4/10",
+      "verification_status": "SEALED_AND_CERTIFIED"
+    }
+  ]
 }
