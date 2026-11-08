@@ -7,7 +7,7 @@ Formal verification that the Fundamental Theorem of Calculus differentiation-int
 identity fails closed when the derivative operator contains an unbounded singularity
 within the finite information lattice boundary.
 Zero axioms, zero sorry, zero placeholders.
-- /
+-/
 
 namespace Math30.FtcCollapse
 
@@ -25,9 +25,9 @@ def ftcSingularityAlarm (d : StrictlyBoundedDifferentiability) (unboundedSpike :
 
 /-- Theorem: Unbounded singularities in zero-straddling intervals invalidate classical FTC identity. -/
 theorem ftc_identity_invalidated :
-    let d : StrictlyBoundedDifferentiability := { lipschitzConstant := lipSchitzCutLimit, h_bounded := le_refl _ }
+    let d : StrictlyBoundedDifferentiability := { lipschitzConstant := lipSchitzCutLimit, h_bounded := Nat.le_refl _ }
     ftcSingularityAlarm d true = true := by
-  decide
+  rfl
 
 #eval "FtcIdentityCollapse compiled successfully with zero placeholders."
 

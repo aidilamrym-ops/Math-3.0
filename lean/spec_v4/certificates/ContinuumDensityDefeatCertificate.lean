@@ -6,7 +6,7 @@ import Init.Data.Nat.Basic
 Formal reflexivity anchor binding the Continuum Density Defeat verification hash
 directly to the sovereign Lean 4 kernel.
 Zero axioms, zero sorry, zero placeholders.
--/\
+-/
 
 namespace Math30.Certificates.ContinuumDensity
 

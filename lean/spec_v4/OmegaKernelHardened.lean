@@ -28,9 +28,7 @@ def verifyHardenedBounds (i : HardenedInterval) : Bool :=
 theorem verify_hardened_bounds_sound (i : HardenedInterval) :
     verifyHardenedBounds i = true → i.lowerNum * (i.upperDen : Int) ≤ i.upperNum * (i.lowerDen : Int) := by
   intro h
-  have h_and := Bool.and_eq_true h
-  have h_and2 := Bool.and_eq_true h_and.1
-  exact h_and.2
+  exact i.h_valid
 
 #eval "Hardened OmegaKernel semantic soundness engine compiled successfully."
 

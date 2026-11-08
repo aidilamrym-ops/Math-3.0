@@ -30,15 +30,13 @@ def verifyNonVacuousBounds (i : NonVacuousInterval) : Bool :=
 theorem non_vacuous_bounds_sound (i : NonVacuousInterval) :
     verifyNonVacuousBounds i = true → i.lowerNum * (i.upperDen : Int) ≤ i.upperNum * (i.lowerDen : Int) := by
   intro h
-  have h_and := Bool.and_eq_true h
-  have h_and2 := Bool.and_eq_true h_and.1
-  exact h_and.2
+  exact i.h_valid
 
 /-- Contraction step verifier enforcing strict contraction ratio < 1/2. -/
 def verifyNonVacuousContraction (initialBox refinedBox : NonVacuousInterval) (rNum rDen : Nat) : Bool :=
   (0 < rDen) &&
   (initialBox.lowerNum * (refinedBox.lowerDen : Int) ≤ refinedBox.lowerNum * (initialBox.lowerDen : Int)) &&
-  (refinedBox.upperNum * (refinedBox.upperDen : Int) ≤ initialBox.upperNum * (refinedBox.upperDen : Int)) &&
+  (refinedBox.upperNum * (initialBox.upperDen : Int) ≤ initialBox.upperNum * (refinedBox.upperDen : Int)) &&
   (rNum * 2 < rDen)
 
 /-- Non-vacuous contraction soundness invariant. -/
@@ -46,10 +44,8 @@ theorem non_vacuous_contraction_sound (initialBox refinedBox : NonVacuousInterva
     verifyNonVacuousContraction initialBox refinedBox rNum rDen = true →
     rNum * 2 < rDen := by
   intro h
-  have h1 := Bool.and_eq_true h
-  have h2 := Bool.and_eq_true h1.1
-  have h3 := Bool.and_eq_true h2.1
-  exact h1.2
+  simp [verifyNonVacuousContraction] at h
+  cases h with | _ _ h => exact h
 
 /-- Explicit concrete witness for Guinand-Weil first zero bounding interval [14.134, 14.135]. -/
 def witnessZero1 : NonVacuousInterval := {

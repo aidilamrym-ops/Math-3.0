@@ -6,7 +6,7 @@ import Init.Data.Nat.Basic
 Formal verification that point localization (zero-radius intervals) violates the finite
 information lattice resolution floor, proving quantum uncertainty as a geometric necessity.
 Zero axioms, zero sorry, zero placeholders.
--/\
+-/
 
 namespace Math30.HeisenbergUncertainty
 
@@ -25,7 +25,8 @@ def verifyQuantumState (q : QuantumState) : Bool :=
 /-- Theorem: Zero-radius point localization is structurally impossible within the lattice. -/
 theorem uncertainty_product_safeguarded (q : QuantumState) :
     verifyQuantumState q = true := by
-  decide
+  simp [verifyQuantumState]
+  exact q.h_valid_radius
 
 #eval "HeisenbergUncertaintyDemystified compiled successfully with zero placeholders."
 

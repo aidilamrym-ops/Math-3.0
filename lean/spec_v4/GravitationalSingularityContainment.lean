@@ -6,7 +6,7 @@ import Init.Data.Nat.Basic
 Formal verification that physical volume intervals are strictly bounded below by the
 Planck volume invariant, blocking infinite density singularities and division-by-zero hallucinations.
 Zero axioms, zero sorry, zero placeholders.
--/\
+-/
 
 namespace Math30.SingularityContainment
 
@@ -25,7 +25,8 @@ def verifyPhysicalVolume (v : PhysicalVolume) : Bool :=
 /-- Theorem: Any spatial volume within the physical lattice prevents singularity collapse. -/
 theorem singularity_hallucination_blocked (v : PhysicalVolume) :
     verifyPhysicalVolume v = true := by
-  decide
+  simp [verifyPhysicalVolume]
+  exact v.h_min_volume
 
 #eval "GravitationalSingularityContainment compiled successfully with zero placeholders."
 

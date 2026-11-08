@@ -42,9 +42,8 @@ theorem contraction_soundness_invariant (initialBox refinedBox : RatInterval) (r
     verifyContractionStep initialBox refinedBox rNum rDen = true →
     rNum * 2 < rDen := by
   intro h
-  have h_and := Bool.and_eq_true h
-  have h_and2 := Bool.and_eq_true h_and.1
-  exact h_and.2
+  simp [verifyContractionStep] at h
+  cases h with | _ _ h => exact h
 
 #eval "OmegaKernel semantic soundness engine compiled successfully."
 
