@@ -29,13 +29,14 @@ def load_config() -> dict:
             for k, v in default.items():
                 cfg.setdefault(k, v)
             return cfg
-    except Exception:
+    except (OSError, json.JSONDecodeError) as exc:
+        print(f"[WARN] Could not load runtime_config.json: {exc}; using defaults.")
         return default
 
 class UniversalSuiteRunner:
     def __init__(self, root: str):
-        self.root = root
-        if r"D:\Opencode AI Agent\Math 3.0 Tools".lower() not in root.lower(): sys.exit(1)
+        self.root = os.path.abspath(root)
+        if not os.path.isfile(os.path.join(self.root, "manifest.json")): sys.exit(1)
 
     def run_all_gates(self) -> bool:
         builder = IntervalMatrixBuilder(3, 6000)
@@ -54,7 +55,7 @@ class UniversalSuiteRunner:
         
         try:
             n_pos, n_neg, _ = IntervalLDLTSolver(builder.get_matrix_snapshot()).compute_inertia()
-        except Exception as e:
+        except ResolutionAlarm as e:
             print(f"DEBUG: Gate failure: {e}")
             return False
         
@@ -117,7 +118,7 @@ def run_adversarial_tests(root: str, config: dict = None) -> bool:
     for i in range(100): builder_d.set_entry_exact(i, i, "1")
     try:
         IntervalLDLTSolver(builder_d.get_matrix_snapshot()).compute_inertia()
-    except Exception as e:
+    except ResolutionAlarm as e:
         print(f"[ADVERSARY D] Large matrix failed: {e}")
         return False
     print("[ADVERSARY D] Passed.")

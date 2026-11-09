@@ -11,8 +11,9 @@ and moves the immunized files back to staging/user_disertasi/gnase_theorems/.
 import shutil
 from pathlib import Path
 
-LAB_DIR = Path(r"D:\Opencode AI Agent\Math 3.0 Tools\staging\user_disertasi\error_learning_lab")
-TARGET_DIR = Path(r"D:\Opencode AI Agent\Math 3.0 Tools\staging\user_disertasi\gnase_theorems")
+STAGING_DIR = Path(__file__).resolve().parents[1] / "staging" / "user_disertasi"
+LAB_DIR = STAGING_DIR / "error_learning_lab"
+TARGET_DIR = STAGING_DIR / "gnase_theorems"
 
 def inject_and_immunize():
     TARGET_DIR.mkdir(parents=True, exist_ok=True)

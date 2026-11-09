@@ -1,25 +1,25 @@
 import Init.Data.Nat.Basic
-import Init.Data.Int.Basic
 
 /-!
-# Discrete Quantum Fourier Transform (Math 3.0 / Phase 11 / QFT Engine)
+# Quantum QFT (Math 3.0 / Phase 11 / Quantum Lattice)
 
-Exact QFT matrix mapping for discrete registers.
+Discrete Quantum Fourier Transform (QFT) implementation using exact integer lattice
+arithmetic over 2-qubit states.
 Zero axioms, zero sorry, zero placeholders.
-No Mathlib dependencies.
 -/
 
 namespace Math30.QuantumQft
 
-/-- 
-Discrete 2-Qubit state.
-State is |ψ⟩ = 1/√(2^scale) * sum_{ij} (a_{ij}_re + i*a_{ij}_im)|ij⟩
--/
+/-- Discrete 2-Qubit state representing a vector in a 4-dimensional discrete Gaussian lattice. -/
 structure Discrete2Qubit where
-  a00_re : Int; a00_im : Int
-  a01_re : Int; a01_im : Int
-  a10_re : Int; a10_im : Int
-  a11_re : Int; a11_im : Int
+  a00_re : Int
+  a00_im : Int
+  a01_re : Int
+  a01_im : Int
+  a10_re : Int
+  a10_im : Int
+  a11_re : Int
+  a11_im : Int
   scale : Nat
   h_norm : a00_re * a00_re + a00_im * a00_im +
            a01_re * a01_re + a01_im * a01_im +
@@ -28,18 +28,10 @@ structure Discrete2Qubit where
 
 /-- Helper square expansion lemma. -/
 theorem sq_expand (x y : Int) : (x + y) * (x + y) + (x - y) * (x - y) = 2 * (x * x + y * y) := by
-  have t1 : (x + y) * (x + y) = x * x + x * y + y * x + y * y := by 
-    rw [Int.add_mul, Int.mul_add, Int.mul_add]; simp [Int.add_assoc]
-  have t2 : (x - y) * (x - y) = x * x - x * y - y * x + y * y := by
-    rw [Int.sub_mul, Int.mul_sub, Int.mul_sub]; simp [Int.sub_eq_add_neg, Int.neg_mul, Int.mul_neg, Int.add_assoc]
-  rw [t1, t2]
-  have t3 : x * y + y * x + (- (x * y) + - (y * x)) = 0 := by
-    rw [Int.add_assoc, Int.add_comm (y * x), ← Int.add_assoc, Int.add_neg_cancel, Int.add_comm (x * y), Int.add_neg_cancel]; rfl
-  simp [Int.add_assoc, Int.add_comm, Int.mul_comm, Int.sub_eq_add_neg]
-  rw [Int.add_assoc (x * x), Int.add_comm (x * y + y * x), Int.add_assoc (x * x), ← Int.add_assoc (x * y + y * x)]
-  rw [t3]; simp
-  rw [Int.mul_add, Int.add_comm (x * x), Int.mul_two, Int.mul_two]
-  rfl
+  rw [Int.add_mul, Int.mul_add, Int.mul_add, Int.sub_mul, Int.mul_sub, Int.mul_sub]
+  simp only [Int.sub_eq_add_neg, Int.neg_add, Int.neg_neg]
+  rw [Int.two_mul]
+  omega
 
 /-- Discrete Hadamard mapping on qubit 0. -/
 def hadamard_q0 (q : Discrete2Qubit) : Discrete2Qubit :=
@@ -52,14 +44,23 @@ def hadamard_q0 (q : Discrete2Qubit) : Discrete2Qubit :=
     a10_re := n_a10_re, a10_im := n_a10_im, a11_re := n_a11_re, a11_im := n_a11_im,
     scale := q.scale + 1,
     h_norm := by
-      have h1 := q.h_norm; simp [n_a00_re, n_a00_im, n_a01_re, n_a01_im, n_a10_re, n_a10_im, n_a11_re, n_a11_im]
-      rw [sq_expand q.a00_re q.a10_re, sq_expand q.a00_im q.a10_im, sq_expand q.a01_re q.a11_re, sq_expand q.a01_im q.a11_im]
-      rw [← Int.mul_add, ← Int.mul_add, ← Int.mul_add]
-      have hr : q.a00_re * q.a00_re + q.a10_re * q.a10_re + (q.a00_im * q.a00_im + q.a10_im * q.a10_im) +
-                (q.a01_re * q.a01_re + q.a11_re * q.a11_re) + (q.a01_im * q.a01_im + q.a11_im * q.a11_im) =
-                q.a00_re * q.a00_re + q.a00_im * q.a00_im + q.a01_re * q.a01_re + q.a01_im * q.a01_im +
-                q.a10_re * q.a10_re + q.a10_im * q.a10_im + q.a11_re * q.a11_re + q.a11_im * q.a11_im := by simp [Int.add_assoc, Int.add_comm]
-      rw [hr, h1, ← Int.pow_succ]; rfl
+      have h1 := q.h_norm
+      simp [n_a00_re, n_a00_im, n_a01_re, n_a01_im, n_a10_re, n_a10_im, n_a11_re, n_a11_im]
+      have h_rearr : (q.a00_re + q.a10_re) * (q.a00_re + q.a10_re) + (q.a00_im + q.a10_im) * (q.a00_im + q.a10_im) +
+                     (q.a01_re + q.a11_re) * (q.a01_re + q.a11_re) + (q.a01_im + q.a11_im) * (q.a01_im + q.a11_im) +
+                     (q.a00_re - q.a10_re) * (q.a00_re - q.a10_re) + (q.a00_im - q.a10_im) * (q.a00_im - q.a10_im) +
+                     (q.a01_re - q.a11_re) * (q.a01_re - q.a11_re) + (q.a01_im - q.a11_im) * (q.a01_im - q.a11_im) =
+                     ((q.a00_re + q.a10_re) * (q.a00_re + q.a10_re) + (q.a00_re - q.a10_re) * (q.a00_re - q.a10_re)) +
+                     ((q.a00_im + q.a10_im) * (q.a00_im + q.a10_im) + (q.a00_im - q.a10_im) * (q.a00_im - q.a10_im)) +
+                     ((q.a01_re + q.a11_re) * (q.a01_re + q.a11_re) + (q.a01_re - q.a11_re) * (q.a01_re - q.a11_re)) +
+                     ((q.a01_im + q.a11_im) * (q.a01_im + q.a11_im) + (q.a01_im - q.a11_im) * (q.a01_im - q.a11_im)) := by
+        simp [Int.add_assoc, Int.add_left_comm]
+      rw [h_rearr, sq_expand q.a00_re q.a10_re, sq_expand q.a00_im q.a10_im, sq_expand q.a01_re q.a11_re, sq_expand q.a01_im q.a11_im]
+      have h_lin : 2 * (q.a00_re * q.a00_re + q.a10_re * q.a10_re) + 2 * (q.a00_im * q.a00_im + q.a10_im * q.a10_im) +
+                   2 * (q.a01_re * q.a01_re + q.a11_re * q.a11_re) + 2 * (q.a01_im * q.a01_im + q.a11_im * q.a11_im) =
+                   2 * (q.a00_re * q.a00_re + q.a00_im * q.a00_im + q.a01_re * q.a01_re + q.a01_im * q.a01_im + q.a10_re * q.a10_re + q.a10_im * q.a10_im + q.a11_re * q.a11_re + q.a11_im * q.a11_im) := by omega
+      rw [h_lin, h1]
+      rw [Int.pow_succ, Int.mul_comm]
   }
 
 /-- Discrete Hadamard mapping on qubit 1. -/
@@ -73,14 +74,23 @@ def hadamard_q1 (q : Discrete2Qubit) : Discrete2Qubit :=
     a10_re := n_a10_re, a10_im := n_a10_im, a11_re := n_a11_re, a11_im := n_a11_im,
     scale := q.scale + 1,
     h_norm := by
-      have h1 := q.h_norm; simp [n_a00_re, n_a00_im, n_a01_re, n_a01_im, n_a10_re, n_a10_im, n_a11_re, n_a11_im]
-      rw [sq_expand q.a00_re q.a01_re, sq_expand q.a00_im q.a01_im, sq_expand q.a10_re q.a11_re, sq_expand q.a10_im q.a11_im]
-      rw [← Int.mul_add, ← Int.mul_add, ← Int.mul_add]
-      have hr : q.a00_re * q.a00_re + q.a01_re * q.a01_re + (q.a00_im * q.a00_im + q.a01_im * q.a01_im) +
-                (q.a10_re * q.a10_re + q.a11_re * q.a11_re) + (q.a10_im * q.a10_im + q.a11_im * q.a11_im) =
-                q.a00_re * q.a00_re + q.a00_im * q.a00_im + q.a01_re * q.a01_re + q.a01_im * q.a01_im +
-                q.a10_re * q.a10_re + q.a10_im * q.a10_im + q.a11_re * q.a11_re + q.a11_im * q.a11_im := by simp [Int.add_assoc, Int.add_comm]
-      rw [hr, h1, ← Int.pow_succ]; rfl
+      have h1 := q.h_norm
+      simp [n_a00_re, n_a00_im, n_a01_re, n_a01_im, n_a10_re, n_a10_im, n_a11_re, n_a11_im]
+      have h_rearr : (q.a00_re + q.a01_re) * (q.a00_re + q.a01_re) + (q.a00_im + q.a01_im) * (q.a00_im + q.a01_im) +
+                     (q.a00_re - q.a01_re) * (q.a00_re - q.a01_re) + (q.a00_im - q.a01_im) * (q.a00_im - q.a01_im) +
+                     (q.a10_re + q.a11_re) * (q.a10_re + q.a11_re) + (q.a10_im + q.a11_im) * (q.a10_im + q.a11_im) +
+                     (q.a10_re - q.a11_re) * (q.a10_re - q.a11_re) + (q.a10_im - q.a11_im) * (q.a10_im - q.a11_im) =
+                     ((q.a00_re + q.a01_re) * (q.a00_re + q.a01_re) + (q.a00_re - q.a01_re) * (q.a00_re - q.a01_re)) +
+                     ((q.a00_im + q.a01_im) * (q.a00_im + q.a01_im) + (q.a00_im - q.a01_im) * (q.a00_im - q.a01_im)) +
+                     ((q.a10_re + q.a11_re) * (q.a10_re + q.a11_re) + (q.a10_re - q.a11_re) * (q.a10_re - q.a11_re)) +
+                     ((q.a10_im + q.a11_im) * (q.a10_im + q.a11_im) + (q.a10_im - q.a11_im) * (q.a10_im - q.a11_im)) := by
+        simp [Int.add_assoc, Int.add_left_comm]
+      rw [h_rearr, sq_expand q.a00_re q.a01_re, sq_expand q.a00_im q.a01_im, sq_expand q.a10_re q.a11_re, sq_expand q.a10_im q.a11_im]
+      have h_lin : 2 * (q.a00_re * q.a00_re + q.a01_re * q.a01_re) + 2 * (q.a00_im * q.a00_im + q.a01_im * q.a01_im) +
+                   2 * (q.a10_re * q.a10_re + q.a11_re * q.a11_re) + 2 * (q.a10_im * q.a10_im + q.a11_im * q.a11_im) =
+                   2 * (q.a00_re * q.a00_re + q.a00_im * q.a00_im + q.a01_re * q.a01_re + q.a01_im * q.a01_im + q.a10_re * q.a10_re + q.a10_im * q.a10_im + q.a11_re * q.a11_re + q.a11_im * q.a11_im) := by omega
+      rw [h_lin, h1]
+      rw [Int.pow_succ, Int.mul_comm]
   }
 
 /-- Controlled-R2 gate (diag(1, i)) on qubit 1 (ctrl), qubit 0 (target). -/
@@ -92,8 +102,9 @@ def control_r2 (q : Discrete2Qubit) : Discrete2Qubit :=
     scale := q.scale,
     h_norm := by
       have h1 := q.h_norm
-      rw [Int.neg_mul_neg, Int.mul_comm q.a11_im q.a11_im]
-      exact h1
+      have h_neg : (-q.a11_im) * (-q.a11_im) = q.a11_im * q.a11_im := by
+        rw [Int.neg_mul_neg]
+      omega
   }
 
 /-- Exact 2-qubit Discrete QFT. -/

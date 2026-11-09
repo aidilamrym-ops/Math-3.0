@@ -1,16 +1,35 @@
 # Math 3.0 Absolute Verification Pipeline Automation
 
-.PHONY: verify clean environment-audit
+PYTHON ?= python
+LEAN ?= lean
+
+.PHONY: verify clean environment-audit audit lean-audit regression blindspot
 
 verify: environment-audit
 	@echo "Executing Math 3.0 Universal Gate Suite..."
-	python3 suite_check.py
+	$(PYTHON) tools/suite_check.py
+
+audit: environment-audit
+	@echo "Executing full Math 3.0 audit stack..."
+	$(PYTHON) tools/lean_surface_audit.py --jobs 4 --timeout 60
+	$(PYTHON) tools/blindspot_audit.py
+	$(PYTHON) tools/audit_hardcoded_nodes.py
+	$(PYTHON) tools/meta_blindspot_hunter.py
+
+lean-audit:
+	$(PYTHON) tools/lean_surface_audit.py --jobs 4 --timeout 60
+
+regression:
+	$(PYTHON) tools/run_regression_tests.py
+
+blindspot:
+	$(PYTHON) tools/blindspot_audit.py
 
 environment-audit:
 	@echo "Checking system toolchain specifications..."
-	@python3 -c "import flint" || (echo "FATAL: python-flint package missing." && exit 2)
-	@z3 --version || (echo "FATAL: Z3 SMT CLI missing from path." && exit 2)
-	@lean --version || (echo "FATAL: Lean 4 compiler missing from path." && exit 2)
+	@$(PYTHON) -c "import flint" || (echo "FATAL: python-flint package missing." && exit 2)
+	@$(PYTHON) -c "import z3" || (echo "FATAL: z3-solver Python package missing." && exit 2)
+	@$(LEAN) --version || (echo "FATAL: Lean 4 compiler missing from PATH." && exit 2)
 
 clean:
 	@echo "Purging temporary run caches from tracking zones..."

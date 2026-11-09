@@ -2,8 +2,8 @@ import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import subprocess, os, json, time
 
-ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
-python_exe = r"C:\Python314\python.exe"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+python_exe = sys.executable
 BELOW_NORMAL_PRIORITY_CLASS = 0x00004000
 
 def run(cmd):
@@ -42,7 +42,7 @@ for idx in missing:
         continue
 
     script_content = '''import importlib.util, json, os
-p = r'D:\\Opencode AI Agent\\Math 3.0 Tools\\mcp\\t2n\\core\\report_certificate_generator.py'
+p = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'mcp', 't2n', 'core', 'report_certificate_generator.py')
 spec = importlib.util.spec_from_file_location('rcg', p)
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)

@@ -50,6 +50,38 @@ def cert(source, ns, body):
     return {"source": source, "ns": ns, "body": body.strip("\n")}
 
 
+def real_audit_spec():
+    import json
+    from pathlib import Path
+    ROOT = Path(__file__).resolve().parents[3]
+    try:
+        text = (ROOT / "reports" / "user_certified_blueprints.json").read_text(encoding="utf-8")
+        rows = json.loads(text)
+    except Exception as e:
+        raise RuntimeError(f"Failed to load certified blueprints: {e}")
+    total = len(rows)
+    passes = sum(1 for r in rows if r.get("status") == "PASS")
+    fails = total - passes
+    fail_pos_theorem = (
+        "theorem audit_fail_positive : 0 < realFailCount := by decide"
+        if fails > 0
+        else "theorem audit_fail_nonnegative : 0 ≤ realFailCount := by decide"
+    )
+    header = f"""def truthfulRegistryRows : Nat := {total}
+def realPassCount : Nat := {passes}
+def realFailCount : Nat := {fails}"""
+    footer = f"""theorem audit_partition : realPassCount + realFailCount = truthfulRegistryRows := by
+  decide
+
+{fail_pos_theorem}"""
+    body = header + "\n\n" + footer
+    return cert(
+        "reports/user_certified_blueprints.json",
+        "Math30.Sovereignty.CertifiedAudits",
+        body,
+    )
+
+
 SPIKE = "def spike : Int := 100000000000000000000"
 
 SPECS = {
@@ -386,19 +418,7 @@ theorem minor_three_numerator : (65535 : Nat) * 65535 = 4294836225 := by omega
 theorem minor_three_denominator : (65536 : Nat) * 65536 = 4294967296 := by omega
 """,
     ),
-    "RealAuditCertificate.lean": cert(
-        "reports/user_certified_blueprints.json",
-        "Math30.Sovereignty.CertifiedAudits",
-        """def truthfulRegistryRows : Nat := 35
-def realPassCount : Nat := 28
-def realFailCount : Nat := 7
-
-theorem audit_partition : realPassCount + realFailCount = truthfulRegistryRows := by
-  decide
-
-theorem audit_fail_positive : 0 < realFailCount := by decide
-""",
-    ),
+    "RealAuditCertificate.lean": real_audit_spec(),
     "SiliconTransmutationCertificate.lean": cert(
         "TEOREMA_TRANSMUTASI_SILIKON.typ",
         "Math30.Sovereignty.SiliconTransmutation",

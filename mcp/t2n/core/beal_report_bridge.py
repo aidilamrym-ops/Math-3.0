@@ -11,7 +11,7 @@ import hashlib
 import subprocess
 from pathlib import Path
 
-ROOT = Path(r"D:\Opencode AI Agent\Math 3.0 Tools")
+ROOT = Path(__file__).resolve().parents[3]
 
 def calculate_sha256(filepath):
     """Calculate SHA-256 of file with LF normalization."""

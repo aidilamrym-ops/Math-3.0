@@ -6,5 +6,20 @@
     "Chronon": 1
   },
   "epr_entanglement_bounded": true,
-  "z3_tribunal_status": "UNSAT_NO_INFINITE_PROBABILITY"
+  "z3_version": "5.0.0",
+  "z3_checks": [
+    {
+      "name": "finite_probability_no_overshoot",
+      "expected": "unsat",
+      "observed": "unsat",
+      "passed": true
+    },
+    {
+      "name": "bounded_chronon_no_overflow",
+      "expected": "unsat",
+      "observed": "unsat",
+      "passed": true
+    }
+  ],
+  "z3_tribunal_status": "UNSAT_VERIFIED_BOUNDED"
 }

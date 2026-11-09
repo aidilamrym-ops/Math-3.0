@@ -3,8 +3,9 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 import os
 import json
 
-REPORTS_DIR = r"D:\Opencode AI Agent\Math 3.0 Tools\reports"
-LEAN_TARGET_DIR = r"D:\Opencode AI Agent\Math 3.0 Tools\lean\spec_v4"
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPORTS_DIR = os.path.join(ROOT_DIR, "reports")
+LEAN_TARGET_DIR = os.path.join(ROOT_DIR, "lean", "spec_v4")
 os.makedirs(LEAN_TARGET_DIR, exist_ok=True)
 
 STATIC_PROBLEMS = """-- Problem 1: Navier-Stokes Lipschitz Contraction & Planck-Scale Bounding

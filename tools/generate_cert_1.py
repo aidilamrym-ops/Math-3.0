@@ -4,7 +4,7 @@ import os
 import hashlib
 import json
 
-WORKSPACE_ROOT = r"D:\\Opencode AI Agent\\Math 3.0 Tools"
+WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 lean_path = os.path.join(WORKSPACE_ROOT, "lean", "spec_v4", "ContinuumDensityDefeat.lean")
 
 with open(lean_path, "rb") as f:

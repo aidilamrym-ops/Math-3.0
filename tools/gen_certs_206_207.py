@@ -1,7 +1,7 @@
 import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import importlib.util, json, os
-p = r'D:\Opencode AI Agent\Math 3.0 Tools\mcp\t2n\core\report_certificate_generator.py'
+p = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'mcp', 't2n', 'core', 'report_certificate_generator.py')
 spec = importlib.util.spec_from_file_location('rcg', p)
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)

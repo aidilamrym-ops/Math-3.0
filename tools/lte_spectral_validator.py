@@ -3,6 +3,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 import os
 import sys
 import json
+from datetime import datetime, timezone
 from fractions import Fraction
 
 try:
@@ -11,7 +12,9 @@ except ImportError:
     print("FATAL: python-flint missing.")
     sys.exit(2)
 
-REPORTS_DIR = r"D:\Opencode AI Agent\Math 3.0 Tools\reports"
+REPORTS_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "reports"
+)
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
 class LteSpectralValidator:
@@ -164,7 +167,7 @@ if __name__ == "__main__":
     
     full_report = {
         "phase": "PHASE_2_LTE_SPECTRAL_VALIDATION",
-        "timestamp": "2026-11-05T00:00:00Z",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "spectral_analysis": spectral_data,
         "lean_evidence": lean_evidence,
         "verdict": "PASSED - All pivots positive definite, rigid-asymmetry certified"

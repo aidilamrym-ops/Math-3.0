@@ -9,7 +9,7 @@ import sys
 # Windows priority flag for BELOW_NORMAL_PRIORITY_CLASS
 BELOW_NORMAL_PRIORITY_CLASS = 0x00004000
 
-ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 REPORTS_DIR = os.path.join(ROOT, "reports")
 MANIFEST_FILE = os.path.join(ROOT, "manifest.json")
 LOG_ANOMALY = os.path.join(REPORTS_DIR, "autonomous_pipeline_anomalies.json")
@@ -39,7 +39,7 @@ def audit_family(family_index):
     
     # 1. Run Fresh Ball
     cmd_ball = [
-        r"C:\Python314\python.exe", "mcp/t2n/rh_core/fresh_ball_reinit.py",
+        sys.executable, "mcp/t2n/rh_core/fresh_ball_reinit.py",
         "--f-mid", f_mid, "--g-mid", g_mid, "--coupling", "1/1000000",
         "--out", json_out, "--label", f"OPENAI_FAMILY_{family_str}"
     ]
@@ -52,7 +52,7 @@ def audit_family(family_index):
     # In a full suite, we'd run the report_certificate_generator.py logic here.
     
     # 3. Run Repokeeper
-    cmd_repo = [r"C:\Python314\python.exe", "mcp/t2n/core/repokeeper.py"]
+    cmd_repo = [sys.executable, "mcp/t2n/core/repokeeper.py"]
     res = run_cmd(cmd_repo)
     
     return True, None

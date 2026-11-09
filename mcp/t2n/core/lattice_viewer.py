@@ -1131,12 +1131,15 @@ def source_float_audit(path: Path) -> dict[str, Any]:
                 conversion_lines.append(node.lineno)
         elif isinstance(node, ast.Constant) and isinstance(node.value, float):
             literal_lines.append(node.lineno)
+    source_status = (
+        "PASS" if not conversion_lines and not literal_lines else "FAIL"
+    )
     return {
         "conversion_calls": len(conversion_lines),
         "conversion_lines": conversion_lines,
         "float_literals": len(literal_lines),
         "literal_lines": literal_lines,
-        "status": "PASS" if not conversion_lines and not literal_lines else "FAIL",
+        "status": source_status,
     }
 
 
@@ -1243,7 +1246,7 @@ def main() -> int:
                 "source_float_conversion_calls": source_audit["conversion_calls"],
                 "source_float_literals": source_audit["float_literals"],
                 "source_float_audit_status": source_audit["status"],
-                "status": "PASS",
+                "status": "PENDING",
             },
         },
         "svg": {
@@ -1257,11 +1260,13 @@ def main() -> int:
     }
 
     floats = audit_no_floats(payload)
+    float_status = (
+        "PASS" if not floats and source_audit["status"] == "PASS" else "FAIL"
+    )
     payload["verification"]["float_audit"]["payload_float_count"] = len(floats)
-    if floats or source_audit["status"] != "PASS":
-        payload["verification"]["float_audit"]["status"] = "FAIL"
-        if floats:
-            payload["verification"]["float_audit"]["float_paths"] = floats[:20]
+    payload["verification"]["float_audit"]["status"] = float_status
+    if floats:
+        payload["verification"]["float_audit"]["float_paths"] = floats[:20]
 
     all_ok = (
         certificate_matches == len(families)
@@ -1271,6 +1276,7 @@ def main() -> int:
         and all_unique
         and not floats
         and source_audit["status"] == "PASS"
+        and float_status == "PASS"
     )
     payload["verdict"] = (
         "PASSED — 2 families projected with exact rational geometry; "

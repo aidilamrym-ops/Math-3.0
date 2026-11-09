@@ -1,8 +1,9 @@
 import os
 import sys
 import json
+from datetime import datetime, timezone
 
-WORKSPACE_ROOT = r"D:\\Opencode AI Agent\\Math 3.0 Tools"
+WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORTS = os.path.join(WORKSPACE_ROOT, "reports")
 
 class GoedelContainmentStressTest:
@@ -28,7 +29,7 @@ class GoedelContainmentStressTest:
 
         report = {
             "test": "GOEDEL_INCOMPLETENESS_BOUNDARY_CONTAINMENT",
-            "timestamp": "2026-11-05T07:00:00Z",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "overflow_detected": overflow_detected,
             "verdict": "GOEDEL_REPRESENTATION_ALARM_VERIFIED" if overflow_detected else "FAILED_PARADOX_ESCAPED"
         }
@@ -40,11 +41,19 @@ class GoedelContainmentStressTest:
             f.write("\n")
         print(f"[REPORT SECURED] {out_path}")
 
-        if not overflow_detected:
-            sys.exit(1)
-
         return report
 
+
+def main() -> int:
+    report = GoedelContainmentStressTest().run_stress_test()
+    return 0 if report["overflow_detected"] else 1
+
+
+def test_goedel_containment_stress_test():
+    report = GoedelContainmentStressTest().run_stress_test()
+    assert report["overflow_detected"] is True
+    assert report["verdict"] == "GOEDEL_REPRESENTATION_ALARM_VERIFIED"
+
+
 if __name__ == "__main__":
-    test = GoedelContainmentStressTest()
-    test.run_stress_test()
+    sys.exit(main())

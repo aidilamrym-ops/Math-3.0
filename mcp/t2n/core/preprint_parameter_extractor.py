@@ -19,7 +19,9 @@ from collections import Counter
 from datetime import datetime, timezone
 from fractions import Fraction
 
-ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
+ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "..")
+)
 STAGING = os.path.join(ROOT, "staging", "openai_math")
 CONTENTS = os.path.join(STAGING, "CONTENTS.md")
 PREPRINTS = os.path.join(STAGING, "preprints")
@@ -481,7 +483,8 @@ synthetic_path = os.path.join(ROOT, "reports", "math30_discovered_intelligence.j
 if os.path.exists(synthetic_path):
     try:
         synthetic_stats = json.load(open(synthetic_path, encoding="utf-8")).get("statistics")
-    except Exception:
+    except (OSError, json.JSONDecodeError) as exc:
+        print(f"[WARN] Could not read {synthetic_path}: {exc}")
         synthetic_stats = None
 
 payload = {

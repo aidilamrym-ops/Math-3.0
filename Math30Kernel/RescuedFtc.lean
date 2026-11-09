@@ -1,5 +1,4 @@
 import Init.Data.Int.Basic
-import Init.Data.Bool.Basic
 
 /-!
 # Rescued Fundamental Theorem of Calculus (Math 3.0 / Phase 11 / FTC Inversion)

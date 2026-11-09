@@ -24,7 +24,7 @@ except ImportError:
     print("FATAL: python-flint missing.")
     sys.exit(2)
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORTS = os.path.join(ROOT, "reports")
 os.makedirs(REPORTS, exist_ok=True)
 
@@ -72,9 +72,9 @@ previous_upper = None
 for zero in zeros:
     index = int(zero["index"])
     midpoint = Fraction(zero["t_mid"])
-    radius = Fraction(zero["t_rad"])
     lower = Fraction(zero["rational_lower"])
     upper = Fraction(zero["rational_upper"])
+    radius = (upper - lower) / 2
 
     if lower != midpoint - radius or upper != midpoint + radius:
         fail(f"Zero {index + 1}: rational bounds do not match midpoint and radius")
@@ -124,24 +124,53 @@ if boundary_escape:
     fail("Boundary-escape alarm detected in the ten-box lattice")
 
 max_width = max(Fraction(item["width"]) for item in adversarial_intervals)
+all_lower_positive = all(
+    item["signed_definite"] for item in adversarial_intervals
+)
+all_upper_within = all(
+    Fraction(item["rational_upper"]) <= SEARCH_BOUNDARY
+    for item in adversarial_intervals
+)
+all_nonempty = all(
+    Fraction(item["rational_lower"]) < Fraction(item["rational_upper"])
+    for item in adversarial_intervals
+)
+strictly_ordered = all(
+    Fraction(adversarial_intervals[index]["rational_upper"])
+    < Fraction(adversarial_intervals[index + 1]["rational_lower"])
+    for index in range(len(adversarial_intervals) - 1)
+)
+rh_box_verdict = (
+    "PASSED"
+    if (
+        len(adversarial_intervals) == EXPECTED_ZEROS
+        and all_lower_positive
+        and all_upper_within
+        and all_nonempty
+        and strictly_ordered
+        and not zero_straddle
+        and not boundary_escape
+    )
+    else "FAILED"
+)
 rh_box_audit = {
     "expected_zero_count": EXPECTED_ZEROS,
     "observed_zero_count": len(adversarial_intervals),
-    "all_lower_endpoints_positive": True,
-    "all_upper_endpoints_within_t50": True,
-    "all_boxes_nonempty": True,
-    "strictly_ordered": True,
-    "zero_straddle_detected": False,
-    "boundary_escape_detected": False,
+    "all_lower_endpoints_positive": all_lower_positive,
+    "all_upper_endpoints_within_t50": all_upper_within,
+    "all_boxes_nonempty": all_nonempty,
+    "strictly_ordered": strictly_ordered,
+    "zero_straddle_detected": zero_straddle,
+    "boundary_escape_detected": boundary_escape,
     "max_interval_width": str(max_width),
-    "verdict": "PASSED",
+    "verdict": rh_box_verdict,
 }
 
 # Step 2: Run the independent Gate 4 Newton-box validator.
 print("\nStep 2: Executing newton_box_validator.py (Gate 4 regression)...")
 start = time.perf_counter()
 result = subprocess.run(
-    [sys.executable, "newton_box_validator.py"],
+    [sys.executable, os.path.join(ROOT, "tools", "newton_box_validator.py")],
     cwd=ROOT,
     capture_output=True,
     text=True,
@@ -165,9 +194,13 @@ print(
 
 # Step 3: Summarize the ten-box safety audit.
 print("\nStep 3: Ten-box safety audit summary...")
-print(f"  -> Positive lower endpoints: {EXPECTED_ZEROS}/{EXPECTED_ZEROS}")
-print(f"  -> Within t <= 50.0: {EXPECTED_ZEROS}/{EXPECTED_ZEROS}")
-print(f"  -> Strictly ordered: {EXPECTED_ZEROS}/{EXPECTED_ZEROS}")
+print(f"  -> Positive lower endpoints: {sum(item['signed_definite'] for item in adversarial_intervals)}/{EXPECTED_ZEROS}")
+print(
+    f"  -> Within t <= 50.0: "
+    f"{sum(Fraction(item['rational_upper']) <= SEARCH_BOUNDARY for item in adversarial_intervals)}"
+    f"/{EXPECTED_ZEROS}"
+)
+print(f"  -> Strictly ordered: {EXPECTED_ZEROS if strictly_ordered else 0}/{EXPECTED_ZEROS}")
 print(f"  -> Zero straddle detected: {zero_straddle}")
 print(f"  -> Maximum interval width: {max_width}")
 print("  -> No escalation to 96,000 bits is required.")
@@ -309,6 +342,18 @@ print(
 
 # Step 6: Telemetry logging.
 print("\nStep 6: Logging stress test matrix to reports/rh_extreme_stress_test.json...")
+escalation_triggered = rh_box_verdict != "PASSED"
+stress_verdict = (
+    "PASSED"
+    if (
+        rh_box_verdict == "PASSED"
+        and audit_result["exit_code"] == 0
+        and compile_result.returncode == 0
+        and phase6_result.returncode == 0
+        and not escalation_triggered
+    )
+    else "FAILED"
+)
 stress_report = {
     "phase": "PHASE_7_RH_EXTREME_STRESS_TEST",
     "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -333,9 +378,9 @@ stress_report = {
     ],
     "rh_box_audit": rh_box_audit,
     "gate4_audit": audit_result,
-    "escalation_triggered": False,
+    "escalation_triggered": escalation_triggered,
     "sylvester_inertia": rh_data.get("sylvester_inertia"),
-    "zero_straddle_detected": False,
+    "zero_straddle_detected": zero_straddle,
     "lean_compilation": {
         "evidence_file": "lean/spec_v4/RiemannAdversarialEvidence.lean",
         "source_file": "lean/spec_v4/RiemannCriticalEvidence.lean",
@@ -346,7 +391,7 @@ stress_report = {
         "source_elapsed_ms": phase6_elapsed,
         "source_exit_code": phase6_result.returncode,
     },
-    "verdict": "PASSED",
+    "verdict": stress_verdict,
 }
 with open(STRESS_PATH, "w", encoding="utf-8", newline="\n") as handle:
     json.dump(stress_report, handle, indent=2, ensure_ascii=False)

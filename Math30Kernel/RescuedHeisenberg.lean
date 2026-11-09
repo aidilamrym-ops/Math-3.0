@@ -1,5 +1,4 @@
 import Init.Data.Nat.Basic
-import Init.Data.Bool.Basic
 
 /-!
 # Rescued Heisenberg Uncertainty (Math 3.0 / Phase 11 / Quantum Lattice)
@@ -22,8 +21,7 @@ theorem rescued_heisenberg_soundness (radiusInput : Nat) :
     safeQuantumMeasurement radiusInput ≥ latticeResolutionFloor := by
   unfold safeQuantumMeasurement
   split
-  · exact Nat.le_refl 1
-  · rename_i h
-    exact h
+  · omega
+  · omega
 
 end Math30.RescuedHeisenberg

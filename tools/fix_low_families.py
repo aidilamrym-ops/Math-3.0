@@ -2,8 +2,8 @@ import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import importlib.util, json, os, subprocess
 
-ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
-python_exe = r"C:\Python314\python.exe"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+python_exe = sys.executable
 BELOW_NORMAL_PRIORITY_CLASS = 0x00004000
 
 low_missing = []

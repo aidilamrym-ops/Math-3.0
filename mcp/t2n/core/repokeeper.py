@@ -5,13 +5,14 @@ import json
 
 class RepoKeeper:
     def __init__(self, workspace_root: str):
-        self.root = workspace_root
-        self.manifest_path = os.path.join(workspace_root, "manifest.json")
-        if r"D:\Opencode AI Agent\Math 3.0 Tools".lower() not in self.root.lower(): sys.exit(1)
+        self.root = os.path.abspath(workspace_root)
+        self.manifest_path = os.path.join(self.root, "manifest.json")
+        if not os.path.isdir(self.root):
+            sys.exit(1)
 
     def verify_upstream_reset_status(self) -> bool:
-        # Standardized check for convergent hulu repositories deep reset
-        return True
+        required = ("manifest.json", "README.MD", "tools", "lean")
+        return all(os.path.exists(os.path.join(self.root, name)) for name in required)
 
     def calculate_file_sha256(self, filepath: str) -> str:
         hasher = hashlib.sha256()
@@ -22,7 +23,7 @@ class RepoKeeper:
     def enforce_manifest_pin(self):
         if not self.verify_upstream_reset_status(): sys.exit(1)
         manifest = {}
-        excluded_dirs = ["mcp/out", "mcp\\out", ".git", "Math30Interfaces", "__pycache__", "staging"]
+        excluded_dirs = ["mcp/out", "mcp\\out", ".git", "__pycache__", "staging"]
         for root_dir, dirnames, files in os.walk(self.root):
             # Prune untracked staging data so the ledger matches Git's view.
             dirnames[:] = [d for d in dirnames if d not in (".git", "__pycache__", "staging")]

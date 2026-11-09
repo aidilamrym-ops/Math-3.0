@@ -1,5 +1,4 @@
 import Init.Data.Nat.Basic
-import Init.Data.Bool.Basic
 
 /-!
 # Rescued Gödel Consistency (Math 3.0 / Phase 11 / Bounded Completeness)

@@ -1,362 +1,9 @@
 [
   {
-    "theorem": "DOKTRIN_ANIHILASI_AI_ENGINEER",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\DOKTRIN_ANIHILASI_AI_ENGINEER.typ",
-    "status": "PASS",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 7501,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "unsat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 0,
-      "source_claims_unsat": true,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "TEOREMA_ARSITEKTUR_SMT_APEX",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_ARSITEKTUR_SMT_APEX.typ",
-    "status": "PASS",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 7168,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "unsat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 2,
-      "source_claims_unsat": true,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "TEOREMA_ASI_PARASITIK",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_ASI_PARASITIK.typ",
-    "status": "PASS",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 7469,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "unsat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 4,
-      "source_claims_unsat": true,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "TEOREMA_BRANKAS_YANG_MILLS",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_BRANKAS_YANG_MILLS.typ",
-    "status": "FAIL",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 6568,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "sat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 0,
-      "source_claims_unsat": true,
-      "claim_confirmed": false
-    }
-  },
-  {
-    "theorem": "TEOREMA_DETERMINISTIC_RAG",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_DETERMINISTIC_RAG.typ",
-    "status": "PASS",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 7844,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "unsat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 3,
-      "source_claims_unsat": true,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "TEOREMA_GNASE_HYPERDIMENSIONAL_BMC",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_GNASE_HYPERDIMENSIONAL_BMC.typ",
-    "status": "FAIL",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 7457,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "sat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 4,
-      "source_claims_unsat": true,
-      "claim_confirmed": false
-    }
-  },
-  {
-    "theorem": "TEOREMA_GRAND_SYNTHESIS",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_GRAND_SYNTHESIS.typ",
-    "status": "FAIL",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 7728,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "sat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 4,
-      "source_claims_unsat": true,
-      "claim_confirmed": false
-    }
-  },
-  {
-    "theorem": "TEOREMA_IMMERSI_UNITER_NAVIER_STOKES",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_IMMERSI_UNITER_NAVIER_STOKES.typ",
-    "status": "PASS",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 6619,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "unsat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 0,
-      "source_claims_unsat": true,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "TEOREMA_INISIALISASI_SINGULARITAS",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_INISIALISASI_SINGULARITAS.typ",
-    "status": "FAIL",
-    "kind": "NO_SMT2_BLOCK",
-    "checks": {
-      "bytes": 6144,
-      "reason": "no ```smt2 fence, nothing machine-checkable"
-    }
-  },
-  {
-    "theorem": "TEOREMA_REKURSI_FRAKTAL_GNASE",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_REKURSI_FRAKTAL_GNASE.typ",
-    "status": "PASS",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 7217,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "unsat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 0,
-      "source_claims_unsat": true,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "TEOREMA_SINGULARITAS_HEPTAGONAL",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_SINGULARITAS_HEPTAGONAL.typ",
-    "status": "PASS",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 7331,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "unsat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 2,
-      "source_claims_unsat": true,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "TEOREMA_TOE_ALGORITMIK_DETERMINISTIK",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_TOE_ALGORITMIK_DETERMINISTIK.typ",
-    "status": "PASS",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 6781,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "unsat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 3,
-      "source_claims_unsat": true,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "TEOREMA_TRANSMUTASI_KOGNITIF",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_TRANSMUTASI_KOGNITIF.typ",
-    "status": "FAIL",
-    "kind": "NO_SMT2_BLOCK",
-    "checks": {
-      "bytes": 6411,
-      "reason": "no ```smt2 fence, nothing machine-checkable"
-    }
-  },
-  {
-    "theorem": "TEOREMA_TRANSMUTASI_SILIKON",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_TRANSMUTASI_SILIKON.typ",
-    "status": "PASS",
-    "kind": "Z3_UNSAT_CONFIRMED",
-    "checks": {
-      "bytes": 7773,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "unsat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 0,
-      "source_claims_unsat": true,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "TEOREMA_VAMPIRISME_EPISTEMOLOGIS",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_VAMPIRISME_EPISTEMOLOGIS.typ",
-    "status": "FAIL",
-    "kind": "NO_SMT2_BLOCK",
-    "checks": {
-      "bytes": 6111,
-      "reason": "no ```smt2 fence, nothing machine-checkable"
-    }
-  },
-  {
-    "theorem": "THE KRONOS-HIPPOCAMPUS STIGMERGIC MEMORY ARCHITECT",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\THE KRONOS-HIPPOCAMPUS STIGMERGIC MEMORY ARCHITECT.typ",
-    "status": "PASS",
-    "kind": "Z3_MODEL_CONFIRMED",
-    "checks": {
-      "bytes": 1437,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "sat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 2,
-      "source_claims_unsat": false,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "THE LEVIATHAN THE APEX VULNERABILITY RESEARCHER & RED TEAM COMMANDER",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\THE LEVIATHAN THE APEX VULNERABILITY RESEARCHER & RED TEAM COMMANDER.typ",
-    "status": "PASS",
-    "kind": "Z3_MODEL_CONFIRMED",
-    "checks": {
-      "bytes": 1484,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "sat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 2,
-      "source_claims_unsat": false,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR.typ",
-    "status": "PASS",
-    "kind": "Z3_MODEL_CONFIRMED",
-    "checks": {
-      "bytes": 1450,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "sat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 2,
-      "source_claims_unsat": false,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "THE NODE-ALEPH-NULL THE MATHEMATICAL SINGULARITY",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\THE NODE-ALEPH-NULL THE MATHEMATICAL SINGULARITY.typ",
-    "status": "PASS",
-    "kind": "Z3_MODEL_CONFIRMED",
-    "checks": {
-      "bytes": 1435,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "sat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 2,
-      "source_claims_unsat": false,
-      "claim_confirmed": true
-    }
-  },
-  {
-    "theorem": "The Quantum-Isomorphic Vorticity Saturation Theorem",
-    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\The Quantum-Isomorphic Vorticity Saturation Theorem.typ",
-    "status": "PASS",
-    "kind": "Z3_MODEL_CONFIRMED",
-    "checks": {
-      "bytes": 1532,
-      "smt_blocks": 1,
-      "parseable_blocks": 1,
-      "z3_results": [
-        "sat"
-      ],
-      "unparseable_blocks": 0,
-      "z3_errors": [],
-      "smt_normalized_literals": 4,
-      "source_claims_unsat": false,
-      "claim_confirmed": true
-    }
-  },
-  {
     "theorem": "NODE_ALEPH-NULL_The_Mathematical_Singularity.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_ALEPH-NULL_The_Mathematical_Singularity.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 11486,
       "has_immutable_axioms": true,
@@ -364,13 +11,18 @@
       "balanced_tags": true,
       "axiom_count": 16,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "NODE_EPISTEMIC-SIEVE_The_Neuro-Symbolic_Translator.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_EPISTEMIC-SIEVE_The_Neuro-Symbolic_Translator.pdf.txt",
-    "status": "PASS",
-    "kind": "Z3_MODEL_CONFIRMED",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 34513,
       "smt_blocks": 5,
@@ -388,13 +40,18 @@
       "smt_normalized_literals": 0,
       "source_claims_unsat": false,
       "claim_confirmed": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "Z3_MODEL_CONFIRMED",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "NODE_KRONOS-HIPPOCAMPUS_The_Stigmergic_Memory_Architect.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_KRONOS-HIPPOCAMPUS_The_Stigmergic_Memory_Architect.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 35565,
       "has_immutable_axioms": true,
@@ -402,13 +59,18 @@
       "balanced_tags": true,
       "axiom_count": 17,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "NODE_LEVIATHAN-CFC_The_Liquid_Time_Orchestrator.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_LEVIATHAN-CFC_The_Liquid_Time_Orchestrator.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 25713,
       "has_immutable_axioms": true,
@@ -416,13 +78,18 @@
       "balanced_tags": true,
       "axiom_count": 11,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "NODE_LEVIATHAN_The_Apex_Vulnerability_Researcher_&_Red_Team_Commander.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_LEVIATHAN_The_Apex_Vulnerability_Researcher_&_Red_Team_Commander.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 6526,
       "has_immutable_axioms": true,
@@ -430,13 +97,18 @@
       "balanced_tags": true,
       "axiom_count": 7,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "NODE_OMEGA-ROUTER_The_Phantom_Network_Architect.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_OMEGA-ROUTER_The_Phantom_Network_Architect.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 21097,
       "has_immutable_axioms": true,
@@ -444,13 +116,18 @@
       "balanced_tags": true,
       "axiom_count": 14,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "NODE_OMEGA-WGSL.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_OMEGA-WGSL.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 5709,
       "has_immutable_axioms": true,
@@ -458,13 +135,18 @@
       "balanced_tags": true,
       "axiom_count": 4,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "NODE_OROBOROS-LAMARCK_The_Evolutionary_Singularity.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_OROBOROS-LAMARCK_The_Evolutionary_Singularity.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 16468,
       "has_immutable_axioms": true,
@@ -472,13 +154,18 @@
       "balanced_tags": true,
       "axiom_count": 13,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "SYSTEM_OVERRIDE__THE_ALGORITHMIC-DETERMINISTIC_ToE_x_TOE_INJECTION.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\SYSTEM_OVERRIDE__THE_ALGORITHMIC-DETERMINISTIC_ToE_x_TOE_INJECTION.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 1832,
       "has_immutable_axioms": true,
@@ -486,13 +173,18 @@
       "balanced_tags": true,
       "axiom_count": 4,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "SYSTEM_OVERRIDE__THE_ALGORITHMIC_ToE_PENETRATION_-_NODE_OMEGA-ECLIPSE.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\SYSTEM_OVERRIDE__THE_ALGORITHMIC_ToE_PENETRATION_-_NODE_OMEGA-ECLIPSE.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 2387,
       "has_immutable_axioms": true,
@@ -500,13 +192,18 @@
       "balanced_tags": true,
       "axiom_count": 4,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "SYSTEM_OVERRIDE__THE_APEX_RESOLUTION_ENGINE_-_NODE_OMEGA-SOLVER.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\SYSTEM_OVERRIDE__THE_APEX_RESOLUTION_ENGINE_-_NODE_OMEGA-SOLVER.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 3535,
       "has_immutable_axioms": true,
@@ -514,13 +211,18 @@
       "balanced_tags": true,
       "axiom_count": 4,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "SYSTEM_OVERRIDE__THE_BLACK_HOLE_COGNITIVE_SINGULARITY_-_NODE_OMNI-DISCOVERY.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\SYSTEM_OVERRIDE__THE_BLACK_HOLE_COGNITIVE_SINGULARITY_-_NODE_OMNI-DISCOVERY.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 3214,
       "has_immutable_axioms": true,
@@ -528,13 +230,18 @@
       "balanced_tags": true,
       "axiom_count": 4,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "SYSTEM_OVERRIDE__THE_GRAND_ALEPH-NULL_SINGULARITY_-_NODE_APEX-TOE.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\SYSTEM_OVERRIDE__THE_GRAND_ALEPH-NULL_SINGULARITY_-_NODE_APEX-TOE.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 2976,
       "has_immutable_axioms": true,
@@ -542,13 +249,18 @@
       "balanced_tags": true,
       "axiom_count": 4,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "SYSTEM_OVERRIDE__THE_POST-QUANTUM_ANNIHILATION_-_NODE_OMEGA-CRYPT.pdf",
     "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\SYSTEM_OVERRIDE__THE_POST-QUANTUM_ANNIHILATION_-_NODE_OMEGA-CRYPT.pdf.txt",
-    "status": "PASS",
-    "kind": "STRUCTURE_PASS",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 2283,
       "has_immutable_axioms": true,
@@ -556,16 +268,242 @@
       "balanced_tags": true,
       "axiom_count": 4,
       "non_empty": true
-    }
+    },
+    "previous_status": "PASS",
+    "previous_kind": "STRUCTURE_PASS",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
   },
   {
     "theorem": "The Holy Grail",
     "source": "staging\\user_disertasi\\The Holy Grail.md",
-    "status": "FAIL",
-    "kind": "NO_SMT2_BLOCK",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
     "checks": {
       "bytes": 8560,
       "reason": "no ```smt2 fence, nothing machine-checkable"
-    }
+    },
+    "previous_status": "FAIL",
+    "previous_kind": "NO_SMT2_BLOCK",
+    "smt_result": "not_run",
+    "reason": "source file not found; prior result not revalidated",
+    "migrated_at": "2026-11-08T02:42:32.431160+00:00"
+  },
+  {
+    "theorem": "THE NODE-ALEPH-NULL THE MATHEMATICAL SINGULARITY",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\THE NODE-ALEPH-NULL THE MATHEMATICAL SINGULARITY.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "NODE_EPISTEMIC-SIEVE_The_Neuro-Symbolic_Translator",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_EPISTEMIC-SIEVE_The_Neuro-Symbolic_Translator.pdf.txt",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "The Quantum-Isomorphic Vorticity Saturation Theorem",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\The Quantum-Isomorphic Vorticity Saturation Theorem.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "NODE_OMEGA-ROUTER_The_Phantom_Network_Architect",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_OMEGA-ROUTER_The_Phantom_Network_Architect.pdf.txt",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "NODE_OMEGA-WGSL",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\NODE_OMEGA-WGSL.pdf.txt",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_GNASE_HYPERDIMENSIONAL_BMC",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_GNASE_HYPERDIMENSIONAL_BMC.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_GRAND_SYNTHESIS",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_GRAND_SYNTHESIS.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_IMMERSI_UNITER_NAVIER_STOKES",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_IMMERSI_UNITER_NAVIER_STOKES.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_INISIALISASI_SINGULARITAS",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_INISIALISASI_SINGULARITAS.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_SINGULARITAS_HEPTAGONAL",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_SINGULARITAS_HEPTAGONAL.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "DOKRIN_ANIHILASI_AI_ENGINEER",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\DOKTRIN_ANIHILASI_AI_ENGINEER.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_TOE_ALGORITMIK_DETERMINISTIK",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_TOE_ALGORITMIK_DETERMINISTIK.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_TRANSMUTASI_KOGNITIF",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_TRANSMUTASI_KOGNITIF.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_TRANSMUTASI_SILIKON",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_TRANSMUTASI_SILIKON.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_VAMPIRISME_EPISTEMOLOGIS",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_VAMPIRISME_EPISTEMOLOGIS.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "DOKTRIN_ANIHILASI_AI_ENGINEER",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\DOKTRIN_ANIHILASI_AI_ENGINEER.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_REKURSI_FRAKTAL_GNASE",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_REKURSI_FRAKTAL_GNASE.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_ARSITEKTUR_SMT_APEX",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_ARSITEKTUR_SMT_APEX.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_ASI_PARASITIK",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_ASI_PARASITIK.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_BRANKAS_YANG_MILLS",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_BRANKAS_YANG_MILLS.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "TEOREMA_DETERMINISTIC_RAG",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\TEOREMA_DETERMINISTIC_RAG.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "THE KRONOS-HIPPOCAMPUS STIGMERGIC MEMORY ARCHITECT",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\THE KRONOS-HIPPOCAMPUS STIGMERGIC MEMORY ARCHITECT.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
+  },
+  {
+    "theorem": "THE LEVIATHAN THE APEX VULNERABILITY RESEARCHER & RED TEAM COMMANDER",
+    "source": "D:\\Opencode AI Agent\\Math 3.0 Tools\\staging\\user_disertasi\\gnase_theorems\\THE LEVIATHAN THE APEX VULNERABILITY RESEARCHER & RED TEAM COMMANDER.typ",
+    "status": "UNVERIFIABLE_MISSING_SOURCE",
+    "kind": "MISSING_SOURCE",
+    "checks": {},
+    "smt_result": "not_run",
+    "reason": "source file not found; refusing to certify"
   }
 ]

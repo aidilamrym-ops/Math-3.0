@@ -1,66 +1,20 @@
 #!/usr/bin/env python3
-"""
-user_disertasi_gatekeeper_target8.py
-Audits THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR.typ against Math 3.0 finite-lattice gates.
-Extreme Planck-scale re-verification.
+"""Fail-closed gatekeeper for THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR.
+
+Verdicts are delegated to gatekeeper_real.py, which runs the actual Z3 solver.
+Missing sources and unparseable SMT blocks fail closed; no certificate is
+invented and no source file is moved.
 """
 
-import os
 import sys
-import json
-import shutil
 from pathlib import Path
-import hashlib
 
-def main():
-    target_file = Path("staging/user_disertasi/gnase_theorems/THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR.typ")
-    certified_json = Path("reports/user_certified_blueprints.json")
-    
-    print(f"[GATEKEEPER EXTREME] Inspecting target 8: {target_file}")
-    if not target_file.exists():
-        print(f"[ERROR] Target file not found: {target_file}")
-        sys.exit(1)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-    content = target_file.read_text(encoding="utf-8")
+from gatekeeper_common import run_gatekeeper
 
-    has_formula = "H_\"CFC\"" in content or "otimes" in content
-    has_smt = "(set-logic QF_NRA)" in content and "Time_Dilation_Drift" in content
-    has_unsat = "unsat" in content
-
-    print("[GATEKEEPER EXTREME] Running Gate 1-6 (Planck-Scale Interval Ball & Sylvester Matrix Contraction)... PASSED")
-    print("[GATEKEEPER EXTREME] Running Z3 Tribunal (Time_Dilation_Drift vs Liquid_Orchestration_Gain)...")
-
-    if has_formula and has_smt:
-        print("[VERIFIED_SATISFIABLE_EXTREME] Leviathan-CFC Liquid Time Orchestrator passed all strict bounds.")
-
-        cert_data = []
-        if certified_json.exists():
-            try:
-                cert_data = json.loads(certified_json.read_text(encoding="utf-8"))
-            except:
-                pass
-
-        record = {
-            "theorem": "THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR",
-            "status": "VERIFIED_SATISFIABLE_EXTREME",
-            "planck_interval_width": "1.0e-40",
-            "liquid_time_flow_stabilized": "true",
-            "smt_result": "unsat",
-            "certificate_path": "staging/user_disertasi/lean/certificates/LeviathanCfcCertificate.lean"
-        }
-        
-        cert_data = [item for item in cert_data if item.get("theorem") != "THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR"]
-        cert_data.append(record)
-        certified_json.write_text(json.dumps(cert_data, indent=2), encoding="utf-8")
-
-        print(f"[SUCCESS] Certified metadata updated in {certified_json}")
-
-    else:
-        print("[HALT] Logical inconsistency detected. Quarantining to error_learning_lab.")
-        learning_lab = Path("staging/user_disertasi/error_learning_lab")
-        learning_lab.mkdir(parents=True, exist_ok=True)
-        shutil.move(str(target_file), str(learning_lab / target_file.name))
-        sys.exit(1)
+THEOREM = 'THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR'
+TARGET = 'staging/user_disertasi/gnase_theorems/THE LEVIATHAN-CFC THE LIQUID TIME ORCHESTRATOR.typ'
 
 if __name__ == "__main__":
-    main()
+    sys.exit(run_gatekeeper(TARGET, THEOREM))

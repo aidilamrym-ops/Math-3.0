@@ -2,8 +2,8 @@ import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import subprocess, os
 
-ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
-python_exe = r"C:\Python314\python.exe"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+python_exe = sys.executable
 
 for idx in range(251, 291):
     f_mid = str(idx * 2 + 1)
@@ -21,7 +21,7 @@ for idx in range(251, 291):
         break
 
     script_content = '''import importlib.util, json, os
-p = r'D:\\Opencode AI Agent\\Math 3.0 Tools\\mcp\\t2n\\core\\report_certificate_generator.py'
+p = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'mcp', 't2n', 'core', 'report_certificate_generator.py')
 spec = importlib.util.spec_from_file_location('rcg', p)
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)

@@ -27,7 +27,9 @@ except ImportError:
     print("FATAL: python-flint missing.")
     sys.exit(2)
 
-ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
+ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "..")
+)
 REPORTS = os.path.join(ROOT, "reports")
 OUT_PATH = os.path.join(REPORTS, "raw_fg_initial_enclosure.json")
 

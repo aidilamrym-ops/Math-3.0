@@ -1,10 +1,33 @@
 {
-  "audit_type": "META_BLINDSPOT_HUNTER_AUDIT",
-  "timestamp": "2026-11-05T06:25:00Z",
-  "vectors": {
-    "vector_1": "CONTAINED",
-    "vector_2": "CONTAINED",
-    "vector_3": "CONTAINED"
-  },
-  "overall_verdict": "PASSED"
+  "audit": "math30_adversarial_meta_audit",
+  "timestamp": "2026-11-08T02:19:46.276049+00:00",
+  "precision_bits": 24000,
+  "vectors": [
+    {
+      "vector": "large_integer",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "vector": "zero_straddle",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "vector": "denominator_guard",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "vector": "verdict_aggregation",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "vector": "placeholder_scanner",
+      "passed": true,
+      "detail": "ok"
+    }
+  ],
+  "verdict": "PASSED"
 }

@@ -28,7 +28,7 @@ class DiscreteMultiQubit:
         expected = 1 << self.scale
         if total_norm != expected:
             raise ValueError(f"LATTICE_NORM_VIOLATION: {total_norm} != {expected}")
-        return True
+        return total_norm == expected
 
     @staticmethod
     def kronecker_product(q1, q2):

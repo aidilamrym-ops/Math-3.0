@@ -34,18 +34,23 @@ structure BoundedBealQuery where
   hgcd_AC : Nat.gcd A C = 1
 
 /-- 
-Theorem: Within the evaluated lattice coordinates, 
-the assertion of a Beal counterexample reduces to false. 
-This is a computational certification of the search bounds. 
+Concrete bounded witness: the smallest candidate bases are pairwise coprime,
+yet they do not satisfy the degree-3 Beal equation.
 -/
-theorem beal_lattice_bounds_certified : True := by
-  trivial
+theorem beal_lattice_bounds_certified :
+    Nat.gcd 3 5 = 1 ∧ Nat.gcd 5 7 = 1 ∧ Nat.gcd 3 7 = 1 ∧
+    3 ^ 3 + 5 ^ 3 ≠ 7 ^ 3 := by
+  decide
 
 /-- 
-Lemma: For any valid BoundedBealQuery, A^x + B^y ≠ C^z is certified by the absence of 
-counterexamples in the SMT bounded search (external oracle). 
+Lemma: every valid BoundedBealQuery carries its positivity, exponent, and
+coprimality invariants.  This is the exact content of the structure; it is not
+a claim that Beal's conjecture is resolved.
 -/
-theorem beal_no_counterexample_in_bounds (q : BoundedBealQuery) : True := by
-  trivial
+theorem beal_query_invariants (q : BoundedBealQuery) :
+    0 < q.A ∧ 0 < q.B ∧ 0 < q.C ∧
+    2 < q.x ∧ 2 < q.y ∧ 2 < q.z ∧
+    Nat.gcd q.A q.B = 1 ∧ Nat.gcd q.B q.C = 1 ∧ Nat.gcd q.A q.C = 1 := by
+  exact ⟨q.hA, q.hB, q.hC, q.hx, q.hy, q.hz, q.hgcd_AB, q.hgcd_BC, q.hgcd_AC⟩
 
 end Math30.BealTribunal

@@ -3,6 +3,7 @@ sys_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Math30Solvers/test_continuum_density.py
 import sys
 import json
+from datetime import datetime, timezone
 from fractions import Fraction
 
 try:
@@ -11,7 +12,7 @@ except ImportError:
     print("FATAL: python-flint missing.")
     sys.exit(2)
 
-WORKSPACE_ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
+WORKSPACE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORTS = os.path.join(WORKSPACE_ROOT, "reports")
 
 class ContinuumDensityStressTest:
@@ -55,7 +56,7 @@ class ContinuumDensityStressTest:
 
         report = {
             "test": "CONTINUUM_DENSITY_DISMANTLEMENT",
-            "timestamp": "2026-11-05T06:30:00Z",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "precision_bits": self.precision,
             "iterations": iterations,
             "alarm_triggered": alarm_triggered,
@@ -69,11 +70,19 @@ class ContinuumDensityStressTest:
             f.write("\n")
         print(f"[REPORT SECURED] {out_path}")
 
-        if not alarm_triggered:
-            sys.exit(1)
-
         return report
 
+
+def main() -> int:
+    report = ContinuumDensityStressTest().run_stress_test()
+    return 0 if report["alarm_triggered"] else 1
+
+
+def test_continuum_density_stress_test():
+    report = ContinuumDensityStressTest().run_stress_test()
+    assert report["alarm_triggered"] is True
+    assert report["verdict"] == "LATTICE_RESOLUTION_ALARM_VERIFIED"
+
+
 if __name__ == "__main__":
-    test = ContinuumDensityStressTest()
-    test.run_stress_test()
+    sys.exit(main())

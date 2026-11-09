@@ -5,15 +5,19 @@ import os
 import json
 import time
 import ctypes
+import subprocess
 import importlib.util
 from datetime import datetime, timezone
 
-# Set process priority to low
-try:
-    handle = ctypes.windll.kernel32.GetCurrentProcess()
-    ctypes.windll.kernel32.SetPriorityClass(handle, 0x00004040) # BELOW_NORMAL_PRIORITY_CLASS
-except Exception:
-    pass
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
+# Set process priority to low (Windows only; never fatal on other platforms)
+if os.name == "nt":
+    try:
+        handle = ctypes.windll.kernel32.GetCurrentProcess()
+        ctypes.windll.kernel32.SetPriorityClass(handle, 0x00004040) # BELOW_NORMAL_PRIORITY_CLASS
+    except (AttributeError, OSError) as exc:
+        print(f"[WARN] Could not lower process priority: {exc}")
 
 import flint
 from fractions import Fraction
@@ -60,7 +64,7 @@ def main():
                         
     print() # newline after sweep loop
     
-    reports_dir = "reports"
+    reports_dir = os.path.join(ROOT, "reports")
     os.makedirs(reports_dir, exist_ok=True)
     
     if anomalies:
@@ -85,9 +89,14 @@ def main():
     print(f"BATCH SWEEP COMPLETED. Scanned: {summary_data['total_configurations_scanned']}, Anomalies: {anomaly_count}")
     
     # Synchronize workspace ledger via repokeeper
-    repokeeper_path = os.path.join("mcp", "t2n", "core", "repokeeper.py")
+    repokeeper_path = os.path.join(ROOT, "mcp", "t2n", "core", "repokeeper.py")
     if os.path.exists(repokeeper_path):
-        os.system(f"C:\\Python314\\python.exe {repokeeper_path}")
+        result = subprocess.run(
+            [sys.executable, repokeeper_path], cwd=ROOT, capture_output=True, text=True
+        )
+        if result.returncode != 0:
+            print(f"[REPOKEEPER FAILED] {result.stderr.strip()}")
+            raise SystemExit(1)
 
 if __name__ == "__main__":
     main()

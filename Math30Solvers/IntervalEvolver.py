@@ -18,9 +18,8 @@ class IntervalEvolver:
     and re-tests until anomalies are strictly contained.
     """
     def __init__(self, workspace_root: str):
-        self.root = workspace_root
-        self.expected_root = r"D:\Opencode AI Agent\Math 3.0 Tools"
-        if self.expected_root.lower() not in self.root.lower():
+        self.root = os.path.abspath(workspace_root)
+        if not os.path.isfile(os.path.join(self.root, "manifest.json")):
             sys.exit(1)
         self.trace_path = os.path.join(self.root, "failed_world_trace.json")
         self.config_path = os.path.join(self.root, "runtime_config.json")

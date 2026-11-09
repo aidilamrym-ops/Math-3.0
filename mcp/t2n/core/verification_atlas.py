@@ -1232,7 +1232,7 @@ details {{ margin-top:8px; }} summary {{ cursor:pointer; color:var(--accent); }}
       <p><b>What this is not.</b> This is not a Lean build, not a kernel check, and not a proof of any manuscript. The official catalogue itself marks review status as <span class="mono">{html.escape(str(ledger["formalization"]["review_status"]))}</span>.</p>
     </div>
     <h2>Reproduce</h2>
-    <pre>C:\\Python314\\python.exe mcp\\t2n\\core\\verification_atlas.py</pre>
+    <pre>python mcp\\t2n\\core\\verification_atlas.py</pre>
     <h2>Source seals</h2>
     <pre>formalization.yaml  {ledger["sources"]["formalization_sha256"]}
 empirical database {ledger["sources"]["empirical_sha256"]}
@@ -1441,7 +1441,7 @@ def render_markdown(ledger: dict) -> str:
         "## Reproduce",
         "",
         "```powershell",
-        "C:\\Python314\\python.exe mcp\\t2n\\core\\verification_atlas.py",
+        "python mcp\\t2n\\core\\verification_atlas.py",
         "```",
         "",
     ]

@@ -35,17 +35,35 @@ def safeLatticePartition (a b : NonVacuousInterval) : Option NonVacuousInterval 
     let midDen := (a.lowerDen * b.upperDen * 2)
     some {
       lowerNum := midNum,
-      lowerDen := midDen.toNat,
+      lowerDen := midDen,
       upperNum := midNum,
-      upperDen := midDen.toNat,
-      h_lower_pos := by decide,
-      h_upper_pos := by decide,
-      h_valid := by decide
+      upperDen := midDen,
+      h_lower_pos := Nat.mul_pos (Nat.mul_pos a.h_lower_pos b.h_upper_pos) (by decide),
+      h_upper_pos := Nat.mul_pos (Nat.mul_pos a.h_lower_pos b.h_upper_pos) (by decide),
+      h_valid := by
+        omega
     }
   else
     none
 
-theorem rescued_density_soundness : True := by
-  trivial
+/--
+Soundness of the safe lattice partition: whenever the partition returns an
+interval, that interval has positive denominators and a valid cross-multiplied
+bound.  The proof destructs the branch that constructs `some`, so it does not
+rely on an unchecked oracle.
+-/
+theorem rescued_density_soundness (a b : NonVacuousInterval) :
+    ∀ r, safeLatticePartition a b = some r →
+      0 < r.lowerDen ∧ 0 < r.upperDen ∧
+      r.lowerNum * (r.upperDen : Int) ≤ r.upperNum * (r.lowerDen : Int) := by
+  intro r hr
+  dsimp only [safeLatticePartition] at hr
+  split at hr
+  · injection hr with heq
+    subst heq
+    exact ⟨Nat.mul_pos (Nat.mul_pos a.h_lower_pos b.h_upper_pos) (by decide),
+           Nat.mul_pos (Nat.mul_pos a.h_lower_pos b.h_upper_pos) (by decide),
+           Int.le_refl _⟩
+  · contradiction
 
 end Math30.RescuedDensity

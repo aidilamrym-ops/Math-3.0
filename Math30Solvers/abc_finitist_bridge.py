@@ -9,7 +9,9 @@ except ImportError:
     print("FATAL: python-flint missing.")
     sys.exit(2)
 
-REPORTS_DIR = r"D:\Opencode AI Agent\Math 3.0 Tools\reports"
+REPORTS_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "reports"
+)
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
 class AbcFinitistBridge:
@@ -68,15 +70,22 @@ class AbcFinitistBridge:
                 "valid": is_valid_finitist
             })
 
+        passed = len(results) == len(self.triples) and all(
+            item["valid"] for item in results
+        )
+        report_status = "PASS" if passed else "FAIL"
         report_path = os.path.join(REPORTS_DIR, "abc_census_v3_audit.json")
         with open(report_path, "w", encoding="utf-8") as f:
             json.dump({
-                "status": "PASS",
+                "status": report_status,
                 "triples_audited": len(results),
                 "data": results,
-                "z3_tribunal_status": "UNSAT_NO_COUNTEREXAMPLE_ABOVE_BOUND"
+                "z3_tribunal_status": "NOT_RUN_OPEN_CONJECTURE",
+                "note": "c/rad(abc) > 1 is a bounded radical check, not a Z3 proof"
             }, f, indent=2)
-        print(f"[ABC REPORT SECURED] {report_path}")
+        print(f"[ABC REPORT SECURED] {report_path} ({report_status})")
+        if not passed:
+            raise SystemExit(1)
 
 if __name__ == "__main__":
     bridge = AbcFinitistBridge()

@@ -24,7 +24,9 @@ import statistics
 from datetime import datetime, timezone
 from fractions import Fraction
 
-ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
+ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "..")
+)
 REPORTS = os.path.join(ROOT, "reports")
 CERTS = os.path.join(REPORTS, "certificates")
 LEANS = os.path.join(ROOT, "lean", "spec_v4", "certificates")
@@ -78,7 +80,8 @@ for path in report_files:
     try:
         f_mid = Fraction(str(coeffs.get("f_convergent")))
         g_mid = Fraction(str(coeffs.get("g_divergent")))
-    except Exception:
+    except (TypeError, ValueError, ZeroDivisionError) as exc:
+        print(f"[WARN] Could not parse family {idx} coefficients: {exc}")
         f_mid = None
         g_mid = None
 

@@ -22,7 +22,9 @@ except ImportError:
 from datetime import datetime, timezone
 from fractions import Fraction
 
-ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
+ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "..")
+)
 REPORTS = os.path.join(ROOT, "reports")
 os.makedirs(REPORTS, exist_ok=True)
 
@@ -107,7 +109,8 @@ class RhKryptonSolver:
             rad_clean = str(radius_arb.mid()).replace("[", "").replace("]", "").split("+/-")[0].strip()
             try:
                 rad_q = Fraction(rad_clean)
-            except Exception:
+            except (ValueError, ZeroDivisionError) as exc:
+                print(f"[WARN] Could not parse radius {rad_clean!r}: {exc}; using {RADIUS}")
                 rad_q = RADIUS
             lo_q = mid_q - rad_q
             hi_q = mid_q + rad_q

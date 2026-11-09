@@ -40,30 +40,21 @@ def hadamard (q : DiscreteQubit) : DiscreteQubit :=
     h_norm := by
       have h1 := q.h_norm
       simp [new_a_re, new_a_im, new_b_re, new_b_im, new_scale]
-      -- Manual expansion to avoid ring tactic (Mathlib dependency)
       have h_sq (x y : Int) : (x + y) * (x + y) + (x - y) * (x - y) = 2 * (x * x + y * y) := by
-        have t1 : (x + y) * (x + y) = x * x + x * y + y * x + y * y := by 
-          rw [Int.add_mul, Int.mul_add, Int.mul_add]; simp [Int.add_assoc]
-        have t2 : (x - y) * (x - y) = x * x - x * y - y * x + y * y := by
-          rw [Int.sub_mul, Int.mul_sub, Int.mul_sub]; simp [Int.sub_eq_add_neg, Int.neg_mul, Int.mul_neg, Int.add_assoc]
-        rw [t1, t2]
-        -- Commutativity and cancellation
-        have t3 : x * y + y * x + (- (x * y) + - (y * x)) = 0 := by
-          rw [Int.add_assoc, Int.add_comm (y * x), ← Int.add_assoc, Int.add_neg_cancel, Int.add_comm (x * y), Int.add_neg_cancel]; rfl
-        simp [Int.add_assoc, Int.add_comm, Int.mul_comm, Int.sub_eq_add_neg]
-        rw [Int.add_assoc (x * x), Int.add_comm (x * y + y * x), Int.add_assoc (x * x), ← Int.add_assoc (x * y + y * x)]
-        rw [t3]; simp
-        rw [Int.mul_add, Int.add_comm (x * x), Int.mul_two, Int.mul_two]
-        rfl
-      rw [h_sq q.a_re q.b_re, h_sq q.a_im q.b_im]
-      rw [← Int.mul_add]
-      have h_rearrange : q.a_re * q.a_re + q.b_re * q.b_re + (q.a_im * q.a_im + q.b_im * q.b_im) = 
-                        q.a_re * q.a_re + q.a_im * q.a_im + q.b_re * q.b_re + q.b_im * q.b_im := by
-        simp [Int.add_assoc, Int.add_comm]
-      rw [h_rearrange, h1]
-      show (2 : Int) * (2 ^ q.scale : Int) = (2 ^ (q.scale + 1) : Int)
-      rw [← Int.pow_succ]
-      rfl
+        rw [Int.add_mul, Int.mul_add, Int.mul_add, Int.sub_mul, Int.mul_sub, Int.mul_sub]
+        simp only [Int.sub_eq_add_neg, Int.neg_add, Int.neg_neg]
+        rw [Int.two_mul]
+        omega
+      have h_rearr : (q.a_re + q.b_re) * (q.a_re + q.b_re) + (q.a_im + q.b_im) * (q.a_im + q.b_im) +
+                     (q.a_re - q.b_re) * (q.a_re - q.b_re) + (q.a_im - q.b_im) * (q.a_im - q.b_im) =
+                     ((q.a_re + q.b_re) * (q.a_re + q.b_re) + (q.a_re - q.b_re) * (q.a_re - q.b_re)) +
+                     ((q.a_im + q.b_im) * (q.a_im + q.b_im) + (q.a_im - q.b_im) * (q.a_im - q.b_im)) := by
+        simp [Int.add_assoc, Int.add_comm, Int.add_left_comm]
+      rw [h_rearr, h_sq q.a_re q.b_re, h_sq q.a_im q.b_im]
+      have h_lin : 2 * (q.a_re * q.a_re + q.b_re * q.b_re) + 2 * (q.a_im * q.a_im + q.b_im * q.b_im) = 2 * (q.a_re * q.a_re + q.a_im * q.a_im + q.b_re * q.b_re + q.b_im * q.b_im) := by omega
+      rw [h_lin, h1]
+      rw [Int.pow_succ]
+      rw [Int.mul_comm]
   }
 
 /-- Proof that Hadamard preserves the lattice norm invariants. -/
