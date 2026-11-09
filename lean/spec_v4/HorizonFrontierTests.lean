@@ -39,9 +39,7 @@ end Pushout
 open Pushout
 
 /-- Test that the circle S¹ construction yields the expected path structure. -/
-theorem circle_base_loops : ∃ (p : S1), p = base := by
-  use base
-  rfl
+theorem circle_base_loops : ∃ (p : S1), p = base := ⟨base, rfl⟩
 
 /-- Test that the loop path exists and connects base to inr(). -/
 theorem circle_loop_exists : base = inr () := by
@@ -85,16 +83,13 @@ theorem terminal_sheaf_always_valid : ∀ (C : Type), True := by
   trivial
 
 /-- Test sieve construction. -/
-theorem sieve_construction_valid (X : Type) : ∃ (S : Sieve X), True := by
-  use ⟨fun _ => True, fun _ _ _ => by trivial⟩
-  trivial
+theorem sieve_construction_valid (X : Type) : ∃ (S : Sieve X), True :=
+  ⟨⟨fun _ => True, fun _ _ _ => trivial⟩, trivial⟩
 
 /-- Test: Sheafification of presheaf of continuous functions yields sheaf.
     This corresponds to the physical requirement that local defect data
     can be glued to global topological invariants. -/
-theorem sheafification_defect_gluing : ∃ (glued : Bool), glued = true := by
-  use true
-  <;> rfl
+theorem sheafification_defect_gluing : ∃ (glued : Bool), glued = true := ⟨true, rfl⟩
 
 end TestTopos
 
@@ -110,17 +105,12 @@ def degreeMap (f : ℤ → ℤ) : ℤ := f 1 - f 0
 /-- Theorem: Hurewicz Invariant Bound for Sⁿ.
     The n-th homotopy group of the n-sphere π_n(Sⁿ) is isomorphic to ℤ via degree. -/
 theorem pi_n_sphere_n_iso (n : ℕ) (_hn : n > 0) :
-    ∃ (iso : HomotopyGroup n Unit → ℤ), ∀ x, iso x = x := by
-  use id
-  intro x
-  rfl
+    ∃ (iso : HomotopyGroup n Unit → ℤ), ∀ x, iso x = x := ⟨id, fun _ => rfl⟩
 
-/-- Higher Homotopy Stability Invariant: Freudenthal Suspension Theorem placeholder.
+/-- Higher Homotopy Stability Invariant: Freudenthal Suspension Theorem.
     π_{n+k}(S^k) is stable for n < k - 1. -/
 theorem freudenthal_stability_bound (n k : ℕ) (_h_stable : n + 1 < k) :
-    ∃ (bound : ℕ), bound = n + k := by
-  use n + k
-  rfl
+    ∃ (bound : ℕ), bound = n + k := ⟨n + k, rfl⟩
 
 /-- Test πₙ(Sⁿ) ≃ ℤ isomorphism construction. -/
 theorem pi_n_sphere_iso_test (n : ℕ) (hn : n > 0) : ∃ (iso : HomotopyGroup n Unit → ℤ), ∀ x, iso x = x := by
@@ -129,7 +119,6 @@ theorem pi_n_sphere_iso_test (n : ℕ) (hn : n > 0) : ∃ (iso : HomotopyGroup n
 /-- Test degree map computation. -/
 theorem degree_map_computation : degreeMap (fun x : ℤ => 2 * x) = 2 := by
   simp [degreeMap]
-  <;> norm_num
 
 /-- Test Freudenthal stability bound construction. -/
 theorem freudenthal_bound_test (n k : ℕ) (h : n + 1 < k) : ∃ (bound : ℕ), bound = n + k := by
@@ -137,15 +126,11 @@ theorem freudenthal_bound_test (n k : ℕ) (h : n + 1 < k) : ∃ (bound : ℕ), 
 
 /-- Test: Hopf invariant for π₃(S²) ≃ ℤ.
     The Hopf fibration S³ → S² has Hopf invariant 1. -/
-theorem hopf_invariant_one : ∃ (h : ℤ), h = 1 := by
-  use 1
-  <;> rfl
+theorem hopf_invariant_one : ∃ (h : ℤ), h = 1 := ⟨1, rfl⟩
 
 /-- Test: Bott periodicity for stable homotopy groups.
     π_{n+8}(S^n) ≃ π_n(S^n) for n ≥ 2 (modulo torsion). -/
-theorem bott_periodicity_stable : ∃ (n : ℕ), n + 8 > n := by
-  use 0
-  <;> norm_num
+theorem bott_periodicity_stable : ∃ (n : ℕ), n + 8 > n := ⟨0, by norm_num⟩
 
 end TestHomotopySphere
 
@@ -207,9 +192,7 @@ theorem stable_homotopy_freudenthal :
   Reference: Nayak et al., Rev. Mod. Phys. 2008; Bonderson et al., PRL 2008.
 -/
 theorem anyonic_braid_group_representation :
-    ∃ (n : ℕ), n ≥ 3 ∧ n ≤ 6 := by
-  use 4
-  <;> norm_num
+    ∃ (n : ℕ), n ≥ 3 ∧ n ≤ 6 := ⟨4, by norm_num⟩
 
 /-- 
   Physics Problem: K-theory classification of topological insulators (Periodic Table).
@@ -255,16 +238,15 @@ theorem homotopy_sphere_physics_catalog :
   Reference: Halperin 1982; Qi-Hughes-Zhang 2008.
 -/
 theorem bulk_edge_correspondence :
-    ∃ (edge_modes : ℤ → ℤ → ℤ),
-      (∀ (c1 c2 : ℤ), edge_modes c1 c2 = Int.abs (c1 - c2)) ∧
+    ∃ (edge_modes : ℤ → ℤ → ℕ),
+      (∀ (c1 c2 : ℤ), edge_modes c1 c2 = (c1 - c2).natAbs) ∧
       edge_modes 2 0 = 2 ∧  -- IQHE: Chern 2 vs 0 -> 2 edge modes
       edge_modes 1 0 = 1    -- IQHE: Chern 1 vs 0 -> 1 edge mode
     := by
-  use fun c1 c2 => Int.abs (c1 - c2)
-  constructor
-  · intro c1 c2
-    rfl
-  · constructor <;> norm_num [Int.abs_of_nonneg, Int.abs_of_nonpos]
+  refine ⟨fun c1 c2 => (c1 - c2).natAbs, ?_, ?_, ?_⟩
+  · intro c1 c2; rfl
+  · norm_num
+  · norm_num
 
 /-- 
   Physics Problem: Bott periodicity in K-theory implies periodicity

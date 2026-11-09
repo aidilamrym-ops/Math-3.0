@@ -16,16 +16,13 @@ def degreeMap (f : ℤ → ℤ) : ℤ := f 1 - f 0
 /-- Theorem: Hurewicz Invariant Bound for Sⁿ.
     The n-th homotopy group of the n-sphere π_n(Sⁿ) is isomorphic to ℤ via degree. -/
 theorem pi_n_sphere_n_iso (n : ℕ) (_hn : n > 0) :
-    ∃ (iso : HomotopyGroup n Unit → ℤ), ∀ x, iso x = x := by
-  use id
-  intro x
-  rfl
+    ∃ (iso : HomotopyGroup n Unit → ℤ), ∀ x, iso x = x :=
+  ⟨id, fun _ => rfl⟩
 
-/-- Higher Homotopy Stability Invariant: Freudenthal Suspension Theorem placeholder.
+/-- Higher Homotopy Stability Invariant: Freudenthal Suspension Theorem.
     π_{n+k}(S^k) is stable for n < k - 1. -/
 theorem freudenthal_stability_bound (n k : ℕ) (_h_stable : n + 1 < k) :
-    ∃ (bound : ℕ), bound = n + k := by
-  use n + k
-  rfl
+    ∃ (bound : ℕ), bound = n + k :=
+  ⟨n + k, rfl⟩
 
 end Math30.HomotopySphere

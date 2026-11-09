@@ -217,7 +217,15 @@ Three new modules extend the formalization to synthetic homotopy theory and topo
 - **Axioms:** None (pure Lean 4 kernel).
 - **Key Theorems:** `pi_n_sphere_n_iso`, `freudenthal_stability_bound`, `hopf_invariant_one`, `bott_periodicity_stable`.
 
-### 9.1.4 Physics Validation Tests (`lean/spec_v4/HorizonFrontierTests.lean`)
+### 9.1.4 Quantum Torus Extension (`lean/spec_v4/HigherInductivePushout.lean`, Phase 31)
+- **Domain:** Higher-dimensional HITs / Non-commutative geometry.
+- **Result:** Torus $T^2 = S^1 \times S^1$ constructed as a pushout of two generating loops, extending the $S^1$ construction to a 2-dimensional higher inductive type.
+- **Physics Application:** Quantum torus in TQFT; Drinfeld double of a finite group; anyon fusion on a toroidal topology (relevant to topological order on a torus).
+- **Topological Invariants:** Fundamental group $\pi_1(T^2) \simeq \mathbb{Z} \times \mathbb{Z}$; Euler characteristic $\chi(T^2) = 0$; homology $H_0 = \mathbb{Z}$, $H_1 = \mathbb{Z}^2$, $H_2 = \mathbb{Z}$.
+- **Axioms:** `[Quot.sound]` only.
+- **Key Theorems:** `torus_fundamental_group`, `quantum_torus_paths`, `torus_euler_characteristic`, `torus_homology_groups`.
+
+### 9.1.5 Physics Validation Tests (`lean/spec_v4/HorizonFrontierTests.lean`)
 - **Tests:** 12 physics problems validated across all 3 modules.
 - **Coverage:** Vortex winding (2D XY), skyrmion number (2D magnets), TI $\theta$-term (3D), Freudenthal stability (TQFT), anyonic braid group (FQHE $\nu=5/2$), K-theory periodic table (10 classes, period 8), homotopy sphere catalog ($\pi_n(S^k)$), bulk-edge correspondence (IQHE), Bott periodicity (real 8, complex 2).
 
@@ -274,7 +282,7 @@ Math-3.0/
 │   ├── UniversalTopologicalInvariantSingularityResolution.lean
 │   ├── UniversalQuantumCoherencePhaseLock.lean
 │   ├── SturmTarskiIsolation.lean
-│   ├── HigherInductivePushout.lean          # HIT pushouts, S¹, path induction
+│   ├── HigherInductivePushout.lean          # HIT pushouts, S¹, T² torus, path induction
 │   ├── GrothendieckToposBridge.lean         # Sites, sieves, terminal sheaf
 │   ├── DecidableHomotopySphere.lean         # πₙ(Sⁿ) ≃ ℤ, Freudenthal, Hopf
 │   ├── HorizonFrontierTests.lean            # 12 physics validation tests
@@ -312,6 +320,7 @@ Math-3.0/
 | 27 | Horizon Theorems Lockdown: Collatz, Singularity, Quantum Phase Lock + SMT Bridge Hardening + 141,644-row Manifest | ✅ Sealed |
 | 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Sign Variation Bound Invariant Integration + Topos Categorical Mapping** | ✅ Sealed |
 | 30 | **Horizon Frontier Expansion: HIT pushouts, Topos Bridge, Homotopy Spheres + SMT QF_LIA scripts** | ✅ Sealed |
+| 31 | **Quantum Torus Extension: $T^2 = S^1 \times S^1$ HIT, π₁(T²) ≃ ℤ², homology, Euler characteristic** | ✅ Sealed |
 
 --- 
 
