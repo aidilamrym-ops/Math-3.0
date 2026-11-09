@@ -338,7 +338,8 @@ Math-3.0/
 | 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Sign Variation Bound Invariant Integration + Topos Categorical Mapping** | ✅ Sealed |
 | 30 | **Horizon Frontier Expansion: HIT pushouts, Topos Bridge, Homotopy Spheres + SMT QF_LIA scripts** | ✅ Sealed |
 | 31 | **Quantum Torus Extension: $T^2 = S^1 \times S^1$ HIT, π₁(T²) ≃ ℤ², homology, Euler characteristic** | ✅ Sealed |
-| 32 | **Gate 4 DSITNI denominator audit: general Lean theorem `dsitni_general`, README formula corrected to $(\operatorname{tr}\tau)^2$, cross-solver consistency test** | ✅ Sealed |
+| 32 | **Gate 4 DSITNI denominator audit: general Lean theorem `dsitni_general`, README formula corrected to (tr τ)², cross-solver consistency test** | ✅ Sealed |
+
 
 --- 
 
