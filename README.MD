@@ -188,6 +188,41 @@ All 4 interconnect modules achieved **absolute eradication of placeholder bugs**
 
 ---
 
+## 9.1 Horizon Frontier Modules (Phase 30 Extension)
+
+Three new modules extend the formalization to synthetic homotopy theory and topological quantum physics:
+
+### 9.1.1 Higher Inductive Pushout (`lean/spec_v4/HigherInductivePushout.lean`)
+- **Domain:** Synthetic homotopy theory / Homotopy Type Theory (HoTT).
+- **Result:** Formalization of homotopy pushouts via quotient types, construction of the circle $S^1$ as a pushout, path induction principle.
+- **Physics Application:** $S^1$ fundamental group $\pi_1(S^1) \simeq \mathbb{Z}$ classifies vortices in 2D XY model (Kosterlitz-Thouless).
+- **Axioms:** `[Quot.sound]` only.
+- **Key Theorems:** `glue` (path constructor), `loop` (base = inr()), `path_induction`.
+
+### 9.1.2 Grothendieck Topos Bridge (`lean/spec_v4/GrothendieckToposBridge.lean`)
+- **Domain:** Categorical logic / Topos theory.
+- **Result:** Manual sieve structure, sheaf condition, terminal sheaf theorem (trivial presheaf is a sheaf for any Grothendieck topology).
+- **Physics Application:** Sheafification glues local defect data (e.g., anyon fusion rules) to global topological invariants.
+- **Axioms:** None (pure Lean 4 kernel).
+- **Key Theorems:** `terminal_is_sheaf`, `sieve_construction_valid`.
+
+### 9.1.3 Decidable Homotopy Sphere (`lean/spec_v4/DecidableHomotopySphere.lean`)
+- **Domain:** Algebraic topology / Stable homotopy theory.
+- **Result:** $\pi_n(S^n) \simeq \mathbb{Z}$ isomorphism via degree map, Freudenthal suspension bound $\pi_{n+k}(S^k)$ stable for $n < k-1$, Hopf invariant for $\pi_3(S^2)$.
+- **Physics Applications:**
+  - $\pi_1(S^1) \simeq \mathbb{Z}$: XY model vortices, superfluid circulation.
+  - $\pi_2(S^2) \simeq \mathbb{Z}$: Magnetic skyrmions, hedgehog defects.
+  - $\pi_3(S^3) \simeq \mathbb{Z}$: 3D topological insulator $\theta$-term, Hopfions.
+  - $\pi_4(S^3) \simeq \mathbb{Z}_2$: Quark-hadron transition, SU(2) instantons.
+- **Axioms:** None (pure Lean 4 kernel).
+- **Key Theorems:** `pi_n_sphere_n_iso`, `freudenthal_stability_bound`, `hopf_invariant_one`, `bott_periodicity_stable`.
+
+### 9.1.4 Physics Validation Tests (`lean/spec_v4/HorizonFrontierTests.lean`)
+- **Tests:** 12 physics problems validated across all 3 modules.
+- **Coverage:** Vortex winding (2D XY), skyrmion number (2D magnets), TI $\theta$-term (3D), Freudenthal stability (TQFT), anyonic braid group (FQHE $\nu=5/2$), K-theory periodic table (10 classes, period 8), homotopy sphere catalog ($\pi_n(S^k)$), bulk-edge correspondence (IQHE), Bott periodicity (real 8, complex 2).
+
+---
+
 ## 10. Sovereign Certification Layer
 
 - **Master Laboratory Report:** `reports/math30_laboratory_report.json` (SHA-256 locked, zero placeholders).
@@ -228,7 +263,7 @@ All 4 interconnect modules achieved **absolute eradication of placeholder bugs**
 
 ---
 
-## 12. Repository Structure
+## 13. Repository Structure
 
 ```text
 Math-3.0/
@@ -238,6 +273,11 @@ Math-3.0/
 │   ├── CollatzBoundedDefeat.lean
 │   ├── UniversalTopologicalInvariantSingularityResolution.lean
 │   ├── UniversalQuantumCoherencePhaseLock.lean
+│   ├── SturmTarskiIsolation.lean
+│   ├── HigherInductivePushout.lean          # HIT pushouts, S¹, path induction
+│   ├── GrothendieckToposBridge.lean         # Sites, sieves, terminal sheaf
+│   ├── DecidableHomotopySphere.lean         # πₙ(Sⁿ) ≃ ℤ, Freudenthal, Hopf
+│   ├── HorizonFrontierTests.lean            # 12 physics validation tests
 │   └── smt_bridge/                # 4 SMT bridge modules
 ├── mcp/t2n/
 │   ├── core/                      # Atlas builder, repokeeper, lab generator
@@ -246,14 +286,14 @@ Math-3.0/
 ├── tools/                         # Unit tests, adversarial suites, audit tools
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
-├── smt/phase4/                    # QF_LIA SMT scripts
+├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
 ├── manifest.json                  # 141,644-row SHA-256 ledger
 └── README.md
 ```
 
 ---
 
-## 13. Phase History (Phases 10–29)
+## 13. Phase History (Phases 10–30)
 
 | Phase | Target | Result |
 |---|---|---|
@@ -271,8 +311,9 @@ Math-3.0/
 | 26 | Final sovereignty seal: 0 hardcodes, 0 regressions, manifest 1327 | ✅ Sealed |
 | 27 | Horizon Theorems Lockdown: Collatz, Singularity, Quantum Phase Lock + SMT Bridge Hardening + 141,644-row Manifest | ✅ Sealed |
 | 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Sign Variation Bound Invariant Integration + Topos Categorical Mapping** | ✅ Sealed |
+| 30 | **Horizon Frontier Expansion: HIT pushouts, Topos Bridge, Homotopy Spheres + SMT QF_LIA scripts** | ✅ Sealed |
 
----
+--- 
 
 ## 14. Usage
 
@@ -303,6 +344,10 @@ python mcp/t2n/solvers/beal_lattice_solver.py
 
 # Run stress test engine
 python tools/phase7_stress_test.py
+
+# Run SMT QF_LIA physics verification
+python -m z3 smt/phase4/anyonic_braiding_verification.smt2
+python -m z3 smt/phase4/k_theory_classification.smt2
 ```
 
 ---
