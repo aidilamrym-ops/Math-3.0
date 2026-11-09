@@ -165,7 +165,7 @@ Exact algebraic evaluation of Colored Jones Polynomial $J_N(4_1)$ and $J_N(5_2)$
 - **Domain:** Gravitational / spectral singularity topology.
 - **Result:** Formal bound on topological curvature invariants strictly within Planck density horizon $n$.
 - **Theorem:** 
-$$ \forall n > 0, \forall \kappa \in \mathbb{Z}, |\kappa| \le n \implies \exists \text{boundedInv} \le n, \text{boundedInv} = |\kappa| $$
+$ \forall n > 0, \forall \kappa \in \mathbb{Z}, |\kappa| \le n \implies \exists \text{boundedInv} \le n, \text{boundedInv} = |\kappa| $
 - **Axioms:** `[propext, Quot.sound]`.
 
 ### 8.3 Quantum Phase Lock (`lean/spec_v4/UniversalQuantumCoherencePhaseLock.lean`)
