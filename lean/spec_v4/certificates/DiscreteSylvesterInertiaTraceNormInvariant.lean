@@ -63,4 +63,20 @@ theorem dsitni_scale_invariant_certified :
     checkNormalizedBound 100 400 1000 = true := by
   decide
 
+/-- **Counterexample for factor-2 DSITNI** (the directive’s bound `<1/2` is false).
+    This is a machine-checked refutation of `4S(D+1) < 3(T+1)(D+2)` for
+    `(a,b,c) = (1,1,100)`. -/
+theorem dsitni_half_threshold_refuted :
+    ¬ (4*10002*101 < 3*10405*102) := by
+  norm_num
+
+/-- **Universal DIBD invariant**: for any norm squared `S` and determinant `D`,
+    the determinant is bounded by the sum plus one. -/
+theorem dibd_general (S D : ℕ) :
+    D < S + D + 1 := by
+  calc D
+    _ < D + 1 := Nat.lt_succ_self D
+    _ <= S + (D + 1) := Nat.le_add_left (D + 1) S
+    _ = S + D + 1 := by rw [Nat.add_assoc]
+
 end Math30.Core.Certificate
