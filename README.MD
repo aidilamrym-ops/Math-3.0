@@ -315,11 +315,12 @@ python tools/phase7_stress_test.py
 
 > **Author:** Muhammad Aidil Amry (Independent Researcher)  
 > **ORCID:** [0009-0002-9718-9710](https://orcid.org)  
-> **Permanent DOI:** [![DOI](https://zenodo.org)](https://doi.org/10.5281/zenodo.24014902)  
+> **Permanent DOI:** (https://doi.org/10.5281/zenodo.24014902)  
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
 > **Manifest:** 141,644 rows, SHA-256 locked: `70600479fd1e4798fbaa3e50941fae4b16261b289f54fb4e9f6b8df927034534`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
+
 
 ---
