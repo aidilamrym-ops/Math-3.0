@@ -1,17 +1,6 @@
 # Math 3.0
 Invariant Hybrid Engine for Finite-Lattice Spectral Analysis and Structural Proof Verification
 
-> **Author:** Muhammad Aidil Amry (Independent Researcher)  
-> **ORCID:** [0009-0002-9718-9710](https://orcid.org)  
-> **Permanent DOI:** [![DOI](https://zenodo.org)](https://doi.org)  
-> **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
-> **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
-> **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 141,644 rows, SHA-256 locked: `70600479fd1e4798fbaa3e50941fae4b16261b289f54fb4e9f6b8df927034534`  
-> **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
-
----
-
 ## 1. Overview
 
 Math 3.0 is a deterministic, finite-information verification engine for spectral analysis, interval arithmetic, and formal structural proofs. It replaces unconstrained continuum assumptions with a **Finite Information Lattice**: every numerical object is represented as a bounded interval ball, every structural claim is audited by a gate, and every final result is locked into a SHA-256 ledger and, where applicable, a Lean 4 certificate.
@@ -322,3 +311,15 @@ python tools/phase7_stress_test.py
 
 - **Code:** GNU General Public License v3.0 (GPL-3.0).
 - **Scholarly blueprints & registers:** Creative Commons Attribution 4.0 International (CC-BY-4.0).
+---
+
+> **Author:** Muhammad Aidil Amry (Independent Researcher)  
+> **ORCID:** [0009-0002-9718-9710](https://orcid.org)  
+> **Permanent DOI:** [![DOI](https://zenodo.org)](https://doi.org/10.5281/zenodo.24014902)  
+> **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
+> **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
+> **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
+> **Manifest:** 141,644 rows, SHA-256 locked: `70600479fd1e4798fbaa3e50941fae4b16261b289f54fb4e9f6b8df927034534`  
+> **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
+
+---
