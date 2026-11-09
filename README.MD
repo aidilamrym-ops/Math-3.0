@@ -123,18 +123,18 @@ $$\mathcal{I}_{\text{DIBD}} = \frac{|\det(\tau)|}{\|\tau\|_F^2 + |\det(\tau)| + 
 Universal bound preventing sign inversion at zero-straddle boundaries; verified across 10,000 mixed-inertia matrices and 1B+ bit structural proxy.
 
 ### 5.5 Sturm-Tarski Real Root Enclosure Operator (STREO)
-Untuk menaklukkan kegagalan fatal dari taktik aproksimasi desimal mengambang (floating-point) pada polinomial monster derajat tinggi ($d > 4$), Math 3.0 mengimplementasikan Operator Sekuens Sisa Sturm-Tarski Terikat (STREO). Alih-alih melacak akar melalui iterasi kontinu $\lim_{\Delta \to 0}$, sistem mengonstruksi rantai polinomial sisa negatif secara formal di atas ruang List ℤ melalui algoritma pembagian Euklides yang dimodifikasi.
+To conquer the fatal failure of floating-point decimal approximation tactics on high-degree monster polynomials ($d > 4$), Math 3.0 implements the Bounded Sturm-Tarski Real Root Enclosure Operator (STREO). Instead of tracking roots via continuous iteration ($\lim_{\Delta \to 0}$), the system formally constructs negative remainder polynomial chains over the List $\mathbb{Z}$ space via modified Euclidean division algorithms.
 
-#### Formulasi Rantai Rekursif (Sturm Chain)
-Misalkan $P_0(x)$ adalah polinomial asli dan $P_1(x) = \frac{d}{dx}P_0(x)$ adalah turunan pertamanya. Sekuens Sturm $\{P_0, P_1, P_2, \dots, P_m\}$ diciptakan melalui relasi rekursif:
+#### Recursive Chain Formulation (Sturm Chain)
+Let $P_0(x)$ be the original polynomial and $P_1(x) = \frac{d}{dx}P_0(x)$ be its first derivative. The Sturm sequence $\{P_0, P_1, P_2, \dots, P_m\}$ is generated via the recursive relation:
 $$P_{k+2}(x) = - \text{rem}(P_k(x), P_{k+1}(x))$$
-Dimana $\text{rem}(A, B)$ adalah sisa pembagian aljabar dari polinomial $A$ terhadap $B$. Sifat invarian dari transisi ini dikunci di dalam kernel Lean 4 melalui teorema kelayakan sisa:
+Where $\text{rem}(A, B)$ is the algebraic polynomial remainder of $A$ divided by $B$. The invariance property of this transition is locked inside the Lean 4 kernel via the remainder feasibility theorem:
 $$\text{eval}(P_0, q) = \text{eval}(P_1, q) \cdot q - \text{eval}(P_2, q)$$
 
-#### Mengapa Rumus Ini Ada & Proses Terciptanya
-Rumus ini diciptakan untuk menyelesaikan **Masalah Kebutaan Perubahan Tanda (Sign-Change Blindness)** pada pencarian biner klasik. Di bawah hukum Sturm, jika kita mengevaluasi tanda $(+ / -)$ dari rantai polinomial $\{P_0(q), P_1(q), \dots, P_m(q)\}$ pada titik batas terhingga $q$, dan mendefinisikan fungsi penghitung perubahan tanda non-nol $V(q)$, maka jumlah akar riil unik $N_{\text{roots}}$ di dalam interval closed-lattice $[a, b]$ terbukti **mutlak deterministik**:
+#### Why This Formula Exists & Genesis Process
+This formula was created to solve the **Sign-Change Blindness Problem** in classical binary search. Under Sturm's law, if we evaluate the sign $(+ / -)$ of the polynomial chain $\{P_0(q), P_1(q), \dots, P_m(q)\}$ at finite boundary points $q$, and define the non-zero sign variation counting function $V(q)$, the unique real root count $N_{\text{roots}}$ within the closed lattice interval $[a, b]$ is proved to be **strictly deterministic**:
 $$N_{\text{roots}} = V(a) - V(b)$$
-Proses ini tercipta di Math 3.0 dengan memotong ruang kontinu menjadi sub-kisi interval terputuskan (decidable lattice boxes) yang dipisahkan secara eksak oleh titik kritis turunan, menjamin validitas 100% bebas dari galat pembulatan.
+This process is created in Math 3.0 by partitioning continuous space into decidable lattice boxes separated exactly by critical points of the derivative, ensuring 100% validity free from rounding errors.
 
 ---
 
@@ -164,7 +164,8 @@ Exact algebraic evaluation of Colored Jones Polynomial $J_N(4_1)$ and $J_N(5_2)$
 ### 8.2 Singularity Resolution (`lean/spec_v4/UniversalTopologicalInvariantSingularityResolution.lean`)
 - **Domain:** Gravitational / spectral singularity topology.
 - **Result:** Formal bound on topological curvature invariants strictly within Planck density horizon $n$.
-- **Theorem:** $\forall n > 0, \forall \kappa \in \mathbb{Z}, |\kappa| \le n \implies \exists \text{bounded\_inv} \le n, \text{bounded\_inv} = |\kappa|$.
+- **Theorem:** 
+$$\forall n > 0, \forall \kappa \in \mathbb{Z}, |\kappa| \le n \implies \exists \text{bounded\_inv} \le n, \text{bounded\_inv} = |\kappa|$$
 - **Axioms:** `[propext, Quot.sound]`.
 
 ### 8.3 Quantum Phase Lock (`lean/spec_v4/UniversalQuantumCoherencePhaseLock.lean`)
@@ -175,9 +176,9 @@ Exact algebraic evaluation of Colored Jones Polynomial $J_N(4_1)$ and $J_N(5_2)$
 - **Axioms:** `[propext, Quot.sound]`.
 
 ### 8.4 Sturm-Tarski Deterministic Enclosure (`lean/spec_v4/SturmTarskiIsolation.lean`)
-- **Domain:** Aljabar Komputasi Bersertifikat / Isolasi Akar Polinomial Rekursif.
-- **Result:** Pembuktian formal fungsional sekuens Sturm via interupsi ketat `fuel : ℕ`.
-- **Invarian:** Teorema `sturm_sequence_decidable_enclosure` mengunci penurunan variasi tanda tanpa kebocoran desimal tak terbatas.
+- **Domain:** Certified Computational Algebra / Recursive Polynomial Root Isolation.
+- **Result:** Formal functional proof of Sturm sequences via strict `fuel : ℕ` termination.
+- **Invariant:** Theorem `sturm_sequence_decidable_enclosure` locks sign variation drop without unbounded decimal leakage.
 - **Axioms:** `[propext, Quot.sound]` (100% sorry-free, exit 0, Commit: f8a71df).
 
 ---
@@ -279,7 +280,7 @@ Math-3.0/
 | 25 | Riemann Zeta critical-line hardening, DIBD injection, 24k-bit sweep | ✅ Sealed |
 | 26 | Final sovereignty seal: 0 hardcodes, 0 regressions, manifest 1327 | ✅ Sealed |
 | 27 | Horizon Theorems Lockdown: Collatz, Singularity, Quantum Phase Lock + SMT Bridge Hardening + 141,644-row Manifest | ✅ Sealed |
-| 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Integrasi Teorema Invarian Batas Tanda + Pemetaan Kategori Topos** | ✅ Sealed |
+| 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Sign Variation Bound Invariant Integration + Topos Categorical Mapping** | ✅ Sealed |
 
 ---
 
