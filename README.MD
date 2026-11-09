@@ -100,11 +100,28 @@ Matrices $\tau$ are audited against linear candidate morphologies using element-
 
 ### 5.3 Discrete Sylvester Inertia Trace-Norm Invariant (DSITNI)
 
-Parametric invariant for Gate 4 contraction:
+Parametric structural bound used by the Beal, Quantum-Topology, and Yu-Deng batch solvers:
 
-$$\mathcal{R}_{\text{DSITNI}} = \frac{\|\tau\|_F^2 \cdot (|\det(\tau)| + 1)}{3 \cdot (\text{tr}(\tau^2) + 1) \cdot (|\det(\tau)| + 2)} < \frac{1}{2}$$
+$$\mathcal{R}_{\text{DSITNI}} = \frac{\|\tau\|_F^2 \cdot (|\det(\tau)| + 1)}{3 \cdot \big((\operatorname{tr}\tau)^2 + 1\big) \cdot (|\det(\tau)| + 2)} < \frac{1}{2}$$
 
-Proven structurally bounded for all non-trivial spectral matrices; verified at 10B+ bit scale.
+For a Sylvester diagonal $\tau=\operatorname{diag}(d_1,d_2,d_3)$ write
+$S=\|\tau\|_F^2=d_1^2+d_2^2+d_3^2$, $T=(\operatorname{tr}\tau)^2=(d_1+d_2+d_3)^2$, $D=|\det\tau|=|d_1d_2d_3|$.
+Clearing the factor $2$ gives the integer test implemented by the solvers:
+
+$$2\,S\,(D+1) < 3\,(T+1)(D+2).$$
+
+**Why it holds for every $d_i\ge 0$.** Expanding,
+$T-S = 2(d_1d_2+d_1d_3+d_2d_3)\ge 0$, so $S\le T$. Then
+$2S(D+1)\le 2T(D+1)$, and
+$3(T+1)(D+2)-2T(D+1)=TD+4T+3D+6>0$. Hence $\mathcal{R}_{\text{DSITNI}}<1/2$ universally.
+
+Formal proof: `lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean`
+(`dsitni_general`, unconditional over $\mathbb{N}$, Mathlib `nlinarith`/`omega`, no `sorry`).
+Runtime agreement with all three solvers: `python tools/test_dsitni_consistency.py`.
+
+**Sign-mixed inertia (Yu-Deng fluid regime).** When polarity flips make one $d_i<0$, the cross terms in $T-S$ turn negative and $S\le T$ fails; DSITNI is then *not* valid (e.g. $\operatorname{diag}(3,3,-3)$ gives $1512\not<870$). That case uses the determinant-scaled variant $\|\tau\|_F^2\cdot(1/|\det\tau|+\varepsilon)/((\operatorname{tr}\tau)^2+1)<1/2$ in `yudeng_singularity_sieve.py`. The consistency test asserts both the DSITNI failure and the variant's contraction, so the fork is justified, not cosmetic.
+
+The exact Gate 4 ledger ratio remains the interval-Newton derivative bound certified in `tools/newton_box_validator.py` ($|N'(x)|<1/2$ with strict box inclusion); DSITNI is the algebraic structural proxy for the large-scale batch sweeps.
 
 
 ### 5.4 Discrete Inertia Boundary Determinant (DIBD)
@@ -301,7 +318,7 @@ Math-3.0/
 
 ---
 
-## 13. Phase History (Phases 10–30)
+## 13. Phase History (Phases 10–32)
 
 | Phase | Target | Result |
 |---|---|---|
@@ -321,6 +338,7 @@ Math-3.0/
 | 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Sign Variation Bound Invariant Integration + Topos Categorical Mapping** | ✅ Sealed |
 | 30 | **Horizon Frontier Expansion: HIT pushouts, Topos Bridge, Homotopy Spheres + SMT QF_LIA scripts** | ✅ Sealed |
 | 31 | **Quantum Torus Extension: $T^2 = S^1 \times S^1$ HIT, π₁(T²) ≃ ℤ², homology, Euler characteristic** | ✅ Sealed |
+| 32 | **Gate 4 DSITNI denominator audit: general Lean theorem `dsitni_general`, README formula corrected to $(\operatorname{tr}\tau)^2$, cross-solver consistency test** | ✅ Sealed |
 
 --- 
 
