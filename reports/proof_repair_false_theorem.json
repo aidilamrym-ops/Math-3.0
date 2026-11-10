@@ -1,0 +1,195 @@
+{
+  "agent": "math30_proof_repair_agent",
+  "agent_version": "1.0.0",
+  "timestamp": "2026-11-07T15:40:26.632977+00:00",
+  "input": "D:\\Opencode AI Agent\\Math 3.0 Tools\\tools\\fixtures\\proof_repair\\false_theorem.lean",
+  "input_sha256": "5288368eae7ba0cc804146ef9611fce8fa8f0d4dfc2cd6c82c72a4967d121ac8",
+  "backend": "lean",
+  "lean": {
+    "available": true,
+    "path": "C:\\Users\\usER\\.elan\\bin\\lean.EXE",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "status": "UNREPAIRED",
+  "attempts": [
+    {
+      "attempt": 1,
+      "history": [],
+      "text_sha256": "5288368eae7ba0cc804146ef9611fce8fa8f0d4dfc2cd6c82c72a4967d121ac8",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1224.093,
+      "diagnostics": [
+        {
+          "line": 2,
+          "column": 2,
+          "message": "Tactic `decide` proved that the proposition",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_gr2vrjfd\\attempt_001_5288368e.lean:2:2: error: Tactic `decide` proved that the proposition\n  2 + 2 = 5\nis false",
+      "stderr": ""
+    },
+    {
+      "attempt": 2,
+      "history": [
+        "replace tactic 'decide' with 'omega'"
+      ],
+      "text_sha256": "5b1519039460b8c753b8a1aed8503aaea45b4368fb41fe66cc0df285b1af619f",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1164.396,
+      "diagnostics": [
+        {
+          "line": 2,
+          "column": 2,
+          "message": "omega could not prove the goal:",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_gr2vrjfd\\attempt_002_5b151903.lean:2:2: error: omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.",
+      "stderr": ""
+    },
+    {
+      "attempt": 3,
+      "history": [
+        "replace tactic 'decide' with 'simp'"
+      ],
+      "text_sha256": "a6f197adf5dd3ee4d0f553d6c9609c5578f82a3c62422aa6341c4199a49524b3",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1145.014,
+      "diagnostics": [
+        {
+          "line": 1,
+          "column": 49,
+          "message": "unsolved goals",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_gr2vrjfd\\attempt_003_a6f197ad.lean:1:49: error: unsolved goals\n\u00e2\u0160\u00a2 False",
+      "stderr": ""
+    },
+    {
+      "attempt": 4,
+      "history": [
+        "replace tactic 'decide' with 'rfl'"
+      ],
+      "text_sha256": "fd5a15f189807dd9b4024886387a0537806e932b7a701e00747c21345eb01a65",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1107.306,
+      "diagnostics": [
+        {
+          "line": 2,
+          "column": 2,
+          "message": "Tactic `rfl` failed: The left-hand side",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_gr2vrjfd\\attempt_004_fd5a15f1.lean:2:2: error: Tactic `rfl` failed: The left-hand side\n  2 + 2\nis not definitionally equal to the right-hand side\n  5\n\n\u00e2\u0160\u00a2 2 + 2 = 5",
+      "stderr": ""
+    },
+    {
+      "attempt": 5,
+      "history": [
+        "replace tactic 'decide' with 'trivial'"
+      ],
+      "text_sha256": "376afbdd1935a2e868cee962499ee489ed73045bc620f82c1a866637b7a440ca",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1074.762,
+      "diagnostics": [
+        {
+          "line": 2,
+          "column": 2,
+          "message": "Tactic `assumption` failed",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_gr2vrjfd\\attempt_005_376afbdd.lean:2:2: error: Tactic `assumption` failed\n\n\u00e2\u0160\u00a2 2 + 2 = 5",
+      "stderr": ""
+    },
+    {
+      "attempt": 6,
+      "history": [
+        "replace tactic 'decide' with 'assumption'"
+      ],
+      "text_sha256": "23cabc5b838f916fafbc1b5e6aee93a986ffb022f247bf28b8ccec4ac2ac8104",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1018.401,
+      "diagnostics": [
+        {
+          "line": 2,
+          "column": 2,
+          "message": "Tactic `assumption` failed",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_gr2vrjfd\\attempt_006_23cabc5b.lean:2:2: error: Tactic `assumption` failed\n\n\u00e2\u0160\u00a2 2 + 2 = 5",
+      "stderr": ""
+    },
+    {
+      "attempt": 7,
+      "history": [
+        "replace tactic 'decide' with 'contradiction'"
+      ],
+      "text_sha256": "dcd310052e7f6e1453eb346697d2d73d2864574522ee372eeff5c5ff93bb9b49",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1021.086,
+      "diagnostics": [
+        {
+          "line": 2,
+          "column": 2,
+          "message": "Tactic `contradiction` failed",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_gr2vrjfd\\attempt_007_dcd31005.lean:2:2: error: Tactic `contradiction` failed\n\n\u00e2\u0160\u00a2 2 + 2 = 5",
+      "stderr": ""
+    },
+    {
+      "attempt": 8,
+      "history": [
+        "replace tactic 'decide' with 'constructor'"
+      ],
+      "text_sha256": "cf1b579e549dfc16df35a81452ece6c0bdfdc9cc3d4ba2b2bfd30e4148dcb8b0",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1061.905,
+      "diagnostics": [
+        {
+          "line": 2,
+          "column": 2,
+          "message": "Tactic `constructor` failed: no applicable constructor found",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_gr2vrjfd\\attempt_008_cf1b579e.lean:2:2: error: Tactic `constructor` failed: no applicable constructor found\n\n\u00e2\u0160\u00a2 2 + 2 = 5",
+      "stderr": ""
+    }
+  ],
+  "winning_attempt": null,
+  "output": null,
+  "placeholders": [],
+  "limitations": "Deterministic syntactic repair over a bounded tactic portfolio. It proves nothing by itself; only Lean exit code 0 and a clean placeholder scan are treated as success.",
+  "sandbox": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_gr2vrjfd",
+  "baseline": {
+    "exit_code": 1,
+    "status": "COMPILE_ERROR",
+    "elapsed_ms": 1020.285,
+    "stdout": "D:\\Opencode AI Agent\\Math 3.0 Tools\\tools\\fixtures\\proof_repair\\false_theorem.lean:2:2: error: Tactic `decide` proved that the proposition\n  2 + 2 = 5\nis false",
+    "stderr": "",
+    "diagnostics": [
+      {
+        "line": 2,
+        "column": 2,
+        "message": "Tactic `decide` proved that the proposition",
+        "code": null
+      }
+    ]
+  },
+  "attempts_exhausted": 8
+}

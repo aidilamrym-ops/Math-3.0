@@ -1,0 +1,9 @@
+name = "math30"
+# defaultTargets = ["Math30"]
+
+# ponytail: per-file compilation via `lake env lean`, no library target yet.
+# Add [[lean_lib]] when a single build target for spec_v4 is wanted.
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.33.1"

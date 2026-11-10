@@ -2,8 +2,9 @@
 
 PYTHON ?= python
 LEAN ?= lean
+LEAN_JOBS ?= 1
 
-.PHONY: verify clean environment-audit audit lean-audit regression blindspot
+.PHONY: verify clean environment-audit audit lean-audit regression blindspot gate seal verify-ledger hooks
 
 verify: environment-audit
 	@echo "Executing Math 3.0 Universal Gate Suite..."
@@ -11,19 +12,33 @@ verify: environment-audit
 
 audit: environment-audit
 	@echo "Executing full Math 3.0 audit stack..."
-	$(PYTHON) tools/lean_surface_audit.py --jobs 4 --timeout 60
+	$(PYTHON) tools/lean_surface_audit.py --jobs $(LEAN_JOBS) --timeout 180
 	$(PYTHON) tools/blindspot_audit.py
 	$(PYTHON) tools/audit_hardcoded_nodes.py
 	$(PYTHON) tools/meta_blindspot_hunter.py
+	$(PYTHON) tools/omega_audit/gate_strict.py check lean/spec_v4 Math30Kernel Math30Interfaces
 
 lean-audit:
-	$(PYTHON) tools/lean_surface_audit.py --jobs 4 --timeout 60
+	$(PYTHON) tools/lean_surface_audit.py --jobs $(LEAN_JOBS) --timeout 180
 
 regression:
 	$(PYTHON) tools/run_regression_tests.py
 
 blindspot:
 	$(PYTHON) tools/blindspot_audit.py
+
+gate:
+	$(PYTHON) tools/omega_audit/gate_strict.py check lean/spec_v4 Math30Kernel Math30Interfaces
+
+seal:
+	$(PYTHON) mcp/t2n/core/repokeeper.py
+
+verify-ledger:
+	$(PYTHON) mcp/t2n/core/repokeeper.py --verify
+	$(PYTHON) tools/omega_audit/manifest_verify.py
+
+hooks:
+	$(PYTHON) tools/omega_audit/install_hooks.py
 
 environment-audit:
 	@echo "Checking system toolchain specifications..."

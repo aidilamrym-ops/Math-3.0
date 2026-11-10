@@ -1,0 +1,11 @@
+#!/bin/sh
+# Math 3.0 pre-push gate.
+#
+# Installed from tools/hooks/pre-push by tools/omega_audit/install_hooks.py.
+# A push must not carry a Lean trust token that the commit-time scan missed.
+set -u
+ROOT=$(git rev-parse --show-toplevel) || exit 1
+exec python "$ROOT/tools/omega_audit/gate_strict.py" check \
+    "$ROOT/lean/spec_v4" \
+    "$ROOT/Math30Kernel" \
+    "$ROOT/Math30Interfaces"

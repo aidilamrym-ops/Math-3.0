@@ -1,0 +1,2 @@
+python C:/Users/usER/.config/opencode/skills/anti-circularity/scripts/gate.py check lean/spec_v4/smt_bridge/sign_flip_absence.lean lean/spec_v4/smt_bridge/ledger_cross_multiplication.lean lean/spec_v4/smt_bridge/contraction_bound.lean lean/spec_v4/smt_bridge/box_feasibility_witness.lean
+exit %ERRORLEVEL%

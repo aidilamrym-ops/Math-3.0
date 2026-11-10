@@ -1,0 +1,12 @@
+#!/bin/sh
+# Math 3.0 pre-commit gate.
+#
+# Installed from tools/hooks/pre-commit by tools/omega_audit/install_hooks.py.
+# The strict wrapper runs the installed skill gate first and then the hardened
+# lexer/token scan. Both must pass before the commit is accepted.
+set -u
+ROOT=$(git rev-parse --show-toplevel) || exit 1
+exec python "$ROOT/tools/omega_audit/gate_strict.py" check \
+    "$ROOT/lean/spec_v4" \
+    "$ROOT/Math30Kernel" \
+    "$ROOT/Math30Interfaces"

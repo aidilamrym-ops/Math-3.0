@@ -1,0 +1,108 @@
+{
+  "agent": "math30_proof_repair_agent",
+  "agent_version": "1.0.0",
+  "timestamp": "2026-11-07T15:40:13.581911+00:00",
+  "input": "D:\\Opencode AI Agent\\Math 3.0 Tools\\tools\\fixtures\\proof_repair\\needs_repair.lean",
+  "input_sha256": "99775551920e5fe9b91a1359788f3b28bd1c1f4082efbf8742e76eca49fdf070",
+  "backend": "lean",
+  "lean": {
+    "available": true,
+    "path": "C:\\Users\\usER\\.elan\\bin\\lean.EXE",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "status": "REPAIRED",
+  "attempts": [
+    {
+      "attempt": 1,
+      "history": [],
+      "text_sha256": "99775551920e5fe9b91a1359788f3b28bd1c1f4082efbf8742e76eca49fdf070",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1143.105,
+      "diagnostics": [
+        {
+          "line": 1,
+          "column": 0,
+          "message": "unknown module prefix 'Mathlib'",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_p99bxfs0\\attempt_001_99775551.lean:1:0: error: unknown module prefix 'Mathlib'\n\nNo directory 'Mathlib' or file 'Mathlib.olean' in the search path entries:\nD:\\Opencode AI Agent\\Math 3.0 Tools\nc:\\Users\\usER\\.elan\\toolchains\\leanprover--lean4---v4.33.1\\lib\\lean",
+      "stderr": ""
+    },
+    {
+      "attempt": 2,
+      "history": [
+        "remove unavailable Mathlib imports"
+      ],
+      "text_sha256": "f0bab56e2e46029e0abaf80754c6368e7c4c9b9c4491329fd21863c167a9c75c",
+      "exit_code": 1,
+      "status": "COMPILE_ERROR",
+      "elapsed_ms": 1475.827,
+      "diagnostics": [
+        {
+          "line": 3,
+          "column": 3,
+          "message": "unknown tactic",
+          "code": null
+        },
+        {
+          "line": 2,
+          "column": 50,
+          "message": "unsolved goals",
+          "code": null
+        }
+      ],
+      "stdout": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_p99bxfs0\\attempt_002_f0bab56e.lean:3:3: error: unknown tactic\nC:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_p99bxfs0\\attempt_002_f0bab56e.lean:2:50: error: unsolved goals\n\u00e2\u0160\u00a2 2 + 2 = 4",
+      "stderr": ""
+    },
+    {
+      "attempt": 3,
+      "history": [
+        "remove unavailable Mathlib imports",
+        "replace tactic 'norm_num' with 'decide'"
+      ],
+      "text_sha256": "4052285940d35c3542b4aa36e30877d0b0950ecc0a69f99607f8f6cb37345dab",
+      "exit_code": 0,
+      "status": "COMPILED",
+      "elapsed_ms": 1094.89,
+      "diagnostics": [],
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "winning_attempt": 3,
+  "output": "C:\\Users\\usER\\AppData\\Local\\Temp\\opencode\\needs_repair.repaired.lean",
+  "placeholders": [],
+  "limitations": "Deterministic syntactic repair over a bounded tactic portfolio. It proves nothing by itself; only Lean exit code 0 and a clean placeholder scan are treated as success.",
+  "sandbox": "C:\\Users\\usER\\AppData\\Local\\Temp\\math30_repair_p99bxfs0",
+  "baseline": {
+    "exit_code": 1,
+    "status": "COMPILE_ERROR",
+    "elapsed_ms": 1082.43,
+    "stdout": "D:\\Opencode AI Agent\\Math 3.0 Tools\\tools\\fixtures\\proof_repair\\needs_repair.lean:1:0: error: unknown module prefix 'Mathlib'\n\nNo directory 'Mathlib' or file 'Mathlib.olean' in the search path entries:\nD:\\Opencode AI Agent\\Math 3.0 Tools\nc:\\Users\\usER\\.elan\\toolchains\\leanprover--lean4---v4.33.1\\lib\\lean",
+    "stderr": "",
+    "diagnostics": [
+      {
+        "line": 1,
+        "column": 0,
+        "message": "unknown module prefix 'Mathlib'",
+        "code": null
+      }
+    ]
+  },
+  "output_sha256": "4052285940d35c3542b4aa36e30877d0b0950ecc0a69f99607f8f6cb37345dab",
+  "output_history": [
+    "remove unavailable Mathlib imports",
+    "replace tactic 'norm_num' with 'decide'"
+  ],
+  "output_diagnostics": [],
+  "confirmation": {
+    "path": "C:\\Users\\usER\\AppData\\Local\\Temp\\opencode\\needs_repair.repaired.lean",
+    "exit_code": 0,
+    "status": "COMPILED",
+    "elapsed_ms": 1091.098,
+    "stderr": "",
+    "placeholders": []
+  }
+}

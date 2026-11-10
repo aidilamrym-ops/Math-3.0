@@ -77,7 +77,7 @@ class LteSpectralValidator:
         rigid_asymmetry = bool(r_hank.contains(self.r_hank_target))
 
         print(f"[LTE] Gate 2: r_toep = {r_toep}, r_hank = {r_hank}")
-        print(f"[LTE] Gate 2: Certified Rigid-Asymmetry r_hank = 25/2 = 12.5")
+        print(f"[LTE] Gate 2: declared target 25/2 (12.5) contained in r_hank enclosure: {rigid_asymmetry}")
         if not rigid_asymmetry:
             raise SystemExit("RIGID_ASYMMETRY_MISMATCH: aborting (fail-closed)")
         if self.raw_enclosure:
@@ -127,7 +127,11 @@ class LteSpectralValidator:
             "precision_bits": 96000 if self.escalation_triggered else 24000,
             "r_toep": str(r_toep),
             "r_hank": str(r_hank),
-            "r_hank_rational": "25/2",
+            # The exact value 25/2 is a DECLARED TARGET, not a value derived
+            # from the computed enclosure. The certificate is the containment
+            # flag below; consumers must check it rather than parse the label.
+            "r_hank_target_rational": "25/2",
+            "r_hank_target_contained": rigid_asymmetry,
             "rigid_asymmetry_certified": rigid_asymmetry,
             "raw_enclosure": self.raw_enclosure,
             "pivots": pivot_data,
@@ -141,7 +145,8 @@ class LteSpectralValidator:
             "theorem_name": "lte_guinand_weil_spectral_isolation",
             "parameters": {
                 "quantum_slice": 13,
-                "r_hank_exact": "25/2",
+                "r_hank_target_exact": "25/2",
+                "r_hank_target_contained": spectral_data["rigid_asymmetry_certified"],
                 "r_toep_exact": spectral_data["r_toep"],
                 "pivots_positive_definite": all(p["signed_definite"] for p in spectral_data["pivots"]),
                 "no_zero_straddle": not spectral_data["zero_straddle_detected"]

@@ -1,0 +1,3 @@
+#!/bin/sh
+python C:/Users/usER/.config/opencode/skills/anti-circularity/skills/../scripts/gate.py check lean/spec_v4/smt_bridge/*.lean
+exit $?

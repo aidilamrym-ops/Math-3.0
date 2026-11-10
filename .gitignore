@@ -18,3 +18,15 @@ external_openai_ref/
 *.pdf
 *.pdf.txt
 *.typ
+
+# Local build caches and artifacts (not part of the pinned ledger)
+.lake/
+**/.lake/
+*.olean
+*.olean.*
+*.ilean
+*.ilean.*
+*.ir
+*.ir.*
+*.trace
+.manifest.*.tmp

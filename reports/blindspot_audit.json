@@ -1,0 +1,19 @@
+{
+  "audit": "math30_blindspot_audit",
+  "audit_version": "1.0.0",
+  "timestamp": "2026-11-10T07:56:06.494584+00:00",
+  "root": "D:\\Opencode AI Agent\\Math 3.0 Tools",
+  "stats": {
+    "lean_files": 499,
+    "lean_declarations": 1696,
+    "lean_theorems": 651,
+    "python_files": 109,
+    "python_functions": 397,
+    "python_constant_returns": 0,
+    "finding_count": 0,
+    "warning_count": 0
+  },
+  "findings": [],
+  "warnings": [],
+  "verdict": "PASSED"
+}

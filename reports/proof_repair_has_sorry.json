@@ -1,0 +1,21 @@
+{
+  "agent": "math30_proof_repair_agent",
+  "agent_version": "1.0.0",
+  "timestamp": "2026-11-07T15:40:36.984203+00:00",
+  "input": "D:\\Opencode AI Agent\\Math 3.0 Tools\\tools\\fixtures\\proof_repair\\has_sorry.lean",
+  "input_sha256": "b553b8689a2392f3aa834a7cc83259ea51862f6d4cf9e4f058feaecaefb4613e",
+  "backend": "lean",
+  "lean": {
+    "available": true,
+    "path": "C:\\Users\\usER\\.elan\\bin\\lean.EXE",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "status": "REFUSED_PLACEHOLDER",
+  "attempts": [],
+  "winning_attempt": null,
+  "output": null,
+  "placeholders": [
+    "sorry"
+  ],
+  "limitations": "Deterministic syntactic repair over a bounded tactic portfolio. It proves nothing by itself; only Lean exit code 0 and a clean placeholder scan are treated as success."
+}

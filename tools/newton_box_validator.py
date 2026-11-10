@@ -304,8 +304,22 @@ if __name__ == "__main__":
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "newton_box_contraction": contraction_data,
         "lean_evidence": lean_evidence,
-        "verdict": "PASSED - Strict inclusion N(B) ⊆ B verified via inverse square root Newton contraction, unique structural root certified, no boundary escape"
     }
+    certified = (
+        contraction_data["all_strict_inclusion"] is True
+        and contraction_data["unique_root_certified"] is True
+        and contraction_data["boundary_escape"] is False
+    )
+    full_report["certified"] = certified
+    full_report["verdict"] = (
+        "PASSED - Strict inclusion N(B) ⊆ B verified via inverse square root "
+        "Newton contraction, unique structural root certified, no boundary escape"
+        if certified
+        else "FAILED - Newton-box strict inclusion not certified; see "
+        "newton_box_contraction.all_strict_inclusion and per-pivot strict_inclusion"
+    )
     
     validator.log_report("topological_uniqueness.json", full_report)
     print("=== PHASE 3 COMPLETE ===")
+    if not certified:
+        raise SystemExit("NEWTON_BOX_NOT_CERTIFIED: aborting (fail-closed)")

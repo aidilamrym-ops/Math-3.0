@@ -29,9 +29,9 @@ The toolchain combines:
 | **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
 | **Beal Lattice Solver** | Dynamic Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale. |
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
-| **Anti-Circularity Gate** | Executable check ensuring 141,644+ files pass without `sorry`, `admit`, or `axiom` placeholder tokens. |
+| **Anti-Circularity Gate** | Executable check over the 472-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **1-bit fault sentinel** | `manifest.json` tracks every file (141,644 rows); any unverified change fails closed. |
+| **1-bit fault sentinel** | `manifest.json` tracks every file (1,460 rows); any unverified change fails closed. |
 
 ---
 
@@ -234,16 +234,17 @@ Three new modules extend the formalization to synthetic homotopy theory and topo
   - $\pi_3(S^3) \simeq \mathbb{Z}$: 3D topological insulator $\theta$-term, Hopfions.
   - $\pi_4(S^3) \simeq \mathbb{Z}_2$: Quark-hadron transition, SU(2) instantons.
 - **Axioms:** None (pure Lean 4 kernel).
-- **Key Theorems:** `pi_n_sphere_n_iso`, `freudenthal_stability_bound`, `hopf_invariant_one`, `bott_periodicity_stable`.
+- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.
+- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$ for a genuine sphere type.
 
 ### 9.1.4 Quantum Torus Extension (`lean/spec_v4/HigherInductivePushout.lean`, Phase 31)
 - **Domain:** Higher-dimensional HITs / Non-commutative geometry.
 - **Result:** Torus $T^2 = S^1 \times S^1$ constructed as a pushout of two generating loops, extending the $S^1$ construction to a 2-dimensional higher inductive type.
 - **Physics Application:** Quantum torus in TQFT; Drinfeld double of a finite group; anyon fusion on a toroidal topology (relevant to topological order on a torus).
 - **Topological Invariants:** Fundamental group $\pi_1(T^2) \simeq \mathbb{Z} \times \mathbb{Z}$; Euler characteristic $\chi(T^2) = 0$; homology $H_0 = \mathbb{Z}$, $H_1 = \mathbb{Z}^2$, $H_2 = \mathbb{Z}$.
-- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine fundamental group content resides in the explicit model `TorusPi1`. The vacuous `torus_fundamental_group` theorem was replaced by concrete theorems (`torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_pi1_free_rank_two`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_homology_groups`) which prove π₁(T²) ≃ ℤ×ℤ.
+- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.
 - **Axioms:** `[Quot.sound]` only.
-- **Key Theorems:** `torus_fundamental_group`, `quantum_torus_paths`, `torus_euler_characteristic`, `torus_homology_groups`, plus the `TorusPi1` generator/spanning lemmas.
+- **Key Theorems:** `torus_pi1_free_rank_two`, `torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, `torus_homology_ranks`. The previously listed `torus_fundamental_group`, `quantum_torus_paths`, and `torus_homology_groups` do not exist in the module.
 
 ### 9.1.7 Phase 33 Yang-Mills Lattice Boundary (`lean/spec_v4/YangMillsLatticeBoundary.lean`)
 - **Domain:** Discrete Gauge Theory / Yang-Mills Lattice Regime.
@@ -284,10 +285,10 @@ Three new modules extend the formalization to synthetic homotopy theory and topo
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-70600479fd1e4798fbaa3e50941fae4b16261b289f54fb4e9f6b8df927034534
+29b2fcb0cc9a626d774bb50fdefbef2e225538291dfaa51e237dfb63f42caf61
 ```
 
-**Manifest Rows:** 141,644 files pinned  
+**Manifest Rows:** 1,460 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Mon Nov 09 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -318,7 +319,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 141,644-row SHA-256 ledger
+├── manifest.json                  # 1,460-row SHA-256 ledger
 └── README.md
 ```
 
@@ -340,7 +341,7 @@ Math-3.0/
 | 24 | Beal Conjecture $10^{18}$ lattice expansion, Gate 4, Lean 4 cert | ✅ Sealed |
 | 25 | Riemann Zeta critical-line hardening, DIBD injection, 24k-bit sweep | ✅ Sealed |
 | 26 | Final sovereignty seal: 0 hardcodes, 0 regressions, manifest 1327 | ✅ Sealed |
-| 27 | Horizon Theorems Lockdown: Collatz, Singularity, Quantum Phase Lock + SMT Bridge Hardening + 141,644-row Manifest | ✅ Sealed |
+| 27 | Horizon Theorems Lockdown: Collatz, Singularity, Quantum Phase Lock + SMT Bridge Hardening + 1,460-row Manifest | ✅ Sealed |
 | 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Sign Variation Bound Invariant Integration + Topos Categorical Mapping** | ✅ Sealed |
 | 30 | **Horizon Frontier Expansion: HIT pushouts, Topos Bridge, Homotopy Spheres + SMT QF_LIA scripts** | ✅ Sealed |
 | 31 | **Quantum Torus Extension: $T^2 = S^1 \times S^1$ HIT, π₁(T²) ≃ ℤ², homology, Euler characteristic** | ✅ Sealed |
@@ -404,7 +405,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 141,644 rows, SHA-256 locked: `70600479fd1e4798fbaa3e50941fae4b16261b289f54fb4e9f6b8df927034534`  
+> **Manifest:** 1,460 rows, SHA-256 locked: `29b2fcb0cc9a626d774bb50fdefbef2e225538291dfaa51e237dfb63f42caf61`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 

@@ -12,13 +12,14 @@ import math
 import os
 import sys
 import time
+from datetime import datetime, timezone
 from fractions import Fraction
 
 import z3
 
 sys.set_int_max_str_digits(100000)
 
-ROOT = r"D:\Opencode AI Agent\Math 3.0 Tools"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORTS = os.path.join(ROOT, "reports")
 SMT_DIR = os.path.join(ROOT, "smt", "phase4")
 SCALE = 10 ** 18
@@ -194,7 +195,7 @@ def main():
     verdict = "PASSED" if all(c["result"] == c["expected"] for c in checks) else "FAILED"
     report = {
         "phase": "PHASE_4_SYLVESTER_INERTIA_REDUCTION_Z3_TRIBUNAL",
-        "timestamp": "2026-11-05T00:00:00Z",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "engine": {
             "name": "Z3",
             "version": z3.get_version_string(),
