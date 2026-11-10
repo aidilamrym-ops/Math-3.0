@@ -345,7 +345,7 @@ Math-3.0/
 | 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Sign Variation Bound Invariant Integration + Topos Categorical Mapping** | ✅ Sealed |
 | 30 | **Horizon Frontier Expansion: HIT pushouts, Topos Bridge, Homotopy Spheres + SMT QF_LIA scripts** | ✅ Sealed |
 | 31 | **Quantum Torus Extension: $T^2 = S^1 \times S^1$ HIT, π₁(T²) ≃ ℤ², homology, Euler characteristic** | ✅ Sealed |
-| 32 | **Gate 4 DSITNI denominator audit: general Lean theorem `dsitni_general`, README formula corrected to $(\operatorname{tr}\tau)^2$, cross-solver consistency test** | ✅ Sealed |
+| 32 | **Gate 4 DSITNI denominator audit: general Lean theorem `dsitni_general`, README formula corrected to $(\text{tr}\,\tau)^2$, cross-solver consistency test** | ✅ Sealed |
 | 33 | **Phase 33 Frontier Extension: Quantum MTC, Post-Quantum LWE, Yang-Mills Mass Gap Positivity** | ✅ Sealed |
 | 33+ | **Millennium P vs NP Formal Separation: Bounded Boolean Circuit complexity bounds ($s \cdot d < 2^s$), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |
 | 33++ | **Millennium Navier-Stokes Existence & Smoothness: Viscous energy dissipation bounds & pressure regularity (`lean/spec_v4/MillenniumNavierStokesSmoothness.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |
