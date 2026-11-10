@@ -1,0 +1,104 @@
+{
+  "gate": "GATE_5_EXACT_RATIONAL_EXTRACTION",
+  "timestamp": "2026-11-10T09:06:18.386755+00:00",
+  "verdict": "PASSED",
+  "sources": {
+    "lte_spectral_validation": {
+      "path": "reports\\lte_spectral_validation.json",
+      "sha256": "80e27c0c551ca757a33acd69ee87108c7ad1fec7e30f08303ba318de7afff495",
+      "precision_bits": 24000,
+      "pivots": 3
+    },
+    "topological_uniqueness": {
+      "path": "reports\\topological_uniqueness.json",
+      "sha256": "64238e0ccdd00c89c245dc378172f136299eb05951e3fca8b62484bbbf6d8ed0",
+      "precision_bits": 24000,
+      "pivots": 3
+    }
+  },
+  "bridge": {
+    "path": "lean\\spec_v4\\Gate5RationalBridge.lean",
+    "sha256": "2a9b8f694be5d9583899343f598f8d656264934eb66f9fd0182deac7b288e248",
+    "embedded_verbatim": true
+  },
+  "certificate": {
+    "path": "lean\\spec_v4\\Gate5RationalExtractionValidation.lean",
+    "sha256": "8b8f32638dd39765bc5f0a565b791cada5c2d4ba2a6866eec522692f466f7c46",
+    "bytes": 402072,
+    "lines": 326,
+    "definitions": 18,
+    "theorems": 36,
+    "theorem_names": [
+      "ltePivot0_lo_pos",
+      "ltePivot0_lo_le_mid",
+      "ltePivot0_mid_le_hi",
+      "ltePivot0_mid_mem",
+      "ltePivot0_sign_sound",
+      "ltePivot0_lo_scale",
+      "ltePivot1_lo_pos",
+      "ltePivot1_lo_le_mid",
+      "ltePivot1_mid_le_hi",
+      "ltePivot1_mid_mem",
+      "ltePivot1_sign_sound",
+      "ltePivot1_lo_scale",
+      "ltePivot2_lo_pos",
+      "ltePivot2_lo_le_mid",
+      "ltePivot2_mid_le_hi",
+      "ltePivot2_mid_mem",
+      "ltePivot2_sign_sound",
+      "ltePivot2_lo_scale",
+      "newtonPivot0_contraction_lt_half",
+      "newtonPivot0_lo_pos",
+      "newtonPivot0_lo_le_hi",
+      "newtonPivot0_sign_sound",
+      "newtonPivot0_lo_scale",
+      "newtonPivot0_contraction_scale",
+      "newtonPivot1_contraction_lt_half",
+      "newtonPivot1_lo_pos",
+      "newtonPivot1_lo_le_hi",
+      "newtonPivot1_sign_sound",
+      "newtonPivot1_lo_scale",
+      "newtonPivot1_contraction_scale",
+      "newtonPivot2_contraction_lt_half",
+      "newtonPivot2_lo_pos",
+      "newtonPivot2_lo_le_hi",
+      "newtonPivot2_sign_sound",
+      "newtonPivot2_lo_scale",
+      "newtonPivot2_contraction_scale"
+    ]
+  },
+  "checks": {
+    "exact_transport_present": true,
+    "no_lossy_literals": true,
+    "bridge_hash_in_header": true,
+    "bridge_body_embedded": true,
+    "compile_exit_zero": true,
+    "definition_count_ok": true,
+    "theorem_count_ok": true,
+    "lte_pivots_exact": true,
+    "newton_pivots_exact": true,
+    "all_lte_intervals_positive": true,
+    "all_newton_contractions_below_half": true
+  },
+  "source_audit": {
+    "decimal_literals": 0,
+    "placeholder_tokens": 0,
+    "axiom_declarations": 0,
+    "float_mentions": 0
+  },
+  "compile": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "spec_v4\\_tmp_gate5_validation.lean"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "stdout": "",
+    "stderr": "",
+    "elapsed_s": 23.203
+  },
+  "elapsed_s": 23.398,
+  "scope_note": "This gate certifies exact transport of the Gate 4 interval endpoints and their signs. It does not certify the upstream floating-point matrix entries from which those balls were computed; that trust boundary remains the python-flint arb construction."
+}

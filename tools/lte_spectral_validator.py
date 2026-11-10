@@ -6,6 +6,9 @@ import json
 from datetime import datetime, timezone
 from fractions import Fraction
 
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
+
 try:
     import flint
 except ImportError:
@@ -16,6 +19,36 @@ REPORTS_DIR = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "reports"
 )
 os.makedirs(REPORTS_DIR, exist_ok=True)
+
+
+def _fraction_payload(value: Fraction) -> dict[str, int]:
+    """Exact rational transport: numerator/denominator only, never a float."""
+    return {"num": value.numerator, "den": value.denominator}
+
+
+def _fmpq_fraction(value) -> Fraction:
+    return Fraction(int(value.p), int(value.q))
+
+
+def _arb_mid(value) -> Fraction:
+    mid = value.mid()
+    if not mid.is_exact():
+        raise ValueError("arb midpoint is not exact")
+    return _fmpq_fraction(mid.fmpq())
+
+
+def _arb_rad(value) -> Fraction:
+    rad = value.rad()
+    if not rad.is_exact():
+        raise ValueError("arb radius is not exact")
+    return _fmpq_fraction(rad.fmpq())
+
+
+def _arb_enclosure(value) -> tuple[Fraction, Fraction]:
+    """Rigorous interval [mid - rad, mid + rad] as exact rationals."""
+    mid, rad = _arb_mid(value), _arb_rad(value)
+    return mid - rad, mid + rad
+
 
 class LteSpectralValidator:
     def __init__(self, raw_enclosure: str | None = None):
@@ -56,6 +89,22 @@ class LteSpectralValidator:
         mat[2, 2] = flint.arb("13.0")
         return dim, mat
 
+    def _pivot_payload(self, idx: int, real_val) -> dict:
+        lo, hi = _arb_enclosure(real_val)
+        return {
+            "index": idx,
+            "mid": str(real_val.mid()),
+            "rad": str(real_val.rad()),
+            "contains_zero": real_val.contains(0),
+            "signed_definite": real_val > 0,
+            # Exact transport for the Gate 5 rational-extraction bridge.
+            "mid_exact": _fraction_payload(_arb_mid(real_val)),
+            "enclosure_exact": {
+                "lo": _fraction_payload(lo),
+                "hi": _fraction_payload(hi),
+            },
+        }
+
     def execute_spectral_analysis(self):
         print("[LTE] Initializing truncated Guinand-Weil block at quantum slice c=13...")
 
@@ -90,13 +139,7 @@ class LteSpectralValidator:
         pivot_data = []
         for idx, ev in enumerate(eigvals):
             real_val = ev.real
-            pivot_data.append({
-                "index": idx,
-                "mid": str(real_val.mid()),
-                "rad": str(real_val.rad()),
-                "contains_zero": real_val.contains(0),
-                "signed_definite": real_val > 0
-            })
+            pivot_data.append(self._pivot_payload(idx, real_val))
             print(f"[LTE] Pivot[{idx}]: mid={real_val.mid()}, rad={real_val.rad()}, >0={real_val > 0}")
 
         # Check for zero-straddle requiring escalation
@@ -112,13 +155,7 @@ class LteSpectralValidator:
             pivot_data = []
             for idx, ev in enumerate(eigvals):
                 real_val = ev.real
-                pivot_data.append({
-                    "index": idx,
-                    "mid": str(real_val.mid()),
-                    "rad": str(real_val.rad()),
-                    "contains_zero": real_val.contains(0),
-                    "signed_definite": real_val > 0
-                })
+                pivot_data.append(self._pivot_payload(idx, real_val))
             print("[LTE] Re-evaluation at 96,000 bits complete.")
         else:
             print("[LTE] No zero-straddle. Precision maintained at 24,000 bits.")

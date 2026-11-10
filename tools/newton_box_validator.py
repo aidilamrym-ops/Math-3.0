@@ -6,6 +6,9 @@ import json
 from datetime import datetime, timezone
 from fractions import Fraction
 
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
+
 try:
     import flint
 except ImportError:
@@ -16,6 +19,35 @@ REPORTS_DIR = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "reports"
 )
 os.makedirs(REPORTS_DIR, exist_ok=True)
+
+
+def _fraction_payload(value: Fraction) -> dict[str, int]:
+    return {"num": value.numerator, "den": value.denominator}
+
+
+def _fmpq_fraction(value) -> Fraction:
+    return Fraction(int(value.p), int(value.q))
+
+
+def _arb_mid(value) -> Fraction:
+    mid = value.mid()
+    if not mid.is_exact():
+        raise ValueError("arb midpoint is not exact")
+    return _fmpq_fraction(mid.fmpq())
+
+
+def _arb_rad(value) -> Fraction:
+    rad = value.rad()
+    if not rad.is_exact():
+        raise ValueError("arb radius is not exact")
+    return _fmpq_fraction(rad.fmpq())
+
+
+def _arb_bounds(value) -> tuple[Fraction, Fraction]:
+    """Rigorous lower/upper bounds of an arb ball as exact rationals."""
+    mid, rad = _arb_mid(value), _arb_rad(value)
+    return mid - rad, mid + rad
+
 
 class NewtonBoxContractionValidator:
     """
@@ -99,6 +131,9 @@ class NewtonBoxContractionValidator:
         contraction_ratios = []
         inclusion_status = []
         lower_endpoints = []
+        contraction_exact: list[Fraction] = []
+        lower_exact: list[Fraction] = []
+        upper_exact: list[Fraction] = []
         
         print("[PHASE 3] Newton Box contraction analysis for matrix square root (X^2 = A)...")
         
@@ -223,6 +258,12 @@ class NewtonBoxContractionValidator:
             contraction_ratios.append(float(max_N_prime))
             inclusion_status.append(strict_inclusion)
             lower_endpoints.append(float(x_lower))
+            _, contraction_ub = _arb_bounds(max_N_prime)
+            lower_lb, _ = _arb_bounds(x_lower)
+            _, upper_ub = _arb_bounds(x_upper)
+            contraction_exact.append(contraction_ub)
+            lower_exact.append(lower_lb)
+            upper_exact.append(upper_ub)
             
             print(f"[PHASE 3]   strict_inclusion={strict_inclusion}")
         
@@ -248,7 +289,11 @@ class NewtonBoxContractionValidator:
                     "inv_sqrt_radius": str(pivot_radii[i] / (2 * pivots_mid[i] * flint.arb.sqrt(pivots_mid[i]))),
                     "max_contraction_factor": str(contraction_ratios[i]),
                     "inv_sqrt_interval_lower": str(lower_endpoints[i]),
-                    "strict_inclusion": inclusion_status[i]
+                    # Exact rigorous bounds for the Gate 5 rational bridge.
+                    "contraction_upper_exact": _fraction_payload(contraction_exact[i]),
+                    "lower_endpoint_exact": _fraction_payload(lower_exact[i]),
+                    "upper_endpoint_exact": _fraction_payload(upper_exact[i]),
+                    "strict_inclusion": inclusion_status[i],
                 }
                 for i in range(dim)
             ],
@@ -258,21 +303,43 @@ class NewtonBoxContractionValidator:
             "boundary_escape": not all_inclusion
         }
     
+    @staticmethod
+    def _exact_payload(pivot: dict, key: str) -> Fraction:
+        """Read an exact {num, den} transport; fail closed on anything lossy."""
+        payload = pivot.get(key)
+        if not isinstance(payload, dict):
+            raise ValueError(f"pivot {pivot.get('index')}: missing exact field {key!r}")
+        num, den = payload.get("num"), payload.get("den")
+        if not isinstance(num, int) or not isinstance(den, int):
+            raise ValueError(f"pivot {pivot.get('index')}: {key!r} is not an integer pair")
+        if isinstance(num, bool) or isinstance(den, bool):
+            raise ValueError(f"pivot {pivot.get('index')}: {key!r} must be integers, not bool")
+        if den <= 0:
+            raise ValueError(f"pivot {pivot.get('index')}: {key!r} denominator must be positive")
+        return Fraction(num, den)
+
     def extract_rational_evidence(self, contraction_data):
-        """Extract exact rational coordinates for Lean 4 tribunal."""
+        """Extract exact rational coordinates for the Lean 4 tribunal.
+
+        Gate 5: every bound must arrive as an exact {num, den} pair. Decimal
+        strings and floats are rejected rather than silently rounded.
+        """
         pivots = []
         for pivot in contraction_data["pivots"]:
-            contraction = Fraction(str(pivot["max_contraction_factor"]))
-            lower = Fraction(str(pivot["inv_sqrt_interval_lower"]))
-            # Certificate: contraction < 1/2 and Newton-box lower endpoint > 0.
+            contraction = self._exact_payload(pivot, "contraction_upper_exact")
+            lower = self._exact_payload(pivot, "lower_endpoint_exact")
+            upper = self._exact_payload(pivot, "upper_endpoint_exact")
+            # Certificate: contraction < 1/2 and Newton-box interval positive.
             assert contraction < Fraction(1, 2), contraction
-            assert lower > 0, lower
+            assert 0 < lower <= upper, (lower, upper)
             pivots.append({
                 "index": pivot["index"],
                 "contraction_numerator": contraction.numerator,
                 "contraction_denominator": contraction.denominator,
                 "lower_endpoint_numerator": lower.numerator,
-                "lower_endpoint_denominator": lower.denominator
+                "lower_endpoint_denominator": lower.denominator,
+                "upper_endpoint_numerator": upper.numerator,
+                "upper_endpoint_denominator": upper.denominator
             })
         return {
             "theorem_name": "topological_root_uniqueness_newton_box",

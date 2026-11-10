@@ -31,11 +31,15 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS = ROOT / "reports"
@@ -53,6 +57,9 @@ LEAN_EXCLUDED_PARTS = {
 
 LTE_RECEIPT = REPORTS / "lte_spectral_validation.json"
 NEWTON_RECEIPT = REPORTS / "topological_uniqueness.json"
+GATE5_RECEIPT = REPORTS / "gate5_rational_extraction.json"
+GATE5_CERT = ROOT / "lean/spec_v4/Gate5RationalExtractionValidation.lean"
+GATE5_BRIDGE = ROOT / "lean/spec_v4/Gate5RationalBridge.lean"
 Z3_RECEIPT = REPORTS / "z3_tribunal_bounds.json"
 LEAN_RECEIPT = REPORTS / "lean_surface_audit.json"
 BLINDSPOT_RECEIPT = REPORTS / "blindspot_audit.json"
@@ -134,6 +141,19 @@ def mtime_ns(path: Path) -> int:
         return path.stat().st_mtime_ns
     except OSError:
         return 0
+
+
+def sha256_file(path: Path) -> str | None:
+    try:
+        import hashlib
+
+        digest = hashlib.sha256()
+        with open(path, "rb") as handle:
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(chunk)
+        return digest.hexdigest()
+    except OSError:
+        return None
 
 
 def discover_lean() -> list[Path]:
@@ -235,6 +255,74 @@ def step_newton_box() -> dict:
         "max_contraction_ratio": ratio,
         "receipt_error": data.get("__error__"),
         "results": [newton],
+    }
+
+
+def step_rational_extraction() -> dict:
+    before_receipt = mtime_ns(GATE5_RECEIPT)
+    before_cert = mtime_ns(GATE5_CERT)
+    generator = run_cmd([sys.executable, "tools/gate5_rational_extraction.py"], 3600)
+    after_receipt = mtime_ns(GATE5_RECEIPT)
+    after_cert = mtime_ns(GATE5_CERT)
+    data = load_json(GATE5_RECEIPT)
+    certificate = data.get("certificate") or {}
+    sources = data.get("sources") or {}
+    bridge = data.get("bridge") or {}
+    compile_info = data.get("compile") or {}
+    source_audit = data.get("source_audit") or {}
+    lte_source = sources.get("lte_spectral_validation") or {}
+    newton_source = sources.get("topological_uniqueness") or {}
+    theorem_names = certificate.get("theorem_names") or []
+    try:
+        certificate_text = GATE5_CERT.read_text(encoding="utf-8")
+    except OSError:
+        certificate_text = ""
+    imports = [
+        line.strip()
+        for line in certificate_text.splitlines()
+        if line.strip().startswith("import ")
+    ]
+    checks = {
+        "generator_exit_zero": generator["exit_code"] == 0,
+        "receipt_rewritten": after_receipt > before_receipt,
+        "certificate_rewritten": after_cert > before_cert,
+        "verdict_passed": data.get("verdict") == "PASSED",
+        "compile_exit_zero": compile_info.get("exit_code") == 0,
+        "compile_not_timed_out": compile_info.get("timed_out") is False,
+        "certificate_hash_matches": certificate.get("sha256") == sha256_file(GATE5_CERT),
+        "lte_source_hash_matches": lte_source.get("sha256") == sha256_file(LTE_RECEIPT),
+        "newton_source_hash_matches": newton_source.get("sha256") == sha256_file(NEWTON_RECEIPT),
+        "bridge_hash_matches": bridge.get("sha256") == sha256_file(GATE5_BRIDGE),
+        "three_lte_pivots": lte_source.get("pivots") == 3,
+        "three_newton_pivots": newton_source.get("pivots") == 3,
+        "eighteen_definitions": certificate.get("definitions") == 18,
+        "thirty_six_theorems": certificate.get("theorems") == 36,
+        "all_named_theorems_present": len(theorem_names) == 36
+        and all(name in certificate_text for name in theorem_names),
+        "no_decimal_literals": source_audit.get("decimal_literals") == 0,
+        "no_placeholder_tokens": source_audit.get("placeholder_tokens") == 0,
+        "no_axiom_declarations": source_audit.get("axiom_declarations") == 0,
+        "mathlib_only_imports": bool(imports)
+        and all(line.startswith("import Mathlib") for line in imports),
+        "independent_decimal_scan_clean": re.search(r"(?<![\w.])\d+\.\d+", certificate_text)
+        is None,
+        "independent_placeholder_scan_clean": re.search(
+            r"\b(?:sorry|admit|native_decide)\b", certificate_text
+        )
+        is None,
+        "gate_checks_all_true": isinstance(data.get("checks"), dict)
+        and bool(data["checks"])
+        and all(value is True for value in data["checks"].values()),
+    }
+    return {
+        "step": "rational_extraction",
+        "passed": all(checks.values()),
+        "checks": checks,
+        "certificate": str(GATE5_CERT.relative_to(ROOT)),
+        "certificate_sha256": certificate.get("sha256"),
+        "compile_elapsed_s": compile_info.get("elapsed_s"),
+        "receipt_error": data.get("__error__"),
+        "results": [generator],
     }
 
 
@@ -366,6 +454,7 @@ STEPS = (
     ("manifest", step_manifest),
     ("spectrum", step_spectrum),
     ("newton_box", step_newton_box),
+    ("rational_extraction", step_rational_extraction),
     ("z3_tribunal", step_z3),
     ("lean_surface", step_lean_surface),
     ("blindspot", step_blindspot),
