@@ -102,10 +102,10 @@ Matrices $\tau$ are audited against linear candidate morphologies using element-
 
 Parametric structural bound used by the Beal, Quantum-Topology, and Yu-Deng batch solvers:
 
-$$\mathcal{R}_{\text{DSITNI}} = \frac{\|\tau\|_F^2 \cdot (|\det(\tau)| + 1)}{3 \cdot \big((\operatorname{tr}\tau)^2 + 1\big) \cdot (|\det(\tau)| + 2)} < \frac{1}{2}$$
+$$\mathcal{R}_{\text{DSITNI}} = \frac{\|\tau\|_F^2 \cdot (|\det(\tau)| + 1)}{3 \cdot \big((\text{tr}\,\tau)^2 + 1\big) \cdot (|\det(\tau)| + 2)} < \frac{1}{2}$$
 
-For a Sylvester diagonal $\tau=\operatorname{diag}(d_1,d_2,d_3)$ write
-$S=\|\tau\|_F^2=d_1^2+d_2^2+d_3^2$, $T=(\operatorname{tr}\tau)^2=(d_1+d_2+d_3)^2$, $D=|\det\tau|=|d_1d_2d_3|$.
+For a Sylvester diagonal $\tau=\text{diag}(d_1,d_2,d_3)$ write
+$S=\|\tau\|_F^2=d_1^2+d_2^2+d_3^2$, $T=(\text{tr}\,\tau)^2=(d_1+d_2+d_3)^2$, $D=|\det\tau|=|d_1d_2d_3|$.
 Clearing the factor $2$ gives the integer test implemented by the solvers:
 
 $$2\,S\,(D+1) < 3\,(T+1)(D+2).$$
@@ -119,7 +119,7 @@ Formal proof: `lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvari
 (`dsitni_general`, unconditional over $\mathbb{N}$, Mathlib `nlinarith`/`omega`, no `sorry`).
 Runtime agreement with all three solvers: `python tools/test_dsitni_consistency.py`.
 
-**Sign-mixed inertia (Yu-Deng fluid regime).** When polarity flips make one $d_i<0$, the cross terms in $T-S$ turn negative and $S\le T$ fails; DSITNI is then *not* valid (e.g. $\operatorname{diag}(3,3,-3)$ gives $1512\not<870$). That case uses the determinant-scaled variant $\|\tau\|_F^2\cdot(1/|\det\tau|+\varepsilon)/((\operatorname{tr}\tau)^2+1)<1/2$ in `yudeng_singularity_sieve.py`. The consistency test asserts both the DSITNI failure and the variant's contraction, so the fork is justified, not cosmetic.
+**Sign-mixed inertia (Yu-Deng fluid regime).** When polarity flips make one $d_i<0$, the cross terms in $T-S$ turn negative and $S\le T$ fails; DSITNI is then *not* valid (e.g. $\text{diag}(3,3,-3)$ gives $1512\not<870$). That case uses the determinant-scaled variant $\|\tau\|_F^2\cdot(1/|\det\tau|+\varepsilon)/((\text{tr}\,\tau)^2+1)<1/2$ in `yudeng_singularity_sieve.py`. The consistency test asserts both the DSITNI failure and the variant's contraction, so the fork is justified, not cosmetic.
 
 The exact Gate 4 ledger ratio remains the interval-Newton derivative bound certified in `tools/newton_box_validator.py` ($|N'(x)|<1/2$ with strict box inclusion); DSITNI is the algebraic structural proxy for the large-scale batch sweeps.
 
