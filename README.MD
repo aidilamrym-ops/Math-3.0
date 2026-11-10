@@ -395,18 +395,20 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 
 ## 15. License
 
-- **Code:** GNU General Public License v3.0 (GPL-3.0).
-- **Scholarly blueprints & registers:** Creative Commons Attribution 4.0 International (CC-BY-4.0).
+* **Code:** GNU General Public License v3.0 (GPL-3.0).
+* **Scholarly blueprints & registers:** Creative Commons Attribution 4.0 International (CC-BY-4.0).
+
 ---
 
 > **Author:** Muhammad Aidil Amry (Independent Researcher)  
 > **ORCID:** [0009-0002-9718-9710](https://orcid.org)  
-> **Permanent DOI:** (https://doi.org/10.5281/zenodo.24014902)  
+> **Permanent DOI:** [10.5281/zenodo.24014902](https://doi.org/10.5281/zenodo.24014902)  
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
 > **Manifest:** 1,460 rows, SHA-256 locked: `29b2fcb0cc9a626d774bb50fdefbef2e225538291dfaa51e237dfb63f42caf61`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
+
 
 
 ---
