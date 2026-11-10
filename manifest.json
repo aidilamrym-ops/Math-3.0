@@ -62,6 +62,7 @@
   "lean\\spec_v4\\HorizonFrontierTests.lean": "bb17335b0aae326625c9ebe4d8f17409e2683c22356aba5e98e7bda684d4fa7e",
   "lean\\spec_v4\\LatticeLearningWithErrors.lean": "b87bfdad180bec7409b65da50d3bc0ddb9a1aedb71cc106b70cf76e6dba46644",
   "lean\\spec_v4\\MillenniumBirchSwinnertonDyer.lean": "5dcc5b66c27006fdcb49ff11bccd28e056863627ae858f961decf04c2c401f52",
+  "lean\\spec_v4\\MillenniumCollatzGeneralization.lean": "729acf30210d1da24bbfd257feec88906f05afda2b83abf0e7992c3d50c34c5e",
   "lean\\spec_v4\\MillenniumHodgeConjecture.lean": "edaf6e89b7f80b31eedf788172eff4cb6d6e91c973c7d60f33866c973bfe6f56",
   "lean\\spec_v4\\MillenniumNavierStokesSmoothness.lean": "52bf8c37a343d7c6bd7835cc65285f148f88fe9e721a9ccda5aa265ab7e59580",
   "lean\\spec_v4\\MillenniumPoincareConjecture.lean": "83d2170e8985d6050fa6756d1ab52c799842240ca7afdce5ca8feb4b05c1180c",
