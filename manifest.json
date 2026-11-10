@@ -49,6 +49,7 @@
   "lean\\spec_v4\\DecidableHomotopySphere.lean": "89aea0876d3d2b04416b1f2ba8a91a85e1f34fe879b38682388624fac1ee7a0c",
   "lean\\spec_v4\\EllipticRankSpectralCertificate.lean": "3e93159f64e3e2601458882854f4519fa599c7fe498229166e2a9ec5a89df5d9",
   "lean\\spec_v4\\FaultTolerantQuantum.lean": "c805098f700b295821125e1a0aa0d3872473ac8b902f2a4fb725131c5694fdd6",
+  "lean\\spec_v4\\FiniteLatticeSpectralGravity.lean": "e3f034492849375ae7bf2e283c7e834bea360f8b2656417d5517684b062f5da6",
   "lean\\spec_v4\\ForensicEvidence.lean": "2a99d079a3286084a3fee12549c0d36db1cd411645f15a7092d8335445ffb33d",
   "lean\\spec_v4\\FtcIdentityCollapse.lean": "509c74cca2a0befb4f01dd7ea525af8379684aadc52ac721266dbe27efb0a296",
   "lean\\spec_v4\\Gate5RationalBridge.lean": "2a9b8f694be5d9583899343f598f8d656264934eb66f9fd0182deac7b288e248",
