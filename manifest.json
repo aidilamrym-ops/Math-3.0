@@ -51,6 +51,7 @@
   "lean\\spec_v4\\FaultTolerantQuantum.lean": "c805098f700b295821125e1a0aa0d3872473ac8b902f2a4fb725131c5694fdd6",
   "lean\\spec_v4\\FiniteLatticeSpectralGravity.lean": "e3f034492849375ae7bf2e283c7e834bea360f8b2656417d5517684b062f5da6",
   "lean\\spec_v4\\FiniteNavierStokesDissipation.lean": "fc230df823b51dfcbd9f11b86fef3273255abd4ec048af63104ad74edb3ec0f2",
+  "lean\\spec_v4\\FinitePvNPSeparationLattice.lean": "60a67753f7bfb23bf9e4023339b0054695616bae85f677c227a282f23c4215bc",
   "lean\\spec_v4\\FiniteRiemannZetaLattice.lean": "a256c145c7b23971f4ca890cc3ff8bf5806a82596fbf6fe4659c5bc6d41c8d2f",
   "lean\\spec_v4\\ForensicEvidence.lean": "2a99d079a3286084a3fee12549c0d36db1cd411645f15a7092d8335445ffb33d",
   "lean\\spec_v4\\FtcIdentityCollapse.lean": "509c74cca2a0befb4f01dd7ea525af8379684aadc52ac721266dbe27efb0a296",
