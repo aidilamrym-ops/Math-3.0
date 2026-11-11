@@ -1,0 +1,322 @@
+{
+  "readme": "README.MD",
+  "cited_unique_files": 39,
+  "unresolved_citations": [],
+  "counts": {
+    "PASS": 39
+  },
+  "results": [
+    {
+      "path": "lean\\spec_v4\\CantorDiagonalization.lean",
+      "lean_path": "spec_v4\\CantorDiagonalization.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\CollatzBoundedDefeat.lean",
+      "lean_path": "spec_v4\\CollatzBoundedDefeat.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Collatz.collatz_horizon_defeat' depends on axioms: [propext]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\DecidableHomotopySphere.lean",
+      "lean_path": "spec_v4\\DecidableHomotopySphere.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\ErdosSzekeresRamsey.lean",
+      "lean_path": "spec_v4\\ErdosSzekeresRamsey.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\EuclidFermatArmor.lean",
+      "lean_path": "spec_v4\\EuclidFermatArmor.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\FiniteLatticeSpectralGravity.lean",
+      "lean_path": "spec_v4\\FiniteLatticeSpectralGravity.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\FiniteNavierStokesDissipation.lean",
+      "lean_path": "spec_v4\\FiniteNavierStokesDissipation.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\FinitePvNPSeparationLattice.lean",
+      "lean_path": "spec_v4\\FinitePvNPSeparationLattice.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\FiniteRiemannZetaLattice.lean",
+      "lean_path": "spec_v4\\FiniteRiemannZetaLattice.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\FiniteYangMillsMassGapLattice.lean",
+      "lean_path": "spec_v4\\FiniteYangMillsMassGapLattice.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "spec_v4\\FiniteYangMillsMassGapLattice.lean:18:5: warning: Variable name `h_beta` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h_beta\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\GrothendieckToposBridge.lean",
+      "lean_path": "spec_v4\\GrothendieckToposBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Topos.terminal_is_sheaf' does not depend on any axioms\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\HigherInductivePushout.lean",
+      "lean_path": "spec_v4\\HigherInductivePushout.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.HoTT.Pushout.glue' depends on axioms: [Quot.sound]\n'Math30.HoTT.Pushout.path_induction' does not depend on any axioms\n'Math30.HoTT.Pushout.torus_pi1_free_rank_two' depends on axioms: [propext]\n'Math30.HoTT.Pushout.torus_betti_numbers' depends on axioms: [propext]\n'Math30.HoTT.Pushout.torus_euler_from_cells' depends on axioms: [propext]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\HorizonFrontierTests.lean",
+      "lean_path": "spec_v4\\HorizonFrontierTests.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "spec_v4\\HorizonFrontierTests.lean:57:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nspec_v4\\HorizonFrontierTests.lean:81:41: warning: Variable name `C` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _C\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nspec_v4\\HorizonFrontierTests.lean:86:49: warning: Variable name `S` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _S\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nspec_v4\\HorizonFrontierTests.lean:209:8: warning: Unused tactic linter: `rfl` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nspec_v4\\HorizonFrontierTests.lean:209:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nspec_v4\\HorizonFrontierTests.lean:232:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nspec_v4\\HorizonFrontierTests.lean:261:6: warning: Unused tactic linter: `norm_num` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nspec_v4\\HorizonFrontierTests.lean:261:6: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n'TestHigherInductive.circle_base_loops' does not depend on any axioms\n'TestTopos.terminal_sheaf_always_valid' does not depend on any axioms\n'TestHomotopySphere.pi_n_sphere_iso_test' does not depend on any axioms\n'TestPhysicsApplication.vortex_winding_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\LandauerBekensteinBound.lean",
+      "lean_path": "spec_v4\\LandauerBekensteinBound.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\MillenniumBirchSwinnertonDyer.lean",
+      "lean_path": "spec_v4\\MillenniumBirchSwinnertonDyer.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Millennium.BirchSwinnertonDyer.bsd_rank_consistency' depends on axioms: [propext]\n'Math30.Millennium.BirchSwinnertonDyer.bsd_tateshafarevich_bounded' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\MillenniumCollatzGeneralization.lean",
+      "lean_path": "spec_v4\\MillenniumCollatzGeneralization.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\MillenniumHodgeConjecture.lean",
+      "lean_path": "spec_v4\\MillenniumHodgeConjecture.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Millennium.HodgeConjecture.hodge_cycle_consistency' depends on axioms: [propext]\n'Math30.Millennium.HodgeConjecture.hodge_cycle_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\MillenniumNavierStokesSmoothness.lean",
+      "lean_path": "spec_v4\\MillenniumNavierStokesSmoothness.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Millennium.NavierStokes.navier_stokes_energy_bounded' depends on axioms: [propext, Quot.sound]\n'Math30.Millennium.NavierStokes.navier_stokes_pressure_regularity' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\MillenniumPoincareConjecture.lean",
+      "lean_path": "spec_v4\\MillenniumPoincareConjecture.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Millennium.PoincareConjecture.poincare_conjecture_sphere_homeomorphism' does not depend on any axioms\n'Math30.Millennium.PoincareConjecture.ricci_flow_non_collapse_bound' depends on axioms: [propext, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\MillenniumRiemannHypothesis.lean",
+      "lean_path": "spec_v4\\MillenniumRiemannHypothesis.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Millennium.RiemannHypothesis.riemann_hypothesis_critical_line_bound' depends on axioms: [propext, Quot.sound]\n'Math30.Millennium.RiemannHypothesis.riemann_explicit_formula_positivity' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\NoCloningFiniteDim.lean",
+      "lean_path": "spec_v4\\NoCloningFiniteDim.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\RiemannAdversarialEvidence.lean",
+      "lean_path": "spec_v4\\RiemannAdversarialEvidence.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"RiemannAdversarialEvidence compiled with zero placeholders.\"\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\RiemannCriticalEvidence.lean",
+      "lean_path": "spec_v4\\RiemannCriticalEvidence.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Riemann.CriticalEvidence.riemann_critical_evidence_sealed' does not depend on any axioms\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\ShannonEntropyDPI.lean",
+      "lean_path": "spec_v4\\ShannonEntropyDPI.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\SturmTarskiIsolation.lean",
+      "lean_path": "spec_v4\\SturmTarskiIsolation.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.SturmTarski.sturm_remainder_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.SturmTarski.sturm_sequence_decidable_enclosure' depends on axioms: [propext, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\UniversalFinitaryInformationConservation.lean",
+      "lean_path": "spec_v4\\UniversalFinitaryInformationConservation.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\UniversalQuantumCoherencePhaseLock.lean",
+      "lean_path": "spec_v4\\UniversalQuantumCoherencePhaseLock.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "spec_v4\\UniversalQuantumCoherencePhaseLock.lean:14:32: warning: Variable name `h_amp` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h_amp\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'Math30.SpecV4.universal_quantum_coherence_phase_lock' depends on axioms: [propext, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\UniversalTopologicalInvariantSingularityResolution.lean",
+      "lean_path": "spec_v4\\UniversalTopologicalInvariantSingularityResolution.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "spec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:10:11: warning: Variable name `h_nonzero` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h_nonzero\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nspec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:17:8: warning: Unused tactic linter: `simp_all [Int.natAbs_ofNat]` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nspec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:18:8: warning: Unused tactic linter: `omega` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nspec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:17:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nspec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:18:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n'Math30.SpecV4.universal_topological_singularity_resolution' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\YangMillsLatticeBoundary.lean",
+      "lean_path": "spec_v4\\YangMillsLatticeBoundary.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.YangMills.yang_mills_lattice_stable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.YangMills.yang_mills_mass_gap_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\adversarial_tests\\CoreGateAdversarialStressTest.lean",
+      "lean_path": "spec_v4\\adversarial_tests\\CoreGateAdversarialStressTest.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\BealScale10to18Certificate.lean",
+      "lean_path": "spec_v4\\certificates\\BealScale10to18Certificate.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\DiscreteInertiaBoundaryDeterminant.lean",
+      "lean_path": "spec_v4\\certificates\\DiscreteInertiaBoundaryDeterminant.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\DiscreteSylvesterInertiaTraceNormInvariant.lean",
+      "lean_path": "spec_v4\\certificates\\DiscreteSylvesterInertiaTraceNormInvariant.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\RiemannZetaInvariantCertificate.lean",
+      "lean_path": "spec_v4\\certificates\\RiemannZetaInvariantCertificate.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Core.Certificate.universal_dibd_invariant_nat' depends on axioms: [propext]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\VolumeConjectureBoundary.lean",
+      "lean_path": "spec_v4\\certificates\\VolumeConjectureBoundary.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\smt_bridge\\box_feasibility_witness.lean",
+      "lean_path": "spec_v4\\smt_bridge\\box_feasibility_witness.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.SMTBridge.box_feasibility_witness_sat_witness' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\smt_bridge\\contraction_bound.lean",
+      "lean_path": "spec_v4\\smt_bridge\\contraction_bound.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.SMTBridge.contraction_bound_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\smt_bridge\\ledger_cross_multiplication.lean",
+      "lean_path": "spec_v4\\smt_bridge\\ledger_cross_multiplication.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.SMTBridge.ledger_cross_multiplication_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\smt_bridge\\sign_flip_absence.lean",
+      "lean_path": "spec_v4\\smt_bridge\\sign_flip_absence.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.SMTBridge.sign_flip_absence_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    }
+  ]
+}
