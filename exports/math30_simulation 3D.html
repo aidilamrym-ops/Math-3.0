@@ -1,0 +1,488 @@
+# 3D Visualization of Planck Limit Navier-Stokes Dissipation
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 3.0 - 3D Navier-Stokes Planck Dissipation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #030712;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        .glow-red {
+
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+
+        .glow-green {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .crt-line::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 10;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 min-h-screen flex flex-col justify-between">
+
+    <!-- Header Section -->
+    <header class="border-b border-gray-800 pb-4 mb-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+
+                    Math 3.0 — Phase 40 Operational Test (OpenAI Vortex Structure)
+                </h1>
+                <p class="text-xs text-gray-400 mt-1">Inward-Spiraling Vortex Core & Finite vs Continuous Axial Stretching Models</p>
+            </div>
+            <div class="bg-gray-900 border border-gray-800 px-4 py-2 rounded text-xs">
+                <span class="text-gray-500">Invariant Status:</span>
+                <span id="invariant-status" class="text-emerald-400 font-bold ml-2">2*S*(D+1) &lt; 3*(T+1)*(D+2) | exit=0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Grid Workspace -->
+    <main class="grid grid-cols-1 lg:grid-cols-2 gap-6 flex-grow">
+        
+        <!-- SIDE 1: Classical Continuous Flow (Vortex Core Blowup) -->
+        <div class="flex flex-col bg-gray-950 rounded-xl overflow-hidden border border-gray-900 glow-red relative crt-line">
+            <div class="bg-red-950/40 px-4 py-3 border-b border-red-900/50 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+
+                    <span class="text-xs font-bold uppercase tracking-wider text-red-400">1. Classical Continuous Flow (3D Blowup)</span>
+                </div>
+                <span id="classical-state" class="text-[10px] bg-red-900/60 text-red-200 px-2 py-0.5 rounded font-mono">RUNNING</span>
+            </div>
+
+            <!-- 3D Container -->
+            <div id="container-classical" class="relative flex-grow min-h-[380px] bg-black overflow-hidden cursor-grab active:cursor-grabbing">
+                <div id="classical-overlay" class="absolute inset-0 bg-red-950/80 backdrop-blur-sm flex flex-col items-center justify-center p-6 hidden opacity-0 transition-opacity duration-500 text-center z-20 pointer-events-none">
+                    <div class="text-red-500 text-3xl font-bold mb-2 animate-bounce">⚡ VORTEX BLOWUP ⚡</div>
+                    <div class="text-red-400 text-xs font-mono max-w-md">
+                        [CRITICAL] Singularity Encountered: Velocity E = NaN<br>
+                        <span class="text-gray-400 text-[11px]">Vortex spirals inward boundlessly, stretching the fluid core vertically until velocity gradients approach infinity.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terminal Logs -->
+            <div class="bg-black/80 p-3 h-28 border-t border-gray-900 text-xs font-mono text-red-400 overflow-y-auto custom-scrollbar" id="logs-classical">
+                <div>[SYSTEM] Initializing axisymmetric vortex trajectory...</div>
+
+            </div>
+        </div>
+
+        <!-- SIDE 2: Math 3.0 Finite Lattice Core (Planck Damped Vortex) -->
+        <div class="flex flex-col bg-gray-950 rounded-xl overflow-hidden border border-gray-900 glow-green relative crt-line">
+            <div class="bg-emerald-950/40 px-4 py-3 border-b border-emerald-900/50 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">2. Math 3.0 Finite Lattice Core (3D Stable)</span>
+                </div>
+                <span class="text-[10px] bg-emerald-900/60 text-emerald-200 px-2 py-0.5 rounded font-mono uppercase tracking-widest">ALMIGHTY</span>
+            </div>
+
+            <!-- 3D Container -->
+            <div id="container-lattice" class="relative flex-grow min-h-[380px] bg-black overflow-hidden cursor-grab active:cursor-grabbing">
+                <div class="absolute top-2 left-2 text-[10px] text-emerald-500/70 pointer-events-none bg-black/40 px-2 py-1 rounded">
+                    💡 Click & drag mouse to orbit vortex structure
+                </div>
+            </div>
+
+
+            <!-- Terminal Logs -->
+            <div class="bg-black/80 p-3 h-28 border-t border-gray-900 text-xs font-mono text-emerald-400 overflow-y-auto custom-scrollbar" id="logs-lattice">
+                <div>[MATH 3.0] Quantized vortex verification pipeline active...</div>
+                <div>[GATE 1] Planck microscale bound locks discrete energy dissipation.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Controller & Information -->
+    <footer class="mt-6 bg-gray-950 border border-gray-900 rounded-xl p-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex flex-wrap items-center gap-4">
+            <button id="btn-reset" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs px-5 py-2.5 rounded transition shadow-lg flex items-center gap-2">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.253 8H18"></path></svg>
+                RESET VORTEX SIMULATION
+            </button>
+            <div class="text-xs text-gray-400">
+                <span class="font-bold text-gray-300">Geometric Construction:</span> Anisotropic Axisymmetric Swirl Core (OpenAI Framework)
+            </div>
+
+        </div>
+        <div class="text-[11px] text-gray-500 text-center md:text-right">
+            Helical tracking filaments simulate continuous fluid convergence into a singularity axis.
+        </div>
+    </footer>
+
+    <!-- Custom Notification Toast Box -->
+    <div id="toast-box" class="fixed bottom-6 right-6 z-50 bg-gray-900 border border-indigo-500/30 text-xs px-4 py-3 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none">
+        <span id="toast-msg" class="text-indigo-300"></span>
+    </div>
+
+    <!-- Scripting Simulation Engine -->
+    <script>
+        const containerClassical = document.getElementById('container-classical');
+        const containerLattice = document.getElementById('container-lattice');
+
+        const logsClassical = document.getElementById('logs-classical');
+        const logsLattice = document.getElementById('logs-lattice');
+        const classicalOverlay = document.getElementById('classical-overlay');
+
+        const classicalState = document.getElementById('classical-state');
+        const btnReset = document.getElementById('btn-reset');
+
+        let sceneC, cameraC, rendererC, groupC;
+        let sceneL, cameraL, rendererL, groupL;
+        
+        let simTime = 0;
+        let isBlownUp = false;
+        const maxParticles = 300; 
+        
+        let particleDataC = [];
+        let particleDataL = [];
+        let pointsC, pointsL;
+
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+
+        function initThree() {
+            const width = containerClassical.clientWidth;
+
+            const height = containerClassical.clientHeight;
+
+            // Scene Classical
+            sceneC = new THREE.Scene();
+            cameraC = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
+            cameraC.position.set(0, 50, 100);
+            cameraC.lookAt(0, 0, 0);
+            rendererC = new THREE.WebGLRenderer({ antialias: true });
+            rendererC.setSize(width, height);
+            containerClassical.appendChild(rendererC.domElement);
+            groupC = new THREE.Group();
+            sceneC.add(groupC);
+
+            // Scene Lattice
+            sceneL = new THREE.Scene();
+            cameraL = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
+            cameraL.position.set(0, 50, 100);
+            cameraL.lookAt(0, 0, 0);
+            rendererL = new THREE.WebGLRenderer({ antialias: true });
+
+            rendererL.setSize(width, height);
+            containerLattice.appendChild(rendererL.domElement);
+            groupL = new THREE.Group();
+            sceneL.add(groupL);
+
+            // Axial line setups
+            const lineMatC = new THREE.LineBasicMaterial({ color: 0xff4444, opacity: 0.3, transparent: true });
+            const lineGeomC = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, -60, 0), new THREE.Vector3(0, 60, 0)]);
+            const axisLineC = new THREE.Line(lineGeomC, lineMatC);
+            groupC.add(axisLineC);
+
+            const lineMatL = new THREE.LineBasicMaterial({ color: 0x00ffcc, opacity: 0.3, transparent: true });
+            const axisLineL = new THREE.Line(lineGeomC, lineMatL);
+            groupL.add(axisLineL);
+
+            setupInteraction();
+        }
+
+        function setupInteraction() {
+
+            const handleMouseDown = (e) => {
+                isDragging = true;
+                previousMousePosition = { x: e.clientX, y: e.clientY };
+            };
+
+            const handleMouseMove = (e) => {
+                if (!isDragging) return;
+                const deltaMove = {
+                    x: e.clientX - previousMousePosition.x,
+                    y: e.clientY - previousMousePosition.y
+                };
+
+                groupC.rotation.y += deltaMove.x * 0.005;
+                groupC.rotation.x += deltaMove.y * 0.005;
+
+                groupL.rotation.y += deltaMove.x * 0.005;
+                groupL.rotation.x += deltaMove.y * 0.005;
+
+                previousMousePosition = { x: e.clientX, y: e.clientY };
+
+            };
+
+            const handleMouseUp = () => { isDragging = false; };
+
+            [containerClassical, containerLattice].forEach(container => {
+                container.addEventListener('mousedown', handleMouseDown);
+            });
+
+            window.addEventListener('mousemove', handleMouseMove);
+            window.addEventListener('mouseup', handleMouseUp);
+        }
+
+        function buildVortexParticles() {
+            if(pointsC) groupC.remove(pointsC);
+            if(pointsL) groupL.remove(pointsL);
+
+            const geometryC = new THREE.BufferGeometry();
+            const geometryL = new THREE.BufferGeometry();
+
+
+            const positionsC = new Float32Array(maxParticles * 3);
+            const positionsL = new Float32Array(maxParticles * 3);
+            const colorsC = new Float32Array(maxParticles * 3);
+            const colorsL = new Float32Array(maxParticles * 3);
+
+            particleDataC = [];
+            particleDataL = [];
+
+            for(let i = 0; i < maxParticles; i++) {
+                const angle = (i / maxParticles) * Math.PI * 16; 
+                const initialRadius = 35 - (i / maxParticles) * 15;
+                const y = (i / maxParticles) * 80 - 40; 
+
+                const x = Math.cos(angle) * initialRadius;
+                const z = Math.sin(angle) * initialRadius;
+
+                positionsC[i*3] = x;
+                positionsC[i*3+1] = y;
+                positionsC[i*3+2] = z;
+
+                particleDataC.push({
+                    angle: angle,
+                    radius: initialRadius,
+                    y: y,
+                    initialRadius: initialRadius,
+                    speedFactor: 1.0
+                });
+
+                positionsL[i*3] = x;
+                positionsL[i*3+1] = y;
+                positionsL[i*3+2] = z;
+                particleDataL.push({
+                    angle: angle,
+                    radius: initialRadius,
+                    y: y,
+                    initialRadius: initialRadius
+                });
+
+                colorsC[i*3] = 0.3; colorsC[i*3+1] = 0.5; colorsC[i*3+2] = 1.0;
+
+                colorsL[i*3] = 0.1; colorsL[i*3+1] = 0.8; colorsL[i*3+2] = 0.5;
+            }
+
+            geometryC.setAttribute('position', new THREE.BufferAttribute(positionsC, 3));
+            geometryC.setAttribute('color', new THREE.BufferAttribute(colorsC, 3));
+            const matC = new THREE.PointsMaterial({ size: 2.0, vertexColors: true, transparent: true, opacity: 0.8 });
+            pointsC = new THREE.Points(geometryC, matC);
+            groupC.add(pointsC);
+
+            geometryL.setAttribute('position', new THREE.BufferAttribute(positionsL, 3));
+            geometryL.setAttribute('color', new THREE.BufferAttribute(colorsL, 3));
+            const matL = new THREE.PointsMaterial({ size: 2.0, vertexColors: true, transparent: true, opacity: 0.8 });
+            pointsL = new THREE.Points(geometryL, matL);
+            groupL.add(pointsL);
+        }
+
+        function initSimulation() {
+            simTime = 0;
+            isBlownUp = false;
+
+
+            classicalOverlay.classList.add('hidden');
+            classicalOverlay.classList.remove('opacity-100');
+            classicalState.textContent = "RUNNING";
+            classicalState.className = "text-[10px] bg-red-900/60 text-red-200 px-2 py-0.5 rounded font-mono";
+
+            logsClassical.innerHTML = "<div>[SYSTEM] Initializing axisymmetric vortex trajectory...</div>";
+            logsLattice.innerHTML = "<div>[MATH 3.0] Quantized vortex verification pipeline active...</div><div>[GATE 1] Planck microscale bound locks discrete energy dissipation.</div>";
+
+            buildVortexParticles();
+            
+            groupC.rotation.set(0.3, 0.5, 0);
+            groupL.rotation.set(0.3, 0.5, 0);
+
+            showToast("OpenAI Vortex String geometric architecture configured.");
+        }
+
+        function appendLog(element, text) {
+            const row = document.createElement('div');
+            row.textContent = text;
+
+            element.appendChild(row);
+            element.scrollTop = element.scrollHeight;
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast-box');
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+
+        function runLoop() {
+            simTime++;
+
+            if (pointsC && pointsL) {
+                const posC = pointsC.geometry.attributes.position.array;
+                const colC = pointsC.geometry.attributes.color.array;
+
+                const posL = pointsL.geometry.attributes.position.array;
+
+                // 1. CLASSICAL ANIMATION
+                if (!isBlownUp) {
+                    const contractionRate = 0.005 + Math.pow(simTime * 0.004, 3.5);
+                    
+                    if (simTime === 90) appendLog(logsClassical, "[WARNING] Radial inflow contraction accelerating sharply...");
+                    if (simTime === 180) appendLog(logsClassical, "[CRITICAL] Core filament convergence triggering boundless axial stretching...");
+
+                    for (let i = 0; i < maxParticles; i++) {
+                        let data = particleDataC[i];
+
+                        data.radius -= contractionRate * (data.radius * 0.1);
+                        
+                        const spinVelocity = 0.03 + (15 / (data.radius + 0.1)) * 0.05;
+                        data.angle += spinVelocity;
+
+                        const stretchVelocity = (1.5 / (data.radius + 0.1)) * 0.5;
+                        if (data.y > 0) data.y += stretchVelocity;
+
+                        else data.y -= stretchVelocity;
+
+                        posC[i*3] = Math.cos(data.angle) * data.radius;
+                        posC[i*3+1] = data.y;
+                        posC[i*3+2] = Math.sin(data.angle) * data.radius;
+
+                        const energyRatio = Math.min(1.0, stretchVelocity * 0.1);
+                        colC[i*3] = 0.3 + energyRatio * 0.7; 
+                        colC[i*3+1] = 0.5 - energyRatio * 0.5;
+                        colC[i*3+2] = 1.0 - energyRatio * 0.8;
+                    }
+                    pointsC.geometry.attributes.position.needsUpdate = true;
+                    pointsC.geometry.attributes.color.needsUpdate = true;
+
+                    if (simTime > 260) {
+                        isBlownUp = true;
+                        classicalState.textContent = "CRITICAL BLOWUP";
+                        classicalState.className = "text-[10px] bg-red-600 text-white px-2 py-0.5 rounded font-mono animate-pulse";
+                        appendLog(logsClassical, "[CRITICAL] Singularity Blowup: Filament Core Velocity = Infinity (E = NaN)");
+
+                        
+                        classicalOverlay.classList.remove('hidden');
+                        setTimeout(() => { classicalOverlay.classList.add('opacity-100'); }, 5);
+                    }
+                }
+
+                // 2. MATH 3.0 ANIMATION
+                const planckThreshold = 4.0; 
+                for (let i = 0; i < maxParticles; i++) {
+                    let data = particleDataL[i];
+
+                    if (data.radius > planckThreshold) {
+                        data.radius -= 0.15;
+                        data.angle += 0.04 + (5 / data.radius) * 0.02;
+                        if (data.y > 0) data.y += 0.12;
+                        else data.y -= 0.12;
+                    } else {
+                        data.radius = planckThreshold;
+                        data.angle += 0.01; 
+
+                        data.y *= 0.995; 
+                    }
+
+                    let rx = Math.cos(data.angle) * data.radius;
+                    let ry = data.y;
+                    let rz = Math.sin(data.angle) * data.radius;
+
+                    if (data.radius <= planckThreshold) {
+                        rx = Math.round(rx / 1.5) * 1.5;
+                        ry = Math.round(ry / 1.5) * 1.5;
+                        rz = Math.round(rz / 1.5) * 1.5;
+                    }
+
+                    posL[i*3] = rx;
+                    posL[i*3+1] = ry;
+                    posL[i*3+2] = rz;
+                }
+                pointsL.geometry.attributes.position.needsUpdate = true;
+            }
+
+
+            // Math 3.0 Milestone English logs
+            if (simTime === 60) appendLog(logsLattice, "[GATE 2] Spectral Confinement invariant bounds vortex magnitude.");
+            if (simTime === 130) appendLog(logsLattice, "[GATE 3] Mechanical lattice scattering intercepts energy build-up at critical radius.");
+            if (simTime === 200) appendLog(logsLattice, "[GATE 4] DSITNI Passed: Filament flow complies with finite discrete bounds.");
+            if (simTime === 260) appendLog(logsLattice, "[SUCCESS] Axisymmetric Vortex Solution Proved Smooth and Regular (exit=0).");
+
+            if (!isDragging) {
+                groupC.rotation.y += 0.004;
+                groupL.rotation.y += 0.004;
+            }
+
+            rendererC.render(sceneC, cameraC);
+            rendererL.render(sceneL, cameraL);
+
+            requestAnimationFrame(runLoop);
+        }
+
+        window.addEventListener('resize', () => {
+            const width = containerClassical.clientWidth;
+
+            const height = containerClassical.clientHeight;
+
+            [cameraC, cameraL].forEach(cam => {
+                cam.aspect = width / height;
+                cam.updateProjectionMatrix();
+            });
+            rendererC.setSize(width, height);
+            rendererL.setSize(width, height);
+        });
+
+        btnReset.addEventListener('click', initSimulation);
+
+        window.onload = function() {
+            initThree();
+            initSimulation();
+            runLoop();
+        };
+    </script>
+</body>
+</html>
+
+

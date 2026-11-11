@@ -38,7 +38,7 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
 | **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **1-bit fault sentinel** | `manifest.json` tracks every file (1,511 rows); any unverified change fails closed. |
+| **1-bit fault sentinel** | `manifest.json` tracks every file (1,515 rows); any unverified change fails closed. |
 
 ---
 
@@ -418,10 +418,10 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-26ff3bbf4bfc9483ed31b540d6b24558a33165352802a1dca834f6fd57cba81e
+4c111e6ed21042c5ee49b232235089363cdd5b72457b22d3cb43573555af4ded
 ```
 
-**Manifest Rows:** 1,511 files pinned  
+**Manifest Rows:** 1,515 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Mon Nov 09 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -466,7 +466,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,511-row SHA-256 ledger
+├── manifest.json                  # 1,515-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -575,10 +575,20 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,511 rows, SHA-256 locked: `26ff3bbf4bfc9483ed31b540d6b24558a33165352802a1dca834f6fd57cba81e`  
+> **Manifest:** 1,515 rows, SHA-256 locked: `4c111e6ed21042c5ee49b232235089363cdd5b72457b22d3cb43573555af4ded`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 
 
 ---
 
+
+
+## Auto-Facts Summary
+
+<!-- AUTO-FACTS:START -->
+- **Manifest Pinned Files:** 1,511
+- **Full-Surface Lean Files:** 490 (100% compiled PASS)
+- **Tracked Claims in Ledger:** 95
+- **Resolved README Theorem Names:** 39/39 PASS
+<!-- AUTO-FACTS:END -->
