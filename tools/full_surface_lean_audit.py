@@ -11,11 +11,12 @@
 Each file is compiled independently (no local module imports exist, so this is
 sound), with at most two concurrent Lean processes.  Results stream to a
 checkpoint file so an interrupted run can be resumed, and a final JSON + Markdown
-report is written to `reports/`.
+report is written to the output directory.
 
 Usage:
     python tools/full_surface_lean_audit.py [--workers 2] [--timeout 240]
                                             [--resume] [--only PATH_SUBSTRING]
+                                            [--surface DIR ...] [--out-dir DIR]
 """
 
 from __future__ import annotations
@@ -31,21 +32,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LEAN_ROOT = ROOT / "lean"
-REPORTS = ROOT / "reports"
-CHECKPOINT = REPORTS / "_full_surface_progress.jsonl"
-JSON_REPORT = REPORTS / "full_surface_lean_audit.json"
-MD_REPORT = REPORTS / "full_surface_lean_audit.md"
+DEFAULT_REPORTS = ROOT / "reports"
 
-SURFACES = [
+DEFAULT_SURFACES = [
     LEAN_ROOT / "spec_v4",
     ROOT / "Math30Kernel",
     ROOT / "Math30Interfaces",
 ]
 
 
-def enumerate_files() -> list[Path]:
+def enumerate_files(surfaces: list[Path]) -> list[Path]:
     files: list[Path] = []
-    for surface in SURFACES:
+    for surface in surfaces:
         if not surface.exists():
             continue
         files.extend(sorted(surface.rglob("*.lean")))
@@ -53,8 +51,19 @@ def enumerate_files() -> list[Path]:
 
 
 def lean_relative(path: Path) -> str:
-    """Path as passed to `lake env lean` (cwd = lean/), e.g. ../Math30Kernel/X.lean."""
-    return os.path.relpath(path, LEAN_ROOT).replace("\\", "/")
+    """Path as passed to `lake env lean` (cwd = lean/)."""
+    try:
+        rel = path.relative_to(LEAN_ROOT)
+    except ValueError:
+        return str(path).replace("\\", "/")
+    return str(rel).replace("\\", "/")
+
+
+def display_path(path: Path) -> str:
+    try:
+        return str(path.relative_to(ROOT)).replace("\\", "/")
+    except ValueError:
+        return str(path).replace("\\", "/")
 
 
 def parse_warnings(stdout: str, stderr: str) -> int:
@@ -88,7 +97,7 @@ def compile_one(path: Path, timeout: int) -> dict:
         warnings = parse_warnings(proc.stdout, proc.stderr)
         status = "PASS" if proc.returncode == 0 else "FAIL"
         return {
-            "path": str(path.relative_to(ROOT)).replace("\\", "/"),
+            "path": display_path(path),
             "lean_path": rel,
             "rc": proc.returncode,
             "status": status,
@@ -100,7 +109,7 @@ def compile_one(path: Path, timeout: int) -> dict:
         }
     except subprocess.TimeoutExpired:
         return {
-            "path": str(path.relative_to(ROOT)).replace("\\", "/"),
+            "path": display_path(path),
             "lean_path": rel,
             "rc": None,
             "status": "TIMEOUT",
@@ -112,7 +121,7 @@ def compile_one(path: Path, timeout: int) -> dict:
         }
     except Exception as exc:  # noqa: BLE001
         return {
-            "path": str(path.relative_to(ROOT)).replace("\\", "/"),
+            "path": display_path(path),
             "lean_path": rel,
             "rc": None,
             "status": "ERROR",
@@ -124,10 +133,10 @@ def compile_one(path: Path, timeout: int) -> dict:
         }
 
 
-def load_checkpoint() -> dict[str, dict]:
+def load_checkpoint(path: Path) -> dict[str, dict]:
     done: dict[str, dict] = {}
-    if CHECKPOINT.exists():
-        for line in CHECKPOINT.read_text(encoding="utf-8").splitlines():
+    if path.exists():
+        for line in path.read_text(encoding="utf-8").splitlines():
             line = line.strip()
             if not line:
                 continue
@@ -146,23 +155,38 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=240)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--only", default=None, help="only paths containing this substring")
+    parser.add_argument(
+        "--surface", action="append", default=None,
+        help="override the audited directories (repeatable)",
+    )
+    parser.add_argument(
+        "--out-dir", default=None,
+        help="directory for reports/checkpoint (default: reports/)",
+    )
     args = parser.parse_args()
 
     workers = max(1, min(2, args.workers))
-    REPORTS.mkdir(exist_ok=True)
+    out_dir = Path(args.out_dir).resolve() if args.out_dir else DEFAULT_REPORTS
+    out_dir.mkdir(parents=True, exist_ok=True)
 
-    files = enumerate_files()
+    checkpoint_path = out_dir / "_full_surface_progress.jsonl"
+    json_report = out_dir / "full_surface_lean_audit.json"
+    md_report = out_dir / "full_surface_lean_audit.md"
+    log_path = out_dir / "full_surface_lean_audit.log"
+
+    surfaces = [Path(s).resolve() for s in args.surface] if args.surface else DEFAULT_SURFACES
+
+    files = enumerate_files(surfaces)
     if args.only:
         needle = args.only.lower()
         files = [f for f in files if needle in str(f).lower()]
 
-    done = load_checkpoint() if args.resume else {}
-    if not args.resume and CHECKPOINT.exists():
-        CHECKPOINT.unlink()
+    done = load_checkpoint(checkpoint_path) if args.resume else {}
+    if not args.resume and checkpoint_path.exists():
+        checkpoint_path.unlink()
 
-    pending = [f for f in files if str(f.relative_to(ROOT)).replace("\\", "/") not in done]
+    pending = [f for f in files if display_path(f) not in done]
 
-    log_path = REPORTS / "full_surface_lean_audit.log"
     log = open(log_path, "a", encoding="utf-8")  # noqa: SIM115
     log.write(f"\n=== run start {time.strftime('%Y-%m-%d %H:%M:%S')} "
               f"files={len(files)} pending={len(pending)} workers={workers} ===\n")
@@ -175,7 +199,7 @@ def main() -> int:
         nonlocal completed
         done[row["path"]] = row
         completed += 1
-        with CHECKPOINT.open("a", encoding="utf-8") as fh:
+        with checkpoint_path.open("a", encoding="utf-8") as fh:
             fh.write(json.dumps(row, ensure_ascii=False) + "\n")
         flag = row["status"]
         log.write(f"[{completed}/{total}] {flag:7s} {row['seconds']:7.2f}s "
@@ -200,7 +224,7 @@ def main() -> int:
 
     report = {
         "generated": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "surfaces": [str(s.relative_to(ROOT)).replace("\\", "/") for s in SURFACES],
+        "surfaces": [display_path(s) for s in surfaces],
         "total_files": len(files),
         "compiled": len(results),
         "counts": counts,
@@ -223,7 +247,7 @@ def main() -> int:
         ],
         "results": results,
     }
-    JSON_REPORT.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+    json_report.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
 
     md = [
         "# Full-Surface Lean Compile Audit",
@@ -255,7 +279,7 @@ def main() -> int:
     else:
         md.append("None. All compiling files emitted no warnings.")
 
-    MD_REPORT.write_text("\n".join(md) + "\n", encoding="utf-8")
+    md_report.write_text("\n".join(md) + "\n", encoding="utf-8")
 
     print(f"total={report['total_files']} compiled={report['compiled']} counts={counts}")
     print(f"pass_with_warnings={warn_total} seconds={total_seconds}")
@@ -264,7 +288,7 @@ def main() -> int:
 
     ok = counts.get("FAIL", 0) == 0 and counts.get("TIMEOUT", 0) == 0 and counts.get("ERROR", 0) == 0
     if ok and report["compiled"] == report["total_files"]:
-        CHECKPOINT.unlink(missing_ok=True)
+        checkpoint_path.unlink(missing_ok=True)
     return 0 if ok and report["compiled"] == report["total_files"] else 1
 
 

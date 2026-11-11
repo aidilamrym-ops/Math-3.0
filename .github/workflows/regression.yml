@@ -1,0 +1,72 @@
+name: Math 3.0 Regression Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # nightly run for broader coverage
+    - cron: '0 2 * * *'
+
+env:
+  # Ensure we never exceed 2 concurrent processes for any tool that allows it
+  MAX_JOBS: 2
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Future: could add OS or version variations
+        include:
+          - name: linux-ubuntu
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies (none beyond stdlib)
+        run: pip install --no-deps .
+
+      - name: Verify manifest ledger (repokeeper --verify)
+        run: python mcp/t2n/core/repokeeper.py --verify
+
+      - name: Anti-Circularity Gate (strict)
+        run: python tools/omega_audit/gate_strict.py check lean/
+
+      - name: Full‑Surface Lean compile audit (490 files, max 2 workers)
+        run: python tools/full_surface_lean_audit.py --workers 2
+
+      - name: README claim audit (cited files type‑check)
+        run: python tools/readme_lean_audit.py
+
+      - name: Theorem‑name audit (backticked identifiers exist)
+        run: python tools/readme_theorem_audit.py
+
+      - name: Axiom footprint audit (allowlist propext, Classical.choice, Quot.sound)
+        run: python tools/axiom_footprint_audit.py
+
+      - name: Vacuity / statement‑strength audit (True, reflexive, empty hypotheses)
+        run: python tools/vacuity_statement_strength_audit.py
+
+      - name: Claims ledger (README → Lean mapping)
+        run: python tools/claim_ledger.py
+
+      - name: Bridge coverage (JSON ↔ Lean mirror)
+        run: python tools/bridge_coverage.py
+
+      - name: Run regression test suite (Gates 1‑6 + Lean 4)
+        run: python tools/run_regression_tests.py
+
+      - name: Summarize reports
+        run: |
+          echo "=== All audits completed successfully ==="
+          find reports -name "*.json" -exec sh -c 'echo "$(basename {}): $(jq -r ".generated // \"unknown\"" {} 2>/dev/null || echo \"n/a\")"' \;
+          echo "=== End of audit summary ==="
+        shell: bash

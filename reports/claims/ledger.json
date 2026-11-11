@@ -1,0 +1,846 @@
+[
+  {
+    "id": "python-flint",
+    "prose": "- arbitrary-precision interval arithmetic using `python-flint` (24,000-bit precision lock);",
+    "artifact": [],
+    "theorem_name": "python-flint",
+    "provenance": "unknown",
+    "class": "numerical evidence"
+  },
+  {
+    "id": "lean/spec_v4",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "lean/spec_v4",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "Math30Kernel",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "Math30Kernel",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "Math30Interfaces",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "Math30Interfaces",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "sorryAx",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "sorryAx",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "axiom",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "axiom",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "constant",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "constant",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "opaque",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "opaque",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "partial def",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "partial def",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "native_decide",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "native_decide",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "implemented_by",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "implemented_by",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "extern",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "extern",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "make gate",
+    "prose": "| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |",
+    "artifact": [],
+    "theorem_name": "make gate",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "by decide",
+    "prose": "│ GATE 6: KERNEL DECISION & SMT TRIBUNAL (Lean 4 `by decide` / Z3 Bounded Model)    │",
+    "artifact": [],
+    "theorem_name": "by decide",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "dsitni_general",
+    "prose": "(`dsitni_general`, unconditional over $\\mathbb{N}$, Mathlib `nlinarith`/`omega`, no `sorry`).",
+    "artifact": [
+      "lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean"
+    ],
+    "theorem_name": "dsitni_general",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "nlinarith",
+    "prose": "(`dsitni_general`, unconditional over $\\mathbb{N}$, Mathlib `nlinarith`/`omega`, no `sorry`).",
+    "artifact": [],
+    "theorem_name": "nlinarith",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "omega",
+    "prose": "(`dsitni_general`, unconditional over $\\mathbb{N}$, Mathlib `nlinarith`/`omega`, no `sorry`).",
+    "artifact": [],
+    "theorem_name": "omega",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "2S(D+1) < 3(T+1)(D+2)",
+    "prose": "**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.",
+    "artifact": [],
+    "theorem_name": "2S(D+1) < 3(T+1)(D+2)",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "R_DSITNI < 1/2",
+    "prose": "**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.",
+    "artifact": [],
+    "theorem_name": "R_DSITNI < 1/2",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "4S(D+1) < 3(T+1)(D+2)",
+    "prose": "**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.",
+    "artifact": [],
+    "theorem_name": "4S(D+1) < 3(T+1)(D+2)",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "d=(1,1,100)",
+    "prose": "**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.",
+    "artifact": [],
+    "theorem_name": "d=(1,1,100)",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "dsitni_half_threshold_refuted",
+    "prose": "**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.",
+    "artifact": [],
+    "theorem_name": "dsitni_half_threshold_refuted",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "finitary_information_conservation",
+    "prose": "**Theorem (`finitary_information_conservation`):**",
+    "artifact": [
+      "lean/spec_v4/UniversalFinitaryInformationConservation.lean"
+    ],
+    "theorem_name": "finitary_information_conservation",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "spectral_gravity_stable",
+    "prose": "**Core Theorem (`spectral_gravity_stable`):** Discrete curvature tensor bounded under Planck pixel constraint $\\Delta > 0$.",
+    "artifact": [
+      "lean/spec_v4/FiniteLatticeSpectralGravity.lean"
+    ],
+    "theorem_name": "spectral_gravity_stable",
+    "provenance": "local",
+    "class": "numerical evidence"
+  },
+  {
+    "id": "navier_stokes_dissipation_bounded",
+    "prose": "**Core Theorem (`navier_stokes_dissipation_bounded`):** The discrete viscous energy ledger satisfies $\\epsilon \\le \\nu \\cdot (\\nabla v)^2 + C$.",
+    "artifact": [
+      "lean/spec_v4/FiniteNavierStokesDissipation.lean"
+    ],
+    "theorem_name": "navier_stokes_dissipation_bounded",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "critical_line_lattice_stable",
+    "prose": "**Core Theorem (`critical_line_lattice_stable`):** A finite lattice model records critical-line intervals $\\sigma = 1/2$ with a Guinand trace stabilization invariant.",
+    "artifact": [
+      "lean/spec_v4/FiniteRiemannZetaLattice.lean"
+    ],
+    "theorem_name": "critical_line_lattice_stable",
+    "provenance": "local",
+    "class": "numerical evidence"
+  },
+  {
+    "id": "p_vs_np_circuit_separation",
+    "prose": "**Core Theorem (`p_vs_np_circuit_separation`):** A bounded $n=10$ circuit instance satisfies polynomial verification time below $2^{10}$.",
+    "artifact": [
+      "lean/spec_v4/FinitePvNPSeparationLattice.lean",
+      "lean/spec_v4/MillenniumPvsNPSeparation.lean"
+    ],
+    "theorem_name": "p_vs_np_circuit_separation",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "yang_mills_mass_gap_positive",
+    "prose": "**Core Theorem (`yang_mills_mass_gap_positive`):** Mass gap $m \\ge 1$ is strictly positive under the finite Wilson action bound $a \\le 4\\beta + 1$.",
+    "artifact": [
+      "lean/spec_v4/FiniteYangMillsMassGapLattice.lean",
+      "lean/spec_v4/YangMillsLatticeBoundary.lean"
+    ],
+    "theorem_name": "yang_mills_mass_gap_positive",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "cantor_no_surjection",
+    "prose": "| `CantorDiagonalization.lean` | `cantor_no_surjection`: no function `ℕ → (ℕ → Bool)` is surjective; the diagonal witness is constructive. | Full finite-statement proof (Cantor, 1891). |",
+    "artifact": [
+      "lean/spec_v4/CantorDiagonalization.lean"
+    ],
+    "theorem_name": "cantor_no_surjection",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "ℕ → (ℕ → Bool)",
+    "prose": "| `CantorDiagonalization.lean` | `cantor_no_surjection`: no function `ℕ → (ℕ → Bool)` is surjective; the diagonal witness is constructive. | Full finite-statement proof (Cantor, 1891). |",
+    "artifact": [],
+    "theorem_name": "ℕ → (ℕ → Bool)",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "dpi_card_nonexpansive",
+    "prose": "| `ShannonEntropyDPI.lean` | `dpi_card_nonexpansive` and `dpi_composition`: a surjective deterministic channel cannot increase finite cardinality. | Finite-set core of the data-processing inequality; not full Shannon entropy. |",
+    "artifact": [
+      "lean/spec_v4/ShannonEntropyDPI.lean"
+    ],
+    "theorem_name": "dpi_card_nonexpansive",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "dpi_composition",
+    "prose": "| `ShannonEntropyDPI.lean` | `dpi_card_nonexpansive` and `dpi_composition`: a surjective deterministic channel cannot increase finite cardinality. | Finite-set core of the data-processing inequality; not full Shannon entropy. |",
+    "artifact": [
+      "lean/spec_v4/ShannonEntropyDPI.lean"
+    ],
+    "theorem_name": "dpi_composition",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "landauer_bits_le_energy",
+    "prose": "| `LandauerBekensteinBound.lean` | `landauer_bits_le_energy`: with per-bit cost `cost ≥ 1`, `bits ≤ bits * cost`; `bekenstein_capacity_le_radius/energy`: finite capacity is bounded by both budgets. | Discrete accounting invariants; not a derivation of the physical constants. |",
+    "artifact": [
+      "lean/spec_v4/LandauerBekensteinBound.lean"
+    ],
+    "theorem_name": "landauer_bits_le_energy",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "cost ≥ 1",
+    "prose": "| `LandauerBekensteinBound.lean` | `landauer_bits_le_energy`: with per-bit cost `cost ≥ 1`, `bits ≤ bits * cost`; `bekenstein_capacity_le_radius/energy`: finite capacity is bounded by both budgets. | Discrete accounting invariants; not a derivation of the physical constants. |",
+    "artifact": [],
+    "theorem_name": "cost ≥ 1",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "bits ≤ bits * cost",
+    "prose": "| `LandauerBekensteinBound.lean` | `landauer_bits_le_energy`: with per-bit cost `cost ≥ 1`, `bits ≤ bits * cost`; `bekenstein_capacity_le_radius/energy`: finite capacity is bounded by both budgets. | Discrete accounting invariants; not a derivation of the physical constants. |",
+    "artifact": [],
+    "theorem_name": "bits ≤ bits * cost",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "bekenstein_capacity_le_radius/energy",
+    "prose": "| `LandauerBekensteinBound.lean` | `landauer_bits_le_energy`: with per-bit cost `cost ≥ 1`, `bits ≤ bits * cost`; `bekenstein_capacity_le_radius/energy`: finite capacity is bounded by both budgets. | Discrete accounting invariants; not a derivation of the physical constants. |",
+    "artifact": [],
+    "theorem_name": "bekenstein_capacity_le_radius/energy",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "no_cloning_finite",
+    "prose": "| `NoCloningFiniteDim.lean` | `no_cloning_finite`: no additive clone map on a two-dimensional integer state space clones two basis states and their sum. | Finite linear-algebra toy; not a full Hilbert-space quantum no-cloning proof. |",
+    "artifact": [
+      "lean/spec_v4/NoCloningFiniteDim.lean"
+    ],
+    "theorem_name": "no_cloning_finite",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "euclid_infinite_primes",
+    "prose": "| `EuclidFermatArmor.lean` | `euclid_infinite_primes` (Mathlib’s Euclid theorem) plus three finite Fermat residue checks. | Euclid is a full imported theorem; Fermat entries are finite instances, not the general theorem. |",
+    "artifact": [
+      "lean/spec_v4/EuclidFermatArmor.lean"
+    ],
+    "theorem_name": "euclid_infinite_primes",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "pigeonhole_finite",
+    "prose": "| `ErdosSzekeresRamsey.lean` | `pigeonhole_finite`, `erdos_szekeres_pair` (the `k=l=2` case), and `ramsey_one_edge`. | Finite pigeonhole and the smallest Erdős–Szekeres/Ramsey instances; not the full theorems. |",
+    "artifact": [
+      "lean/spec_v4/ErdosSzekeresRamsey.lean"
+    ],
+    "theorem_name": "pigeonhole_finite",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "erdos_szekeres_pair",
+    "prose": "| `ErdosSzekeresRamsey.lean` | `pigeonhole_finite`, `erdos_szekeres_pair` (the `k=l=2` case), and `ramsey_one_edge`. | Finite pigeonhole and the smallest Erdős–Szekeres/Ramsey instances; not the full theorems. |",
+    "artifact": [
+      "lean/spec_v4/ErdosSzekeresRamsey.lean"
+    ],
+    "theorem_name": "erdos_szekeres_pair",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "k=l=2",
+    "prose": "| `ErdosSzekeresRamsey.lean` | `pigeonhole_finite`, `erdos_szekeres_pair` (the `k=l=2` case), and `ramsey_one_edge`. | Finite pigeonhole and the smallest Erdős–Szekeres/Ramsey instances; not the full theorems. |",
+    "artifact": [],
+    "theorem_name": "k=l=2",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "ramsey_one_edge",
+    "prose": "| `ErdosSzekeresRamsey.lean` | `pigeonhole_finite`, `erdos_szekeres_pair` (the `k=l=2` case), and `ramsey_one_edge`. | Finite pigeonhole and the smallest Erdős–Szekeres/Ramsey instances; not the full theorems. |",
+    "artifact": [
+      "lean/spec_v4/ErdosSzekeresRamsey.lean"
+    ],
+    "theorem_name": "ramsey_one_edge",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "exit 0",
+    "prose": "All six compile with Lean 4 kernel `exit 0`, contain no `sorry`/`admit`/`sorryAx`, and pass the",
+    "artifact": [],
+    "theorem_name": "exit 0",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "[10, 0, 0]",
+    "prose": "Targets the first ten non-trivial zeros of the Riemann zeta function on the critical line $s = 1/2 + it$ at **24,000 bits** of precision under Guinand-Weil interval enclosures ($t \\le 50.0$), with certified Sylvester inertia `[10, 0, 0]` and zero-straddle status `false`. Dynamic DIBD radius derivation replaces static cuts.",
+    "artifact": [],
+    "theorem_name": "[10, 0, 0]",
+    "provenance": "unknown",
+    "class": "numerical evidence"
+  },
+  {
+    "id": "collatzLoop_mono",
+    "prose": "- **Result:** Modular dynamic contraction via structural induction (`collatzLoop_mono`).",
+    "artifact": [
+      "lean/spec_v4/CollatzBoundedDefeat.lean"
+    ],
+    "theorem_name": "collatzLoop_mono",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "decide",
+    "prose": "- **Method:** Native `decide` + `interval_cases` + `omega` over partitioned domain bundles.",
+    "artifact": [],
+    "theorem_name": "decide",
+    "provenance": "unknown",
+    "class": "numerical evidence"
+  },
+  {
+    "id": "interval_cases",
+    "prose": "- **Method:** Native `decide` + `interval_cases` + `omega` over partitioned domain bundles.",
+    "artifact": [],
+    "theorem_name": "interval_cases",
+    "provenance": "unknown",
+    "class": "numerical evidence"
+  },
+  {
+    "id": "[propext]",
+    "prose": "- **Axioms:** `[propext]` only.",
+    "artifact": [],
+    "theorem_name": "[propext]",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "[propext, Quot.sound]",
+    "prose": "- **Axioms:** `[propext, Quot.sound]`.",
+    "artifact": [],
+    "theorem_name": "[propext, Quot.sound]",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "linarith",
+    "prose": "- **Method:** Constructive witness $s = A - \\theta$; `omega`/`linarith` decision.",
+    "artifact": [],
+    "theorem_name": "linarith",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "fuel : ℕ",
+    "prose": "- **Result:** Formal functional proof of Sturm sequences via strict `fuel : ℕ` termination.",
+    "artifact": [],
+    "theorem_name": "fuel : ℕ",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "sturm_sequence_decidable_enclosure",
+    "prose": "- **Invariant:** Theorem `sturm_sequence_decidable_enclosure` locks sign variation drop without unbounded decimal leakage.",
+    "artifact": [
+      "lean/spec_v4/SturmTarskiIsolation.lean"
+    ],
+    "theorem_name": "sturm_sequence_decidable_enclosure",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "planckPixelConstraint",
+    "prose": "- **Theorem:** `spectral_gravity_stable` with `planckPixelConstraint`.",
+    "artifact": [],
+    "theorem_name": "planckPixelConstraint",
+    "provenance": "unknown",
+    "class": "numerical evidence"
+  },
+  {
+    "id": "guinand_trace_stabilization",
+    "prose": "- **Theorem:** `critical_line_lattice_stable` and `guinand_trace_stabilization`.",
+    "artifact": [
+      "lean/spec_v4/FiniteRiemannZetaLattice.lean"
+    ],
+    "theorem_name": "guinand_trace_stabilization",
+    "provenance": "local",
+    "class": "numerical evidence"
+  },
+  {
+    "id": "norm_num",
+    "prose": "| `box_feasibility_witness.lean` | QF_NRA | `linarith`, `norm_num` | `[propext, Classical.choice, Quot.sound]` |",
+    "artifact": [],
+    "theorem_name": "norm_num",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "[propext, Classical.choice, Quot.sound]",
+    "prose": "| `box_feasibility_witness.lean` | QF_NRA | `linarith`, `norm_num` | `[propext, Classical.choice, Quot.sound]` |",
+    "artifact": [],
+    "theorem_name": "[propext, Classical.choice, Quot.sound]",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "rcases",
+    "prose": "| `sign_flip_absence.lean` | QF_NRA | `linarith`, `rcases` | `[propext, Classical.choice, Quot.sound]` |",
+    "artifact": [],
+    "theorem_name": "rcases",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "[Quot.sound]",
+    "prose": "- **Axioms:** `[Quot.sound]` only.",
+    "artifact": [],
+    "theorem_name": "[Quot.sound]",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "glue",
+    "prose": "- **Key Theorems:** `glue` (path constructor), `loop` (base = inr()), `path_induction`.",
+    "artifact": [],
+    "theorem_name": "glue",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "loop",
+    "prose": "- **Key Theorems:** `glue` (path constructor), `loop` (base = inr()), `path_induction`.",
+    "artifact": [],
+    "theorem_name": "loop",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "path_induction",
+    "prose": "- **Key Theorems:** `glue` (path constructor), `loop` (base = inr()), `path_induction`.",
+    "artifact": [
+      "lean/spec_v4/HigherInductivePushout.lean",
+      "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "theorem_name": "path_induction",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "terminal_is_sheaf",
+    "prose": "- **Key Theorems:** `terminal_is_sheaf`, `sieve_construction_valid`.",
+    "artifact": [
+      "lean/spec_v4/GrothendieckToposBridge.lean",
+      "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "theorem_name": "terminal_is_sheaf",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "sieve_construction_valid",
+    "prose": "- **Key Theorems:** `terminal_is_sheaf`, `sieve_construction_valid`.",
+    "artifact": [
+      "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "theorem_name": "sieve_construction_valid",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "pi_n_sphere_n_iso",
+    "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
+    "artifact": [
+      "lean/spec_v4/DecidableHomotopySphere.lean",
+      "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "theorem_name": "pi_n_sphere_n_iso",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "pi_n_sphere_n_iso_id",
+    "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
+    "artifact": [
+      "lean/spec_v4/DecidableHomotopySphere.lean"
+    ],
+    "theorem_name": "pi_n_sphere_n_iso_id",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "freudenthal_stability_bound",
+    "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
+    "artifact": [
+      "lean/spec_v4/DecidableHomotopySphere.lean",
+      "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "theorem_name": "freudenthal_stability_bound",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "freudenthal_stable_witness",
+    "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
+    "artifact": [
+      "lean/spec_v4/DecidableHomotopySphere.lean"
+    ],
+    "theorem_name": "freudenthal_stable_witness",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "degreeMap_linear",
+    "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
+    "artifact": [
+      "lean/spec_v4/DecidableHomotopySphere.lean"
+    ],
+    "theorem_name": "degreeMap_linear",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "degreeMap_affine",
+    "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
+    "artifact": [
+      "lean/spec_v4/DecidableHomotopySphere.lean"
+    ],
+    "theorem_name": "degreeMap_affine",
+    "provenance": "local",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "hopf_invariant_one",
+    "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
+    "artifact": [
+      "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "theorem_name": "hopf_invariant_one",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "bott_periodicity_stable",
+    "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
+    "artifact": [
+      "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "theorem_name": "bott_periodicity_stable",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "∃ h : ℤ, h = 1",
+    "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
+    "artifact": [],
+    "theorem_name": "∃ h : ℤ, h = 1",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "∃ n : ℕ, n + 8 > n",
+    "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
+    "artifact": [],
+    "theorem_name": "∃ n : ℕ, n + 8 > n",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "HomotopyGroup n X",
+    "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
+    "artifact": [],
+    "theorem_name": "HomotopyGroup n X",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "ℤ",
+    "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
+    "artifact": [],
+    "theorem_name": "ℤ",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "TorusType",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [],
+    "theorem_name": "TorusType",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "TorusPi1 := ℤ × ℤ",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [],
+    "theorem_name": "TorusPi1 := ℤ × ℤ",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "torus_generators_distinct",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [
+      "lean/spec_v4/HigherInductivePushout.lean"
+    ],
+    "theorem_name": "torus_generators_distinct",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "torus_generators_free",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [
+      "lean/spec_v4/HigherInductivePushout.lean"
+    ],
+    "theorem_name": "torus_generators_free",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "torus_generators_span",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [
+      "lean/spec_v4/HigherInductivePushout.lean"
+    ],
+    "theorem_name": "torus_generators_span",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "torus_pi1_free_rank_two",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [
+      "lean/spec_v4/HigherInductivePushout.lean"
+    ],
+    "theorem_name": "torus_pi1_free_rank_two",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "ℤ × ℤ",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [],
+    "theorem_name": "ℤ × ℤ",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "torus_betti_numbers",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [
+      "lean/spec_v4/HigherInductivePushout.lean"
+    ],
+    "theorem_name": "torus_betti_numbers",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "torus_euler_characteristic",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [
+      "lean/spec_v4/HigherInductivePushout.lean"
+    ],
+    "theorem_name": "torus_euler_characteristic",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "torus_euler_from_cells",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [
+      "lean/spec_v4/HigherInductivePushout.lean"
+    ],
+    "theorem_name": "torus_euler_from_cells",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "torus_homology_ranks",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [
+      "lean/spec_v4/HigherInductivePushout.lean"
+    ],
+    "theorem_name": "torus_homology_ranks",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "(1,2,1)",
+    "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
+    "artifact": [],
+    "theorem_name": "(1,2,1)",
+    "provenance": "unknown",
+    "class": "bounded model"
+  },
+  {
+    "id": "torus_fundamental_group",
+    "prose": "- **Key Theorems:** `torus_pi1_free_rank_two`, `torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, `torus_homology_ranks`. The previously listed `torus_fundamental_group`, `quantum_torus_paths`, and `torus_homology_groups` do not exist in the module.",
+    "artifact": [],
+    "theorem_name": "torus_fundamental_group",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "quantum_torus_paths",
+    "prose": "- **Key Theorems:** `torus_pi1_free_rank_two`, `torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, `torus_homology_ranks`. The previously listed `torus_fundamental_group`, `quantum_torus_paths`, and `torus_homology_groups` do not exist in the module.",
+    "artifact": [],
+    "theorem_name": "quantum_torus_paths",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "torus_homology_groups",
+    "prose": "- **Key Theorems:** `torus_pi1_free_rank_two`, `torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, `torus_homology_ranks`. The previously listed `torus_fundamental_group`, `quantum_torus_paths`, and `torus_homology_groups` do not exist in the module.",
+    "artifact": [],
+    "theorem_name": "torus_homology_groups",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "yang_mills_lattice_stable",
+    "prose": "- **Result:** Formalization of discrete Wilson action plaquette bounds, Sylvester inertia stability invariants (`yang_mills_lattice_stable`), and strict positivity of the mass gap (`yang_mills_mass_gap_positive`).",
+    "artifact": [
+      "lean/spec_v4/YangMillsLatticeBoundary.lean"
+    ],
+    "theorem_name": "yang_mills_lattice_stable",
+    "provenance": "local",
+    "class": "bounded model"
+  },
+  {
+    "id": "unsat",
+    "prose": "- **SMT Tribunal:** `smt/phase4/yang_mills_refutation.smt2` verified `unsat` via Z3 QF_NRA, proving structural consistency of discrete gauge field boundary conditions.",
+    "artifact": [],
+    "theorem_name": "unsat",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "lake env lean",
+    "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **490** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **490/490 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, at most two concurrent processes. Result: `reports/full_surface_lean_audit.json`.",
+    "artifact": [],
+    "theorem_name": "lake env lean",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "tools/",
+    "prose": "| 15 | Consolidation into `tools/`, manifest & README sync | ✅ Sealed |",
+    "artifact": [],
+    "theorem_name": "tools/",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  },
+  {
+    "id": "a3ac19fa32de182c776e9d4756165a295b7f533fe7ab4c4dddce976375c404a7",
+    "prose": "> **Manifest:** 1,494 rows, SHA-256 locked: `a3ac19fa32de182c776e9d4756165a295b7f533fe7ab4c4dddce976375c404a7`",
+    "artifact": [],
+    "theorem_name": "a3ac19fa32de182c776e9d4756165a295b7f533fe7ab4c4dddce976375c404a7",
+    "provenance": "unknown",
+    "class": "kernel theorem"
+  }
+]

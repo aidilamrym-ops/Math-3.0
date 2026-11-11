@@ -11,10 +11,15 @@ actually exists in that file's source.  This tool closes that gap cheaply:
   3. report cited identifiers that have no declaration anywhere.
 
 No Lean process is started; this is pure text analysis.
+
+Usage:
+    python tools/readme_theorem_audit.py [--readme PATH] [--surface DIR ...]
+                                         [--out-dir DIR]
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
@@ -22,10 +27,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LEAN_ROOT = ROOT / "lean"
-README = ROOT / "README.MD"
-REPORTS = ROOT / "reports"
+DEFAULT_README = ROOT / "README.MD"
+DEFAULT_OUT = ROOT / "reports"
 
-SURFACES = [
+DEFAULT_SURFACES = [
     LEAN_ROOT / "spec_v4",
     ROOT / "Math30Kernel",
     ROOT / "Math30Interfaces",
@@ -48,7 +53,7 @@ IGNORE = {
     "simp", "simp_all", "omega", "ring", "linarith", "nlinarith", "rfl", "exact",
     "apply", "rw", "aesop", "positivity", "fin_cases", "constructor", "induction",
     "cases", "unfold", "extern", "opaque", "axiom", "constant", "partial_def",
-    "sorry_ax", "admit", "partial",
+    "sorry_ax", "partial",
 }
 
 # Phrasings that mark an identifier as deliberately non-existent.
@@ -70,9 +75,9 @@ NEGATIVE_MARKERS = (
 CODE_SUFFIXES = (".lean", ".py", ".json", ".md", ".txt", ".smt2", ".toml", ".sh", ".yml", ".yaml")
 
 
-def index_declarations() -> dict[str, list[str]]:
+def build_index(surfaces: list[Path]) -> dict[str, list[str]]:
     index: dict[str, list[str]] = {}
-    for surface in SURFACES:
+    for surface in surfaces:
         if not surface.exists():
             continue
         for path in surface.rglob("*.lean"):
@@ -80,17 +85,19 @@ def index_declarations() -> dict[str, list[str]]:
                 text = path.read_text(encoding="utf-8", errors="replace")
             except OSError:
                 continue
-            rel = str(path.relative_to(ROOT)).replace("\\", "/")
+            try:
+                rel = str(path.relative_to(ROOT)).replace("\\", "/")
+            except ValueError:
+                rel = str(path).replace("\\", "/")
             for name in DECL_RE.findall(text):
                 index.setdefault(name, []).append(rel)
     return index
 
 
-def cite_candidates() -> list[str]:
-    text = README.read_text(encoding="utf-8")
-    lines = text.splitlines()
+def cite_candidates(readme: Path) -> list[str]:
+    text = readme.read_text(encoding="utf-8")
     names: set[str] = set()
-    for line in lines:
+    for line in text.splitlines():
         lowered = line.lower()
         negative = any(marker in lowered for marker in NEGATIVE_MARKERS)
         for tok in re.findall(r"`([^`\n]{2,80})`", line):
@@ -114,26 +121,39 @@ def cite_candidates() -> list[str]:
 
 
 def main() -> int:
-    index = index_declarations()
-    cited = cite_candidates()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--readme", default=None)
+    parser.add_argument("--surface", action="append", default=None)
+    parser.add_argument("--out-dir", default=None)
+    args = parser.parse_args()
+
+    readme = Path(args.readme).resolve() if args.readme else DEFAULT_README
+    out_dir = Path(args.out_dir).resolve() if args.out_dir else DEFAULT_OUT
+    surfaces = [Path(s).resolve() for s in args.surface] if args.surface else DEFAULT_SURFACES
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    index = build_index(surfaces)
+    cited = cite_candidates(readme)
     found = {n: index[n] for n in cited if n in index}
     missing = [n for n in cited if n not in index]
 
     report = {
+        "readme": str(readme),
+        "surfaces": [str(s) for s in surfaces],
         "cited_identifiers": len(cited),
         "resolved": len(found),
         "missing": len(missing),
         "missing_names": missing,
         "resolved_map": found,
     }
-    REPORTS.mkdir(exist_ok=True)
-    (REPORTS / "readme_theorem_audit.json").write_text(
+    (out_dir / "readme_theorem_audit.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
     md = [
         "# README Theorem-Name Audit",
         "",
+        f"- README: `{readme}`",
         f"- Lean declarations indexed: **{sum(len(v) for v in index.values())}** "
         f"(unique names: {len(index)})",
         f"- Backticked identifiers cited by README: **{len(cited)}**",
@@ -147,7 +167,7 @@ def main() -> int:
             md.append(f"| `{name}` | no `theorem`/`lemma`/`def` declaration found |")
     else:
         md.append("Every cited identifier resolves to a Lean declaration.")
-    (REPORTS / "readme_theorem_audit.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    (out_dir / "readme_theorem_audit.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 
     print(f"cited={len(cited)} resolved={len(found)} missing={len(missing)}")
     for name in missing:

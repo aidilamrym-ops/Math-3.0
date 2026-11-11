@@ -1,0 +1,388 @@
+{
+  "generated": "2026-11-11 13:14:20",
+  "elapsed_seconds": 16.5,
+  "total": 42,
+  "passed": 42,
+  "missed": 0,
+  "inconclusive": 0,
+  "cases": [
+    {
+      "suite": "token",
+      "case": "sorry",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "sorry",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=1"
+    },
+    {
+      "suite": "token",
+      "case": "sorryAx",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "sorryAx",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "admit",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "admit",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=1"
+    },
+    {
+      "suite": "token",
+      "case": "axiom",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "axiom",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=1"
+    },
+    {
+      "suite": "token",
+      "case": "private axiom",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "private axiom",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "simp-attribute axiom",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "simp-attribute axiom",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "constant",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "constant",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "opaque",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "opaque",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "partial def",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "partial def",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "native_decide",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "native_decide",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "implemented_by",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "implemented_by",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "extern",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "extern",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "string separator evasion",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "string separator evasion",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "strict_findings=1 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "string literal is not a token",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "  verdict: FAIL"
+    },
+    {
+      "suite": "token-strict",
+      "case": "string literal is not a token",
+      "expected": "ALLOW",
+      "observed": "ALLOW",
+      "rc": 0,
+      "verdict": "PASS",
+      "detail": "strict_findings=0 external_exit=1"
+    },
+    {
+      "suite": "token",
+      "case": "comment is not a token",
+      "expected": "ALLOW",
+      "observed": "ALLOW",
+      "rc": 0,
+      "verdict": "PASS",
+      "detail": "  verdict: PASS"
+    },
+    {
+      "suite": "token-strict",
+      "case": "comment is not a token",
+      "expected": "ALLOW",
+      "observed": "ALLOW",
+      "rc": 0,
+      "verdict": "PASS",
+      "detail": "strict_findings=0 external_exit=0"
+    },
+    {
+      "suite": "token",
+      "case": "clean file",
+      "expected": "ALLOW",
+      "observed": "ALLOW",
+      "rc": 0,
+      "verdict": "PASS",
+      "detail": "  verdict: PASS"
+    },
+    {
+      "suite": "token-strict",
+      "case": "clean file",
+      "expected": "ALLOW",
+      "observed": "ALLOW",
+      "rc": 0,
+      "verdict": "PASS",
+      "detail": "strict_findings=0 external_exit=0"
+    },
+    {
+      "suite": "manifest",
+      "case": "clean root",
+      "expected": "ALLOW",
+      "observed": "ALLOW",
+      "rc": 0,
+      "verdict": "PASS",
+      "detail": "VERDICT: PASS"
+    },
+    {
+      "suite": "manifest",
+      "case": "modified pinned file",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "VERDICT: FAIL"
+    },
+    {
+      "suite": "manifest",
+      "case": "deleted pinned file",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "VERDICT: FAIL"
+    },
+    {
+      "suite": "manifest",
+      "case": "unpinned extra file",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "VERDICT: FAIL"
+    },
+    {
+      "suite": "manifest",
+      "case": "corrupted manifest hash",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "VERDICT: FAIL"
+    },
+    {
+      "suite": "manifest",
+      "case": "corrupted README seal",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "VERDICT: FAIL"
+    },
+    {
+      "suite": "compile",
+      "case": "well-typed file",
+      "expected": "ALLOW",
+      "observed": "ALLOW",
+      "rc": 0,
+      "verdict": "PASS",
+      "detail": "pass_with_warnings=0 seconds=4.1"
+    },
+    {
+      "suite": "compile",
+      "case": "ill-typed file",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "FAIL: lean/_mutation_bad_2937834/Bad.lean :: _mutation_bad_2937834/Bad.lean:1:0: error: Not a definitional equality: the left-hand side"
+    },
+    {
+      "suite": "theorem",
+      "case": "existing theorem name",
+      "expected": "ALLOW",
+      "observed": "ALLOW",
+      "rc": 0,
+      "verdict": "PASS",
+      "detail": "cited=1 resolved=1 missing=0"
+    },
+    {
+      "suite": "theorem",
+      "case": "nonexistent theorem name",
+      "expected": "DETECT",
+      "observed": "DETECT",
+      "rc": 1,
+      "verdict": "PASS",
+      "detail": "MISSING: definitely_missing_theorem_xyz"
+    }
+  ]
+}
