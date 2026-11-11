@@ -1,27 +1,27 @@
 -- LandauerBekensteinBound.lean
--- Math 3.0 / Phase 46: Thermodynamic Information Lower Bounds (Landauer + Bekenstein)
--- Regression armor: 1-bit erase energy bound, 2020/2023 broad acceptance.
--- Examiner-proof, sorry-free, exit 0.
+-- Math 3.0 / Phase 46: Discrete thermodynamic information ledger
+-- Bounded regression armor: energy accounting and finite capacity bounds.
+-- These are accounting invariants, not a derivation of physical constants.
 
 import Mathlib.Data.Int.Basic
 import Mathlib.Tactic
 
 namespace Math30.Thermo.Information
 
-/-- Landauer bound: minimum energy to erase 1 bit. -/
-theorem landauer_min_energy (mass_gap : ℕ) :
-    mass_gap * mass_gap ≤ 10^3 * mass_gap := by
-  omega
-
-/-- Bekenstein bound: max bits that can fit within radius R and energy E. -/
-theorem bekenstein_max_bits (radius energy : ℕ) :
-    radius * radius ≤ energy * energy := by
+/-- Landauer ledger: with positive per-bit cost, the bit count never exceeds the
+accounted energy. -/
+theorem landauer_bits_le_energy (bits cost : ℕ) (hcost : 1 ≤ cost) :
+    bits ≤ bits * cost := by
   nlinarith
 
-/-- Combined: physical limit (bits ≤ Bekenstein bound ≤ 1 bit when conditions met).
-This is the theorem we seal as the fundamental carrier bound. -/
-theorem thermodynamic_carrier_limit (radius energy : ℕ) :
-    radius * radius ≤ energy * energy := by
-  omega
+/-- Finite capacity is bounded by the radius budget. -/
+theorem bekenstein_capacity_le_radius (radius energy : ℕ) :
+    min radius energy ≤ radius :=
+  Nat.min_le_left _ _
+
+/-- Finite capacity is bounded by the energy budget. -/
+theorem bekenstein_capacity_le_energy (radius energy : ℕ) :
+    min radius energy ≤ energy :=
+  Nat.min_le_right _ _
 
 end Math30.Thermo.Information

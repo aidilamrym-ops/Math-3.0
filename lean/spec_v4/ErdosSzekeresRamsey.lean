@@ -1,33 +1,37 @@
 -- ErdosSzekeresRamsey.lean
--- Math 3.0 / Phase 49: Erdős–Szekeres & Ramsey (finite monotone subsequence)
--- Regression armor: simple combinatorial bound known for 80+ years.
--- Examiner-proof, sorry-free, exit 0.
+-- Math 3.0 / Phase 49: Finite pigeonhole and length-2 Erdos-Szekeres instance
+-- Bounded regression armor: the finite pigeonhole principle and the smallest
+-- (k = l = 2) Erdos-Szekeres case. These are honest finite instances, not the full
+-- Erdos-Szekeres or Ramsey theorems.
 
-import Mathlib.Data.List.Basic
+import Mathlib.Data.Fintype.Pigeonhole
 import Mathlib.Tactic
 
 namespace Math30.Combinatorics.Finite
 
-/-- Erdős–Szekeres theorem (finite version): any sequence of length (k-1)(l-1)+1 contains either
-an increasing subsequence of length k or a decreasing subsequence of length l. -/
-theorem erdos_szekeres_finite (a : List ℕ) (kl : ℕ) (k l : ℕ) (hk : k ≥ 2) (hl : l ≥ 2) :
-    (a.length ≥ (k-1)*(l-1)+1) → ∃ sub : List ℕ, (sub.length = k ∨ sub.length = l) := by
-  have : (a.length ≥ (k-1)*(l-1)+1) → ∃ sub : List ℕ, (sub.length = k ∨ sub.length = l) := by
-    intro h
-    have : a.length > 0 := by omega
-    obtain ⟨sub, hsub⟩ := exists_monotone_subsequence a k l
-    exact ⟨sub, hsub⟩
-  exact this h
+/-- Finite pigeonhole principle: more pigeons than holes forces a collision. -/
+theorem pigeonhole_finite {α β : Type*} [Fintype α] [Fintype β]
+    (f : α → β) (h : Fintype.card β < Fintype.card α) :
+    ∃ x y, x ≠ y ∧ f x = f y :=
+  Fintype.exists_ne_map_eq_of_card_lt f h
 
-/-- Ramsey F(3,3)=6: any 2-coloring of edges of K₆ contains a monochromatic triangle. -/
-theorem ramsey_33 (graph : Matrix 6 6 ℕ) (color : Fin 2) :
-    ¬∀ e, color (graph e e) = 0 := by
-  have : graph = graph := by refl
-  contradiction
-
-/-- Ramsey bound for all graphs: (R(s,t) ≤ (s-1)+(t-1) for small). Hardcode finite case for review. -/
-theorem ramsey_small (s t : ℕ) (hs : s ≥ 2) (ht : t ≥ 2) :
-    (s-1)+(t-1) ≤ 10 := by
+/-- Erdos-Szekeres smallest case: any two distinct naturals are comparable, hence
+admit a monotone subsequence of length two. -/
+theorem erdos_szekeres_pair (a b : ℕ) (hne : a ≠ b) :
+    a < b ∨ b < a := by
   omega
+
+/-- A two-coloring of a single edge always has a monochromatic representative. -/
+theorem ramsey_one_edge (c : Fin 1 → Fin 2) :
+    ∃ e : Fin 1, c e = 0 ∨ c e = 1 := by
+  refine ⟨0, ?_⟩
+  have hval : (c 0).val = 0 ∨ (c 0).val = 1 := by
+    have hlt : (c 0).val < 2 := (c 0).isLt
+    omega
+  rcases hval with h0 | h1
+  · left
+    exact Fin.eq_of_val_eq (by simpa using h0)
+  · right
+    exact Fin.eq_of_val_eq (by simpa using h1)
 
 end Math30.Combinatorics.Finite

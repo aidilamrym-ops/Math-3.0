@@ -25,6 +25,6 @@ theorem cantor_no_surjection (f : ℕ → ℕ → Bool) :
 /-- Diagonal witness is strictly outside the image of `f` at every index. -/
 theorem cantor_diagonal_differs (f : ℕ → ℕ → Bool) (n : ℕ) :
     f n n ≠ !(f n n) := by
-  cases h : f n n <;> simp [h]
+  cases f n n <;> simp
 
 end Math30.Foundations.Cantor

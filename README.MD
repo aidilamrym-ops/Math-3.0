@@ -16,6 +16,13 @@ The toolchain combines:
 - Beal / Yu Deng / Quantum Topology batch processing engines;
 - local sovereign certificates with cryptographic hash anchors.
 
+**Scope discipline.** The certificates fall into two classes and are labelled accordingly:
+
+1. **Kernel theorems** — genuine Lean 4 proofs of finite statements (for example, Cantor’s no-surjection theorem).
+2. **Finite-lattice models** — bounded verification of invariants inspired by continuum problems. These do **not** resolve the corresponding open or continuum conjecture (Riemann, Navier–Stokes, Yang–Mills, P vs NP, etc.).
+
+An entry that is only a bounded model is never presented as a proof of the full theorem.
+
 ---
 
 ## 2. Key Features
@@ -29,7 +36,7 @@ The toolchain combines:
 | **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
 | **Beal Lattice Solver** | Dynamic Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale. |
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
-| **Anti-Circularity Gate** | Executable check over the 472-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Run with `make gate`; enforced by versioned git hooks. |
+| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
 | **1-bit fault sentinel** | `manifest.json` tracks every file (1,484 rows); any unverified change fails closed. |
 
@@ -123,7 +130,7 @@ Runtime agreement with all three solvers: `python tools/test_dsitni_consistency.
 
 The exact Gate 4 ledger ratio remains the interval-Newton derivative bound certified in `tools/newton_box_validator.py` ($|N'(x)|<1/2$ with strict box inclusion); DSITNI is the algebraic structural proxy for the large-scale batch sweeps.
 
-**Factor-2 DSITNI bound correction**: The original directive’s bound `<1/2` is mathematically false (e.g., `d=(1,1,100)` gives `4S(D+1) < 3(T+1)(D+2)` false). The corrected universal bound is `<1`, proven via `dsitni_general` (certificate) and refuted by `dsitni_half_threshold_refuted` (certificate).
+**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.
 
 
 ### 5.4 Discrete Inertia Boundary Determinant (DIBD)
@@ -163,13 +170,17 @@ Discrete spectral curvature bounds and Planck-scale lattice gravity invariants. 
 
 **Core Theorem (`spectral_gravity_stable`):** Discrete curvature tensor bounded under Planck pixel constraint $\Delta > 0$.
 
+**Scope:** Bounded finite-lattice model; not a continuum theory of gravity.
+
 Formal proof: `lean/spec_v4/FiniteLatticeSpectralGravity.lean` (100% sorry-free).
 
 
 ### 5.8 Finite Lattice Navier-Stokes Dissipation (Phase 40)
 Bounded viscous energy dissipation and pressure regularity in discrete lattice fluid mechanics.
 
-**Core Theorem (`navier_stokes_dissipation_bounded`):** Viscous energy dissipation $\epsilon \le \nu \cdot (\nabla v)^2 + C$ prevents infinite blowup.
+**Core Theorem (`navier_stokes_dissipation_bounded`):** The discrete viscous energy ledger satisfies $\epsilon \le \nu \cdot (\nabla v)^2 + C$.
+
+**Scope:** Bounded finite-lattice dissipation accounting; not a proof of global Navier–Stokes regularity.
 
 Formal proof: `lean/spec_v4/FiniteNavierStokesDissipation.lean` (100% sorry-free).
 
@@ -177,7 +188,9 @@ Formal proof: `lean/spec_v4/FiniteNavierStokesDissipation.lean` (100% sorry-free
 ### 5.9 Finite Lattice Riemann Zeta Distribution (Phase 41)
 Bounded zero distribution and critical line interval integrity on discrete lattice.
 
-**Core Theorem (`critical_line_lattice_stable`):** Non-trivial zeros contained in $\sigma = 1/2$ lattice intervals with Guinand trace stabilization.
+**Core Theorem (`critical_line_lattice_stable`):** A finite lattice model records critical-line intervals $\sigma = 1/2$ with a Guinand trace stabilization invariant.
+
+**Scope:** Bounded finite-lattice model and finite numerical evidence; not a proof of the Riemann Hypothesis.
 
 Formal proof: `lean/spec_v4/FiniteRiemannZetaLattice.lean` (100% sorry-free).
 
@@ -185,7 +198,9 @@ Formal proof: `lean/spec_v4/FiniteRiemannZetaLattice.lean` (100% sorry-free).
 ### 5.10 Finite Lattice P vs NP Circuit Separation (Phase 42)
 Bounded boolean circuit complexity limits and verification time gaps.
 
-**Core Theorem (`p_vs_np_circuit_separation`):** Polynomial verification time $O(n^3)$ strictly separated from exponential search space $2^n$ at $n=10$ lattice scale.
+**Core Theorem (`p_vs_np_circuit_separation`):** A bounded $n=10$ circuit instance satisfies polynomial verification time below $2^{10}$.
+
+**Scope:** Bounded finite-lattice instance; not a proof of $\mathrm{P} \ne \mathrm{NP}$.
 
 Formal proof: `lean/spec_v4/FinitePvNPSeparationLattice.lean` (100% sorry-free).
 
@@ -193,9 +208,29 @@ Formal proof: `lean/spec_v4/FinitePvNPSeparationLattice.lean` (100% sorry-free).
 ### 5.11 Finite Lattice Yang-Mills Mass Gap (Phase 43)
 Discrete Wilson plaquette bounds and spectral mass gap positivity in lattice gauge theory.
 
-**Core Theorem (`yang_mills_mass_gap_positive`):** Mass gap $m \ge 1$ strictly positive under Wilson action bound $a \le 4\beta + 1$.
+**Core Theorem (`yang_mills_mass_gap_positive`):** Mass gap $m \ge 1$ is strictly positive under the finite Wilson action bound $a \le 4\beta + 1$.
+
+**Scope:** Bounded lattice gauge model; not a continuum Yang–Mills mass-gap proof.
 
 Formal proof: `lean/spec_v4/FiniteYangMillsMassGapLattice.lean` (100% sorry-free).
+
+
+### 5.12 Regression Armor: Durable Finite Theorems (Phase 44–49)
+These certificates test the pipeline against statements that are already known to be true.
+They are **regression armor**, not new mathematics. Each entry states exactly what the Lean
+kernel checks; none of them resolves the corresponding open or continuum problem.
+
+| Certificate | What is actually proved | Honest scope |
+|---|---|---|
+| `CantorDiagonalization.lean` | `cantor_no_surjection`: no function `ℕ → (ℕ → Bool)` is surjective; the diagonal witness is constructive. | Full finite-statement proof (Cantor, 1891). |
+| `ShannonEntropyDPI.lean` | `dpi_card_nonexpansive` and `dpi_composition`: a surjective deterministic channel cannot increase finite cardinality. | Finite-set core of the data-processing inequality; not full Shannon entropy. |
+| `LandauerBekensteinBound.lean` | `landauer_bits_le_energy`: with per-bit cost `cost ≥ 1`, `bits ≤ bits * cost`; `bekenstein_capacity_le_radius/energy`: finite capacity is bounded by both budgets. | Discrete accounting invariants; not a derivation of the physical constants. |
+| `NoCloningFiniteDim.lean` | `no_cloning_finite`: no additive clone map on a two-dimensional integer state space clones two basis states and their sum. | Finite linear-algebra toy; not a full Hilbert-space quantum no-cloning proof. |
+| `EuclidFermatArmor.lean` | `euclid_infinite_primes` (Mathlib’s Euclid theorem) plus three finite Fermat residue checks. | Euclid is a full imported theorem; Fermat entries are finite instances, not the general theorem. |
+| `ErdosSzekeresRamsey.lean` | `pigeonhole_finite`, `erdos_szekeres_pair` (the `k=l=2` case), and `ramsey_one_edge`. | Finite pigeonhole and the smallest Erdős–Szekeres/Ramsey instances; not the full theorems. |
+
+All six compile with Lean 4 kernel `exit 0`, contain no `sorry`/`admit`/`sorryAx`, and pass the
+Anti-Circularity and Strict gates.
 
 
 ---
@@ -203,6 +238,8 @@ Formal proof: `lean/spec_v4/FiniteYangMillsMassGapLattice.lean` (100% sorry-free
 ## 6. Riemann Hypothesis Critical-Line Verification
 
 Targets the first ten non-trivial zeros of the Riemann zeta function on the critical line $s = 1/2 + it$ at **24,000 bits** of precision under Guinand-Weil interval enclosures ($t \le 50.0$), with certified Sylvester inertia `[10, 0, 0]` and zero-straddle status `false`. Dynamic DIBD radius derivation replaces static cuts.
+
+**Scope:** Certified numerical enclosure for a finite range; not a proof of the Riemann Hypothesis.
 
 ---
 
@@ -214,7 +251,9 @@ Exact algebraic evaluation of Colored Jones Polynomial $J_N(4_1)$ and $J_N(5_2)$
 
 ## 8. Horizon Theorems (v1.41.0-alpha Milestone)
 
-**Eight structural theorems sealed at 100% sorry-free, Lean 4 kernel exit 0, Anti-Circularity Gate PASS:**
+**Eight horizon theorems sealed at 100% sorry-free, Lean 4 kernel exit 0, Anti-Circularity Gate PASS. Additional regression-armor certificates are listed in §5.12:**
+
+All entries below are finite or bounded statements. They do **not** prove the full Collatz, Navier–Stokes, Riemann, or Yang–Mills problems.
 
 ### 8.1 Collatz Horizon Defeat (`lean/spec_v4/CollatzBoundedDefeat.lean`)
 - **Domain:** Discrete dynamical system on $\mathbb{N}$ (Collatz $3x+1$).
@@ -258,7 +297,7 @@ Exact algebraic evaluation of Colored Jones Polynomial $J_N(4_1)$ and $J_N(5_2)$
 
 ### 8.7 Finite Lattice Navier-Stokes Dissipation (`lean/spec_v4/FiniteNavierStokesDissipation.lean`, Phase 40)
 - **Domain:** Discrete fluid dynamics / PDE regularity.
-- **Result:** Viscous energy dissipation bound prevents blowup; $\epsilon \le \nu \cdot (\nabla v)^2 + C$.
+- **Result:** Discrete viscous energy ledger bound $\epsilon \le \nu \cdot (\nabla v)^2 + C$ (not a global regularity proof).
 - **Theorem:** `navier_stokes_dissipation_bounded`.
 - **Axioms:** None (pure Lean 4 kernel).
 
@@ -285,9 +324,9 @@ All 4 interconnect modules achieved **absolute eradication of placeholder bugs**
 
 ---
 
-## 9.1 Horizon Frontier Modules (Phase 30 Extension)
+### 9.1 Horizon Frontier Modules (Phase 30 Extension)
 
-Three new modules extend the formalization to synthetic homotopy theory and topological quantum physics:
+Five frontier modules extend the formalization to synthetic homotopy theory, categorical logic, and topological quantum physics:
 
 ### 9.1.1 Higher Inductive Pushout (`lean/spec_v4/HigherInductivePushout.lean`)
 - **Domain:** Synthetic homotopy theory / Homotopy Type Theory (HoTT).
@@ -324,10 +363,11 @@ Three new modules extend the formalization to synthetic homotopy theory and topo
 - **Axioms:** `[Quot.sound]` only.
 - **Key Theorems:** `torus_pi1_free_rank_two`, `torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, `torus_homology_ranks`. The previously listed `torus_fundamental_group`, `quantum_torus_paths`, and `torus_homology_groups` do not exist in the module.
 
-### 9.1.7 Phase 33 Yang-Mills Lattice Boundary (`lean/spec_v4/YangMillsLatticeBoundary.lean`)
+### 9.1.5 Phase 33 Yang-Mills Lattice Boundary (`lean/spec_v4/YangMillsLatticeBoundary.lean`)
 - **Domain:** Discrete Gauge Theory / Yang-Mills Lattice Regime.
 - **Result:** Formalization of discrete Wilson action plaquette bounds, Sylvester inertia stability invariants (`yang_mills_lattice_stable`), and strict positivity of the mass gap (`yang_mills_mass_gap_positive`).
 - **SMT Tribunal:** `smt/phase4/yang_mills_refutation.smt2` verified `unsat` via Z3 QF_NRA, proving structural consistency of discrete gauge field boundary conditions.
+- **Scope:** Finite lattice gauge model; not the continuum Yang–Mills mass-gap problem.
 - **Axioms:** `[propext, Classical.choice, Quot.sound]`.
 - **Status:** ✅ Verified (exit 0, Anti-Circularity PASS).
 
@@ -336,7 +376,7 @@ Three new modules extend the formalization to synthetic homotopy theory and topo
 ## 10. Sovereign Certification Layer
 
 - **Master Laboratory Report:** `reports/math30_laboratory_report.json` (SHA-256 locked, zero placeholders).
-- **Individual Certificates:** 22+ certified test-result artifacts bound via cryptographic hash chains to Lean 4 kernel theorems.
+- **Individual Certificates:** 25 certified Lean 4 certificates (19 core entries + 6 regression-armor entries) bound via cryptographic hash chains to Lean 4 kernel theorems.
 - **Certificate Index:** `reports/certificates/certificate_index.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
@@ -360,8 +400,14 @@ Three new modules extend the formalization to synthetic homotopy theory and topo
 | `FiniteLatticeSpectralGravity.lean` | Discrete gravity invariant (Phase 39) | ✅ Verified |
 | `FiniteNavierStokesDissipation.lean` | Discrete fluid dissipation (Phase 40) | ✅ Verified |
 | `FiniteRiemannZetaLattice.lean` | Discrete zeta zeros (Phase 41) | ✅ Verified |
-| `FinitePvNPSeparationLattice.lean` | Circuit complexity separation (Phase 42) | ✅ Verified |
-| `FiniteYangMillsMassGapLattice.lean` | Yang-Mills mass gap (Phase 43) | ✅ Verified |
+| `FinitePvNPSeparationLattice.lean` | Bounded $n=10$ circuit instance (Phase 42) | ✅ Verified |
+| `FiniteYangMillsMassGapLattice.lean` | Bounded lattice gauge mass gap (Phase 43) | ✅ Verified |
+| `CantorDiagonalization.lean` | No surjection `ℕ → (ℕ → Bool)` (Phase 44) | ✅ Verified |
+| `ShannonEntropyDPI.lean` | Finite cardinality DPI non-expansion (Phase 45) | ✅ Verified |
+| `LandauerBekensteinBound.lean` | Discrete energy/capacity ledger (Phase 46) | ✅ Verified |
+| `NoCloningFiniteDim.lean` | Finite-dimensional integer no-cloning toy (Phase 47) | ✅ Verified |
+| `EuclidFermatArmor.lean` | Euclid theorem + finite Fermat checks (Phase 48) | ✅ Verified |
+| `ErdosSzekeresRamsey.lean` | Finite pigeonhole + smallest ES case (Phase 49) | ✅ Verified |
 
 ---
 
@@ -369,7 +415,7 @@ Three new modules extend the formalization to synthetic homotopy theory and topo
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-488d74f81cb690aa868d086105f98ae3f8b0a53d113e14ecead04794d87ddca8
+f80ad1130af1e26333a7f8640b99c929902df2f4e9a4e4c14eda0eeb8463162e
 ```
 
 **Manifest Rows:** 1,484 files pinned  
@@ -379,12 +425,12 @@ Three new modules extend the formalization to synthetic homotopy theory and topo
 
 ---
 
-## 13. Repository Structure
+## 12. Repository Structure
 
 ```text
 Math-3.0/
 ├── lean/spec_v4/
-│   ├── certificates/              # 19 sorry-free formal certificates
+│   ├── certificates/              # formal certificate modules
 │   ├── adversarial_tests/         # Stress-test certificates
 │   ├── CollatzBoundedDefeat.lean
 │   ├── UniversalTopologicalInvariantSingularityResolution.lean
@@ -392,7 +438,7 @@ Math-3.0/
 │   ├── SturmTarskiIsolation.lean
 │   ├── HigherInductivePushout.lean          # HIT pushouts, S¹, T² torus, path induction
 │   ├── GrothendieckToposBridge.lean         # Sites, sieves, terminal sheaf
-│   ├── DecidableHomotopySphere.lean         # πₙ(Sⁿ) ≃ ℤ, Freudenthal, Hopf
+│   ├── DecidableHomotopySphere.lean         # model scaffold for πₙ(Sⁿ)
 │   ├── HorizonFrontierTests.lean            # 12 physics validation tests
 │   ├── UniversalFinitaryInformationConservation.lean
 │   ├── MillenniumCollatzGeneralization.lean
@@ -401,6 +447,13 @@ Math-3.0/
 │   ├── FiniteRiemannZetaLattice.lean
 │   ├── FinitePvNPSeparationLattice.lean
 │   ├── FiniteYangMillsMassGapLattice.lean
+│   ├── YangMillsLatticeBoundary.lean
+│   ├── CantorDiagonalization.lean
+│   ├── ShannonEntropyDPI.lean
+│   ├── LandauerBekensteinBound.lean
+│   ├── NoCloningFiniteDim.lean
+│   ├── EuclidFermatArmor.lean
+│   ├── ErdosSzekeresRamsey.lean
 │   └── smt_bridge/                # 4 SMT bridge modules
 ├── mcp/t2n/
 │   ├── core/                      # Atlas builder, repokeeper, lab generator
@@ -411,12 +464,12 @@ Math-3.0/
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
 ├── manifest.json                  # 1,484-row SHA-256 ledger
-└── README.md
+└── README.MD
 ```
 
 ---
 
-## 13. Phase History (Phases 10–43)
+## 13. Phase History (Phases 10–49)
 
 | Phase | Target | Result |
 |---|---|---|
@@ -432,7 +485,7 @@ Math-3.0/
 | 24 | Beal Conjecture $10^{18}$ lattice expansion, Gate 4, Lean 4 cert | ✅ Sealed |
 | 25 | Riemann Zeta critical-line hardening, DIBD injection, 24k-bit sweep | ✅ Sealed |
 | 26 | Final sovereignty seal: 0 hardcodes, 0 regressions, manifest 1327 | ✅ Sealed |
-| 27 | Horizon Theorems Lockdown: Collatz, Singularity, Quantum Phase Lock + SMT Bridge Hardening + 1,484-row Manifest | ✅ Sealed |
+| 27 | Horizon Theorems Lockdown: Collatz, Singularity, Quantum Phase Lock + SMT Bridge Hardening + manifest sealed | ✅ Sealed |
 | 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Sign Variation Bound Invariant Integration + Topos Categorical Mapping** | ✅ Sealed |
 | 30 | **Horizon Frontier Expansion: HIT pushouts, Topos Bridge, Homotopy Spheres + SMT QF_LIA scripts** | ✅ Sealed |
 | 31 | **Quantum Torus Extension: $T^2 = S^1 \times S^1$ HIT, π₁(T²) ≃ ℤ², homology, Euler characteristic** | ✅ Sealed |
@@ -451,6 +504,12 @@ Math-3.0/
 | 41 | **Finite Lattice Riemann Zeta Distribution: Critical line integrity on discrete lattice (`lean/spec_v4/FiniteRiemannZetaLattice.lean`)** | ✅ Sealed |
 | 42 | **Finite Lattice P vs NP Circuit Separation: Polynomial vs exponential bounds at $n=10$ (`lean/spec_v4/FinitePvNPSeparationLattice.lean`)** | ✅ Sealed |
 | 43 | **Finite Lattice Yang-Mills Mass Gap: Wilson plaquette bounds & mass gap positivity (`lean/spec_v4/FiniteYangMillsMassGapLattice.lean`)** | ✅ Sealed |
+| 44 | **Cantor Diagonalization: no surjection `ℕ → (ℕ → Bool)`, constructive diagonal witness (`lean/spec_v4/CantorDiagonalization.lean`)** | ✅ Sealed |
+| 45 | **Finite Data-Processing Non-Expansion: surjective channels cannot increase finite cardinality (`lean/spec_v4/ShannonEntropyDPI.lean`)** | ✅ Sealed |
+| 46 | **Discrete Landauer/Bekenstein Ledger: positive per-bit cost and finite capacity bounds (`lean/spec_v4/LandauerBekensteinBound.lean`)** | ✅ Sealed |
+| 47 | **Finite-Dimensional No-Cloning: additive integer toy model obstruction (`lean/spec_v4/NoCloningFiniteDim.lean`)** | ✅ Sealed |
+| 48 | **Euclid Infinitude + Finite Fermat Checks: Mathlib Euclid theorem and finite residue instances (`lean/spec_v4/EuclidFermatArmor.lean`)** | ✅ Sealed |
+| 49 | **Finite Pigeonhole + Smallest Erdős–Szekeres Instance (`lean/spec_v4/ErdosSzekeresRamsey.lean`)** | ✅ Sealed |
 
 --- 
 
@@ -504,7 +563,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,484 rows, SHA-256 locked: `488d74f81cb690aa868d086105f98ae3f8b0a53d113e14ecead04794d87ddca8`  
+> **Manifest:** 1,484 rows, SHA-256 locked: `f80ad1130af1e26333a7f8640b99c929902df2f4e9a4e4c14eda0eeb8463162e`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 
