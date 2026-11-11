@@ -256,60 +256,60 @@ Exact algebraic evaluation of Colored Jones Polynomial $J_N(4_1)$ and $J_N(5_2)$
 All entries below are finite or bounded statements. They do **not** prove the full Collatz, Navier–Stokes, Riemann, or Yang–Mills problems.
 
 ### 8.1 Collatz Horizon Defeat 
-- **Domain:** Discrete dynamical system on $\mathbb{N}$ (Collatz $3x+1$). (lean/spec_v4/CollatzBoundedDefeat.lean)
+- **Domain:** Discrete dynamical system on $\mathbb{N}$ (Collatz $3x+1$) : lean/spec_v4/CollatzBoundedDefeat.lean.
 - **Result:** Modular dynamic contraction via structural induction (`collatzLoop_mono`).
 - **Bounds:** Verified for $n \le 100$ with $fuel \ge 5000$ iterations.
 - **Method:** Native `decide` + `interval_cases` + `omega` over partitioned domain bundles.
 - **Axioms:** `[propext]` only.
 
-### 8.2 Singularity Resolution (`lean/spec_v4/UniversalTopologicalInvariantSingularityResolution.lean`)
-- **Domain:** Gravitational / spectral singularity topology.
+### 8.2 Singularity Resolution
+- **Domain:** Gravitational / spectral singularity topology : lean/spec_v4/UniversalTopologicalInvariantSingularityResolution.lean.
 - **Result:** Formal bound on topological curvature invariants strictly within Planck density horizon $n$.
 - **Theorem:**
   $$\forall n > 0, \forall \kappa \in \mathbb{Z}, |\kappa| \le n \implies \exists \text{boundedInv} \le n, \text{boundedInv} = |\kappa|$$.
 - **Axioms:** `[propext, Quot.sound]`.
 
-### 8.3 Quantum Phase Lock (`lean/spec_v4/UniversalQuantumCoherencePhaseLock.lean`)
-- **Domain:** Discrete quantum superposition closure.
+### 8.3 Quantum Phase Lock
+- **Domain:** Discrete quantum superposition closure : lean/spec_v4/UniversalQuantumCoherencePhaseLock.lean.
 - **Result:** Exact state containment operator bounding superposition collapse without continuum divergence.
 - **Theorem:** $\forall A, \theta \in \mathbb{N}, (\theta < A \le 1000) \implies \exists s > 0, s + \theta \le A$.
 - **Method:** Constructive witness $s = A - \theta$; `omega`/`linarith` decision.
 - **Axioms:** `[propext, Quot.sound]`.
 
-### 8.4 Sturm-Tarski Deterministic Enclosure (`lean/spec_v4/SturmTarskiIsolation.lean`)
-- **Domain:** Certified Computational Algebra / Recursive Polynomial Root Isolation.
+### 8.4 Sturm-Tarski Deterministic Enclosure
+- **Domain:** Certified Computational Algebra / Recursive Polynomial Root Isolation : lean/spec_v4/SturmTarskiIsolation.lean.
 - **Result:** Formal functional proof of Sturm sequences via strict `fuel : ℕ` termination.
 - **Invariant:** Theorem `sturm_sequence_decidable_enclosure` locks sign variation drop without unbounded decimal leakage.
 - **Axioms:** `[propext, Quot.sound]` (100% sorry-free, exit 0, Commit: f8a71df).
 
-### 8.5 Universal Finitary Information Conservation (`lean/spec_v4/UniversalFinitaryInformationConservation.lean`, Phase 37)
-- **Domain:** Finite-capacity discrete systems / information theory.
+### 8.5 Universal Finitary Information Conservation
+- **Domain:** Finite-capacity discrete systems / information theory : lean/spec_v4/UniversalFinitaryInformationConservation.lean.
 - **Result:** Strict monotone growth bounded by capacity; no infinite information generation without divergence.
 - **Theorem:** $f(0) + \text{steps} \le \text{capacity}$ for strictly monotone $f_i$ bounded by $K$.
 - **Method:** `omega` over $\mathbb{N}$.
 - **Axioms:** None (pure Lean 4 kernel).
 
-### 8.6 Finite Lattice Spectral Gravity (`lean/spec_v4/FiniteLatticeSpectralGravity.lean`, Phase 39)
-- **Domain:** Discrete gravity / spectral geometry.
+### 8.6 Finite Lattice Spectral Gravity
+- **Domain:** Discrete gravity / spectral geometry : lean/spec_v4/FiniteLatticeSpectralGravity.lean.
 - **Result:** Curvature tensor bounded under Planck pixel constraint $\Delta > 0$; gravity as finitary invariant.
 - **Theorem:** `spectral_gravity_stable` with `planckPixelConstraint`.
 - **Axioms:** None (pure Lean 4 kernel).
 
-### 8.7 Finite Lattice Navier-Stokes Dissipation (`lean/spec_v4/FiniteNavierStokesDissipation.lean`, Phase 40)
-- **Domain:** Discrete fluid dynamics / PDE regularity.
+### 8.7 Finite Lattice Navier-Stokes Dissipation
+- **Domain:** Discrete fluid dynamics / PDE regularity : lean/spec_v4/FiniteNavierStokesDissipation.lean.
 - **Result:** Discrete viscous energy ledger bound $\epsilon \le \nu \cdot (\nabla v)^2 + C$ (not a global regularity proof).
 - **Theorem:** `navier_stokes_dissipation_bounded`.
 - **Axioms:** None (pure Lean 4 kernel).
 
-### 8.8 Finite Lattice Riemann Zeta Distribution (`lean/spec_v4/FiniteRiemannZetaLattice.lean`, Phase 41)
-- **Domain:** Analytic number theory / Riemann zeta zeros.
+### 8.8 Finite Lattice Riemann Zeta Distribution
+- **Domain:** Analytic number theory / Riemann zeta zeros : lean/spec_v4/FiniteRiemannZetaLattice.lean.
 - **Result:** Critical line integrity $\sigma=1/2$ on discrete lattice; Guinand trace stabilization.
 - **Theorem:** `critical_line_lattice_stable` and `guinand_trace_stabilization`.
 - **Axioms:** None (pure Lean 4 kernel).
 
 ---
 
-## 9. SMT Bridge Hardening (Phase 4 Resolution Suite)
+## 9. SMT Bridge Hardening
 
 All 4 interconnect modules achieved **absolute eradication of placeholder bugs** using native analytical tactics:
 
@@ -324,7 +324,7 @@ All 4 interconnect modules achieved **absolute eradication of placeholder bugs**
 
 ---
 
-### 9.1 Horizon Frontier Modules (Phase 30 Extension)
+### 9.1 Horizon Frontier Modules
 
 Five frontier modules extend the formalization to synthetic homotopy theory, categorical logic, and topological quantum physics:
 
@@ -335,15 +335,15 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 - **Axioms:** `[Quot.sound]` only.
 - **Key Theorems:** `glue` (path constructor), `loop` (base = inr()), `path_induction`.
 
-### 9.1.2 Grothendieck Topos Bridge (`lean/spec_v4/GrothendieckToposBridge.lean`)
-- **Domain:** Categorical logic / Topos theory.
+### 9.1.2 Grothendieck Topos Bridge
+- **Domain:** Categorical logic / Topos theory : lean/spec_v4/GrothendieckToposBridge.lean.
 - **Result:** Manual sieve structure, sheaf condition, terminal sheaf theorem (trivial presheaf is a sheaf for any Grothendieck topology).
 - **Physics Application:** Sheafification glues local defect data (e.g., anyon fusion rules) to global topological invariants.
 - **Axioms:** None (pure Lean 4 kernel).
 - **Key Theorems:** `terminal_is_sheaf`, `sieve_construction_valid`.
 
-### 9.1.3 Decidable Homotopy Sphere (`lean/spec_v4/DecidableHomotopySphere.lean`)
-- **Domain:** Algebraic topology / Stable homotopy theory.
+### 9.1.3 Decidable Homotopy Sphere
+- **Domain:** Algebraic topology / Stable homotopy theory : lean/spec_v4/DecidableHomotopySphere.lean.
 - **Result:** $\pi_n(S^n) \simeq \mathbb{Z}$ isomorphism via degree map, Freudenthal suspension bound $\pi_{n+k}(S^k)$ stable for $n < k-1$, Hopf invariant for $\pi_3(S^2)$.
 - **Physics Applications:**
   - $\pi_1(S^1) \simeq \mathbb{Z}$: XY model vortices, superfluid circulation.
@@ -354,8 +354,8 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 - **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.
 - **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$ for a genuine sphere type.
 
-### 9.1.4 Quantum Torus Extension (`lean/spec_v4/HigherInductivePushout.lean`, Phase 31)
-- **Domain:** Higher-dimensional HITs / Non-commutative geometry.
+### 9.1.4 Quantum Torus Extension
+- **Domain:** Higher-dimensional HITs / Non-commutative geometry : lean/spec_v4/HigherInductivePushout.lean.
 - **Result:** Torus $T^2 = S^1 \times S^1$ constructed as a pushout of two generating loops, extending the $S^1$ construction to a 2-dimensional higher inductive type.
 - **Physics Application:** Quantum torus in TQFT; Drinfeld double of a finite group; anyon fusion on a toroidal topology (relevant to topological order on a torus).
 - **Topological Invariants:** Fundamental group $\pi_1(T^2) \simeq \mathbb{Z} \times \mathbb{Z}$; Euler characteristic $\chi(T^2) = 0$; homology $H_0 = \mathbb{Z}$, $H_1 = \mathbb{Z}^2$, $H_2 = \mathbb{Z}$.
@@ -363,8 +363,8 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 - **Axioms:** `[Quot.sound]` only.
 - **Key Theorems:** `torus_pi1_free_rank_two`, `torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, `torus_homology_ranks`. The previously listed `torus_fundamental_group`, `quantum_torus_paths`, and `torus_homology_groups` do not exist in the module.
 
-### 9.1.5 Phase 33 Yang-Mills Lattice Boundary (`lean/spec_v4/YangMillsLatticeBoundary.lean`)
-- **Domain:** Discrete Gauge Theory / Yang-Mills Lattice Regime.
+### 9.1.5 Phase 33 Yang-Mills Lattice Boundary
+- **Domain:** Discrete Gauge Theory / Yang-Mills Lattice Regime : lean/spec_v4/YangMillsLatticeBoundary.lean.
 - **Result:** Formalization of discrete Wilson action plaquette bounds, Sylvester inertia stability invariants (`yang_mills_lattice_stable`), and strict positivity of the mass gap (`yang_mills_mass_gap_positive`).
 - **SMT Tribunal:** `smt/phase4/yang_mills_refutation.smt2` verified `unsat` via Z3 QF_NRA, proving structural consistency of discrete gauge field boundary conditions.
 - **Scope:** Finite lattice gauge model; not the continuum Yang–Mills mass-gap problem.
@@ -472,7 +472,7 @@ Math-3.0/
 
 ---
 
-## 13. Phase History (Phases 10–49)
+## 13. Phase History
 
 | Phase | Target | Result |
 |---|---|---|
