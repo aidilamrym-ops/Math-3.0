@@ -328,8 +328,8 @@ All 4 interconnect modules achieved **absolute eradication of placeholder bugs**
 
 Five frontier modules extend the formalization to synthetic homotopy theory, categorical logic, and topological quantum physics:
 
-### 9.1.1 Higher Inductive Pushout (`lean/spec_v4/HigherInductivePushout.lean`)
-- **Domain:** Synthetic homotopy theory / Homotopy Type Theory (HoTT).
+### 9.1.1 Higher Inductive Pushout
+- **Domain:** Synthetic homotopy theory / Homotopy Type Theory (HoTT) : lean/spec_v4/HigherInductivePushout.lean.
 - **Result:** Formalization of homotopy pushouts via quotient types, construction of the circle $S^1$ as a pushout, path induction principle.
 - **Physics Application:** $S^1$ fundamental group $\pi_1(S^1) \simeq \mathbb{Z}$ classifies vortices in 2D XY model (Kosterlitz-Thouless).
 - **Axioms:** `[Quot.sound]` only.
