@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from typing import Any
 import sys
 import time
 from pathlib import Path
@@ -26,7 +27,16 @@ LEAN_ROOTS = [
 ]
 
 def normalize_path(path_str: str) -> str:
-    return path_str.replace("\\", "/")
+    # Resolve relative indicators and clean up Windows slashes
+    clean = path_str.replace("\\", "/")
+    # If absolute path under ROOT, convert to relative
+    root_str = str(ROOT).replace("\\", "/")
+    if clean.startswith(root_str):
+        clean = clean[len(root_str):].lstrip("/")
+    # Handle ../ prefix if coming from lean/ directory
+    if clean.startswith("../"):
+        clean = clean[3:]
+    return clean
 
 def collect_lean_files() -> dict[str, None]:
     lean_files: dict[str, None] = {}
@@ -45,19 +55,26 @@ def collect_report_files() -> dict[str, None]:
     reports: dict[str, None] = {}
     if not REPORTS_DIR.is_dir():
         return reports
+    
+    # Helper to recursively find path-like values in nested JSON
+    def find_paths(obj: Any):
+        if isinstance(obj, dict):
+            # Check for common fields that indicate a Lean file reference
+            if "path" in obj and (str(obj["path"]).endswith(".lean") or "/" in str(obj["path"])):
+                reports[normalize_path(str(obj["path"]))] = None
+            if "lean_path" in obj:
+                # Resolve relative lean_path if possible (heuristically)
+                reports[normalize_path(str(obj["lean_path"]))] = None
+            for v in obj.values():
+                find_paths(v)
+        elif isinstance(obj, list):
+            for v in obj:
+                find_paths(v)
+
     for path in REPORTS_DIR.rglob("*.json"):
-        # Try to extract the "file" field from the JSON; fallback to relative path
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
-            # Common fields that hold the Lean file path
-            for field in ("file", "lean_path", "path"):
-                if field in data:
-                    reports[normalize_path(str(data[field]))] = None
-                    break
-            else:
-                # If no known field, use relative path to reports dir
-                rel = str(path.relative_to(REPORTS_DIR)).replace("\\", "/")
-                reports[rel] = None
+            find_paths(data)
         except Exception:
             continue
     return reports

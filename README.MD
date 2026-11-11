@@ -418,7 +418,7 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-3ece80fcab429588e19dc6fb3340892e590c11d38e64c7cb9eda232ca145a662
+56a1471cec8898dc38306d5d03cd9f464b2a6e8113bdef4692d6b27a71da8f3e
 ```
 
 **Manifest Rows:** 1,511 files pinned  
@@ -575,7 +575,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,511 rows, SHA-256 locked: `3ece80fcab429588e19dc6fb3340892e590c11d38e64c7cb9eda232ca145a662`  
+> **Manifest:** 1,511 rows, SHA-256 locked: `56a1471cec8898dc38306d5d03cd9f464b2a6e8113bdef4692d6b27a71da8f3e`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 
