@@ -255,7 +255,8 @@ Exact algebraic evaluation of Colored Jones Polynomial $J_N(4_1)$ and $J_N(5_2)$
 
 All entries below are finite or bounded statements. They do **not** prove the full Collatz, Navier–Stokes, Riemann, or Yang–Mills problems.
 
-### 8.1 Collatz Horizon Defeat (`lean/spec_v4/CollatzBoundedDefeat.lean`)
+### 8.1 Collatz Horizon Defeat 
+- (lean/spec_v4/CollatzBoundedDefeat.lean)
 - **Domain:** Discrete dynamical system on $\mathbb{N}$ (Collatz $3x+1$).
 - **Result:** Modular dynamic contraction via structural induction (`collatzLoop_mono`).
 - **Bounds:** Verified for $n \le 100$ with $fuel \ge 5000$ iterations.
