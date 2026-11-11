@@ -165,7 +165,7 @@ $$f(0) + \text{steps} \le \text{capacity}$$
 Formal proof: `lean/spec_v4/UniversalFinitaryInformationConservation.lean` (100% sorry-free).
 
 
-### 5.7 Finite Lattice Spectral Gravity (Phase 39)
+### 5.7 Finite Lattice Spectral Gravity
 Discrete spectral curvature bounds and Planck-scale lattice gravity invariants. Treats gravity as a finitary information invariant on a combinatorial lattice.
 
 **Core Theorem (`spectral_gravity_stable`):** Discrete curvature tensor bounded under Planck pixel constraint $\Delta > 0$.
@@ -175,7 +175,7 @@ Discrete spectral curvature bounds and Planck-scale lattice gravity invariants. 
 Formal proof: `lean/spec_v4/FiniteLatticeSpectralGravity.lean` (100% sorry-free).
 
 
-### 5.8 Finite Lattice Navier-Stokes Dissipation (Phase 40)
+### 5.8 Finite Lattice Navier-Stokes Dissipation
 Bounded viscous energy dissipation and pressure regularity in discrete lattice fluid mechanics.
 
 **Core Theorem (`navier_stokes_dissipation_bounded`):** The discrete viscous energy ledger satisfies $\epsilon \le \nu \cdot (\nabla v)^2 + C$.
@@ -185,7 +185,7 @@ Bounded viscous energy dissipation and pressure regularity in discrete lattice f
 Formal proof: `lean/spec_v4/FiniteNavierStokesDissipation.lean` (100% sorry-free).
 
 
-### 5.9 Finite Lattice Riemann Zeta Distribution (Phase 41)
+### 5.9 Finite Lattice Riemann Zeta Distribution
 Bounded zero distribution and critical line interval integrity on discrete lattice.
 
 **Core Theorem (`critical_line_lattice_stable`):** A finite lattice model records critical-line intervals $\sigma = 1/2$ with a Guinand trace stabilization invariant.
@@ -195,7 +195,7 @@ Bounded zero distribution and critical line interval integrity on discrete latti
 Formal proof: `lean/spec_v4/FiniteRiemannZetaLattice.lean` (100% sorry-free).
 
 
-### 5.10 Finite Lattice P vs NP Circuit Separation (Phase 42)
+### 5.10 Finite Lattice P vs NP Circuit Separation
 Bounded boolean circuit complexity limits and verification time gaps.
 
 **Core Theorem (`p_vs_np_circuit_separation`):** A bounded $n=10$ circuit instance satisfies polynomial verification time below $2^{10}$.
@@ -205,7 +205,7 @@ Bounded boolean circuit complexity limits and verification time gaps.
 Formal proof: `lean/spec_v4/FinitePvNPSeparationLattice.lean` (100% sorry-free).
 
 
-### 5.11 Finite Lattice Yang-Mills Mass Gap (Phase 43)
+### 5.11 Finite Lattice Yang-Mills Mass Gap
 Discrete Wilson plaquette bounds and spectral mass gap positivity in lattice gauge theory.
 
 **Core Theorem (`yang_mills_mass_gap_positive`):** Mass gap $m \ge 1$ is strictly positive under the finite Wilson action bound $a \le 4\beta + 1$.
@@ -215,7 +215,7 @@ Discrete Wilson plaquette bounds and spectral mass gap positivity in lattice gau
 Formal proof: `lean/spec_v4/FiniteYangMillsMassGapLattice.lean` (100% sorry-free).
 
 
-### 5.12 Regression Armor: Durable Finite Theorems (Phase 44–49)
+### 5.12 Regression Armor: Durable Finite Theorems
 These certificates test the pipeline against statements that are already known to be true.
 They are **regression armor**, not new mathematics. Each entry states exactly what the Lean
 kernel checks; none of them resolves the corresponding open or continuum problem.
