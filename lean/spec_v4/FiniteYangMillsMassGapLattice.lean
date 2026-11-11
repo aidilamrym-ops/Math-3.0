@@ -15,7 +15,7 @@ def wilsonPlaquetteBound (beta plaq_action mass_gap : ℕ) : Prop :=
 /-- Core theorem: Strict mass gap positivity in discrete lattice gauge theory. -/
 theorem yang_mills_mass_gap_positive (beta a m : ℕ)
     (h_bound : wilsonPlaquetteBound beta a m)
-    (h_beta : beta ≥ 2) :
+    (_h_beta : beta ≥ 2) :
     m > 0 ∧ a ≤ 4 * beta + 1 := by
   unfold wilsonPlaquetteBound at h_bound
   exact ⟨h_bound.2.1, by omega⟩

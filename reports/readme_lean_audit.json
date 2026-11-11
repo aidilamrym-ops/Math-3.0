@@ -83,7 +83,7 @@
       "lean_path": "spec_v4\\FiniteYangMillsMassGapLattice.lean",
       "rc": 0,
       "status": "PASS",
-      "stdout": "spec_v4\\FiniteYangMillsMassGapLattice.lean:18:5: warning: Variable name `h_beta` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h_beta\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n",
+      "stdout": "",
       "stderr": ""
     },
     {
@@ -107,7 +107,7 @@
       "lean_path": "spec_v4\\HorizonFrontierTests.lean",
       "rc": 0,
       "status": "PASS",
-      "stdout": "spec_v4\\HorizonFrontierTests.lean:57:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nspec_v4\\HorizonFrontierTests.lean:81:41: warning: Variable name `C` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _C\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nspec_v4\\HorizonFrontierTests.lean:86:49: warning: Variable name `S` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _S\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nspec_v4\\HorizonFrontierTests.lean:209:8: warning: Unused tactic linter: `rfl` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nspec_v4\\HorizonFrontierTests.lean:209:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nspec_v4\\HorizonFrontierTests.lean:232:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nspec_v4\\HorizonFrontierTests.lean:261:6: warning: Unused tactic linter: `norm_num` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nspec_v4\\HorizonFrontierTests.lean:261:6: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n'TestHigherInductive.circle_base_loops' does not depend on any axioms\n'TestTopos.terminal_sheaf_always_valid' does not depend on any axioms\n'TestHomotopySphere.pi_n_sphere_iso_test' does not depend on any axioms\n'TestPhysicsApplication.vortex_winding_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stdout": "'TestHigherInductive.circle_base_loops' does not depend on any axioms\n'TestTopos.terminal_sheaf_always_valid' does not depend on any axioms\n'TestHomotopySphere.pi_n_sphere_iso_test' does not depend on any axioms\n'TestPhysicsApplication.vortex_winding_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
       "stderr": ""
     },
     {
@@ -219,7 +219,7 @@
       "lean_path": "spec_v4\\UniversalQuantumCoherencePhaseLock.lean",
       "rc": 0,
       "status": "PASS",
-      "stdout": "spec_v4\\UniversalQuantumCoherencePhaseLock.lean:14:32: warning: Variable name `h_amp` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h_amp\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'Math30.SpecV4.universal_quantum_coherence_phase_lock' depends on axioms: [propext, Quot.sound]\n",
+      "stdout": "'Math30.SpecV4.universal_quantum_coherence_phase_lock' depends on axioms: [propext, Quot.sound]\n",
       "stderr": ""
     },
     {
@@ -227,7 +227,7 @@
       "lean_path": "spec_v4\\UniversalTopologicalInvariantSingularityResolution.lean",
       "rc": 0,
       "status": "PASS",
-      "stdout": "spec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:10:11: warning: Variable name `h_nonzero` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h_nonzero\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nspec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:17:8: warning: Unused tactic linter: `simp_all [Int.natAbs_ofNat]` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nspec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:18:8: warning: Unused tactic linter: `omega` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nspec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:17:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nspec_v4\\UniversalTopologicalInvariantSingularityResolution.lean:18:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n'Math30.SpecV4.universal_topological_singularity_resolution' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stdout": "'Math30.SpecV4.universal_topological_singularity_resolution' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
       "stderr": ""
     },
     {

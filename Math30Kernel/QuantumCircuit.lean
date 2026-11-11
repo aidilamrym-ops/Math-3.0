@@ -49,7 +49,7 @@ def hadamard (q : DiscreteQubit) : DiscreteQubit :=
                      (q.a_re - q.b_re) * (q.a_re - q.b_re) + (q.a_im - q.b_im) * (q.a_im - q.b_im) =
                      ((q.a_re + q.b_re) * (q.a_re + q.b_re) + (q.a_re - q.b_re) * (q.a_re - q.b_re)) +
                      ((q.a_im + q.b_im) * (q.a_im + q.b_im) + (q.a_im - q.b_im) * (q.a_im - q.b_im)) := by
-        simp [Int.add_assoc, Int.add_comm, Int.add_left_comm]
+        simp [Int.add_assoc, Int.add_left_comm]
       rw [h_rearr, h_sq q.a_re q.b_re, h_sq q.a_im q.b_im]
       have h_lin : 2 * (q.a_re * q.a_re + q.b_re * q.b_re) + 2 * (q.a_im * q.a_im + q.b_im * q.b_im) = 2 * (q.a_re * q.a_re + q.a_im * q.a_im + q.b_re * q.b_re + q.b_im * q.b_im) := by omega
       rw [h_lin, h1]

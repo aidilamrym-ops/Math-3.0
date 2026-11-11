@@ -16,7 +16,7 @@ def ftcSingularityAlarmTriggered (result : Option Bool) : Bool :=
   | some _ => false
 
 /-- Safe FTC inversion check function. -/
-def safeFtcInversion (lowerBound upperBound : Int) (hasSingularity : Bool) : Option Bool :=
+def safeFtcInversion (_lowerBound _upperBound : Int) (hasSingularity : Bool) : Option Bool :=
   if hasSingularity then
     some false
   else

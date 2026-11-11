@@ -23,7 +23,7 @@ inductive BoundedFormula where
 def verifyFormulaDepth (f : BoundedFormula) : Bool :=
   match f with
   | BoundedFormula.base => true
-  | BoundedFormula.selfRef d h => decide (d ≤ goedelDepthLimit)
+  | BoundedFormula.selfRef d _ => decide (d ≤ goedelDepthLimit)
 
 /-- Theorem: Self-referential formulas attempting to breach depth limits are rejected (fail closed). -/
 theorem goedel_paradox_contained (d : Nat) (h : d ≤ goedelDepthLimit) :

@@ -11,7 +11,7 @@ namespace Math30.SpecV4
     For amplitude A and phase offset θ < A, there exists a strictly positive
     coherent state s such that s + θ ≤ A, enforcing information ceiling. -/
 theorem universal_quantum_coherence_phase_lock
-  (amplitude phase_offset : ℕ) (h_amp : amplitude ≤ 1000) (h_phase : phase_offset < amplitude) :
+  (amplitude phase_offset : ℕ) (_h_amp : amplitude ≤ 1000) (h_phase : phase_offset < amplitude) :
   ∃ (coherent_state : ℕ), coherent_state > 0 ∧ coherent_state + phase_offset ≤ amplitude := by
   have h_main : amplitude - phase_offset > 0 := by
     have h₁ : phase_offset < amplitude := h_phase

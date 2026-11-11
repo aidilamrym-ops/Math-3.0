@@ -14,17 +14,11 @@ import Mathlib.Tactic
 
 namespace Math30.SMTBridge
 
+/-- A rational square is nonnegative, so `t ≥ 0 ∧ ¬(t * t ≥ 0)` is unsatisfiable. -/
 theorem riemann_spectral_isolation_unsat (t : Rat) :
   ¬ (((t ≥ (0 : Rat))) ∧ ((¬ ((t * t) ≥ (0 : Rat))))) := by
-  intro h
-  rcases h with ⟨h1, h2⟩
-  have h5 : False := by
-    norm_num at h1 h2 ⊢
-    <;>
-    (try contradiction) <;>
-    (try nlinarith) <;>
-    (try norm_num at * <;> nlinarith)
-  exact h5
+  rintro ⟨_, h2⟩
+  exact h2 (mul_self_nonneg t)
 
 #print axioms riemann_spectral_isolation_unsat
 

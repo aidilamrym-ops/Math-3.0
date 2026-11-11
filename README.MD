@@ -36,9 +36,9 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
 | **Beal Lattice Solver** | Dynamic Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale. |
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
-| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Run with `make gate`; enforced by versioned git hooks. |
+| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **1-bit fault sentinel** | `manifest.json` tracks every file (1,487 rows); any unverified change fails closed. |
+| **1-bit fault sentinel** | `manifest.json` tracks every file (1,494 rows); any unverified change fails closed. |
 
 ---
 
@@ -379,6 +379,8 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 - **Individual Certificates:** 25 certified Lean 4 certificates (19 core entries + 6 regression-armor entries) bound via cryptographic hash chains to Lean 4 kernel theorems.
 - **Certificate Index:** `reports/certificates/certificate_index.json`.
 - **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every Lean file cited in this README. Latest run: **39/39 PASS, 0 unresolved**, using at most two concurrent Lean processes. The machine-readable result is `reports/readme_lean_audit.json`.
+- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **490** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **490/490 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, at most two concurrent processes. Result: `reports/full_surface_lean_audit.json`.
+- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **39/39 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
 
@@ -416,10 +418,10 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-b8d203c99f8936b2d910f249a8c83e144cc3c787ecd91e803b52812fbeff506a
+a3ac19fa32de182c776e9d4756165a295b7f533fe7ab4c4dddce976375c404a7
 ```
 
-**Manifest Rows:** 1,487 files pinned  
+**Manifest Rows:** 1,494 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Mon Nov 09 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -464,7 +466,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,487-row SHA-256 ledger
+├── manifest.json                  # 1,494-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -523,6 +525,12 @@ python mcp/t2n/core/repokeeper.py
 # Type-check every Lean file cited by this README
 python tools/readme_lean_audit.py
 
+# Type-check the entire 490-file Lean surface (max 2 concurrent processes)
+python tools/full_surface_lean_audit.py --workers 2
+
+# Verify every cited theorem/definition name exists in source
+python tools/readme_theorem_audit.py
+
 # Run full verification suite
 python tools/suite_check.py --adversarial
 
@@ -567,7 +575,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,487 rows, SHA-256 locked: `b8d203c99f8936b2d910f249a8c83e144cc3c787ecd91e803b52812fbeff506a`  
+> **Manifest:** 1,494 rows, SHA-256 locked: `a3ac19fa32de182c776e9d4756165a295b7f533fe7ab4c4dddce976375c404a7`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 

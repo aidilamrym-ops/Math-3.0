@@ -68,7 +68,7 @@ def hadamard_q0 (q : Discrete2Qubit) : Discrete2Qubit :=
                      ((q.a00_im + q.a10_im) * (q.a00_im + q.a10_im) + (q.a00_im - q.a10_im) * (q.a00_im - q.a10_im)) +
                      ((q.a01_re + q.a11_re) * (q.a01_re + q.a11_re) + (q.a01_re - q.a11_re) * (q.a01_re - q.a11_re)) +
                      ((q.a01_im + q.a11_im) * (q.a01_im + q.a11_im) + (q.a01_im - q.a11_im) * (q.a01_im - q.a11_im)) := by
-        simp [Int.add_assoc, Int.add_comm, Int.add_left_comm]
+        simp [Int.add_assoc, Int.add_left_comm]
       rw [h_rearr, sq_expand q.a00_re q.a10_re, sq_expand q.a00_im q.a10_im, sq_expand q.a01_re q.a11_re, sq_expand q.a01_im q.a11_im]
       have h_lin : 2 * (q.a00_re * q.a00_re + q.a10_re * q.a10_re) + 2 * (q.a00_im * q.a00_im + q.a10_im * q.a10_im) +
                    2 * (q.a01_re * q.a01_re + q.a11_re * q.a11_re) + 2 * (q.a01_im * q.a01_im + q.a11_im * q.a11_im) =
