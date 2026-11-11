@@ -836,10 +836,10 @@
     "class": "kernel theorem"
   },
   {
-    "id": "a3ac19fa32de182c776e9d4756165a295b7f533fe7ab4c4dddce976375c404a7",
-    "prose": "> **Manifest:** 1,494 rows, SHA-256 locked: `a3ac19fa32de182c776e9d4756165a295b7f533fe7ab4c4dddce976375c404a7`",
+    "id": "2d43d3074bc047c03da90cd44d05640fbf09d9d72a79a82b07b9b1036565b81d",
+    "prose": "> **Manifest:** 1,511 rows, SHA-256 locked: `2d43d3074bc047c03da90cd44d05640fbf09d9d72a79a82b07b9b1036565b81d`",
     "artifact": [],
-    "theorem_name": "a3ac19fa32de182c776e9d4756165a295b7f533fe7ab4c4dddce976375c404a7",
+    "theorem_name": "2d43d3074bc047c03da90cd44d05640fbf09d9d72a79a82b07b9b1036565b81d",
     "provenance": "unknown",
     "class": "kernel theorem"
   }

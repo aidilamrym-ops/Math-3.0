@@ -70,6 +70,9 @@ Z3_EXPECTED = {
     "contraction_bound.smt2": "unsat",
     "ledger_cross_multiplication.smt2": "unsat",
     "box_feasibility_witness.smt2": "sat",
+    "gate5_rational_leakage_refutation.smt2": "unsat",
+    "twistor_googly_refutation.smt2": "unsat",
+    "yang_mills_refutation.smt2": "unsat",
 }
 
 

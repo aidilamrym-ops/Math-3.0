@@ -235,12 +235,28 @@ def main() -> int:
     parser.add_argument("--surface", action="append", default=None)
     parser.add_argument("--out-dir", default=None)
     parser.add_argument("--only", default=None)
+    parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
     workers = max(1, min(2, args.workers))
     out_dir = Path(args.out_dir).resolve() if args.out_dir else DEFAULT_OUT
     out_dir.mkdir(parents=True, exist_ok=True)
     surfaces = [Path(s).resolve() for s in args.surface] if args.surface else DEFAULT_SURFACES
+
+    checkpoint_path = out_dir / "_axiom_audit_progress.jsonl"
+    done: dict[str, dict] = {}
+    if args.resume and checkpoint_path.exists():
+        for line in checkpoint_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                row = json.loads(line)
+                if row.get("file"):
+                    done[row["file"]] = row
+            except json.JSONDecodeError:
+                continue
+    elif not args.resume and checkpoint_path.exists():
+        checkpoint_path.unlink()
 
     files: list[Path] = []
     for surface in surfaces:
@@ -249,19 +265,30 @@ def main() -> int:
     files = sorted(set(f.resolve() for f in files))
     if args.only:
         needle = args.only.lower()
-        files = [f for f in files if needle in str(f).lower()]
+        files = [f for f in files if needle in str(f).lower() or needle in f.name.lower()]
+
+    pending = [f for f in files if str(f.relative_to(ROOT)).replace("\\", "/") not in done]
 
     TMP_BASE.mkdir(parents=True, exist_ok=True)
     tmp = Path(tempfile.mkdtemp(prefix="math30_axioms_", dir=str(TMP_BASE)))
     started = time.time()
     try:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
-            futures = [pool.submit(probe_one, f, tmp, args.timeout) for f in files]
-            results = [fut.result() for fut in concurrent.futures.as_completed(futures)]
+        completed = len(done)
+        total = len(files)
+        with checkpoint_path.open("a", encoding="utf-8") as cp_file:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
+                futures = {pool.submit(probe_one, f, tmp, args.timeout): f for f in pending}
+                for fut in concurrent.futures.as_completed(futures):
+                    res = fut.result()
+                    done[res["file"]] = res
+                    cp_file.write(json.dumps(res, ensure_ascii=False) + "\n")
+                    cp_file.flush()
+                    completed += 1
+                    print(f"[{completed}/{total}] axioms probed: {res['file']} (status={res['status']})")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
-    results.sort(key=lambda r: r["file"])
+    results = sorted(done.values(), key=lambda r: r["file"])
 
     probed = [r for r in results if r["status"] == "PROBED"]
     theorem_rows = [t for r in probed for t in r["theorems"]]
