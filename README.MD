@@ -36,7 +36,7 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
 | **Beal Lattice Solver** | Dynamic Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale. |
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
-| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |
+| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
 | **1-bit fault sentinel** | `manifest.json` pins 1,543 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
 
@@ -340,6 +340,13 @@ All entries below are finite or bounded statements. They do **not** prove the fu
 - **Theorem:** `critical_line_lattice_stable` and `guinand_trace_stabilization`.
 - **Axioms:** None (pure Lean 4 kernel).
 
+### 8.9 Even Unimodular Obstruction (Phase 52)
+- **Domain:** Integral quadratic forms / algebraic shadow of 4-dimensional topology : lean/spec_v4/EvenUnimodularObstruction.lean.
+- **Result:** Even unimodular forms are not diagonalizable by unimodular congruence over $\mathbb{Z}$ at positive rank; witness $H = \begin{pmatrix}0&1\\1&0\end{pmatrix}$.
+- **Theorem:** `even_unimodular_not_diagonalizable` and `hyperbolic_not_diagonalizable`.
+- **Scope:** Parity obstruction only; this is **not** Donaldson's theorem and **not** a proof of SPC4. See `reports/FOUR_DIMENSIONAL_TOPOLOGY_NOTES.md`.
+- **Axioms:** `[propext, Classical.choice, Quot.sound]`.
+
 ---
 
 ## 9. SMT Bridge Hardening
@@ -412,7 +419,7 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 - **Individual Certificates:** 27 certified Lean 4 certificates (21 core entries + 6 regression-armor entries) bound via cryptographic hash chains to Lean 4 kernel theorems.
 - **Certificate Index:** `reports/certificates/certificate_index.json` (legacy Phase 9 JSON-source registry: 25 entries, separate from the Lean inventory below).
 - **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every Lean file cited in this README. Latest run: **36/36 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.
-- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **500** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **500/500 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).
+- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **501** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **501/501 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).
 - **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **45/45 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
@@ -446,6 +453,7 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 | `ErdosSzekeresRamsey.lean` | Finite pigeonhole + smallest ES case (Phase 49) | ✅ Verified |
 | `ActualInfinityRefutation.lean` | Actual infinity obstruction in finite capacity (Phase 50) | ✅ Verified |
 | `ContinuityRefutation.lean` | Continuous maps into discrete finite lattice (Phase 51) | ✅ Verified |
+| `EvenUnimodularObstruction.lean` | Even unimodular parity obstruction; hyperbolic witness (Phase 52) | ✅ Verified |
 
 ---
 
@@ -453,10 +461,10 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-64cf2f21a017c91f4cdfe04486f677dbdb09ae4711a243f9761f69585d99a274
+368e764355657a4af7d78c2563e8573134a1f00e10b7b26630efe0db015eca6f
 ```
 
-**Manifest Rows:** 1,543 files pinned  
+**Manifest Rows:** 1,545 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Mon Nov 09 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -501,7 +509,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,543-row SHA-256 ledger
+├── manifest.json                  # 1,545-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -550,6 +558,7 @@ Math-3.0/
 | 49 | **Finite Pigeonhole + Smallest Erdős–Szekeres Instance (`lean/spec_v4/ErdosSzekeresRamsey.lean`)** | ✅ Sealed |
 | 50 | **Actual Infinity Structural Refutation: finite-capacity conservation, Hilbert hotel obstruction, Landauer energy contradiction (`lean/spec_v4/ActualInfinityRefutation.lean`) + QF_LIA finite-instance SMT witness** | ✅ Sealed |
 | 51 | **Continuity Refutation in Finite Lattices: every continuous map `ℝ → Fin N` is constant (`lean/spec_v4/ContinuityRefutation.lean`) + QF_LIA SMT witness** | ✅ Sealed |
+| 52 | **Even Unimodular Obstruction: parity proof that even unimodular forms are not integrally diagonalizable, hyperbolic witness (`lean/spec_v4/EvenUnimodularObstruction.lean`)** | ✅ Sealed |
 
 --- 
 
@@ -562,7 +571,7 @@ python mcp/t2n/core/repokeeper.py
 # Type-check every Lean file cited by this README
 python tools/readme_lean_audit.py
 
-# Type-check the entire 500-file Lean surface (two workers)
+# Type-check the entire 501-file Lean surface (two workers)
 python tools/full_surface_lean_audit.py --workers 1
 
 # Verify every cited theorem/definition name exists in source
@@ -612,7 +621,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,543 rows, SHA-256 locked: `64cf2f21a017c91f4cdfe04486f677dbdb09ae4711a243f9761f69585d99a274`  
+> **Manifest:** 1,545 rows, SHA-256 locked: `368e764355657a4af7d78c2563e8573134a1f00e10b7b26630efe0db015eca6f`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 
@@ -624,9 +633,9 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 ## Auto-Facts Summary
 
 <!-- AUTO-FACTS:START -->
-- **Manifest Pinned Files:** 1,543
-- **Lean Surface:** 500 files, all compiled PASS (receipt 2026-11-14 12:35:06)
-- **Tracked Claims in Ledger:** 45 Lean claims
-- **Resolved README Theorem Names:** 45/45 PASS
+- **Manifest Pinned Files:** 1,545
+- **Lean Surface:** 501 files, all compiled PASS (receipt 2026-11-14 13:19:41)
+- **Tracked Claims in Ledger:** 47 Lean claims
+- **Resolved README Theorem Names:** 47/47 PASS
 - **Evidence Status:** PASS
 <!-- AUTO-FACTS:END -->

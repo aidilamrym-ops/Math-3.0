@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-14T04:43:32.984382+00:00",
+  "generated": "2026-11-14T05:22:19.573753+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "f6b3dbbfbcbf5b63ca271398069458265d774546dd917d25aa9b850505a94a13",
+  "readme_semantic_sha256": "0b630d162a15a57bdbad447a7a5d4147a1afe72b15f098d036aae3f6310a9ef6",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 45,
-  "resolved": 45,
+  "cited_identifiers": 47,
+  "resolved": 47,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -54,6 +54,9 @@
     "euclid_infinite_primes": [
       "lean/spec_v4/EuclidFermatArmor.lean"
     ],
+    "even_unimodular_not_diagonalizable": [
+      "lean/spec_v4/EvenUnimodularObstruction.lean"
+    ],
     "finitary_information_conservation": [
       "lean/spec_v4/UniversalFinitaryInformationConservation.lean"
     ],
@@ -72,6 +75,9 @@
     ],
     "hopf_invariant_one": [
       "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "hyperbolic_not_diagonalizable": [
+      "lean/spec_v4/EvenUnimodularObstruction.lean"
     ],
     "landauer_bits_le_energy": [
       "lean/spec_v4/LandauerBekensteinBound.lean"

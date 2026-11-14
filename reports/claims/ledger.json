@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-14T04:43:32.648002+00:00",
+  "generated": "2026-11-14T05:22:24.360942+00:00",
   "readme": "README.MD",
-  "readme_semantic_sha256": "f6b3dbbfbcbf5b63ca271398069458265d774546dd917d25aa9b850505a94a13",
-  "entries": 194,
-  "claims": 45,
-  "resolved_claims": 45,
+  "readme_semantic_sha256": "0b630d162a15a57bdbad447a7a5d4147a1afe72b15f098d036aae3f6310a9ef6",
+  "entries": 199,
+  "claims": 47,
+  "resolved_claims": 47,
   "unresolved_claims": [],
   "ledger": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "id": "lean/spec_v4",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "lean/spec_v4",
       "kind": "file-reference",
@@ -42,7 +42,7 @@
     },
     {
       "id": "Math30Kernel",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "Math30Kernel",
       "kind": "prose-term",
@@ -53,7 +53,7 @@
     },
     {
       "id": "Math30Interfaces",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "Math30Interfaces",
       "kind": "prose-term",
@@ -64,7 +64,7 @@
     },
     {
       "id": "sorry",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "sorry",
       "kind": "tooling",
@@ -75,7 +75,7 @@
     },
     {
       "id": "sorryAx",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "sorryAx",
       "kind": "tooling",
@@ -86,7 +86,7 @@
     },
     {
       "id": "admit",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "admit",
       "kind": "tooling",
@@ -97,7 +97,7 @@
     },
     {
       "id": "axiom",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "axiom",
       "kind": "tooling",
@@ -108,7 +108,7 @@
     },
     {
       "id": "constant",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "constant",
       "kind": "tooling",
@@ -119,7 +119,7 @@
     },
     {
       "id": "opaque",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "opaque",
       "kind": "tooling",
@@ -130,7 +130,7 @@
     },
     {
       "id": "partial def",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "partial def",
       "kind": "prose-term",
@@ -141,7 +141,7 @@
     },
     {
       "id": "native_decide",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "native_decide",
       "kind": "tooling",
@@ -152,7 +152,7 @@
     },
     {
       "id": "implemented_by",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "implemented_by",
       "kind": "tooling",
@@ -163,7 +163,7 @@
     },
     {
       "id": "extern",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "extern",
       "kind": "tooling",
@@ -174,7 +174,7 @@
     },
     {
       "id": "tools/full_surface_lean_audit.py",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "tools/full_surface_lean_audit.py",
       "kind": "file-reference",
@@ -185,7 +185,7 @@
     },
     {
       "id": "make gate",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 500-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 500 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 501-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 501 files. Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "make gate",
       "kind": "prose-term",
@@ -1171,6 +1171,54 @@
       "class": "numerical evidence"
     },
     {
+      "id": "even_unimodular_not_diagonalizable",
+      "prose": "- **Theorem:** `even_unimodular_not_diagonalizable` and `hyperbolic_not_diagonalizable`.",
+      "artifact": [
+        "lean/spec_v4/EvenUnimodularObstruction.lean"
+      ],
+      "theorem_name": "even_unimodular_not_diagonalizable",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "hyperbolic_not_diagonalizable",
+      "prose": "- **Theorem:** `even_unimodular_not_diagonalizable` and `hyperbolic_not_diagonalizable`.",
+      "artifact": [
+        "lean/spec_v4/EvenUnimodularObstruction.lean"
+      ],
+      "theorem_name": "hyperbolic_not_diagonalizable",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "reports/FOUR_DIMENSIONAL_TOPOLOGY_NOTES.md",
+      "prose": "- **Scope:** Parity obstruction only; this is **not** Donaldson's theorem and **not** a proof of SPC4. See `reports/FOUR_DIMENSIONAL_TOPOLOGY_NOTES.md`.",
+      "artifact": [],
+      "theorem_name": "reports/FOUR_DIMENSIONAL_TOPOLOGY_NOTES.md",
+      "kind": "file-reference",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "file-reference"
+    },
+    {
+      "id": "[propext, Classical.choice, Quot.sound]",
+      "prose": "- **Axioms:** `[propext, Classical.choice, Quot.sound]`.",
+      "artifact": [],
+      "theorem_name": "[propext, Classical.choice, Quot.sound]",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
       "id": "box_feasibility_witness.lean",
       "prose": "| `box_feasibility_witness.lean` | QF_NRA | `linarith`, `norm_num` | `[propext, Classical.choice, Quot.sound]` |",
       "artifact": [],
@@ -1191,17 +1239,6 @@
       "is_claim": false,
       "provenance": "n/a",
       "class": "tooling"
-    },
-    {
-      "id": "[propext, Classical.choice, Quot.sound]",
-      "prose": "| `box_feasibility_witness.lean` | QF_NRA | `linarith`, `norm_num` | `[propext, Classical.choice, Quot.sound]` |",
-      "artifact": [],
-      "theorem_name": "[propext, Classical.choice, Quot.sound]",
-      "kind": "prose-term",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "prose-term"
     },
     {
       "id": "contraction_bound.lean",
@@ -1733,7 +1770,7 @@
     },
     {
       "id": "python tools/full_surface_lean_audit.py",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **500** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **500/500 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **501** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **501/501 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
       "artifact": [],
       "theorem_name": "python tools/full_surface_lean_audit.py",
       "kind": "file-reference",
@@ -1744,7 +1781,7 @@
     },
     {
       "id": "lake env lean",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **500** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **500/500 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **501** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **501/501 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
       "artifact": [],
       "theorem_name": "lake env lean",
       "kind": "prose-term",
@@ -1755,7 +1792,7 @@
     },
     {
       "id": "reports/full_surface_lean_audit.json",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **500** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **500/500 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **501** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **501/501 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
       "artifact": [],
       "theorem_name": "reports/full_surface_lean_audit.json",
       "kind": "file-reference",
@@ -1766,7 +1803,7 @@
     },
     {
       "id": "is_complete: true",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **500** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **500/500 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **501** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **501/501 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
       "artifact": [],
       "theorem_name": "is_complete: true",
       "kind": "prose-term",
@@ -1777,7 +1814,7 @@
     },
     {
       "id": "verdict: PASS",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **500** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **500/500 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **501** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **501/501 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).",
       "artifact": [],
       "theorem_name": "verdict: PASS",
       "kind": "prose-term",
@@ -2040,6 +2077,17 @@
       "class": "file-reference"
     },
     {
+      "id": "EvenUnimodularObstruction.lean",
+      "prose": "| `EvenUnimodularObstruction.lean` | Even unimodular parity obstruction; hyperbolic witness (Phase 52) | ✅ Verified |",
+      "artifact": [],
+      "theorem_name": "EvenUnimodularObstruction.lean",
+      "kind": "file-reference",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "file-reference"
+    },
+    {
       "id": "tools/",
       "prose": "| 15 | Consolidation into `tools/`, manifest & README sync | ✅ Sealed |",
       "artifact": [],
@@ -2216,6 +2264,17 @@
       "class": "prose-term"
     },
     {
+      "id": "lean/spec_v4/EvenUnimodularObstruction.lean",
+      "prose": "| 52 | **Even Unimodular Obstruction: parity proof that even unimodular forms are not integrally diagonalizable, hyperbolic witness (`lean/spec_v4/EvenUnimodularObstruction.lean`)** | ✅ Sealed |",
+      "artifact": [],
+      "theorem_name": "lean/spec_v4/EvenUnimodularObstruction.lean",
+      "kind": "file-reference",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "file-reference"
+    },
+    {
       "id": "tools/audit_hardcoded_nodes.py",
       "prose": "> **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)",
       "artifact": [],
@@ -2227,10 +2286,10 @@
       "class": "file-reference"
     },
     {
-      "id": "c2713f6fbaffb772f39ce2f9552d83f9578dff39e369d065a439f25cfa741705",
-      "prose": "> **Manifest:** 1,543 rows, SHA-256 locked: `c2713f6fbaffb772f39ce2f9552d83f9578dff39e369d065a439f25cfa741705`",
+      "id": "90ea7b4f278c9a0dde86426534eb235875307c1fa6ecbe0b183e9777ce8ce880",
+      "prose": "> **Manifest:** 1,545 rows, SHA-256 locked: `90ea7b4f278c9a0dde86426534eb235875307c1fa6ecbe0b183e9777ce8ce880`",
       "artifact": [],
-      "theorem_name": "c2713f6fbaffb772f39ce2f9552d83f9578dff39e369d065a439f25cfa741705",
+      "theorem_name": "90ea7b4f278c9a0dde86426534eb235875307c1fa6ecbe0b183e9777ce8ce880",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,

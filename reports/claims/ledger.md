@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-14T04:43:32.648002+00:00
+- Generated: 2026-11-14T05:22:24.360942+00:00
 - README: `README.MD`
-- Total backticked citations: **194**
-- Lean claims: **45** (resolved: 45, unresolved: 0)
-- Citation kinds: `{'prose-term': 47, 'file-reference': 80, 'tooling': 19, 'lean-claim': 45, 'negative-reference': 3}`
+- Total backticked citations: **199**
+- Lean claims: **47** (resolved: 47, unresolved: 0)
+- Citation kinds: `{'prose-term': 47, 'file-reference': 83, 'tooling': 19, 'lean-claim': 47, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -35,6 +35,8 @@
 | `collatzLoop_mono` | resolved | `lean/spec_v4/CollatzBoundedDefeat.lean` | `local` | `kernel theorem` |
 | `sturm_sequence_decidable_enclosure` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `bounded model` |
 | `guinand_trace_stabilization` | resolved | `lean/spec_v4/FiniteRiemannZetaLattice.lean` | `local` | `numerical evidence` |
+| `even_unimodular_not_diagonalizable` | resolved | `lean/spec_v4/EvenUnimodularObstruction.lean` | `local` | `kernel theorem` |
+| `hyperbolic_not_diagonalizable` | resolved | `lean/spec_v4/EvenUnimodularObstruction.lean` | `local` | `kernel theorem` |
 | `path_induction` | resolved | `lean/spec_v4/HigherInductivePushout.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
 | `terminal_is_sheaf` | resolved | `lean/spec_v4/GrothendieckToposBridge.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
 | `sieve_construction_valid` | resolved | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
@@ -134,9 +136,10 @@
 - `linarith` — tooling
 - `fuel : ℕ` — prose-term
 - `planckPixelConstraint` — prose-term
+- `reports/FOUR_DIMENSIONAL_TOPOLOGY_NOTES.md` — file-reference
+- `[propext, Classical.choice, Quot.sound]` — prose-term
 - `box_feasibility_witness.lean` — file-reference
 - `norm_num` — tooling
-- `[propext, Classical.choice, Quot.sound]` — prose-term
 - `contraction_bound.lean` — file-reference
 - `ledger_cross_multiplication.lean` — file-reference
 - `sign_flip_absence.lean` — file-reference
@@ -189,6 +192,7 @@
 - `FiniteYangMillsMassGapLattice.lean` — file-reference
 - `ActualInfinityRefutation.lean` — file-reference
 - `ContinuityRefutation.lean` — file-reference
+- `EvenUnimodularObstruction.lean` — file-reference
 - `tools/` — file-reference
 - `lean/spec_v4/MillenniumNavierStokesSmoothness.lean` — file-reference
 - `RiemannCriticalEvidence.lean` — file-reference
@@ -205,5 +209,6 @@
 - `lean/spec_v4/EuclidFermatArmor.lean` — file-reference
 - `lean/spec_v4/ErdosSzekeresRamsey.lean` — file-reference
 - `ℝ → Fin N` — prose-term
+- `lean/spec_v4/EvenUnimodularObstruction.lean` — file-reference
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `c2713f6fbaffb772f39ce2f9552d83f9578dff39e369d065a439f25cfa741705` — prose-term
+- `90ea7b4f278c9a0dde86426534eb235875307c1fa6ecbe0b183e9777ce8ce880` — prose-term
