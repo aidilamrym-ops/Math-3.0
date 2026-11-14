@@ -60,6 +60,7 @@
   "lean/spec_v4/DiscreteHodgeStar.lean": "15a8323d9c4dea9342ee4533b74f744ebfe58a79b8a366677c2d2ea9892ae746",
   "lean/spec_v4/DiscreteIndexTheorem.lean": "bd01a406642b6bc4492b00793ed5fbcd4d704041c5f504c0ebc2c5be20c8409a",
   "lean/spec_v4/DiscreteLatticeGravityExtension.lean": "31e56071e668d0ac64411988667dd4e9ee45d2655fb66f3de3fe8ca1690a50ad",
+  "lean/spec_v4/DiscreteMorseTheory.lean": "8205914ff4e98d0c3a500d808a56175853b55398a672bc6082d0ba6acc1ab421",
   "lean/spec_v4/DiscreteSpectralGap.lean": "c2eb59f8bb49fcee0910f710437acc9764ce075f86cb80944312fe0ce90c44d2",
   "lean/spec_v4/DiscreteYangMills.lean": "7bc3acbadc06785326dd9c99120dbcf7103f2fa463d97cd9799cde8a430ddbc3",
   "lean/spec_v4/EinsteinFieldEquations.lean": "e864e32b439858e244f3f0b04b97fee15401af609ac1e978072d7bb27d693abd",
