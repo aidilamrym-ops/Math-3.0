@@ -1,46 +1,43 @@
 -- RiemannCriticalLineSolver.lean
 -- Math 3.0 / Phase 41: Finite Lattice Riemann Zeta Distribution
--- Formalisasi verifikasi interval kritis untuk nol nol nol nol nol Riemann zeta pada garis kritis.
--- Examiner-proof, sorry-free, exit 0.
+-- Sertifikat interval kritis untuk windows pencarian nol Riemann zeta.
+--
+-- Cakupan: pernyataan interval yang benar-benar dapat dibuktikan (keanggotaan
+-- endpoint, monotonisitas, dan penolakan titik di luar window). File ini TIDAK
+-- mengklaim bahwa nol Riemann zeta telah diverifikasi; ia hanya menyediakan
+-- lemmas interval yang dipakai oleh solver finite-lattice.
 
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Analysis.Calculus.Deriv.Inv
-import Mathlib.Data.Rat.Defs
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 
-open Finset
+namespace Math30.Analysis.RiemannCriticalLine
 
-namespace Math30.Geometry.Curvature.RiemannCriticalLine
+/-- Jendela interval yang dipakai solver: `t ∈ [0, 50]`. -/
+def criticalWindow (t : ℝ) : Prop := 0 ≤ t ∧ t ≤ 50
 
-/-- Interval kritis Riemann zeta: sigma = 1/2 + it, t ∈ [0, 50.0] pada 24,000 bit presisi. -/
-def critical_line_interval (t_min t_max : ℝ) : Prop :=
-  t_min ≤ t_max ∧ t_min ≥ 0 ∧ t_max ≤ 50.0
+/-- Endpoint bawah termasuk window. -/
+theorem criticalWindow_zero : criticalWindow 0 := by
+  constructor <;> norm_num [criticalWindow]
 
-/-- Verifikasi nol nol nol nol nol Riemann zeta pada titik kritis. -/
-def zeta_critical_line_check (t : ℝ) : Prop :=
-  critical_line_interval (0.0) t (50.0) ∧
-  t ≥ 0 ∧ t ≤ 50.0
+/-- Endpoint atas termasuk window. -/
+theorem criticalWindow_fifty : criticalWindow 50 := by
+  constructor <;> norm_num [criticalWindow]
 
-/-- Teorema: Semua nol nol nol nol nol Riemann zeta pada garis kritis memiliki interval kritis yang sah. -/
-theorem zeta_critical_line_stable (t : ℝ) :
-  zeta_critical_line_check t → true := by
+/-- Monotonisitas: jika `s` di window dan `s ≤ t ≤ 50`, maka `t` di window. -/
+theorem criticalWindow_mono {s t : ℝ} (hs : criticalWindow s) (hst : s ≤ t)
+    (ht : t ≤ 50) : criticalWindow t :=
+  ⟨le_trans hs.1 hst, ht⟩
+
+/-- Titik `-1` berada di luar window. -/
+theorem criticalWindow_neg_one_not : ¬ criticalWindow (-1) := by
   intro h
-  trivial
+  linarith [h.1]
 
-/-- Keterangan: Garis kritis Riemann zeta memiliki interval kritis yang stabil dan terverifikasi. -/
-theorem critical_line_stability (t : ℝ) :
-  zeta_critical_line_check t → true := by
-  intro h
-  trivial
+/-- Presisi bit yang diklaim solver (24.000 bit). -/
+def precisionBits : ℕ := 24000
 
-/-- Keterangan: Garis kritis Riemann zeta memiliki interval kritis yang stabil dan terverifikasi. -/
-theorem critical_line_stability_t (t : ℝ) :
-  critical_line_interval (0.0) t (50.0) → true := by
-  intro h
-  trivial
+/-- Presisi solver positif. -/
+theorem precisionBits_pos : 0 < precisionBits := by
+  decide
 
-end Math30.Geometry.Curvature.RiemannCriticalLine
-
-end Math30.Geometry.Curvature
+end Math30.Analysis.RiemannCriticalLine

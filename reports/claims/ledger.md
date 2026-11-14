@@ -1,6 +1,6 @@
 # Claims Ledger
 
-- Generated: 2026-11-13T12:39:01.151251+00:00
+- Generated: 2026-11-14T04:43:32.648002+00:00
 - README: `README.MD`
 - Total backticked citations: **194**
 - Lean claims: **45** (resolved: 45, unresolved: 0)
@@ -206,4 +206,4 @@
 - `lean/spec_v4/ErdosSzekeresRamsey.lean` — file-reference
 - `ℝ → Fin N` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `f749671f4c852090c930cf930df45402f3e0477515f0ad40d2c67d2a7b2b716f` — prose-term
+- `c2713f6fbaffb772f39ce2f9552d83f9578dff39e369d065a439f25cfa741705` — prose-term

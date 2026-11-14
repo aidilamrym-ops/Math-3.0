@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-14 09:47:32",
+  "generated": "2026-11-14 11:50:31",
   "scope": {
     "kind": "partial",
-    "only": "selesaikan_rusuk_kurvature_lean.lean",
+    "only": "RiemannCurvatureTensorCertificate.lean",
     "surfaces": [
       "lean/spec_v4",
       "Math30Kernel",
@@ -23,26 +23,26 @@
     "FAIL": 1
   },
   "pass_with_warnings": 0,
-  "total_seconds": 16.6,
+  "total_seconds": 60.9,
   "failures": [
     {
-      "path": "lean/spec_v4/selesaikan_rusuk_kurvature_lean.lean",
+      "path": "lean/spec_v4/RiemannCurvatureTensorCertificate.lean",
       "status": "FAIL",
       "rc": 1,
-      "error": "spec_v4/selesaikan_rusuk_kurvature_lean.lean:28:35: error: don't know how to synthesize implicit argument `R`"
+      "error": "spec_v4/RiemannCurvatureTensorCertificate.lean:28:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class"
     }
   ],
   "warning_files": [],
   "results": [
     {
-      "path": "lean/spec_v4/selesaikan_rusuk_kurvature_lean.lean",
-      "lean_path": "spec_v4/selesaikan_rusuk_kurvature_lean.lean",
+      "path": "lean/spec_v4/RiemannCurvatureTensorCertificate.lean",
+      "lean_path": "spec_v4/RiemannCurvatureTensorCertificate.lean",
       "rc": 1,
       "status": "FAIL",
-      "warnings": 1,
-      "seconds": 16.63,
-      "error": "spec_v4/selesaikan_rusuk_kurvature_lean.lean:28:35: error: don't know how to synthesize implicit argument `R`",
-      "stdout_tail": "ted with the `set_option trace.Meta.synthInstance true` command.\nspec_v4/selesaikan_rusuk_kurvature_lean.lean:145:22: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  HDiv ℕ R R\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\nspec_v4/selesaikan_rusuk_kurvature_lean.lean:146:22: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  HDiv ℕ R R\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\nspec_v4/selesaikan_rusuk_kurvature_lean.lean:151:42: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  HDiv ℕ ℕ R\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\nspec_v4/selesaikan_rusuk_kurvature_lean.lean:156:4: error: typeclass instance problem is stuck\n  CommRing ?m.14\n\nNote: Lean will not try to resolve this typeclass instance problem because the type argument to `CommRing` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.\n\nHint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.\nspec_v4/selesaikan_rusuk_kurvature_lean.lean:177:6: error(lean.unknownIdentifier): Unknown identifier `krungmann_jordan`\nspec_v4/selesaikan_rusuk_kurvature_lean.lean:172:41: error: unsolved goals\nn : ℕ\nR : Type u_1\ninst✝ : CommRing R\ng : Fin n → Fin n → R\nR4 : Fin n → Fin n → Fin n → Fin n → R\na b c : Fin n\na✝ : c ∈ univ\n⊢ ∑ d, g c d * R4 c a d b = -∑ d, g c d * R4 c b d a\nspec_v4/selesaikan_rusuk_kurvature_lean.lean:184:12: error: unexpected token 'λ'; expected ')'\n",
+      "warnings": 19,
+      "seconds": 60.86,
+      "error": "spec_v4/RiemannCurvatureTensorCertificate.lean:28:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class",
+      "stdout_tail": "` can get typeclass resolution un-stuck.\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  Fin ?m.1\ndue to the absence of the instance above\nspec_v4/RiemannCurvatureTensorCertificate.lean:224:48: error: unsolved goals\n⊢ sorry () (0, 1) = -1\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:15: warning: This simp argument is unused:\n  Riemann\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, PGmetric, PG, PD, Fin.sum_univ_two]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:24: warning: This simp argument is unused:\n  PGmetric\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, Riemann, PG, PD, Fin.sum_univ_two]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:34: warning: This simp argument is unused:\n  PG\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, Riemann, PGmetric, PD, Fin.sum_univ_two]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:38: warning: This simp argument is unused:\n  PD\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, Riemann, PGmetric, PG, Fin.sum_univ_two]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:42: warning: This simp argument is unused:\n  Fin.sum_univ_two\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, Riemann, PGmetric, PG, PD]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:228:8: warning: declaration uses `sorry`\nspec_v4/RiemannCurvatureTensorCertificate.lean:237:0: error: Invalid `end`: There is no current scope to end\n\nNote: Scopes are introduced using `namespace` and `section`\n",
       "stderr_tail": ""
     }
   ]

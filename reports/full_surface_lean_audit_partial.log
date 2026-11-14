@@ -18,3 +18,7 @@
 === run start 2026-11-14 09:47:15 scope=partial files=1 pending=1 workers=1 ===
 [1/1] FAIL      16.63s lean/spec_v4/selesaikan_rusuk_kurvature_lean.lean :: spec_v4/selesaikan_rusuk_kurvature_lean.lean:28:35: error: don't know how to synthesize implicit argument `R`
 === run end 2026-11-14 09:47:32 ===
+
+=== run start 2026-11-14 11:49:30 scope=partial files=1 pending=1 workers=1 ===
+[1/1] FAIL      60.86s lean/spec_v4/RiemannCurvatureTensorCertificate.lean :: spec_v4/RiemannCurvatureTensorCertificate.lean:28:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+=== run end 2026-11-14 11:50:31 ===
