@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-14T05:22:19.573753+00:00",
+  "generated": "2026-11-14T06:56:27.046775+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "0b630d162a15a57bdbad447a7a5d4147a1afe72b15f098d036aae3f6310a9ef6",
+  "readme_semantic_sha256": "ee2f2e379a152a2e427b906c072890b46c989c418df50f57e26945ca9b5f9441",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 47,
-  "resolved": 47,
+  "cited_identifiers": 54,
+  "resolved": 54,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -17,6 +17,18 @@
     ],
     "bott_periodicity_stable": [
       "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "bps_bound": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
+    "bps_bound_sharp": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
+    "bps_equality_iff_anti_self_dual_zero": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
+    "bps_equality_iff_self_dual_zero": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
     ],
     "cantor_no_surjection": [
       "lean/spec_v4/CantorDiagonalization.lean"
@@ -78,6 +90,15 @@
     ],
     "hyperbolic_not_diagonalizable": [
       "lean/spec_v4/EvenUnimodularObstruction.lean"
+    ],
+    "instanton_bound": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
+    "instanton_bound_saturated": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
+    "instanton_bound_sharp_signed": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
     ],
     "landauer_bits_le_energy": [
       "lean/spec_v4/LandauerBekensteinBound.lean"

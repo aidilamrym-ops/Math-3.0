@@ -1,10 +1,10 @@
 # README Lean Claim Audit
 
-- Generated: 2026-11-13T12:57:16.645512+00:00
+- Generated: 2026-11-14T06:19:11.467078+00:00
 - Workers: 1
-- Cited unique files: 36
+- Cited unique files: 38
 - Unresolved citations: 0
-- Counts: {'PASS': 36}
+- Counts: {'PASS': 38}
 
 | Status | File | Notes |
 |---|---|---|
@@ -14,6 +14,7 @@
 | PASS | `lean\spec_v4\ContinuityRefutation.lean` |  |
 | PASS | `lean\spec_v4\ErdosSzekeresRamsey.lean` |  |
 | PASS | `lean\spec_v4\EuclidFermatArmor.lean` |  |
+| PASS | `lean\spec_v4\EvenUnimodularObstruction.lean` |  |
 | PASS | `lean\spec_v4\FiniteLatticeSpectralGravity.lean` |  |
 | PASS | `lean\spec_v4\FiniteNavierStokesDissipation.lean` |  |
 | PASS | `lean\spec_v4\FinitePvNPSeparationLattice.lean` |  |
@@ -21,6 +22,7 @@
 | PASS | `lean\spec_v4\FiniteYangMillsMassGapLattice.lean` |  |
 | PASS | `lean\spec_v4\HorizonFrontierTests.lean` |  |
 | PASS | `lean\spec_v4\LandauerBekensteinBound.lean` |  |
+| PASS | `lean\spec_v4\LatticeInstantonBound.lean` |  |
 | PASS | `lean\spec_v4\MillenniumBirchSwinnertonDyer.lean` |  |
 | PASS | `lean\spec_v4\MillenniumCollatzGeneralization.lean` |  |
 | PASS | `lean\spec_v4\MillenniumHodgeConjecture.lean` |  |

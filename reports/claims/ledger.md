@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-14T05:22:24.360942+00:00
+- Generated: 2026-11-14T06:56:27.193947+00:00
 - README: `README.MD`
-- Total backticked citations: **199**
-- Lean claims: **47** (resolved: 47, unresolved: 0)
-- Citation kinds: `{'prose-term': 47, 'file-reference': 83, 'tooling': 19, 'lean-claim': 47, 'negative-reference': 3}`
+- Total backticked citations: **208**
+- Lean claims: **54** (resolved: 54, unresolved: 0)
+- Citation kinds: `{'prose-term': 47, 'file-reference': 85, 'tooling': 19, 'lean-claim': 54, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -37,6 +37,13 @@
 | `guinand_trace_stabilization` | resolved | `lean/spec_v4/FiniteRiemannZetaLattice.lean` | `local` | `numerical evidence` |
 | `even_unimodular_not_diagonalizable` | resolved | `lean/spec_v4/EvenUnimodularObstruction.lean` | `local` | `kernel theorem` |
 | `hyperbolic_not_diagonalizable` | resolved | `lean/spec_v4/EvenUnimodularObstruction.lean` | `local` | `kernel theorem` |
+| `instanton_bound` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `instanton_bound_saturated` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `instanton_bound_sharp_signed` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `bps_bound` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `bps_equality_iff_anti_self_dual_zero` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `bps_equality_iff_self_dual_zero` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `bps_bound_sharp` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
 | `path_induction` | resolved | `lean/spec_v4/HigherInductivePushout.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
 | `terminal_is_sheaf` | resolved | `lean/spec_v4/GrothendieckToposBridge.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
 | `sieve_construction_valid` | resolved | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
@@ -193,6 +200,7 @@
 - `ActualInfinityRefutation.lean` — file-reference
 - `ContinuityRefutation.lean` — file-reference
 - `EvenUnimodularObstruction.lean` — file-reference
+- `LatticeInstantonBound.lean` — file-reference
 - `tools/` — file-reference
 - `lean/spec_v4/MillenniumNavierStokesSmoothness.lean` — file-reference
 - `RiemannCriticalEvidence.lean` — file-reference
@@ -210,5 +218,6 @@
 - `lean/spec_v4/ErdosSzekeresRamsey.lean` — file-reference
 - `ℝ → Fin N` — prose-term
 - `lean/spec_v4/EvenUnimodularObstruction.lean` — file-reference
+- `lean/spec_v4/LatticeInstantonBound.lean` — file-reference
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `90ea7b4f278c9a0dde86426534eb235875307c1fa6ecbe0b183e9777ce8ce880` — prose-term
+- `80d676e57a8497529a78dadad69a596092d4a37bcfb63b3b01cf726dd666e2d1` — prose-term

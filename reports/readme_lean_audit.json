@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-13T12:57:16.645512+00:00",
+  "generated": "2026-11-14T06:19:11.467078+00:00",
   "readme": "README.MD",
   "workers": 1,
-  "cited_unique_files": 36,
+  "cited_unique_files": 38,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 36
+    "PASS": 38
   },
   "results": [
     {
@@ -51,6 +51,14 @@
     {
       "path": "lean\\spec_v4\\EuclidFermatArmor.lean",
       "lean_path": "spec_v4\\EuclidFermatArmor.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\EvenUnimodularObstruction.lean",
+      "lean_path": "spec_v4\\EvenUnimodularObstruction.lean",
       "rc": 0,
       "status": "PASS",
       "stdout": "",
@@ -107,6 +115,14 @@
     {
       "path": "lean\\spec_v4\\LandauerBekensteinBound.lean",
       "lean_path": "spec_v4\\LandauerBekensteinBound.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\LatticeInstantonBound.lean",
+      "lean_path": "spec_v4\\LatticeInstantonBound.lean",
       "rc": 0,
       "status": "PASS",
       "stdout": "",
