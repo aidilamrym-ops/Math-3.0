@@ -6,9 +6,9 @@
   Every numeric endpoint below is emitted as `exactRat (num) (den)`;
   no decimal or floating-point literal occurs in this file.
 
-  bridge_source_sha256:  2a9b8f694be5d9583899343f598f8d656264934eb66f9fd0182deac7b288e248
-  lte_source_sha256:     06739bda86a8677c8c5e279cdce5bdab180be46b3f36ad5ebcdcb5ce7d917b6a
-  newton_source_sha256:  d62b79c21545490279b3d8fd1a0488e6eeacb64d7968b027f0681099a258d864
+  bridge_source_sha256:  6e0b5dc0aa825c20c470284ef18078763bd45a4b43ae023a30be10b563def29d
+  lte_source_sha256:     84dcc4506760f76d1a32dd6157e1dace8f85633751bb08f90bec567aad29ebcd
+  newton_source_sha256:  56df93bed3af715e65d3c2c9ceb657d76209e8af1421065a473e9a95f635bc5a
 
   The generic bridge source is embedded as a re-namespaced snapshot
   (Math30.Gate5.Certified) with its SHA-256 pinned below.  The file is

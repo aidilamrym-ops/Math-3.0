@@ -437,8 +437,12 @@ def compile_certificate(timeout: int) -> dict:
 def run(timeout: int) -> dict:
     started = time.perf_counter()
     require(BRIDGE.is_file(), f"missing bridge source: {BRIDGE.relative_to(ROOT)}")
-    bridge_text = BRIDGE.read_text(encoding="utf-8")
-    bridge_sha = sha256_bytes(bridge_text.encode("utf-8"))
+    # Hash the raw on-disk bytes; decode with newline normalization only for the
+    # embedded snapshot.  Reading text first would hash an LF-normalized copy on
+    # Windows and disagree with sha256_file(BRIDGE).
+    bridge_bytes = BRIDGE.read_bytes()
+    bridge_sha = sha256_bytes(bridge_bytes)
+    bridge_text = bridge_bytes.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n")
     marker = "namespace Math30.Gate5"
     require(marker in bridge_text, "bridge source does not declare namespace Math30.Gate5")
     bridge_body = bridge_text[bridge_text.index(marker):]

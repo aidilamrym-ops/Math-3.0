@@ -8,10 +8,25 @@
   - Math30Kernel        (recursive, outside the lake package root)
   - Math30Interfaces    (recursive, outside the lake package root)
 
-Each file is compiled independently (no local module imports exist, so this is
-sound), with at most two concurrent Lean processes.  Results stream to a
-checkpoint file so an interrupted run can be resumed, and a final JSON + Markdown
-report is written to the output directory.
+Scope discipline
+----------------
+Only a run over the complete default surface may write the canonical receipt
+``full_surface_lean_audit.json``.  Filtered runs (``--only``), custom surfaces
+(``--surface``) and custom receipt directories write ``*_partial.*`` receipts
+instead.  Before 2026-11-11 a one-file ``--only`` run overwrote the canonical
+receipt with ``total_files = 1``; the README then reported "1 full-surface Lean
+file".  That failure mode is now structurally impossible: the canonical path is
+selected by scope, not by whoever ran last.
+
+A receipt is *complete* only when every enumerated file was compiled, every
+outcome is ``PASS``, and the scope is the full default surface.  Consumers must
+check ``is_complete``; they must not infer completeness from exit status alone.
+
+Each file is compiled independently (no local module imports exist, so a file
+cannot depend on another audited file).  Transient toolchain failures (missing
+olean reads, allocator panics, lock contention) are retried once, serially, and
+the retry is recorded.  Results stream to a checkpoint so an interrupted run can
+be resumed; stale checkpoint rows for files that no longer exist are discarded.
 
 Usage:
     python tools/full_surface_lean_audit.py [--workers 2] [--timeout 240]
@@ -25,6 +40,7 @@ import argparse
 import concurrent.futures
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -39,6 +55,39 @@ DEFAULT_SURFACES = [
     ROOT / "Math30Kernel",
     ROOT / "Math30Interfaces",
 ]
+
+# A failed `lake env lean` invocation is not always a failed proof.  Concurrent
+# reads of a partially materialised olean cache, allocator exhaustion and file
+# locking all surface as compiler failures.  They are retried once, serially;
+# a genuine type error is retried needlessly but still fails, so the retry can
+# only remove false negatives, never accept a false positive.
+TRANSIENT_FAILURE = re.compile(
+    r"failed to read file|INTERNAL PANIC|out of memory|"
+    r"Resource temporarily unavailable|Cannot allocate memory",
+)
+
+
+def is_full_scope(surfaces: list[Path], only: str | None, out_dir: Path) -> bool:
+    """True iff this invocation audits exactly the complete default surface.
+
+    The canonical receipt is written only for such a run.  Path comparison is
+    resolved and case-insensitive on Windows so `--surface lean\\spec_v4` and
+    the default do not produce two different notions of "full".
+    """
+    if only is not None:
+        return False
+    if out_dir.resolve() != DEFAULT_REPORTS.resolve():
+        return False
+    requested = {os.path.normcase(str(p.resolve())) for p in surfaces}
+    default = {os.path.normcase(str(p.resolve())) for p in DEFAULT_SURFACES}
+    return requested == default
+
+
+def is_transient(row: dict) -> bool:
+    blob = " ".join(
+        str(row.get(key) or "") for key in ("error", "stdout_tail", "stderr_tail")
+    )
+    return bool(TRANSIENT_FAILURE.search(blob))
 
 
 def enumerate_files(surfaces: list[Path]) -> list[Path]:
@@ -169,19 +218,25 @@ def main() -> int:
     out_dir = Path(args.out_dir).resolve() if args.out_dir else DEFAULT_REPORTS
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    checkpoint_path = out_dir / "_full_surface_progress.jsonl"
-    json_report = out_dir / "full_surface_lean_audit.json"
-    md_report = out_dir / "full_surface_lean_audit.md"
-    log_path = out_dir / "full_surface_lean_audit.log"
-
     surfaces = [Path(s).resolve() for s in args.surface] if args.surface else DEFAULT_SURFACES
+    full_scope = is_full_scope(surfaces, args.only, out_dir)
+    suffix = "" if full_scope else "_partial"
+
+    checkpoint_path = out_dir / f"_full_surface_progress{suffix}.jsonl"
+    json_report = out_dir / f"full_surface_lean_audit{suffix}.json"
+    md_report = out_dir / f"full_surface_lean_audit{suffix}.md"
+    log_path = out_dir / f"full_surface_lean_audit{suffix}.log"
 
     files = enumerate_files(surfaces)
     if args.only:
         needle = args.only.lower()
         files = [f for f in files if needle in str(f).lower()]
 
+    current_paths = {display_path(f) for f in files}
     done = load_checkpoint(checkpoint_path) if args.resume else {}
+    # A checkpoint from an older tree must never contribute rows for files that
+    # are not part of this run: that would inflate `compiled` above `total`.
+    done = {key: row for key, row in done.items() if key in current_paths}
     if not args.resume and checkpoint_path.exists():
         checkpoint_path.unlink()
 
@@ -189,6 +244,7 @@ def main() -> int:
 
     log = open(log_path, "a", encoding="utf-8")  # noqa: SIM115
     log.write(f"\n=== run start {time.strftime('%Y-%m-%d %H:%M:%S')} "
+              f"scope={'full' if full_scope else 'partial'} "
               f"files={len(files)} pending={len(pending)} workers={workers} ===\n")
     log.flush()
 
@@ -210,7 +266,13 @@ def main() -> int:
         with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
             futures = {pool.submit(compile_one, f, args.timeout): f for f in pending}
             for fut in concurrent.futures.as_completed(futures):
-                record(fut.result())
+                row = fut.result()
+                if row["status"] != "PASS" and is_transient(row):
+                    retried = compile_one(futures[fut], args.timeout)
+                    retried["retried_after_transient"] = True
+                    retried["first_attempt_error"] = row.get("error", "")[:300]
+                    row = retried
+                record(row)
 
     log.write(f"=== run end {time.strftime('%Y-%m-%d %H:%M:%S')} ===\n")
     log.close()
@@ -221,9 +283,26 @@ def main() -> int:
         counts[r["status"]] = counts.get(r["status"], 0) + 1
     warn_total = sum(1 for r in results if r["status"] == "PASS" and r.get("warnings", 0) > 0)
     total_seconds = round(sum(r.get("seconds", 0) for r in results), 1)
+    all_attempted = len(results) == len(files)
+    all_passed = all(r["status"] == "PASS" for r in results)
+    is_complete = bool(full_scope and all_attempted and all_passed)
+    if is_complete:
+        verdict = "PASS"
+    elif not full_scope:
+        verdict = "PARTIAL" if all_passed and all_attempted else "PARTIAL_FAIL"
+    else:
+        verdict = "INCOMPLETE" if not all_attempted else "FAIL"
 
     report = {
         "generated": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "scope": {
+            "kind": "full" if full_scope else "partial",
+            "only": args.only,
+            "surfaces": [display_path(s) for s in surfaces],
+            "canonical_receipt": full_scope,
+        },
+        "is_complete": is_complete,
+        "verdict": verdict,
         "surfaces": [display_path(s) for s in surfaces],
         "total_files": len(files),
         "compiled": len(results),
@@ -253,6 +332,9 @@ def main() -> int:
         "# Full-Surface Lean Compile Audit",
         "",
         f"- Generated: {report['generated']}",
+        f"- Scope: **{report['scope']['kind']}** "
+        f"(canonical receipt: {str(report['scope']['canonical_receipt']).lower()})",
+        f"- Verdict: **{report['verdict']}** (complete: {str(report['is_complete']).lower()})",
         f"- Surfaces: {', '.join('`' + s + '`' for s in report['surfaces'])}",
         f"- Total files: **{report['total_files']}**",
         f"- Compiled: **{report['compiled']}**",
@@ -281,15 +363,17 @@ def main() -> int:
 
     md_report.write_text("\n".join(md) + "\n", encoding="utf-8")
 
-    print(f"total={report['total_files']} compiled={report['compiled']} counts={counts}")
-    print(f"pass_with_warnings={warn_total} seconds={total_seconds}")
+    print(f"scope={report['scope']['kind']} verdict={verdict} "
+          f"total={report['total_files']} compiled={report['compiled']} counts={counts}")
+    print(f"pass_with_warnings={warn_total} seconds={total_seconds} "
+          f"complete={str(is_complete).lower()} receipt={json_report}")
     for f in report["failures"]:
         print(f"{f['status']}: {f['path']} :: {f['error']}")
 
-    ok = counts.get("FAIL", 0) == 0 and counts.get("TIMEOUT", 0) == 0 and counts.get("ERROR", 0) == 0
-    if ok and report["compiled"] == report["total_files"]:
+    all_ok = all_attempted and all_passed
+    if all_ok:
         checkpoint_path.unlink(missing_ok=True)
-    return 0 if ok and report["compiled"] == report["total_files"] else 1
+    return 0 if all_ok else 1
 
 
 if __name__ == "__main__":

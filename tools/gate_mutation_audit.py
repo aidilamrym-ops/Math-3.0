@@ -37,7 +37,7 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TMP_BASE = Path(r"C:\Users\usER\AppData\Local\Temp\opencode")
+TMP_BASE = Path(tempfile.gettempdir()) / "opencode"
 
 GATE_STRICT = ROOT / "tools" / "omega_audit" / "gate_strict.py"
 REPOKEEPER = ROOT / "mcp" / "t2n" / "core" / "repokeeper.py"

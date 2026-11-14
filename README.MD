@@ -12,7 +12,7 @@ The toolchain combines:
 - Dynamic Newton box contraction (trace-based spectral bound);
 - exact rational extraction into Lean 4;
 - Z3 QF_LIA bounded-model tribunals;
-- OpenAI Math catalogue verification atlas (373 families, 722 stems, 208 declarations);
+- OpenAI Math catalogue verification atlas (373 families, 722 stems, 208 declarations; 139/373 families formalized, 234 unformalized — see `exports/OPENAI_MATH_VERIFICATION_ATLAS.md`);
 - Beal / Yu Deng / Quantum Topology batch processing engines;
 - local sovereign certificates with cryptographic hash anchors.
 
@@ -36,9 +36,9 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
 | **Beal Lattice Solver** | Dynamic Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale. |
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
-| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |
+| **Anti-Circularity Gate** | Executable check over the 495-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 495 files. Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **1-bit fault sentinel** | `manifest.json` tracks every file (1,515 rows); any unverified change fails closed. |
+| **1-bit fault sentinel** | `manifest.json` pins 1,518 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
 
 ---
 
@@ -233,6 +233,39 @@ All six compile with Lean 4 kernel `exit 0`, contain no `sorry`/`admit`/`sorryAx
 Anti-Circularity and Strict gates.
 
 
+### 5.13 Actual Infinity Structural Refutation
+A discrete system with finite capacity `C` cannot contain an actually infinite,
+strictly increasing traversal sequence. The formal certificate
+`actual_infinity_violates_conservation` instantiates the sequence at `C + 1` and
+derives `False`; `hilbert_hotel_obstruction` proves that no injection exists
+from `Fin (N + 1)` into `Fin N`; and
+`landauer_infinite_energy_contradiction` shows that an unbounded state space
+with per-bit cost `cost ≥ 1` violates every finite energy budget $E_{\max}$.
+
+**Scope:** These theorems refute actual infinity inside bounded
+physical/computational lattices. They do **not** refute ZFC's abstract Axiom of
+Infinity outside finitary models.
+
+Formal proof: `lean/spec_v4/ActualInfinityRefutation.lean` (100% sorry-free).
+Companion SMT: `smt/phase4/actual_infinity_refutation.smt2` (QF_LIA, concrete four-step instance, `unsat`; the general theorem is the Lean certificate).
+
+
+### 5.14 Continuity Refutation in Finite Lattices
+A finite lattice `Fin N` carries the discrete topology, while `ℝ` is
+preconnected. Therefore every continuous map `f : ℝ → Fin N` is constant.
+The certificate proves `continuity_forces_constant_in_finite_lattice`, derives
+`no_continuous_injection_from_continuum`, shows that no continuous path can
+connect two distinct lattice states, and proves that the continuous image of
+the unit interval is a subsingleton.
+
+**Scope:** The result is about continuous maps into a discrete finite type. It
+does **not** assert that the abstract continuum `ℝ` is inconsistent, nor does
+it refute continuity for maps between non-discrete spaces.
+
+Formal proof: `lean/spec_v4/ContinuityRefutation.lean` (100% sorry-free).
+Companion SMT: `smt/phase4/continuity_refutation.smt2` (QF_LIA, `unsat`).
+
+
 ---
 
 ## 6. Riemann Hypothesis Critical-Line Verification
@@ -376,11 +409,11 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 ## 10. Sovereign Certification Layer
 
 - **Master Laboratory Report:** `reports/math30_laboratory_report.json` (SHA-256 locked, zero placeholders).
-- **Individual Certificates:** 25 certified Lean 4 certificates (19 core entries + 6 regression-armor entries) bound via cryptographic hash chains to Lean 4 kernel theorems.
-- **Certificate Index:** `reports/certificates/certificate_index.json`.
-- **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every Lean file cited in this README. Latest run: **39/39 PASS, 0 unresolved**, using at most two concurrent Lean processes. The machine-readable result is `reports/readme_lean_audit.json`.
-- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **490** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **490/490 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, at most two concurrent processes. Result: `reports/full_surface_lean_audit.json`.
-- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **39/39 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
+- **Individual Certificates:** 27 certified Lean 4 certificates (21 core entries + 6 regression-armor entries) bound via cryptographic hash chains to Lean 4 kernel theorems.
+- **Certificate Index:** `reports/certificates/certificate_index.json` (legacy Phase 9 JSON-source registry: 25 entries, separate from the Lean inventory below).
+- **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every Lean file cited in this README. Latest run: **36/36 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.
+- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **495** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **495/495 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).
+- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **45/45 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
 
@@ -411,6 +444,8 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 | `NoCloningFiniteDim.lean` | Finite-dimensional integer no-cloning toy (Phase 47) | ✅ Verified |
 | `EuclidFermatArmor.lean` | Euclid theorem + finite Fermat checks (Phase 48) | ✅ Verified |
 | `ErdosSzekeresRamsey.lean` | Finite pigeonhole + smallest ES case (Phase 49) | ✅ Verified |
+| `ActualInfinityRefutation.lean` | Actual infinity obstruction in finite capacity (Phase 50) | ✅ Verified |
+| `ContinuityRefutation.lean` | Continuous maps into discrete finite lattice (Phase 51) | ✅ Verified |
 
 ---
 
@@ -418,10 +453,10 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-4c111e6ed21042c5ee49b232235089363cdd5b72457b22d3cb43573555af4ded
+a08f8d9c3deb00c9413a40735d03ccafc63e88c90cc8d3c7c03f87a6d3b58ce6
 ```
 
-**Manifest Rows:** 1,515 files pinned  
+**Manifest Rows:** 1,541 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Mon Nov 09 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -466,7 +501,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,515-row SHA-256 ledger
+├── manifest.json                  # 1,541-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -513,6 +548,8 @@ Math-3.0/
 | 47 | **Finite-Dimensional No-Cloning: additive integer toy model obstruction (`lean/spec_v4/NoCloningFiniteDim.lean`)** | ✅ Sealed |
 | 48 | **Euclid Infinitude + Finite Fermat Checks: Mathlib Euclid theorem and finite residue instances (`lean/spec_v4/EuclidFermatArmor.lean`)** | ✅ Sealed |
 | 49 | **Finite Pigeonhole + Smallest Erdős–Szekeres Instance (`lean/spec_v4/ErdosSzekeresRamsey.lean`)** | ✅ Sealed |
+| 50 | **Actual Infinity Structural Refutation: finite-capacity conservation, Hilbert hotel obstruction, Landauer energy contradiction (`lean/spec_v4/ActualInfinityRefutation.lean`) + QF_LIA finite-instance SMT witness** | ✅ Sealed |
+| 51 | **Continuity Refutation in Finite Lattices: every continuous map `ℝ → Fin N` is constant (`lean/spec_v4/ContinuityRefutation.lean`) + QF_LIA SMT witness** | ✅ Sealed |
 
 --- 
 
@@ -525,8 +562,8 @@ python mcp/t2n/core/repokeeper.py
 # Type-check every Lean file cited by this README
 python tools/readme_lean_audit.py
 
-# Type-check the entire 490-file Lean surface (max 2 concurrent processes)
-python tools/full_surface_lean_audit.py --workers 2
+# Type-check the entire 495-file Lean surface (two workers)
+python tools/full_surface_lean_audit.py --workers 1
 
 # Verify every cited theorem/definition name exists in source
 python tools/readme_theorem_audit.py
@@ -575,7 +612,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,515 rows, SHA-256 locked: `4c111e6ed21042c5ee49b232235089363cdd5b72457b22d3cb43573555af4ded`  
+> **Manifest:** 1,541 rows, SHA-256 locked: `a08f8d9c3deb00c9413a40735d03ccafc63e88c90cc8d3c7c03f87a6d3b58ce6`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 
@@ -587,8 +624,9 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 ## Auto-Facts Summary
 
 <!-- AUTO-FACTS:START -->
-- **Manifest Pinned Files:** 1,511
-- **Full-Surface Lean Files:** 490 (100% compiled PASS)
-- **Tracked Claims in Ledger:** 95
-- **Resolved README Theorem Names:** 39/39 PASS
+- **Manifest Pinned Files:** 1,537
+- **Lean Surface:** 495 files, all compiled PASS (receipt 2026-11-13 20:29:31)
+- **Tracked Claims in Ledger:** 45 Lean claims
+- **Resolved README Theorem Names:** 45/45 PASS
+- **Evidence Status:** PASS
 <!-- AUTO-FACTS:END -->

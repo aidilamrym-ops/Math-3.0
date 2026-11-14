@@ -20,9 +20,11 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -54,6 +56,8 @@ IGNORE = {
     "apply", "rw", "aesop", "positivity", "fin_cases", "constructor", "induction",
     "cases", "unfold", "extern", "opaque", "axiom", "constant", "partial_def",
     "sorry_ax", "partial",
+    # Build-system paths, not Lean declarations.
+    "__pycache__", "pycache", "pyc",
 }
 
 # Phrasings that mark an identifier as deliberately non-existent.
@@ -73,6 +77,23 @@ NEGATIVE_MARKERS = (
 )
 
 CODE_SUFFIXES = (".lean", ".py", ".json", ".md", ".txt", ".smt2", ".toml", ".sh", ".yml", ".yaml")
+AUTO_FACTS_RE = re.compile(
+    r"<!-- AUTO-FACTS:START -->.*?<!-- AUTO-FACTS:END -->", re.DOTALL
+)
+
+
+def semantic_readme_digest(text: str) -> str:
+    """README digest with the generated auto-facts block removed.
+
+    The injector writes that block into README.MD, so including it would make
+    every receipt stale the moment the facts are injected.  Only authored prose
+    is hashed.
+    """
+    semantic = AUTO_FACTS_RE.sub("", text)
+    # The manifest seal is also generated (repokeeper.sync_readme rewrites it),
+    # so hashing it would make a fresh audit stale after every reseal.
+    semantic = re.sub(r"(?<![0-9a-f])[0-9a-f]{64}(?![0-9a-f])", "<sha256>", semantic)
+    return hashlib.sha256(semantic.encode("utf-8")).hexdigest()
 
 
 def build_index(surfaces: list[Path]) -> dict[str, list[str]]:
@@ -94,14 +115,29 @@ def build_index(surfaces: list[Path]) -> dict[str, list[str]]:
     return index
 
 
+def negative_tail(line: str, end: int, span: int = 180) -> bool:
+    """True iff a negation marker follows the citation in the same clause.
+
+    A line-wide check is too coarse: "the factor-4 test is false ... is
+    machine-checked by `dsitni_half_threshold_refuted`" contains a negation but
+    cites a real theorem *after* it.  Only the text after the closing backtick,
+    up to the next sentence or clause boundary, decides whether the citation is
+    a statement of non-existence.
+    """
+    tail = line[end:end + span].lower()
+    for separator in (". ", "; ", " — "):
+        index = tail.find(separator)
+        if index != -1:
+            tail = tail[:index]
+    return any(marker in tail for marker in NEGATIVE_MARKERS)
+
+
 def cite_candidates(readme: Path) -> list[str]:
     text = readme.read_text(encoding="utf-8")
     names: set[str] = set()
     for line in text.splitlines():
-        lowered = line.lower()
-        negative = any(marker in lowered for marker in NEGATIVE_MARKERS)
-        for tok in re.findall(r"`([^`\n]{2,80})`", line):
-            tok = tok.strip()
+        for match in re.finditer(r"`([^`\n]{2,80})`", line):
+            tok = match.group(1).strip()
             if tok.lower().endswith(CODE_SUFFIXES):
                 continue
             if "/" in tok or "\\" in tok or " " in tok:
@@ -114,7 +150,7 @@ def cite_candidates(readme: Path) -> list[str]:
                 continue
             if not ("_" in tok or "." in tok):
                 continue
-            if negative:
+            if negative_tail(line, match.end()):
                 continue
             names.add(tok)
     return sorted(names)
@@ -138,7 +174,11 @@ def main() -> int:
     missing = [n for n in cited if n not in index]
 
     report = {
+        "generated": datetime.now(timezone.utc).isoformat(),
         "readme": str(readme),
+        "readme_semantic_sha256": semantic_readme_digest(
+            readme.read_text(encoding="utf-8")
+        ),
         "surfaces": [str(s) for s in surfaces],
         "cited_identifiers": len(cited),
         "resolved": len(found),

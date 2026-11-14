@@ -1,8 +1,9 @@
 # README Theorem-Name Audit
 
-- Lean declarations indexed: **1708** (unique names: 460)
-- Backticked identifiers cited by README: **39**
-- Resolved to a declaration: **39**
+- README: `D:\Opencode AI Agent\Math 3.0 Tools\README.MD`
+- Lean declarations indexed: **1727** (unique names: 479)
+- Backticked identifiers cited by README: **45**
+- Resolved to a declaration: **45**
 - Unresolved: **0**
 
 Every cited identifier resolves to a Lean declaration.

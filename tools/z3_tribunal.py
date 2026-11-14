@@ -114,7 +114,7 @@ def build_witness_script(boxes, mids, limits):
     return "\n".join(lines) + "\n"
 
 
-def execute(path, script, expect):
+def execute(path, script, expect, logic="QF_LIA"):
     solver = z3.Solver()
     solver.from_string(script)
     started = time.perf_counter()
@@ -126,7 +126,7 @@ def execute(path, script, expect):
     model = str(solver.model()) if result == z3.sat else None
     return {
         "path": path,
-        "logic": "QF_LIA",
+        "logic": logic,
         "expected": expect,
         "result": verdict,
         "elapsed_ms": elapsed_ms,
@@ -185,6 +185,32 @@ def main():
         with open(path, "w", encoding="utf-8", newline="\n") as f:
             f.write(script)
         check = execute(path, script, expected[name])
+        log_lines = [f"$ {path}", "(check-sat)", check["result"]]
+        if check["model"]:
+            log_lines.append(check["model"])
+        with open(os.path.join(SMT_DIR, f"{name}.log"), "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(log_lines) + "\n")
+        checks.append(check)
+
+    # Static SMT-LIB2 refutation scripts shipped in smt/phase4.  These are not
+    # regenerated from the Phase 2/3 ledgers, but the regression suite asserts
+    # their verdicts, so they must be executed by the tribunal rather than
+    # assumed.
+    static_scripts = {
+        "gate5_rational_leakage_refutation": ("unsat", "QF_NRA"),
+        "twistor_googly_refutation": ("unsat", "QF_NRA"),
+        "yang_mills_refutation": ("unsat", "QF_NRA"),
+        "actual_infinity_refutation": ("unsat", "QF_LIA"),
+        "continuity_refutation": ("unsat", "QF_LIA"),
+    }
+    for name, (expect, logic) in static_scripts.items():
+        path = os.path.join(SMT_DIR, f"{name}.smt2")
+        if not os.path.isfile(path):
+            raise SystemExit(f"{path}: missing static tribunal script")
+        with open(path, "r", encoding="utf-8") as f:
+            script = f.read()
+        check = execute(path, script, expect, logic=logic)
+        check["kind"] = "static_script"
         log_lines = [f"$ {path}", "(check-sat)", check["result"]]
         if check["model"]:
             log_lines.append(check["model"])
@@ -251,7 +277,7 @@ def main():
         json.dump(report, f, indent=2)
 
     print("=== PHASE 4: Z3 SMT TRIBUNAL ===")
-    print(f"Z3 {z3.get_version_string()}  logic=QF_LIA  scale=10^18")
+    print(f"Z3 {z3.get_version_string()}  logic=QF_LIA+QF_NRA  scale=10^18")
     for check in checks:
         print(f"[{os.path.basename(check['path'])}] -> {check['result']} ({check['elapsed_ms']} ms)")
         if check["model"]:

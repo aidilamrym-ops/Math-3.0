@@ -5,16 +5,20 @@
 the files the README claims are verified.  It resolves cited paths, deduplicates
 them, compiles each with `lake env lean`, and writes a machine-readable report.
 
-At most two Lean processes are started at once.
+Runs sequentially by default (``--workers 1``); the ceiling is two Lean
+processes.  An unresolved cited path fails the audit.
 """
 
 from __future__ import annotations
 
+import argparse
 import concurrent.futures
 import json
 import re
 import subprocess
 import sys
+import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -102,10 +106,15 @@ def compile_one(path: Path) -> dict:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--workers", type=int, default=1)
+    args = parser.parse_args()
+    workers = max(1, min(2, args.workers))
+
     files, unresolved = collect_files()
     results: list[dict] = []
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
         futures = [pool.submit(compile_one, f) for f in files]
         for fut in concurrent.futures.as_completed(futures):
             results.append(fut.result())
@@ -116,7 +125,9 @@ def main() -> int:
         counts[r["status"]] = counts.get(r["status"], 0) + 1
 
     report = {
+        "generated": datetime.now(timezone.utc).isoformat(),
         "readme": str(README.relative_to(ROOT)),
+        "workers": workers,
         "cited_unique_files": len(files),
         "unresolved_citations": unresolved,
         "counts": counts,
@@ -132,6 +143,8 @@ def main() -> int:
     md_lines = [
         "# README Lean Claim Audit",
         "",
+        f"- Generated: {report['generated']}",
+        f"- Workers: {workers}",
         f"- Cited unique files: {len(files)}",
         f"- Unresolved citations: {len(unresolved)}",
         f"- Counts: {counts}",
@@ -158,7 +171,14 @@ def main() -> int:
     for r in results:
         if r["status"] != "PASS":
             print(f"{r['status']}: {r['path']}")
-    return 0 if counts.get("FAIL", 0) == 0 and counts.get("TIMEOUT", 0) == 0 else 1
+    # An unresolved citation is a failed claim, not a stylistic warning: the
+    # README says the file exists and is compiled.  Before this repair the
+    # exit code ignored `unresolved`, so a fabricated path passed the audit.
+    return 0 if (
+        counts.get("FAIL", 0) == 0
+        and counts.get("TIMEOUT", 0) == 0
+        and not unresolved
+    ) else 1
 
 
 if __name__ == "__main__":

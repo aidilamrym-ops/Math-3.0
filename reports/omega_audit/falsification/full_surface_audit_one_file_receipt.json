@@ -1,0 +1,41 @@
+{
+  "artifact": "reports/full_surface_lean_audit.json (flawed historical state)",
+  "captured_by": "OMEGA audit batch 1",
+  "observed_utc": "2026-11-11",
+  "provenance": "Reconstruction of the on-disk receipt observed before repair; values were read directly from the file in the audit session.",
+  "flawed_receipt": {
+    "generated": "2026-11-11 19:42:37",
+    "surfaces": ["lean/spec_v4", "Math30Kernel", "Math30Interfaces"],
+    "total_files": 1,
+    "compiled": 1,
+    "counts": {"PASS": 1},
+    "pass_with_warnings": 0,
+    "total_seconds": 16.5,
+    "failures": [],
+    "warning_files": [],
+    "results": [
+      {
+        "path": "lean/spec_v4/ContinuumOmegaLimitDefeat.lean",
+        "lean_path": "spec_v4/ContinuumOmegaLimitDefeat.lean",
+        "rc": 0,
+        "status": "PASS",
+        "warnings": 0,
+        "seconds": 16.48,
+        "error": ""
+      }
+    ]
+  },
+  "root_cause": "tools/full_surface_lean_audit.py wrote the canonical receipt path for every invocation, including --only and --surface runs.",
+  "downstream_effect": "tools/auto_facts_injector.py read total_files=1 and rendered 'Full-Surface Lean Files: 1 (100% compiled PASS)' in README.MD.",
+  "repair": "Scope-typed receipts: canonical only for the full default surface; partial runs write *_partial.*; auto-facts requires is_complete=true and coverage equal to the enumerated surface.",
+  "replacement_evidence": {
+    "generated": "2026-11-11",
+    "total_files": 493,
+    "compiled": 493,
+    "counts": {"PASS": 493},
+    "pass_with_warnings": 0,
+    "workers": 1,
+    "is_complete": true,
+    "verdict": "PASS"
+  }
+}

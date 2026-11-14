@@ -19,7 +19,12 @@ OMEGA-0013/OMEGA-0014.
 
 This wrapper does not silently replace the skill gate. It runs the skill gate
 first, forwards its verdict verbatim, then applies a stricter lexer and a
-wider trust-token policy. Both must pass. Exit codes follow the skill gate:
+wider trust-token policy. Both must pass. Resolution order is: explicit
+``--gate``, ``ANTI_CIRCULARITY_GATE``, the repo-local vendored copy used by CI
+(``tools/omega_audit/vendor/anti_circularity_gate.py``), then the installed
+skill. The vendored copy is byte-identical to the gate of record; its hash is
+recorded in ``reports/omega_audit/vendored_gate_provenance.json``. Exit codes
+follow the skill gate:
 
   0  PASS
   1  FAIL
@@ -75,6 +80,13 @@ def find_external_gate(explicit: str | None) -> Path | None:
     env = os.environ.get("ANTI_CIRCULARITY_GATE")
     if env:
         candidates.append(Path(env))
+    candidates.append(
+        Path(__file__).resolve().parents[2]
+        / "tools"
+        / "omega_audit"
+        / "vendor"
+        / "anti_circularity_gate.py"
+    )
     home = Path.home()
     candidates.append(
         home / ".config" / "opencode" / "skills" / "anti-circularity" / "scripts" / "gate.py"

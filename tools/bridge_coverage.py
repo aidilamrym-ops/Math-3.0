@@ -17,6 +17,11 @@ import sys
 import time
 from pathlib import Path
 
+# Exact rational reports store full-precision integer numerators/denominators;
+# the default 4300-digit int<->str limit would reject them.
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
+
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS_DIR = ROOT / "reports"
 LEAN_ROOT = ROOT / "lean"
@@ -75,8 +80,8 @@ def collect_report_files() -> dict[str, None]:
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
             find_paths(data)
-        except Exception:
-            continue
+        except Exception as exc:
+            raise exc
     return reports
 
 def main() -> int:

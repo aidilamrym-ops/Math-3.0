@@ -38,7 +38,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LEAN_ROOT = ROOT / "lean"
 DEFAULT_OUT = ROOT / "reports"
-TMP_BASE = Path(r"C:\Users\usER\AppData\Local\Temp\opencode")
+TMP_BASE = Path(tempfile.gettempdir()) / "opencode"
 
 DEFAULT_SURFACES = [
     LEAN_ROOT / "spec_v4",

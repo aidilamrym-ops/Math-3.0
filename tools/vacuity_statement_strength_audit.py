@@ -175,7 +175,7 @@ def main() -> int:
             try:
                 all_results.append(scan_file(path))
             except Exception as exc:
-                all_results.append({"file": str(path), "error": str(exc)})
+                raise
 
     summary = {
         "generated": time.strftime("%Y-%m-%d %H:%M:%S"),

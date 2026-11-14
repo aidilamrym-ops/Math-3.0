@@ -1,0 +1,42 @@
+{
+  "generated": "2026-11-12 22:36:35",
+  "scope": {
+    "kind": "partial",
+    "only": "ActualInfinityRefutation",
+    "surfaces": [
+      "lean/spec_v4",
+      "Math30Kernel",
+      "Math30Interfaces"
+    ],
+    "canonical_receipt": false
+  },
+  "is_complete": false,
+  "verdict": "PARTIAL",
+  "surfaces": [
+    "lean/spec_v4",
+    "Math30Kernel",
+    "Math30Interfaces"
+  ],
+  "total_files": 1,
+  "compiled": 1,
+  "counts": {
+    "PASS": 1
+  },
+  "pass_with_warnings": 0,
+  "total_seconds": 21.5,
+  "failures": [],
+  "warning_files": [],
+  "results": [
+    {
+      "path": "lean/spec_v4/ActualInfinityRefutation.lean",
+      "lean_path": "spec_v4/ActualInfinityRefutation.lean",
+      "rc": 0,
+      "status": "PASS",
+      "warnings": 0,
+      "seconds": 21.53,
+      "error": "",
+      "stdout_tail": "",
+      "stderr_tail": ""
+    }
+  ]
+}

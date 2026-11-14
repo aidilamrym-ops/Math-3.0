@@ -1,0 +1,4 @@
+
+=== run start 2026-11-12 22:36:14 scope=partial files=1 pending=1 workers=2 ===
+[1/1] PASS      21.53s lean/spec_v4/ActualInfinityRefutation.lean
+=== run end 2026-11-12 22:36:35 ===

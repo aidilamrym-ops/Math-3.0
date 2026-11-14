@@ -79,7 +79,7 @@ class EllipticRankSpectralSearch:
             return rational_literal, "SUCCESS: Zero-float rational literal extracted"
         except Exception as e:
             flint.ctx.prec = orig_prec
-            return None, f"Extraction failed: {str(e)}"
+            raise
 
 if __name__ == "__main__":
     print("=== Math 3.0 High-Rank Elliptic Curve Spectral Search Initialized ===")

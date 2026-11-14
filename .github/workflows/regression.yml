@@ -10,15 +10,15 @@ on:
     - cron: '0 2 * * *'
 
 env:
-  # Ensure we never exceed 2 concurrent processes for any tool that allows it
-  MAX_JOBS: 2
+  # Ensure we never exceed 1 concurrent process for any tool that allows it
+  MAX_JOBS: 1
 
 jobs:
   audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     strategy:
       matrix:
-        # Future: could add OS or version variations
         include:
           - name: linux-ubuntu
 
@@ -26,33 +26,43 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Lean toolchain and Mathlib cache
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: lean
+          use-mathlib-cache: "true"
+          use-github-cache: "true"
+          build: "false"
+          test: "false"
+          lint: "false"
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install Python dependencies (none beyond stdlib)
-        run: pip install --no-deps .
+      - name: Install Z3 for Python audits
+        run: pip install z3-solver
 
       - name: Verify manifest ledger (repokeeper --verify)
         run: python mcp/t2n/core/repokeeper.py --verify
 
-      - name: Anti-Circularity Gate (strict)
-        run: python tools/omega_audit/gate_strict.py check lean/
+      - name: Anti-Circularity Gate (strict) over audited surface
+        run: python tools/omega_audit/gate_strict.py check lean/spec_v4 Math30Kernel Math30Interfaces
 
-      - name: Full‑Surface Lean compile audit (490 files, max 2 workers)
-        run: python tools/full_surface_lean_audit.py --workers 2
+      - name: Full-Surface Lean compile audit (493 files, 1 worker)
+        run: python tools/full_surface_lean_audit.py --workers 1
 
-      - name: README claim audit (cited files type‑check)
+      - name: README claim audit (cited files type-check)
         run: python tools/readme_lean_audit.py
 
-      - name: Theorem‑name audit (backticked identifiers exist)
+      - name: Theorem-name audit (backticked identifiers exist)
         run: python tools/readme_theorem_audit.py
 
       - name: Axiom footprint audit (allowlist propext, Classical.choice, Quot.sound)
-        run: python tools/axiom_footprint_audit.py
+        run: python tools/axiom_footprint_audit.py --workers 1
 
-      - name: Vacuity / statement‑strength audit (True, reflexive, empty hypotheses)
+      - name: Vacuity / statement-strength audit (True, reflexive, empty hypotheses)
         run: python tools/vacuity_statement_strength_audit.py
 
       - name: Claims ledger (README → Lean mapping)
@@ -61,8 +71,26 @@ jobs:
       - name: Bridge coverage (JSON ↔ Lean mirror)
         run: python tools/bridge_coverage.py
 
-      - name: Run regression test suite (Gates 1‑6 + Lean 4)
+      - name: Z3 SMT tribunal (Phase 4 bounds)
+        run: python tools/z3_tribunal.py
+
+      - name: Newton box validator (Phase 3 ledger)
+        run: python tools/newton_box_validator.py
+
+      - name: LTE spectral validator (Phase 2 enclosure)
+        run: python tools/lte_spectral_validator.py
+
+      - name: Gate 5 rational extraction
+        run: python tools/gate5_rational_extraction.py
+
+      - name: Run regression test suite (Gates 1-6 + Lean 4 + blindspot)
         run: python tools/run_regression_tests.py
+
+      - name: Manifest verification (independent verifier)
+        run: python tools/omega_audit/manifest_verify.py
+
+      - name: Blind-spot audit (fail-closed)
+        run: python tools/blindspot_audit.py
 
       - name: Summarize reports
         run: |

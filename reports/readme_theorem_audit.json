@@ -1,9 +1,20 @@
 {
-  "cited_identifiers": 39,
-  "resolved": 39,
+  "generated": "2026-11-13T12:39:01.422900+00:00",
+  "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
+  "readme_semantic_sha256": "950cf14494a96c96e003be03b3a439ee7a1de14691766e79c2c995e68603308d",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
+  ],
+  "cited_identifiers": 45,
+  "resolved": 45,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
+    "actual_infinity_violates_conservation": [
+      "lean/spec_v4/ActualInfinityRefutation.lean"
+    ],
     "bott_periodicity_stable": [
       "lean/spec_v4/HorizonFrontierTests.lean"
     ],
@@ -12,6 +23,9 @@
     ],
     "collatzLoop_mono": [
       "lean/spec_v4/CollatzBoundedDefeat.lean"
+    ],
+    "continuity_forces_constant_in_finite_lattice": [
+      "lean/spec_v4/ContinuityRefutation.lean"
     ],
     "critical_line_lattice_stable": [
       "lean/spec_v4/FiniteRiemannZetaLattice.lean"
@@ -29,6 +43,9 @@
       "lean/spec_v4/ShannonEntropyDPI.lean"
     ],
     "dsitni_general": [
+      "lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean"
+    ],
+    "dsitni_half_threshold_refuted": [
       "lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean"
     ],
     "erdos_szekeres_pair": [
@@ -50,17 +67,26 @@
     "guinand_trace_stabilization": [
       "lean/spec_v4/FiniteRiemannZetaLattice.lean"
     ],
+    "hilbert_hotel_obstruction": [
+      "lean/spec_v4/ActualInfinityRefutation.lean"
+    ],
     "hopf_invariant_one": [
       "lean/spec_v4/HorizonFrontierTests.lean"
     ],
     "landauer_bits_le_energy": [
       "lean/spec_v4/LandauerBekensteinBound.lean"
     ],
+    "landauer_infinite_energy_contradiction": [
+      "lean/spec_v4/ActualInfinityRefutation.lean"
+    ],
     "navier_stokes_dissipation_bounded": [
       "lean/spec_v4/FiniteNavierStokesDissipation.lean"
     ],
     "no_cloning_finite": [
       "lean/spec_v4/NoCloningFiniteDim.lean"
+    ],
+    "no_continuous_injection_from_continuum": [
+      "lean/spec_v4/ContinuityRefutation.lean"
     ],
     "p_vs_np_circuit_separation": [
       "lean/spec_v4/FinitePvNPSeparationLattice.lean",

@@ -1,0 +1,11 @@
+{
+  "schema": "math30.vendored_gate.v1",
+  "vendored_path": "tools/omega_audit/vendor/anti_circularity_gate.py",
+  "source": "opencode anti-circularity skill: scripts/gate.py",
+  "source_sha256": "aa53c128ff75f468bfc3f1cb2705c64950b213cce758670a8a3b7b80062c3214",
+  "vendored_sha256": "aa53c128ff75f468bfc3f1cb2705c64950b213cce758670a8a3b7b80062c3214",
+  "size_bytes": 16158,
+  "vendored_utc": "2026-11-11T16:02:20Z",
+  "purpose": "Offline CI copy of the gate of record. gate_strict.py still prefers an explicit --gate path or ANTI_CIRCULARITY_GATE, then uses this file, so a GitHub runner does not return TOOL NOT RUN for a missing home-directory skill.",
+  "update_policy": "Replace the file and both hashes together after reviewing the upstream gate diff; never edit the vendored copy in place."
+}

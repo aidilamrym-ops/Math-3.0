@@ -73,6 +73,8 @@ Z3_EXPECTED = {
     "gate5_rational_leakage_refutation.smt2": "unsat",
     "twistor_googly_refutation.smt2": "unsat",
     "yang_mills_refutation.smt2": "unsat",
+    "actual_infinity_refutation.smt2": "unsat",
+    "continuity_refutation.smt2": "unsat",
 }
 
 
@@ -343,7 +345,7 @@ def step_z3() -> dict:
         "z3_exit_zero": tribunal["exit_code"] == 0,
         "receipt_rewritten": after > before,
         "verdict_passed": data.get("verdict") == "PASSED",
-        "exactly_four_checks": len(checks_list) == 4,
+        "exactly_nine_checks": len(checks_list) == 9,
     }
     for name, expected in Z3_EXPECTED.items():
         checks["%s_is_%s" % (name, expected)] = observed.get(name) == expected

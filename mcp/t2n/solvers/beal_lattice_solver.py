@@ -37,15 +37,18 @@ class BealLatticeSolver:
         return (num < den), Fraction(int(num), int(den))
 
     def run_batch_sweep(self, count=5000):
-        print(f"[BEAL SOLVER] Initializing 5,000-iteration batch sweep at 10^18 scale...")
+        print(f"[BEAL SOLVER] Initializing {count}-iteration batch sweep at 10^18 scale...")
+        # Deterministic seed: the sweep must be reproducible for the audit gate.
+        rng = random.Random(0)
+        contractible = True
         for i in range(count):
-            A = random.randint(10**10, 10**18)
-            B = random.randint(10**10, 10**18)
-            C = random.randint(10**10, 10**18)
-            
+            A = rng.randint(10**10, 10**18)
+            B = rng.randint(10**10, 10**18)
+            C = rng.randint(10**10, 10**18)
+
             contractible, ratio = self.gate4_contractibility_check(A, B, C)
             if not contractible:
-                print(f"[FAIL-CLOSED LOCKDOWN] Beal conjecture breach or gate 4 contraction failure at i={i}!")
+                print(f"[FAIL-CLOSED LOCKDOWN] DSITNI contraction failure at i={i}!")
                 print(f"  Coords: {A}, {B}, {C}")
                 print(f"  Ratio: {ratio}")
                 sys.exit(1)

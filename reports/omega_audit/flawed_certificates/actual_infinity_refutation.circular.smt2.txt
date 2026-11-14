@@ -1,0 +1,18 @@
+; SMT-LIB2 Verification Script: Actual Infinity Refutation
+; Logic: QF_NIA (Quantifier-Free Non-Linear Integer Arithmetic)
+; Objective: Prove unsatisfiability of bounded energy conservation under unbounded states.
+
+(set-logic QF_NIA)
+
+(declare-const capacity Int)
+(declare-const total_states Int)
+(declare-const step_cost Int)
+
+; Constraints
+(assert (> capacity 0))
+(assert (>= step_cost 1))
+(assert (> total_states capacity))
+(assert (<= (* total_states step_cost) capacity))
+
+(check-sat)
+(exit)

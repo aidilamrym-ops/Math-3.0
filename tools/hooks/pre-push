@@ -2,10 +2,144 @@
 # Math 3.0 pre-push gate.
 #
 # Installed from tools/hooks/pre-push by tools/omega_audit/install_hooks.py.
-# A push must not carry a Lean trust token that the commit-time scan missed.
+#
+# The gate scans the commits that are actually being pushed, not the working
+# tree: for every local sha announced on stdin it extracts that tree's .lean
+# blobs and runs gate_strict.py over them. Pushing a branch other than the
+# checked-out one therefore cannot hide a trust token. The manifest/README seal
+# check remains working-tree scoped (repokeeper has no index/object mode).
+#
+# A kernel compile is deliberately opt-in because the canonical full-surface
+# audit is a long run:
+#   MATH30_PRE_PUSH_COMPILE=1 [MATH30_PRE_PUSH_WORKERS=N] git push
+#
+# Exit codes: 0 accept, 1 reject, 2 tool not run (also rejects).
 set -u
-ROOT=$(git rev-parse --show-toplevel) || exit 1
-exec python "$ROOT/tools/omega_audit/gate_strict.py" check \
-    "$ROOT/lean/spec_v4" \
-    "$ROOT/Math30Kernel" \
-    "$ROOT/Math30Interfaces"
+
+ROOT=$(git rev-parse --show-toplevel) || {
+    echo "PRE-PUSH FAIL: not inside a git worktree" >&2
+    exit 2
+}
+PYTHON=${PYTHON:-python}
+if ! command -v "$PYTHON" >/dev/null 2>&1; then
+    echo "PRE-PUSH FAIL: python interpreter not found: $PYTHON" >&2
+    exit 2
+fi
+if ! command -v grep >/dev/null 2>&1; then
+    echo "PRE-PUSH FAIL: grep not found" >&2
+    exit 2
+fi
+if ! command -v tr >/dev/null 2>&1; then
+    echo "PRE-PUSH FAIL: tr not found" >&2
+    exit 2
+fi
+GATE="$ROOT/tools/omega_audit/gate_strict.py"
+KEEPER="$ROOT/mcp/t2n/core/repokeeper.py"
+SURFACE='^(lean/spec_v4|Math30Kernel|Math30Interfaces)/.*\.lean$'
+for tool in "$GATE" "$KEEPER"; do
+    if [ ! -f "$tool" ]; then
+        echo "PRE-PUSH FAIL: required tool missing: $tool" >&2
+        exit 2
+    fi
+done
+
+echo "[pre-push] verifying manifest.json and README seal"
+if ! "$PYTHON" "$KEEPER" --verify; then
+    echo "[pre-push] FAIL: manifest/README verification failed" >&2
+    echo "[pre-push] reseal with: python mcp/t2n/core/repokeeper.py --reseal" >&2
+    exit 1
+fi
+
+WORK=$(mktemp -d "${TMPDIR:-/tmp}/math30-prepush.XXXXXX") || {
+    echo "PRE-PUSH FAIL: cannot create temporary directory" >&2
+    exit 2
+}
+trap 'rm -rf "$WORK"' EXIT HUP INT TERM
+
+cat > "$WORK/refs.txt"
+tr -d '\r' < "$WORK/refs.txt" > "$WORK/refs.clean" || {
+    echo "[pre-push] FAIL: cannot normalize hook stdin" >&2
+    exit 2
+}
+skip_all=0
+: > "$WORK/shas.txt"
+while read -r local_ref local_sha remote_ref remote_sha; do
+    [ -n "${local_ref:-}" ] || continue
+    if [ -z "${local_sha:-}" ]; then
+        echo "[pre-push] FAIL: malformed stdin ref line: $local_ref" >&2
+        exit 2
+    fi
+    case "$local_sha" in
+        0000000000000000000000000000000000000000)
+            skip_all=1
+            continue
+            ;;
+    esac
+    printf '%s\n' "$local_sha" >> "$WORK/shas.txt"
+done < "$WORK/refs.clean"
+
+if [ ! -s "$WORK/shas.txt" ]; then
+    if [ "$skip_all" -eq 1 ]; then
+        echo "[pre-push] only ref deletions; trust-token scan skipped"
+        exit 0
+    fi
+    # Manual invocation without hook stdin: fall back to HEAD, never to PASS
+    # without scanning something.
+    if ! git -C "$ROOT" rev-parse --verify HEAD >/dev/null 2>&1; then
+        echo "[pre-push] FAIL: no refs on stdin and no HEAD to scan" >&2
+        exit 2
+    fi
+    git -C "$ROOT" rev-parse HEAD > "$WORK/shas.txt" || exit 2
+    echo "[pre-push] no refs on stdin; scanning HEAD"
+fi
+
+sort -u "$WORK/shas.txt" -o "$WORK/shas.txt" || exit 2
+count=0
+while IFS= read -r sha; do
+    [ -n "$sha" ] || continue
+    if ! git -C "$ROOT" rev-parse --verify "$sha^{tree}" >/dev/null 2>&1; then
+        echo "[pre-push] FAIL: cannot resolve pushed object: $sha" >&2
+        exit 2
+    fi
+    if ! git -C "$ROOT" ls-tree -r --name-only "$sha" > "$WORK/all-$sha.txt"; then
+        echo "[pre-push] FAIL: cannot list files for $sha" >&2
+        exit 2
+    fi
+    grep -i '\.lean$' "$WORK/all-$sha.txt" > "$WORK/lean-$sha.txt" || true
+    grep -Ei "$SURFACE" "$WORK/lean-$sha.txt" > "$WORK/tree-$sha.txt" || true
+    if [ ! -s "$WORK/tree-$sha.txt" ]; then
+        echo "[pre-push] WARN: pushed object $sha contains no Lean files in the audited surface"
+    fi
+    while IFS= read -r file; do
+        [ -n "$file" ] || continue
+        count=$((count + 1))
+        mkdir -p "$WORK/trees/$sha/$(dirname "$file")" || exit 2
+        if ! git -C "$ROOT" show "$sha:$file" > "$WORK/trees/$sha/$file"; then
+            echo "[pre-push] FAIL: cannot read $sha:$file" >&2
+            exit 2
+        fi
+    done < "$WORK/tree-$sha.txt"
+done < "$WORK/shas.txt"
+
+if [ "$count" -eq 0 ]; then
+    echo "[pre-push] FAIL: pushed objects contain no .lean files" >&2
+    exit 2
+fi
+
+echo "[pre-push] strict trust-token scan over $count pushed Lean blob(s)"
+if ! "$PYTHON" "$GATE" check "$WORK/trees"; then
+    echo "[pre-push] FAIL: strict gate rejected a pushed Lean tree" >&2
+    exit 1
+fi
+
+if [ "${MATH30_PRE_PUSH_COMPILE:-0}" = "1" ]; then
+    echo "[pre-push] full-surface kernel compile audit (opt-in)"
+    if ! "$PYTHON" "$ROOT/tools/full_surface_lean_audit.py" \
+        --workers "${MATH30_PRE_PUSH_WORKERS:-1}"; then
+        echo "[pre-push] FAIL: full-surface compile audit failed" >&2
+        exit 1
+    fi
+fi
+
+echo "[pre-push] PASS"
+exit 0

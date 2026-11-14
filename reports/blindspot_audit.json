@@ -1,56 +1,19 @@
 {
   "audit": "math30_blindspot_audit",
   "audit_version": "1.0.0",
-  "timestamp": "2026-11-11T09:04:36.351150+00:00",
+  "timestamp": "2026-11-12T02:51:44.404493+00:00",
   "root": "D:\\Opencode AI Agent\\Math 3.0 Tools",
   "stats": {
-    "lean_files": 518,
-    "lean_declarations": 1846,
-    "lean_theorems": 752,
-    "python_files": 119,
-    "python_functions": 476,
+    "lean_files": 521,
+    "lean_declarations": 1857,
+    "lean_theorems": 760,
+    "python_files": 121,
+    "python_functions": 508,
     "python_constant_returns": 0,
-    "finding_count": 1,
-    "warning_count": 4
+    "finding_count": 0,
+    "warning_count": 0
   },
-  "findings": [
-    {
-      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/vacuity_statement_strength_audit.py",
-      "line": 177,
-      "rule": "audit-swallow",
-      "message": "broad exception handler does not re-raise or fail closed",
-      "severity": "FAIL"
-    }
-  ],
-  "warnings": [
-    {
-      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/axiom_footprint_audit.py",
-      "line": 41,
-      "rule": "audit-portability",
-      "message": "absolute Windows path makes the audit non-portable",
-      "severity": "WARN"
-    },
-    {
-      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/bridge_coverage.py",
-      "line": 61,
-      "rule": "audit-swallow",
-      "message": "broad exception handler does not re-raise or fail closed",
-      "severity": "WARN"
-    },
-    {
-      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/elliptic_rank_spectral_search.py",
-      "line": 80,
-      "rule": "audit-swallow",
-      "message": "broad exception handler does not re-raise or fail closed",
-      "severity": "WARN"
-    },
-    {
-      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/gate_mutation_audit.py",
-      "line": 40,
-      "rule": "audit-portability",
-      "message": "absolute Windows path makes the audit non-portable",
-      "severity": "WARN"
-    }
-  ],
-  "verdict": "FAILED"
+  "findings": [],
+  "warnings": [],
+  "verdict": "PASSED"
 }

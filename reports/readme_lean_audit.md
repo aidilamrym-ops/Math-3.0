@@ -1,14 +1,17 @@
 # README Lean Claim Audit
 
-- Cited unique files: 39
+- Generated: 2026-11-13T12:57:16.645512+00:00
+- Workers: 1
+- Cited unique files: 36
 - Unresolved citations: 0
-- Counts: {'PASS': 39}
+- Counts: {'PASS': 36}
 
 | Status | File | Notes |
 |---|---|---|
+| PASS | `lean\spec_v4\ActualInfinityRefutation.lean` |  |
 | PASS | `lean\spec_v4\CantorDiagonalization.lean` |  |
 | PASS | `lean\spec_v4\CollatzBoundedDefeat.lean` |  |
-| PASS | `lean\spec_v4\DecidableHomotopySphere.lean` |  |
+| PASS | `lean\spec_v4\ContinuityRefutation.lean` |  |
 | PASS | `lean\spec_v4\ErdosSzekeresRamsey.lean` |  |
 | PASS | `lean\spec_v4\EuclidFermatArmor.lean` |  |
 | PASS | `lean\spec_v4\FiniteLatticeSpectralGravity.lean` |  |
@@ -16,8 +19,6 @@
 | PASS | `lean\spec_v4\FinitePvNPSeparationLattice.lean` |  |
 | PASS | `lean\spec_v4\FiniteRiemannZetaLattice.lean` |  |
 | PASS | `lean\spec_v4\FiniteYangMillsMassGapLattice.lean` |  |
-| PASS | `lean\spec_v4\GrothendieckToposBridge.lean` |  |
-| PASS | `lean\spec_v4\HigherInductivePushout.lean` |  |
 | PASS | `lean\spec_v4\HorizonFrontierTests.lean` |  |
 | PASS | `lean\spec_v4\LandauerBekensteinBound.lean` |  |
 | PASS | `lean\spec_v4\MillenniumBirchSwinnertonDyer.lean` |  |
@@ -30,11 +31,9 @@
 | PASS | `lean\spec_v4\RiemannAdversarialEvidence.lean` |  |
 | PASS | `lean\spec_v4\RiemannCriticalEvidence.lean` |  |
 | PASS | `lean\spec_v4\ShannonEntropyDPI.lean` |  |
-| PASS | `lean\spec_v4\SturmTarskiIsolation.lean` |  |
 | PASS | `lean\spec_v4\UniversalFinitaryInformationConservation.lean` |  |
 | PASS | `lean\spec_v4\UniversalQuantumCoherencePhaseLock.lean` |  |
 | PASS | `lean\spec_v4\UniversalTopologicalInvariantSingularityResolution.lean` |  |
-| PASS | `lean\spec_v4\YangMillsLatticeBoundary.lean` |  |
 | PASS | `lean\spec_v4\adversarial_tests\CoreGateAdversarialStressTest.lean` |  |
 | PASS | `lean\spec_v4\certificates\BealScale10to18Certificate.lean` |  |
 | PASS | `lean\spec_v4\certificates\DiscreteInertiaBoundaryDeterminant.lean` |  |

@@ -13,6 +13,9 @@ import json
 import os
 import sys
 
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
+
 try:
     import flint
 except ImportError:
@@ -21,6 +24,10 @@ except ImportError:
 
 from datetime import datetime, timezone
 from fractions import Fraction
+
+
+def _fmpq_fraction(value) -> Fraction:
+    return Fraction(int(value.p), int(value.q))
 
 ROOT = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "..", "..")
@@ -106,12 +113,14 @@ class RhKryptonSolver:
                 )
 
             mid_q = Fraction(mid_str)
-            rad_clean = str(radius_arb.mid()).replace("[", "").replace("]", "").split("+/-")[0].strip()
-            try:
-                rad_q = Fraction(rad_clean)
-            except (ValueError, ZeroDivisionError) as exc:
-                print(f"[WARN] Could not parse radius {rad_clean!r}: {exc}; using {RADIUS}")
-                rad_q = RADIUS
+            rad_mid = radius_arb.mid()
+            if not rad_mid.is_exact():
+                # Fail closed: a radius midpoint that cannot be read exactly must
+                # not be silently replaced by a different enclosure.
+                raise ValueError(
+                    f"Zero {i + 1}: dynamic radius midpoint is not an exact rational"
+                )
+            rad_q = _fmpq_fraction(rad_mid.fmpq())
             lo_q = mid_q - rad_q
             hi_q = mid_q + rad_q
 
@@ -194,7 +203,7 @@ class RhKryptonSolver:
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "precision_bits": self.precision,
             "search_boundary": SEARCH_BOUNDARY,
-            "interval_radius": str(RADIUS),
+            "base_interval_radius": str(RADIUS),
             "target": "Riemann Hypothesis First 10 Non-Trivial Zeros (s = 1/2 + it)",
             "zero_count": self.dim,
             "zeros": zeros_ledger,

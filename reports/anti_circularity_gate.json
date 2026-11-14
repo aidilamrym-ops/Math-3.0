@@ -1,11 +1,11 @@
 {
   "tool": "math30_strict_gate",
   "version": "1.0.0",
-  "timestamp": "2026-11-10T09:36:39.848326+00:00",
+  "timestamp": "2026-11-13T12:10:45.187394+00:00",
   "command": "check",
-  "external_gate": "C:\\Users\\usER\\.config\\opencode\\skills\\anti-circularity\\scripts\\gate.py",
+  "external_gate": "D:\\Opencode AI Agent\\Math 3.0 Tools\\tools\\omega_audit\\vendor\\anti_circularity_gate.py",
   "external_exit": 0,
-  "files_scanned": 473,
+  "files_scanned": 495,
   "findings": [],
   "not_run": [],
   "verdict": "PASS"

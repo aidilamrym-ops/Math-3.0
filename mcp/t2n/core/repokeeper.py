@@ -29,6 +29,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import posixpath
 import re
 import sys
 import tempfile
@@ -40,9 +41,25 @@ EXCLUDED_REL_PREFIXES = {
 }
 SELF_NAME = "manifest.json"
 # README carries the seal digest of manifest.json, so pinning it would be
-# circular. It is excluded here and checked semantically in verify() instead.
+# circular. Both exclusions are root-relative: a nested README.MD elsewhere in
+# the tree is a normal file and must still be pinned.
 README_NAME = "README.MD"
-UNPINNED_NAMES = {SELF_NAME, README_NAME}
+UNPINNED_ROOT_FILES = {SELF_NAME, README_NAME}
+
+
+def posix_key(path: str) -> str:
+    """Ledger key with forward slashes, independent of the host separator."""
+    return path.replace(os.sep, "/")
+
+
+def resolve_key(root: str, key: str) -> str:
+    """Resolve a ledger key on any host.
+
+    New receipts store POSIX keys.  Legacy Windows receipts stored backslashes;
+    splitting on both separators keeps those verifiable on Linux as well.
+    """
+    parts = [p for p in key.replace("\\", "/").split("/") if p not in ("", ".")]
+    return os.path.join(root, *parts)
 
 
 def repo_root() -> str:
@@ -88,12 +105,15 @@ def scan(root: str) -> dict[str, str]:
             if not is_excluded_dir(os.path.join(dirpath, name), root)
         ]
         for filename in filenames:
-            if filename in UNPINNED_NAMES or filename.endswith(".pyc"):
+            if filename.endswith(".pyc"):
                 continue
             full = os.path.join(dirpath, filename)
             if not os.path.isfile(full):
                 continue
-            manifest[os.path.relpath(full, root)] = canonical_sha256(full)
+            rel = posix_key(os.path.relpath(full, root))
+            if rel in UNPINNED_ROOT_FILES:
+                continue
+            manifest[rel] = canonical_sha256(full)
     return manifest
 
 
@@ -115,21 +135,47 @@ def atomic_write_json(path: str, payload: dict[str, str]) -> None:
         raise
 
 
-README_NAME = "README.MD"
 ROW_PATTERNS = (
     (re.compile(r"\b\d{1,3}(?:,\d{3})+(?=\s+rows\b)"), "{rows:,}"),
     (re.compile(r"\b\d{1,3}(?:,\d{3})+(?=\s+files\s+pinned\b)"), "{rows:,}"),
     (re.compile(r"\b\d{1,3}(?:,\d{3})+(?=-row\b)"), "{rows:,}"),
 )
 DIGEST_LINE = re.compile(r"(?<![0-9a-f])[0-9a-f]{64}(?![0-9a-f])")
+SEAL_CONTEXT = ("sha-256", "seal", "ledger signature", "manifest")
+# Any 64-hex token is a potential certificate hash.  Only tokens on, or directly
+# below, a line that identifies itself as the manifest seal may be rewritten.
+# The previous implementation replaced *every* 64-hex token in README.MD, which
+# would have silently destroyed unrelated certificate digests.
+SEAL_LOOKBACK = 2
 
 
 def manifest_digest(path: str) -> str:
     return canonical_sha256(path)
 
 
+def _is_seal_line(line: str) -> bool:
+    lowered = line.lower()
+    return any(marker in lowered for marker in SEAL_CONTEXT)
+
+
+def seal_digests(text: str) -> list[str]:
+    """64-hex tokens that occur in an explicit manifest-seal context."""
+    lines = text.splitlines()
+    found: list[str] = []
+    for index, line in enumerate(lines):
+        if not DIGEST_LINE.search(line):
+            continue
+        context = line
+        for back in range(1, SEAL_LOOKBACK + 1):
+            if index - back >= 0:
+                context += " " + lines[index - back]
+        if _is_seal_line(context):
+            found.extend(DIGEST_LINE.findall(line))
+    return found
+
+
 def sync_readme(root: str, rows: int) -> None:
-    """Rewrite README row counts and seal digest from ground truth."""
+    """Rewrite README row counts and manifest seal digest from ground truth."""
     path = os.path.join(root, README_NAME)
     if not os.path.isfile(path):
         return
@@ -139,7 +185,19 @@ def sync_readme(root: str, rows: int) -> None:
     updated = text
     for pattern, template in ROW_PATTERNS:
         updated = pattern.sub(template.format(rows=rows), updated)
-    updated = DIGEST_LINE.sub(digest, updated)
+
+    lines = updated.splitlines(keepends=True)
+    for index, line in enumerate(lines):
+        if not DIGEST_LINE.search(line):
+            continue
+        context = line
+        for back in range(1, SEAL_LOOKBACK + 1):
+            if index - back >= 0:
+                context += " " + lines[index - back]
+        if _is_seal_line(context):
+            lines[index] = DIGEST_LINE.sub(digest, line)
+    updated = "".join(lines)
+
     if updated != text:
         with open(path, "w", encoding="utf-8", newline="") as handle:
             handle.write(updated)
@@ -155,10 +213,18 @@ def check_readme(root: str, rows: int) -> list[str]:
         text = handle.read()
     digest = manifest_digest(os.path.join(root, SELF_NAME))
     problems: list[str] = []
-    if f"{rows:,} rows" not in text and f"{rows:,}-row" not in text:
+    if (
+        f"{rows:,} rows" not in text
+        and f"{rows:,}-row" not in text
+        and f"{rows:,} files pinned" not in text
+    ):
         problems.append(f"row count {rows:,} not stated")
-    if digest not in text:
+    stated = seal_digests(text)
+    if not stated:
         problems.append(f"seal {digest[:16]}... not stated")
+    stale = sorted({value for value in stated if value != digest})
+    if stale:
+        problems.append(f"stale seal digest(s): {', '.join(v[:16] + '...' for v in stale)}")
     return problems
 
 
@@ -174,10 +240,19 @@ def reseal(root: str) -> int:
     return 0
 
 
+def norm_key(key: str) -> str:
+    """Canonical comparison form: POSIX separators, no `.` segments, folded case."""
+    return posixpath.normpath(key.replace("\\", "/")).casefold()
+
+
 def verify(root: str) -> int:
     manifest_path = os.path.join(root, SELF_NAME)
-    with open(manifest_path, "r", encoding="utf-8") as handle:
-        recorded = json.load(handle)
+    try:
+        with open(manifest_path, "r", encoding="utf-8") as handle:
+            recorded = json.load(handle)
+    except (OSError, json.JSONDecodeError) as exc:
+        print(f"FAIL: manifest.json unreadable: {type(exc).__name__}: {exc}")
+        return 2
     if not isinstance(recorded, dict):
         print("FAIL: manifest.json is not a JSON object")
         return 2
@@ -186,7 +261,7 @@ def verify(root: str) -> int:
     mismatched: list[str] = []
     checked = 0
     for key, expected in recorded.items():
-        path = os.path.join(root, key)
+        path = resolve_key(root, key)
         if not os.path.isfile(path):
             missing.append(key)
             continue
@@ -195,12 +270,8 @@ def verify(root: str) -> int:
             mismatched.append(key)
 
     current = scan(root)
-    recorded_keys = {os.path.normcase(os.path.normpath(k)) for k in recorded}
-    extra = [
-        key
-        for key in current
-        if os.path.normcase(os.path.normpath(key)) not in recorded_keys
-    ]
+    recorded_keys = {norm_key(k) for k in recorded}
+    extra = [key for key in current if norm_key(key) not in recorded_keys]
 
     print(f"checked:   {checked}")
     print(f"missing:   {len(missing)}")
@@ -223,9 +294,14 @@ def main(argv: list[str]) -> int:
     if not os.path.isdir(root):
         print("FATAL: repository root not found")
         return 2
-    if "--verify" in argv[1:]:
+    args = argv[1:]
+    if args == ["--verify"]:
         return verify(root)
-    return reseal(root)
+    if args in ([], ["--reseal"]):
+        return reseal(root)
+    # Unknown flags fail closed.  A typo must never silently rewrite the ledger.
+    print("usage: repokeeper.py [--reseal | --verify]")
+    return 2
 
 
 if __name__ == "__main__":

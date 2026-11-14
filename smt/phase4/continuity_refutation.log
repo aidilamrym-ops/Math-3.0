@@ -1,0 +1,3 @@
+$ D:\Opencode AI Agent\Math 3.0 Tools\smt\phase4\continuity_refutation.smt2
+(check-sat)
+unsat

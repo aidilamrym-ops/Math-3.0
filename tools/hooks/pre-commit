@@ -2,11 +2,127 @@
 # Math 3.0 pre-commit gate.
 #
 # Installed from tools/hooks/pre-commit by tools/omega_audit/install_hooks.py.
-# The strict wrapper runs the installed skill gate first and then the hardened
-# lexer/token scan. Both must pass before the commit is accepted.
+#
+# Two fail-closed checks over the commit candidate:
+#   1. repokeeper.py --verify        manifest.json rows and the README seal
+#   2. gate_strict.py check          staged .lean blobs, not the working tree
+#
+# The staged snapshot is scanned because the working tree may differ from the
+# index; a token fixed after `git add` must still block the commit. Because
+# repokeeper verifies the working tree, any staged file with unstaged edits is
+# rejected rather than committed unverified (partial staging must be stashed).
+# The manifest check itself is working-tree scoped; a content edit without a
+# reseal rejects the commit and prints the reseal command.
+#
+# Exit codes: 0 accept, 1 reject, 2 tool not run (also rejects).
 set -u
-ROOT=$(git rev-parse --show-toplevel) || exit 1
-exec python "$ROOT/tools/omega_audit/gate_strict.py" check \
-    "$ROOT/lean/spec_v4" \
-    "$ROOT/Math30Kernel" \
-    "$ROOT/Math30Interfaces"
+
+ROOT=$(git rev-parse --show-toplevel) || {
+    echo "PRE-COMMIT FAIL: not inside a git worktree" >&2
+    exit 2
+}
+PYTHON=${PYTHON:-python}
+if ! command -v "$PYTHON" >/dev/null 2>&1; then
+    echo "PRE-COMMIT FAIL: python interpreter not found: $PYTHON" >&2
+    exit 2
+fi
+GATE="$ROOT/tools/omega_audit/gate_strict.py"
+KEEPER="$ROOT/mcp/t2n/core/repokeeper.py"
+SURFACE='^(lean/spec_v4|Math30Kernel|Math30Interfaces)/.*\.lean$'
+for tool in "$GATE" "$KEEPER"; do
+    if [ ! -f "$tool" ]; then
+        echo "PRE-COMMIT FAIL: required tool missing: $tool" >&2
+        exit 2
+    fi
+done
+if ! command -v grep >/dev/null 2>&1; then
+    echo "PRE-COMMIT FAIL: grep not found" >&2
+    exit 2
+fi
+
+echo "[pre-commit] verifying manifest.json and README seal"
+if ! "$PYTHON" "$KEEPER" --verify; then
+    echo "[pre-commit] FAIL: manifest/README verification failed" >&2
+    echo "[pre-commit] reseal with: python mcp/t2n/core/repokeeper.py --reseal" >&2
+    exit 1
+fi
+
+WORK=$(mktemp -d "${TMPDIR:-/tmp}/math30-precommit.XXXXXX") || {
+    echo "PRE-COMMIT FAIL: cannot create temporary directory" >&2
+    exit 2
+}
+trap 'rm -rf "$WORK"' EXIT HUP INT TERM
+
+if ! git -C "$ROOT" diff --cached --name-only --diff-filter=ACMR > "$WORK/all.txt"; then
+    echo "PRE-COMMIT FAIL: cannot list staged files" >&2
+    exit 2
+fi
+
+# repokeeper verifies the working tree, so a staged file that still has
+# unstaged edits would commit content the manifest never checked. Partial
+# staging is therefore rejected; stage the whole file or stash the rest.
+conflict=0
+while IFS= read -r file; do
+    [ -n "$file" ] || continue
+    git -C "$ROOT" diff --quiet -- "$file"
+    rc=$?
+    if [ "$rc" -eq 1 ]; then
+        echo "[pre-commit] FAIL: staged file also has unstaged edits: $file" >&2
+        conflict=1
+    elif [ "$rc" -ne 0 ]; then
+        echo "PRE-COMMIT FAIL: cannot compare staged and working-tree content: $file" >&2
+        exit 2
+    fi
+done < "$WORK/all.txt"
+if [ "$conflict" -ne 0 ]; then
+    echo "[pre-commit] stage the whole file, or stash the unstaged edit, then retry" >&2
+    exit 1
+fi
+
+# A staged deletion while the working-tree copy still exists (for example
+# `git rm --cached`) would pass manifest verification but commit a tree that
+# removes a pinned file. Reject it; a real deletion removes the working file
+# too, and the missing row makes --verify fail until the ledger is resealed.
+if ! git -C "$ROOT" diff --cached --name-only --diff-filter=D > "$WORK/deleted.txt"; then
+    echo "PRE-COMMIT FAIL: cannot list staged deletions" >&2
+    exit 2
+fi
+deleted_conflict=0
+while IFS= read -r file; do
+    [ -n "$file" ] || continue
+    if [ -e "$ROOT/$file" ]; then
+        echo "[pre-commit] FAIL: staged deletion but working-tree file still exists: $file" >&2
+        deleted_conflict=1
+    fi
+done < "$WORK/deleted.txt"
+if [ "$deleted_conflict" -ne 0 ]; then
+    echo "[pre-commit] delete the working-tree file too, or unstage the deletion" >&2
+    exit 1
+fi
+
+grep -Ei "$SURFACE" "$WORK/all.txt" > "$WORK/staged.txt" || true
+
+count=0
+while IFS= read -r file; do
+    [ -n "$file" ] || continue
+    count=$((count + 1))
+    mkdir -p "$WORK/tree/$(dirname "$file")" || exit 2
+    if ! git -C "$ROOT" show ":$file" > "$WORK/tree/$file"; then
+        echo "PRE-COMMIT FAIL: cannot read staged blob: $file" >&2
+        exit 2
+    fi
+done < "$WORK/staged.txt"
+
+if [ "$count" -eq 0 ]; then
+    echo "[pre-commit] no staged Lean files; trust-token scan skipped"
+    exit 0
+fi
+
+echo "[pre-commit] strict trust-token scan over $count staged Lean file(s)"
+if ! "$PYTHON" "$GATE" check "$WORK/tree"; then
+    echo "[pre-commit] FAIL: strict gate rejected the staged Lean surface" >&2
+    exit 1
+fi
+
+echo "[pre-commit] PASS"
+exit 0

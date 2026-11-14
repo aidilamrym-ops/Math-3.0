@@ -1,116 +1,209 @@
 # Claims Ledger
 
-- Generated: Claims ledger: map each README claim to a concrete provenance.
+- Generated: 2026-11-13T12:39:01.151251+00:00
+- README: `README.MD`
+- Total backticked citations: **194**
+- Lean claims: **45** (resolved: 45, unresolved: 0)
+- Citation kinds: `{'prose-term': 47, 'file-reference': 80, 'tooling': 19, 'lean-claim': 45, 'negative-reference': 3}`
 
-Reads the README and the theorem-name audit result to produce a machine‑readable
-ledger (`claims/ledger.json`).  Each entry contains:
-  - id                : the backticked identifier from the README
-  - prose             : the original line from the README that mentions the identifier
-  - artifact          : the Lean file(s) that declare the name
-  - theorem_name      : the same name (for readability)
-  - provenance        : "local"  – the declaration lives inside Math 3.0,
-                         "imported" – the name is imported from Mathlib or other external module
-  - class             : "kernel theorem", "bounded model" or "numerical evidence"
+## Lean claims
 
-The ledger is written to `reports/claims/ledger.json`.  An HTML‑styled summary
-is also emitted for quick manual verification.
-
-- Total claims tracked: 95
-
-| ID | Prose | Artifact(s) | Provenance | Class |
+| ID | Status | Artifact(s) | Provenance | Class |
 |---|---|---|---|---|
-| `python-flint` | `- arbitrary-precision interval arithmetic using `python-flint` (24,000-bit precision lock);` | `` | `unknown` | `numerical evidence` |
-| `lean/spec_v4` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `Math30Kernel` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `Math30Interfaces` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `sorryAx` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `axiom` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `constant` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `opaque` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `partial def` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `native_decide` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `implemented_by` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `extern` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `make gate` | `| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |` | `` | `unknown` | `kernel theorem` |
-| `by decide` | `│ GATE 6: KERNEL DECISION & SMT TRIBUNAL (Lean 4 `by decide` / Z3 Bounded Model)    │` | `` | `unknown` | `bounded model` |
-| `dsitni_general` | `(`dsitni_general`, unconditional over $\mathbb{N}$, Mathlib `nlinarith`/`omega`, no `sorry`).` | `lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean` | `local` | `kernel theorem` |
-| `nlinarith` | `(`dsitni_general`, unconditional over $\mathbb{N}$, Mathlib `nlinarith`/`omega`, no `sorry`).` | `` | `unknown` | `kernel theorem` |
-| `omega` | `(`dsitni_general`, unconditional over $\mathbb{N}$, Mathlib `nlinarith`/`omega`, no `sorry`).` | `` | `unknown` | `kernel theorem` |
-| `2S(D+1) < 3(T+1)(D+2)` | `**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.` | `` | `unknown` | `kernel theorem` |
-| `R_DSITNI < 1/2` | `**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.` | `` | `unknown` | `kernel theorem` |
-| `4S(D+1) < 3(T+1)(D+2)` | `**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.` | `` | `unknown` | `kernel theorem` |
-| `d=(1,1,100)` | `**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.` | `` | `unknown` | `kernel theorem` |
-| `dsitni_half_threshold_refuted` | `**Bound audit**: The valid factor-2 test is `2S(D+1) < 3(T+1)(D+2)`, equivalent to `R_DSITNI < 1/2`, and is proved unconditionally by `dsitni_general` for nonnegative diagonals. The stronger factor-4 test `4S(D+1) < 3(T+1)(D+2)` is false for `d=(1,1,100)`; that failure is machine-checked by `dsitni_half_threshold_refuted`. The refuted factor-4 test must not be confused with the valid factor-2 bound.` | `` | `unknown` | `kernel theorem` |
-| `finitary_information_conservation` | `**Theorem (`finitary_information_conservation`):**` | `lean/spec_v4/UniversalFinitaryInformationConservation.lean` | `local` | `kernel theorem` |
-| `spectral_gravity_stable` | `**Core Theorem (`spectral_gravity_stable`):** Discrete curvature tensor bounded under Planck pixel constraint $\Delta > 0$.` | `lean/spec_v4/FiniteLatticeSpectralGravity.lean` | `local` | `numerical evidence` |
-| `navier_stokes_dissipation_bounded` | `**Core Theorem (`navier_stokes_dissipation_bounded`):** The discrete viscous energy ledger satisfies $\epsilon \le \nu \cdot (\nabla v)^2 + C$.` | `lean/spec_v4/FiniteNavierStokesDissipation.lean` | `local` | `bounded model` |
-| `critical_line_lattice_stable` | `**Core Theorem (`critical_line_lattice_stable`):** A finite lattice model records critical-line intervals $\sigma = 1/2$ with a Guinand trace stabilization invariant.` | `lean/spec_v4/FiniteRiemannZetaLattice.lean` | `local` | `numerical evidence` |
-| `p_vs_np_circuit_separation` | `**Core Theorem (`p_vs_np_circuit_separation`):** A bounded $n=10$ circuit instance satisfies polynomial verification time below $2^{10}$.` | `lean/spec_v4/FinitePvNPSeparationLattice.lean, lean/spec_v4/MillenniumPvsNPSeparation.lean` | `local` | `bounded model` |
-| `yang_mills_mass_gap_positive` | `**Core Theorem (`yang_mills_mass_gap_positive`):** Mass gap $m \ge 1$ is strictly positive under the finite Wilson action bound $a \le 4\beta + 1$.` | `lean/spec_v4/FiniteYangMillsMassGapLattice.lean, lean/spec_v4/YangMillsLatticeBoundary.lean` | `local` | `bounded model` |
-| `cantor_no_surjection` | `| `CantorDiagonalization.lean` | `cantor_no_surjection`: no function `ℕ → (ℕ → Bool)` is surjective; the diagonal witness is constructive. | Full finite-statement proof (Cantor, 1891). |` | `lean/spec_v4/CantorDiagonalization.lean` | `local` | `bounded model` |
-| `ℕ → (ℕ → Bool)` | `| `CantorDiagonalization.lean` | `cantor_no_surjection`: no function `ℕ → (ℕ → Bool)` is surjective; the diagonal witness is constructive. | Full finite-statement proof (Cantor, 1891). |` | `` | `unknown` | `bounded model` |
-| `dpi_card_nonexpansive` | `| `ShannonEntropyDPI.lean` | `dpi_card_nonexpansive` and `dpi_composition`: a surjective deterministic channel cannot increase finite cardinality. | Finite-set core of the data-processing inequality; not full Shannon entropy. |` | `lean/spec_v4/ShannonEntropyDPI.lean` | `local` | `bounded model` |
-| `dpi_composition` | `| `ShannonEntropyDPI.lean` | `dpi_card_nonexpansive` and `dpi_composition`: a surjective deterministic channel cannot increase finite cardinality. | Finite-set core of the data-processing inequality; not full Shannon entropy. |` | `lean/spec_v4/ShannonEntropyDPI.lean` | `local` | `bounded model` |
-| `landauer_bits_le_energy` | `| `LandauerBekensteinBound.lean` | `landauer_bits_le_energy`: with per-bit cost `cost ≥ 1`, `bits ≤ bits * cost`; `bekenstein_capacity_le_radius/energy`: finite capacity is bounded by both budgets. | Discrete accounting invariants; not a derivation of the physical constants. |` | `lean/spec_v4/LandauerBekensteinBound.lean` | `local` | `bounded model` |
-| `cost ≥ 1` | `| `LandauerBekensteinBound.lean` | `landauer_bits_le_energy`: with per-bit cost `cost ≥ 1`, `bits ≤ bits * cost`; `bekenstein_capacity_le_radius/energy`: finite capacity is bounded by both budgets. | Discrete accounting invariants; not a derivation of the physical constants. |` | `` | `unknown` | `bounded model` |
-| `bits ≤ bits * cost` | `| `LandauerBekensteinBound.lean` | `landauer_bits_le_energy`: with per-bit cost `cost ≥ 1`, `bits ≤ bits * cost`; `bekenstein_capacity_le_radius/energy`: finite capacity is bounded by both budgets. | Discrete accounting invariants; not a derivation of the physical constants. |` | `` | `unknown` | `bounded model` |
-| `bekenstein_capacity_le_radius/energy` | `| `LandauerBekensteinBound.lean` | `landauer_bits_le_energy`: with per-bit cost `cost ≥ 1`, `bits ≤ bits * cost`; `bekenstein_capacity_le_radius/energy`: finite capacity is bounded by both budgets. | Discrete accounting invariants; not a derivation of the physical constants. |` | `` | `unknown` | `bounded model` |
-| `no_cloning_finite` | `| `NoCloningFiniteDim.lean` | `no_cloning_finite`: no additive clone map on a two-dimensional integer state space clones two basis states and their sum. | Finite linear-algebra toy; not a full Hilbert-space quantum no-cloning proof. |` | `lean/spec_v4/NoCloningFiniteDim.lean` | `local` | `bounded model` |
-| `euclid_infinite_primes` | `| `EuclidFermatArmor.lean` | `euclid_infinite_primes` (Mathlib’s Euclid theorem) plus three finite Fermat residue checks. | Euclid is a full imported theorem; Fermat entries are finite instances, not the general theorem. |` | `lean/spec_v4/EuclidFermatArmor.lean` | `local` | `bounded model` |
-| `pigeonhole_finite` | `| `ErdosSzekeresRamsey.lean` | `pigeonhole_finite`, `erdos_szekeres_pair` (the `k=l=2` case), and `ramsey_one_edge`. | Finite pigeonhole and the smallest Erdős–Szekeres/Ramsey instances; not the full theorems. |` | `lean/spec_v4/ErdosSzekeresRamsey.lean` | `local` | `bounded model` |
-| `erdos_szekeres_pair` | `| `ErdosSzekeresRamsey.lean` | `pigeonhole_finite`, `erdos_szekeres_pair` (the `k=l=2` case), and `ramsey_one_edge`. | Finite pigeonhole and the smallest Erdős–Szekeres/Ramsey instances; not the full theorems. |` | `lean/spec_v4/ErdosSzekeresRamsey.lean` | `local` | `bounded model` |
-| `k=l=2` | `| `ErdosSzekeresRamsey.lean` | `pigeonhole_finite`, `erdos_szekeres_pair` (the `k=l=2` case), and `ramsey_one_edge`. | Finite pigeonhole and the smallest Erdős–Szekeres/Ramsey instances; not the full theorems. |` | `` | `unknown` | `bounded model` |
-| `ramsey_one_edge` | `| `ErdosSzekeresRamsey.lean` | `pigeonhole_finite`, `erdos_szekeres_pair` (the `k=l=2` case), and `ramsey_one_edge`. | Finite pigeonhole and the smallest Erdős–Szekeres/Ramsey instances; not the full theorems. |` | `lean/spec_v4/ErdosSzekeresRamsey.lean` | `local` | `bounded model` |
-| `exit 0` | `All six compile with Lean 4 kernel `exit 0`, contain no `sorry`/`admit`/`sorryAx`, and pass the` | `` | `unknown` | `kernel theorem` |
-| `[10, 0, 0]` | `Targets the first ten non-trivial zeros of the Riemann zeta function on the critical line $s = 1/2 + it$ at **24,000 bits** of precision under Guinand-Weil interval enclosures ($t \le 50.0$), with certified Sylvester inertia `[10, 0, 0]` and zero-straddle status `false`. Dynamic DIBD radius derivation replaces static cuts.` | `` | `unknown` | `numerical evidence` |
-| `collatzLoop_mono` | `- **Result:** Modular dynamic contraction via structural induction (`collatzLoop_mono`).` | `lean/spec_v4/CollatzBoundedDefeat.lean` | `local` | `kernel theorem` |
-| `decide` | `- **Method:** Native `decide` + `interval_cases` + `omega` over partitioned domain bundles.` | `` | `unknown` | `numerical evidence` |
-| `interval_cases` | `- **Method:** Native `decide` + `interval_cases` + `omega` over partitioned domain bundles.` | `` | `unknown` | `numerical evidence` |
-| `[propext]` | `- **Axioms:** `[propext]` only.` | `` | `unknown` | `kernel theorem` |
-| `[propext, Quot.sound]` | `- **Axioms:** `[propext, Quot.sound]`.` | `` | `unknown` | `kernel theorem` |
-| `linarith` | `- **Method:** Constructive witness $s = A - \theta$; `omega`/`linarith` decision.` | `` | `unknown` | `kernel theorem` |
-| `fuel : ℕ` | `- **Result:** Formal functional proof of Sturm sequences via strict `fuel : ℕ` termination.` | `` | `unknown` | `kernel theorem` |
-| `sturm_sequence_decidable_enclosure` | `- **Invariant:** Theorem `sturm_sequence_decidable_enclosure` locks sign variation drop without unbounded decimal leakage.` | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `bounded model` |
-| `planckPixelConstraint` | `- **Theorem:** `spectral_gravity_stable` with `planckPixelConstraint`.` | `` | `unknown` | `numerical evidence` |
-| `guinand_trace_stabilization` | `- **Theorem:** `critical_line_lattice_stable` and `guinand_trace_stabilization`.` | `lean/spec_v4/FiniteRiemannZetaLattice.lean` | `local` | `numerical evidence` |
-| `norm_num` | `| `box_feasibility_witness.lean` | QF_NRA | `linarith`, `norm_num` | `[propext, Classical.choice, Quot.sound]` |` | `` | `unknown` | `kernel theorem` |
-| `[propext, Classical.choice, Quot.sound]` | `| `box_feasibility_witness.lean` | QF_NRA | `linarith`, `norm_num` | `[propext, Classical.choice, Quot.sound]` |` | `` | `unknown` | `kernel theorem` |
-| `rcases` | `| `sign_flip_absence.lean` | QF_NRA | `linarith`, `rcases` | `[propext, Classical.choice, Quot.sound]` |` | `` | `unknown` | `kernel theorem` |
-| `[Quot.sound]` | `- **Axioms:** `[Quot.sound]` only.` | `` | `unknown` | `kernel theorem` |
-| `glue` | `- **Key Theorems:** `glue` (path constructor), `loop` (base = inr()), `path_induction`.` | `` | `unknown` | `kernel theorem` |
-| `loop` | `- **Key Theorems:** `glue` (path constructor), `loop` (base = inr()), `path_induction`.` | `` | `unknown` | `kernel theorem` |
-| `path_induction` | `- **Key Theorems:** `glue` (path constructor), `loop` (base = inr()), `path_induction`.` | `lean/spec_v4/HigherInductivePushout.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
-| `terminal_is_sheaf` | `- **Key Theorems:** `terminal_is_sheaf`, `sieve_construction_valid`.` | `lean/spec_v4/GrothendieckToposBridge.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
-| `sieve_construction_valid` | `- **Key Theorems:** `terminal_is_sheaf`, `sieve_construction_valid`.` | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
-| `pi_n_sphere_n_iso` | `- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.` | `lean/spec_v4/DecidableHomotopySphere.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
-| `pi_n_sphere_n_iso_id` | `- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.` | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
-| `freudenthal_stability_bound` | `- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.` | `lean/spec_v4/DecidableHomotopySphere.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
-| `freudenthal_stable_witness` | `- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.` | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
-| `degreeMap_linear` | `- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.` | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
-| `degreeMap_affine` | `- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.` | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
-| `hopf_invariant_one` | `- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$ for a genuine sphere type.` | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `bounded model` |
-| `bott_periodicity_stable` | `- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$ for a genuine sphere type.` | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `bounded model` |
-| `∃ h : ℤ, h = 1` | `- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$ for a genuine sphere type.` | `` | `unknown` | `bounded model` |
-| `∃ n : ℕ, n + 8 > n` | `- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$ for a genuine sphere type.` | `` | `unknown` | `bounded model` |
-| `HomotopyGroup n X` | `- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$ for a genuine sphere type.` | `` | `unknown` | `bounded model` |
-| `ℤ` | `- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$ for a genuine sphere type.` | `` | `unknown` | `bounded model` |
-| `TorusType` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `` | `unknown` | `bounded model` |
-| `TorusPi1 := ℤ × ℤ` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `` | `unknown` | `bounded model` |
-| `torus_generators_distinct` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
-| `torus_generators_free` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
-| `torus_generators_span` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
-| `torus_pi1_free_rank_two` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
-| `ℤ × ℤ` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `` | `unknown` | `bounded model` |
-| `torus_betti_numbers` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
-| `torus_euler_characteristic` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
-| `torus_euler_from_cells` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
-| `torus_homology_ranks` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
-| `(1,2,1)` | `- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.` | `` | `unknown` | `bounded model` |
-| `torus_fundamental_group` | `- **Key Theorems:** `torus_pi1_free_rank_two`, `torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, `torus_homology_ranks`. The previously listed `torus_fundamental_group`, `quantum_torus_paths`, and `torus_homology_groups` do not exist in the module.` | `` | `unknown` | `kernel theorem` |
-| `quantum_torus_paths` | `- **Key Theorems:** `torus_pi1_free_rank_two`, `torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, `torus_homology_ranks`. The previously listed `torus_fundamental_group`, `quantum_torus_paths`, and `torus_homology_groups` do not exist in the module.` | `` | `unknown` | `kernel theorem` |
-| `torus_homology_groups` | `- **Key Theorems:** `torus_pi1_free_rank_two`, `torus_generators_distinct`, `torus_generators_free`, `torus_generators_span`, `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, `torus_homology_ranks`. The previously listed `torus_fundamental_group`, `quantum_torus_paths`, and `torus_homology_groups` do not exist in the module.` | `` | `unknown` | `kernel theorem` |
-| `yang_mills_lattice_stable` | `- **Result:** Formalization of discrete Wilson action plaquette bounds, Sylvester inertia stability invariants (`yang_mills_lattice_stable`), and strict positivity of the mass gap (`yang_mills_mass_gap_positive`).` | `lean/spec_v4/YangMillsLatticeBoundary.lean` | `local` | `bounded model` |
-| `unsat` | `- **SMT Tribunal:** `smt/phase4/yang_mills_refutation.smt2` verified `unsat` via Z3 QF_NRA, proving structural consistency of discrete gauge field boundary conditions.` | `` | `unknown` | `kernel theorem` |
-| `lake env lean` | `- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **490** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **490/490 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, at most two concurrent processes. Result: `reports/full_surface_lean_audit.json`.` | `` | `unknown` | `kernel theorem` |
-| `tools/` | `| 15 | Consolidation into `tools/`, manifest & README sync | ✅ Sealed |` | `` | `unknown` | `kernel theorem` |
-| `56a1471cec8898dc38306d5d03cd9f464b2a6e8113bdef4692d6b27a71da8f3e` | `> **Manifest:** 1,511 rows, SHA-256 locked: `56a1471cec8898dc38306d5d03cd9f464b2a6e8113bdef4692d6b27a71da8f3e`` | `` | `unknown` | `kernel theorem` |
+| `dsitni_general` | resolved | `lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean` | `local` | `kernel theorem` |
+| `dsitni_half_threshold_refuted` | resolved | `lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean` | `local` | `kernel theorem` |
+| `finitary_information_conservation` | resolved | `lean/spec_v4/UniversalFinitaryInformationConservation.lean` | `local` | `kernel theorem` |
+| `spectral_gravity_stable` | resolved | `lean/spec_v4/FiniteLatticeSpectralGravity.lean` | `local` | `numerical evidence` |
+| `navier_stokes_dissipation_bounded` | resolved | `lean/spec_v4/FiniteNavierStokesDissipation.lean` | `local` | `bounded model` |
+| `critical_line_lattice_stable` | resolved | `lean/spec_v4/FiniteRiemannZetaLattice.lean` | `local` | `numerical evidence` |
+| `p_vs_np_circuit_separation` | resolved | `lean/spec_v4/FinitePvNPSeparationLattice.lean, lean/spec_v4/MillenniumPvsNPSeparation.lean` | `local` | `bounded model` |
+| `yang_mills_mass_gap_positive` | resolved | `lean/spec_v4/FiniteYangMillsMassGapLattice.lean, lean/spec_v4/YangMillsLatticeBoundary.lean` | `local` | `bounded model` |
+| `cantor_no_surjection` | resolved | `lean/spec_v4/CantorDiagonalization.lean` | `local` | `bounded model` |
+| `dpi_card_nonexpansive` | resolved | `lean/spec_v4/ShannonEntropyDPI.lean` | `local` | `bounded model` |
+| `dpi_composition` | resolved | `lean/spec_v4/ShannonEntropyDPI.lean` | `local` | `bounded model` |
+| `landauer_bits_le_energy` | resolved | `lean/spec_v4/LandauerBekensteinBound.lean` | `local` | `bounded model` |
+| `no_cloning_finite` | resolved | `lean/spec_v4/NoCloningFiniteDim.lean` | `local` | `bounded model` |
+| `euclid_infinite_primes` | resolved | `lean/spec_v4/EuclidFermatArmor.lean` | `local` | `bounded model` |
+| `pigeonhole_finite` | resolved | `lean/spec_v4/ErdosSzekeresRamsey.lean` | `local` | `bounded model` |
+| `erdos_szekeres_pair` | resolved | `lean/spec_v4/ErdosSzekeresRamsey.lean` | `local` | `bounded model` |
+| `ramsey_one_edge` | resolved | `lean/spec_v4/ErdosSzekeresRamsey.lean` | `local` | `bounded model` |
+| `actual_infinity_violates_conservation` | resolved | `lean/spec_v4/ActualInfinityRefutation.lean` | `local` | `kernel theorem` |
+| `hilbert_hotel_obstruction` | resolved | `lean/spec_v4/ActualInfinityRefutation.lean` | `local` | `kernel theorem` |
+| `landauer_infinite_energy_contradiction` | resolved | `lean/spec_v4/ActualInfinityRefutation.lean` | `local` | `bounded model` |
+| `continuity_forces_constant_in_finite_lattice` | resolved | `lean/spec_v4/ContinuityRefutation.lean` | `local` | `bounded model` |
+| `no_continuous_injection_from_continuum` | resolved | `lean/spec_v4/ContinuityRefutation.lean` | `local` | `kernel theorem` |
+| `collatzLoop_mono` | resolved | `lean/spec_v4/CollatzBoundedDefeat.lean` | `local` | `kernel theorem` |
+| `sturm_sequence_decidable_enclosure` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `bounded model` |
+| `guinand_trace_stabilization` | resolved | `lean/spec_v4/FiniteRiemannZetaLattice.lean` | `local` | `numerical evidence` |
+| `path_induction` | resolved | `lean/spec_v4/HigherInductivePushout.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
+| `terminal_is_sheaf` | resolved | `lean/spec_v4/GrothendieckToposBridge.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
+| `sieve_construction_valid` | resolved | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
+| `pi_n_sphere_n_iso` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
+| `pi_n_sphere_n_iso_id` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
+| `freudenthal_stability_bound` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
+| `freudenthal_stable_witness` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
+| `degreeMap_linear` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
+| `degreeMap_affine` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
+| `hopf_invariant_one` | resolved | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `bounded model` |
+| `bott_periodicity_stable` | resolved | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `bounded model` |
+| `torus_generators_distinct` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `torus_generators_free` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `torus_generators_span` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `torus_pi1_free_rank_two` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `torus_betti_numbers` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `torus_euler_characteristic` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `torus_euler_from_cells` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `torus_homology_ranks` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `yang_mills_lattice_stable` | resolved | `lean/spec_v4/YangMillsLatticeBoundary.lean` | `local` | `bounded model` |
+
+## Non-declaration citations
+
+- `python-flint` — prose-term
+- `exports/OPENAI_MATH_VERIFICATION_ATLAS.md` — file-reference
+- `lean/spec_v4` — file-reference
+- `Math30Kernel` — prose-term
+- `Math30Interfaces` — prose-term
+- `sorry` — tooling
+- `sorryAx` — tooling
+- `admit` — tooling
+- `axiom` — tooling
+- `constant` — tooling
+- `opaque` — tooling
+- `partial def` — prose-term
+- `native_decide` — tooling
+- `implemented_by` — tooling
+- `extern` — tooling
+- `tools/full_surface_lean_audit.py` — file-reference
+- `make gate` — prose-term
+- `manifest.json` — file-reference
+- `repokeeper.py --verify` — prose-term
+- `.git` — prose-term
+- `.lake` — prose-term
+- `staging/` — file-reference
+- `mcp/out/` — file-reference
+- `__pycache__` — tooling
+- `*.pyc` — prose-term
+- `README.MD` — file-reference
+- `by decide` — prose-term
+- `lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
+- `nlinarith` — tooling
+- `omega` — tooling
+- `python tools/test_dsitni_consistency.py` — file-reference
+- `yudeng_singularity_sieve.py` — file-reference
+- `tools/newton_box_validator.py` — file-reference
+- `2S(D+1) < 3(T+1)(D+2)` — prose-term
+- `R_DSITNI < 1/2` — file-reference
+- `4S(D+1) < 3(T+1)(D+2)` — prose-term
+- `d=(1,1,100)` — prose-term
+- `lean/spec_v4/UniversalFinitaryInformationConservation.lean` — file-reference
+- `lean/spec_v4/FiniteLatticeSpectralGravity.lean` — file-reference
+- `lean/spec_v4/FiniteNavierStokesDissipation.lean` — file-reference
+- `lean/spec_v4/FiniteRiemannZetaLattice.lean` — file-reference
+- `lean/spec_v4/FinitePvNPSeparationLattice.lean` — file-reference
+- `lean/spec_v4/FiniteYangMillsMassGapLattice.lean` — file-reference
+- `CantorDiagonalization.lean` — file-reference
+- `ℕ → (ℕ → Bool)` — prose-term
+- `ShannonEntropyDPI.lean` — file-reference
+- `LandauerBekensteinBound.lean` — file-reference
+- `cost ≥ 1` — prose-term
+- `bits ≤ bits * cost` — prose-term
+- `bekenstein_capacity_le_radius/energy` — file-reference
+- `NoCloningFiniteDim.lean` — file-reference
+- `EuclidFermatArmor.lean` — file-reference
+- `ErdosSzekeresRamsey.lean` — file-reference
+- `k=l=2` — prose-term
+- `exit 0` — prose-term
+- `C` — prose-term
+- `C + 1` — prose-term
+- `False` — tooling
+- `Fin (N + 1)` — prose-term
+- `Fin N` — prose-term
+- `lean/spec_v4/ActualInfinityRefutation.lean` — file-reference
+- `smt/phase4/actual_infinity_refutation.smt2` — file-reference
+- `unsat` — tooling
+- `ℝ` — prose-term
+- `f : ℝ → Fin N` — prose-term
+- `lean/spec_v4/ContinuityRefutation.lean` — file-reference
+- `smt/phase4/continuity_refutation.smt2` — file-reference
+- `[10, 0, 0]` — prose-term
+- `false` — tooling
+- `decide` — tooling
+- `interval_cases` — tooling
+- `[propext]` — prose-term
+- `[propext, Quot.sound]` — prose-term
+- `linarith` — tooling
+- `fuel : ℕ` — prose-term
+- `planckPixelConstraint` — prose-term
+- `box_feasibility_witness.lean` — file-reference
+- `norm_num` — tooling
+- `[propext, Classical.choice, Quot.sound]` — prose-term
+- `contraction_bound.lean` — file-reference
+- `ledger_cross_multiplication.lean` — file-reference
+- `sign_flip_absence.lean` — file-reference
+- `rcases` — prose-term
+- `[Quot.sound]` — prose-term
+- `glue` — prose-term
+- `loop` — prose-term
+- `lean/spec_v4/HorizonFrontierTests.lean` — file-reference
+- `∃ h : ℤ, h = 1` — prose-term
+- `∃ n : ℕ, n + 8 > n` — prose-term
+- `HomotopyGroup n X` — prose-term
+- `ℤ` — prose-term
+- `TorusType` — prose-term
+- `TorusPi1 := ℤ × ℤ` — prose-term
+- `ℤ × ℤ` — prose-term
+- `(1,2,1)` — prose-term
+- `torus_fundamental_group` — negative-reference
+- `quantum_torus_paths` — negative-reference
+- `torus_homology_groups` — negative-reference
+- `smt/phase4/yang_mills_refutation.smt2` — file-reference
+- `reports/math30_laboratory_report.json` — file-reference
+- `reports/certificates/certificate_index.json` — file-reference
+- `python tools/readme_lean_audit.py` — file-reference
+- `reports/readme_lean_audit.json` — file-reference
+- `python tools/full_surface_lean_audit.py` — file-reference
+- `lake env lean` — prose-term
+- `reports/full_surface_lean_audit.json` — file-reference
+- `is_complete: true` — prose-term
+- `verdict: PASS` — prose-term
+- `python tools/readme_theorem_audit.py` — file-reference
+- `reports/readme_theorem_audit.json` — file-reference
+- `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
+- `DiscreteInertiaBoundaryDeterminant.lean` — file-reference
+- `VolumeConjectureBoundary.lean` — file-reference
+- `BealScale10to18Certificate.lean` — file-reference
+- `RiemannZetaInvariantCertificate.lean` — file-reference
+- `CoreGateAdversarialStressTest.lean` — file-reference
+- `CollatzBoundedDefeat.lean` — file-reference
+- `UniversalTopologicalInvariantSingularityResolution.lean` — file-reference
+- `UniversalQuantumCoherencePhaseLock.lean` — file-reference
+- `smt_bridge/sign_flip_absence.lean` — file-reference
+- `smt_bridge/ledger_cross_multiplication.lean` — file-reference
+- `smt_bridge/contraction_bound.lean` — file-reference
+- `smt_bridge/box_feasibility_witness.lean` — file-reference
+- `UniversalFinitaryInformationConservation.lean` — file-reference
+- `FiniteLatticeSpectralGravity.lean` — file-reference
+- `FiniteNavierStokesDissipation.lean` — file-reference
+- `FiniteRiemannZetaLattice.lean` — file-reference
+- `FinitePvNPSeparationLattice.lean` — file-reference
+- `FiniteYangMillsMassGapLattice.lean` — file-reference
+- `ActualInfinityRefutation.lean` — file-reference
+- `ContinuityRefutation.lean` — file-reference
+- `tools/` — file-reference
+- `lean/spec_v4/MillenniumNavierStokesSmoothness.lean` — file-reference
+- `RiemannCriticalEvidence.lean` — file-reference
+- `RiemannAdversarialEvidence.lean` — file-reference
+- `MillenniumRiemannHypothesis.lean` — file-reference
+- `MillenniumBirchSwinnertonDyer.lean` — file-reference
+- `lean/spec_v4/MillenniumHodgeConjecture.lean` — file-reference
+- `lean/spec_v4/MillenniumPoincareConjecture.lean` — file-reference
+- `lean/spec_v4/MillenniumCollatzGeneralization.lean` — file-reference
+- `lean/spec_v4/CantorDiagonalization.lean` — file-reference
+- `lean/spec_v4/ShannonEntropyDPI.lean` — file-reference
+- `lean/spec_v4/LandauerBekensteinBound.lean` — file-reference
+- `lean/spec_v4/NoCloningFiniteDim.lean` — file-reference
+- `lean/spec_v4/EuclidFermatArmor.lean` — file-reference
+- `lean/spec_v4/ErdosSzekeresRamsey.lean` — file-reference
+- `ℝ → Fin N` — prose-term
+- `tools/audit_hardcoded_nodes.py` — file-reference
+- `f749671f4c852090c930cf930df45402f3e0477515f0ad40d2c67d2a7b2b716f` — prose-term

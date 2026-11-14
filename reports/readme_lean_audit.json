@@ -1,11 +1,21 @@
 {
+  "generated": "2026-11-13T12:57:16.645512+00:00",
   "readme": "README.MD",
-  "cited_unique_files": 39,
+  "workers": 1,
+  "cited_unique_files": 36,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 39
+    "PASS": 36
   },
   "results": [
+    {
+      "path": "lean\\spec_v4\\ActualInfinityRefutation.lean",
+      "lean_path": "spec_v4\\ActualInfinityRefutation.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
     {
       "path": "lean\\spec_v4\\CantorDiagonalization.lean",
       "lean_path": "spec_v4\\CantorDiagonalization.lean",
@@ -23,8 +33,8 @@
       "stderr": ""
     },
     {
-      "path": "lean\\spec_v4\\DecidableHomotopySphere.lean",
-      "lean_path": "spec_v4\\DecidableHomotopySphere.lean",
+      "path": "lean\\spec_v4\\ContinuityRefutation.lean",
+      "lean_path": "spec_v4\\ContinuityRefutation.lean",
       "rc": 0,
       "status": "PASS",
       "stdout": "",
@@ -84,22 +94,6 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\GrothendieckToposBridge.lean",
-      "lean_path": "spec_v4\\GrothendieckToposBridge.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.Topos.terminal_is_sheaf' does not depend on any axioms\n",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\HigherInductivePushout.lean",
-      "lean_path": "spec_v4\\HigherInductivePushout.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.HoTT.Pushout.glue' depends on axioms: [Quot.sound]\n'Math30.HoTT.Pushout.path_induction' does not depend on any axioms\n'Math30.HoTT.Pushout.torus_pi1_free_rank_two' depends on axioms: [propext]\n'Math30.HoTT.Pushout.torus_betti_numbers' depends on axioms: [propext]\n'Math30.HoTT.Pushout.torus_euler_from_cells' depends on axioms: [propext]\n",
       "stderr": ""
     },
     {
@@ -199,14 +193,6 @@
       "stderr": ""
     },
     {
-      "path": "lean\\spec_v4\\SturmTarskiIsolation.lean",
-      "lean_path": "spec_v4\\SturmTarskiIsolation.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.SturmTarski.sturm_remainder_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.SturmTarski.sturm_sequence_decidable_enclosure' depends on axioms: [propext, Quot.sound]\n",
-      "stderr": ""
-    },
-    {
       "path": "lean\\spec_v4\\UniversalFinitaryInformationConservation.lean",
       "lean_path": "spec_v4\\UniversalFinitaryInformationConservation.lean",
       "rc": 0,
@@ -228,14 +214,6 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "'Math30.SpecV4.universal_topological_singularity_resolution' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\YangMillsLatticeBoundary.lean",
-      "lean_path": "spec_v4\\YangMillsLatticeBoundary.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.YangMills.yang_mills_lattice_stable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.YangMills.yang_mills_mass_gap_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
       "stderr": ""
     },
     {
