@@ -496,3 +496,33 @@
 [494/495] PASS       5.19s Math30Kernel/RescuedGoedel.lean
 [495/495] PASS       4.87s Math30Kernel/RescuedHeisenberg.lean
 === run end 2026-11-13 20:29:31 ===
+
+=== run start 2026-11-14 09:37:29 scope=full files=500 pending=500 workers=1 ===
+[1/500] PASS       8.16s lean/spec_v4/AbcCensusEvidence.lean
+[2/500] PASS      23.47s lean/spec_v4/ActualInfinityRefutation.lean
+[3/500] PASS       5.32s lean/spec_v4/adversarial_tests/CoreGateAdversarialStressTest.lean
+[4/500] PASS      10.87s lean/spec_v4/AndersonProbabilityEvidence.lean
+[5/500] PASS      19.59s lean/spec_v4/CantorDiagonalization.lean
+[6/500] PASS       5.10s lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean
+[7/500] PASS       5.56s lean/spec_v4/certificates/AndersonEnclosureBoundsCertificate.lean
+[8/500] PASS       5.27s lean/spec_v4/certificates/BealConjectureDefeatCertificate.lean
+[9/500] PASS       5.98s lean/spec_v4/certificates/BealConjectureTrial001Certificate.lean
+[10/500] PASS       7.40s lean/spec_v4/certificates/BealScale10to18Certificate.lean
+[11/500] PASS       6.86s lean/spec_v4/certificates/BoxFeasibilityWitnessCertificate.lean
+[12/500] PASS       6.37s lean/spec_v4/certificates/CertificateIndex.lean
+[13/500] PASS       6.36s lean/spec_v4/certificates/ConstitutionalLawReceiptCertificate.lean
+
+=== run start 2026-11-14 09:39:35 scope=full files=500 pending=500 workers=1 ===
+[1/500] PASS       6.34s lean/spec_v4/AbcCensusEvidence.lean
+[2/500] PASS      19.90s lean/spec_v4/ActualInfinityRefutation.lean
+[3/500] PASS       6.14s lean/spec_v4/adversarial_tests/CoreGateAdversarialStressTest.lean
+[4/500] PASS      12.66s lean/spec_v4/AndersonProbabilityEvidence.lean
+[5/500] PASS      22.11s lean/spec_v4/CantorDiagonalization.lean
+[6/500] PASS       6.21s lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean
+[7/500] PASS       6.94s lean/spec_v4/certificates/AndersonEnclosureBoundsCertificate.lean
+[8/500] PASS       5.73s lean/spec_v4/certificates/BealConjectureDefeatCertificate.lean
+[9/500] PASS       6.24s lean/spec_v4/certificates/BealConjectureTrial001Certificate.lean
+[10/500] PASS       6.87s lean/spec_v4/certificates/BealScale10to18Certificate.lean
+[11/500] PASS       6.69s lean/spec_v4/certificates/BoxFeasibilityWitnessCertificate.lean
+[12/500] PASS       6.69s lean/spec_v4/certificates/CertificateIndex.lean
+[13/500] PASS       6.47s lean/spec_v4/certificates/ConstitutionalLawReceiptCertificate.lean

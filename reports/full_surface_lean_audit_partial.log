@@ -2,3 +2,19 @@
 === run start 2026-11-12 22:36:14 scope=partial files=1 pending=1 workers=2 ===
 [1/1] PASS      21.53s lean/spec_v4/ActualInfinityRefutation.lean
 === run end 2026-11-12 22:36:35 ===
+
+=== run start 2026-11-14 09:41:47 scope=partial files=1 pending=1 workers=1 ===
+[1/1] FAIL      20.04s lean/spec_v4/selesaikan_rusuk_kurvature_lean.lean :: spec_v4/selesaikan_rusuk_kurvature_lean.lean:27:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+=== run end 2026-11-14 09:42:07 ===
+
+=== run start 2026-11-14 09:43:32 scope=partial files=1 pending=1 workers=1 ===
+[1/1] FAIL      18.23s lean/spec_v4/selesaikan_rusuk_kurvature_lean.lean :: spec_v4/selesaikan_rusuk_kurvature_lean.lean:20:50: error: Type mismatch
+=== run end 2026-11-14 09:43:50 ===
+
+=== run start 2026-11-14 09:44:06 scope=partial files=1 pending=1 workers=1 ===
+[1/1] FAIL      21.29s lean/spec_v4/selesaikan_rusuk_kurvature_lean.lean :: spec_v4/selesaikan_rusuk_kurvature_lean.lean:28:35: error: don't know how to synthesize implicit argument `R`
+=== run end 2026-11-14 09:44:27 ===
+
+=== run start 2026-11-14 09:47:15 scope=partial files=1 pending=1 workers=1 ===
+[1/1] FAIL      16.63s lean/spec_v4/selesaikan_rusuk_kurvature_lean.lean :: spec_v4/selesaikan_rusuk_kurvature_lean.lean:28:35: error: don't know how to synthesize implicit argument `R`
+=== run end 2026-11-14 09:47:32 ===
