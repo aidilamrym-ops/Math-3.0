@@ -58,6 +58,7 @@
   "lean/spec_v4/DiscreteHodgeDecomposition.lean": "16a23a8898fa7fe121cd94f75b71c26dd438e780d61efac46a26706db96bc0ac",
   "lean/spec_v4/DiscreteIndexTheorem.lean": "bd01a406642b6bc4492b00793ed5fbcd4d704041c5f504c0ebc2c5be20c8409a",
   "lean/spec_v4/DiscreteLatticeGravityExtension.lean": "31e56071e668d0ac64411988667dd4e9ee45d2655fb66f3de3fe8ca1690a50ad",
+  "lean/spec_v4/DiscreteSpectralGap.lean": "c2eb59f8bb49fcee0910f710437acc9764ce075f86cb80944312fe0ce90c44d2",
   "lean/spec_v4/EinsteinFieldEquations.lean": "e864e32b439858e244f3f0b04b97fee15401af609ac1e978072d7bb27d693abd",
   "lean/spec_v4/EllipticRankSpectralCertificate.lean": "3e93159f64e3e2601458882854f4519fa599c7fe498229166e2a9ec5a89df5d9",
   "lean/spec_v4/ErdosSzekeresRamsey.lean": "dc99b51e8e5e8719ab9f3a2a4449e140508a0f32ac2242ebb297538a7c0af575",
