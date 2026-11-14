@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-14T06:56:27.193947+00:00",
+  "generated": "2026-11-14T08:17:57.971175+00:00",
   "readme": "README.MD",
-  "readme_semantic_sha256": "ee2f2e379a152a2e427b906c072890b46c989c418df50f57e26945ca9b5f9441",
-  "entries": 208,
-  "claims": 54,
-  "resolved_claims": 54,
+  "readme_semantic_sha256": "4ce2e99d6a2821d052cf8c327f4c27a255099f475ab382cad2c5398bb47ebf91",
+  "entries": 216,
+  "claims": 60,
+  "resolved_claims": 60,
   "unresolved_claims": [],
   "ledger": [
     {
@@ -1310,6 +1310,84 @@
       "class": "kernel theorem"
     },
     {
+      "id": "instanton_bound_eq_iff",
+      "prose": "- **Theorem:** `instanton_bound_eq_iff`, `instanton_bound_defect`, `instanton_bound_stable`, `chargeZ_sq_le`, `chargeZ_ne_zero_actionZ_ge_one`, and `action_gap_sharp`.",
+      "artifact": [
+        "lean/spec_v4/LatticeInstantonBound.lean"
+      ],
+      "theorem_name": "instanton_bound_eq_iff",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "instanton_bound_defect",
+      "prose": "- **Theorem:** `instanton_bound_eq_iff`, `instanton_bound_defect`, `instanton_bound_stable`, `chargeZ_sq_le`, `chargeZ_ne_zero_actionZ_ge_one`, and `action_gap_sharp`.",
+      "artifact": [
+        "lean/spec_v4/LatticeInstantonBound.lean"
+      ],
+      "theorem_name": "instanton_bound_defect",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "instanton_bound_stable",
+      "prose": "- **Theorem:** `instanton_bound_eq_iff`, `instanton_bound_defect`, `instanton_bound_stable`, `chargeZ_sq_le`, `chargeZ_ne_zero_actionZ_ge_one`, and `action_gap_sharp`.",
+      "artifact": [
+        "lean/spec_v4/LatticeInstantonBound.lean"
+      ],
+      "theorem_name": "instanton_bound_stable",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "chargeZ_sq_le",
+      "prose": "- **Theorem:** `instanton_bound_eq_iff`, `instanton_bound_defect`, `instanton_bound_stable`, `chargeZ_sq_le`, `chargeZ_ne_zero_actionZ_ge_one`, and `action_gap_sharp`.",
+      "artifact": [
+        "lean/spec_v4/LatticeInstantonBound.lean"
+      ],
+      "theorem_name": "chargeZ_sq_le",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "chargeZ_ne_zero_actionZ_ge_one",
+      "prose": "- **Theorem:** `instanton_bound_eq_iff`, `instanton_bound_defect`, `instanton_bound_stable`, `chargeZ_sq_le`, `chargeZ_ne_zero_actionZ_ge_one`, and `action_gap_sharp`.",
+      "artifact": [
+        "lean/spec_v4/LatticeInstantonBound.lean"
+      ],
+      "theorem_name": "chargeZ_ne_zero_actionZ_ge_one",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "action_gap_sharp",
+      "prose": "- **Theorem:** `instanton_bound_eq_iff`, `instanton_bound_defect`, `instanton_bound_stable`, `chargeZ_sq_le`, `chargeZ_ne_zero_actionZ_ge_one`, and `action_gap_sharp`.",
+      "artifact": [
+        "lean/spec_v4/LatticeInstantonBound.lean"
+      ],
+      "theorem_name": "action_gap_sharp",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
       "id": "box_feasibility_witness.lean",
       "prose": "| `box_feasibility_witness.lean` | QF_NRA | `linarith`, `norm_num` | `[propext, Classical.choice, Quot.sound]` |",
       "artifact": [],
@@ -1916,7 +1994,7 @@
     },
     {
       "id": "python tools/readme_theorem_audit.py",
-      "prose": "- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **54/54 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.",
+      "prose": "- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **60/60 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.",
       "artifact": [],
       "theorem_name": "python tools/readme_theorem_audit.py",
       "kind": "file-reference",
@@ -1927,7 +2005,7 @@
     },
     {
       "id": "reports/readme_theorem_audit.json",
-      "prose": "- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **54/54 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.",
+      "prose": "- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **60/60 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.",
       "artifact": [],
       "theorem_name": "reports/readme_theorem_audit.json",
       "kind": "file-reference",
@@ -2180,7 +2258,7 @@
     },
     {
       "id": "LatticeInstantonBound.lean",
-      "prose": "| `LatticeInstantonBound.lean` | Lattice instanton/BPS bound; self-dual saturation (Phase 53) | ✅ Verified |",
+      "prose": "| `LatticeInstantonBound.lean` | Lattice instanton/BPS bound; rigid equality and integer action gap (Phase 53–54) | ✅ Verified |",
       "artifact": [],
       "theorem_name": "LatticeInstantonBound.lean",
       "kind": "file-reference",
@@ -2388,6 +2466,28 @@
       "class": "file-reference"
     },
     {
+      "id": "Q²=mS ⇔ F=cη",
+      "prose": "| 54 | **Instanton Rigidity and Quantization: equality iff `Q²=mS ⇔ F=cη`, pairwise-square defect identity, quantitative stability, integer action gap `Q≠0 ⇒ S≥1` (`lean/spec_v4/LatticeInstantonBound.lean`)** | ✅ Sealed |",
+      "artifact": [],
+      "theorem_name": "Q²=mS ⇔ F=cη",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
+      "id": "Q≠0 ⇒ S≥1",
+      "prose": "| 54 | **Instanton Rigidity and Quantization: equality iff `Q²=mS ⇔ F=cη`, pairwise-square defect identity, quantitative stability, integer action gap `Q≠0 ⇒ S≥1` (`lean/spec_v4/LatticeInstantonBound.lean`)** | ✅ Sealed |",
+      "artifact": [],
+      "theorem_name": "Q≠0 ⇒ S≥1",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
       "id": "tools/audit_hardcoded_nodes.py",
       "prose": "> **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)",
       "artifact": [],
@@ -2399,10 +2499,10 @@
       "class": "file-reference"
     },
     {
-      "id": "80d676e57a8497529a78dadad69a596092d4a37bcfb63b3b01cf726dd666e2d1",
-      "prose": "> **Manifest:** 1,546 rows, SHA-256 locked: `80d676e57a8497529a78dadad69a596092d4a37bcfb63b3b01cf726dd666e2d1`",
+      "id": "6174dec8562df7f6993472653644eca6177c45caebd274c3c2fa0195616929cb",
+      "prose": "> **Manifest:** 1,546 rows, SHA-256 locked: `6174dec8562df7f6993472653644eca6177c45caebd274c3c2fa0195616929cb`",
       "artifact": [],
-      "theorem_name": "80d676e57a8497529a78dadad69a596092d4a37bcfb63b3b01cf726dd666e2d1",
+      "theorem_name": "6174dec8562df7f6993472653644eca6177c45caebd274c3c2fa0195616929cb",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,

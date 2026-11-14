@@ -1,12 +1,16 @@
 {
-  "generated": "2026-11-11 17:53:15",
-  "total_files_scanned": 490,
+  "generated": "2026-11-14 16:15:16",
+  "total_files_scanned": 502,
   "total_findings": 0,
   "true_conclusion": 0,
   "reflexive_equality": 0,
   "files": [
     {
       "file": "lean/spec_v4/AbcCensusEvidence.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/ActualInfinityRefutation.lean",
       "findings": []
     },
     {
@@ -26,6 +30,10 @@
       "findings": []
     },
     {
+      "file": "lean/spec_v4/ContinuityRefutation.lean",
+      "findings": []
+    },
+    {
       "file": "lean/spec_v4/ContinuousAnalyticLimitPrecisionCertificate.lean",
       "findings": []
     },
@@ -34,7 +42,19 @@
       "findings": []
     },
     {
+      "file": "lean/spec_v4/ContinuumOmegaLimitDefeat.lean",
+      "findings": []
+    },
+    {
       "file": "lean/spec_v4/DecidableHomotopySphere.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteLatticeGravityExtension.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/EinsteinFieldEquations.lean",
       "findings": []
     },
     {
@@ -47,6 +67,10 @@
     },
     {
       "file": "lean/spec_v4/EuclidFermatArmor.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/EvenUnimodularObstruction.lean",
       "findings": []
     },
     {
@@ -94,11 +118,19 @@
       "findings": []
     },
     {
+      "file": "lean/spec_v4/GoodsteinArithmeticTerminationCertificate.lean",
+      "findings": []
+    },
+    {
       "file": "lean/spec_v4/GravitationalSingularityContainment.lean",
       "findings": []
     },
     {
       "file": "lean/spec_v4/GrothendieckToposBridge.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/HeegnerGaussNineCertificate.lean",
       "findings": []
     },
     {
@@ -119,6 +151,10 @@
     },
     {
       "file": "lean/spec_v4/LandauerBekensteinBound.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/LatticeInstantonBound.lean",
       "findings": []
     },
     {
@@ -158,6 +194,10 @@
       "findings": []
     },
     {
+      "file": "lean/spec_v4/NonAbelianGaugeCurvatureExtension.lean",
+      "findings": []
+    },
+    {
       "file": "lean/spec_v4/OmegaKernelHardened.lean",
       "findings": []
     },
@@ -187,6 +227,14 @@
     },
     {
       "file": "lean/spec_v4/RiemannCriticalEvidence.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/RiemannCriticalLineSolver.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/RiemannCurvatureTensorCertificate.lean",
       "findings": []
     },
     {

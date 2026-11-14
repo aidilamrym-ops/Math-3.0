@@ -354,6 +354,13 @@ All entries below are finite or bounded statements. They do **not** prove the fu
 - **Scope:** Finite-lattice algebraic inequality only; this is **not** a proof of the Yang–Mills mass gap, continuum instanton existence, or any Millennium Prize problem.
 - **Axioms:** `[propext, Classical.choice, Quot.sound]`.
 
+### 8.11 Instanton Rigidity and Quantization (Phase 54)
+- **Domain:** Discrete gauge theory / equality case and integer charge quantization : lean/spec_v4/LatticeInstantonBound.lean.
+- **Result:** The lattice instanton bound is rigid: for $m>0$, $Q_\eta(F)^2=m\,S(F)$ holds exactly when $F=c\,\eta$. The action–charge defect is an explicit sum of squared pairwise differences, yielding a quantitative stability bound. For integer fields, nonzero charge implies $S(F)\ge 1$, and the gap is sharp.
+- **Theorem:** `instanton_bound_eq_iff`, `instanton_bound_defect`, `instanton_bound_stable`, `chargeZ_sq_le`, `chargeZ_ne_zero_actionZ_ge_one`, and `action_gap_sharp`.
+- **Scope:** Finite-lattice algebraic statements only; the integer action gap is **not** a Yang–Mills mass gap and **not** a Millennium Prize result.
+- **Axioms:** `[propext, Classical.choice, Quot.sound]`.
+
 ---
 
 ## 9. SMT Bridge Hardening
@@ -427,7 +434,7 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 - **Certificate Index:** `reports/certificates/certificate_index.json` (legacy Phase 9 JSON-source registry: 25 entries, separate from the Lean inventory below).
 - **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every Lean file cited in this README. Latest run: **38/38 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.
 - **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **502** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **502/502 PASS, 0 FAIL, 0 TIMEOUT, 0 warnings**, two workers. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`).
-- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **54/54 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
+- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **60/60 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
 
@@ -461,7 +468,7 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 | `ActualInfinityRefutation.lean` | Actual infinity obstruction in finite capacity (Phase 50) | ✅ Verified |
 | `ContinuityRefutation.lean` | Continuous maps into discrete finite lattice (Phase 51) | ✅ Verified |
 | `EvenUnimodularObstruction.lean` | Even unimodular parity obstruction; hyperbolic witness (Phase 52) | ✅ Verified |
-| `LatticeInstantonBound.lean` | Lattice instanton/BPS bound; self-dual saturation (Phase 53) | ✅ Verified |
+| `LatticeInstantonBound.lean` | Lattice instanton/BPS bound; rigid equality and integer action gap (Phase 53–54) | ✅ Verified |
 
 ---
 
@@ -469,7 +476,7 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-6174dec8562df7f6993472653644eca6177c45caebd274c3c2fa0195616929cb
+d52defda8ee9d350eb75caee3fbdd8bf71b71a906c4cefe515fd4e0b3eaa7b3f
 ```
 
 **Manifest Rows:** 1,546 files pinned  
@@ -568,6 +575,7 @@ Math-3.0/
 | 51 | **Continuity Refutation in Finite Lattices: every continuous map `ℝ → Fin N` is constant (`lean/spec_v4/ContinuityRefutation.lean`) + QF_LIA SMT witness** | ✅ Sealed |
 | 52 | **Even Unimodular Obstruction: parity proof that even unimodular forms are not integrally diagonalizable, hyperbolic witness (`lean/spec_v4/EvenUnimodularObstruction.lean`)** | ✅ Sealed |
 | 53 | **Lattice Instanton Bound: Cauchy–Schwarz charge-action inequality, self-dual saturation, BPS bound with equality characterization (`lean/spec_v4/LatticeInstantonBound.lean`)** | ✅ Sealed |
+| 54 | **Instanton Rigidity and Quantization: equality iff `Q²=mS ⇔ F=cη`, pairwise-square defect identity, quantitative stability, integer action gap `Q≠0 ⇒ S≥1` (`lean/spec_v4/LatticeInstantonBound.lean`)** | ✅ Sealed |
 
 --- 
 
@@ -630,7 +638,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,546 rows, SHA-256 locked: `6174dec8562df7f6993472653644eca6177c45caebd274c3c2fa0195616929cb`  
+> **Manifest:** 1,546 rows, SHA-256 locked: `d52defda8ee9d350eb75caee3fbdd8bf71b71a906c4cefe515fd4e0b3eaa7b3f`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 
@@ -643,8 +651,8 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 
 <!-- AUTO-FACTS:START -->
 - **Manifest Pinned Files:** 1,546
-- **Lean Surface:** 502 files, all compiled PASS (receipt 2026-11-14 14:55:00)
-- **Tracked Claims in Ledger:** 54 Lean claims
-- **Resolved README Theorem Names:** 54/54 PASS
+- **Lean Surface:** 502 files, all compiled PASS (receipt 2026-11-14 17:00:17)
+- **Tracked Claims in Ledger:** 60 Lean claims
+- **Resolved README Theorem Names:** 60/60 PASS
 - **Evidence Status:** PASS
 <!-- AUTO-FACTS:END -->

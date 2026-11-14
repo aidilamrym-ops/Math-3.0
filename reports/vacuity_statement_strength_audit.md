@@ -1,7 +1,7 @@
 # Vacuity / Statement-Strength Audit
 
-- Generated: 2026-11-11 17:53:15
-- Files scanned: **490**
+- Generated: 2026-11-14 16:15:16
+- Files scanned: **502**
 - True conclusions found: **0**
 - Reflexive equality proofs found: **0**
 - Total findings: **0**

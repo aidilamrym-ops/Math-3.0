@@ -1,5 +1,5 @@
 -- LatticeInstantonBound.lean
--- Math 3.0 / Fase 53: Batas Instanton pada Kisi Hingga
+-- Math 3.0 / Fase 53-54: Batas Instanton dan Rigiditas pada Kisi Hingga
 --
 -- Cakupan:
 --   * konfigurasi medan pada kisi hingga `Fin m → ℝ`;
@@ -10,15 +10,20 @@
 --   * dekomposisi self-dual / anti-self-dual dengan batas BPS `|Q| ≤ S`;
 --   * karakterisasi kesamaan: `Q = S` tepat ketika komponen
 --     anti-self-dual lenyap, dan `Q = -S` tepat ketika komponen
---     self-dual lenyap.
+--     self-dual lenyap;
+--   * Fase 54: rigiditas kesamaan `Q_η(F)² = m · S(F) ↔ F = c · η`,
+--     identitas defek jumlah kuadrat pasangan, dan batas stabilitas
+--     kuantitatif;
+--   * Fase 54: kuantisasi muatan integer, action gap `Q ≠ 0 → S ≥ 1`,
+--     dan witness ketajaman gap.
 --
 -- Batas klaim:
 --   * Ini BUKAN bukti mass gap Yang–Mills, bukan konstruksi instanton
 --     kontinu, dan bukan bukti masalah Millennium.
 --   * Tidak ada klaim tentang limit kontinum, moduli space, atau
 --     eksistensi solusi persamaan self-dual di ruang 4-dimensi.
---   * Yang dibuktikan hanya ketaksamaan aljabar dan karakterisasi
---     kesamaan pada kisi hingga.
+--   * Yang dibuktikan hanya ketaksamaan aljabar, karakterisasi
+--     kesamaan, dan kuantisasi pada kisi hingga.
 
 import Mathlib.Algebra.Order.Chebyshev
 import Mathlib.Tactic
@@ -250,5 +255,245 @@ theorem bps_bound_sharp (m : ℕ) (hm : 0 < m) :
   refine ⟨a, 0, Or.inl ha, ?_⟩
   rw [bps_self_dual_saturates]
   exact abs_of_nonneg (by unfold bpsAction; positivity)
+
+/-! ### Fase 54: Rigiditas kesamaan dan kuantisasi muatan -/
+
+/-- Kuadrat komponen vektor tanda selalu satu. -/
+lemma eta_sq (η : Config m) (hη : IsSignVector η) (i : Fin m) :
+    η i ^ 2 = 1 := by
+  rcases hη i with h | h <;> rw [h] <;> ring
+
+/-- Jumlah kuadrat komponen terredupkan sama dengan aksi Euclidean. -/
+lemma sum_eta_sq (η F : Config m) (hη : IsSignVector η) :
+    (∑ i, (η i * F i) ^ 2) = action F := by
+  unfold action
+  refine Finset.sum_congr rfl ?_
+  intro i _
+  rw [mul_pow, eta_sq η hη i, one_mul]
+
+/-- Identitas variansi: jumlah kuadrat selisih pasangan adalah dua kali
+defek antara `m · S` dan `Q²`. -/
+lemma variance_identity (x : Config m) :
+    (∑ i, ∑ j, (x i - x j) ^ 2) =
+      2 * ((m : ℝ) * ∑ i, (x i) ^ 2 - (∑ i, x i) ^ 2) := by
+  have h : ∀ i j, (x i - x j) ^ 2 = x i ^ 2 - 2 * x i * x j + x j ^ 2 := by
+    intro i j
+    ring
+  simp_rw [h]
+  have hinner : ∀ i, (∑ j, (x i ^ 2 - 2 * x i * x j + x j ^ 2))
+      = (m : ℝ) * x i ^ 2 - 2 * x i * (∑ j, x j) + (∑ j, x j ^ 2) := by
+    intro i
+    rw [Finset.sum_add_distrib, Finset.sum_sub_distrib]
+    have h1 : (∑ _j : Fin m, x i ^ 2) = (m : ℝ) * x i ^ 2 := by
+      simp [Finset.sum_const, nsmul_eq_mul]
+    have h2 : (∑ j, 2 * x i * x j) = 2 * x i * (∑ j, x j) := by
+      rw [← Finset.mul_sum]
+    rw [h1, h2]
+  simp_rw [hinner]
+  rw [Finset.sum_add_distrib, Finset.sum_sub_distrib]
+  have h3 : (∑ i, (m : ℝ) * x i ^ 2) = (m : ℝ) * ∑ i, x i ^ 2 := by
+    rw [Finset.mul_sum]
+  have h4 : (∑ i, 2 * x i * (∑ j, x j)) =
+      2 * (∑ j, x j) * (∑ i, x i) := by
+    calc
+      (∑ i, 2 * x i * (∑ j, x j)) = (∑ i, 2 * x i) * (∑ j, x j) := by
+        rw [Finset.sum_mul]
+      _ = (2 * ∑ i, x i) * (∑ j, x j) := by
+        rw [← Finset.mul_sum]
+      _ = 2 * (∑ j, x j) * (∑ i, x i) := by
+        ring
+  have h5 : (∑ _i : Fin m, ∑ j : Fin m, x j ^ 2) =
+      (m : ℝ) * ∑ j, x j ^ 2 := by
+    simp only [Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
+  rw [h3, h4, h5]
+  ring
+
+/-- Defek `m · S - Q²` sama dengan setengah jumlah kuadrat selisih
+komponen terredupkan. -/
+theorem instanton_bound_defect (η F : Config m) (hη : IsSignVector η) :
+    (m : ℝ) * action F - (charge η F) ^ 2 =
+      (1 / 2) * ∑ i, ∑ j, (η i * F i - η j * F j) ^ 2 := by
+  have h := variance_identity (fun i => η i * F i)
+  have hsq : (∑ i, (η i * F i) ^ 2) = action F := sum_eta_sq η F hη
+  have hsum : (∑ i, η i * F i) = charge η F := rfl
+  rw [hsq, hsum] at h
+  linarith
+
+/-- Batas titik demi titik: setiap selisih komponen terredupkan
+dikontrol oleh defek total. -/
+lemma instanton_bound_pointwise_defect (η F : Config m) (hη : IsSignVector η)
+    (i j : Fin m) :
+    (η i * F i - η j * F j) ^ 2 ≤
+      2 * ((m : ℝ) * action F - (charge η F) ^ 2) := by
+  let x : Config m := fun i => η i * F i
+  have hdefect := instanton_bound_defect η F hη
+  have hdouble : (∑ k, ∑ l, (x k - x l) ^ 2) =
+      2 * ((m : ℝ) * action F - (charge η F) ^ 2) := by
+    linarith
+  have hinner_nonneg : ∀ k : Fin m, 0 ≤ (x i - x k) ^ 2 := fun k => sq_nonneg _
+  have hinner_le : (x i - x j) ^ 2 ≤ ∑ k, (x i - x k) ^ 2 :=
+    Finset.single_le_sum (f := fun k => (x i - x k) ^ 2)
+      (fun k _ => hinner_nonneg k) (mem_univ j)
+  have houter_nonneg : ∀ k : Fin m, 0 ≤ ∑ l, (x k - x l) ^ 2 :=
+    fun k => Finset.sum_nonneg (fun l _ => sq_nonneg _)
+  have houter_le : (∑ k, (x i - x k) ^ 2) ≤ ∑ k, ∑ l, (x k - x l) ^ 2 :=
+    Finset.single_le_sum (f := fun k => ∑ l, (x k - x l) ^ 2)
+      (fun k _ => houter_nonneg k) (mem_univ i)
+  calc
+    (η i * F i - η j * F j) ^ 2 = (x i - x j) ^ 2 := rfl
+    _ ≤ ∑ k, (x i - x k) ^ 2 := hinner_le
+    _ ≤ ∑ k, ∑ l, (x k - x l) ^ 2 := houter_le
+    _ = 2 * ((m : ℝ) * action F - (charge η F) ^ 2) := hdouble
+
+/-- Versi kuantitatif: jika defek aksi–muatan paling besar `ε`, maka
+setiap selisih komponen terredupkan paling besar `2ε`. -/
+theorem instanton_bound_stable (η F : Config m) (hη : IsSignVector η) {ε : ℝ}
+    (h : (m : ℝ) * action F - (charge η F) ^ 2 ≤ ε) (i j : Fin m) :
+    (η i * F i - η j * F j) ^ 2 ≤ 2 * ε := by
+  have h2 := instanton_bound_pointwise_defect η F hη i j
+  linarith
+
+/-- **Rigiditas kesamaan.** Untuk `m > 0`, batas instanton jenuh tepat
+ketika `F` proporsional terhadap vektor tanda `η`. -/
+theorem instanton_bound_eq_iff (η F : Config m) (hη : IsSignVector η) (hm : 0 < m) :
+    (charge η F) ^ 2 = (m : ℝ) * action F ↔
+      ∃ c : ℝ, F = fun i => c * η i := by
+  constructor
+  · intro heq
+    let x : Config m := fun i => η i * F i
+    have hxsum : (∑ i, x i) = charge η F := rfl
+    have hxsq : (∑ i, x i ^ 2) = action F := sum_eta_sq η F hη
+    have hdouble_zero : (∑ i, ∑ j, (x i - x j) ^ 2) = 0 := by
+      have h := variance_identity x
+      rw [hxsum, hxsq] at h
+      rw [heq] at h
+      linarith
+    have hconst : ∀ i j, x i = x j := by
+      intro i j
+      have hinner_nonneg : ∀ k : Fin m, 0 ≤ (x i - x k) ^ 2 := fun k => sq_nonneg _
+      have hinner_le : (x i - x j) ^ 2 ≤ ∑ k, (x i - x k) ^ 2 :=
+        Finset.single_le_sum (f := fun k => (x i - x k) ^ 2)
+          (fun k _ => hinner_nonneg k) (mem_univ j)
+      have houter_nonneg : ∀ k : Fin m, 0 ≤ ∑ l, (x k - x l) ^ 2 :=
+        fun k => Finset.sum_nonneg (fun l _ => sq_nonneg _)
+      have houter_le : (∑ k, (x i - x k) ^ 2) ≤ ∑ k, ∑ l, (x k - x l) ^ 2 :=
+        Finset.single_le_sum (f := fun k => ∑ l, (x k - x l) ^ 2)
+          (fun k _ => houter_nonneg k) (mem_univ i)
+      have hterm_zero : (x i - x j) ^ 2 = 0 := by
+        have hle : (x i - x j) ^ 2 ≤ 0 := by
+          calc
+            (x i - x j) ^ 2 ≤ ∑ k, (x i - x k) ^ 2 := hinner_le
+            _ ≤ ∑ k, ∑ l, (x k - x l) ^ 2 := houter_le
+            _ = 0 := hdouble_zero
+        exact le_antisymm hle (sq_nonneg _)
+      have hsub : x i - x j = 0 := sq_eq_zero_iff.mp hterm_zero
+      linarith
+    refine ⟨x ⟨0, hm⟩, ?_⟩
+    funext i
+    have hxi : x i = x ⟨0, hm⟩ := hconst i ⟨0, hm⟩
+    have hxidef : η i * F i = x ⟨0, hm⟩ := hxi
+    have hsq : η i ^ 2 = 1 := eta_sq η hη i
+    calc
+      F i = 1 * F i := by ring
+      _ = (η i ^ 2) * F i := by rw [hsq]
+      _ = η i * (η i * F i) := by ring
+      _ = η i * x ⟨0, hm⟩ := by rw [hxidef]
+      _ = x ⟨0, hm⟩ * η i := by ring
+  · rintro ⟨c, rfl⟩
+    exact instanton_bound_saturated η hη c
+
+/-! ### Kuantisasi muatan integer -/
+
+/-- Konfigurasi medan integer pada kisi hingga. -/
+abbrev ConfigZ (m : ℕ) := Fin m → ℤ
+
+/-- Vektor tanda integer dengan komponen `±1`. -/
+def IsSignVectorZ (η : ConfigZ m) : Prop :=
+  ∀ i, η i = 1 ∨ η i = -1
+
+/-- Aksi Euclidean integer `S(F) = ∑ F_i²`. -/
+def actionZ (F : ConfigZ m) : ℤ :=
+  ∑ i, (F i) ^ 2
+
+/-- Muatan topologi integer `Q_η(F) = ∑ η_i F_i`. -/
+def chargeZ (η F : ConfigZ m) : ℤ :=
+  ∑ i, η i * F i
+
+lemma etaZ_sq (η : ConfigZ m) (hη : IsSignVectorZ η) (i : Fin m) :
+    η i ^ 2 = 1 := by
+  rcases hη i with h | h <;> rw [h] <;> ring
+
+lemma sum_etaZ_sq (η F : ConfigZ m) (hη : IsSignVectorZ η) :
+    (∑ i, (η i * F i) ^ 2) = actionZ F := by
+  unfold actionZ
+  refine Finset.sum_congr rfl ?_
+  intro i _
+  rw [mul_pow, etaZ_sq η hη i, one_mul]
+
+/-- Batas instanton integer: `Q_η(F)² ≤ m · S(F)` atas `ℤ`. -/
+theorem chargeZ_sq_le (η F : ConfigZ m) (hη : IsSignVectorZ η) :
+    (chargeZ η F) ^ 2 ≤ (m : ℤ) * actionZ F := by
+  have h := sq_sum_le_card_mul_sum_sq (s := (univ : Finset (Fin m)))
+    (f := fun i => η i * F i)
+  have hsq : (∑ i, (η i * F i) ^ 2) = actionZ F := sum_etaZ_sq η F hη
+  calc
+    (chargeZ η F) ^ 2 = (∑ i, η i * F i) ^ 2 := rfl
+    _ ≤ (Fintype.card (Fin m) : ℤ) * ∑ i, (η i * F i) ^ 2 := by
+      simpa using h
+    _ = (m : ℤ) * actionZ F := by
+      rw [hsq, Fintype.card_fin]
+
+lemma actionZ_nonneg (F : ConfigZ m) : 0 ≤ actionZ F := by
+  unfold actionZ
+  exact Finset.sum_nonneg (fun i _ => sq_nonneg (F i))
+
+lemma actionZ_eq_zero_iff (F : ConfigZ m) : actionZ F = 0 ↔ F = 0 := by
+  constructor
+  · intro h
+    funext i
+    have hterm := (Finset.sum_eq_zero_iff_of_nonneg (s := (univ : Finset (Fin m)))
+      (f := fun j => (F j) ^ 2) (fun j _ => sq_nonneg (F j))).mp
+      (by simpa [actionZ] using h) i (mem_univ i)
+    exact sq_eq_zero_iff.mp hterm
+  · intro h
+    simp [actionZ, h]
+
+/-- Muatan integer tak nol memaksa aksi positif. -/
+theorem chargeZ_ne_zero_actionZ_pos (η F : ConfigZ m) (hη : IsSignVectorZ η)
+    (hQ : chargeZ η F ≠ 0) : 0 < actionZ F := by
+  have hnonneg : 0 ≤ actionZ F := actionZ_nonneg F
+  rcases lt_or_eq_of_le hnonneg with hpos | hzero
+  · exact hpos
+  · have hle : (chargeZ η F) ^ 2 ≤ 0 := by
+      have h := chargeZ_sq_le η F hη
+      rw [← hzero, mul_zero] at h
+      exact h
+    have hsq_nonneg : 0 ≤ (chargeZ η F) ^ 2 := sq_nonneg _
+    have hq : chargeZ η F = 0 := by nlinarith
+    exact absurd hq hQ
+
+/-- **Action gap diskret.** Muatan integer tak nol memerlukan aksi
+paling sedikit satu. -/
+theorem chargeZ_ne_zero_actionZ_ge_one (η F : ConfigZ m) (hη : IsSignVectorZ η)
+    (hQ : chargeZ η F ≠ 0) : 1 ≤ actionZ F := by
+  have hpos := chargeZ_ne_zero_actionZ_pos η F hη hQ
+  omega
+
+/-- Ketajaman action gap: ada konfigurasi muatan tak nol dengan aksi `1`. -/
+theorem action_gap_sharp (m : ℕ) (hm : 0 < m) :
+    ∃ (η F : ConfigZ m), IsSignVectorZ η ∧ chargeZ η F ≠ 0 ∧ actionZ F = 1 := by
+  let i0 : Fin m := ⟨0, hm⟩
+  let η : ConfigZ m := fun _ => 1
+  let F : ConfigZ m := fun i => if i = i0 then 1 else 0
+  have hη : IsSignVectorZ η := fun _ => Or.inl rfl
+  have hcharge : chargeZ η F = 1 := by
+    unfold chargeZ
+    simp [η, F]
+  have haction : actionZ F = 1 := by
+    unfold actionZ
+    simp [F]
+  refine ⟨η, F, hη, ?_, haction⟩
+  rw [hcharge]
+  norm_num
 
 end Math30.Gauge.LatticeInstanton

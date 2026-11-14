@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-14T06:56:27.193947+00:00
+- Generated: 2026-11-14T08:17:57.971175+00:00
 - README: `README.MD`
-- Total backticked citations: **208**
-- Lean claims: **54** (resolved: 54, unresolved: 0)
-- Citation kinds: `{'prose-term': 47, 'file-reference': 85, 'tooling': 19, 'lean-claim': 54, 'negative-reference': 3}`
+- Total backticked citations: **216**
+- Lean claims: **60** (resolved: 60, unresolved: 0)
+- Citation kinds: `{'prose-term': 49, 'file-reference': 85, 'tooling': 19, 'lean-claim': 60, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -44,6 +44,12 @@
 | `bps_equality_iff_anti_self_dual_zero` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
 | `bps_equality_iff_self_dual_zero` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
 | `bps_bound_sharp` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `instanton_bound_eq_iff` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `instanton_bound_defect` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `instanton_bound_stable` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `chargeZ_sq_le` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `chargeZ_ne_zero_actionZ_ge_one` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
+| `action_gap_sharp` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
 | `path_induction` | resolved | `lean/spec_v4/HigherInductivePushout.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
 | `terminal_is_sheaf` | resolved | `lean/spec_v4/GrothendieckToposBridge.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
 | `sieve_construction_valid` | resolved | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
@@ -219,5 +225,7 @@
 - `ℝ → Fin N` — prose-term
 - `lean/spec_v4/EvenUnimodularObstruction.lean` — file-reference
 - `lean/spec_v4/LatticeInstantonBound.lean` — file-reference
+- `Q²=mS ⇔ F=cη` — prose-term
+- `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `80d676e57a8497529a78dadad69a596092d4a37bcfb63b3b01cf726dd666e2d1` — prose-term
+- `6174dec8562df7f6993472653644eca6177c45caebd274c3c2fa0195616929cb` — prose-term

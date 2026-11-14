@@ -1,17 +1,20 @@
 {
-  "generated": "2026-11-14T06:56:27.046775+00:00",
+  "generated": "2026-11-14T08:17:52.930208+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "ee2f2e379a152a2e427b906c072890b46c989c418df50f57e26945ca9b5f9441",
+  "readme_semantic_sha256": "4ce2e99d6a2821d052cf8c327f4c27a255099f475ab382cad2c5398bb47ebf91",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 54,
-  "resolved": 54,
+  "cited_identifiers": 60,
+  "resolved": 60,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
+    "action_gap_sharp": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
     "actual_infinity_violates_conservation": [
       "lean/spec_v4/ActualInfinityRefutation.lean"
     ],
@@ -32,6 +35,12 @@
     ],
     "cantor_no_surjection": [
       "lean/spec_v4/CantorDiagonalization.lean"
+    ],
+    "chargeZ_ne_zero_actionZ_ge_one": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
+    "chargeZ_sq_le": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
     ],
     "collatzLoop_mono": [
       "lean/spec_v4/CollatzBoundedDefeat.lean"
@@ -94,10 +103,19 @@
     "instanton_bound": [
       "lean/spec_v4/LatticeInstantonBound.lean"
     ],
+    "instanton_bound_defect": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
+    "instanton_bound_eq_iff": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
     "instanton_bound_saturated": [
       "lean/spec_v4/LatticeInstantonBound.lean"
     ],
     "instanton_bound_sharp_signed": [
+      "lean/spec_v4/LatticeInstantonBound.lean"
+    ],
+    "instanton_bound_stable": [
       "lean/spec_v4/LatticeInstantonBound.lean"
     ],
     "landauer_bits_le_energy": [
