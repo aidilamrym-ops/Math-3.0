@@ -98,7 +98,7 @@
       "impact": "Internal contradiction in the claim surface.",
       "action": "Correct the Key Theorems list to the identifiers that exist.",
       "status": "FIXED",
-      "repair_evidence": "README 9.1.4 now cites only names that exist: torus_pi1_free_rank_two, torus_generators_distinct/free/span, torus_betti_numbers, torus_euler_characteristic, torus_euler_from_cells, torus_homology_ranks. It states that torus_fundamental_group, quantum_torus_paths and torus_homology_groups do not exist and that TorusPi1 is the declared model \u2124 \u00d7 \u2124 rather than a computed fundamental group."
+      "repair_evidence": "README 9.1.4 now cites only names that exist: torus_pi1_free_rank_two, torus_generators_distinct/free/span, torus_betti_numbers, torus_euler_characteristic, torus_euler_from_cells, torus_homology_ranks. It states that torus_fundamental_group, quantum_torus_paths and torus_homology_groups do not exist and that TorusPi1 is the declared model ℤ × ℤ rather than a computed fundamental group."
     },
     {
       "id": "OMEGA-0008",
@@ -126,7 +126,7 @@
       "impact": "A passing Lean kernel check is presented as certification of a computation it does not mention.",
       "action": "Derive the certified inequality from the actual computed quantity (e.g. inertia/determinant bound) or state explicitly that Gate 6 certifies only the exporter arithmetic.",
       "status": "FIXED",
-      "repair_evidence": "Gate 6 now derives exact leading principal minors 12, 155, 1783 from the audited matrix and emits `(0<12) \u2227 (0<155) \u2227 (0<1783)` in Math30Interfaces/SuiteAutomaticBridge.lean; compiled with `lake env lean` exit 0."
+      "repair_evidence": "Gate 6 now derives exact leading principal minors 12, 155, 1783 from the audited matrix and emits `(0<12) ∧ (0<155) ∧ (0<1783)` in Math30Interfaces/SuiteAutomaticBridge.lean; compiled with `lake env lean` exit 0."
     },
     {
       "id": "OMEGA-0010",
@@ -334,7 +334,7 @@
       "stage": "PASSING_OBSERVATION",
       "severity": "MEDIUM",
       "category": "HARDCODED_VERDICT",
-      "finding": "The Phase 3 report's `verdict` is the literal string 'PASSED - Strict inclusion N(B) \u2286 B verified ...' and does not depend on `all_inclusion`. A failed contraction would still produce a PASSED verdict in the receipt.",
+      "finding": "The Phase 3 report's `verdict` is the literal string 'PASSED - Strict inclusion N(B) ⊆ B verified ...' and does not depend on `all_inclusion`. A failed contraction would still produce a PASSED verdict in the receipt.",
       "evidence": "tools/newton_box_validator.py:307.",
       "impact": "The receipt's headline can contradict its own `unique_root_certified` field.",
       "action": "The regression runner ignores the headline and checks unique_root_certified, boundary_escape, per-pivot strict_inclusion, and max_ratio < 1/2. The validator itself must compute its verdict; scheduled.",
@@ -440,10 +440,10 @@
       "stage": "ADVERSARIAL_AUDIT",
       "severity": "HIGH",
       "category": "BROKEN_PROOF",
-      "finding": "The file imported `Mathlib.Analysis.SpecialFunctions.RiemannZeta` (no such module in this Mathlib rev; the module is `Mathlib.NumberTheory.LSeries.RiemannZeta`) and `Mathlib.Data.Complex.Exponential` (actually `Mathlib.Analysis.Complex.Exponential`), defined a noncomputable value with `def`, and stated its theorem with `abs` on complex arguments. \u2102 has no `Lattice`/`abs` instance, so the goal `abs (SpectralMapping s T) = abs (riemannZeta s)` could not even elaborate, and the proof closed with `rfl` after rewrites that never applied.",
-      "evidence": "`lake env lean spec_v4/SpectralOperatorEvolution.lean` before repair: module-not-found, then `failed to synthesize instance of type class Lattice \u2102`, then `No goals to be solved`.",
+      "finding": "The file imported `Mathlib.Analysis.SpecialFunctions.RiemannZeta` (no such module in this Mathlib rev; the module is `Mathlib.NumberTheory.LSeries.RiemannZeta`) and `Mathlib.Data.Complex.Exponential` (actually `Mathlib.Analysis.Complex.Exponential`), defined a noncomputable value with `def`, and stated its theorem with `abs` on complex arguments. ℂ has no `Lattice`/`abs` instance, so the goal `abs (SpectralMapping s T) = abs (riemannZeta s)` could not even elaborate, and the proof closed with `rfl` after rewrites that never applied.",
+      "evidence": "`lake env lean spec_v4/SpectralOperatorEvolution.lean` before repair: module-not-found, then `failed to synthesize instance of type class Lattice ℂ`, then `No goals to be solved`.",
       "impact": "The certificate was unverifiable - it could not have been compiled by any toolchain, so the README's 'verified' claim was false for this row.",
-      "action": "Imports corrected; `noncomputable def`; theorem restated in norm form `\u2016SpectralMapping s T\u2016 = \u2016(riemannZeta s : \u2102)\u2016`; proof rebuilt from `Complex.norm_exp`, an explicit real-part computation of `I * T * s.im`, and `norm_mul`. Compiles with exit 0 and zero warnings; strict gate and Anti-Circularity Gate both PASS.",
+      "action": "Imports corrected; `noncomputable def`; theorem restated in norm form `‖SpectralMapping s T‖ = ‖(riemannZeta s : ℂ)‖`; proof rebuilt from `Complex.norm_exp`, an explicit real-part computation of `I * T * s.im`, and `norm_mul`. Compiles with exit 0 and zero warnings; strict gate and Anti-Circularity Gate both PASS.",
       "status": "FIXED"
     },
     {
@@ -613,7 +613,7 @@
       "finding": "CI installed the repository with 'pip install --no-deps .' although no pyproject.toml/setup.py exists, and ran `lake env lean` without installing Lean or fetching Mathlib. The workflow cannot pass on ubuntu-latest.",
       "evidence": "Root contains no packaging manifest; workflow had no leanprover/lean-action or cache step; full_surface_lean_audit exits TOOL_NOT_RUN when lake is absent.",
       "impact": "The advertised automated regression gate was non-functional.",
-      "action": "Rewrote with explicit Lean setup step via `leanprover/lean-action@v1`, added `lake-package-directory: lean`, enabled `use-mathlib-cache`, updated 490\u2192493 file counts, used `--workers 1` for full surface audit, removed bogus pip install, and added 40/40 theorem name resolution check.",
+      "action": "Rewrote with explicit Lean setup step via `leanprover/lean-action@v1`, added `lake-package-directory: lean`, enabled `use-mathlib-cache`, updated 490→493 file counts, used `--workers 1` for full surface audit, removed bogus pip install, and added 40/40 theorem name resolution check.",
       "status": "FIXED"
     },
     {
@@ -758,7 +758,20 @@
       "impact": "The SMT companion was advertised as an unsat refutation but the auditor classified it as a non-result. Only the Lean theorem actual_infinity_violates_conservation carries the general claim.",
       "action": "Preserved the flawed script at reports/omega_audit/flawed_certificates/actual_infinity_refutation.circular.smt2.txt; replaced it with a concrete four-step QF_LIA unrolling (capacity 3, strictly increasing states 0..4); updated the tribunal logic to QF_LIA; reran Z3 (unsat) and the Anti-Circularity Gate (GENUINE=2, PASS). README now labels the SMT as a concrete finite instance and identifies Lean as the general proof.",
       "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0058",
+      "batch": 5,
+      "asset": "lean/spec_v4/DiscreteMorseTheory.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "MEDIUM",
+      "category": "TERMINOLOGY_DRIFT",
+      "finding": "Phase 62 defines a critical cell as a local minimum/maximum of a vertex function (zero smaller/larger neighbours), not as an unpaired cell of a Forman discrete gradient vector field. On the 3-vertex interval the certificate reports 1 minimum and 1 maximum, so #min - #max = 0 while the Euler characteristic of the interval is 3 vertices - 2 edges = 1. The weak Morse inequalities proved in the file (cardinality >= betti) remain true.",
+      "evidence": "spec_v4/DiscreteMorseTheory.lean: interval_critical0_card = 1, torus_critical0_card = 2, torus_critical1_card = 2; chi(interval)=1 but #crit0-#crit1=0.",
+      "impact": "The sealed certificate claims only counting inequalities, no Euler/Morse identity. A reader could mistake the predicates for Forman critical cells.",
+      "action": "Certificate kept sealed because its stated claims are true. Terminology limit recorded here; a later phase should implement gradient pairing (matching) and prove #crit0-#crit1 = V-E, or rename IsCriticalIndex0/1 to IsLocalMin/IsLocalMax.",
+      "status": "DOCUMENTED"
     }
   ],
-  "updated_utc": "2026-11-13T12:06:43.074020+00:00"
+  "updated_utc": "2026-11-15T00:55:51Z"
 }

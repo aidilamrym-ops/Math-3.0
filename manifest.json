@@ -605,7 +605,7 @@
   "reports/abc_census_v3_audit.json": "2fc4d3f7de7f368a8ce9f512a292bac6b72dd9341ad5e53827998340b6b42dc0",
   "reports/anderson_enclosure_bounds.json": "1d61144f5bc30dc83f67695b7cf2a53b7a13d481faeb8079e08f59c5636b50e4",
   "reports/anti_circularity_gate.json": "93b363ddcc2e6a3e698e67591ef98e40788b2b260ff7e005ec7fe42ed9d1a7de",
-  "reports/autonomous_pipeline_anomalies.json": "0f998acbc6f3c8e637dc628149a6e5dd853974c90ee0d93f2f837b75420b00a6",
+  "reports/autonomous_pipeline_anomalies.json": "ea6b2be26c6c6f1d9aed7dfa7c0c1cae1755c41b8fc82196e2b0f3cac2af76b2",
   "reports/axiom_footprint_audit.json": "264342be636549ffee562c312f4405ffd0e948de8a47facda29351769a513afa",
   "reports/axiom_footprint_audit.md": "117550231f3a746e5484ae8ccedcc068c48c06b4fc25c0b55799dea33572814c",
   "reports/beal_batch_sweep_summary.json": "b67a18492781c10c44096e482ef375be3f912794831a393dcbb41cdbcc659933",
