@@ -58,6 +58,7 @@
   "lean/spec_v4/DiscreteChernSimons.lean": "8a713b8f913be8c53e9d9da8988e8cd85eec9b4bf19b96c8c9a69daccef75253",
   "lean/spec_v4/DiscreteCohomologyRing.lean": "1cc9014efcafe07b285638bcb6612082878c96340421876328e346347a3f2064",
   "lean/spec_v4/DiscreteGaussBonnet.lean": "7fd9a673852a777dfd62e02d5feaf48417e945fa8c82d87b5aadc2fe1cff0e1f",
+  "lean/spec_v4/DiscreteGaussBonnetDodecahedron.lean": "e87aa0687b0405905ded0b97ffc08aba59062df66aa438b90019defe94f5486b",
   "lean/spec_v4/DiscreteGaussBonnetIcosahedron.lean": "a6a062c6fd87f481795c8b52d4fff0466e61f2e2744cd3b87c87d7e9110f5898",
   "lean/spec_v4/DiscreteGaussBonnetOctahedron.lean": "77bc6676952fd2a9d624730a14083a0944d706b6f8efab03215e2f292248667e",
   "lean/spec_v4/DiscreteHodgeDecomposition.lean": "16a23a8898fa7fe121cd94f75b71c26dd438e780d61efac46a26706db96bc0ac",
