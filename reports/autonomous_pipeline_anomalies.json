@@ -771,7 +771,33 @@
       "impact": "The sealed certificate claims only counting inequalities, no Euler/Morse identity. A reader could mistake the predicates for Forman critical cells.",
       "action": "Certificate kept sealed because its stated claims are true. Terminology limit recorded here; a later phase should implement gradient pairing (matching) and prove #crit0-#crit1 = V-E, or rename IsCriticalIndex0/1 to IsLocalMin/IsLocalMax.",
       "status": "DOCUMENTED"
+    },
+    {
+      "id": "OMEGA-0059",
+      "batch": 7,
+      "asset": "README.MD, reports/full_surface_lean_audit.json",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "HIGH",
+      "category": "STALE_CLAIM",
+      "finding": "README.MD advertised a 503-file Lean surface and 502 compile-audited files while the filesystem contained 520 Lean sources (509 in lean/spec_v4, 9 in Math30Kernel, 2 in Math30Interfaces). The canonical full-surface receipt was also stale at total_files=503 because it predated Phases 64-73. README's manifest pin said 1,546 files while the sealed manifest held 1,565 entries before the audit checkpoint was retired.",
+      "evidence": "Filesystem enumeration: spec_v4=509, kernel=9, interfaces=2, total=520. repokeeper --verify before audit: checked=1565. Initial reports/full_surface_lean_audit.json: total_files=503, generated 2026-11-14 22:51:24. Resumed sequential audit (workers=1) reported total=520 compiled=520 PASS with pass_with_warnings=5.",
+      "impact": "The public index understated both the verified Lean surface and the ledger size, and the canonical audit receipt did not cover the 17 certificates added in Phases 64-73. The completed audit retired reports/_full_surface_progress.jsonl, a transient checkpoint. The stale README and stale canonical receipt were preserved before replacement.",
+      "action": "Ran tools/full_surface_lean_audit.py --resume --workers 1 --timeout 600; all 520 files now appear in the canonical receipt. Archived the flawed originals at reports/flawed_artifacts/README.stale-503.md and reports/flawed_artifacts/full_surface_lean_audit.stale-503.json. Updated README to 520 files, same 520 compile-audited files, and 1,566 permanent manifest entries. Verification lineage: kernel compile PASS 520/520; repokeeper --verify PASS after reseal; readme_lean_audit 38/38 PASS; readme_theorem_audit 60/60 PASS; claim ledger 217 entries / 60 claims / 0 unresolved.",
+      "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0060",
+      "batch": 7,
+      "asset": "lean/spec_v4/DiscreteChernSimons.lean, lean/spec_v4/DiscreteHodgeStar.lean, lean/spec_v4/DiscreteHodgeTheoremSpec.lean, lean/spec_v4/DiscretePoincareDuality.lean, lean/spec_v4/DiscreteYangMills.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "MEDIUM",
+      "category": "WARNING_BACKLOG",
+      "finding": "The fresh 520-file kernel audit reports PASS for every file but pass_with_warnings=5: DiscreteChernSimons (24 warnings), DiscreteYangMills (38), DiscreteHodgeStar (6), DiscreteHodgeTheoremSpec (1), DiscretePoincareDuality (1). These are Lean linter warnings, not type errors; the zero-warning mandate is therefore not yet met.",
+      "evidence": "reports/full_surface_lean_audit.json after resumed audit: total_files=520, compiled=520, counts PASS=520, pass_with_warnings=5, warning_files lists the five paths with warning counts.",
+      "impact": "Certificates remain kernel-clean, but warning-level defects are unpinned debt and can mask future simp-argument drift or unused hypotheses.",
+      "action": "Queued for the next batches. Each file must be recompiled, warnings eliminated without weakening statements, then re-gated and resealed. No warning is to be suppressed with linter toggles unless the warning is provably false.",
+      "status": "OPEN"
     }
   ],
-  "updated_utc": "2026-11-15T00:55:51Z"
+  "updated_utc": "2026-11-15T06:05:06Z"
 }

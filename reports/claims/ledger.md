@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-14T08:17:57.971175+00:00
+- Generated: 2026-11-15T06:19:07.769367+00:00
 - README: `README.MD`
-- Total backticked citations: **216**
+- Total backticked citations: **217**
 - Lean claims: **60** (resolved: 60, unresolved: 0)
-- Citation kinds: `{'prose-term': 49, 'file-reference': 85, 'tooling': 19, 'lean-claim': 60, 'negative-reference': 3}`
+- Citation kinds: `{'prose-term': 50, 'file-reference': 85, 'tooling': 19, 'lean-claim': 60, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -182,6 +182,7 @@
 - `reports/full_surface_lean_audit.json` — file-reference
 - `is_complete: true` — prose-term
 - `verdict: PASS` — prose-term
+- `pass_with_warnings: 5` — prose-term
 - `python tools/readme_theorem_audit.py` — file-reference
 - `reports/readme_theorem_audit.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -228,4 +229,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `6174dec8562df7f6993472653644eca6177c45caebd274c3c2fa0195616929cb` — prose-term
+- `2a39910f549a22edf8f4ed646d00dc735ac855ae8cff4d636c98ce41996692b5` — prose-term
