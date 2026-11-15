@@ -1,6 +1,6 @@
 # Claims Ledger
 
-- Generated: 2026-11-15T10:48:07.387963+00:00
+- Generated: 2026-11-15T12:02:39.620799+00:00
 - README: `README.MD`
 - Total backticked citations: **217**
 - Lean claims: **60** (resolved: 60, unresolved: 0)
@@ -229,4 +229,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `34e95571d711d08e5dfd8d19d4a41fb4b9baf923638a0969cd3e0e7289fed680` — prose-term
+- `383fb24a6cb494b8c89c883ea848bf4258c202679538fbc9f4e7215ce1790b41` — prose-term

@@ -1,14 +1,14 @@
 # Full-Surface Lean Compile Audit
 
-- Generated: 2026-11-15 18:44:28
+- Generated: 2026-11-15 19:56:33
 - Scope: **full** (canonical receipt: true)
 - Verdict: **PASS** (complete: true)
 - Surfaces: `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`
-- Total files: **520**
-- Compiled: **520**
-- Counts: `{'PASS': 520}`
+- Total files: **518**
+- Compiled: **518**
+- Counts: `{'PASS': 518}`
 - PASS files with compiler warnings: **0**
-- Aggregate compile time: 3364.2s
+- Aggregate compile time: 3026.6s
 
 ## Failures
 

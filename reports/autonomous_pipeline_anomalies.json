@@ -849,7 +849,20 @@
       "impact": "Unpinned warnings and unproved structural lemmas",
       "action": "Rebuilt DiscreteHodgeStar eliminating all 6 warnings and replacing tautologies with true isometry and duality lemmas; rebuilt DiscreteHodgeDecomposition with actual rational orthogonal Hodge decomposition and explicit harmonic kernel proofs. Recompiled EXIT=0, 0 warnings.",
       "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0065",
+      "batch": 11,
+      "asset": "lean/spec_v4/EinsteinFieldEquations.lean, lean/spec_v4/MillenniumBirchSwinnertonDyer.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "HIGH",
+      "category": "VACUOUS_DEFINITION",
+      "finding": "EinsteinFieldEquations contained trivial vacuum-solution proofs on non-geometric arrays, and MillenniumBirchSwinnertonDyer was an unverified data structure without mathematical substance.",
+      "evidence": "Audit inspection revealed absence of differential geometry in EFE and absence of elliptic curves/L-functions in BSD.",
+      "impact": "Invalidation of kernel-certified claims in the README inventory.",
+      "action": "Archived flawed sources in reports/flawed_artifacts/ and removed from Lean surface.",
+      "status": "FIXED"
     }
   ],
-  "updated_utc": "2026-11-15T09:41:35Z"
+  "updated_utc": "2026-11-15T11:58:44Z"
 }
