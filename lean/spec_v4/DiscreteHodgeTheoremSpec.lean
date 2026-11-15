@@ -1,5 +1,15 @@
 -- DiscreteHodgeTheoremSpec.lean
--- Math 3.0 / Fase 72: Spesifikasi Teorema Hodge Diskrit (kernel Laplacian, dekomposisi harmonik)
+-- Math 3.0 / Fase 72: Spesifikasi Teorema Hodge Diskrit (kernel Laplacian)
+--
+-- Cakupan:
+--   * chain complex C0 -> C1 on the path P3 (3 vertices, 2 edges);
+--   * d1: C1 -> C0 is the boundary [-1,1,0]; [0,-1,1];
+--   * Laplacian0 = d1 d1^T and Laplacian1 = d1^T d1 are the combinatorial
+--     graph Laplacians on 0-chains and 1-chains respectively;
+--   * harmonic0 h iff h is constant; harmonic1 h iff h = 0.
+--
+-- Claim limits:
+--   * finite linear algebra only; not the Hodge theorem for Riemannian manifolds.
 
 import Mathlib.Tactic
 
@@ -14,10 +24,11 @@ def laplacian0 (f : Chain0) : Chain0 := fun v =>
   | 1 => f 1 - f 0 + (f 1 - f 2)
   | _ => f 2 - f 1
 
+/-- Combinatorial Laplacian on 1-chains: d1^T d1 = [[2,-1],[-1,2]]. -/
 def laplacian1 (a : Chain1) : Chain1 := fun e =>
   match e.val with
-  | 0 => a 0
-  | _ => a 1
+  | 0 => 2 * a 0 - a 1
+  | _ => - a 0 + 2 * a 1
 
 def harmonic0 (h : Chain0) : Prop := laplacian0 h = 0
 def harmonic1 (h : Chain1) : Prop := laplacian1 h = 0
@@ -37,7 +48,7 @@ theorem harmonic0_iff_constant (h : Chain0) :
   · rintro ⟨h01, h12⟩
     funext v
     fin_cases v <;> {
-      simp [harmonic0, laplacian0]
+      simp [laplacian0]
       omega
     }
 
@@ -45,17 +56,17 @@ theorem harmonic1_iff_zero (h : Chain1) :
     harmonic1 h ↔ h = 0 := by
   constructor
   · intro hh
+    have h0 := congrFun hh 0
+    have h1 := congrFun hh 1
+    change laplacian1 h 0 = 0 at h0
+    change laplacian1 h 1 = 0 at h1
+    simp [laplacian1] at h0 h1
     funext e
-    have he := congrFun hh e
-    fin_cases e <;> {
-      change laplacian1 h _ = 0 at he
-      simp [laplacian1] at he
-      exact he
-    }
+    fin_cases e <;> simp <;> omega
   · intro h0
     subst h0
     funext e
-    fin_cases e <;> rfl
+    fin_cases e <;> simp [laplacian1]
 
 theorem hodge_spec_certificate :
     (∀ h : Chain0, harmonic0 h ↔ (h 0 = h 1 ∧ h 1 = h 2)) ∧

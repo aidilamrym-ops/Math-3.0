@@ -94,7 +94,11 @@ theorem total_eq_zero_iff_mem (f : Chain0) :
       | 1 => - f 1
       | _ => f 0, ?_⟩
     funext i
-    fin_cases i <;> simp [bdry] <;> omega
+    fin_cases i
+    · simp [bdry]
+    · simp [bdry]
+    · simp [bdry]
+      omega
   · rintro ⟨b, rfl⟩
     exact total_bdry b
 

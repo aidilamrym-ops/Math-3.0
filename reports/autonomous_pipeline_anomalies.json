@@ -788,16 +788,29 @@
     {
       "id": "OMEGA-0060",
       "batch": 7,
-      "asset": "lean/spec_v4/DiscreteChernSimons.lean, lean/spec_v4/DiscreteHodgeStar.lean, lean/spec_v4/DiscreteHodgeTheoremSpec.lean, lean/spec_v4/DiscretePoincareDuality.lean, lean/spec_v4/DiscreteYangMills.lean",
+      "asset": "lean/spec_v4/DiscreteChernSimons.lean, lean/spec_v4/DiscreteHodgeStar.lean, lean/spec_v4/DiscreteYangMills.lean",
       "stage": "ADVERSARIAL_AUDIT",
       "severity": "MEDIUM",
       "category": "WARNING_BACKLOG",
-      "finding": "The fresh 520-file kernel audit reports PASS for every file but pass_with_warnings=5: DiscreteChernSimons (24 warnings), DiscreteYangMills (38), DiscreteHodgeStar (6), DiscreteHodgeTheoremSpec (1), DiscretePoincareDuality (1). These are Lean linter warnings, not type errors; the zero-warning mandate is therefore not yet met.",
-      "evidence": "reports/full_surface_lean_audit.json after resumed audit: total_files=520, compiled=520, counts PASS=520, pass_with_warnings=5, warning_files lists the five paths with warning counts.",
+      "finding": "The fresh 520-file kernel audit reports PASS for every file but pass_with_warnings=5. Batch 8 cleared DiscreteHodgeTheoremSpec (1 unused simp argument) and DiscretePoincareDuality (1 unnecessary sequence focus), leaving three files: DiscreteChernSimons (24 warnings), DiscreteYangMills (38), DiscreteHodgeStar (6), for 68 linter warnings total. These are Lean linter warnings, not type errors; the zero-warning mandate is therefore not yet met.",
+      "evidence": "reports/full_surface_lean_audit.json after the Batch 8 incremental resume: total_files=520, compiled=520, counts PASS=520, pass_with_warnings=3; warning files are DiscreteChernSimons (24), DiscreteHodgeStar (6), DiscreteYangMills (38), totaling 68 linter warnings. Batch 8 recompiled the two repaired files with EXIT=0 and no warnings; both Strict Gate runs returned PASS.",
       "impact": "Certificates remain kernel-clean, but warning-level defects are unpinned debt and can mask future simp-argument drift or unused hypotheses.",
-      "action": "Queued for the next batches. Each file must be recompiled, warnings eliminated without weakening statements, then re-gated and resealed. No warning is to be suppressed with linter toggles unless the warning is provably false.",
-      "status": "OPEN"
+      "action": "Batch 8 removed the unused harmonic0 simp argument and replaced the unnecessary <;> sequence with explicit cases. Remaining three files are queued; each must be recompiled, warnings eliminated without weakening statements, then re-gated and resealed. No warning is to be suppressed with linter toggles unless the warning is provably false.",
+      "status": "PARTIALLY_FIXED"
+    },
+    {
+      "id": "OMEGA-0061",
+      "batch": 8,
+      "asset": "lean/spec_v4/DiscreteHodgeTheoremSpec.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "HIGH",
+      "category": "DEFINITION_DRIFT",
+      "finding": "The Phase 72 file called laplacian1 the Hodge/combinatorial Laplacian on 1-chains but defined it as the identity map (a 0, a 1). The actual d1^T d1 Laplacian for the path P3 with boundary matrix [-1,1,0] and [0,-1,1] is [[2,-1],[-1,2]]. The theorem harmonic1 h <-> h = 0 happened to remain true for the identity, so kernel-level tests did not expose the incorrect operator.",
+      "evidence": "Original definition: laplacian1 a = fun e => match e.val with | 0 => a 0 | _ => a 1. Correct matrix product: d1^T d1 = [[2,-1],[-1,2]]. Header also advertised a harmonic decomposition that the file never proved.",
+      "impact": "A sealed certificate named a specific Hodge Laplacian while certifying a different operator. The numeric kernel result was true, but the definitional content was false, so downstream reuse of laplacian1 would be unsound.",
+      "action": "Redefined laplacian1 as 2*a0 - a1 and -a0 + 2*a1. Rewrote harmonic1_iff_zero from the two scalar equations with omega; kernel remains zero. Corrected the header to kernel-only scope and removed the unproved decomposition claim. Recompiled EXIT=0 with zero warnings; Strict Gate and Anti-Circularity Gate PASS.",
+      "status": "FIXED"
     }
   ],
-  "updated_utc": "2026-11-15T06:05:06Z"
+  "updated_utc": "2026-11-15T07:37:22Z"
 }
