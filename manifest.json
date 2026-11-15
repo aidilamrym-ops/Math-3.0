@@ -64,6 +64,7 @@
   "lean/spec_v4/DiscreteGaussBonnetOctahedron.lean": "77bc6676952fd2a9d624730a14083a0944d706b6f8efab03215e2f292248667e",
   "lean/spec_v4/DiscreteHodgeDecomposition.lean": "16a23a8898fa7fe121cd94f75b71c26dd438e780d61efac46a26706db96bc0ac",
   "lean/spec_v4/DiscreteHodgeStar.lean": "15a8323d9c4dea9342ee4533b74f744ebfe58a79b8a366677c2d2ea9892ae746",
+  "lean/spec_v4/DiscreteHodgeTheoremSpec.lean": "20b6c4778acb8d4e131556d234f8dfb35ae61600cb5dd3c6a8da459a1601de50",
   "lean/spec_v4/DiscreteIndexTheorem.lean": "bd01a406642b6bc4492b00793ed5fbcd4d704041c5f504c0ebc2c5be20c8409a",
   "lean/spec_v4/DiscreteLatticeGravityExtension.lean": "31e56071e668d0ac64411988667dd4e9ee45d2655fb66f3de3fe8ca1690a50ad",
   "lean/spec_v4/DiscreteLefschetzFixedPoint.lean": "7ec3df5874087f31aaf59736c753ca024d5be7da684d22b6b407ddde8d01e1db",
