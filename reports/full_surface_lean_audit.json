@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 16:40:38",
+  "generated": "2026-11-15 17:41:04",
   "scope": {
     "kind": "full",
     "only": null,
@@ -22,15 +22,10 @@
   "counts": {
     "PASS": 520
   },
-  "pass_with_warnings": 1,
-  "total_seconds": 3569.3,
+  "pass_with_warnings": 0,
+  "total_seconds": 3568.1,
   "failures": [],
-  "warning_files": [
-    {
-      "path": "lean/spec_v4/DiscreteHodgeStar.lean",
-      "warnings": 6
-    }
-  ],
+  "warning_files": [],
   "results": [
     {
       "path": "Math30Interfaces/SuiteAdversarialBridge_B.lean",
@@ -357,7 +352,7 @@
       "rc": 0,
       "status": "PASS",
       "warnings": 0,
-      "seconds": 17.02,
+      "seconds": 18.07,
       "error": "",
       "stdout_tail": "",
       "stderr_tail": ""
@@ -367,8 +362,8 @@
       "lean_path": "spec_v4/DiscreteHodgeStar.lean",
       "rc": 0,
       "status": "PASS",
-      "warnings": 6,
-      "seconds": 17.07,
+      "warnings": 0,
+      "seconds": 14.81,
       "error": "",
       "stdout_tail": "",
       "stderr_tail": ""

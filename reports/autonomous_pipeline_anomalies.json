@@ -98,7 +98,7 @@
       "impact": "Internal contradiction in the claim surface.",
       "action": "Correct the Key Theorems list to the identifiers that exist.",
       "status": "FIXED",
-      "repair_evidence": "README 9.1.4 now cites only names that exist: torus_pi1_free_rank_two, torus_generators_distinct/free/span, torus_betti_numbers, torus_euler_characteristic, torus_euler_from_cells, torus_homology_ranks. It states that torus_fundamental_group, quantum_torus_paths and torus_homology_groups do not exist and that TorusPi1 is the declared model ℤ × ℤ rather than a computed fundamental group."
+      "repair_evidence": "README 9.1.4 now cites only names that exist: torus_pi1_free_rank_two, torus_generators_distinct/free/span, torus_betti_numbers, torus_euler_characteristic, torus_euler_from_cells, torus_homology_ranks. It states that torus_fundamental_group, quantum_torus_paths and torus_homology_groups do not exist and that TorusPi1 is the declared model \u2124 \u00d7 \u2124 rather than a computed fundamental group."
     },
     {
       "id": "OMEGA-0008",
@@ -126,7 +126,7 @@
       "impact": "A passing Lean kernel check is presented as certification of a computation it does not mention.",
       "action": "Derive the certified inequality from the actual computed quantity (e.g. inertia/determinant bound) or state explicitly that Gate 6 certifies only the exporter arithmetic.",
       "status": "FIXED",
-      "repair_evidence": "Gate 6 now derives exact leading principal minors 12, 155, 1783 from the audited matrix and emits `(0<12) ∧ (0<155) ∧ (0<1783)` in Math30Interfaces/SuiteAutomaticBridge.lean; compiled with `lake env lean` exit 0."
+      "repair_evidence": "Gate 6 now derives exact leading principal minors 12, 155, 1783 from the audited matrix and emits `(0<12) \u2227 (0<155) \u2227 (0<1783)` in Math30Interfaces/SuiteAutomaticBridge.lean; compiled with `lake env lean` exit 0."
     },
     {
       "id": "OMEGA-0010",
@@ -334,7 +334,7 @@
       "stage": "PASSING_OBSERVATION",
       "severity": "MEDIUM",
       "category": "HARDCODED_VERDICT",
-      "finding": "The Phase 3 report's `verdict` is the literal string 'PASSED - Strict inclusion N(B) ⊆ B verified ...' and does not depend on `all_inclusion`. A failed contraction would still produce a PASSED verdict in the receipt.",
+      "finding": "The Phase 3 report's `verdict` is the literal string 'PASSED - Strict inclusion N(B) \u2286 B verified ...' and does not depend on `all_inclusion`. A failed contraction would still produce a PASSED verdict in the receipt.",
       "evidence": "tools/newton_box_validator.py:307.",
       "impact": "The receipt's headline can contradict its own `unique_root_certified` field.",
       "action": "The regression runner ignores the headline and checks unique_root_certified, boundary_escape, per-pivot strict_inclusion, and max_ratio < 1/2. The validator itself must compute its verdict; scheduled.",
@@ -440,10 +440,10 @@
       "stage": "ADVERSARIAL_AUDIT",
       "severity": "HIGH",
       "category": "BROKEN_PROOF",
-      "finding": "The file imported `Mathlib.Analysis.SpecialFunctions.RiemannZeta` (no such module in this Mathlib rev; the module is `Mathlib.NumberTheory.LSeries.RiemannZeta`) and `Mathlib.Data.Complex.Exponential` (actually `Mathlib.Analysis.Complex.Exponential`), defined a noncomputable value with `def`, and stated its theorem with `abs` on complex arguments. ℂ has no `Lattice`/`abs` instance, so the goal `abs (SpectralMapping s T) = abs (riemannZeta s)` could not even elaborate, and the proof closed with `rfl` after rewrites that never applied.",
-      "evidence": "`lake env lean spec_v4/SpectralOperatorEvolution.lean` before repair: module-not-found, then `failed to synthesize instance of type class Lattice ℂ`, then `No goals to be solved`.",
+      "finding": "The file imported `Mathlib.Analysis.SpecialFunctions.RiemannZeta` (no such module in this Mathlib rev; the module is `Mathlib.NumberTheory.LSeries.RiemannZeta`) and `Mathlib.Data.Complex.Exponential` (actually `Mathlib.Analysis.Complex.Exponential`), defined a noncomputable value with `def`, and stated its theorem with `abs` on complex arguments. \u2102 has no `Lattice`/`abs` instance, so the goal `abs (SpectralMapping s T) = abs (riemannZeta s)` could not even elaborate, and the proof closed with `rfl` after rewrites that never applied.",
+      "evidence": "`lake env lean spec_v4/SpectralOperatorEvolution.lean` before repair: module-not-found, then `failed to synthesize instance of type class Lattice \u2102`, then `No goals to be solved`.",
       "impact": "The certificate was unverifiable - it could not have been compiled by any toolchain, so the README's 'verified' claim was false for this row.",
-      "action": "Imports corrected; `noncomputable def`; theorem restated in norm form `‖SpectralMapping s T‖ = ‖(riemannZeta s : ℂ)‖`; proof rebuilt from `Complex.norm_exp`, an explicit real-part computation of `I * T * s.im`, and `norm_mul`. Compiles with exit 0 and zero warnings; strict gate and Anti-Circularity Gate both PASS.",
+      "action": "Imports corrected; `noncomputable def`; theorem restated in norm form `\u2016SpectralMapping s T\u2016 = \u2016(riemannZeta s : \u2102)\u2016`; proof rebuilt from `Complex.norm_exp`, an explicit real-part computation of `I * T * s.im`, and `norm_mul`. Compiles with exit 0 and zero warnings; strict gate and Anti-Circularity Gate both PASS.",
       "status": "FIXED"
     },
     {
@@ -613,7 +613,7 @@
       "finding": "CI installed the repository with 'pip install --no-deps .' although no pyproject.toml/setup.py exists, and ran `lake env lean` without installing Lean or fetching Mathlib. The workflow cannot pass on ubuntu-latest.",
       "evidence": "Root contains no packaging manifest; workflow had no leanprover/lean-action or cache step; full_surface_lean_audit exits TOOL_NOT_RUN when lake is absent.",
       "impact": "The advertised automated regression gate was non-functional.",
-      "action": "Rewrote with explicit Lean setup step via `leanprover/lean-action@v1`, added `lake-package-directory: lean`, enabled `use-mathlib-cache`, updated 490→493 file counts, used `--workers 1` for full surface audit, removed bogus pip install, and added 40/40 theorem name resolution check.",
+      "action": "Rewrote with explicit Lean setup step via `leanprover/lean-action@v1`, added `lake-package-directory: lean`, enabled `use-mathlib-cache`, updated 490\u2192493 file counts, used `--workers 1` for full surface audit, removed bogus pip install, and added 40/40 theorem name resolution check.",
       "status": "FIXED"
     },
     {
@@ -836,7 +836,20 @@
       "impact": "No lattice gauge theory was formalized: every configuration had the same identity plaquette and zero action, so gauge invariance and the trivial-action theorem carried no mathematical content. The SU(2) claim was attached to a constant identity field.",
       "action": "Rebuilt the file with Site L = Fin 4 -> ZMod L, GL(N,C)-valued links, and the actual plaquette W_{mu nu}(x) = U_mu(x) U_nu(x+mu) U_mu(x+nu)^-1 U_nu(x)^-1. Defined the gauge transformation U_mu(x) -> g(x) U_mu(x) g(x+mu)^-1, proved plaquette covariance W -> g(x) W g(x)^-1 by shift commutation and group algebra, and proved trace cyclicity for conjugation. Defined the normalized Wilson action S_beta = beta * sum_{x,mu,nu} (1 - Re Tr W / N) and proved its gauge invariance, plus W = 1 and S_beta = 0 for the trivial connection. Added a concrete determinant-one unitary GL(2,C) link diag(i,-i) and a connection whose origin plaquette equals that link and is proved non-identity, establishing non-vacuity. Documented the ordered-pair summation and the GL-versus-SU scope. Archived the old file at reports/flawed_artifacts/DiscreteYangMills.placeholder-plaquette.lean. Recompiled EXIT=0 with 0 warnings; Strict Gate and Anti-Circularity Gate PASS.",
       "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0064",
+      "batch": 10,
+      "asset": "lean/spec_v4/DiscreteHodgeStar.lean, lean/spec_v4/DiscreteHodgeDecomposition.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "MEDIUM",
+      "category": "WARNING_AND_VACUOUS_DECOMPOSITION",
+      "finding": "DiscreteHodgeStar emitted 6 linter warnings and DiscreteHodgeDecomposition contained comment-only Green identity placeholders, tautological definitions, and no proof of the Hodge decomposition",
+      "evidence": "Audit logs and old flawed artifacts in reports/flawed_artifacts/",
+      "impact": "Unpinned warnings and unproved structural lemmas",
+      "action": "Rebuilt DiscreteHodgeStar eliminating all 6 warnings and replacing tautologies with true isometry and duality lemmas; rebuilt DiscreteHodgeDecomposition with actual rational orthogonal Hodge decomposition and explicit harmonic kernel proofs. Recompiled EXIT=0, 0 warnings.",
+      "status": "FIXED"
     }
   ],
-  "updated_utc": "2026-11-15T08:34:06Z"
+  "updated_utc": "2026-11-15T09:41:35Z"
 }
