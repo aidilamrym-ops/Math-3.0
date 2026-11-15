@@ -875,7 +875,33 @@
       "impact": "Invalidation of unverified Millennium claims in the repo.",
       "action": "Archived flawed sources in reports/flawed_artifacts/ and removed from active Lean surface.",
       "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0067",
+      "batch": 13,
+      "asset": "lean/spec_v4/MillenniumHodgeConjecture.lean, lean/spec_v4/YangMillsLatticeBoundary.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "HIGH",
+      "category": "VACUOUS_DEFINITION",
+      "finding": "MillenniumHodgeConjecture used trivial variable identity rewrites on data structures without algebraic geometry or cohomology, and YangMillsLatticeBoundary defined mass gaps as arbitrary algebraic expressions of coupling constants without gauge field energy spectra.",
+      "evidence": "Audit inspection revealed trivial arithmetic wrapper proofs masquerading as Millennium solutions.",
+      "impact": "Invalidation of unverified Millennium and Yang-Mills claims in the repo.",
+      "action": "Archived flawed sources in reports/flawed_artifacts/ and removed from active Lean surface.",
+      "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0068",
+      "batch": 14,
+      "asset": "Millennium/Finite speculative files",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "HIGH",
+      "category": "VACUOUS_DEFINITION",
+      "finding": "Batch of Millennium and Finite lattice conjecture files (Collatz Generalization, Navier Stokes, Poincare, Spectral Gravity, Dissipation, P vs NP, Riemann Zeta, Yang-Mills) contained trivial premise-assumption wrappers and tautological arithmetic proofs masquerading as Millennium solutions.",
+      "evidence": "Audit inspection revealed trivial arithmetic proofs.",
+      "impact": "Invalidation of unverified speculative lattice claims.",
+      "action": "Archived flawed sources in reports/flawed_artifacts/ and removed from active Lean surface.",
+      "status": "FIXED"
     }
   ],
-  "updated_utc": "2026-11-15T13:16:14Z"
+  "updated_utc": "2026-11-15T15:02:23Z"
 }

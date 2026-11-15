@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-15T13:17:19.735299+00:00
+- Generated: 2026-11-15T15:06:06.819333+00:00
 - README: `README.MD`
-- Total backticked citations: **217**
-- Lean claims: **60** (resolved: 60, unresolved: 0)
-- Citation kinds: `{'prose-term': 50, 'file-reference': 85, 'tooling': 19, 'lean-claim': 60, 'negative-reference': 3}`
+- Total backticked citations: **208**
+- Lean claims: **53** (resolved: 53, unresolved: 0)
+- Citation kinds: `{'prose-term': 49, 'file-reference': 84, 'tooling': 19, 'lean-claim': 53, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -13,11 +13,6 @@
 | `dsitni_general` | resolved | `lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean` | `local` | `kernel theorem` |
 | `dsitni_half_threshold_refuted` | resolved | `lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean` | `local` | `kernel theorem` |
 | `finitary_information_conservation` | resolved | `lean/spec_v4/UniversalFinitaryInformationConservation.lean` | `local` | `kernel theorem` |
-| `spectral_gravity_stable` | resolved | `lean/spec_v4/FiniteLatticeSpectralGravity.lean` | `local` | `numerical evidence` |
-| `navier_stokes_dissipation_bounded` | resolved | `lean/spec_v4/FiniteNavierStokesDissipation.lean` | `local` | `bounded model` |
-| `critical_line_lattice_stable` | resolved | `lean/spec_v4/FiniteRiemannZetaLattice.lean` | `local` | `numerical evidence` |
-| `p_vs_np_circuit_separation` | resolved | `lean/spec_v4/FinitePvNPSeparationLattice.lean` | `local` | `bounded model` |
-| `yang_mills_mass_gap_positive` | resolved | `lean/spec_v4/FiniteYangMillsMassGapLattice.lean, lean/spec_v4/YangMillsLatticeBoundary.lean` | `local` | `bounded model` |
 | `cantor_no_surjection` | resolved | `lean/spec_v4/CantorDiagonalization.lean` | `local` | `bounded model` |
 | `dpi_card_nonexpansive` | resolved | `lean/spec_v4/ShannonEntropyDPI.lean` | `local` | `bounded model` |
 | `dpi_composition` | resolved | `lean/spec_v4/ShannonEntropyDPI.lean` | `local` | `bounded model` |
@@ -34,7 +29,6 @@
 | `no_continuous_injection_from_continuum` | resolved | `lean/spec_v4/ContinuityRefutation.lean` | `local` | `kernel theorem` |
 | `collatzLoop_mono` | resolved | `lean/spec_v4/CollatzBoundedDefeat.lean` | `local` | `kernel theorem` |
 | `sturm_sequence_decidable_enclosure` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `bounded model` |
-| `guinand_trace_stabilization` | resolved | `lean/spec_v4/FiniteRiemannZetaLattice.lean` | `local` | `numerical evidence` |
 | `even_unimodular_not_diagonalizable` | resolved | `lean/spec_v4/EvenUnimodularObstruction.lean` | `local` | `kernel theorem` |
 | `hyperbolic_not_diagonalizable` | resolved | `lean/spec_v4/EvenUnimodularObstruction.lean` | `local` | `kernel theorem` |
 | `instanton_bound` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
@@ -69,7 +63,6 @@
 | `torus_euler_characteristic` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
 | `torus_euler_from_cells` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
 | `torus_homology_ranks` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
-| `yang_mills_lattice_stable` | resolved | `lean/spec_v4/YangMillsLatticeBoundary.lean` | `local` | `bounded model` |
 
 ## Non-declaration citations
 
@@ -111,11 +104,6 @@
 - `4S(D+1) < 3(T+1)(D+2)` — prose-term
 - `d=(1,1,100)` — prose-term
 - `lean/spec_v4/UniversalFinitaryInformationConservation.lean` — file-reference
-- `lean/spec_v4/FiniteLatticeSpectralGravity.lean` — file-reference
-- `lean/spec_v4/FiniteNavierStokesDissipation.lean` — file-reference
-- `lean/spec_v4/FiniteRiemannZetaLattice.lean` — file-reference
-- `lean/spec_v4/FinitePvNPSeparationLattice.lean` — file-reference
-- `lean/spec_v4/FiniteYangMillsMassGapLattice.lean` — file-reference
 - `CantorDiagonalization.lean` — file-reference
 - `ℕ → (ℕ → Bool)` — prose-term
 - `ShannonEntropyDPI.lean` — file-reference
@@ -148,7 +136,6 @@
 - `[propext, Quot.sound]` — prose-term
 - `linarith` — tooling
 - `fuel : ℕ` — prose-term
-- `planckPixelConstraint` — prose-term
 - `reports/FOUR_DIMENSIONAL_TOPOLOGY_NOTES.md` — file-reference
 - `[propext, Classical.choice, Quot.sound]` — prose-term
 - `box_feasibility_witness.lean` — file-reference
@@ -172,7 +159,6 @@
 - `torus_fundamental_group` — negative-reference
 - `quantum_torus_paths` — negative-reference
 - `torus_homology_groups` — negative-reference
-- `smt/phase4/yang_mills_refutation.smt2` — file-reference
 - `reports/math30_laboratory_report.json` — file-reference
 - `reports/certificates/certificate_index.json` — file-reference
 - `python tools/readme_lean_audit.py` — file-reference
@@ -217,6 +203,11 @@
 - `lean/spec_v4/MillenniumHodgeConjecture.lean` — file-reference
 - `lean/spec_v4/MillenniumPoincareConjecture.lean` — file-reference
 - `lean/spec_v4/MillenniumCollatzGeneralization.lean` — file-reference
+- `lean/spec_v4/FiniteLatticeSpectralGravity.lean` — file-reference
+- `lean/spec_v4/FiniteNavierStokesDissipation.lean` — file-reference
+- `lean/spec_v4/FiniteRiemannZetaLattice.lean` — file-reference
+- `lean/spec_v4/FinitePvNPSeparationLattice.lean` — file-reference
+- `lean/spec_v4/FiniteYangMillsMassGapLattice.lean` — file-reference
 - `lean/spec_v4/CantorDiagonalization.lean` — file-reference
 - `lean/spec_v4/ShannonEntropyDPI.lean` — file-reference
 - `lean/spec_v4/LandauerBekensteinBound.lean` — file-reference
@@ -229,4 +220,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `7497a216db4e2f10e09c0445c591cc56949bd97e19bb5cff62ad5f4e0d651038` — prose-term
+- `1c0e998ae9a2010a38bdb8ac6d687863942986d5848db082b45e7e2e18b9dab9` — prose-term
