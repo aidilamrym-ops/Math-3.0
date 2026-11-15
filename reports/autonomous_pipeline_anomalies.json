@@ -808,7 +808,7 @@
       "finding": "The Phase 72 file called laplacian1 the Hodge/combinatorial Laplacian on 1-chains but defined it as the identity map (a 0, a 1). The actual d1^T d1 Laplacian for the path P3 with boundary matrix [-1,1,0] and [0,-1,1] is [[2,-1],[-1,2]]. The theorem harmonic1 h <-> h = 0 happened to remain true for the identity, so kernel-level tests did not expose the incorrect operator.",
       "evidence": "Original definition: laplacian1 a = fun e => match e.val with | 0 => a 0 | _ => a 1. Correct matrix product: d1^T d1 = [[2,-1],[-1,2]]. Header also advertised a harmonic decomposition that the file never proved.",
       "impact": "A sealed certificate named a specific Hodge Laplacian while certifying a different operator. The numeric kernel result was true, but the definitional content was false, so downstream reuse of laplacian1 would be unsound.",
-      "action": "Redefined laplacian1 as 2*a0 - a1 and -a0 + 2*a1. Rewrote harmonic1_iff_zero from the two scalar equations with omega; kernel remains zero. Corrected the header to kernel-only scope and removed the unproved decomposition claim. Recompiled EXIT=0 with zero warnings; Strict Gate and Anti-Circularity Gate PASS.",
+      "action": "Redefined laplacian1 as 2*a0 - a1 and -a0 + 2*a1. Rewrote harmonic1_iff_zero from the two scalar equations with omega; kernel remains zero. Corrected the header to kernel-only scope and removed the unproved decomposition claim. Archived the flawed original at reports/flawed_artifacts/DiscreteHodgeTheoremSpec.laplacian1-identity.lean. Recompiled EXIT=0 with zero warnings; Strict Gate and Anti-Circularity Gate PASS.",
       "status": "FIXED"
     }
   ],

@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-15T06:19:07.769367+00:00",
+  "generated": "2026-11-15T07:43:12.548231+00:00",
   "readme": "README.MD",
-  "readme_semantic_sha256": "b66f91854e54ed0aa0fef2a9d6db08a5e9cf81f5949dac7701102af7a35cafd1",
+  "readme_semantic_sha256": "fd3b50d449ff65935c44becedb24d4b9fee99e017741f007398d609ff811f1f4",
   "entries": 217,
   "claims": 60,
   "resolved_claims": 60,
@@ -196,7 +196,7 @@
     },
     {
       "id": "manifest.json",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,566 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "manifest.json",
       "kind": "file-reference",
@@ -207,7 +207,7 @@
     },
     {
       "id": "repokeeper.py --verify",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,566 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "repokeeper.py --verify",
       "kind": "prose-term",
@@ -218,7 +218,7 @@
     },
     {
       "id": ".git",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,566 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".git",
       "kind": "prose-term",
@@ -229,7 +229,7 @@
     },
     {
       "id": ".lake",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,566 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".lake",
       "kind": "prose-term",
@@ -240,7 +240,7 @@
     },
     {
       "id": "staging/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,566 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "staging/",
       "kind": "file-reference",
@@ -251,7 +251,7 @@
     },
     {
       "id": "mcp/out/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,566 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "mcp/out/",
       "kind": "file-reference",
@@ -262,7 +262,7 @@
     },
     {
       "id": "__pycache__",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,566 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "__pycache__",
       "kind": "tooling",
@@ -273,7 +273,7 @@
     },
     {
       "id": "*.pyc",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,566 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "*.pyc",
       "kind": "prose-term",
@@ -284,7 +284,7 @@
     },
     {
       "id": "README.MD",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,566 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "README.MD",
       "kind": "file-reference",
@@ -2510,10 +2510,10 @@
       "class": "file-reference"
     },
     {
-      "id": "2a39910f549a22edf8f4ed646d00dc735ac855ae8cff4d636c98ce41996692b5",
-      "prose": "> **Manifest:** 1,566 rows, SHA-256 locked: `2a39910f549a22edf8f4ed646d00dc735ac855ae8cff4d636c98ce41996692b5`",
+      "id": "94f04a1faa6f2723633b4b136c94b1b199a8dfd3a6f9819229e9e95961e121c2",
+      "prose": "> **Manifest:** 1,567 rows, SHA-256 locked: `94f04a1faa6f2723633b4b136c94b1b199a8dfd3a6f9819229e9e95961e121c2`",
       "artifact": [],
-      "theorem_name": "2a39910f549a22edf8f4ed646d00dc735ac855ae8cff4d636c98ce41996692b5",
+      "theorem_name": "94f04a1faa6f2723633b4b136c94b1b199a8dfd3a6f9819229e9e95961e121c2",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,
