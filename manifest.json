@@ -67,6 +67,7 @@
   "lean/spec_v4/DiscreteHodgeTheoremSpec.lean": "20b6c4778acb8d4e131556d234f8dfb35ae61600cb5dd3c6a8da459a1601de50",
   "lean/spec_v4/DiscreteIndexTheorem.lean": "bd01a406642b6bc4492b00793ed5fbcd4d704041c5f504c0ebc2c5be20c8409a",
   "lean/spec_v4/DiscreteLatticeGravityExtension.lean": "31e56071e668d0ac64411988667dd4e9ee45d2655fb66f3de3fe8ca1690a50ad",
+  "lean/spec_v4/DiscreteLatticePathCounting.lean": "8e9b7290193634b40e22172fbcffaff5f87112e9a89c33f1eba6cb4b46226e45",
   "lean/spec_v4/DiscreteLefschetzFixedPoint.lean": "7ec3df5874087f31aaf59736c753ca024d5be7da684d22b6b407ddde8d01e1db",
   "lean/spec_v4/DiscreteMorseTheory.lean": "8205914ff4e98d0c3a500d808a56175853b55398a672bc6082d0ba6acc1ab421",
   "lean/spec_v4/DiscretePersistentHomology.lean": "0ed30528f4bd24f625d2c7132c762600ecb51499aa00461f80c9b8ef02095b43",
