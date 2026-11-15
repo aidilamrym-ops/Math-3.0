@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-15T12:02:39.890428+00:00",
+  "generated": "2026-11-15T13:17:19.984124+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "e81d06f4b053dfb203d04bb507969a9d067d259e736b72bbcacd7aa03dd0177b",
+  "readme_semantic_sha256": "815e121b79fb45be5b21620c933c9a66cd9d055a60915f399f1579150b0a376a",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
@@ -134,8 +134,7 @@
       "lean/spec_v4/ContinuityRefutation.lean"
     ],
     "p_vs_np_circuit_separation": [
-      "lean/spec_v4/FinitePvNPSeparationLattice.lean",
-      "lean/spec_v4/MillenniumPvsNPSeparation.lean"
+      "lean/spec_v4/FinitePvNPSeparationLattice.lean"
     ],
     "path_induction": [
       "lean/spec_v4/HigherInductivePushout.lean",

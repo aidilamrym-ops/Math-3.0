@@ -862,7 +862,20 @@
       "impact": "Invalidation of kernel-certified claims in the README inventory.",
       "action": "Archived flawed sources in reports/flawed_artifacts/ and removed from Lean surface.",
       "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0066",
+      "batch": 12,
+      "asset": "lean/spec_v4/MillenniumPvsNPSeparation.lean, lean/spec_v4/MillenniumRiemannHypothesis.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "HIGH",
+      "category": "VACUOUS_DEFINITION",
+      "finding": "MillenniumPvsNPSeparation proved an inequality over arbitrary circuit parameters without computational complexity lower bounds, and MillenniumRiemannHypothesis used a fractional structure wrapping basic integer arithmetic without zeta zeros or Dirichlet series.",
+      "evidence": "Audit inspection revealed trivial arithmetic wrapper proofs masquerading as Millennium solutions.",
+      "impact": "Invalidation of unverified Millennium claims in the repo.",
+      "action": "Archived flawed sources in reports/flawed_artifacts/ and removed from active Lean surface.",
+      "status": "FIXED"
     }
   ],
-  "updated_utc": "2026-11-15T11:58:44Z"
+  "updated_utc": "2026-11-15T13:16:14Z"
 }

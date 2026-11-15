@@ -1,6 +1,6 @@
 # Claims Ledger
 
-- Generated: 2026-11-15T12:02:39.620799+00:00
+- Generated: 2026-11-15T13:17:19.735299+00:00
 - README: `README.MD`
 - Total backticked citations: **217**
 - Lean claims: **60** (resolved: 60, unresolved: 0)
@@ -16,7 +16,7 @@
 | `spectral_gravity_stable` | resolved | `lean/spec_v4/FiniteLatticeSpectralGravity.lean` | `local` | `numerical evidence` |
 | `navier_stokes_dissipation_bounded` | resolved | `lean/spec_v4/FiniteNavierStokesDissipation.lean` | `local` | `bounded model` |
 | `critical_line_lattice_stable` | resolved | `lean/spec_v4/FiniteRiemannZetaLattice.lean` | `local` | `numerical evidence` |
-| `p_vs_np_circuit_separation` | resolved | `lean/spec_v4/FinitePvNPSeparationLattice.lean, lean/spec_v4/MillenniumPvsNPSeparation.lean` | `local` | `bounded model` |
+| `p_vs_np_circuit_separation` | resolved | `lean/spec_v4/FinitePvNPSeparationLattice.lean` | `local` | `bounded model` |
 | `yang_mills_mass_gap_positive` | resolved | `lean/spec_v4/FiniteYangMillsMassGapLattice.lean, lean/spec_v4/YangMillsLatticeBoundary.lean` | `local` | `bounded model` |
 | `cantor_no_surjection` | resolved | `lean/spec_v4/CantorDiagonalization.lean` | `local` | `bounded model` |
 | `dpi_card_nonexpansive` | resolved | `lean/spec_v4/ShannonEntropyDPI.lean` | `local` | `bounded model` |
@@ -229,4 +229,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `383fb24a6cb494b8c89c883ea848bf4258c202679538fbc9f4e7215ce1790b41` — prose-term
+- `7497a216db4e2f10e09c0445c591cc56949bd97e19bb5cff62ad5f4e0d651038` — prose-term
