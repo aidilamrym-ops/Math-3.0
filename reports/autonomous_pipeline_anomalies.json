@@ -788,14 +788,14 @@
     {
       "id": "OMEGA-0060",
       "batch": 7,
-      "asset": "lean/spec_v4/DiscreteChernSimons.lean, lean/spec_v4/DiscreteHodgeStar.lean, lean/spec_v4/DiscreteYangMills.lean",
+      "asset": "lean/spec_v4/DiscreteHodgeStar.lean",
       "stage": "ADVERSARIAL_AUDIT",
       "severity": "MEDIUM",
       "category": "WARNING_BACKLOG",
-      "finding": "The fresh 520-file kernel audit reports PASS for every file but pass_with_warnings=5. Batch 8 cleared DiscreteHodgeTheoremSpec (1 unused simp argument) and DiscretePoincareDuality (1 unnecessary sequence focus), leaving three files: DiscreteChernSimons (24 warnings), DiscreteYangMills (38), DiscreteHodgeStar (6), for 68 linter warnings total. These are Lean linter warnings, not type errors; the zero-warning mandate is therefore not yet met.",
-      "evidence": "reports/full_surface_lean_audit.json after the Batch 8 incremental resume: total_files=520, compiled=520, counts PASS=520, pass_with_warnings=3; warning files are DiscreteChernSimons (24), DiscreteHodgeStar (6), DiscreteYangMills (38), totaling 68 linter warnings. Batch 8 recompiled the two repaired files with EXIT=0 and no warnings; both Strict Gate runs returned PASS.",
-      "impact": "Certificates remain kernel-clean, but warning-level defects are unpinned debt and can mask future simp-argument drift or unused hypotheses.",
-      "action": "Batch 8 removed the unused harmonic0 simp argument and replaced the unnecessary <;> sequence with explicit cases. Remaining three files are queued; each must be recompiled, warnings eliminated without weakening statements, then re-gated and resealed. No warning is to be suppressed with linter toggles unless the warning is provably false.",
+      "finding": "The 520-file kernel audit originally reported pass_with_warnings=5. Batch 8 cleared DiscreteHodgeTheoremSpec and DiscretePoincareDuality, and Batch 9 rebuilt DiscreteChernSimons and DiscreteYangMills without warnings. One warning file remains: DiscreteHodgeStar.lean with 6 linter warnings. These are Lean linter warnings, not type errors; the zero-warning mandate is therefore not yet met.",
+      "evidence": "reports/full_surface_lean_audit.json after the Batch 9 incremental resume: total_files=520, compiled=520, counts PASS=520, pass_with_warnings=1; the only warning file is lean/spec_v4/DiscreteHodgeStar.lean with 6 warnings. Both Batch 9 targets recompiled with EXIT=0 and 0 warnings; Strict Gate and Anti-Circularity Gate returned PASS for each.",
+      "impact": "Certificates remain kernel-clean, but the remaining warning-level defects are unpinned debt and can mask future simp-argument drift or unused hypotheses.",
+      "action": "Batch 9 rebuilt DiscreteChernSimons and DiscreteYangMills from non-vacuous definitions and eliminated 62 warnings. DiscreteHodgeStar is queued for the next batch; it must be recompiled, its warnings eliminated without weakening statements, then re-gated and resealed. No warning is to be suppressed with linter toggles unless the warning is provably false.",
       "status": "PARTIALLY_FIXED"
     },
     {
@@ -810,7 +810,33 @@
       "impact": "A sealed certificate named a specific Hodge Laplacian while certifying a different operator. The numeric kernel result was true, but the definitional content was false, so downstream reuse of laplacian1 would be unsound.",
       "action": "Redefined laplacian1 as 2*a0 - a1 and -a0 + 2*a1. Rewrote harmonic1_iff_zero from the two scalar equations with omega; kernel remains zero. Corrected the header to kernel-only scope and removed the unproved decomposition claim. Archived the flawed original at reports/flawed_artifacts/DiscreteHodgeTheoremSpec.laplacian1-identity.lean. Recompiled EXIT=0 with zero warnings; Strict Gate and Anti-Circularity Gate PASS.",
       "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0062",
+      "batch": 9,
+      "asset": "lean/spec_v4/DiscreteChernSimons.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "HIGH",
+      "category": "VACUOUS_DEFINITION",
+      "finding": "The Phase 60 file advertised a discrete U(1) connection, a plaquette curvature, a Chern-Simons action and a WRT invariant, but plaquetteFlux was the constant 0 for every connection, chernSimonsAction was therefore the constant 0, and wrtiInvariant was the literal placeholder 1. The zero-flux and zero-action theorems were true only because every definition had been collapsed to a constant. The file also emitted 24 linter warnings.",
+      "evidence": "Old source: plaquetteFlux ... := 0; chernSimonsAction summed plaquetteFlux times A, hence 0; wrtiInvariant ... := 1 with the comment 'Placeholder'. Kernel compile emitted 24 unused-variable and unused-tactic warnings.",
+      "impact": "The certificate named specific discrete gauge-theory objects while certifying none of them. No nontrivial connection could distinguish the formalization from the trivial theory, and the WRT name was attached to a placeholder rather than an invariant.",
+      "action": "Rebuilt the file on Site L = ZMod L x ZMod L x ZMod L with a genuine lattice curl F_{mu nu}(x) = A_mu(x) + A_nu(x+mu) - A_mu(x+nu) - A_nu(x). Added gaugeTransform and pureGauge, proved shift commutation, gauge covariance of the flux, zero flux for zero/constant/pure-gauge connections, and zero action for pure gauge. Defined the discrete functional S_k = k * sum_x (A_0 F_01 + A_1 F_12 + A_2 F_20). Added an L=2 unit-edge connection whose flux is proved equal to 1 and whose action is proved equal to k, plus a nonzero-action theorem for k != 0. Removed the WRT placeholder and scoped WRT out of the claim limits. Archived the old file at reports/flawed_artifacts/DiscreteChernSimons.vacuous-flux-placeholder.lean. Recompiled EXIT=0 with 0 warnings; Strict Gate and Anti-Circularity Gate PASS.",
+      "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0063",
+      "batch": 9,
+      "asset": "lean/spec_v4/DiscreteYangMills.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "HIGH",
+      "category": "VACUOUS_DEFINITION",
+      "finding": "The Phase 61 file advertised SU(N) link variables, a plaquette Wilson loop, a Wilson action and gauge invariance, but plaquette returned the identity matrix for every input, wilsonAction returned the constant 0, and gaugeTransform returned the constant identity field. The gauge-invariance and trivial-action theorems were therefore vacuous. The file also emitted 38 linter warnings.",
+      "evidence": "Old source: plaquette ... := 1; wilsonAction ... := 0; gaugeTransform ... := fun ... => 1, each annotated as a placeholder. Kernel compile emitted 38 warnings: unused variables in the three placeholder definitions plus unused and unreachable tactics in the vacuous proofs.",
+      "impact": "No lattice gauge theory was formalized: every configuration had the same identity plaquette and zero action, so gauge invariance and the trivial-action theorem carried no mathematical content. The SU(2) claim was attached to a constant identity field.",
+      "action": "Rebuilt the file with Site L = Fin 4 -> ZMod L, GL(N,C)-valued links, and the actual plaquette W_{mu nu}(x) = U_mu(x) U_nu(x+mu) U_mu(x+nu)^-1 U_nu(x)^-1. Defined the gauge transformation U_mu(x) -> g(x) U_mu(x) g(x+mu)^-1, proved plaquette covariance W -> g(x) W g(x)^-1 by shift commutation and group algebra, and proved trace cyclicity for conjugation. Defined the normalized Wilson action S_beta = beta * sum_{x,mu,nu} (1 - Re Tr W / N) and proved its gauge invariance, plus W = 1 and S_beta = 0 for the trivial connection. Added a concrete determinant-one unitary GL(2,C) link diag(i,-i) and a connection whose origin plaquette equals that link and is proved non-identity, establishing non-vacuity. Documented the ordered-pair summation and the GL-versus-SU scope. Archived the old file at reports/flawed_artifacts/DiscreteYangMills.placeholder-plaquette.lean. Recompiled EXIT=0 with 0 warnings; Strict Gate and Anti-Circularity Gate PASS.",
+      "status": "FIXED"
     }
   ],
-  "updated_utc": "2026-11-15T07:37:22Z"
+  "updated_utc": "2026-11-15T08:34:06Z"
 }

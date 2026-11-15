@@ -38,7 +38,7 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
 | **Anti-Circularity Gate** | Executable check over the 520-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
+| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
 
 ---
 
@@ -433,7 +433,7 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 - **Individual Certificates:** 27 certified Lean 4 certificates (21 core entries + 6 regression-armor entries) bound via cryptographic hash chains to Lean 4 kernel theorems.
 - **Certificate Index:** `reports/certificates/certificate_index.json` (legacy Phase 9 JSON-source registry: 25 entries, separate from the Lean inventory below).
 - **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every Lean file cited in this README. Latest run: **38/38 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.
-- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 5 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 5`).
+- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 1 file with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 1`).
 - **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **60/60 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
@@ -476,10 +476,10 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-8e754f16e5a982c4cfeda4702a855f8d443fc0d0ab046742323465ef34670f71
+6b46de01351b222d9605eba63c16bc541fb435b6ef5f382e8368c5c9def9d38c
 ```
 
-**Manifest Rows:** 1,567 files pinned  
+**Manifest Rows:** 1,569 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Mon Nov 09 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -524,7 +524,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,567-row SHA-256 ledger
+├── manifest.json                  # 1,569-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -638,7 +638,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,567 rows, SHA-256 locked: `8e754f16e5a982c4cfeda4702a855f8d443fc0d0ab046742323465ef34670f71`  
+> **Manifest:** 1,569 rows, SHA-256 locked: `6b46de01351b222d9605eba63c16bc541fb435b6ef5f382e8368c5c9def9d38c`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 
@@ -650,8 +650,8 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 ## Auto-Facts Summary
 
 <!-- AUTO-FACTS:START -->
-- **Manifest Pinned Files:** 1,567
-- **Lean Surface:** 520 files, all compiled PASS (receipt 2026-11-15 15:38:47)
+- **Manifest Pinned Files:** 1,569
+- **Lean Surface:** 520 files, all compiled PASS (receipt 2026-11-15 16:40:38)
 - **Tracked Claims in Ledger:** 60 Lean claims
 - **Resolved README Theorem Names:** 60/60 PASS
 - **Evidence Status:** PASS

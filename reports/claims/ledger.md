@@ -1,6 +1,6 @@
 # Claims Ledger
 
-- Generated: 2026-11-15T07:43:12.548231+00:00
+- Generated: 2026-11-15T08:36:32.832847+00:00
 - README: `README.MD`
 - Total backticked citations: **217**
 - Lean claims: **60** (resolved: 60, unresolved: 0)
@@ -182,7 +182,7 @@
 - `reports/full_surface_lean_audit.json` — file-reference
 - `is_complete: true` — prose-term
 - `verdict: PASS` — prose-term
-- `pass_with_warnings: 5` — prose-term
+- `pass_with_warnings: 1` — prose-term
 - `python tools/readme_theorem_audit.py` — file-reference
 - `reports/readme_theorem_audit.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -229,4 +229,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `94f04a1faa6f2723633b4b136c94b1b199a8dfd3a6f9819229e9e95961e121c2` — prose-term
+- `f0a787f6caac10c4f7f98d0636a55e35fbf4675573f7a3951964a2442f00666e` — prose-term

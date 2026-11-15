@@ -1,92 +1,169 @@
 -- DiscreteChernSimons.lean
--- Math 3.0 / Fase 60: Aksi Chern-Simons Diskrit & Invarian WRT
+-- Math 3.0 / Fase 60 (rebuilt in Batch 9): Discrete Abelian Chern-Simons Data
 --
--- Cakupan:
---   * definisi koneksi U(1) diskrit pada kisi 3D (matriks fasa pada sisi);
---   * kurvatur diskrit (keliling plaquette);
---   * aksi Chern-Simons diskrit (jumlah fasa plaquette);
---   * invarian WRT (Witten-Reshetikhin-Turaev) untuk U(1) level k;
---   * verifikasi konkret untuk kisi 2×2×2 periodik.
+-- Scope:
+--   * a finite 3-torus of sites ZMod L x ZMod L x ZMod L;
+--   * a discrete integer lift of a U(1) connection A, recorded as an integer
+--     phase on every oriented edge (site, direction);
+--   * the lattice field strength
+--       F_{mu nu}(x) = A_mu(x) + A_nu(x + e_mu) - A_mu(x + e_nu) - A_nu(x),
+--     the usual plaquette curl;
+--   * gauge transformations A -> A + dg and the proof that F is invariant;
+--   * the discrete Chern-Simons functional, with a fixed cyclic orientation
+--     convention,
+--       S_k(A) = k * sum_x (A_0 F_{01} + A_1 F_{12} + A_2 F_{20});
+--   * zero, constant and pure-gauge connections have zero field strength, and
+--     pure-gauge connections have zero action;
+--   * a concrete L = 2 connection whose flux is provably nonzero, together with
+--     an exact evaluation of its action.
 --
--- Batas klaim:
---   * Ini BUKAN teori Chern-Simons kontinu atau QFT 3D umum.
---   * Tidak ada klaim tentang invariansi diffeomorfisme atau kategori modular tensor.
---   * Yang dibuktikan hanya aljabar matriks berhingga dan jumlah fasa periodik.
+-- Claim limits:
+--   * finite integer lattice model only; phases are integers, not real numbers
+--     modulo 2*pi;
+--   * the action is defined for L > 0 (`NeZero L`); L = 0 is outside the
+--     finite-torus model;
+--   * no continuum Chern-Simons theory, no path integral, no WRT invariant;
+--   * no claim of diffeomorphism invariance or modular tensor categories.
 
-import Mathlib.Data.Matrix.Mul
-import Mathlib.Data.Matrix.Diagonal
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
-import Mathlib.Algebra.Ring.Parity
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Complex.Basic
+import Mathlib.Data.ZMod.Basic
 import Mathlib.Tactic
 
-open Finset Matrix
-open scoped BigOperators Matrix
+open scoped BigOperators
 
 namespace Math30.Topology.DiscreteChernSimons
 
-/-- Level Chern-Simons k (bilangan bulat positif). -/
-def CSLevel := ℕ
+/-- Chern-Simons level. -/
+abbrev CSLevel := ℕ
 
-/-- Koneksi U(1) diskrit pada kisi 3D: fasa pada sisi (mod 2π).
-    Direpresentasikan sebagai matriks 3D `L × L × L × 3` (3 arah: x, y, z). -/
-def DiscreteU1Connection (L : ℕ) :=
-  Fin L → Fin L → Fin L → Fin 3 → ℤ
+/-- Sites of the finite 3-torus of side length L. -/
+abbrev Site (L : ℕ) := ZMod L × ZMod L × ZMod L
 
-/-- Kurvatur diskrit (fluks magnet) pada plaquette: keliling fasa sisi.
-    F = dA (curl diskrit). Versi sederhana: F = 0 untuk verifikasi aljabar. -/
-def plaquetteFlux {L : ℕ} (A : DiscreteU1Connection L)
-    (i j k : Fin L) (dir : Fin 3) : ℤ :=
-  0
+/-- The three coordinate directions. -/
+abbrev Dir := Fin 3
 
-/-- Aksi Chern-Simons diskrit: S = Σ F * A (diskritisasi sederhana). -/
-def chernSimonsAction {L : ℕ} (k : CSLevel) (A : DiscreteU1Connection L) : ℤ :=
-  ∑ i : Fin L, ∑ j : Fin L, ∑ k_ : Fin L,
-    (plaquetteFlux A i j k_ ⟨0, by decide⟩ * A i j k_ ⟨0, by decide⟩ +
-     plaquetteFlux A i j k_ ⟨1, by decide⟩ * A i j k_ ⟨1, by decide⟩ +
-     plaquetteFlux A i j k_ ⟨2, by decide⟩ * A i j k_ ⟨2, by decide⟩)
+/-- Integer lift of a U(1) connection: one integer phase per oriented edge.
+    The integer records the winding phase; it is not itself a circle-valued field. -/
+abbrev DiscreteU1Connection (L : ℕ) := Site L → Dir → ℤ
 
-/-- Invarian WRT U(1) level k pada kisi 3D: Z = Σ_A exp(i S_CS[A]).
-    Di sini hanya verifikasi struktur aljabar (bukan evaluasi path integral). -/
-def wrtiInvariant {L : ℕ} (k : CSLevel) : ℕ :=
-  1 -- Placeholder: struktur aljabar terverifikasi, evaluasi penuh butuh Complex.exp
+/-- Translation by one lattice step in direction `d`. -/
+def shift {L : ℕ} (d : Dir) (x : Site L) : Site L :=
+  match d.val with
+  | 0 => (x.1 + 1, x.2.1, x.2.2)
+  | 1 => (x.1, x.2.1 + 1, x.2.2)
+  | _ => (x.1, x.2.1, x.2.2 + 1)
 
-/-- Koneksi nol (trivial): semua fasa = 0. -/
+/-- Unit translations in different coordinate directions commute. -/
+theorem shift_comm {L : ℕ} (mu nu : Dir) (x : Site L) :
+    shift mu (shift nu x) = shift nu (shift mu x) := by
+  fin_cases mu <;> fin_cases nu <;> simp [shift]
+
+/-- Lattice curl: field strength on the plaquette `(x; mu, nu)`. -/
+def plaquetteFlux {L : ℕ} (A : DiscreteU1Connection L) (x : Site L)
+    (mu nu : Dir) : ℤ :=
+  A x mu + A (shift mu x) nu - A (shift nu x) mu - A x nu
+
+/-- Gauge transformation of a connection by an integer gauge function `g`. -/
+def gaugeTransform {L : ℕ} (g : Site L → ℤ) (A : DiscreteU1Connection L) :
+    DiscreteU1Connection L :=
+  fun x mu => A x mu + g (shift mu x) - g x
+
+/-- Pure gauge connection generated by `g`. -/
+def pureGauge {L : ℕ} (g : Site L → ℤ) : DiscreteU1Connection L :=
+  fun x mu => g (shift mu x) - g x
+
+/-- Trivial connection: every edge phase is zero. -/
 def zeroConnection {L : ℕ} : DiscreteU1Connection L :=
-  fun _ _ _ _ => 0
+  fun _ _ => 0
 
-/-- Fluks plaquette untuk koneksi nol adalah 0. -/
-theorem plaquetteFlux_zero {L : ℕ} (i j k : Fin L) (dir : Fin 3) :
-    plaquetteFlux (zeroConnection : DiscreteU1Connection L) i j k dir = 0 := by
-  dsimp [plaquetteFlux]
-  <;> simp
-
-/-- Aksi Chern-Simons untuk koneksi nol adalah 0. -/
-theorem chernSimonsAction_zero {L : ℕ} (k : CSLevel) :
-    chernSimonsAction k (zeroConnection : DiscreteU1Connection L) = 0 := by
-  dsimp [chernSimonsAction, plaquetteFlux]
-  <;> simp [Fin.sum_univ_succ]
-
-/-- Koneksi konstan (semua sisi sama fasa c). -/
+/-- Constant connection: every edge phase equals `c`. -/
 def constantConnection {L : ℕ} (c : ℤ) : DiscreteU1Connection L :=
-  fun _ _ _ _ => c
+  fun _ _ => c
 
-/-- Fluks plaquette untuk koneksi konstan: F = 0. -/
-theorem plaquetteFlux_constant {L : ℕ} (c : ℤ) (i j k : Fin L) (dir : Fin 3) :
-    plaquetteFlux (constantConnection c : DiscreteU1Connection L) i j k dir = 0 := by
-  dsimp [plaquetteFlux]
-  <;> simp
+/-- Discrete Chern-Simons functional for level `k`. -/
+def chernSimonsAction {L : ℕ} [NeZero L] (k : CSLevel)
+    (A : DiscreteU1Connection L) : ℤ :=
+  (k : ℤ) * ∑ x : Site L,
+    (A x 0 * plaquetteFlux A x 0 1 +
+     A x 1 * plaquetteFlux A x 1 2 +
+     A x 2 * plaquetteFlux A x 2 0)
 
-/-- Aksi Chern-Simons untuk koneksi konstan adalah 0. -/
-theorem chernSimonsAction_constant {L : ℕ} (k : CSLevel) (c : ℤ) :
+/-- The trivial connection has zero field strength. -/
+theorem plaquetteFlux_zero {L : ℕ} (x : Site L) (mu nu : Dir) :
+    plaquetteFlux (zeroConnection : DiscreteU1Connection L) x mu nu = 0 := by
+  simp [plaquetteFlux, zeroConnection]
+
+/-- A constant connection has zero field strength. -/
+theorem plaquetteFlux_constant {L : ℕ} (c : ℤ) (x : Site L) (mu nu : Dir) :
+    plaquetteFlux (constantConnection c : DiscreteU1Connection L) x mu nu = 0 := by
+  simp [plaquetteFlux, constantConnection]
+
+/-- A pure gauge connection has zero field strength. -/
+theorem plaquetteFlux_pureGauge {L : ℕ} (g : Site L → ℤ) (x : Site L)
+    (mu nu : Dir) : plaquetteFlux (pureGauge g) x mu nu = 0 := by
+  unfold plaquetteFlux pureGauge
+  rw [shift_comm nu mu x]
+  ring
+
+/-- The field strength is invariant under gauge transformations. -/
+theorem plaquetteFlux_gaugeTransform {L : ℕ} (g : Site L → ℤ)
+    (A : DiscreteU1Connection L) (x : Site L) (mu nu : Dir) :
+    plaquetteFlux (gaugeTransform g A) x mu nu = plaquetteFlux A x mu nu := by
+  unfold plaquetteFlux gaugeTransform
+  rw [shift_comm nu mu x]
+  ring
+
+/-- Gauge-transforming the trivial connection yields the pure gauge connection. -/
+theorem gaugeTransform_zero {L : ℕ} (g : Site L → ℤ) :
+    gaugeTransform g (zeroConnection : DiscreteU1Connection L) = pureGauge g := by
+  funext x mu
+  simp [gaugeTransform, pureGauge, zeroConnection]
+
+/-- The Chern-Simons action of the trivial connection is zero. -/
+theorem chernSimonsAction_zero {L : ℕ} [NeZero L] (k : CSLevel) :
+    chernSimonsAction k (zeroConnection : DiscreteU1Connection L) = 0 := by
+  simp [chernSimonsAction, plaquetteFlux_zero]
+
+/-- The Chern-Simons action of a constant connection is zero. -/
+theorem chernSimonsAction_constant {L : ℕ} [NeZero L] (k : CSLevel) (c : ℤ) :
     chernSimonsAction k (constantConnection c : DiscreteU1Connection L) = 0 := by
-  dsimp [chernSimonsAction, plaquetteFlux]
-  <;> simp [Fin.sum_univ_succ]
+  simp [chernSimonsAction, plaquetteFlux_constant]
 
-/-- Untuk L=2, kisi 2×2×2, verifikasi struktur aljabar fasa periodik. -/
-theorem plaquetteFlux_periodic_2 (i j k : Fin 2) (dir : Fin 3) :
-    plaquetteFlux (zeroConnection : DiscreteU1Connection 2) i j k dir = 0 := by
-  apply plaquetteFlux_zero
+/-- The Chern-Simons action of a pure gauge connection is zero. -/
+theorem chernSimonsAction_pureGauge {L : ℕ} [NeZero L] (k : CSLevel)
+    (g : Site L → ℤ) : chernSimonsAction k (pureGauge g) = 0 := by
+  simp [chernSimonsAction, plaquetteFlux_pureGauge]
+
+/-- On the 2x2x2 torus: one unit phase on the edge `((0,0,0), 0)`, zero elsewhere. -/
+def unitEdgeConnection : DiscreteU1Connection 2 :=
+  fun x mu => if x = 0 ∧ mu = 0 then 1 else 0
+
+/-- The unit edge produces a nonzero plaquette flux: the model is not vacuous. -/
+theorem plaquetteFlux_unitEdge_01 :
+    plaquetteFlux unitEdgeConnection (0, 0, 0) 0 1 = 1 := by
+  simp [plaquetteFlux, unitEdgeConnection, shift]
+
+/-- The action of the unit-edge connection is exactly the level `k`. -/
+theorem chernSimonsAction_unitEdge (k : CSLevel) :
+    chernSimonsAction k unitEdgeConnection = (k : ℤ) := by
+  unfold chernSimonsAction
+  have hsum :
+      (∑ x : Site 2,
+        (unitEdgeConnection x 0 * plaquetteFlux unitEdgeConnection x 0 1 +
+         unitEdgeConnection x 1 * plaquetteFlux unitEdgeConnection x 1 2 +
+         unitEdgeConnection x 2 * plaquetteFlux unitEdgeConnection x 2 0)) = 1 := by
+    rw [Finset.sum_eq_single (0 : Site 2)]
+    · simp [unitEdgeConnection, plaquetteFlux, shift]
+    · intro x _ hx
+      simp [unitEdgeConnection, hx]
+    · intro h
+      simp at h
+  rw [hsum]
+  ring
+
+/-- A nonzero level gives a nonzero action on the unit-edge witness. -/
+theorem chernSimonsAction_unitEdge_ne_zero {k : CSLevel} (hk : k ≠ 0) :
+    chernSimonsAction k unitEdgeConnection ≠ 0 := by
+  rw [chernSimonsAction_unitEdge]
+  exact Nat.cast_ne_zero.mpr hk
 
 end Math30.Topology.DiscreteChernSimons

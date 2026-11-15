@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-15T07:43:12.548231+00:00",
+  "generated": "2026-11-15T08:36:32.832847+00:00",
   "readme": "README.MD",
-  "readme_semantic_sha256": "fd3b50d449ff65935c44becedb24d4b9fee99e017741f007398d609ff811f1f4",
+  "readme_semantic_sha256": "20755c4ea2c4fdc7b41ab0cc44ad712a9fe27c22d1d680bfdb9896ccc1945ffe",
   "entries": 217,
   "claims": 60,
   "resolved_claims": 60,
@@ -196,7 +196,7 @@
     },
     {
       "id": "manifest.json",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "manifest.json",
       "kind": "file-reference",
@@ -207,7 +207,7 @@
     },
     {
       "id": "repokeeper.py --verify",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "repokeeper.py --verify",
       "kind": "prose-term",
@@ -218,7 +218,7 @@
     },
     {
       "id": ".git",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".git",
       "kind": "prose-term",
@@ -229,7 +229,7 @@
     },
     {
       "id": ".lake",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".lake",
       "kind": "prose-term",
@@ -240,7 +240,7 @@
     },
     {
       "id": "staging/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "staging/",
       "kind": "file-reference",
@@ -251,7 +251,7 @@
     },
     {
       "id": "mcp/out/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "mcp/out/",
       "kind": "file-reference",
@@ -262,7 +262,7 @@
     },
     {
       "id": "__pycache__",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "__pycache__",
       "kind": "tooling",
@@ -273,7 +273,7 @@
     },
     {
       "id": "*.pyc",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "*.pyc",
       "kind": "prose-term",
@@ -284,7 +284,7 @@
     },
     {
       "id": "README.MD",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,567 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "README.MD",
       "kind": "file-reference",
@@ -1939,7 +1939,7 @@
     },
     {
       "id": "python tools/full_surface_lean_audit.py",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 5 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 5`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 1 file with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 1`).",
       "artifact": [],
       "theorem_name": "python tools/full_surface_lean_audit.py",
       "kind": "file-reference",
@@ -1950,7 +1950,7 @@
     },
     {
       "id": "lake env lean",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 5 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 5`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 1 file with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 1`).",
       "artifact": [],
       "theorem_name": "lake env lean",
       "kind": "prose-term",
@@ -1961,7 +1961,7 @@
     },
     {
       "id": "reports/full_surface_lean_audit.json",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 5 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 5`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 1 file with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 1`).",
       "artifact": [],
       "theorem_name": "reports/full_surface_lean_audit.json",
       "kind": "file-reference",
@@ -1972,7 +1972,7 @@
     },
     {
       "id": "is_complete: true",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 5 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 5`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 1 file with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 1`).",
       "artifact": [],
       "theorem_name": "is_complete: true",
       "kind": "prose-term",
@@ -1983,7 +1983,7 @@
     },
     {
       "id": "verdict: PASS",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 5 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 5`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 1 file with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 1`).",
       "artifact": [],
       "theorem_name": "verdict: PASS",
       "kind": "prose-term",
@@ -1993,10 +1993,10 @@
       "class": "prose-term"
     },
     {
-      "id": "pass_with_warnings: 5",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 5 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 5`).",
+      "id": "pass_with_warnings: 1",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **520** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **520/520 PASS, 0 FAIL, 0 TIMEOUT, 1 file with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 1`).",
       "artifact": [],
-      "theorem_name": "pass_with_warnings: 5",
+      "theorem_name": "pass_with_warnings: 1",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,
@@ -2510,10 +2510,10 @@
       "class": "file-reference"
     },
     {
-      "id": "94f04a1faa6f2723633b4b136c94b1b199a8dfd3a6f9819229e9e95961e121c2",
-      "prose": "> **Manifest:** 1,567 rows, SHA-256 locked: `94f04a1faa6f2723633b4b136c94b1b199a8dfd3a6f9819229e9e95961e121c2`",
+      "id": "f0a787f6caac10c4f7f98d0636a55e35fbf4675573f7a3951964a2442f00666e",
+      "prose": "> **Manifest:** 1,569 rows, SHA-256 locked: `f0a787f6caac10c4f7f98d0636a55e35fbf4675573f7a3951964a2442f00666e`",
       "artifact": [],
-      "theorem_name": "94f04a1faa6f2723633b4b136c94b1b199a8dfd3a6f9819229e9e95961e121c2",
+      "theorem_name": "f0a787f6caac10c4f7f98d0636a55e35fbf4675573f7a3951964a2442f00666e",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,

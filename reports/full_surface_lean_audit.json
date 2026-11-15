@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 15:38:47",
+  "generated": "2026-11-15 16:40:38",
   "scope": {
     "kind": "full",
     "only": null,
@@ -22,21 +22,13 @@
   "counts": {
     "PASS": 520
   },
-  "pass_with_warnings": 3,
-  "total_seconds": 3572.3,
+  "pass_with_warnings": 1,
+  "total_seconds": 3569.3,
   "failures": [],
   "warning_files": [
     {
-      "path": "lean/spec_v4/DiscreteChernSimons.lean",
-      "warnings": 24
-    },
-    {
       "path": "lean/spec_v4/DiscreteHodgeStar.lean",
       "warnings": 6
-    },
-    {
-      "path": "lean/spec_v4/DiscreteYangMills.lean",
-      "warnings": 38
     }
   ],
   "results": [
@@ -298,8 +290,8 @@
       "lean_path": "spec_v4/DiscreteChernSimons.lean",
       "rc": 0,
       "status": "PASS",
-      "warnings": 24,
-      "seconds": 20.59,
+      "warnings": 0,
+      "seconds": 16.71,
       "error": "",
       "stdout_tail": "",
       "stderr_tail": ""
@@ -485,8 +477,8 @@
       "lean_path": "spec_v4/DiscreteYangMills.lean",
       "rc": 0,
       "status": "PASS",
-      "warnings": 38,
-      "seconds": 19.74,
+      "warnings": 0,
+      "seconds": 20.68,
       "error": "",
       "stdout_tail": "",
       "stderr_tail": ""
