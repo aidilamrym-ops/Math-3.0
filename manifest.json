@@ -55,6 +55,7 @@
   "lean/spec_v4/ContinuumDensityDefeat.lean": "f562036479e54904c5697c58a0a6726253fd97742d0863904465f8189c4b98d7",
   "lean/spec_v4/ContinuumOmegaLimitDefeat.lean": "11b69562408d367d526cfbe2165fa0287924629746eb1018970eebf9d6b56d27",
   "lean/spec_v4/DecidableHomotopySphere.lean": "89aea0876d3d2b04416b1f2ba8a91a85e1f34fe879b38682388624fac1ee7a0c",
+  "lean/spec_v4/DiscreteBettiEulerPoincare.lean": "f23500e94d79c5f3a04ccf51b6beb4cf96ba9557c3fdeec6f161a65302f108e9",
   "lean/spec_v4/DiscreteChernSimons.lean": "8a713b8f913be8c53e9d9da8988e8cd85eec9b4bf19b96c8c9a69daccef75253",
   "lean/spec_v4/DiscreteCohomologyRing.lean": "1cc9014efcafe07b285638bcb6612082878c96340421876328e346347a3f2064",
   "lean/spec_v4/DiscreteGaussBonnet.lean": "7fd9a673852a777dfd62e02d5feaf48417e945fa8c82d87b5aadc2fe1cff0e1f",
