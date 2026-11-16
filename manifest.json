@@ -46,6 +46,7 @@
   "lean/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
   "lean/spec_v4/ActualInfinityRefutation.lean": "9db355cc93064a443cf3a50ed3e2501380034003a4c4cc2fb57d2d43d4ad36db",
   "lean/spec_v4/AndersonProbabilityEvidence.lean": "d5d22de3c54eebb83ec7fad992e945de905710602617ef1a161af89ff6a252f8",
+  "lean/spec_v4/Batch17WitnessPattern.lean": "323fd17795ce1ecc4071ce7f780fa07ebbbc05dae2dbcc837f12f597787c6e0a",
   "lean/spec_v4/CantorDiagonalization.lean": "a666fbf7eb38f4ba578d5a04af14d2e77083d4fbbf8f17cc1e49106cb5c312ba",
   "lean/spec_v4/CertifiedManifest.lean": "a07922cab8d24ba577dda5c0c0d22c2c47e3f21ab5020110f994e815b79fb6dc",
   "lean/spec_v4/CollatzBoundedDefeat.lean": "d45e687d3e34c803a53f7b5cd1f817b7940fa1f2fabc3910cb648208e0d8d021",
