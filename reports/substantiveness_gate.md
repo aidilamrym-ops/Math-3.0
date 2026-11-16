@@ -1,9 +1,9 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-16T02:50:13Z
-- Lean files: **491**  declarations: **2026**  predicates: **17**
+- Generated: 2026-11-16T06:09:12Z
+- Lean files: **492**  declarations: **2029**  predicates: **19**
 - Z3 premise check: **available**
-- Findings: HIGH **0**, MEDIUM **0**, LOW **451**
+- Findings: HIGH **0**, MEDIUM **0**, LOW **450**
 - Waived constant definitions: **4**
 - Verdict: **PASS**
 
@@ -28,7 +28,6 @@
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/LatticeInstantonBound.lean:189` | `bps_equality_forces_anti_self_dual_zero` | hypothesis `h : bpsCharge a b = bpsAction a b` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/LatticeInstantonBound.lean:209` | `bps_equality_forces_self_dual_zero` | hypothesis `h : bpsCharge a b = -bpsAction a b` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/UniversalContractionFixedPointTheorem.lean:8` | `convergence_bounded` | hypothesis `hx : x ≤ 10` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/_mut_ErdosSzekeresRamsey_pigeonhole_finite.lean:20` | `erdos_szekeres_pair` | hypothesis `hne : a ≠ b` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `h1 : r1 ≤ 2` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `h2 : r2 ≤ 2` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `h3 : r3 ≤ 2` is not referenced in the proof |

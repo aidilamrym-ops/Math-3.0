@@ -1,17 +1,11 @@
 {
-  "generated": "2026-11-16T02:50:13Z",
+  "generated": "2026-11-16T06:09:12Z",
   "counts": {
-    "bounded-model": 431,
+    "bounded-model": 432,
     "pure-theorem": 60,
-    "scope_undeclared": 465
+    "scope_undeclared": 464
   },
   "files": [
-    {
-      "file": "lean/spec_v4/_mut_ErdosSzekeresRamsey_pigeonhole_finite.lean",
-      "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
-    },
     {
       "file": "lean/spec_v4/ActualInfinityRefutation.lean",
       "class": "bounded-model",
@@ -29,6 +23,18 @@
       "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/Batch17WitnessPattern.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": "Scope: Bounded-model lattice spectral density."
+    },
+    {
+      "file": "lean/spec_v4/BoundedPathGraphSpectralGap.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": "Scope: Bounded-model discrete Laplacian on path graph P_n."
     },
     {
       "file": "lean/spec_v4/CantorDiagonalization.lean",

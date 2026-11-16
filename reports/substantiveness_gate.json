@@ -1,13 +1,13 @@
 {
-  "generated": "2026-11-16T02:50:13Z",
+  "generated": "2026-11-16T06:09:12Z",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "lean_files": 491,
-  "declarations": 2026,
-  "predicates": 17,
+  "lean_files": 492,
+  "declarations": 2029,
+  "predicates": 19,
   "z3_available": true,
   "waivers_applied": [
     {
@@ -54,18 +54,10 @@
   "counts": {
     "HIGH": 0,
     "MEDIUM": 0,
-    "LOW": 451
+    "LOW": 450
   },
   "verdict": "PASS",
   "findings": [
-    {
-      "file": "lean/spec_v4/_mut_ErdosSzekeresRamsey_pigeonhole_finite.lean",
-      "line": 20,
-      "declaration": "erdos_szekeres_pair",
-      "severity": "LOW",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "detail": "hypothesis `hne : a ≠ b` is not referenced in the proof"
-    },
     {
       "file": "lean/spec_v4/ActualInfinityRefutation.lean",
       "line": 61,
@@ -3676,12 +3668,6 @@
   },
   "scope": [
     {
-      "file": "lean/spec_v4/_mut_ErdosSzekeresRamsey_pigeonhole_finite.lean",
-      "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
-    },
-    {
       "file": "lean/spec_v4/ActualInfinityRefutation.lean",
       "class": "bounded-model",
       "scope_declared": false,
@@ -3698,6 +3684,18 @@
       "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/Batch17WitnessPattern.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": "Scope: Bounded-model lattice spectral density."
+    },
+    {
+      "file": "lean/spec_v4/BoundedPathGraphSpectralGap.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": "Scope: Bounded-model discrete Laplacian on path graph P_n."
     },
     {
       "file": "lean/spec_v4/CantorDiagonalization.lean",
@@ -6621,10 +6619,5 @@
       "scope_declared": false,
       "scope_text": null
     }
-  ],
-  "regression": {
-    "files_scanned": 491,
-    "files_with_findings": 0,
-    "verdict": "WEAK"
-  }
+  ]
 }
