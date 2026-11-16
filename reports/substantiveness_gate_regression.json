@@ -1,0 +1,898 @@
+{
+  "generated": "2026-11-16T01:11:26Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\reports\\flawed_artifacts"
+  ],
+  "lean_files": 32,
+  "declarations": 171,
+  "predicates": 26,
+  "z3_available": true,
+  "counts": {
+    "HIGH": 1,
+    "MEDIUM": 33,
+    "LOW": 51
+  },
+  "verdict": "FAIL",
+  "findings": [
+    {
+      "file": "reports/flawed_artifacts/AbcCensusEvidence.lean",
+      "line": 5,
+      "declaration": "abc_triple_quality_bound_1",
+      "severity": "MEDIUM",
+      "code": "NUMERAL_ONLY_CHECK",
+      "detail": "only compares two numerals"
+    },
+    {
+      "file": "reports/flawed_artifacts/AbcCensusEvidence.lean",
+      "line": 9,
+      "declaration": "abc_triple_quality_bound_2",
+      "severity": "MEDIUM",
+      "code": "NUMERAL_ONLY_CHECK",
+      "detail": "only compares two numerals"
+    },
+    {
+      "file": "reports/flawed_artifacts/AbcCensusEvidence.lean",
+      "line": 13,
+      "declaration": "abc_triple_quality_bound_3",
+      "severity": "MEDIUM",
+      "code": "NUMERAL_ONLY_CHECK",
+      "detail": "only compares two numerals"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteChernSimons.vacuous-flux-placeholder.lean",
+      "line": 39,
+      "declaration": "plaquetteFlux",
+      "severity": "MEDIUM",
+      "code": "CONSTANT_DEFINITION",
+      "detail": "`plaquetteFlux` ignores all 6 parameters and returns `0`"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteChernSimons.vacuous-flux-placeholder.lean",
+      "line": 52,
+      "declaration": "wrtiInvariant",
+      "severity": "MEDIUM",
+      "code": "CONSTANT_DEFINITION",
+      "detail": "`wrtiInvariant` ignores all 2 parameters and returns `1`"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteChernSimons.vacuous-flux-placeholder.lean",
+      "line": 56,
+      "declaration": "zeroConnection",
+      "severity": "MEDIUM",
+      "code": "CONSTANT_DEFINITION",
+      "detail": "`zeroConnection` ignores all 1 parameters and returns `fun _ _ _ _ => 0`"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteHodgeStar.tautological-star-warnings.lean",
+      "line": 51,
+      "declaration": "hodgeStar0",
+      "severity": "MEDIUM",
+      "code": "CONSTANT_DEFINITION",
+      "detail": "`hodgeStar0` ignores all 1 parameters and returns `1`"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteHodgeStar.tautological-star-warnings.lean",
+      "line": 54,
+      "declaration": "hodgeStar1",
+      "severity": "MEDIUM",
+      "code": "CONSTANT_DEFINITION",
+      "detail": "`hodgeStar1` ignores all 1 parameters and returns `1`"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteHodgeStar.tautological-star-warnings.lean",
+      "line": 70,
+      "declaration": "hodge_star_commutes_d",
+      "severity": "HIGH",
+      "code": "REFLEXIVE_EQUALITY",
+      "detail": "conclusion is `X = X`"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteYangMills.placeholder-plaquette.lean",
+      "line": 36,
+      "declaration": "plaquette",
+      "severity": "MEDIUM",
+      "code": "CONSTANT_DEFINITION",
+      "detail": "`plaquette` ignores all 7 parameters and returns `1`"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteYangMills.placeholder-plaquette.lean",
+      "line": 42,
+      "declaration": "wilsonAction",
+      "severity": "MEDIUM",
+      "code": "CONSTANT_DEFINITION",
+      "detail": "`wilsonAction` ignores all 3 parameters and returns `0`"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteYangMills.placeholder-plaquette.lean",
+      "line": 46,
+      "declaration": "gaugeTransform",
+      "severity": "MEDIUM",
+      "code": "CONSTANT_DEFINITION",
+      "detail": "`gaugeTransform` ignores all 4 parameters and returns `fun x y z t μ => 1`"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteYangMills.placeholder-plaquette.lean",
+      "line": 58,
+      "declaration": "trivialConnection",
+      "severity": "MEDIUM",
+      "code": "CONSTANT_DEFINITION",
+      "detail": "`trivialConnection` ignores all 2 parameters and returns `fun _ _ _ _ _ => 1`"
+    },
+    {
+      "file": "reports/flawed_artifacts/EllipticRankSpectralCertificate.lean",
+      "line": 29,
+      "declaration": "dsitni_growth_bound",
+      "severity": "MEDIUM",
+      "code": "LEM_ONLY_PROOF",
+      "detail": "proof is `Classical.em` tautology"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteLatticeSpectralGravity.lean",
+      "line": 29,
+      "declaration": "discrete_volume_preservation",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hv : v > 0` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteNavierStokesDissipation.lean",
+      "line": 16,
+      "declaration": "navier_stokes_dissipation_bounded",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_nu : nu ≤ 10` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteNavierStokesDissipation.lean",
+      "line": 16,
+      "declaration": "navier_stokes_dissipation_bounded",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_grad : v_grad ≤ 100` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteRiemannZetaLattice.lean",
+      "line": 28,
+      "declaration": "guinand_trace_stabilization",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h : n > 0` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteYangMillsMassGapLattice.lean",
+      "line": 16,
+      "declaration": "yang_mills_mass_gap_positive",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `_h_beta : beta ≥ 2` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteYangMillsMassGapLattice.lean",
+      "line": 24,
+      "declaration": "spectral_gap_stabilization",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_gap : gap ≥ 1` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/LatticeLearningWithErrors.lean",
+      "line": 20,
+      "declaration": "lwe_error_small_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hq : q ≥ 4` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/LatticeLearningWithErrors.lean",
+      "line": 30,
+      "declaration": "lwe_search_to_decision_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `_hq : q ≥ 1` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/LatticeLearningWithErrors.lean",
+      "line": 30,
+      "declaration": "lwe_search_to_decision_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `_hn : n > 0` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/LatticeLearningWithErrors.lean",
+      "line": 30,
+      "declaration": "lwe_search_to_decision_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `_hm : m > 0` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumBirchSwinnertonDyer.vacuous-structure.lean",
+      "line": 40,
+      "declaration": "bsd_tateshafarevich_bounded",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_cond : conductorBound ≤ 100` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumCollatzGeneralization.lean",
+      "line": 16,
+      "declaration": "collatz_orbit_bounded",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_n : n > 0` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumCollatzGeneralization.lean",
+      "line": 16,
+      "declaration": "collatz_orbit_bounded",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_fuel : fuel ≥ 100` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumCollatzGeneralization.lean",
+      "line": 25,
+      "declaration": "collatz_loop_stabilization",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h : a ≤ b` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumHodgeConjecture.vacuous-cycles.lean",
+      "line": 42,
+      "declaration": "hodge_cycle_bounded",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_lim : maxLimit ≤ 50` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumNavierStokesSmoothness.lean",
+      "line": 28,
+      "declaration": "navier_stokes_energy_bounded",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_forcing : state.forceBound + initialEnergy ≥ state.viscosity * state.v` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumNavierStokesSmoothness.lean",
+      "line": 40,
+      "declaration": "navier_stokes_pressure_regularity",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_grad : velocity_gradient_sq ≤ 1000` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumPoincareConjecture.lean",
+      "line": 42,
+      "declaration": "ricci_flow_non_collapse_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_bound : maxCurvature ≤ 500` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumRiemannHypothesis.vacuous-symmetry.lean",
+      "line": 34,
+      "declaration": "riemann_hypothesis_critical_line_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_symmetric : z.sigmaNumerator * 2 = z.sigmaDenominator` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumRiemannHypothesis.vacuous-symmetry.lean",
+      "line": 44,
+      "declaration": "riemann_explicit_formula_positivity",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_cond : conductor ≤ 10` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumRiemannHypothesis.vacuous-symmetry.lean",
+      "line": 44,
+      "declaration": "riemann_explicit_formula_positivity",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_test : testFunctionBound ≤ 5` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/QuantumTopologicalModularTensorCategory.lean",
+      "line": 55,
+      "declaration": "braid_unitarity_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hpq : p ≤ q` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/QuantumTopologicalModularTensorCategory.lean",
+      "line": 55,
+      "declaration": "braid_unitarity_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hpos : p ≥ 0` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/TwistorLatticeCorrespondence.lean",
+      "line": 24,
+      "declaration": "twistor_incidence_stable",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `_hx : abs x ≤ 1000` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/UniversalQuantumCoherencePhaseLock.lean",
+      "line": 13,
+      "declaration": "universal_quantum_coherence_phase_lock",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `_h_amp : amplitude ≤ 1000` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/UniversalTopologicalInvariantSingularityResolution.lean",
+      "line": 9,
+      "declaration": "universal_topological_singularity_resolution",
+      "severity": "MEDIUM",
+      "code": "DECORATIVE_HYPOTHESIS",
+      "detail": "hypothesis `_h_nonzero : 0 < n` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/YangMillsLatticeBoundary.vacuous-gap.lean",
+      "line": 40,
+      "declaration": "yang_mills_mass_gap_positive",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_coupling : coupling > 0` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/YangMillsLatticeBoundary.vacuous-gap.lean",
+      "line": 48,
+      "declaration": "yang_mills_lattice_cutoff_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_grid : delta_grid ≥ min_planck` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/YangMillsLatticeBoundary.vacuous-gap.lean",
+      "line": 48,
+      "declaration": "yang_mills_lattice_cutoff_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_planck : min_planck > 0` is not referenced in the proof"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteHodgeDecomposition.comment-only-green.lean",
+      "line": 49,
+      "declaration": "IsHarmonic",
+      "severity": "LOW",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `IsHarmonic` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteHodgeTheoremSpec.laplacian1-identity.lean",
+      "line": 22,
+      "declaration": "harmonic0",
+      "severity": "LOW",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `harmonic0` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteHodgeTheoremSpec.laplacian1-identity.lean",
+      "line": 23,
+      "declaration": "harmonic1",
+      "severity": "LOW",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `harmonic1` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/EinsteinFieldEquations.vacuous-geometry.lean",
+      "line": 41,
+      "declaration": "SatisfiesEFE",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `SatisfiesEFE` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteLatticeSpectralGravity.lean",
+      "line": 12,
+      "declaration": "latticeCurvatureValid",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `latticeCurvatureValid` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteLatticeSpectralGravity.lean",
+      "line": 16,
+      "declaration": "planckPixelConstraint",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `planckPixelConstraint` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumNavierStokesSmoothness.lean",
+      "line": 22,
+      "declaration": "energyDissipationValid",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `energyDissipationValid` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteNavierStokesDissipation.lean",
+      "line": 25,
+      "declaration": "pressureRegularityValid",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `pressureRegularityValid` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/FinitePvNPSeparationLattice.lean",
+      "line": 12,
+      "declaration": "circuitComplexityValid",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `circuitComplexityValid` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteRiemannZetaLattice.lean",
+      "line": 12,
+      "declaration": "zetaZeroContainmentValid",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `zetaZeroContainmentValid` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteYangMillsMassGapLattice.lean",
+      "line": 12,
+      "declaration": "wilsonPlaquetteBound",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `wilsonPlaquetteBound` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/LatticeLearningWithErrors.lean",
+      "line": 12,
+      "declaration": "lweErrorBounded",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `lweErrorBounded` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/LatticeLearningWithErrors.lean",
+      "line": 16,
+      "declaration": "lweSampleValid",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `lweSampleValid` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumBirchSwinnertonDyer.vacuous-structure.lean",
+      "line": 22,
+      "declaration": "bsdRankEqual",
+      "severity": "LOW",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `bsdRankEqual` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumBirchSwinnertonDyer.vacuous-structure.lean",
+      "line": 27,
+      "declaration": "tateShafarevichFinite",
+      "severity": "LOW",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `tateShafarevichFinite` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumHodgeConjecture.vacuous-cycles.lean",
+      "line": 24,
+      "declaration": "hodgeCycleRational",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `hodgeCycleRational` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumHodgeConjecture.vacuous-cycles.lean",
+      "line": 29,
+      "declaration": "cycleMapRealizationBounded",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `cycleMapRealizationBounded` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumPoincareConjecture.lean",
+      "line": 23,
+      "declaration": "isSimplyConnected",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `isSimplyConnected` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumPoincareConjecture.lean",
+      "line": 28,
+      "declaration": "ricciFlowScalarValid",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `ricciFlowScalarValid` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumRiemannHypothesis.vacuous-symmetry.lean",
+      "line": 23,
+      "declaration": "onCriticalLine",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `onCriticalLine` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumRiemannHypothesis.vacuous-symmetry.lean",
+      "line": 28,
+      "declaration": "guinandWeilTraceBound",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `guinandWeilTraceBound` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/TwistorLatticeCorrespondence.lean",
+      "line": 20,
+      "declaration": "twistorIncidenceValid",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `twistorIncidenceValid` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/YangMillsLatticeBoundary.vacuous-gap.lean",
+      "line": 13,
+      "declaration": "wilsonActionBound",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `wilsonActionBound` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/YangMillsLatticeBoundary.vacuous-gap.lean",
+      "line": 17,
+      "declaration": "yangMillsSylvesterInertiaTest",
+      "severity": "MEDIUM",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `yangMillsSylvesterInertiaTest` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "reports/flawed_artifacts/EllipticRankSpectralCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteLatticeSpectralGravity.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteNavierStokesDissipation.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/FinitePvNPSeparationLattice.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteRiemannZetaLattice.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteYangMillsMassGapLattice.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/HeisenbergUncertaintyDemystified.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/LatticeLearningWithErrors.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumHodgeConjecture.vacuous-cycles.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumNavierStokesSmoothness.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumPoincareConjecture.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumPvsNPSeparation.vacuous-inequality.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumRiemannHypothesis.vacuous-symmetry.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/QuantumTopologicalModularTensorCategory.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/SheafTopologicalUnification.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/TwistorLatticeCorrespondence.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/UniversalCategorySheafBridge.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "reports/flawed_artifacts/YangMillsLatticeBoundary.vacuous-gap.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    }
+  ],
+  "mutations": [],
+  "scope": [
+    {
+      "file": "reports/flawed_artifacts/AbcCensusEvidence.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteChernSimons.vacuous-flux-placeholder.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": "-- Cakupan:"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteHodgeDecomposition.comment-only-green.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": "-- Cakupan:"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteHodgeStar.tautological-star-warnings.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": "-- Cakupan:"
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteHodgeTheoremSpec.laplacian1-identity.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/DiscreteYangMills.placeholder-plaquette.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": "-- Cakupan:"
+    },
+    {
+      "file": "reports/flawed_artifacts/EinsteinFieldEquations.vacuous-geometry.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": "-- Cakupan: definisi tensor Ricci, kurvatur skalar, dan tensor Einstein pada"
+    },
+    {
+      "file": "reports/flawed_artifacts/EllipticRankSpectralCertificate.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/FaultTolerantQuantum.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteLatticeSpectralGravity.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteNavierStokesDissipation.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/FinitePvNPSeparationLattice.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteRiemannZetaLattice.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/FiniteYangMillsMassGapLattice.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/GoodsteinArithmeticTerminationCertificate.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/HeegnerGaussNineCertificate.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/HeisenbergUncertaintyDemystified.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/LatticeLearningWithErrors.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumBirchSwinnertonDyer.vacuous-structure.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumCollatzGeneralization.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumHodgeConjecture.vacuous-cycles.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumNavierStokesSmoothness.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumPoincareConjecture.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumPvsNPSeparation.vacuous-inequality.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/MillenniumRiemannHypothesis.vacuous-symmetry.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/QuantumTopologicalModularTensorCategory.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/SheafTopologicalUnification.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/TwistorLatticeCorrespondence.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/UniversalCategorySheafBridge.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/UniversalQuantumCoherencePhaseLock.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/UniversalTopologicalInvariantSingularityResolution.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "reports/flawed_artifacts/YangMillsLatticeBoundary.vacuous-gap.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    }
+  ],
+  "regression": {
+    "files_scanned": 32,
+    "files_with_findings": 19,
+    "verdict": "PASS"
+  }
+}

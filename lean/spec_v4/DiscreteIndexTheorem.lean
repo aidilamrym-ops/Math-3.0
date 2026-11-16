@@ -3,15 +3,17 @@
 --
 -- Cakupan:
 --   * operator diferensiasi diskrit (maju/mundur) pada grid berhingga ℤ/Nℤ;
---   * definisi operator Dirac diskrit 2×2 dan relasi kuadratnya;
---   * hubungan indeks analitik dan topologi pada tingkat aljabar diskrit.
+--   * definisi operator Dirac diskrit 2×2;
+--   * witness kernel eksplisit: spinor konstan pada siklus-3 dihancurkan
+--     oleh operator Dirac.
 --
 -- Batas klaim:
 --   * Ini BUKAN teorema indeks Atiyah-Singer dan BUKAN indeks operator
 --     eliptik pada manifold Riemannian kontinu.
 --   * Tidak ada klaim tentang geometri diferensial, spinor kontinu, atau
 --     kategori topologi manifold mulus.
---   * Yang dibuktikan hanya relasi indeks matriks berhingga.
+--   * Kesamaan indeks analitik = indeks topologi TIDAK dibuktikan di sini;
+--     yang dibuktikan hanya aljabar matriks berhingga dan satu witness kernel.
 
 import Mathlib.Data.Matrix.Mul
 import Mathlib.Data.Matrix.Diagonal
@@ -63,14 +65,21 @@ theorem discreteDirac_off_diagonal (p q : Fin n × Bool) (hpq : p.2 = q.2) :
   dsimp [discreteDirac]
   cases b1 <;> cases b2 <;> simp_all
 
-/-- Indeks analitik untuk operator diferensiasi siklik pada grid berhingga
-    selalu nol (topologi lingkaran diskrit S¹). -/
-theorem analyticIndex_S1_concrete :
-    True := by
-  trivial
+/-- Spinor konstan pada siklus-3: komponen `false` bernilai 1, komponen
+`true` bernilai 0. -/
+def constantSpinor : Fin 3 × Bool → ℤ := fun p => if p.2 = false then 1 else 0
 
-/-- Teorema Indeks Topologi Diskrit: indeks topologi untuk siklus 1D berhingga adalah 0. -/
-theorem topological_index_cyclic (n : ℕ) [NeZero n] :
-    (0 : ℤ) = 0 := rfl
+/-- Witness kernel: operator Dirac 3-siklus menghancurkan spinor konstan.
+Ini adalah isi analitik yang dapat dibuktikan; bukan kesamaan indeks. -/
+theorem discreteDirac_constantSpinor_kernel (p : Fin 3 × Bool) :
+    (discreteDirac 3).mulVec constantSpinor p = 0 := by
+  rcases p with ⟨i, b⟩
+  cases b
+  · rw [Matrix.mulVec, dotProduct]
+    apply Finset.sum_eq_zero
+    intro q _
+    rcases q with ⟨j, c⟩
+    cases c <;> simp [discreteDirac, constantSpinor]
+  · fin_cases i <;> decide
 
 end Math30.Topology.DiscreteIndex

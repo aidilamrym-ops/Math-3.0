@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-15T15:06:06.819333+00:00
+- Generated: 2026-11-16T01:13:43.733358+00:00
 - README: `README.MD`
-- Total backticked citations: **208**
+- Total backticked citations: **213**
 - Lean claims: **53** (resolved: 53, unresolved: 0)
-- Citation kinds: `{'prose-term': 49, 'file-reference': 84, 'tooling': 19, 'lean-claim': 53, 'negative-reference': 3}`
+- Citation kinds: `{'prose-term': 49, 'file-reference': 89, 'tooling': 19, 'lean-claim': 53, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -168,9 +168,14 @@
 - `reports/full_surface_lean_audit.json` — file-reference
 - `is_complete: true` — prose-term
 - `verdict: PASS` — prose-term
-- `pass_with_warnings: 1` — prose-term
+- `pass_with_warnings: 0` — prose-term
 - `python tools/readme_theorem_audit.py` — file-reference
 - `reports/readme_theorem_audit.json` — file-reference
+- `python tools/omega_audit/substantiveness_gate.py` — file-reference
+- `reports/AUDIT_METHODOLOGY.md` — file-reference
+- `reports/flawed_artifacts/` — file-reference
+- `reports/substantiveness_gate_regression.json` — file-reference
+- `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
 - `DiscreteInertiaBoundaryDeterminant.lean` — file-reference
 - `VolumeConjectureBoundary.lean` — file-reference
@@ -220,4 +225,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `1c0e998ae9a2010a38bdb8ac6d687863942986d5848db082b45e7e2e18b9dab9` — prose-term
+- `3b0bcda7130e394490bf5e30d1e811a69884d89eb74f7d57a7c67292c38c67be` — prose-term

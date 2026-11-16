@@ -901,7 +901,33 @@
       "impact": "Invalidation of unverified speculative lattice claims.",
       "action": "Archived flawed sources in reports/flawed_artifacts/ and removed from active Lean surface.",
       "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0069",
+      "batch": 15,
+      "asset": "tools/omega_audit/substantiveness_gate.py, reports/AUDIT_METHODOLOGY.md",
+      "stage": "METHODOLOGY_UPGRADE",
+      "severity": "INFO",
+      "category": "VACUITY_CONTROLS",
+      "finding": "The pipeline only checked kernel acceptance and trust tokens; it did not check premise inhabitance, counter-models, hypothesis relevance, constant definitions, or pure-theorem versus bounded-model scope.",
+      "evidence": "Archived Batch 13-14 certificates had unsat or decorative premises and constant-valued definitions that still compiled.",
+      "impact": "Compiled certificates could be vacuous without any gate failure.",
+      "action": "Added the Substantiveness Gate implementing five controls: Z3 premise satisfiability with predicate inlining, counter-model receipts, hypothesis-weakening mutation tests, constant-definition and tautology scanning, and scope classification. Surface baseline PASS with HIGH=0; negative control over reports/flawed_artifacts detects the archived vacuous files.",
+      "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0070",
+      "batch": 15,
+      "asset": "lean/spec_v4/DiscreteIndexTheorem.lean",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "HIGH",
+      "category": "VACUOUS_THEOREM",
+      "finding": "analyticIndex_S1_concrete asserted True and topological_index_cyclic asserted 0 = 0, while the header claimed an analytic/topological index relation.",
+      "evidence": "Substantiveness Gate TRUE_CONCLUSION and reflexive equality checks; source lines 68-74 of the old file.",
+      "impact": "The file advertised a discrete index theorem that it never stated.",
+      "action": "Replaced both placeholders with an explicit constant spinor and a proved kernel theorem for the 3-cycle Dirac operator; rewrote the header claim limits. Recompiled EXIT=0 with 0 warnings; strict and anti-circularity gates PASS; substantiveness gate HIGH=0.",
+      "status": "FIXED"
     }
   ],
-  "updated_utc": "2026-11-15T15:02:23Z"
+  "updated_utc": "2026-11-16T01:12:40Z"
 }

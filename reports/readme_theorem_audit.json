@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-15T15:06:07.068453+00:00",
+  "generated": "2026-11-16T01:13:44.097919+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "6b0a542f20550251c8bb1fa54f78ca3eedd439a75f4374052cef122d55fa4d09",
+  "readme_semantic_sha256": "d18e4dbd0776d264d64f98a72cf89e02a98f677d83ab506dc97ef2e6dc82f908",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
