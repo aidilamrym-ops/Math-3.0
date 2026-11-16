@@ -138,8 +138,10 @@ theorem pair_nondegenerate_left (f : Chain0)
   have h1 := h fundamentalCycle hker
   simpa [pair_one_right] using h1
 
-/-- Non-degenerasi kanan: siklus nol terdeteksi oleh kelas C₀. -/
-theorem pair_nondegenerate_right (a : Chain1) (_ha : bdry a = 0)
+/-- Non-degenerasi kanan: rantai nol terdeteksi oleh kelas C₀.  The cycle
+    hypothesis is not needed: vanishing against every basis vector already
+    forces the chain to be zero. -/
+theorem pair_nondegenerate_right (a : Chain1)
     (h : ∀ f : Chain0, pair f a = 0) : a = 0 := by
   funext i
   have hi := h (basis i)
@@ -151,8 +153,7 @@ theorem poincare_duality_circle :
     (∀ a : Chain1, bdry a = 0 ↔ ∃ c : ℤ, a = fun _ => c) ∧
     (∀ f : Chain0, total f = 0 ↔ ∃ b : Chain1, bdry b = f) ∧
     (∀ f : Chain0, (∀ a : Chain1, bdry a = 0 → pair f a = 0) → total f = 0) ∧
-    (∀ a : Chain1, bdry a = 0 →
-      (∀ f : Chain0, pair f a = 0) → a = 0) :=
+    (∀ a : Chain1, (∀ f : Chain0, pair f a = 0) → a = 0) :=
   ⟨bdry_kernel_eq_one, total_eq_zero_iff_mem,
    pair_nondegenerate_left, pair_nondegenerate_right⟩
 

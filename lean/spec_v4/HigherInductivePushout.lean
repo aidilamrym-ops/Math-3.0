@@ -51,7 +51,7 @@ theorem loop_alt : base = inr () := glue false
 
 /-- Path induction (transport of a binary relation along an identification). -/
 theorem path_induction {X : Type} (P : X → X → Prop)
-    (refl : ∀ x, P x x) (_h : ∀ x y, x = y → P x y) (x y : X) (p : x = y) : P x y := by
+    (refl : ∀ x, P x x) (x y : X) (p : x = y) : P x y := by
   subst p
   apply refl
 

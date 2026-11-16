@@ -59,8 +59,7 @@ theorem discrete_curvature_bounded_from_metric (g_xx g_yy : Fin n → ℤ) (M : 
   linarith
 
 /-- Konservasi volume kisi diskrit berbasis jumlah total elemen sel kisi yang dijamin konstan. -/
-theorem discrete_volume_invariance (v_initial v_final : ℕ) (h_eq : v_initial = v_final)
-    (hv : v_initial > 0) :
+theorem discrete_volume_invariance (v_initial v_final : ℕ) (h_eq : v_initial = v_final) :
     v_initial ≤ v_final * v_final := by
   subst h_eq
   nlinarith

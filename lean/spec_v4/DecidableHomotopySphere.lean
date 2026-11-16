@@ -51,15 +51,15 @@ theorem degreeMap_comp_linear (a b : ℤ) :
 
 /-! ## πₙ(Sⁿ) ≃ ℤ as an additive equivalence -/
 
-/-- Hurewicz invariant: for `n > 0` the model group πₙ(Sⁿ) is additively
-    equivalent to ℤ, via the degree map. Non-vacuous: the witness is a genuine
-    `AddEquiv` and inverses are proved. -/
-theorem pi_n_sphere_n_iso (n : ℕ) (_hn : n > 0) :
+/-- In the finite model `HomotopyGroup n Unit := ℤ`, the identity equivalence
+    exists for every `n`; no positivity hypothesis is needed. This is a
+    statement about the model, not the topological isomorphism πₙ(Sⁿ) ≃ ℤ. -/
+theorem pi_n_sphere_n_iso (n : ℕ) :
     Nonempty (HomotopyGroup n Unit ≃ ℤ) :=
   ⟨Equiv.refl ℤ⟩
 
-/-- The same isomorphism witnessed by the identity function on ℤ (explicit). -/
-theorem pi_n_sphere_n_iso_id (n : ℕ) (_hn : n > 0) :
+/-- The same model equivalence witnessed explicitly by the identity on ℤ. -/
+theorem pi_n_sphere_n_iso_id (n : ℕ) :
     ∃ (iso : HomotopyGroup n Unit ≃ ℤ), ∀ x, iso x = x :=
   ⟨Equiv.refl ℤ, fun _ => rfl⟩
 

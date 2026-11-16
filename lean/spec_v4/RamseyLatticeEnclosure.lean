@@ -157,7 +157,7 @@ lemma card_mono_le (n : ℕ) (S : Finset (Fin n)) :
         rw [card_supersets, card_disjoint]
     _ = 2 * 2 ^ (Fintype.card (Edge n) - (inside n S).card) := by ring
 
-lemma card_le_of_forall_mono (n k : ℕ) (_hk : 2 ≤ k) (_hkn : k ≤ n)
+lemma card_le_of_forall_mono (n k : ℕ)
     (hmono : ∀ g : FiniteGraph n, hasClique g k ∨ hasIndependentSet g k) :
     Fintype.card (FiniteGraph n)
       ≤ Nat.choose n k * (2 * 2 ^ (Fintype.card (Edge n) - Nat.choose k 2)) := by
@@ -206,7 +206,7 @@ lemma card_le_of_forall_mono (n k : ℕ) (_hk : 2 ≤ k) (_hkn : k ≤ n)
 
 /-- Erdős probabilistic existence invariant (counting bound bridge). -/
 theorem ramsey_probabilistic_existence_invariant
-    (n k : ℕ) (hk : 2 ≤ k) (hkn : k ≤ n)
+    (n k : ℕ) (hkn : k ≤ n)
     (h_avg : (Nat.choose n k : ℝ) * (2 : ℝ)⁻¹ ^ (Nat.choose k 2) < 1/2) :
     ∃ (g : FiniteGraph n), ¬ hasClique g k ∧ ¬ hasIndependentSet g k := by
   classical
@@ -216,7 +216,7 @@ theorem ramsey_probabilistic_existence_invariant
     by_contra h_not
     push Not at h_not
     exact h_all ⟨g, h_not.1, h_not.2⟩
-  have h_bound := card_le_of_forall_mono n k hk hkn h_mono
+  have h_bound := card_le_of_forall_mono n k h_mono
   have h_fintype : Fintype.card (FiniteGraph n) = 2 ^ Fintype.card (Edge n) := by
     simp [FiniteGraph]
   have h_card_edge := card_edge n

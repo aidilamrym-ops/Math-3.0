@@ -1,16 +1,21 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-16T01:11:26Z
-- Lean files: **32**  declarations: **171**  predicates: **26**
+- Generated: 2026-11-16T02:50:34Z
+- Lean files: **35**  declarations: **183**  predicates: **27**
 - Z3 premise check: **available**
-- Findings: HIGH **1**, MEDIUM **33**, LOW **51**
+- Findings: HIGH **5**, MEDIUM **34**, LOW **51**
+- Waived constant definitions: **0**
 - Verdict: **FAIL**
 
 ## Findings
 
 | Severity | Code | File:Line | Declaration | Detail |
 |---|---|---|---|---|
+| HIGH | `REFLEXIVE_CONJUNCT` | `reports/flawed_artifacts/ForensicEvidence.numerical-pseudo-certificate.lean:11` | `rh_spectral_isolation_guinand_weil` | conjunct `0 = 0` is reflexive `X = X` |
 | HIGH | `REFLEXIVE_EQUALITY` | `reports/flawed_artifacts/DiscreteHodgeStar.tautological-star-warnings.lean:70` | `hodge_star_commutes_d` | conclusion is `X = X` |
+| HIGH | `TAUTOLOGICAL_DEFINITION` | `reports/flawed_artifacts/GrothendieckToposBridge.tautological-sheaf.lean:18` | `isSheaf` | `isSheaf` is a Prop-valued definition whose body is a tautology |
+| HIGH | `TRIVIAL_CONJUNCT` | `reports/flawed_artifacts/ForensicEvidence.numerical-pseudo-certificate.lean:16` | `triad_quantum_entanglement_bounded` | conclusion contains a bare `True` conjunct |
+| HIGH | `TRIVIAL_TRUE_CONSEQUENCE` | `reports/flawed_artifacts/ForensicEvidence.numerical-pseudo-certificate.lean:16` | `triad_quantum_entanglement_bounded` | conclusion contains a vacuous `True` conjunct or codomain |
 | MEDIUM | `CONSTANT_DEFINITION` | `reports/flawed_artifacts/DiscreteChernSimons.vacuous-flux-placeholder.lean:39` | `plaquetteFlux` | `plaquetteFlux` ignores all 6 parameters and returns `0` |
 | MEDIUM | `CONSTANT_DEFINITION` | `reports/flawed_artifacts/DiscreteChernSimons.vacuous-flux-placeholder.lean:52` | `wrtiInvariant` | `wrtiInvariant` ignores all 2 parameters and returns `1` |
 | MEDIUM | `CONSTANT_DEFINITION` | `reports/flawed_artifacts/DiscreteChernSimons.vacuous-flux-placeholder.lean:56` | `zeroConnection` | `zeroConnection` ignores all 1 parameters and returns `fun _ _ _ _ => 0` |
@@ -21,6 +26,7 @@
 | MEDIUM | `CONSTANT_DEFINITION` | `reports/flawed_artifacts/DiscreteYangMills.placeholder-plaquette.lean:46` | `gaugeTransform` | `gaugeTransform` ignores all 4 parameters and returns `fun x y z t μ => 1` |
 | MEDIUM | `CONSTANT_DEFINITION` | `reports/flawed_artifacts/DiscreteYangMills.placeholder-plaquette.lean:58` | `trivialConnection` | `trivialConnection` ignores all 2 parameters and returns `fun _ _ _ _ _ => 1` |
 | MEDIUM | `DECORATIVE_HYPOTHESIS` | `reports/flawed_artifacts/UniversalTopologicalInvariantSingularityResolution.lean:9` | `universal_topological_singularity_resolution` | hypothesis `_h_nonzero : 0 < n` is not referenced in the proof |
+| LOW | `HYPOTHESIS_NOT_REFERENCED` | `reports/flawed_artifacts/ContinuumOmegaLimitDefeat.continuum-overclaim.lean:24` | `continuum_omega_bound_witness` | hypothesis `hk : k ≤ 10` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `reports/flawed_artifacts/FiniteLatticeSpectralGravity.lean:29` | `discrete_volume_preservation` | hypothesis `hv : v > 0` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `reports/flawed_artifacts/FiniteNavierStokesDissipation.lean:16` | `navier_stokes_dissipation_bounded` | hypothesis `h_nu : nu ≤ 10` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `reports/flawed_artifacts/FiniteNavierStokesDissipation.lean:16` | `navier_stokes_dissipation_bounded` | hypothesis `h_grad : v_grad ≤ 100` is not referenced in the proof |
@@ -53,6 +59,10 @@
 | MEDIUM | `NUMERAL_ONLY_CHECK` | `reports/flawed_artifacts/AbcCensusEvidence.lean:5` | `abc_triple_quality_bound_1` | only compares two numerals |
 | MEDIUM | `NUMERAL_ONLY_CHECK` | `reports/flawed_artifacts/AbcCensusEvidence.lean:9` | `abc_triple_quality_bound_2` | only compares two numerals |
 | MEDIUM | `NUMERAL_ONLY_CHECK` | `reports/flawed_artifacts/AbcCensusEvidence.lean:13` | `abc_triple_quality_bound_3` | only compares two numerals |
+| MEDIUM | `NUMERAL_ONLY_CHECK` | `reports/flawed_artifacts/ForensicEvidence.numerical-pseudo-certificate.lean:11` | `rh_spectral_isolation_guinand_weil` | every conjunct is a comparison of numerals |
+| MEDIUM | `NUMERAL_ONLY_CHECK` | `reports/flawed_artifacts/ForensicEvidence.numerical-pseudo-certificate.lean:24` | `abc_census_v3_complete_verification` | every conjunct is a comparison of numerals |
+| MEDIUM | `NUMERAL_ONLY_CHECK` | `reports/flawed_artifacts/ForensicEvidence.numerical-pseudo-certificate.lean:31` | `topological_root_uniqueness_newton_box` | every conjunct is a comparison of numerals |
+| LOW | `SCOPE_UNDECLARED` | `reports/flawed_artifacts/ContinuumOmegaLimitDefeat.continuum-overclaim.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `reports/flawed_artifacts/EllipticRankSpectralCertificate.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `reports/flawed_artifacts/FiniteLatticeSpectralGravity.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `reports/flawed_artifacts/FiniteNavierStokesDissipation.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
@@ -71,17 +81,13 @@
 | LOW | `SCOPE_UNDECLARED` | `reports/flawed_artifacts/TwistorLatticeCorrespondence.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `reports/flawed_artifacts/UniversalCategorySheafBridge.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `reports/flawed_artifacts/YangMillsLatticeBoundary.vacuous-gap.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
-| LOW | `WITNESS_MISSING` | `reports/flawed_artifacts/DiscreteHodgeDecomposition.comment-only-green.lean:49` | `IsHarmonic` | predicate `IsHarmonic` is never applied to ground arguments or existentially witnessed |
-| LOW | `WITNESS_MISSING` | `reports/flawed_artifacts/DiscreteHodgeTheoremSpec.laplacian1-identity.lean:22` | `harmonic0` | predicate `harmonic0` is never applied to ground arguments or existentially witnessed |
-| LOW | `WITNESS_MISSING` | `reports/flawed_artifacts/DiscreteHodgeTheoremSpec.laplacian1-identity.lean:23` | `harmonic1` | predicate `harmonic1` is never applied to ground arguments or existentially witnessed |
-| MEDIUM | `WITNESS_MISSING` | `reports/flawed_artifacts/EinsteinFieldEquations.vacuous-geometry.lean:41` | `SatisfiesEFE` | predicate `SatisfiesEFE` is never applied to ground arguments or existentially witnessed |
 | MEDIUM | `WITNESS_MISSING` | `reports/flawed_artifacts/FiniteLatticeSpectralGravity.lean:12` | `latticeCurvatureValid` | predicate `latticeCurvatureValid` is never applied to ground arguments or existentially witnessed |
 | MEDIUM | `WITNESS_MISSING` | `reports/flawed_artifacts/FiniteLatticeSpectralGravity.lean:16` | `planckPixelConstraint` | predicate `planckPixelConstraint` is never applied to ground arguments or existentially witnessed |
 | MEDIUM | `WITNESS_MISSING` | `reports/flawed_artifacts/FiniteNavierStokesDissipation.lean:25` | `pressureRegularityValid` | predicate `pressureRegularityValid` is never applied to ground arguments or existentially witnessed |
 | MEDIUM | `WITNESS_MISSING` | `reports/flawed_artifacts/FinitePvNPSeparationLattice.lean:12` | `circuitComplexityValid` | predicate `circuitComplexityValid` is never applied to ground arguments or existentially witnessed |
 | MEDIUM | `WITNESS_MISSING` | `reports/flawed_artifacts/FiniteRiemannZetaLattice.lean:12` | `zetaZeroContainmentValid` | predicate `zetaZeroContainmentValid` is never applied to ground arguments or existentially witnessed |
 | MEDIUM | `WITNESS_MISSING` | `reports/flawed_artifacts/FiniteYangMillsMassGapLattice.lean:12` | `wilsonPlaquetteBound` | predicate `wilsonPlaquetteBound` is never applied to ground arguments or existentially witnessed |
-| MEDIUM | `WITNESS_MISSING` | `reports/flawed_artifacts/LatticeLearningWithErrors.lean:12` | `lweErrorBounded` | predicate `lweErrorBounded` is never applied to ground arguments or existentially witnessed |
+| LOW | `WITNESS_MISSING` | `reports/flawed_artifacts/GrothendieckToposBridge.tautological-sheaf.lean:18` | `isSheaf` | predicate `isSheaf` is never applied to ground arguments or existentially witnessed |
 | MEDIUM | `WITNESS_MISSING` | `reports/flawed_artifacts/LatticeLearningWithErrors.lean:16` | `lweSampleValid` | predicate `lweSampleValid` is never applied to ground arguments or existentially witnessed |
 | LOW | `WITNESS_MISSING` | `reports/flawed_artifacts/MillenniumBirchSwinnertonDyer.vacuous-structure.lean:22` | `bsdRankEqual` | predicate `bsdRankEqual` is never applied to ground arguments or existentially witnessed |
 | LOW | `WITNESS_MISSING` | `reports/flawed_artifacts/MillenniumBirchSwinnertonDyer.vacuous-structure.lean:27` | `tateShafarevichFinite` | predicate `tateShafarevichFinite` is never applied to ground arguments or existentially witnessed |

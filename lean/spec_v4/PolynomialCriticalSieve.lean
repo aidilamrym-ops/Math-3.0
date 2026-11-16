@@ -21,6 +21,10 @@ def eval (p : Poly) (x : ℚ) : ℚ :=
 theorem eval_two (a b : ℤ) (x : ℚ) : eval [a, b] x = (a : ℚ) * x + (b : ℚ) := by
   rfl
 
+theorem eval_three (a b c : ℤ) (x : ℚ) :
+    eval [a, b, c] x = ((a : ℚ) * x + b) * x + c := by
+  rfl
+
 /-- Simplified discrete derivative on `[a_n, ..., a_0]`. -/
 def polyDeriv (p : Poly) : Poly :=
   let n := p.length - 1
@@ -43,13 +47,34 @@ theorem linear_root_unique (a b : ℤ) (ha : a ≠ 0) (x : ℚ) :
     rw [mul_comm] at h2
     linarith [h2]
 
-/-- Rolle's root separation invariant: if a polynomial has roots at endpoints,
-    its derivative must vanish intermediate. Formally established via finite difference bound. -/
-theorem rolles_separation_bound (p : Poly) (u v : ℚ) (huv : u < v)
-    (_h_roots : eval p u = 0 ∧ eval p v = 0) :
-    ∃ c ∈ Set.Ioo u v, eval (polyDeriv p) c = 0 ∨ (u = u) := by
-  use (u + v) / 2
-  refine ⟨⟨by linarith, by linarith⟩, Or.inr rfl⟩
+/-- Rolle's theorem for a quadratic `[A, B, C]`: if the polynomial vanishes at
+    two rational points `u < v`, then its derivative vanishes at the midpoint.
+    This is a finite algebraic instance of Rolle's theorem, not the general
+    theorem for arbitrary polynomials. -/
+theorem rolles_separation_bound (A B C : ℤ) (u v : ℚ) (huv : u < v)
+    (h_roots : eval [A, B, C] u = 0 ∧ eval [A, B, C] v = 0) :
+    ∃ c ∈ Set.Ioo u v, eval (polyDeriv [A, B, C]) c = 0 := by
+  refine ⟨(u + v) / 2, ⟨by linarith, by linarith⟩, ?_⟩
+  have hfac : eval [A, B, C] u - eval [A, B, C] v =
+      (u - v) * ((A : ℚ) * (u + v) + (B : ℚ)) := by
+    rw [eval_three A B C u, eval_three A B C v]
+    ring
+  have hdiff : eval [A, B, C] u - eval [A, B, C] v = 0 := by
+    rw [h_roots.1, h_roots.2, sub_self]
+  rw [hfac] at hdiff
+  have huv' : (u - v : ℚ) ≠ 0 := sub_ne_zero.mpr (ne_of_lt huv)
+  have hsum : (A : ℚ) * (u + v) + (B : ℚ) = 0 :=
+    (mul_eq_zero.mp hdiff).resolve_left huv'
+  have hderiv : eval (polyDeriv [A, B, C]) ((u + v) / 2) =
+      2 * (A : ℚ) * ((u + v) / 2) + (B : ℚ) := by
+    rw [show polyDeriv [A, B, C] = [A * 2, B * 1] by rfl]
+    rw [eval_two (A * 2) (B * 1)]
+    push_cast
+    ring
+  rw [hderiv]
+  calc
+    2 * (A : ℚ) * ((u + v) / 2) + (B : ℚ) = (A : ℚ) * (u + v) + (B : ℚ) := by ring
+    _ = 0 := by rw [hsum]
 
 #print axioms linear_root_unique
 #print axioms rolles_separation_bound

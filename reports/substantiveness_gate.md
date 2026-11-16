@@ -1,49 +1,34 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-16T01:11:26Z
-- Lean files: **493**  declarations: **2037**  predicates: **18**
+- Generated: 2026-11-16T02:50:13Z
+- Lean files: **491**  declarations: **2026**  predicates: **17**
 - Z3 premise check: **available**
-- Findings: HIGH **0**, MEDIUM **19**, LOW **463**
+- Findings: HIGH **0**, MEDIUM **0**, LOW **451**
+- Waived constant definitions: **4**
 - Verdict: **PASS**
 
 ## Findings
 
 | Severity | Code | File:Line | Declaration | Detail |
 |---|---|---|---|---|
-| MEDIUM | `CONSTANT_DEFINITION` | `lean/spec_v4/DiscreteChernSimons.lean:75` | `zeroConnection` | `zeroConnection` ignores all 1 parameters and returns `fun _ _ => 0` |
-| MEDIUM | `CONSTANT_DEFINITION` | `lean/spec_v4/DiscreteHodgeStar.lean:54` | `hodgeStar0` | `hodgeStar0` ignores all 1 parameters and returns `1` |
-| MEDIUM | `CONSTANT_DEFINITION` | `lean/spec_v4/DiscreteHodgeStar.lean:59` | `hodgeStar1` | `hodgeStar1` ignores all 1 parameters and returns `1` |
-| MEDIUM | `CONSTANT_DEFINITION` | `lean/spec_v4/DiscreteYangMills.lean:132` | `trivialConnection` | `trivialConnection` ignores all 2 parameters and returns `fun _ _ => 1` |
-| MEDIUM | `DECORATIVE_HYPOTHESIS` | `lean/spec_v4/DecidableHomotopySphere.lean:57` | `pi_n_sphere_n_iso` | hypothesis `_hn : n > 0` is not referenced in the proof |
-| MEDIUM | `DECORATIVE_HYPOTHESIS` | `lean/spec_v4/DecidableHomotopySphere.lean:62` | `pi_n_sphere_n_iso_id` | hypothesis `_hn : n > 0` is not referenced in the proof |
-| MEDIUM | `DECORATIVE_HYPOTHESIS` | `lean/spec_v4/HigherInductivePushout.lean:53` | `path_induction` | hypothesis `_h : ∀ x y, x = y → P x y` is not referenced in the proof |
-| MEDIUM | `DECORATIVE_HYPOTHESIS` | `lean/spec_v4/HorizonFrontierTests.lean:33` | `path_induction` | hypothesis `_h : ∀ x y, x = y → P x y` is not referenced in the proof |
-| MEDIUM | `DECORATIVE_HYPOTHESIS` | `lean/spec_v4/HorizonFrontierTests.lean:107` | `pi_n_sphere_n_iso` | hypothesis `_hn : n > 0` is not referenced in the proof |
-| MEDIUM | `DECORATIVE_HYPOTHESIS` | `lean/spec_v4/HorizonFrontierTests.lean:112` | `freudenthal_stability_bound` | hypothesis `_h_stable : n + 1 < k` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/ActualInfinityRefutation.lean:61` | `landauer_infinite_energy_contradiction` | hypothesis `h_cost : 1 ≤ cost` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/CollatzBoundedDefeat.lean:39` | `collatz_horizon_defeat` | hypothesis `hn : n ≥ 1` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/CollatzBoundedDefeat.lean:39` | `collatz_horizon_defeat` | hypothesis `hn_max : n ≤ 100` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/ContinuumOmegaLimitDefeat.lean:24` | `continuum_omega_bound_witness` | hypothesis `hk : k ≤ 10` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DecidableHomotopySphere.lean:69` | `freudenthal_index_lt` | hypothesis `h : n + 1 < k` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DecidableHomotopySphere.lean:75` | `freudenthal_stability_bound` | hypothesis `h : n + 1 < k` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DiscreteIndexTheorem.lean:61` | `discreteDirac_off_diagonal` | hypothesis `hpq : p.2 = q.2` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DiscreteLatticeGravityExtension.lean:62` | `discrete_volume_invariance` | hypothesis `hv : v_initial > 0` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DiscretePersistentHomology.lean:109` | `betti0_monotone` | hypothesis `hst : s ≤ t` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DiscretePersistentHomology.lean:114` | `betti1_monotone` | hypothesis `hst : s ≤ t` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DiscretePoincareDuality.lean:142` | `pair_nondegenerate_right` | hypothesis `_ha : bdry a = 0` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/ErdosSzekeresRamsey.lean:20` | `erdos_szekeres_pair` | hypothesis `hne : a ≠ b` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/EvenUnimodularObstruction.lean:95` | `not_two_pow_dvd_one` | hypothesis `hn : 0 < n` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/Gate5RationalBridge.lean:51` | `contains_midpoint` | hypothesis `hr : 0 ≤ r` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/Gate5RationalExtractionValidation.lean:43` | `contains_midpoint` | hypothesis `hr : 0 ≤ r` is not referenced in the proof |
+| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/HorizonFrontierTests.lean:101` | `freudenthal_stability_bound` | hypothesis `h : n + 1 < k` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/LandauerBekensteinBound.lean:13` | `landauer_bits_le_energy` | hypothesis `hcost : 1 ≤ cost` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/LatticeInstantonBound.lean:189` | `bps_equality_forces_anti_self_dual_zero` | hypothesis `h : bpsCharge a b = bpsAction a b` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/LatticeInstantonBound.lean:209` | `bps_equality_forces_self_dual_zero` | hypothesis `h : bpsCharge a b = -bpsAction a b` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/PolynomialCriticalSieve.lean:48` | `rolles_separation_bound` | hypothesis `huv : u < v` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/PolynomialCriticalSieve.lean:48` | `rolles_separation_bound` | hypothesis `_h_roots : eval p u = 0 ∧ eval p v = 0` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/RamseyLatticeEnclosure.lean:160` | `card_le_of_forall_mono` | hypothesis `_hk : 2 ≤ k` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/RamseyLatticeEnclosure.lean:160` | `card_le_of_forall_mono` | hypothesis `_hkn : k ≤ n` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/SturmTarskiIsolation.lean:64` | `sturm_sequence_decidable_enclosure` | hypothesis `_h_ab : _a < _b` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/UniversalContractionFixedPointTheorem.lean:8` | `convergence_bounded` | hypothesis `hx : x ≤ 10` is not referenced in the proof |
+| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/_mut_ErdosSzekeresRamsey_pigeonhole_finite.lean:20` | `erdos_szekeres_pair` | hypothesis `hne : a ≠ b` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `h1 : r1 ≤ 2` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `h2 : r2 ≤ 2` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `h3 : r3 ≤ 2` is not referenced in the proof |
@@ -58,9 +43,6 @@
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `h12 : 0 ≤ r6` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `htot : 13 ≤ r1 + r2 + r3 + r4 + r5 + r6` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/ramsey_clique_bound.lean:15` | `ramsey_clique_bound_unsat` | hypothesis `htotal : 13 ≤ ∑ i, r i` is not referenced in the proof |
-| MEDIUM | `PREMISE_WITNESS_RFL` | `lean/spec_v4/DecidableHomotopySphere.lean:62` | `pi_n_sphere_n_iso_id` | trivial witness model {'n_nat': '1'} |
-| MEDIUM | `PREMISE_WITNESS_RFL` | `lean/spec_v4/HorizonFrontierTests.lean:107` | `pi_n_sphere_n_iso` | trivial witness model {'n_nat': '1'} |
-| MEDIUM | `PREMISE_WITNESS_RFL` | `lean/spec_v4/HorizonFrontierTests.lean:112` | `freudenthal_stability_bound` | trivial witness model {'k_nat': '2', 'n_nat': '0'} |
 | LOW | `SCOPE_UNDECLARED` | `Math30Kernel/BealConjectureDefeat.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `Math30Kernel/QuantumCircuit.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `Math30Kernel/QuantumMultiQubit.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
@@ -71,7 +53,6 @@
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/CertifiedManifest.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/ContinuityRefutation.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/ContinuumDensityDefeat.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
-| LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/ContinuumOmegaLimitDefeat.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/DecidableHomotopySphere.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/DiscreteLatticeGravityExtension.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/DiscreteLatticePathCounting.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
@@ -79,7 +60,6 @@
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/GoedelBoundaryContainment.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/GravitationalSingularityContainment.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/HigherInductivePushout.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
-| LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/HomotopyAlgebraLattice.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/RamseyLatticeEnclosure.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/certificates/AndersonEnclosureBoundsCertificate.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
@@ -482,14 +462,13 @@
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/certificates/TopologicalUniquenessCertificate.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/certificates/TriadStateTransitionsCertificate.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/certificates/Z3TribunalBoundsCertificate.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
-| MEDIUM | `TRIVIAL_EXISTENTIAL` | `lean/spec_v4/HorizonFrontierTests.lean:129` | `hopf_invariant_one` | existential witness is a bare numeral |
-| LOW | `WITNESS_MISSING` | `lean/spec_v4/DiscreteHodgeTheoremSpec.lean:33` | `harmonic0` | predicate `harmonic0` is never applied to ground arguments or existentially witnessed |
-| LOW | `WITNESS_MISSING` | `lean/spec_v4/DiscreteHodgeTheoremSpec.lean:34` | `harmonic1` | predicate `harmonic1` is never applied to ground arguments or existentially witnessed |
-| MEDIUM | `WITNESS_MISSING` | `lean/spec_v4/DiscreteMorseTheory.lean:39` | `DiscreteMorseFunction` | predicate `DiscreteMorseFunction` is never applied to ground arguments or existentially witnessed |
-| MEDIUM | `WITNESS_MISSING` | `lean/spec_v4/DiscreteMorseTheory.lean:45` | `IsCriticalIndex0` | predicate `IsCriticalIndex0` is never applied to ground arguments or existentially witnessed |
-| MEDIUM | `WITNESS_MISSING` | `lean/spec_v4/DiscreteMorseTheory.lean:49` | `IsCriticalIndex1` | predicate `IsCriticalIndex1` is never applied to ground arguments or existentially witnessed |
-| MEDIUM | `WITNESS_MISSING` | `lean/spec_v4/EvenUnimodularObstruction.lean:35` | `EvenForm` | predicate `EvenForm` is never applied to ground arguments or existentially witnessed |
-| LOW | `WITNESS_MISSING` | `lean/spec_v4/Gate5RationalExtractionValidation.lean:30` | `Contains` | predicate `Contains` is never applied to ground arguments or existentially witnessed |
-| MEDIUM | `WITNESS_MISSING` | `lean/spec_v4/HomotopyAlgebraLattice.lean:11` | `Path` | predicate `Path` is never applied to ground arguments or existentially witnessed |
-| LOW | `WITNESS_MISSING` | `lean/spec_v4/HorizonFrontierTests.lean:70` | `isSheaf` | predicate `isSheaf` is never applied to ground arguments or existentially witnessed |
+
+## Waived Constant Definitions
+
+| File:Line | Declaration | Reason |
+|---|---|---|
+| `lean/spec_v4/DiscreteChernSimons.lean:75` | `zeroConnection` | Canonical zero U(1) connection. Its constancy is the definition; the file proves plaquetteFlux_zero, gaugeTransform_zero, and chernSimonsAction_zero from it. |
+| `lean/spec_v4/DiscreteHodgeStar.lean:54` | `hodgeStar0` | On the unit-spacing cycle every metric weight equals 1, so the 0-cochain Hodge star is the identity matrix in the chosen basis. The header states this scope explicitly. |
+| `lean/spec_v4/DiscreteHodgeStar.lean:59` | `hodgeStar1` | Inverse metric identification on the unit-spacing cycle; again the identity matrix in the chosen basis, with the flat/unit-spaced scope documented in the header. |
+| `lean/spec_v4/DiscreteYangMills.lean:132` | `trivialConnection` | Canonical identity gauge field. Its constancy is the definition; plaquette_trivial and wilsonAction_trivial are proved from it. |
 

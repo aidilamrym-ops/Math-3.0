@@ -36,7 +36,7 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
 | **Beal Lattice Solver** | Dynamic Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale. |
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
-| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |
+| **Anti-Circularity Gate** | Executable check over the 490-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 490 files. Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
 | **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
 
@@ -275,11 +275,11 @@ All entries below are finite or bounded statements. They do **not** prove the fu
 - **Method:** Constructive witness $s = A - \theta$; `omega`/`linarith` decision.
 - **Axioms:** `[propext, Quot.sound]`.
 
-### 8.4 Sturm-Tarski Deterministic Enclosure
-- **Domain:** Certified Computational Algebra / Recursive Polynomial Root Isolation : lean/spec_v4/SturmTarskiIsolation.lean.
-- **Result:** Formal functional proof of Sturm sequences via strict `fuel : ℕ` termination.
-- **Invariant:** Theorem `sturm_sequence_decidable_enclosure` locks sign variation drop without unbounded decimal leakage.
-- **Axioms:** `[propext, Quot.sound]` (100% sorry-free, exit 0, Commit: f8a71df).
+### 8.4 Finite Sign Variation (Sturm-Tarski Scope)
+- **Domain:** Finite sign-variation arithmetic : lean/spec_v4/SturmTarskiIsolation.lean.
+- **Result:** Polynomial evaluation at rational points, sign-change counting with zeros ignored (`signChanges_pos_neg`, `signChanges_zero_ignored`), and the algebraic one-step remainder identity `sturm_remainder_invariant`.
+- **Scope:** This is **not** a Sturm chain and **not** a real root-isolation algorithm. The former sturm_sequence_decidable_enclosure was a vacuous `∃ roots_count, roots_count ≥ 0` under decorative hypotheses and was removed in Batch 16; the former sturmChain generator repeated its second argument and was also removed. No theorem here counts or isolates roots.
+- **Axioms:** `[propext, Quot.sound]` (sorry-free, exit 0).
 
 ### 8.5 Universal Finitary Information Conservation
 - **Domain:** Finite-capacity discrete systems / information theory : lean/spec_v4/UniversalFinitaryInformationConservation.lean.
@@ -338,33 +338,26 @@ All 4 interconnect modules achieved **absolute eradication of placeholder bugs**
 
 ### 9.1 Horizon Frontier Modules
 
-Five frontier modules extend the formalization to synthetic homotopy theory, categorical logic, and topological quantum physics:
+Four active frontier modules extend the formalization to finite homotopy models and topological quantum arithmetic. One former module (Grothendieck topos bridge) is archived as tautological; see 9.1.2.
 
 ### 9.1.1 Higher Inductive Pushout
-- **Domain:** Synthetic homotopy theory / Homotopy Type Theory (HoTT) : lean/spec_v4/HigherInductivePushout.lean.
-- **Result:** Formalization of homotopy pushouts via quotient types, construction of the circle $S^1$ as a pushout, path induction principle.
-- **Physics Application:** $S^1$ fundamental group $\pi_1(S^1) \simeq \mathbb{Z}$ classifies vortices in 2D XY model (Kosterlitz-Thouless).
+- **Domain:** Finite quotient models / homotopy type theory scaffold : lean/spec_v4/HigherInductivePushout.lean.
+- **Result:** Homotopy pushouts via quotient types, construction of the circle $S^1$ as a two-point identification, and path induction for equality.
+- **Scope:** `S1` is a point-type scaffold. The module does **not** compute $\pi_1(S^1)$. The genuine group content is the explicit model `TorusPi1 := ℤ × ℤ` discussed in 9.1.4.
 - **Axioms:** `[Quot.sound]` only.
 - **Key Theorems:** `glue` (path constructor), `loop` (base = inr()), `path_induction`.
 
-### 9.1.2 Grothendieck Topos Bridge
-- **Domain:** Categorical logic / Topos theory : lean/spec_v4/GrothendieckToposBridge.lean.
-- **Result:** Manual sieve structure, sheaf condition, terminal sheaf theorem (trivial presheaf is a sheaf for any Grothendieck topology).
-- **Physics Application:** Sheafification glues local defect data (e.g., anyon fusion rules) to global topological invariants.
-- **Axioms:** None (pure Lean 4 kernel).
-- **Key Theorems:** `terminal_is_sheaf`, `sieve_construction_valid`.
+### 9.1.2 Grothendieck Topos Bridge (ARCHIVED)
+- **Status:** Archived in Batch 16 as VACUOUS.
+- **Reason:** The isSheaf predicate was defined as `... → True`, so terminal_is_sheaf proved a definitional tautology rather than a sheaf condition. The archived source is under `reports/flawed_artifacts/`.
+- **No live theorem from that module is cited.**
 
 ### 9.1.3 Decidable Homotopy Sphere
-- **Domain:** Algebraic topology / Stable homotopy theory : lean/spec_v4/DecidableHomotopySphere.lean.
-- **Result:** $\pi_n(S^n) \simeq \mathbb{Z}$ isomorphism via degree map, Freudenthal suspension bound $\pi_{n+k}(S^k)$ stable for $n < k-1$, Hopf invariant for $\pi_3(S^2)$.
-- **Physics Applications:**
-  - $\pi_1(S^1) \simeq \mathbb{Z}$: XY model vortices, superfluid circulation.
-  - $\pi_2(S^2) \simeq \mathbb{Z}$: Magnetic skyrmions, hedgehog defects.
-  - $\pi_3(S^3) \simeq \mathbb{Z}$: 3D topological insulator $\theta$-term, Hopfions.
-  - $\pi_4(S^3) \simeq \mathbb{Z}_2$: Quark-hadron transition, SU(2) instantons.
-- **Axioms:** None (pure Lean 4 kernel).
+- **Domain:** Finite model of homotopy groups : lean/spec_v4/DecidableHomotopySphere.lean.
+- **Result:** `HomotopyGroup n X` is defined as `ℤ`. The module proves degree-map algebra for affine maps on `ℤ`, the model-level identity equivalence for every `n`, and the finite Freudenthal stable-range inequality `n + 1 < k → n + k < 2k`.
+- **Scope Note:** This is **not** the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$. No positivity hypothesis is needed because the model is constant in `n`. The former hopf_invariant_one and bott_periodicity_stable existence witnesses were removed in Batch 16; no Hopf-invariant or Bott-periodicity theorem is claimed.
+- **Axioms:** None for the listed theorems (pure Lean 4 kernel).
 - **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.
-- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\pi_n(S^n) \cong \mathbb{Z}$ for a genuine sphere type.
 
 ### 9.1.4 Quantum Torus Extension
 - **Domain:** Higher-dimensional HITs / Non-commutative geometry : lean/spec_v4/HigherInductivePushout.lean.
@@ -387,9 +380,9 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 - **Individual Certificates:** 27 certified Lean 4 certificates (21 core entries + 6 regression-armor entries) bound via cryptographic hash chains to Lean 4 kernel theorems.
 - **Certificate Index:** `reports/certificates/certificate_index.json` (legacy Phase 9 JSON-source registry: 25 entries, separate from the Lean inventory below).
 - **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every Lean file cited in this README. Latest run: **38/38 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.
-- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **493** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **493/493 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`).
+- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **490** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **490/490 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`).
 - **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **53/53 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
-- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest run: **493 files, 2,037 declarations, HIGH=0, verdict PASS**; negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.
+- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest run: **490 files, 2,023 declarations, HIGH=0, verdict PASS**; negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
 
@@ -431,10 +424,10 @@ Five frontier modules extend the formalization to synthetic homotopy theory, cat
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-61895b50474a4807457db036b897bc70fceff6a53895c72ff0ee50d175080a88
+e9d521495bb65479a1ae242fdadb568154de129e0632dc0e71ad30dfdf43ffe0
 ```
 
-**Manifest Rows:** 1,578 files pinned  
+**Manifest Rows:** 1,581 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Mon Nov 09 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -453,9 +446,9 @@ Math-3.0/
 │   ├── UniversalQuantumCoherencePhaseLock.lean
 │   ├── SturmTarskiIsolation.lean
 │   ├── HigherInductivePushout.lean          # HIT pushouts, S¹, T² torus, path induction
-│   ├── GrothendieckToposBridge.lean         # Sites, sieves, terminal sheaf
+│   ├── GrothendieckToposBridge (archived)   # tautological sheaf definition (Batch 16)
 │   ├── DecidableHomotopySphere.lean         # model scaffold for πₙ(Sⁿ)
-│   ├── HorizonFrontierTests.lean            # 12 physics validation tests
+│   ├── HorizonFrontierTests.lean            # finite-model regression fixtures
 │   ├── UniversalFinitaryInformationConservation.lean
 │   ├── MillenniumCollatzGeneralization.lean
 │   ├── FiniteLatticeSpectralGravity.lean
@@ -479,7 +472,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,578-row SHA-256 ledger
+├── manifest.json                  # 1,581-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -503,13 +496,13 @@ Math-3.0/
 | 26 | Final sovereignty seal: 0 hardcodes, 0 regressions, manifest 1327 | ✅ Sealed |
 | 27 | Horizon Theorems Lockdown: Collatz, Singularity, Quantum Phase Lock + SMT Bridge Hardening + manifest sealed | ✅ Sealed |
 | 28–29 | **Sturm-Tarski Complete Real Root Isolation Core (Commit: f8a71df) + Sign Variation Bound Invariant Integration + Topos Categorical Mapping** | ✅ Sealed |
-| 30 | **Horizon Frontier Expansion: HIT pushouts, Topos Bridge, Homotopy Spheres + SMT QF_LIA scripts** | ✅ Sealed |
+| 30 | **Horizon Frontier Expansion: HIT pushouts, homotopy-sphere finite models + SMT QF_LIA scripts (Topos Bridge later archived as tautological in Batch 16)** | ✅ Sealed |
 | 31 | **Quantum Torus Extension: $T^2 = S^1 \times S^1$ HIT, π₁(T²) ≃ ℤ², homology, Euler characteristic** | ✅ Sealed |
 | 32 | **Gate 4 DSITNI denominator audit: general Lean theorem `dsitni_general`, README formula corrected to $(\text{tr}\,\tau)^2$, cross-solver consistency test** | ✅ Sealed |
 | 33 | **Phase 33 Frontier Extension: Quantum MTC, Post-Quantum LWE, Yang-Mills Mass Gap Positivity** | ✅ Sealed |
 | 33+ | **Millennium P vs NP Formal Separation: Bounded Boolean Circuit complexity bounds ($s \cdot d < 2^s$), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |
 | 33++ | **Millennium Navier-Stokes Existence & Smoothness: Viscous energy dissipation bounds & pressure regularity (`lean/spec_v4/MillenniumNavierStokesSmoothness.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |
-| 33+++ | **Millennium Riemann Hypothesis Unified Suite: Critical line zero interval verification (`RiemannCriticalEvidence.lean`), Adversarial zero bounds (`RiemannAdversarialEvidence.lean`), Guinand-Weil explicit trace inequalities (`MillenniumRiemannHypothesis.lean`), and DIBD invariant certificates (`RiemannZetaInvariantCertificate.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |
+| 33+++ | **Millennium Riemann Hypothesis Unified Suite: rational interval records (`RiemannCriticalEvidence.lean`, renamed and scope-limited in Batch 16), Adversarial interval records (`RiemannAdversarialEvidence.lean`), Guinand-Weil explicit trace inequalities (`MillenniumRiemannHypothesis.lean`), and DIBD invariant certificates (`RiemannZetaInvariantCertificate.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |
 | 34 | **Millennium Birch and Swinnerton-Dyer Conjecture: Elliptic curve rank/analytic rank consistency (`MillenniumBirchSwinnertonDyer.lean`) and Tate-Shafarevich group boundedness, Examiner-proof Lean 4 kernel verification** | ✅ Sealed |
 | 35 | **Millennium Hodge Conjecture: Projective algebraic variety cycle rationality and rational Hodge class realization (`lean/spec_v4/MillenniumHodgeConjecture.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |
 | 36 | **Millennium Poincaré Conjecture: Closed 3-manifold trivial fundamental group ($\pi_1(M) = 0$) & Ricci flow non-collapse scalar curvature evolution (`lean/spec_v4/MillenniumPoincareConjecture.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |
@@ -543,7 +536,7 @@ python mcp/t2n/core/repokeeper.py
 # Type-check every Lean file cited by this README
 python tools/readme_lean_audit.py
 
-# Type-check the entire 493-file Lean surface (single worker)
+# Type-check the entire 490-file Lean surface (single worker)
 python tools/full_surface_lean_audit.py --workers 1
 
 # Verify every cited theorem/definition name exists in source
@@ -593,7 +586,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,578 rows, SHA-256 locked: `61895b50474a4807457db036b897bc70fceff6a53895c72ff0ee50d175080a88`  
+> **Manifest:** 1,581 rows, SHA-256 locked: `e9d521495bb65479a1ae242fdadb568154de129e0632dc0e71ad30dfdf43ffe0`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 

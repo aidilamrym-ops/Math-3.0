@@ -171,6 +171,7 @@ class Decl:
     hyp_names: list[str] = field(default_factory=list)
     hyp_types: list[str] = field(default_factory=list)
     var_types: dict[str, str] = field(default_factory=dict)
+    binder_names: list[str] = field(default_factory=list)
     conclusion: str = ""
 
 
@@ -249,6 +250,12 @@ def parse_file(path: Path, rel: str) -> list[Decl]:
                 if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_'.]*", tok):
                     d.var_types[tok] = vm.group(2)
 
+        # All binder names, for ground-argument detection in witness checks.
+        for bm in re.finditer(r"[({]([^(){}]*?):", head):
+            for tok in bm.group(1).replace(",", " ").split():
+                if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_'.]*", tok):
+                    d.binder_names.append(tok)
+
         decls.append(d)
     return decls
 
@@ -263,11 +270,76 @@ CONST_IF_RE = re.compile(r"if\b[^\n]*\bthen\s*(\d+)\s*else\s*\1\s*$", re.S)
 NUMERIC_THEOREM_RE = re.compile(
     r"^\s*(\d+)\s*(≤|<|≥|>|=)\s*(\d+)\s*$"
 )
+TRUE_CONSEQUENCE_RES = (
+    re.compile(r"^∀[^,]*,\s*True\s*$"),
+    re.compile(r"→\s*True\s*$"),
+    re.compile(r"^∃[^,]*,\s*True\s*$"),
+    re.compile(r"^True\s*∧"),
+    re.compile(r"∧\s*True\s*$"),
+)
+
+
+def split_top_level(text: str, seps: str = " ") -> list[str]:
+    parts: list[str] = []
+    depth = 0
+    cur: list[str] = []
+    for ch in text:
+        if ch in "([{⟨":
+            depth += 1
+        elif ch in ")]}⟩":
+            depth = max(0, depth - 1)
+        if depth == 0 and ch in seps:
+            if cur:
+                parts.append("".join(cur).strip())
+                cur = []
+            continue
+        cur.append(ch)
+    if cur:
+        parts.append("".join(cur).strip())
+    return [p for p in parts if p]
+
+
+def is_numeral_comparison(text: str) -> bool:
+    compact = re.sub(r"\s", "", text)
+    return bool(re.fullmatch(r"\d+(?:[*/+]\d+)*(≤|<|≥|>|=)\d+(?:[*/+]\d+)*", compact))
+
+
+def strip_outer_parens(text: str) -> str:
+    """Peel balanced outer parentheses so `(u = u)` and `u = u` compare equal."""
+    s = text.strip()
+    while len(s) >= 2 and s[0] in "([{⟨" and s[-1] in ")]}⟩":
+        depth = 0
+        balanced_outer = True
+        for i, ch in enumerate(s):
+            if ch in "([{⟨":
+                depth += 1
+            elif ch in ")]}⟩":
+                depth -= 1
+                if depth == 0 and i != len(s) - 1:
+                    balanced_outer = False
+                    break
+        if not balanced_outer or depth != 0:
+            break
+        s = s[1:-1].strip()
+    return s
+
+
+def reflexive_equality(text: str) -> bool:
+    eq = re.fullmatch(r"(.+?)\s*=\s*(.+?)", strip_outer_parens(text), re.S)
+    return bool(eq) and re.sub(r"\s", "", eq.group(1)) == re.sub(r"\s", "", eq.group(2))
 
 
 def static_findings(d: Decl) -> list[dict]:
     out: list[dict] = []
     body = d.body.strip()
+
+    if d.kind in ("def", "abbrev") and re.fullmatch(r"Prop", d.conclusion.strip()):
+        rhs = re.sub(r"^:=\s*", "", body).strip()
+        if rhs == "True" or re.search(r"→\s*True\s*$", rhs):
+            out.append(
+                finding(d, "HIGH", "TAUTOLOGICAL_DEFINITION",
+                        f"`{d.name}` is a Prop-valued definition whose body is a tautology")
+            )
 
     if d.kind in ("def", "abbrev") and d.params:
         rhs = re.sub(r"^:=\s*", "", body).strip()
@@ -286,6 +358,34 @@ def static_findings(d: Decl) -> list[dict]:
         concl = d.conclusion.strip()
         if re.fullmatch(r"True", concl):
             out.append(finding(d, "HIGH", "TRUE_CONCLUSION", "theorem states `True`"))
+        if any(rx.search(concl) for rx in TRUE_CONSEQUENCE_RES):
+            out.append(finding(d, "HIGH", "TRIVIAL_TRUE_CONSEQUENCE",
+                               "conclusion contains a vacuous `True` conjunct or codomain"))
+        parts = split_top_level(concl, "∧")
+        if len(parts) > 1:
+            if any(re.fullmatch(r"True", p) for p in parts):
+                out.append(finding(d, "HIGH", "TRIVIAL_CONJUNCT",
+                                   "conclusion contains a bare `True` conjunct"))
+            if all(is_numeral_comparison(p) for p in parts):
+                out.append(finding(d, "MEDIUM", "NUMERAL_ONLY_CHECK",
+                                   "every conjunct is a comparison of numerals"))
+            for p in parts:
+                eq = re.fullmatch(r"(.+?)\s*=\s*(.+?)", p, re.S)
+                if eq and re.sub(r"\s", "", eq.group(1)) == re.sub(r"\s", "", eq.group(2)):
+                    out.append(finding(d, "HIGH", "REFLEXIVE_CONJUNCT",
+                                       f"conjunct `{p[:40]}` is reflexive `X = X`"))
+        disjuncts = split_top_level(concl, "∨")
+        if len(disjuncts) > 1:
+            for p in disjuncts:
+                q = strip_outer_parens(p)
+                if re.fullmatch(r"True", q):
+                    out.append(finding(d, "HIGH", "TRIVIAL_DISJUNCT",
+                                       "conclusion contains a bare `True` disjunct"))
+                    break
+                if reflexive_equality(q):
+                    out.append(finding(d, "HIGH", "TRIVIAL_DISJUNCT",
+                                       f"conclusion contains reflexive disjunct `{q[:40]}`"))
+                    break
         eq = re.fullmatch(r"(.+?)\s*=\s*(.+?)", concl, re.S)
         if eq and re.sub(r"\s", "", eq.group(1)) == re.sub(r"\s", "", eq.group(2)):
             out.append(finding(d, "HIGH", "REFLEXIVE_EQUALITY", "conclusion is `X = X`"))
@@ -347,26 +447,6 @@ COMPARATORS = {"≤": "<=", "≥": ">=", "=": "==", "<": "<", ">": ">"}
 
 class Unsupported(Exception):
     pass
-
-
-def split_top_level(text: str, seps: str = " ") -> list[str]:
-    parts: list[str] = []
-    depth = 0
-    cur: list[str] = []
-    for ch in text:
-        if ch in "([{⟨":
-            depth += 1
-        elif ch in ")]}⟩":
-            depth = max(0, depth - 1)
-        if depth == 0 and ch in seps:
-            if cur:
-                parts.append("".join(cur).strip())
-                cur = []
-            continue
-        cur.append(ch)
-    if cur:
-        parts.append("".join(cur).strip())
-    return [p for p in parts if p]
 
 
 def inline_predicate(name: str, args: list[str], defs: dict[str, Decl], depth: int = 0) -> str | None:
@@ -597,6 +677,8 @@ def compile_mutant(tmp: Path, payload: str) -> bool:
             cwd=str(LEAN_ROOT),
             capture_output=True,
             text=True,
+            encoding="utf-8",
+            errors="replace",
             timeout=600,
         )
         return proc.returncode == 0
@@ -610,6 +692,102 @@ def compile_mutant(tmp: Path, payload: str) -> bool:
 
 
 # ---------------------------------------------------------------------------
+# Witness coverage helpers
+# ---------------------------------------------------------------------------
+def application_args(text: str, start: int) -> list[str]:
+    """Extract whitespace-separated application arguments starting at ``start``."""
+    n = len(text)
+    i = start
+    while i < n and text[i].isspace():
+        i += 1
+    if i >= n or text[i] in "↔→∧∨:,)\n":
+        return []
+    args: list[str] = []
+    while i < n:
+        while i < n and text[i].isspace():
+            i += 1
+        if i >= n or text[i] in "↔→∧∨:,)\n":
+            break
+        ch = text[i]
+        if ch in "([{⟨":
+            close = {"(": ")", "[": "]", "{": "}", "⟨": "⟩"}[ch]
+            depth = 0
+            j = i
+            while j < n:
+                if text[j] == ch:
+                    depth += 1
+                elif text[j] == close:
+                    depth -= 1
+                    if depth == 0:
+                        j += 1
+                        break
+                j += 1
+            args.append(text[i:j].strip())
+            i = j
+            continue
+        m = re.match(r"[^\s()\[\]{}⟨⟩↔→∧∨:,]+", text[i:])
+        if not m:
+            break
+        args.append(m.group(0))
+        i += m.end()
+    return args
+
+
+def predicate_has_ground_witness(
+    pname: str, pdef: Decl, all_decls: list[Decl], ground_names: set[str]
+) -> bool:
+    word = re.compile(r"\b" + re.escape(pname) + r"\b")
+    for d in all_decls:
+        if d is pdef:
+            continue
+        stmt = d.statement
+        if "∃" in stmt and word.search(stmt):
+            return True
+        for m in word.finditer(stmt):
+            args = application_args(stmt, m.end())
+            if not args:
+                continue
+            if not d.binder_names and "∀" not in stmt and "∃" not in stmt:
+                return True
+            for arg in args:
+                if re.search(r"\d", arg):
+                    return True
+                if any(re.search(r"\b" + re.escape(g) + r"\b", arg) for g in ground_names):
+                    return True
+    return False
+
+
+def is_prop_hypothesis(typ: str, prop_names: set[str]) -> bool:
+    typ = typ.strip()
+    if not typ:
+        return False
+    if re.search(r"[<≤>≥=≠¬∧∨→∀∃]", typ):
+        return True
+    head = re.match(r"([A-Za-z_][A-Za-z0-9_'.]*)", typ)
+    if head and head.group(1) in prop_names:
+        return True
+    return typ in ("True", "False")
+
+
+# ---------------------------------------------------------------------------
+# Waiver registry (only canonical constant definitions may be waived)
+# ---------------------------------------------------------------------------
+ALLOWED_WAIVER_CODES = {"CONSTANT_DEFINITION"}
+
+
+def load_waivers(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    rows = data.get("waivers", data if isinstance(data, list) else [])
+    for row in rows:
+        code = row.get("code", "")
+        if code not in ALLOWED_WAIVER_CODES:
+            raise SystemExit(f"invalid waiver code `{code}` for {row.get('file')}:{row.get('declaration')}")
+    return rows
+
+
+# ---------------------------------------------------------------------------
 # Driver
 # ---------------------------------------------------------------------------
 def iter_lean(surface: Path):
@@ -617,7 +795,7 @@ def iter_lean(surface: Path):
         yield surface
         return
     for path in sorted(surface.rglob("*.lean")):
-        if any(part in EXCLUDED_PARTS for part in path.parts):
+        if any(part in EXCLUDED_PARTS for part in path.parts) or path.name.startswith("_mut_"):
             continue
         yield path
 
@@ -631,6 +809,8 @@ def main() -> int:
     parser.add_argument("--strict", action="store_true", help="treat MEDIUM findings as failures")
     parser.add_argument("--regression", action="store_true", help="expect findings (negative control)")
     parser.add_argument("--label", default="", help="suffix for the report filenames")
+    parser.add_argument("--waivers", default=str(DEFAULT_REPORTS / "substantiveness_waivers.json"))
+    parser.add_argument("--no-waivers", action="store_true")
     args = parser.parse_args()
 
     surfaces = (
@@ -661,6 +841,16 @@ def main() -> int:
         for d in all_decls
         if d.kind in ("def", "abbrev") and d.params and re.search(r":\s*Prop\s*$", d.statement)
     }
+    ground_names = {
+        d.name
+        for d in all_decls
+        if d.kind in ("def", "abbrev", "structure", "inductive") and not d.params
+    }
+    prop_names = {
+        d.name
+        for d in all_decls
+        if re.search(r":\s*Prop\s*$", d.statement)
+    }
     findings: list[dict] = []
 
     for d in all_decls:
@@ -678,22 +868,13 @@ def main() -> int:
                                             f"trivial witness model {st['model']}"))
 
     # Witness coverage for Prop-valued predicates
-    predicate_names = {d.name: d for d in all_decls if d.kind in ("def", "abbrev") and re.search(r":\s*Prop\s*$", d.statement)}
+    predicate_names = {
+        d.name: d
+        for d in all_decls
+        if d.kind in ("def", "abbrev") and re.search(r":\s*Prop\s*$", d.statement)
+    }
     for pname, pdef in predicate_names.items():
-        witnessed = False
-        for d in all_decls:
-            if d.file == pdef.file and d.name == pname:
-                continue
-            stmt = d.statement
-            if pname not in stmt:
-                continue
-            if re.search(r"∃", stmt):
-                witnessed = True
-                break
-            if re.search(r"\b" + re.escape(pname) + r"\b\s*\(?\s*[-(]?\s*\d", stmt):
-                witnessed = True
-                break
-        if not witnessed:
+        if not predicate_has_ground_witness(pname, pdef, all_decls, ground_names):
             klass = next((r["class"] for r in scope_rows if r["file"] == pdef.file), "pure-theorem")
             sev = "MEDIUM" if klass == "bounded-model" else "LOW"
             findings.append(finding(pdef, sev, "WITNESS_MISSING",
@@ -709,13 +890,25 @@ def main() -> int:
     # Optional mutation run
     mutation_rows: list[dict] = []
     if args.mutate:
-        candidates = [d for d in all_decls if d.kind in ("theorem", "lemma") and d.hyp_names]
-        for d in candidates[: args.mutation_limit]:
+        candidates = [
+            d
+            for d in all_decls
+            if d.kind in ("theorem", "lemma")
+            and d.hyp_names
+            and is_prop_hypothesis(d.hyp_types[0], prop_names)
+        ]
+        limit = len(candidates) if args.mutation_limit <= 0 else args.mutation_limit
+        for index, d in enumerate(candidates[:limit], start=1):
             path = ROOT / d.file
             mutated = mutate_first_hypothesis(path, d)
             if not mutated:
                 continue
             tmp = LEAN_ROOT / "spec_v4" / f"_mut_{path.stem}_{d.name.replace('.', '_')}.lean"
+            print(
+                f"[mut {index}/{min(limit, len(candidates))}] {d.file}::{d.name}",
+                file=sys.stderr,
+                flush=True,
+            )
             survived = compile_mutant(tmp, mutated[1])
             mutation_rows.append({
                 "file": d.file, "declaration": d.name,
@@ -726,9 +919,46 @@ def main() -> int:
                 findings.append(finding(d, "HIGH", "PREMISE_MUTATION_SURVIVED",
                                         f"weakening `{d.hyp_names[0]}` to True still compiles"))
 
+    # Canonical constant definitions can be waived by an explicit registry.
+    waived: list[dict] = []
+    waiver_path = Path(args.waivers).resolve()
+    waivers = [] if args.no_waivers else load_waivers(waiver_path)
+    if waivers:
+        active: list[dict] = []
+        for f in findings:
+            match = next(
+                (
+                    w
+                    for w in waivers
+                    if w["file"] == f["file"]
+                    and w["declaration"] == f["declaration"]
+                    and w["code"] == f["code"]
+                ),
+                None,
+            )
+            if match is None:
+                active.append(f)
+                continue
+            row = dict(f)
+            row["waived"] = True
+            row["waiver_reason"] = match.get("reason", "")
+            waived.append(row)
+        findings = active
+
     high = [f for f in findings if f["severity"] == "HIGH"]
     medium = [f for f in findings if f["severity"] == "MEDIUM"]
     low = [f for f in findings if f["severity"] == "LOW"]
+
+    mutation_summary = {
+        "total": len(mutation_rows),
+        "killed": sum(1 for m in mutation_rows if m["verdict"] == "KILLED"),
+        "survived": sum(1 for m in mutation_rows if m["verdict"] == "SURVIVED"),
+    }
+    mutation_summary["survival_rate"] = (
+        round(mutation_summary["survived"] / mutation_summary["total"], 4)
+        if mutation_summary["total"]
+        else None
+    )
 
     summary = {
         "generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -737,10 +967,12 @@ def main() -> int:
         "declarations": len(all_decls),
         "predicates": len(predicate_names),
         "z3_available": Z3_AVAILABLE,
+        "waivers_applied": waived,
         "counts": {"HIGH": len(high), "MEDIUM": len(medium), "LOW": len(low)},
         "verdict": "PASS" if not high and (not args.strict or not medium) else "FAIL",
         "findings": findings,
         "mutations": mutation_rows,
+        "mutation_summary": mutation_summary,
         "scope": scope_rows,
     }
 
@@ -780,6 +1012,7 @@ def main() -> int:
         f"- Lean files: **{len(files)}**  declarations: **{len(all_decls)}**  predicates: **{len(predicate_names)}**",
         f"- Z3 premise check: **{'available' if Z3_AVAILABLE else 'NOT RUN'}**",
         f"- Findings: HIGH **{len(high)}**, MEDIUM **{len(medium)}**, LOW **{len(low)}**",
+        f"- Waived constant definitions: **{len(waived)}**",
         f"- Verdict: **{summary['verdict']}**",
         "",
     ]
@@ -791,9 +1024,22 @@ def main() -> int:
             )
         md.append("")
     if mutation_rows:
-        md += ["## Mutation Results", "", "| File | Declaration | Hypothesis | Verdict |", "|---|---|---|---|"]
+        md += [
+            "## Mutation Results",
+            "",
+            f"- Mutants: **{mutation_summary['total']}**  KILLED: **{mutation_summary['killed']}**  "
+            f"SURVIVED: **{mutation_summary['survived']}**  survival rate: **{mutation_summary['survival_rate']}**",
+            "",
+            "| File | Declaration | Hypothesis | Verdict |",
+            "|---|---|---|---|",
+        ]
         for m in mutation_rows:
             md.append(f"| `{m['file']}` | `{m['declaration']}` | `{m['hypothesis']}` | **{m['verdict']}** |")
+        md.append("")
+    if waived:
+        md += ["## Waived Constant Definitions", "", "| File:Line | Declaration | Reason |", "|---|---|---|"]
+        for w in waived:
+            md.append(f"| `{w['file']}:{w['line']}` | `{w['declaration']}` | {w['waiver_reason']} |")
         md.append("")
     if not findings:
         md.append("No substantiveness findings detected.")
@@ -804,9 +1050,11 @@ def main() -> int:
 
     print(
         f"substantiveness: files={len(files)} decls={len(all_decls)} "
-        f"HIGH={len(high)} MEDIUM={len(medium)} LOW={len(low)} "
+        f"HIGH={len(high)} MEDIUM={len(medium)} LOW={len(low)} waived={len(waived)} "
         f"z3={'on' if Z3_AVAILABLE else 'off'} verdict={summary['verdict']}"
     )
+    if mutation_rows:
+        print(f"mutation: {mutation_summary}")
     if args.regression:
         print(f"regression: {summary['regression']}")
     return 0 if summary["verdict"] == "PASS" else 1

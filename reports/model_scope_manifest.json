@@ -1,11 +1,17 @@
 {
-  "generated": "2026-11-16T01:11:26Z",
+  "generated": "2026-11-16T02:50:13Z",
   "counts": {
-    "bounded-model": 432,
-    "pure-theorem": 61,
-    "scope_undeclared": 471
+    "bounded-model": 431,
+    "pure-theorem": 60,
+    "scope_undeclared": 465
   },
   "files": [
+    {
+      "file": "lean/spec_v4/_mut_ErdosSzekeresRamsey_pigeonhole_finite.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
     {
       "file": "lean/spec_v4/ActualInfinityRefutation.lean",
       "class": "bounded-model",
@@ -2539,12 +2545,6 @@
       "scope_text": null
     },
     {
-      "file": "lean/spec_v4/ContinuumOmegaLimitDefeat.lean",
-      "class": "bounded-model",
-      "scope_declared": false,
-      "scope_text": null
-    },
-    {
       "file": "lean/spec_v4/DecidableHomotopySphere.lean",
       "class": "bounded-model",
       "scope_declared": false,
@@ -2636,7 +2636,7 @@
     },
     {
       "file": "lean/spec_v4/DiscreteMorseTheory.lean",
-      "class": "bounded-model",
+      "class": "pure-theorem",
       "scope_declared": true,
       "scope_text": "-- Cakupan:"
     },
@@ -2683,12 +2683,6 @@
       "scope_text": "-- Cakupan:"
     },
     {
-      "file": "lean/spec_v4/ForensicEvidence.lean",
-      "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
-    },
-    {
       "file": "lean/spec_v4/FtcIdentityCollapse.lean",
       "class": "bounded-model",
       "scope_declared": false,
@@ -2719,12 +2713,6 @@
       "scope_text": null
     },
     {
-      "file": "lean/spec_v4/GrothendieckToposBridge.lean",
-      "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
-    },
-    {
       "file": "lean/spec_v4/HigherInductivePushout.lean",
       "class": "bounded-model",
       "scope_declared": false,
@@ -2733,14 +2721,14 @@
     {
       "file": "lean/spec_v4/HomotopyAlgebraLattice.lean",
       "class": "bounded-model",
-      "scope_declared": false,
-      "scope_text": null
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
     },
     {
       "file": "lean/spec_v4/HorizonFrontierTests.lean",
-      "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
     },
     {
       "file": "lean/spec_v4/LandauerBekensteinBound.lean",
@@ -2805,8 +2793,8 @@
     {
       "file": "lean/spec_v4/RiemannCriticalEvidence.lean",
       "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
     },
     {
       "file": "lean/spec_v4/RiemannCriticalLineSolver.lean",
@@ -2877,8 +2865,8 @@
     {
       "file": "lean/spec_v4/SturmTarskiIsolation.lean",
       "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
     },
     {
       "file": "lean/spec_v4/TorusWindingInvariant.lean",

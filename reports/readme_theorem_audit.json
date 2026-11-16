@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-16T01:13:44.097919+00:00",
+  "generated": "2026-11-16T02:45:45.168296+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "d18e4dbd0776d264d64f98a72cf89e02a98f677d83ab506dc97ef2e6dc82f908",
+  "readme_semantic_sha256": "fbc603f67a4f4c2d76d2825c305e1a321a6340a3be1ac08c4da192b5632d6372",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 53,
-  "resolved": 53,
+  "cited_identifiers": 51,
+  "resolved": 51,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -17,9 +17,6 @@
     ],
     "actual_infinity_violates_conservation": [
       "lean/spec_v4/ActualInfinityRefutation.lean"
-    ],
-    "bott_periodicity_stable": [
-      "lean/spec_v4/HorizonFrontierTests.lean"
     ],
     "bps_bound": [
       "lean/spec_v4/LatticeInstantonBound.lean"
@@ -49,10 +46,12 @@
       "lean/spec_v4/ContinuityRefutation.lean"
     ],
     "degreeMap_affine": [
-      "lean/spec_v4/DecidableHomotopySphere.lean"
+      "lean/spec_v4/DecidableHomotopySphere.lean",
+      "lean/spec_v4/HorizonFrontierTests.lean"
     ],
     "degreeMap_linear": [
-      "lean/spec_v4/DecidableHomotopySphere.lean"
+      "lean/spec_v4/DecidableHomotopySphere.lean",
+      "lean/spec_v4/HorizonFrontierTests.lean"
     ],
     "dpi_card_nonexpansive": [
       "lean/spec_v4/ShannonEntropyDPI.lean"
@@ -83,13 +82,11 @@
       "lean/spec_v4/HorizonFrontierTests.lean"
     ],
     "freudenthal_stable_witness": [
-      "lean/spec_v4/DecidableHomotopySphere.lean"
+      "lean/spec_v4/DecidableHomotopySphere.lean",
+      "lean/spec_v4/HorizonFrontierTests.lean"
     ],
     "hilbert_hotel_obstruction": [
       "lean/spec_v4/ActualInfinityRefutation.lean"
-    ],
-    "hopf_invariant_one": [
-      "lean/spec_v4/HorizonFrontierTests.lean"
     ],
     "hyperbolic_not_diagonalizable": [
       "lean/spec_v4/EvenUnimodularObstruction.lean"
@@ -129,8 +126,7 @@
       "lean/spec_v4/HorizonFrontierTests.lean"
     ],
     "pi_n_sphere_n_iso": [
-      "lean/spec_v4/DecidableHomotopySphere.lean",
-      "lean/spec_v4/HorizonFrontierTests.lean"
+      "lean/spec_v4/DecidableHomotopySphere.lean"
     ],
     "pi_n_sphere_n_iso_id": [
       "lean/spec_v4/DecidableHomotopySphere.lean"
@@ -141,15 +137,14 @@
     "ramsey_one_edge": [
       "lean/spec_v4/ErdosSzekeresRamsey.lean"
     ],
-    "sieve_construction_valid": [
-      "lean/spec_v4/HorizonFrontierTests.lean"
-    ],
-    "sturm_sequence_decidable_enclosure": [
+    "signChanges_pos_neg": [
       "lean/spec_v4/SturmTarskiIsolation.lean"
     ],
-    "terminal_is_sheaf": [
-      "lean/spec_v4/GrothendieckToposBridge.lean",
-      "lean/spec_v4/HorizonFrontierTests.lean"
+    "signChanges_zero_ignored": [
+      "lean/spec_v4/SturmTarskiIsolation.lean"
+    ],
+    "sturm_remainder_invariant": [
+      "lean/spec_v4/SturmTarskiIsolation.lean"
     ],
     "torus_betti_numbers": [
       "lean/spec_v4/HigherInductivePushout.lean"

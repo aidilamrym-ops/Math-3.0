@@ -1,0 +1,30 @@
+{
+  "generated": "2026-11-16",
+  "note": "Only CONSTANT_DEFINITION findings may be waived. Each entry is a canonical object whose constancy is the mathematical content, not a vacuous placeholder.",
+  "waivers": [
+    {
+      "file": "lean/spec_v4/DiscreteChernSimons.lean",
+      "declaration": "zeroConnection",
+      "code": "CONSTANT_DEFINITION",
+      "reason": "Canonical zero U(1) connection. Its constancy is the definition; the file proves plaquetteFlux_zero, gaugeTransform_zero, and chernSimonsAction_zero from it."
+    },
+    {
+      "file": "lean/spec_v4/DiscreteYangMills.lean",
+      "declaration": "trivialConnection",
+      "code": "CONSTANT_DEFINITION",
+      "reason": "Canonical identity gauge field. Its constancy is the definition; plaquette_trivial and wilsonAction_trivial are proved from it."
+    },
+    {
+      "file": "lean/spec_v4/DiscreteHodgeStar.lean",
+      "declaration": "hodgeStar0",
+      "code": "CONSTANT_DEFINITION",
+      "reason": "On the unit-spacing cycle every metric weight equals 1, so the 0-cochain Hodge star is the identity matrix in the chosen basis. The header states this scope explicitly."
+    },
+    {
+      "file": "lean/spec_v4/DiscreteHodgeStar.lean",
+      "declaration": "hodgeStar1",
+      "code": "CONSTANT_DEFINITION",
+      "reason": "Inverse metric identification on the unit-spacing cycle; again the identity matrix in the chosen basis, with the flat/unit-spaced scope documented in the header."
+    }
+  ]
+}

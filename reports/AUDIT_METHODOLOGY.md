@@ -51,14 +51,38 @@ receipts record the mutants and their verdicts.
 
 * `CONSTANT_DEFINITION` — a parameterised definition returns the same literal
   for every input (the `plaquette := 1`, `wilsonAction := 0` failure mode).
-* `TRUE_CONCLUSION`, `REFLEXIVE_EQUALITY` — the statement is `True` or `X = X`.
+* `TAUTOLOGICAL_DEFINITION` — a `Prop`-valued definition whose body is `True`
+  or ends in `→ True`; this is the `isSheaf := ... → True` failure mode.
+* `TRUE_CONCLUSION`, `TRIVIAL_TRUE_CONSEQUENCE`, `TRIVIAL_CONJUNCT` — the
+  statement is `True`, has a `True` conjunct, or a vacuous `True` codomain.
+* `TRIVIAL_DISJUNCT` — the conclusion has a top-level `∨` disjunct that is
+  `True` or a reflexive `X = X`, so the disjunction is vacuous.
+* `REFLEXIVE_EQUALITY`, `REFLEXIVE_CONJUNCT` — the statement or one of its
+  conjuncts is `X = X`.
 * `DECORATIVE_HYPOTHESIS` / `UNUSED_HYPOTHESIS` — a named hypothesis is never
   referenced (usage is downgraded when `omega`/`simp`/`linarith` may consume
   the context implicitly).
 * `NUMERAL_ONLY_CHECK`, `LEM_ONLY_PROOF`, `TRIVIAL_EXISTENTIAL` — the proof is
   arithmetic on numerals, `Classical.em`, or a bare-numeral witness.
 * `WITNESS_MISSING` — a `Prop` predicate is never applied to ground arguments
-  and never existentially witnessed.
+  and never existentially witnessed.  A ground application is an application
+  where at least one argument is a numeral or a zero-parameter definition; this
+  catches `EvenForm hyperbolic` and `DiscreteMorseFunction intervalMorseFunction
+  IntervalGraph`, not only literal numerals.
+
+### Waived constant definitions
+
+Some constant definitions are the intended mathematical object: the zero
+connection, the identity gauge field, and the identity Hodge star on a
+unit-spaced cycle.  These may be waived through
+`reports/substantiveness_waivers.json`, subject to three rules:
+
+1. only the `CONSTANT_DEFINITION` code is waivable;
+2. each entry names the file, declaration, and a written justification;
+3. waived findings remain in the JSON receipt under `waivers_applied` and in
+   the Markdown report, but do not count toward the active MEDIUM/HIGH totals.
+
+The gate refuses to load a waiver with any other code.
 
 ## 5. Pure theorem versus bounded model
 
@@ -80,17 +104,25 @@ never be cited as a proof of the corresponding continuum conjecture.
 ```text
 python tools/omega_audit/substantiveness_gate.py
 python tools/omega_audit/substantiveness_gate.py --surface reports/flawed_artifacts --regression --label regression
-python tools/omega_audit/substantiveness_gate.py --surface lean/spec_v4/DiscreteIndexTheorem.lean --mutate --mutation-limit 4
+python tools/omega_audit/substantiveness_gate.py --mutate --mutation-limit 0 --label mutation
 ```
 
 Exit codes: `0` PASS (no HIGH), `1` FAIL, `2` NOT RUN (no files matched).
 
+When `--label mutation` is used the gate writes
+`reports/substantiveness_gate_mutation.json` and `.md` and records the
+`mutation_summary` block: total mutants, KILLED, SURVIVED, and survival rate.
+`--mutation-limit 0` means "all candidates".
+
 ## Receipts
 
 * `reports/substantiveness_gate.json` — full surface baseline.
+* `reports/substantiveness_gate_mutation.json` — full mutation campaign.
 * `reports/substantiveness_gate_regression.json` — negative control over
   `reports/flawed_artifacts/`; the gate must detect the archived vacuous files.
 * `reports/model_scope_manifest.json` — per-file scope class and declaration.
+* `reports/substantiveness_waivers.json` — reviewed exceptions (constant
+  definitions only).
 
 ## Known limitations
 
@@ -100,10 +132,17 @@ Exit codes: `0` PASS (no HIGH), `1` FAIL, `2` NOT RUN (no files matched).
 * Witness detection is syntactic: a ground application in any declaration
   counts.  It proves inhabitance is *exhibited*, not that the witness is
   mathematically meaningful.
-* Mutation is limited to hypotheses of the shape `(h : P)` and one mutant per
-  theorem; it is a signal, not a complete proof of premise relevance.
+* Mutation is limited to hypotheses of the shape `(h : P)` whose binder type
+  looks propositional (comparisons/logical operators or a known `Prop`
+  predicate); data hypotheses such as `(h : ℤ)` are skipped. One mutant per
+  theorem is a signal, not a complete proof of premise relevance.
 * `CONSTANT_DEFINITION` can be legitimate (unit sections, volume forms such as
-  `hodgeStar0 = 1`); the finding is MEDIUM and must be justified in review.
+  `hodgeStar0 = 1`); the finding is MEDIUM and requires an explicit waiver
+  entry with a written justification.
+* A bounded numeric fact must not be relabeled as a resolution of an open
+  problem. `ContinuumOmegaLimitDefeat.lean` was archived in Batch 16 because
+  `2 ^ k ≤ 1024` for `k ≤ 10` was presented as a resolution of the continuum
+  hypothesis; the finite arithmetic did not support that claim.
 
 These limits are why the automated gate is paired with the batch-by-batch
 adversarial audit and the archival of defective certificates under

@@ -2,17 +2,20 @@
 -- Math 3.0 / Fase 62: Teori Morse Diskrit
 --
 -- Cakupan:
---   * definisi fungsi Morse diskrit pada graf/kisi (tiap vertex punya
+--   * definisi fungsi Morse diskrit pada graf hingga (tiap vertex punya
 --     paling banyak 1 tetangga bernilai lebih kecil dan 1 lebih besar);
 --   * definisi sel kritis indeks 0 (minimum lokal) dan indeks 1 (maksimum lokal);
---   * gradien diskrit dan kompleks Morse hingga;
---   * ketidaksamaan Morse hingga: #(minimum) ≥ 1, #(maksimum) ≥ 1;
---   * verifikasi konkret untuk interval 1D dan siklus C4 (torus kasar).
+--   * gradien diskrit dan struktur kompleks Morse hingga;
+--   * verifikasi konkret untuk interval 1D dan siklus C4.
 --
 -- Batas klaim:
 --   * Ini BUKAN teori Morse kontinu pada manifold mulus.
 --   * Tidak ada klaim tentang handlebody, h-cobordisme, teori Smale,
 --     atau homologi Morse penuh.
+--   * `Cycle4Graph` adalah siklus C4, BUKAN 1-skeleton torus T²; nama lama
+--     "torus" hanya label historis dan telah dihapus.
+--   * `critical_count_*` hanyalah batas kardinalitas; ini bukan ketidaksamaan
+--     Morse homologis (mᵢ ≥ bᵢ) karena homologi tidak dihitung di sini.
 --   * Yang dibuktikan hanya aljabar hingga pada Finset berhingga.
 
 import Mathlib.Data.Finset.Basic
@@ -115,64 +118,74 @@ def intervalMorseComplex : MorseComplex (Fin 3) :=
     critical1 := critical1 intervalMorseFunction IntervalGraph,
     gradient := DiscreteGradient intervalMorseFunction IntervalGraph }
 
-/-- Siklus C4 (pendekatan torus kasar): 0 -- 1 -- 2 -- 3 -- 0. -/
-def TorusGraph : SimplicialComplex (Fin 4) :=
+/-- Siklus C4: 0 -- 1 -- 2 -- 3 -- 0. Ini bukan 1-skeleton torus. -/
+def Cycle4Graph : SimplicialComplex (Fin 4) :=
   { vertices := Finset.univ,
     edges := { (0, 1), (1, 2), (2, 3), (3, 0) } }
 
 /-- Fungsi Morse pada siklus: f = [0, 1, 1, 0]. -/
-def torusMorseFunction : Fin 4 → ℕ :=
+def cycle4MorseFunction : Fin 4 → ℕ :=
   fun i => match i.val with
     | 0 => 0
     | 1 => 1
     | 2 => 1
     | _ => 0
 
-/-- Verifikasi fungsi Morse pada siklus. -/
-theorem torus_is_morse :
-    DiscreteMorseFunction torusMorseFunction TorusGraph := by
+/-- Verifikasi fungsi Morse pada siklus C4. -/
+theorem cycle4_is_morse :
+    DiscreteMorseFunction cycle4MorseFunction Cycle4Graph := by
   intro v _hv
   fin_cases v
   all_goals decide
 
 /-- Sel kritis indeks 0 pada siklus: vertex 0. -/
-theorem torus_critical_min :
-    IsCriticalIndex0 torusMorseFunction TorusGraph 0 := by
+theorem cycle4_critical_min :
+    IsCriticalIndex0 cycle4MorseFunction Cycle4Graph 0 := by
   simp only [IsCriticalIndex0]
   constructor
-  · simp [TorusGraph]
+  · simp [Cycle4Graph]
   · decide
 
 /-- Sel kritis indeks 1 pada siklus: vertex 2. -/
-theorem torus_critical_max :
-    IsCriticalIndex1 torusMorseFunction TorusGraph 2 := by
+theorem cycle4_critical_max :
+    IsCriticalIndex1 cycle4MorseFunction Cycle4Graph 2 := by
   simp only [IsCriticalIndex1]
   constructor
-  · simp [TorusGraph]
+  · simp [Cycle4Graph]
   · decide
 
 /-- Jumlah minimum pada siklus: tepat 2. -/
-theorem torus_critical0_card :
-    (critical0 torusMorseFunction TorusGraph).card = 2 := by
+theorem cycle4_critical0_card :
+    (critical0 cycle4MorseFunction Cycle4Graph).card = 2 := by
   decide
 
 /-- Jumlah maksimum pada siklus: tepat 2. -/
-theorem torus_critical1_card :
-    (critical1 torusMorseFunction TorusGraph).card = 2 := by
+theorem cycle4_critical1_card :
+    (critical1 cycle4MorseFunction Cycle4Graph).card = 2 := by
   decide
 
-/-- Ketidaksamaan Morse hingga untuk interval: #minimum ≥ 1 (β₀ = 1). -/
-theorem morse_inequality_interval :
+/-- Pada C4, sel kritis indeks 0 dan 1 berjumlah sama; selisihnya nol. -/
+theorem cycle4_critical_euler :
+    (critical0 cycle4MorseFunction Cycle4Graph).card -
+      (critical1 cycle4MorseFunction Cycle4Graph).card = 0 := by
+  decide
+
+/-- Batas kardinalitas interval: #minimum ≥ 1 (bukan ketidaksamaan Morse homologis). -/
+theorem critical_count_interval_ge_one :
     (critical0 intervalMorseFunction IntervalGraph).card ≥ 1 := by
   have h := interval_critical0_card
   omega
 
-/-- Ketidaksamaan Morse hingga untuk siklus: #minimum ≥ 1 dan #maksimum ≥ 1. -/
-theorem morse_inequality_torus :
-    (critical0 torusMorseFunction TorusGraph).card ≥ 1 ∧
-    (critical1 torusMorseFunction TorusGraph).card ≥ 1 := by
-  have h0 := torus_critical0_card
-  have h1 := torus_critical1_card
+/-- Batas kardinalitas siklus C4: #minimum ≥ 1 dan #maksimum ≥ 1. -/
+theorem critical_count_cycle4_ge_one :
+    (critical0 cycle4MorseFunction Cycle4Graph).card ≥ 1 ∧
+    (critical1 cycle4MorseFunction Cycle4Graph).card ≥ 1 := by
+  have h0 := cycle4_critical0_card
+  have h1 := cycle4_critical1_card
   constructor <;> omega
+
+#print axioms interval_is_morse
+#print axioms cycle4_is_morse
+#print axioms cycle4_critical_euler
 
 end Math30.Topology.DiscreteMorse

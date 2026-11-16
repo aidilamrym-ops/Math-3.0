@@ -68,9 +68,31 @@ theorem harmonic1_iff_zero (h : Chain1) :
     funext e
     fin_cases e <;> simp [laplacian1]
 
+/-- Ground witness: the nonzero constant 0-cochain `3` is harmonic. -/
+theorem harmonic0_constant_three : harmonic0 (fun _ : Fin 3 => (3 : ℤ)) := by
+  funext v
+  fin_cases v <;> simp [laplacian0]
+
+/-- Ground witness: the zero 1-cochain is harmonic. -/
+theorem harmonic1_zero : harmonic1 (fun _ : Fin 2 => (0 : ℤ)) := by
+  funext e
+  fin_cases e <;> simp [laplacian1]
+
+/-- Non-example: the indicator of the first edge is not harmonic, so the
+    harmonic 1-cochain space is genuinely a proper subspace. -/
+theorem harmonic1_edge_indicator_not :
+    ¬ harmonic1 (fun e : Fin 2 => if e = 0 then (1 : ℤ) else 0) := by
+  intro h
+  have hz := (harmonic1_iff_zero _).mp h
+  have h0 := congrFun hz 0
+  simp at h0
+
 theorem hodge_spec_certificate :
     (∀ h : Chain0, harmonic0 h ↔ (h 0 = h 1 ∧ h 1 = h 2)) ∧
     (∀ h : Chain1, harmonic1 h ↔ h = 0) :=
   ⟨harmonic0_iff_constant, harmonic1_iff_zero⟩
+
+#print axioms hodge_spec_certificate
+#print axioms harmonic1_edge_indicator_not
 
 end Math30.Topology.DiscreteHodgeTheoremSpec

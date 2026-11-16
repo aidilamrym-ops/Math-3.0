@@ -1,16 +1,26 @@
 import Init.Data.Nat.Basic
 
 /-!
-# Riemann Adversarial Evidence (Math 3.0 / Phase 7)
+# Riemann Adversarial Evidence (Math 3.0 / legacy Phase 7)
 
-Exact rational bounds for the ten adversarially audited zero boxes.
-The proofs use core `decide` over Nat cross-multiplication.
-No Mathlib dependency. No placeholders; no admit or axiom.
+Rational interval records used by the legacy stress-test harness. Each record
+stores two nonnegative integer endpoints with a cross-multiplied ordering
+proof. The proofs use core `decide` over Nat cross-multiplication.
+
+## Claim limits
+
+* This file does NOT evaluate the Riemann zeta function.
+* It does NOT prove that any recorded `t` is a zero of zeta, that the ten
+  records correspond to actual zeros, or that any zero lies on the critical
+  line Re(s) = 1/2.
+* The historical `Box`/`boxN` names are retained for tool compatibility; they
+  denote numeric interval records only.
 -/
 
 namespace Math30.Riemann.Adversarial
 
-/-- Exact rational zero box: loNum / loDen <= t <= hiNum / hiDen. -/
+/-- Rational interval record: `loNum / loDen <= t <= hiNum / hiDen`.
+    Historical name `ZeroBox`; the structure contains no zeta evaluation. -/
 structure ZeroBox where
   loNum : Nat
   loDen : Nat
@@ -18,7 +28,7 @@ structure ZeroBox where
   hiDen : Nat
   h_nonempty : loNum * hiDen <= hiNum * loDen
 
-/-- Adversarial box for zero 1. -/
+/-- Rational interval record 1 (numeric data only). -/
 def box1 : ZeroBox := {
   loNum := 353368128543367344761431299589061756769601427892481
   loDen := 25000000000000000000000000000000000000000000000000
@@ -27,7 +37,7 @@ def box1 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Adversarial box for zero 2. -/
+/-- Rational interval record 2 (numeric data only). -/
 def box2 : ZeroBox := {
   loNum := 1051101981938577749631423979694845138866707026245139
   loDen := 50000000000000000000000000000000000000000000000000
@@ -36,7 +46,7 @@ def box2 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Adversarial box for zero 3. -/
+/-- Rational interval record 3 (numeric data only). -/
 def box3 : ZeroBox := {
   loNum := 2501085758014568876321379099256282181865934967255799
   loDen := 100000000000000000000000000000000000000000000000000
@@ -45,7 +55,7 @@ def box3 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Adversarial box for zero 4. -/
+/-- Rational interval record 4 (numeric data only). -/
 def box4 : ZeroBox := {
   loNum := 380310951573243915128898719132301141502267000296443
   loDen := 12500000000000000000000000000000000000000000000000
@@ -54,7 +64,7 @@ def box4 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Adversarial box for zero 5. -/
+/-- Rational interval record 5 (numeric data only). -/
 def box5 : ZeroBox := {
   loNum := 3293506158773918969066236896407490348881251560351703
   loDen := 100000000000000000000000000000000000000000000000000
@@ -63,7 +73,7 @@ def box5 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Adversarial box for zero 6. -/
+/-- Rational interval record 6 (numeric data only). -/
 def box6 : ZeroBox := {
   loNum := 3758617815882567125721776348070533282140539735083079
   loDen := 100000000000000000000000000000000000000000000000000
@@ -72,7 +82,7 @@ def box6 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Adversarial box for zero 7. -/
+/-- Rational interval record 7 (numeric data only). -/
 def box7 : ZeroBox := {
   loNum := 4091871901214749518739812691463325439572596596277727
   loDen := 100000000000000000000000000000000000000000000000000
@@ -81,7 +91,7 @@ def box7 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Adversarial box for zero 8. -/
+/-- Rational interval record 8 (numeric data only). -/
 def box8 : ZeroBox := {
   loNum := 4332707328091499951949612216540680578264546837183687
   loDen := 100000000000000000000000000000000000000000000000000
@@ -90,7 +100,7 @@ def box8 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Adversarial box for zero 9. -/
+/-- Rational interval record 9 (numeric data only). -/
 def box9 : ZeroBox := {
   loNum := 2400257544058357986397123637471375802084332200057221
   loDen := 50000000000000000000000000000000000000000000000000
@@ -99,7 +109,7 @@ def box9 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Adversarial box for zero 10. -/
+/-- Rational interval record 10 (numeric data only). -/
 def box10 : ZeroBox := {
   loNum := 2488691623883615109095839233928186202886148914983833
   loDen := 50000000000000000000000000000000000000000000000000
@@ -108,7 +118,7 @@ def box10 : ZeroBox := {
   h_nonempty := by decide
 }
 
-/-- Every adversarial lower endpoint is strictly positive. -/
+/-- Every recorded interval lower endpoint is strictly positive. -/
 theorem adversarial_lower_endpoints_positive :
     0 < box1.loNum ∧
     0 < box2.loNum ∧
@@ -122,7 +132,7 @@ theorem adversarial_lower_endpoints_positive :
     0 < box10.loNum := by
   decide
 
-/-- The ten adversarial boxes are strictly ordered and non-overlapping. -/
+/-- The ten recorded intervals are strictly ordered and non-overlapping. -/
 theorem adversarial_boxes_strictly_ordered :
     box1.hiNum * box2.loDen < box2.loNum * box1.hiDen ∧
     box2.hiNum * box3.loDen < box3.loNum * box2.hiDen ∧
@@ -135,7 +145,7 @@ theorem adversarial_boxes_strictly_ordered :
     box9.hiNum * box10.loDen < box10.loNum * box9.hiDen := by
   decide
 
-/-- Aggregate Phase 7 safety certificate. -/
+/-- Aggregate interval-ordering fact (no zeta claim). -/
 theorem adversarial_intervals_safe :
     (    0 < box1.loNum ∧
          0 < box2.loNum ∧
@@ -160,6 +170,6 @@ theorem adversarial_intervals_safe :
   · decide
   · decide
 
-#eval "RiemannAdversarialEvidence compiled with zero placeholders."
+#eval "RiemannAdversarialEvidence compiled: rational interval records only."
 
 end Math30.Riemann.Adversarial
