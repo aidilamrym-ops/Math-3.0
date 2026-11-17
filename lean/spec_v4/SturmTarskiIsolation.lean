@@ -30,6 +30,12 @@ def eval (p : Poly) (x : ℚ) : ℚ :=
   | [] => 0
   | c :: cs => cs.foldl (fun acc coeff => acc * x + (coeff : ℚ)) (c : ℚ)
 
+/-- Parameterized evaluation fact: evaluating an empty polynomial yields 0. -/
+theorem eval_nil (x : ℚ) : eval [] x = 0 := rfl
+
+/-- Parameterized evaluation fact: evaluating a constant polynomial `[c]` yields `c`. -/
+theorem eval_single (c : ℤ) (x : ℚ) : eval [c] x = (c : ℚ) := rfl
+
 /-- Evaluation of a linear polynomial `[a, b]`. -/
 theorem eval_two (a b : ℤ) (x : ℚ) : eval [a, b] x = (a : ℚ) * x + (b : ℚ) := by
   rfl
@@ -85,6 +91,7 @@ theorem evalChain_linear_pair :
   norm_num
 
 #print axioms sturm_remainder_invariant
+#print axioms eval_single
 #print axioms signChanges_pos_neg
 
 end Math30.SturmTarski
