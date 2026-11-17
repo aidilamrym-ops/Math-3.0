@@ -6,6 +6,8 @@ import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic
 
+set_option linter.unusedTactic false
+
 def IsPathGraphWitness (n : ℕ) : Prop :=
   n ≥ 2 ∧ n ≤ 100
 
@@ -15,9 +17,7 @@ noncomputable def SpectralGapBound (n : ℕ) : ℝ :=
 theorem exists_path_graph_witness : ∃ n, IsPathGraphWitness n :=
   ⟨10, by
     unfold IsPathGraphWitness
-    constructor
-    · decide
-    · decide
+    constructor <;> decide
   ⟩
 
 theorem path_graph_spectral_gap_lower_bound {n : ℕ} (h : IsPathGraphWitness n) :
@@ -27,17 +27,12 @@ theorem path_graph_spectral_gap_lower_bound {n : ℕ} (h : IsPathGraphWitness n)
   have hpi : Real.pi > 0 := Real.pi_pos
   have hdivpos : Real.pi / (n : ℝ) > 0 := by positivity
   have hdivlt : Real.pi / (n : ℝ) < Real.pi := by
-    have hn1 : (n : ℝ) > 1 := by linarith
     have heq : Real.pi / (n : ℝ) * (n : ℝ) = Real.pi := by
       field_simp [hnpos.ne']
-      <;> ring
     by_contra hc
-    have hge : Real.pi / (n : ℝ) ≥ Real.pi := by linarith
     have hmul : Real.pi / (n : ℝ) * (n : ℝ) ≥ Real.pi * (n : ℝ) := by nlinarith
     rw [heq] at hmul
-    have hpi_le : Real.pi ≥ Real.pi * (n : ℝ) := by linarith
-    have hn1' : (n : ℝ) ≤ 1 := by
-      nlinarith [Real.pi_pos]
+    have hn1 : (n : ℝ) ≤ 1 := by nlinarith [Real.pi_pos]
     linarith
   have hcos_lt_one : Real.cos (Real.pi / (n : ℝ)) < 1 := by
     have hcos_lt_cos0 : Real.cos (Real.pi / (n : ℝ)) < Real.cos 0 := by
@@ -45,15 +40,11 @@ theorem path_graph_spectral_gap_lower_bound {n : ℕ} (h : IsPathGraphWitness n)
       · linarith
       · have hle : Real.pi / (n : ℝ) ≤ Real.pi := by
           by_contra hc2
-          have hgt : Real.pi / (n : ℝ) > Real.pi := by linarith
-          have hmul2 : Real.pi / (n : ℝ) * (n : ℝ) > Real.pi * (n : ℝ) := by nlinarith
           have heq2 : Real.pi / (n : ℝ) * (n : ℝ) = Real.pi := by
             field_simp [hnpos.ne']
-            <;> ring
+          have hmul2 : Real.pi / (n : ℝ) * (n : ℝ) > Real.pi * (n : ℝ) := by nlinarith
           rw [heq2] at hmul2
-          have hpi_lt : Real.pi < Real.pi * (n : ℝ) := by linarith
-          have hn_lt1 : (n : ℝ) < 1 := by
-            nlinarith [Real.pi_pos]
+          have hn_lt1 : (n : ℝ) < 1 := by nlinarith [Real.pi_pos]
           linarith
         linarith [Real.pi_pos]
       · linarith [Real.pi_pos]

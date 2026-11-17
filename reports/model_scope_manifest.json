@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T06:09:12Z",
+  "generated": "2026-11-16T10:29:03Z",
   "counts": {
     "bounded-model": 432,
     "pure-theorem": 60,
@@ -28,7 +28,7 @@
       "file": "lean/spec_v4/Batch17WitnessPattern.lean",
       "class": "bounded-model",
       "scope_declared": true,
-      "scope_text": "Scope: Bounded-model lattice spectral density."
+      "scope_text": "Scope: Bounded-model lattice spectral density witness pattern."
     },
     {
       "file": "lean/spec_v4/BoundedPathGraphSpectralGap.lean",

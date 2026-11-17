@@ -1,6 +1,6 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-16T06:09:12Z
+- Generated: 2026-11-16T10:29:03Z
 - Lean files: **492**  declarations: **2029**  predicates: **19**
 - Z3 premise check: **available**
 - Findings: HIGH **0**, MEDIUM **0**, LOW **450**
