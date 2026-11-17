@@ -1,12 +1,12 @@
 {
-  "generated": "2026-11-16T10:29:03Z",
+  "generated": "2026-11-17T02:31:49Z",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
   "lean_files": 492,
-  "declarations": 2029,
+  "declarations": 2040,
   "predicates": 19,
   "z3_available": true,
   "waivers_applied": [
@@ -54,7 +54,7 @@
   "counts": {
     "HIGH": 0,
     "MEDIUM": 0,
-    "LOW": 450
+    "LOW": 449
   },
   "verdict": "PASS",
   "findings": [
@@ -68,7 +68,7 @@
     },
     {
       "file": "lean/spec_v4/CollatzBoundedDefeat.lean",
-      "line": 39,
+      "line": 72,
       "declaration": "collatz_horizon_defeat",
       "severity": "LOW",
       "code": "HYPOTHESIS_NOT_REFERENCED",
@@ -76,7 +76,7 @@
     },
     {
       "file": "lean/spec_v4/CollatzBoundedDefeat.lean",
-      "line": 39,
+      "line": 72,
       "declaration": "collatz_horizon_defeat",
       "severity": "LOW",
       "code": "HYPOTHESIS_NOT_REFERENCED",
@@ -121,14 +121,6 @@
       "severity": "LOW",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "detail": "hypothesis `hst : s ≤ t` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/ErdosSzekeresRamsey.lean",
-      "line": 20,
-      "declaration": "erdos_szekeres_pair",
-      "severity": "LOW",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "detail": "hypothesis `hne : a ≠ b` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/EvenUnimodularObstruction.lean",
@@ -6334,14 +6326,14 @@
     {
       "file": "lean/spec_v4/ErdosSzekeresRamsey.lean",
       "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
     },
     {
       "file": "lean/spec_v4/EuclidFermatArmor.lean",
       "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
     },
     {
       "file": "lean/spec_v4/EvenUnimodularObstruction.lean",

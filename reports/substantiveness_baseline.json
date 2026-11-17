@@ -1,0 +1,4041 @@
+{
+  "generated": "2026-11-17T02:31:49Z",
+  "description": "Sealed substantiveness baseline: the accepted finding set; a finding outside this set blocks commits under --enforce.",
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 449
+  },
+  "keys": [
+    "Math30Kernel/BealConjectureDefeat.lean|SCOPE_UNDECLARED|-",
+    "Math30Kernel/QuantumCircuit.lean|SCOPE_UNDECLARED|-",
+    "Math30Kernel/QuantumMultiQubit.lean|SCOPE_UNDECLARED|-",
+    "Math30Kernel/QuantumQft.lean|SCOPE_UNDECLARED|-",
+    "Math30Kernel/RescuedDensity.lean|SCOPE_UNDECLARED|-",
+    "Math30Kernel/RescuedHeisenberg.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/ActualInfinityRefutation.lean|HYPOTHESIS_NOT_REFERENCED|landauer_infinite_energy_contradiction",
+    "lean/spec_v4/ActualInfinityRefutation.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/CertifiedManifest.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/CollatzBoundedDefeat.lean|HYPOTHESIS_NOT_REFERENCED|collatz_horizon_defeat",
+    "lean/spec_v4/ContinuityRefutation.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/ContinuumDensityDefeat.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/DecidableHomotopySphere.lean|HYPOTHESIS_NOT_REFERENCED|freudenthal_index_lt",
+    "lean/spec_v4/DecidableHomotopySphere.lean|HYPOTHESIS_NOT_REFERENCED|freudenthal_stability_bound",
+    "lean/spec_v4/DecidableHomotopySphere.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/DiscreteIndexTheorem.lean|HYPOTHESIS_NOT_REFERENCED|discreteDirac_off_diagonal",
+    "lean/spec_v4/DiscreteLatticeGravityExtension.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/DiscreteLatticePathCounting.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/DiscretePersistentHomology.lean|HYPOTHESIS_NOT_REFERENCED|betti0_monotone",
+    "lean/spec_v4/DiscretePersistentHomology.lean|HYPOTHESIS_NOT_REFERENCED|betti1_monotone",
+    "lean/spec_v4/EvenUnimodularObstruction.lean|HYPOTHESIS_NOT_REFERENCED|not_two_pow_dvd_one",
+    "lean/spec_v4/FtcIdentityCollapse.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/Gate5RationalBridge.lean|HYPOTHESIS_NOT_REFERENCED|contains_midpoint",
+    "lean/spec_v4/Gate5RationalExtractionValidation.lean|HYPOTHESIS_NOT_REFERENCED|contains_midpoint",
+    "lean/spec_v4/GoedelBoundaryContainment.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/GravitationalSingularityContainment.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/HigherInductivePushout.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/HorizonFrontierTests.lean|HYPOTHESIS_NOT_REFERENCED|freudenthal_stability_bound",
+    "lean/spec_v4/LandauerBekensteinBound.lean|HYPOTHESIS_NOT_REFERENCED|landauer_bits_le_energy",
+    "lean/spec_v4/LatticeInstantonBound.lean|HYPOTHESIS_NOT_REFERENCED|bps_equality_forces_anti_self_dual_zero",
+    "lean/spec_v4/LatticeInstantonBound.lean|HYPOTHESIS_NOT_REFERENCED|bps_equality_forces_self_dual_zero",
+    "lean/spec_v4/RamseyLatticeEnclosure.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/UniversalContractionFixedPointTheorem.lean|HYPOTHESIS_NOT_REFERENCED|convergence_bounded",
+    "lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/AndersonEnclosureBoundsCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/BealScale10to18Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/BoxFeasibilityWitnessCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/CertificateIndex.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/ConstitutionalLawReceiptCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/ContinuumDensityStressTestCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/ContractionBoundCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/FailedWorldTraceCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/FtcCollapseStressTestCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/GoedelContainmentStressTestCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/GravitationalSingularityStressTestCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/HeisenbergUncertaintyStressTestCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/IntegrityAuditCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/LedgerCrossMultiplicationCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/LteSpectralValidationCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/MetaBlindspotAuditCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/NavierStokesBlowupTraceCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily001Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily002Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily003Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily004Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily005Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily006Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily007Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily008Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily009Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily010Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily011Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily012Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily013Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily014Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily015Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily016Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily017Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily018Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily019Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily020Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily021Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily022Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily023Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily024Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily025Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily026Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily027Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily028Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily029Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily030Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily031Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily032Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily033Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily034Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily035Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily036Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily037Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily038Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily039Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily040Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily041Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily042Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily043Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily044Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily045Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily046Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily047Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily048Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily049Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily050Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily051Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily052Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily053Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily054Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily055Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily056Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily057Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily058Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily059Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily060Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily061Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily062Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily063Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily064Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily065Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily066Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily067Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily068Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily069Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily070Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily071Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily072Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily073Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily074Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily075Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily076Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily077Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily078Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily079Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily080Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily081Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily082Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily083Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily084Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily085Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily086Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily087Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily088Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily089Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily090Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily091Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily092Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily093Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily094Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily095Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily096Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily097Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily098Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily099Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily100Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily101Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily102Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily103Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily104Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily105Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily106Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily107Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily108Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily109Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily110Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily111Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily112Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily113Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily114Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily115Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily116Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily117Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily118Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily119Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily120Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily121Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily122Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily123Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily124Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily125Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily126Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily127Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily128Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily129Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily130Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily131Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily132Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily133Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily134Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily135Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily136Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily137Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily138Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily139Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily140Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily141Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily142Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily143Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily144Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily145Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily146Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily147Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily148Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily149Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily150Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily151Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily152Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily153Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily154Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily155Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily156Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily157Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily158Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily159Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily160Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily161Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily162Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily163Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily164Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily165Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily166Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily167Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily168Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily169Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily170Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily171Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily172Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily173Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily174Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily175Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily176Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily177Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily178Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily179Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily180Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily181Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily182Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily183Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily184Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily185Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily186Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily187Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily188Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily189Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily190Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily191Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily192Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily193Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily194Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily195Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily196Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily197Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily198Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily199Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily200Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily201Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily202Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily203Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily204Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily205Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily206Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily207Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily208Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily209Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily210Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily211Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily212Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily213Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily214Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily215Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily216Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily217Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily218Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily219Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily220Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily221Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily222Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily223Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily224Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily225Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily226Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily227Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily228Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily229Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily230Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily231Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily232Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily233Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily234Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily235Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily236Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily237Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily238Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily239Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily240Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily241Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily242Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily243Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily244Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily245Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily246Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily247Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily248Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily249Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily250Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily251Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily252Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily253Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily254Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily255Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily256Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily257Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily258Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily259Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily260Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily261Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily262Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily263Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily264Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily265Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily266Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily267Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily268Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily269Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily270Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily271Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily272Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily273Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily274Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily275Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily276Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily277Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily278Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily279Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily280Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily281Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily282Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily283Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily284Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily285Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily286Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily287Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily288Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily289Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily290Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily291Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily292Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily293Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily294Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily295Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily296Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily297Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily298Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily299Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily300Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily301Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily302Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily303Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily304Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily305Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily306Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily307Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily308Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily309Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily310Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily311Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily312Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily313Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily314Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily315Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily316Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily317Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily318Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily319Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily320Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily321Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily322Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily323Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily324Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily325Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily326Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily327Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily328Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily329Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily330Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily331Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily332Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily333Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily334Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily335Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily336Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily337Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily338Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily339Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily340Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily341Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily342Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily343Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily344Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily345Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily346Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily347Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily348Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily349Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily350Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily351Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily352Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily353Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily354Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily355Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily356Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily357Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily358Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily359Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily360Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily361Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily362Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily363Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily364Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily365Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily366Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily367Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily368Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily369Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily370Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily371Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily372Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiFamily373Certificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/OpenaiRiemannConfrontationCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/RawFgInitialEnclosureCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/RegressionMasterReportCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/RhCriticalLineValidationCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/RhExtremeStressTestCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/RhSpectralAnomaliesCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/SignFlipAbsenceCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/TopologicalUniquenessCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/TriadStateTransitionsCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/Z3TribunalBoundsCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/smt_bridge/auto_generated_bridge.lean|HYPOTHESIS_NOT_REFERENCED|auto_generated_unsat",
+    "lean/spec_v4/smt_bridge/ramsey_clique_bound.lean|HYPOTHESIS_NOT_REFERENCED|ramsey_clique_bound_unsat"
+  ],
+  "rows": [
+    {
+      "file": "Math30Kernel/BealConjectureDefeat.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "Math30Kernel/QuantumCircuit.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "Math30Kernel/QuantumMultiQubit.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "Math30Kernel/QuantumQft.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "Math30Kernel/RescuedDensity.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "Math30Kernel/RescuedHeisenberg.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/ActualInfinityRefutation.lean",
+      "line": 61,
+      "declaration": "landauer_infinite_energy_contradiction",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h_cost : 1 ≤ cost` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/ActualInfinityRefutation.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/CertifiedManifest.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/CollatzBoundedDefeat.lean",
+      "line": 72,
+      "declaration": "collatz_horizon_defeat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hn : n ≥ 1` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/CollatzBoundedDefeat.lean",
+      "line": 72,
+      "declaration": "collatz_horizon_defeat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hn_max : n ≤ 100` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/ContinuityRefutation.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/ContinuumDensityDefeat.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/DecidableHomotopySphere.lean",
+      "line": 69,
+      "declaration": "freudenthal_index_lt",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h : n + 1 < k` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/DecidableHomotopySphere.lean",
+      "line": 75,
+      "declaration": "freudenthal_stability_bound",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h : n + 1 < k` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/DecidableHomotopySphere.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/DiscreteIndexTheorem.lean",
+      "line": 61,
+      "declaration": "discreteDirac_off_diagonal",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hpq : p.2 = q.2` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/DiscreteLatticeGravityExtension.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/DiscreteLatticePathCounting.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/DiscretePersistentHomology.lean",
+      "line": 109,
+      "declaration": "betti0_monotone",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hst : s ≤ t` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/DiscretePersistentHomology.lean",
+      "line": 114,
+      "declaration": "betti1_monotone",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hst : s ≤ t` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/EvenUnimodularObstruction.lean",
+      "line": 95,
+      "declaration": "not_two_pow_dvd_one",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hn : 0 < n` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/FtcIdentityCollapse.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/Gate5RationalBridge.lean",
+      "line": 51,
+      "declaration": "contains_midpoint",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hr : 0 ≤ r` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/Gate5RationalExtractionValidation.lean",
+      "line": 43,
+      "declaration": "contains_midpoint",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hr : 0 ≤ r` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/GoedelBoundaryContainment.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/GravitationalSingularityContainment.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/HigherInductivePushout.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/HorizonFrontierTests.lean",
+      "line": 101,
+      "declaration": "freudenthal_stability_bound",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h : n + 1 < k` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/LandauerBekensteinBound.lean",
+      "line": 13,
+      "declaration": "landauer_bits_le_energy",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hcost : 1 ≤ cost` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/LatticeInstantonBound.lean",
+      "line": 189,
+      "declaration": "bps_equality_forces_anti_self_dual_zero",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h : bpsCharge a b = bpsAction a b` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/LatticeInstantonBound.lean",
+      "line": 209,
+      "declaration": "bps_equality_forces_self_dual_zero",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h : bpsCharge a b = -bpsAction a b` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/RamseyLatticeEnclosure.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/UniversalContractionFixedPointTheorem.lean",
+      "line": 8,
+      "declaration": "convergence_bounded",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hx : x ≤ 10` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/AndersonEnclosureBoundsCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/BealScale10to18Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/BoxFeasibilityWitnessCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/CertificateIndex.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/ConstitutionalLawReceiptCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/ContinuumDensityStressTestCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/ContractionBoundCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/FailedWorldTraceCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/FtcCollapseStressTestCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/GoedelContainmentStressTestCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/GravitationalSingularityStressTestCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/HeisenbergUncertaintyStressTestCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/IntegrityAuditCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LedgerCrossMultiplicationCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LteSpectralValidationCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/MetaBlindspotAuditCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/NavierStokesBlowupTraceCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily001Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily002Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily003Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily004Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily005Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily006Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily007Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily008Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily009Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily010Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily011Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily012Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily013Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily014Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily015Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily016Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily017Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily018Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily019Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily020Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily021Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily022Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily023Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily024Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily025Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily026Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily027Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily028Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily029Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily030Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily031Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily032Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily033Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily034Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily035Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily036Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily037Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily038Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily039Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily040Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily041Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily042Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily043Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily044Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily045Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily046Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily047Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily048Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily049Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily050Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily051Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily052Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily053Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily054Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily055Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily056Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily057Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily058Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily059Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily060Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily061Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily062Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily063Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily064Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily065Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily066Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily067Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily068Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily069Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily070Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily071Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily072Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily073Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily074Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily075Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily076Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily077Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily078Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily079Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily080Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily081Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily082Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily083Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily084Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily085Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily086Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily087Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily088Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily089Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily090Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily091Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily092Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily093Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily094Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily095Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily096Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily097Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily098Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily099Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily100Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily101Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily102Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily103Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily104Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily105Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily106Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily107Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily108Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily109Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily110Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily111Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily112Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily113Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily114Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily115Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily116Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily117Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily118Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily119Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily120Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily121Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily122Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily123Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily124Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily125Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily126Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily127Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily128Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily129Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily130Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily131Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily132Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily133Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily134Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily135Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily136Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily137Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily138Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily139Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily140Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily141Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily142Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily143Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily144Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily145Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily146Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily147Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily148Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily149Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily150Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily151Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily152Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily153Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily154Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily155Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily156Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily157Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily158Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily159Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily160Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily161Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily162Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily163Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily164Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily165Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily166Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily167Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily168Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily169Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily170Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily171Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily172Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily173Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily174Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily175Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily176Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily177Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily178Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily179Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily180Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily181Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily182Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily183Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily184Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily185Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily186Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily187Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily188Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily189Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily190Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily191Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily192Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily193Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily194Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily195Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily196Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily197Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily198Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily199Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily200Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily201Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily202Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily203Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily204Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily205Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily206Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily207Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily208Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily209Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily210Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily211Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily212Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily213Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily214Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily215Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily216Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily217Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily218Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily219Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily220Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily221Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily222Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily223Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily224Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily225Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily226Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily227Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily228Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily229Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily230Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily231Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily232Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily233Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily234Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily235Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily236Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily237Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily238Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily239Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily240Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily241Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily242Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily243Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily244Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily245Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily246Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily247Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily248Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily249Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily250Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily251Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily252Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily253Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily254Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily255Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily256Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily257Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily258Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily259Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily260Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily261Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily262Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily263Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily264Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily265Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily266Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily267Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily268Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily269Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily270Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily271Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily272Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily273Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily274Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily275Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily276Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily277Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily278Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily279Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily280Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily281Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily282Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily283Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily284Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily285Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily286Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily287Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily288Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily289Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily290Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily291Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily292Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily293Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily294Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily295Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily296Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily297Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily298Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily299Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily300Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily301Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily302Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily303Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily304Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily305Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily306Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily307Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily308Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily309Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily310Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily311Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily312Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily313Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily314Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily315Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily316Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily317Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily318Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily319Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily320Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily321Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily322Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily323Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily324Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily325Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily326Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily327Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily328Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily329Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily330Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily331Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily332Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily333Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily334Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily335Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily336Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily337Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily338Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily339Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily340Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily341Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily342Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily343Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily344Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily345Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily346Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily347Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily348Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily349Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily350Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily351Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily352Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily353Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily354Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily355Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily356Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily357Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily358Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily359Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily360Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily361Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily362Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily363Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily364Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily365Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily366Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily367Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily368Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily369Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily370Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily371Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily372Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiFamily373Certificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/OpenaiRiemannConfrontationCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/RawFgInitialEnclosureCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/RegressionMasterReportCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/RhCriticalLineValidationCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/RhExtremeStressTestCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/RhSpectralAnomaliesCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/SignFlipAbsenceCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/TopologicalUniquenessCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/TriadStateTransitionsCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/Z3TribunalBoundsCertificate.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h1 : r1 ≤ 2` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h2 : r2 ≤ 2` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h3 : r3 ≤ 2` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h4 : r4 ≤ 2` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h5 : r5 ≤ 2` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h6 : r6 ≤ 2` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h7 : 0 ≤ r1` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h8 : 0 ≤ r2` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h9 : 0 ≤ r3` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h10 : 0 ≤ r4` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h11 : 0 ≤ r5` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `h12 : 0 ≤ r6` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/auto_generated_bridge.lean",
+      "line": 6,
+      "declaration": "auto_generated_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `htot : 13 ≤ r1 + r2 + r3 + r4 + r5 + r6` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/ramsey_clique_bound.lean",
+      "line": 15,
+      "declaration": "ramsey_clique_bound_unsat",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `htotal : 13 ≤ ∑ i, r i` is not referenced in the proof"
+    }
+  ]
+}

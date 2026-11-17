@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-16T10:29:03Z",
+  "generated": "2026-11-17T02:31:49Z",
   "counts": {
     "bounded-model": 432,
     "pure-theorem": 60,
-    "scope_undeclared": 464
+    "scope_undeclared": 462
   },
   "files": [
     {
@@ -2673,14 +2673,14 @@
     {
       "file": "lean/spec_v4/ErdosSzekeresRamsey.lean",
       "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
     },
     {
       "file": "lean/spec_v4/EuclidFermatArmor.lean",
       "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
     },
     {
       "file": "lean/spec_v4/EvenUnimodularObstruction.lean",

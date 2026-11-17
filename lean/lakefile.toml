@@ -1,9 +1,17 @@
 name = "math30"
-# defaultTargets = ["Math30"]
+defaultTargets = ["spec_v4"]
 
-# ponytail: per-file compilation via `lake env lean`, no library target yet.
-# Add [[lean_lib]] when a single build target for spec_v4 is wanted.
+# A1 (2026-11-17): whole-project build target. `lake build` now compiles every
+# module under lean/spec_v4 (including smt_bridge submodules) with the kernel,
+# instead of per-file `lake env lean` spot checks only.
 [[require]]
 name = "mathlib"
 git = "https://github.com/leanprover-community/mathlib4"
 rev = "v4.33.1"
+
+[[lean_lib]]
+name = "spec_v4"
+# Submodule glob (`Foo.+` = all modules under Foo.*): the root file
+# lean/spec_v4.lean deliberately does not exist, so the default root glob
+# would fail job computation with "some modules have bad imports".
+globs = ["spec_v4.+"]

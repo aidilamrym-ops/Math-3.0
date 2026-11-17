@@ -17,7 +17,7 @@
 # Exit codes: 0 accept, 1 reject, 2 tool not run (also rejects).
 set -u
 
-ROOT=$(git rev-parse --show-toplevel) || {
+ROOT="$(git rev-parse --show-toplevel)" || {
     echo "PRE-COMMIT FAIL: not inside a git worktree" >&2
     exit 2
 }
@@ -123,6 +123,29 @@ if ! "$PYTHON" "$GATE" check "$WORK/tree"; then
     echo "[pre-commit] FAIL: strict gate rejected the staged Lean surface" >&2
     exit 1
 fi
+
+# Substantiveness baseline enforcement (C-gate): reject *new* vacuous/trivial
+# findings that are absent from the sealed baseline. Fail-closed: a missing
+# baseline or a gate crash (exit 2) blocks the commit.
+BASELINE="$ROOT/reports/substantiveness_baseline.json"
+if [ ! -f "$BASELINE" ]; then
+    echo "[pre-commit] FAIL: substantiveness baseline missing: $BASELINE" >&2
+    echo "[pre-commit] regenerate with: python tools/omega_audit/substantiveness_gate.py --update-baseline" >&2
+    exit 1
+fi
+SGATE="$ROOT/tools/omega_audit/substantiveness_gate.py"
+cd "$ROOT"
+while IFS= read -r file; do
+    [ -n "$file" ] || continue
+    # The conflict check above guarantees the working tree equals the staged
+    # content, so scanning the repo paths is equivalent to scanning blobs.
+    if ! "$PYTHON" "$SGATE" --surface "$file" --no-report --enforce --baseline "$BASELINE"; then
+        echo "[pre-commit] FAIL: substantiveness gate rejected new vacuous findings" >&2
+        echo "[pre-commit] fix the finding, or consciously refresh the ledger with:" >&2
+        echo "[pre-commit]   python tools/omega_audit/substantiveness_gate.py --update-baseline" >&2
+        exit 1
+    fi
+done < "$WORK/staged.txt"
 
 echo "[pre-commit] PASS"
 exit 0

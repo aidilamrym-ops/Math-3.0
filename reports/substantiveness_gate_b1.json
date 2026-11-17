@@ -1,0 +1,64 @@
+{
+  "generated": "2026-11-17T02:31:20Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\EuclidFermatArmor.lean",
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\ErdosSzekeresRamsey.lean",
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\CollatzBoundedDefeat.lean"
+  ],
+  "lean_files": 3,
+  "declarations": 24,
+  "predicates": 0,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 2
+  },
+  "verdict": "PASS",
+  "findings": [
+    {
+      "file": "lean/spec_v4/CollatzBoundedDefeat.lean",
+      "line": 72,
+      "declaration": "collatz_horizon_defeat",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hn : n ≥ 1` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/CollatzBoundedDefeat.lean",
+      "line": 72,
+      "declaration": "collatz_horizon_defeat",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hn_max : n ≤ 100` is not referenced in the proof"
+    }
+  ],
+  "mutations": [],
+  "mutation_summary": {
+    "total": 0,
+    "killed": 0,
+    "survived": 0,
+    "survival_rate": null
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/EuclidFermatArmor.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
+    },
+    {
+      "file": "lean/spec_v4/ErdosSzekeresRamsey.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": "-- Scope:"
+    },
+    {
+      "file": "lean/spec_v4/CollatzBoundedDefeat.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    }
+  ]
+}

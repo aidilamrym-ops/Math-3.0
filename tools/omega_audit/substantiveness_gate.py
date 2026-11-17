@@ -811,6 +811,26 @@ def main() -> int:
     parser.add_argument("--label", default="", help="suffix for the report filenames")
     parser.add_argument("--waivers", default=str(DEFAULT_REPORTS / "substantiveness_waivers.json"))
     parser.add_argument("--no-waivers", action="store_true")
+    parser.add_argument(
+        "--no-report",
+        action="store_true",
+        help="skip writing report files (used by hooks; scan/enforce only)",
+    )
+    parser.add_argument(
+        "--baseline",
+        default=None,
+        help="path to the sealed findings baseline (default reports/substantiveness_baseline.json)",
+    )
+    parser.add_argument(
+        "--enforce",
+        action="store_true",
+        help="fail-closed: exit 1 when a HIGH/MEDIUM finding is absent from the baseline",
+    )
+    parser.add_argument(
+        "--update-baseline",
+        action="store_true",
+        help="rewrite the baseline from the current findings (explicit ledger refresh)",
+    )
     args = parser.parse_args()
 
     surfaces = (
@@ -826,15 +846,51 @@ def main() -> int:
 
     all_decls: list[Decl] = []
     scope_rows: list[dict] = []
+    eval_string_rows: list[dict] = []
     for path in files:
         rel = str(path.relative_to(ROOT)).replace("\\", "/")
+        src_text = path.read_text(encoding="utf-8", errors="replace")
         try:
             decls = parse_file(path, rel)
         except Exception as exc:  # pragma: no cover
             print(f"parse error: {rel}: {exc}", file=sys.stderr)
             continue
         all_decls.extend(decls)
-        scope_rows.append({"file": rel, **classify_scope(path, path.read_text(encoding="utf-8", errors="replace"))})
+        if not decls:
+            # A Lean file that parses to zero declarations contributes nothing
+            # to the verification surface (prose, bare #eval, or a scanner
+            # evasion vector) and must be surfaced, never silently ignored.
+            eval_string_rows.append({"file": rel, "line": 1, "zero_decls": True})
+        scope_rows.append({"file": rel, **classify_scope(path, src_text)})
+        # C-gate: an `#eval "string literal"` carries no proof content. It is
+        # print-only scaffolding and must not be mistaken for verification.
+        for m in re.finditer(r'(?m)^\s*#eval\s+"', src_text):
+            line = src_text.count("\n", 0, m.start()) + 1
+            eval_string_rows.append({"file": rel, "line": line})
+    findings: list[dict] = []
+    for row in eval_string_rows:
+        if row.get("zero_decls"):
+            findings.append(
+                {
+                    "file": row["file"],
+                    "line": 1,
+                    "declaration": "-",
+                    "severity": "MEDIUM",
+                    "code": "NO_DECLARATIONS",
+                    "detail": "file contributes zero declarations to the verification surface",
+                }
+            )
+            continue
+        findings.append(
+            {
+                "file": row["file"],
+                "line": row["line"],
+                "declaration": "-",
+                "severity": "LOW",
+                "code": "EVAL_STRING_LITERAL",
+                "detail": "`#eval` of a bare string literal is print-only scaffolding, not verification",
+            }
+        )
 
     defs = {
         d.name: d
@@ -976,6 +1032,66 @@ def main() -> int:
         "scope": scope_rows,
     }
 
+    # ------------------------------------------------------------------
+    # Sealed-findings baseline (C-gate). The baseline is the explicit
+    # ledger of accepted findings; anything outside it is a regression
+    # introduced by an unreviewed change.
+    # ------------------------------------------------------------------
+    def finding_key(f: dict) -> str:
+        return f"{f['file']}|{f['code']}|{f['declaration']}"
+
+    baseline_path = Path(args.baseline).resolve() if args.baseline else (DEFAULT_REPORTS / "substantiveness_baseline.json")
+    new_findings: list[dict] = []
+    new_blocking: list[dict] = []
+    if args.update_baseline:
+        baseline_rows = [
+            {
+                "file": f["file"],
+                "line": f["line"],
+                "declaration": f["declaration"],
+                "code": f["code"],
+                "severity": f["severity"],
+                "detail": f["detail"],
+            }
+            for f in sorted(findings, key=lambda x: (x["file"], x["code"], x["declaration"], x["line"]))
+        ]
+        baseline_payload = {
+            "generated": summary["generated"],
+            "description": "Sealed substantiveness baseline: the accepted finding set; a finding outside this set blocks commits under --enforce.",
+            "counts": summary["counts"],
+            "keys": sorted({finding_key(f) for f in findings}),
+            "rows": baseline_rows,
+        }
+        baseline_path.parent.mkdir(parents=True, exist_ok=True)
+        baseline_path.write_text(
+            json.dumps(baseline_payload, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        print(f"baseline: updated {baseline_path} ({len(baseline_payload['keys'])} keys)")
+    elif args.enforce:
+        if not baseline_path.exists():
+            print(f"SUBSTANTIVENESS GATE: baseline missing: {baseline_path}")
+            print("regenerate the sealed ledger first: python tools/omega_audit/substantiveness_gate.py --update-baseline")
+            return 2
+        try:
+            baseline_data = json.loads(baseline_path.read_text(encoding="utf-8"))
+            known_keys = set(baseline_data.get("keys", []))
+        except Exception as exc:
+            print(f"SUBSTANTIVENESS GATE: baseline unreadable: {exc}")
+            return 2
+        new_findings = [f for f in findings if finding_key(f) not in known_keys]
+        new_blocking = [f for f in new_findings if f["severity"] in ("HIGH", "MEDIUM")]
+        summary["baseline"] = {
+            "path": str(baseline_path),
+            "new_findings": new_findings,
+            "new_blocking": len(new_blocking),
+        }
+        if new_findings:
+            print(f"baseline: {len(new_findings)} finding(s) outside the sealed ledger:")
+            for f in sorted(new_findings, key=lambda x: (x["severity"] != "HIGH", x["file"], x["code"])):
+                print(f"  [{f['severity']}] {f['code']} {f['file']}:{f['line']} `{f['declaration']}`")
+        else:
+            print("baseline: no findings outside the sealed ledger")
+
     if args.regression:
         detected = sorted({f["file"] for f in findings if f["severity"] in ("HIGH", "MEDIUM")})
         summary["regression"] = {
@@ -984,11 +1100,12 @@ def main() -> int:
             "verdict": "PASS" if len(detected) >= max(1, len(files) // 2) else "WEAK",
         }
 
-    (out_dir / f"substantiveness_gate{('_' + args.label) if args.label else ''}.json").write_text(
-        json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
-    if not args.label:
-        (out_dir / "model_scope_manifest.json").write_text(
+    if not args.no_report:
+        (out_dir / f"substantiveness_gate{('_' + args.label) if args.label else ''}.json").write_text(
+            json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        if not args.label:
+            (out_dir / "model_scope_manifest.json").write_text(
             json.dumps(
                 {
                     "generated": summary["generated"],
@@ -1044,9 +1161,10 @@ def main() -> int:
     if not findings:
         md.append("No substantiveness findings detected.")
 
-    (out_dir / f"substantiveness_gate{('_' + args.label) if args.label else ''}.md").write_text(
-        "\n".join(md) + "\n", encoding="utf-8"
-    )
+    if not args.no_report:
+        (out_dir / f"substantiveness_gate{('_' + args.label) if args.label else ''}.md").write_text(
+            "\n".join(md) + "\n", encoding="utf-8"
+        )
 
     print(
         f"substantiveness: files={len(files)} decls={len(all_decls)} "
@@ -1057,7 +1175,10 @@ def main() -> int:
         print(f"mutation: {mutation_summary}")
     if args.regression:
         print(f"regression: {summary['regression']}")
-    return 0 if summary["verdict"] == "PASS" else 1
+    exit_code = 0 if summary["verdict"] == "PASS" else 1
+    if args.enforce and new_blocking:
+        exit_code = 1
+    return exit_code
 
 
 if __name__ == "__main__":

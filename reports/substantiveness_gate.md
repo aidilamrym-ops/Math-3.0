@@ -1,9 +1,9 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-16T10:29:03Z
-- Lean files: **492**  declarations: **2029**  predicates: **19**
+- Generated: 2026-11-17T02:31:49Z
+- Lean files: **492**  declarations: **2040**  predicates: **19**
 - Z3 premise check: **available**
-- Findings: HIGH **0**, MEDIUM **0**, LOW **450**
+- Findings: HIGH **0**, MEDIUM **0**, LOW **449**
 - Waived constant definitions: **4**
 - Verdict: **PASS**
 
@@ -12,14 +12,13 @@
 | Severity | Code | File:Line | Declaration | Detail |
 |---|---|---|---|---|
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/ActualInfinityRefutation.lean:61` | `landauer_infinite_energy_contradiction` | hypothesis `h_cost : 1 ≤ cost` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/CollatzBoundedDefeat.lean:39` | `collatz_horizon_defeat` | hypothesis `hn : n ≥ 1` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/CollatzBoundedDefeat.lean:39` | `collatz_horizon_defeat` | hypothesis `hn_max : n ≤ 100` is not referenced in the proof |
+| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/CollatzBoundedDefeat.lean:72` | `collatz_horizon_defeat` | hypothesis `hn : n ≥ 1` is not referenced in the proof |
+| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/CollatzBoundedDefeat.lean:72` | `collatz_horizon_defeat` | hypothesis `hn_max : n ≤ 100` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DecidableHomotopySphere.lean:69` | `freudenthal_index_lt` | hypothesis `h : n + 1 < k` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DecidableHomotopySphere.lean:75` | `freudenthal_stability_bound` | hypothesis `h : n + 1 < k` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DiscreteIndexTheorem.lean:61` | `discreteDirac_off_diagonal` | hypothesis `hpq : p.2 = q.2` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DiscretePersistentHomology.lean:109` | `betti0_monotone` | hypothesis `hst : s ≤ t` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/DiscretePersistentHomology.lean:114` | `betti1_monotone` | hypothesis `hst : s ≤ t` is not referenced in the proof |
-| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/ErdosSzekeresRamsey.lean:20` | `erdos_szekeres_pair` | hypothesis `hne : a ≠ b` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/EvenUnimodularObstruction.lean:95` | `not_two_pow_dvd_one` | hypothesis `hn : 0 < n` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/Gate5RationalBridge.lean:51` | `contains_midpoint` | hypothesis `hr : 0 ≤ r` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/Gate5RationalExtractionValidation.lean:43` | `contains_midpoint` | hypothesis `hr : 0 ≤ r` is not referenced in the proof |

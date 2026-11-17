@@ -12,6 +12,39 @@ def collatzLoop (curr : Nat) : Nat → Bool
 
 def collatzReachesOne (n : Nat) (max_fuel : Nat) : Bool := collatzLoop n max_fuel
 
+/-- Parameterized step fact: the even branch halves exactly. -/
+theorem collatzStep_even_eq (n : Nat) (h : n % 2 = 0) : collatzStep n = n / 2 := by
+  simp [collatzStep, h]
+
+/-- Parameterized step fact: the odd branch maps to `3 * n + 1`. -/
+theorem collatzStep_odd_eq (n : Nat) (h : n % 2 = 1) : collatzStep n = 3 * n + 1 := by
+  simp [collatzStep, h]
+
+/-- Parameterized step fact: for odd `n`, `3 * n + 1` is even, so the step after
+the odd branch is the halving branch. -/
+theorem collatzStep_odd_even (n : Nat) (h : n % 2 = 1) : (3 * n + 1) % 2 = 0 := by
+  have hn : n % 2 = 1 := h
+  omega
+
+/-- Parameterized step fact: a positive even `n` strictly decreases. -/
+theorem collatzStep_even_lt (n : Nat) (hn : 0 < n) (h : n % 2 = 0) :
+    collatzStep n < n := by
+  rw [collatzStep_even_eq n h]
+  exact Nat.div_lt_self hn (by decide)
+
+/-- Parameterized step fact (bounded growth): for `n ≤ N`, one Collatz step
+stays within `3 * N + 1`; the step map is bounded on every finite interval. -/
+theorem collatzStep_capped (N n : Nat) (hN : n ≤ N) : collatzStep n ≤ 3 * N + 1 := by
+  by_cases he : n % 2 = 0
+  · rw [collatzStep_even_eq n he]
+    calc
+      n / 2 ≤ n := Nat.div_le_self n 2
+      _ ≤ 3 * N + 1 := Nat.le_trans hN (by omega)
+  · have ho : n % 2 = 1 := by omega
+    rw [collatzStep_odd_eq n ho]
+    have := hN
+    omega
+
 lemma collatzLoop_one (f : Nat) : collatzLoop 1 f = true := by
   induction f with
   | zero => rfl
@@ -43,5 +76,7 @@ theorem collatz_horizon_defeat (n : Nat) (hn : n ≥ 1) (hn_max : n ≤ 100) (ma
   exact collatzLoop_mono n 5000 max_fuel h_fuel h_base
 
 #print axioms collatz_horizon_defeat
+#print axioms collatzStep_even_lt
+#print axioms collatzStep_capped
 
 end Math30.Collatz
