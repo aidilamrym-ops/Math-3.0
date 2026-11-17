@@ -1,9 +1,9 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-17T03:33:51Z
-- Lean files: **492**  declarations: **2043**  predicates: **19**
+- Generated: 2026-11-17T06:28:27Z
+- Lean files: **492**  declarations: **2045**  predicates: **19**
 - Z3 premise check: **available**
-- Findings: HIGH **0**, MEDIUM **0**, LOW **449**
+- Findings: HIGH **0**, MEDIUM **0**, LOW **451**
 - Waived constant definitions: **4**
 - Verdict: **PASS**
 
@@ -26,6 +26,8 @@
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/LandauerBekensteinBound.lean:13` | `landauer_bits_le_energy` | hypothesis `hcost : 1 ≤ cost` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/LatticeInstantonBound.lean:189` | `bps_equality_forces_anti_self_dual_zero` | hypothesis `h : bpsCharge a b = bpsAction a b` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/LatticeInstantonBound.lean:209` | `bps_equality_forces_self_dual_zero` | hypothesis `h : bpsCharge a b = -bpsAction a b` is not referenced in the proof |
+| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/SpectralOperatorEvolution.lean:37` | `cheeger_isoperimetric_eigenvalue_bound` | hypothesis `h_hnonneg : 0 ≤ h` is not referenced in the proof |
+| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/SpectralOperatorEvolution.lean:37` | `cheeger_isoperimetric_eigenvalue_bound` | hypothesis `h_cheeger : lambda1 ≥ h^2 / 4` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/UniversalContractionFixedPointTheorem.lean:8` | `convergence_bounded` | hypothesis `hx : x ≤ 10` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `h1 : r1 ≤ 2` is not referenced in the proof |
 | LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/smt_bridge/auto_generated_bridge.lean:6` | `auto_generated_unsat` | hypothesis `h2 : r2 ≤ 2` is not referenced in the proof |

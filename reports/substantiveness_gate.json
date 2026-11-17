@@ -1,12 +1,12 @@
 {
-  "generated": "2026-11-17T03:33:51Z",
+  "generated": "2026-11-17T06:28:27Z",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
   "lean_files": 492,
-  "declarations": 2043,
+  "declarations": 2045,
   "predicates": 19,
   "z3_available": true,
   "waivers_applied": [
@@ -54,7 +54,7 @@
   "counts": {
     "HIGH": 0,
     "MEDIUM": 0,
-    "LOW": 449
+    "LOW": 451
   },
   "verdict": "PASS",
   "findings": [
@@ -289,6 +289,22 @@
       "severity": "LOW",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "detail": "hypothesis `htotal : 13 ≤ ∑ i, r i` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/SpectralOperatorEvolution.lean",
+      "line": 37,
+      "declaration": "cheeger_isoperimetric_eigenvalue_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_hnonneg : 0 ≤ h` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/SpectralOperatorEvolution.lean",
+      "line": 37,
+      "declaration": "cheeger_isoperimetric_eigenvalue_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_cheeger : lambda1 ≥ h^2 / 4` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/UniversalContractionFixedPointTheorem.lean",
