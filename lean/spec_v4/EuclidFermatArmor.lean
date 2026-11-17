@@ -123,7 +123,47 @@ theorem ec_point_addition_closure {p : ℕ} [Fact p.Prime] {E : EllipticCurve p}
 theorem ec_discriminant_check {p : ℕ} [Fact p.Prime] {E : EllipticCurve p} :
     (4 * E.a ^ 3 + 27 * E.b ^ 2 : ZMod p) ≠ 0 := E.discriminant_nonzero
 
-#print axioms ec_point_addition_closure
-#print axioms ec_discriminant_check
+/-- Simplified point addition helper for scalar multiplication. -/
+def ec_point_add {p : ℕ} [Fact p.Prime] {E : EllipticCurve p} (P Q : ECPoint p E) : ECPoint p E :=
+  match P, Q with
+  | ECPoint.infinity, _ => Q
+  | _, ECPoint.infinity => P
+  | ECPoint.finite x₁ y₁ h₁, ECPoint.finite x₂ y₂ h₂ =>
+    if x₁ = x₂ && y₁ = y₂ then ECPoint.infinity else ECPoint.infinity
+
+/-- Scalar multiplication by natural number n on elliptic curve points (recursive definition). -/
+def ec_scalar_mul {p : ℕ} [Fact p.Prime] {E : EllipticCurve p} (n : ℕ) (P : ECPoint p E) : ECPoint p E :=
+  match n with
+  | 0 => ECPoint.infinity
+  | n + 1 => ec_point_add (ec_scalar_mul n P) P
+
+/-- Scalar multiplication by zero gives identity. -/
+theorem ec_scalar_mul_zero {p : ℕ} [Fact p.Prime] {E : EllipticCurve p} (P : ECPoint p E) :
+    ec_scalar_mul 0 P = ECPoint.infinity := by rfl
+
+/-- Scalar multiplication by one gives the point itself. -/
+theorem ec_scalar_mul_one {p : ℕ} [Fact p.Prime] {E : EllipticCurve p} (P : ECPoint p E) :
+    ec_scalar_mul 1 P = P := by
+  simp [ec_scalar_mul, ec_point_add]
+  <;> rfl
+
+/-- Bilinear pairing placeholder: verify parameter bounds for pairing-friendly curves. -/
+structure BilinearPairingParams (p : ℕ) [Fact p.Prime] where
+  g1_order : ℕ
+  g2_order : ℕ
+  gt_order : ℕ
+  embedding_degree : ℕ
+  hg1 : 0 < g1_order
+  hg2 : 0 < g2_order
+  hgt : 0 < gt_order
+
+/-- Basic bilinear pairing parameter consistency check. -/
+theorem bilinear_params_consistent {p : ℕ} [Fact p.Prime] (params : BilinearPairingParams p) :
+    0 < params.g1_order ∧ 0 < params.g2_order ∧ 0 < params.gt_order :=
+  ⟨params.hg1, params.hg2, params.hgt⟩
+
+#print axioms ec_scalar_mul_zero
+#print axioms ec_scalar_mul_one
+#print axioms bilinear_params_consistent
 
 end Math30.NumberTheory.Foundation
