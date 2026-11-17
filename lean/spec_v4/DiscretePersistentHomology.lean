@@ -134,4 +134,13 @@ theorem betti_table :
     (betti0 4, betti1 4) = (1, 1) := by
   decide
 
+/-- Spektrum bilangan Betti untuk seluruh rentang waktu t = 0..3. -/
+theorem betti_spectrum_range :
+    [betti0 0, betti0 1, betti0 2, betti0 3] = [3, 2, 1, 1] ∧
+    [betti1 0, betti1 1, betti1 2, betti1 3] = [0, 0, 0, 1] := by
+  constructor <;> decide
+
+#print axioms betti_table
+#print axioms betti_spectrum_range
+
 end Math30.Topology.DiscretePersistentHomology

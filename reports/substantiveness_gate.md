@@ -1,7 +1,7 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-17T06:28:27Z
-- Lean files: **492**  declarations: **2045**  predicates: **19**
+- Generated: 2026-11-17T06:44:10Z
+- Lean files: **492**  declarations: **2047**  predicates: **19**
 - Z3 premise check: **available**
 - Findings: HIGH **0**, MEDIUM **0**, LOW **451**
 - Waived constant definitions: **4**

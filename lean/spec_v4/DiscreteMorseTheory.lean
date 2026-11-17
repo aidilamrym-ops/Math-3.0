@@ -184,8 +184,17 @@ theorem critical_count_cycle4_ge_one :
   have h1 := cycle4_critical1_card
   constructor <;> omega
 
+/-- Spektrum kritis interval dan siklus C4 untuk analisis Betti/Morse berhingga. -/
+theorem morse_critical_spectrum_relation :
+    (critical0 intervalMorseFunction IntervalGraph).card = 1 ∧
+    (critical0 cycle4MorseFunction Cycle4Graph).card = 2 := by
+  constructor
+  · exact interval_critical0_card
+  · exact cycle4_critical0_card
+
 #print axioms interval_is_morse
 #print axioms cycle4_is_morse
 #print axioms cycle4_critical_euler
+#print axioms morse_critical_spectrum_relation
 
 end Math30.Topology.DiscreteMorse
