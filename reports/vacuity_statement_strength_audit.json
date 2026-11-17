@@ -1,20 +1,24 @@
 {
-  "generated": "2026-11-14 19:45:18",
-  "total_files_scanned": 502,
+  "generated": "2026-11-17 19:51:45",
+  "total_files_scanned": 504,
   "total_findings": 0,
   "true_conclusion": 0,
   "reflexive_equality": 0,
   "files": [
-    {
-      "file": "lean/spec_v4/AbcCensusEvidence.lean",
-      "findings": []
-    },
     {
       "file": "lean/spec_v4/ActualInfinityRefutation.lean",
       "findings": []
     },
     {
       "file": "lean/spec_v4/AndersonProbabilityEvidence.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/Batch17WitnessPattern.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/BoundedPathGraphSpectralGap.lean",
       "findings": []
     },
     {
@@ -42,11 +46,51 @@
       "findings": []
     },
     {
-      "file": "lean/spec_v4/ContinuumOmegaLimitDefeat.lean",
+      "file": "lean/spec_v4/DecidableHomotopySphere.lean",
       "findings": []
     },
     {
-      "file": "lean/spec_v4/DecidableHomotopySphere.lean",
+      "file": "lean/spec_v4/DiscreteBettiEulerPoincare.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteChernSimons.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteCohomologyRing.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteGaussBonnet.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteGaussBonnetDodecahedron.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteGaussBonnetIcosahedron.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteGaussBonnetOctahedron.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteHodgeDecomposition.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteHodgeStar.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteHodgeTheoremSpec.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteIndexTheorem.lean",
       "findings": []
     },
     {
@@ -54,11 +98,31 @@
       "findings": []
     },
     {
-      "file": "lean/spec_v4/EinsteinFieldEquations.lean",
+      "file": "lean/spec_v4/DiscreteLatticePathCounting.lean",
       "findings": []
     },
     {
-      "file": "lean/spec_v4/EllipticRankSpectralCertificate.lean",
+      "file": "lean/spec_v4/DiscreteLefschetzFixedPoint.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteMorseTheory.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscretePersistentHomology.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscretePoincareDuality.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteSpectralGap.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/DiscreteYangMills.lean",
       "findings": []
     },
     {
@@ -71,34 +135,6 @@
     },
     {
       "file": "lean/spec_v4/EvenUnimodularObstruction.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/FaultTolerantQuantum.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/FiniteLatticeSpectralGravity.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/FiniteNavierStokesDissipation.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/FinitePvNPSeparationLattice.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/FiniteRiemannZetaLattice.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/FiniteYangMillsMassGapLattice.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/ForensicEvidence.lean",
       "findings": []
     },
     {
@@ -118,23 +154,7 @@
       "findings": []
     },
     {
-      "file": "lean/spec_v4/GoodsteinArithmeticTerminationCertificate.lean",
-      "findings": []
-    },
-    {
       "file": "lean/spec_v4/GravitationalSingularityContainment.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/GrothendieckToposBridge.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/HeegnerGaussNineCertificate.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/HeisenbergUncertaintyDemystified.lean",
       "findings": []
     },
     {
@@ -155,38 +175,6 @@
     },
     {
       "file": "lean/spec_v4/LatticeInstantonBound.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/LatticeLearningWithErrors.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/MillenniumBirchSwinnertonDyer.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/MillenniumCollatzGeneralization.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/MillenniumHodgeConjecture.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/MillenniumNavierStokesSmoothness.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/MillenniumPoincareConjecture.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/MillenniumPvsNPSeparation.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/MillenniumRiemannHypothesis.lean",
       "findings": []
     },
     {
@@ -214,10 +202,6 @@
       "findings": []
     },
     {
-      "file": "lean/spec_v4/QuantumTopologicalModularTensorCategory.lean",
-      "findings": []
-    },
-    {
       "file": "lean/spec_v4/RamseyLatticeEnclosure.lean",
       "findings": []
     },
@@ -242,10 +226,6 @@
       "findings": []
     },
     {
-      "file": "lean/spec_v4/SheafTopologicalUnification.lean",
-      "findings": []
-    },
-    {
       "file": "lean/spec_v4/SpectralOperatorEvolution.lean",
       "findings": []
     },
@@ -258,31 +238,11 @@
       "findings": []
     },
     {
-      "file": "lean/spec_v4/TwistorLatticeCorrespondence.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/UniversalCategorySheafBridge.lean",
-      "findings": []
-    },
-    {
       "file": "lean/spec_v4/UniversalContractionFixedPointTheorem.lean",
       "findings": []
     },
     {
       "file": "lean/spec_v4/UniversalFinitaryInformationConservation.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/UniversalQuantumCoherencePhaseLock.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/UniversalTopologicalInvariantSingularityResolution.lean",
-      "findings": []
-    },
-    {
-      "file": "lean/spec_v4/YangMillsLatticeBoundary.lean",
       "findings": []
     },
     {
@@ -1946,6 +1906,10 @@
       "findings": []
     },
     {
+      "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
+      "findings": []
+    },
+    {
       "file": "lean/spec_v4/smt_bridge/box_feasibility_witness.lean",
       "findings": []
     },
@@ -1954,7 +1918,35 @@
       "findings": []
     },
     {
+      "file": "lean/spec_v4/smt_bridge/crypto_primitive_feasibility.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/elliptic_curve_point_bound.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
+      "findings": []
+    },
+    {
       "file": "lean/spec_v4/smt_bridge/ledger_cross_multiplication.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
       "findings": []
     },
     {
@@ -1966,7 +1958,23 @@
       "findings": []
     },
     {
+      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean",
+      "findings": []
+    },
+    {
       "file": "lean/spec_v4/smt_bridge/sign_flip_absence.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/vrf_output_bound.lean",
+      "findings": []
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/zkp_commitment_bound.lean",
       "findings": []
     },
     {

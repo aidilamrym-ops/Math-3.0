@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-17T06:44:10Z",
+  "generated": "2026-11-17T09:40:10Z",
   "counts": {
-    "bounded-model": 432,
-    "pure-theorem": 60,
-    "scope_undeclared": 462
+    "bounded-model": 433,
+    "pure-theorem": 71,
+    "scope_undeclared": 474
   },
   "files": [
     {
@@ -2827,6 +2827,12 @@
       "scope_text": null
     },
     {
+      "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
       "file": "lean/spec_v4/smt_bridge/box_feasibility_witness.lean",
       "class": "pure-theorem",
       "scope_declared": false,
@@ -2839,7 +2845,49 @@
       "scope_text": null
     },
     {
+      "file": "lean/spec_v4/smt_bridge/crypto_primitive_feasibility.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/elliptic_curve_point_bound.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
       "file": "lean/spec_v4/smt_bridge/ledger_cross_multiplication.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
       "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
@@ -2857,7 +2905,31 @@
       "scope_text": null
     },
     {
+      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
       "file": "lean/spec_v4/smt_bridge/sign_flip_absence.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/vrf_output_bound.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/zkp_commitment_bound.lean",
       "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
