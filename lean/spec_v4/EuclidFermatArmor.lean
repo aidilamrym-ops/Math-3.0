@@ -77,8 +77,10 @@ theorem fermat_seven_three : 3 ^ 7 % 7 = 3 % 7 := by
 theorem fermat_eleven_five : 5 ^ 11 % 11 = 5 % 11 := by
   simpa only [Nat.ModEq] using fermat_little_pow 11 Nat.prime_eleven 5
 
-#print axioms euclid_infinite_primes
-#print axioms fermat_little
-#print axioms fermat_little_pow
+/-- Coprime lemma: if `p` is prime and `¬ p ∣ a`, then `p` and `a` are coprime. -/
+theorem prime_coprime_of_not_dvd (p a : ℕ) (hp : p.Prime) (ha : ¬ p ∣ a) : Nat.Coprime p a :=
+  (Nat.Prime.coprime_iff_not_dvd hp).mpr ha
+
+#print axioms prime_coprime_of_not_dvd
 
 end Math30.NumberTheory.Foundation

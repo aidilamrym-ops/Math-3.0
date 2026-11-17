@@ -424,7 +424,7 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-eb36626f75b9649a780c8e0fe62361133b030c0abf0fc57b6cffd1baacd8a2de
+371f2ca2452ae94395279f8c825b85f91a54043f464095f17975f18dad1da751
 ```
 
 **Manifest Rows:** 1,588 files pinned  
@@ -586,7 +586,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,588 rows, SHA-256 locked: `eb36626f75b9649a780c8e0fe62361133b030c0abf0fc57b6cffd1baacd8a2de`  
+> **Manifest:** 1,588 rows, SHA-256 locked: `371f2ca2452ae94395279f8c825b85f91a54043f464095f17975f18dad1da751`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 
