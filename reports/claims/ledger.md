@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-16T01:13:43.733358+00:00
+- Generated: 2026-11-18T04:50:35.819704+00:00
 - README: `README.MD`
-- Total backticked citations: **213**
-- Lean claims: **53** (resolved: 53, unresolved: 0)
-- Citation kinds: `{'prose-term': 49, 'file-reference': 89, 'tooling': 19, 'lean-claim': 53, 'negative-reference': 3}`
+- Total backticked citations: **212**
+- Lean claims: **51** (resolved: 51, unresolved: 0)
+- Citation kinds: `{'prose-term': 51, 'file-reference': 88, 'tooling': 19, 'lean-claim': 51, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -28,7 +28,9 @@
 | `continuity_forces_constant_in_finite_lattice` | resolved | `lean/spec_v4/ContinuityRefutation.lean` | `local` | `bounded model` |
 | `no_continuous_injection_from_continuum` | resolved | `lean/spec_v4/ContinuityRefutation.lean` | `local` | `kernel theorem` |
 | `collatzLoop_mono` | resolved | `lean/spec_v4/CollatzBoundedDefeat.lean` | `local` | `kernel theorem` |
-| `sturm_sequence_decidable_enclosure` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `bounded model` |
+| `signChanges_pos_neg` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `kernel theorem` |
+| `signChanges_zero_ignored` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `kernel theorem` |
+| `sturm_remainder_invariant` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `kernel theorem` |
 | `even_unimodular_not_diagonalizable` | resolved | `lean/spec_v4/EvenUnimodularObstruction.lean` | `local` | `kernel theorem` |
 | `hyperbolic_not_diagonalizable` | resolved | `lean/spec_v4/EvenUnimodularObstruction.lean` | `local` | `kernel theorem` |
 | `instanton_bound` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
@@ -45,16 +47,12 @@
 | `chargeZ_ne_zero_actionZ_ge_one` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
 | `action_gap_sharp` | resolved | `lean/spec_v4/LatticeInstantonBound.lean` | `local` | `kernel theorem` |
 | `path_induction` | resolved | `lean/spec_v4/HigherInductivePushout.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
-| `terminal_is_sheaf` | resolved | `lean/spec_v4/GrothendieckToposBridge.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
-| `sieve_construction_valid` | resolved | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
-| `pi_n_sphere_n_iso` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
+| `pi_n_sphere_n_iso` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
 | `pi_n_sphere_n_iso_id` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
 | `freudenthal_stability_bound` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
-| `freudenthal_stable_witness` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
-| `degreeMap_linear` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
-| `degreeMap_affine` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean` | `local` | `kernel theorem` |
-| `hopf_invariant_one` | resolved | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `bounded model` |
-| `bott_periodicity_stable` | resolved | `lean/spec_v4/HorizonFrontierTests.lean` | `local` | `bounded model` |
+| `freudenthal_stable_witness` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
+| `degreeMap_linear` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
+| `degreeMap_affine` | resolved | `lean/spec_v4/DecidableHomotopySphere.lean, lean/spec_v4/HorizonFrontierTests.lean` | `local` | `kernel theorem` |
 | `torus_generators_distinct` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
 | `torus_generators_free` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
 | `torus_generators_span` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
@@ -135,7 +133,7 @@
 - `[propext]` — prose-term
 - `[propext, Quot.sound]` — prose-term
 - `linarith` — tooling
-- `fuel : ℕ` — prose-term
+- `∃ roots_count, roots_count ≥ 0` — prose-term
 - `reports/FOUR_DIMENSIONAL_TOPOLOGY_NOTES.md` — file-reference
 - `[propext, Classical.choice, Quot.sound]` — prose-term
 - `box_feasibility_witness.lean` — file-reference
@@ -144,16 +142,18 @@
 - `ledger_cross_multiplication.lean` — file-reference
 - `sign_flip_absence.lean` — file-reference
 - `rcases` — prose-term
+- `S1` — prose-term
+- `TorusPi1 := ℤ × ℤ` — prose-term
 - `[Quot.sound]` — prose-term
 - `glue` — prose-term
 - `loop` — prose-term
-- `lean/spec_v4/HorizonFrontierTests.lean` — file-reference
-- `∃ h : ℤ, h = 1` — prose-term
-- `∃ n : ℕ, n + 8 > n` — prose-term
+- `... → True` — prose-term
+- `reports/flawed_artifacts/` — file-reference
 - `HomotopyGroup n X` — prose-term
 - `ℤ` — prose-term
+- `n` — prose-term
+- `n + 1 < k → n + k < 2k` — prose-term
 - `TorusType` — prose-term
-- `TorusPi1 := ℤ × ℤ` — prose-term
 - `ℤ × ℤ` — prose-term
 - `(1,2,1)` — prose-term
 - `torus_fundamental_group` — negative-reference
@@ -173,7 +173,6 @@
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
-- `reports/flawed_artifacts/` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -225,4 +224,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `3b0bcda7130e394490bf5e30d1e811a69884d89eb74f7d57a7c67292c38c67be` — prose-term
+- `fe8f6b9d0866f0aa480e79c47773b76ce55de04a819626b597d00f0c3112ba11` — prose-term

@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-16T01:13:43.733358+00:00",
+  "generated": "2026-11-18T04:50:35.819704+00:00",
   "readme": "README.MD",
-  "readme_semantic_sha256": "d18e4dbd0776d264d64f98a72cf89e02a98f677d83ab506dc97ef2e6dc82f908",
-  "entries": 213,
-  "claims": 53,
-  "resolved_claims": 53,
+  "readme_semantic_sha256": "22d9ea08aa1ddbd8e07212882072bc045ad3135aa4f35a9cfe022a05a50ae751",
+  "entries": 212,
+  "claims": 51,
+  "resolved_claims": 51,
   "unresolved_claims": [],
   "ledger": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "id": "lean/spec_v4",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "lean/spec_v4",
       "kind": "file-reference",
@@ -42,7 +42,7 @@
     },
     {
       "id": "Math30Kernel",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "Math30Kernel",
       "kind": "prose-term",
@@ -53,7 +53,7 @@
     },
     {
       "id": "Math30Interfaces",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "Math30Interfaces",
       "kind": "prose-term",
@@ -64,7 +64,7 @@
     },
     {
       "id": "sorry",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "sorry",
       "kind": "tooling",
@@ -75,7 +75,7 @@
     },
     {
       "id": "sorryAx",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "sorryAx",
       "kind": "tooling",
@@ -86,7 +86,7 @@
     },
     {
       "id": "admit",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "admit",
       "kind": "tooling",
@@ -97,7 +97,7 @@
     },
     {
       "id": "axiom",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "axiom",
       "kind": "tooling",
@@ -108,7 +108,7 @@
     },
     {
       "id": "constant",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "constant",
       "kind": "tooling",
@@ -119,7 +119,7 @@
     },
     {
       "id": "opaque",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "opaque",
       "kind": "tooling",
@@ -130,7 +130,7 @@
     },
     {
       "id": "partial def",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "partial def",
       "kind": "prose-term",
@@ -141,7 +141,7 @@
     },
     {
       "id": "native_decide",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "native_decide",
       "kind": "tooling",
@@ -152,7 +152,7 @@
     },
     {
       "id": "implemented_by",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "implemented_by",
       "kind": "tooling",
@@ -163,7 +163,7 @@
     },
     {
       "id": "extern",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "extern",
       "kind": "tooling",
@@ -174,7 +174,7 @@
     },
     {
       "id": "tools/full_surface_lean_audit.py",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "tools/full_surface_lean_audit.py",
       "kind": "file-reference",
@@ -185,7 +185,7 @@
     },
     {
       "id": "make gate",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 493-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 520 files. Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 506-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 506-file surface; BRIDGE-01 and BRIDGE-02 (2 files, 8 declarations) are additionally mutation-verified (4/4 and 3/3 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "make gate",
       "kind": "prose-term",
@@ -196,7 +196,7 @@
     },
     {
       "id": "manifest.json",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,634 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "manifest.json",
       "kind": "file-reference",
@@ -207,7 +207,7 @@
     },
     {
       "id": "repokeeper.py --verify",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,634 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "repokeeper.py --verify",
       "kind": "prose-term",
@@ -218,7 +218,7 @@
     },
     {
       "id": ".git",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,634 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".git",
       "kind": "prose-term",
@@ -229,7 +229,7 @@
     },
     {
       "id": ".lake",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,634 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".lake",
       "kind": "prose-term",
@@ -240,7 +240,7 @@
     },
     {
       "id": "staging/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,634 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "staging/",
       "kind": "file-reference",
@@ -251,7 +251,7 @@
     },
     {
       "id": "mcp/out/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,634 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "mcp/out/",
       "kind": "file-reference",
@@ -262,7 +262,7 @@
     },
     {
       "id": "__pycache__",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,634 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "__pycache__",
       "kind": "tooling",
@@ -273,7 +273,7 @@
     },
     {
       "id": "*.pyc",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,634 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "*.pyc",
       "kind": "prose-term",
@@ -284,7 +284,7 @@
     },
     {
       "id": "README.MD",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,569 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,634 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "README.MD",
       "kind": "file-reference",
@@ -1001,28 +1001,54 @@
       "class": "tooling"
     },
     {
-      "id": "fuel : ℕ",
-      "prose": "- **Result:** Formal functional proof of Sturm sequences via strict `fuel : ℕ` termination.",
+      "id": "signChanges_pos_neg",
+      "prose": "- **Result:** Polynomial evaluation at rational points, sign-change counting with zeros ignored (`signChanges_pos_neg`, `signChanges_zero_ignored`), and the algebraic one-step remainder identity `sturm_remainder_invariant`.",
+      "artifact": [
+        "lean/spec_v4/SturmTarskiIsolation.lean"
+      ],
+      "theorem_name": "signChanges_pos_neg",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "signChanges_zero_ignored",
+      "prose": "- **Result:** Polynomial evaluation at rational points, sign-change counting with zeros ignored (`signChanges_pos_neg`, `signChanges_zero_ignored`), and the algebraic one-step remainder identity `sturm_remainder_invariant`.",
+      "artifact": [
+        "lean/spec_v4/SturmTarskiIsolation.lean"
+      ],
+      "theorem_name": "signChanges_zero_ignored",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "sturm_remainder_invariant",
+      "prose": "- **Result:** Polynomial evaluation at rational points, sign-change counting with zeros ignored (`signChanges_pos_neg`, `signChanges_zero_ignored`), and the algebraic one-step remainder identity `sturm_remainder_invariant`.",
+      "artifact": [
+        "lean/spec_v4/SturmTarskiIsolation.lean"
+      ],
+      "theorem_name": "sturm_remainder_invariant",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "kernel theorem"
+    },
+    {
+      "id": "∃ roots_count, roots_count ≥ 0",
+      "prose": "- **Scope:** This is **not** a Sturm chain and **not** a real root-isolation algorithm. The former sturm_sequence_decidable_enclosure was a vacuous `∃ roots_count, roots_count ≥ 0` under decorative hypotheses and was removed in Batch 16; the former sturmChain generator repeated its second argument and was also removed. No theorem here counts or isolates roots.",
       "artifact": [],
-      "theorem_name": "fuel : ℕ",
+      "theorem_name": "∃ roots_count, roots_count ≥ 0",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,
       "provenance": "n/a",
       "class": "prose-term"
-    },
-    {
-      "id": "sturm_sequence_decidable_enclosure",
-      "prose": "- **Invariant:** Theorem `sturm_sequence_decidable_enclosure` locks sign variation drop without unbounded decimal leakage.",
-      "artifact": [
-        "lean/spec_v4/SturmTarskiIsolation.lean"
-      ],
-      "theorem_name": "sturm_sequence_decidable_enclosure",
-      "kind": "lean-claim",
-      "status": "resolved",
-      "is_claim": true,
-      "provenance": "local",
-      "class": "bounded model"
     },
     {
       "id": "even_unimodular_not_diagonalizable",
@@ -1308,6 +1334,28 @@
       "class": "prose-term"
     },
     {
+      "id": "S1",
+      "prose": "- **Scope:** `S1` is a point-type scaffold. The module does **not** compute $\\pi_1(S^1)$. The genuine group content is the explicit model `TorusPi1 := ℤ × ℤ` discussed in 9.1.4.",
+      "artifact": [],
+      "theorem_name": "S1",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
+      "id": "TorusPi1 := ℤ × ℤ",
+      "prose": "- **Scope:** `S1` is a point-type scaffold. The module does **not** compute $\\pi_1(S^1)$. The genuine group content is the explicit model `TorusPi1 := ℤ × ℤ` discussed in 9.1.4.",
+      "artifact": [],
+      "theorem_name": "TorusPi1 := ℤ × ℤ",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
       "id": "[Quot.sound]",
       "prose": "- **Axioms:** `[Quot.sound]` only.",
       "artifact": [],
@@ -1355,38 +1403,76 @@
       "class": "kernel theorem"
     },
     {
-      "id": "terminal_is_sheaf",
-      "prose": "- **Key Theorems:** `terminal_is_sheaf`, `sieve_construction_valid`.",
-      "artifact": [
-        "lean/spec_v4/GrothendieckToposBridge.lean",
-        "lean/spec_v4/HorizonFrontierTests.lean"
-      ],
-      "theorem_name": "terminal_is_sheaf",
-      "kind": "lean-claim",
-      "status": "resolved",
-      "is_claim": true,
-      "provenance": "local",
-      "class": "kernel theorem"
+      "id": "... → True",
+      "prose": "- **Reason:** The isSheaf predicate was defined as `... → True`, so terminal_is_sheaf proved a definitional tautology rather than a sheaf condition. The archived source is under `reports/flawed_artifacts/`.",
+      "artifact": [],
+      "theorem_name": "... → True",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
     },
     {
-      "id": "sieve_construction_valid",
-      "prose": "- **Key Theorems:** `terminal_is_sheaf`, `sieve_construction_valid`.",
-      "artifact": [
-        "lean/spec_v4/HorizonFrontierTests.lean"
-      ],
-      "theorem_name": "sieve_construction_valid",
-      "kind": "lean-claim",
-      "status": "resolved",
-      "is_claim": true,
-      "provenance": "local",
-      "class": "kernel theorem"
+      "id": "reports/flawed_artifacts/",
+      "prose": "- **Reason:** The isSheaf predicate was defined as `... → True`, so terminal_is_sheaf proved a definitional tautology rather than a sheaf condition. The archived source is under `reports/flawed_artifacts/`.",
+      "artifact": [],
+      "theorem_name": "reports/flawed_artifacts/",
+      "kind": "file-reference",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "file-reference"
+    },
+    {
+      "id": "HomotopyGroup n X",
+      "prose": "- **Result:** `HomotopyGroup n X` is defined as `ℤ`. The module proves degree-map algebra for affine maps on `ℤ`, the model-level identity equivalence for every `n`, and the finite Freudenthal stable-range inequality `n + 1 < k → n + k < 2k`.",
+      "artifact": [],
+      "theorem_name": "HomotopyGroup n X",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
+      "id": "ℤ",
+      "prose": "- **Result:** `HomotopyGroup n X` is defined as `ℤ`. The module proves degree-map algebra for affine maps on `ℤ`, the model-level identity equivalence for every `n`, and the finite Freudenthal stable-range inequality `n + 1 < k → n + k < 2k`.",
+      "artifact": [],
+      "theorem_name": "ℤ",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
+      "id": "n",
+      "prose": "- **Result:** `HomotopyGroup n X` is defined as `ℤ`. The module proves degree-map algebra for affine maps on `ℤ`, the model-level identity equivalence for every `n`, and the finite Freudenthal stable-range inequality `n + 1 < k → n + k < 2k`.",
+      "artifact": [],
+      "theorem_name": "n",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
+      "id": "n + 1 < k → n + k < 2k",
+      "prose": "- **Result:** `HomotopyGroup n X` is defined as `ℤ`. The module proves degree-map algebra for affine maps on `ℤ`, the model-level identity equivalence for every `n`, and the finite Freudenthal stable-range inequality `n + 1 < k → n + k < 2k`.",
+      "artifact": [],
+      "theorem_name": "n + 1 < k → n + k < 2k",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
     },
     {
       "id": "pi_n_sphere_n_iso",
       "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
       "artifact": [
-        "lean/spec_v4/DecidableHomotopySphere.lean",
-        "lean/spec_v4/HorizonFrontierTests.lean"
+        "lean/spec_v4/DecidableHomotopySphere.lean"
       ],
       "theorem_name": "pi_n_sphere_n_iso",
       "kind": "lean-claim",
@@ -1426,7 +1512,8 @@
       "id": "freudenthal_stable_witness",
       "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
       "artifact": [
-        "lean/spec_v4/DecidableHomotopySphere.lean"
+        "lean/spec_v4/DecidableHomotopySphere.lean",
+        "lean/spec_v4/HorizonFrontierTests.lean"
       ],
       "theorem_name": "freudenthal_stable_witness",
       "kind": "lean-claim",
@@ -1439,7 +1526,8 @@
       "id": "degreeMap_linear",
       "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
       "artifact": [
-        "lean/spec_v4/DecidableHomotopySphere.lean"
+        "lean/spec_v4/DecidableHomotopySphere.lean",
+        "lean/spec_v4/HorizonFrontierTests.lean"
       ],
       "theorem_name": "degreeMap_linear",
       "kind": "lean-claim",
@@ -1452,7 +1540,8 @@
       "id": "degreeMap_affine",
       "prose": "- **Key Theorems:** `pi_n_sphere_n_iso`, `pi_n_sphere_n_iso_id`, `freudenthal_stability_bound`, `freudenthal_stable_witness`, `degreeMap_linear`, `degreeMap_affine`.",
       "artifact": [
-        "lean/spec_v4/DecidableHomotopySphere.lean"
+        "lean/spec_v4/DecidableHomotopySphere.lean",
+        "lean/spec_v4/HorizonFrontierTests.lean"
       ],
       "theorem_name": "degreeMap_affine",
       "kind": "lean-claim",
@@ -1462,102 +1551,10 @@
       "class": "kernel theorem"
     },
     {
-      "id": "hopf_invariant_one",
-      "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
-      "artifact": [
-        "lean/spec_v4/HorizonFrontierTests.lean"
-      ],
-      "theorem_name": "hopf_invariant_one",
-      "kind": "lean-claim",
-      "status": "resolved",
-      "is_claim": true,
-      "provenance": "local",
-      "class": "bounded model"
-    },
-    {
-      "id": "bott_periodicity_stable",
-      "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
-      "artifact": [
-        "lean/spec_v4/HorizonFrontierTests.lean"
-      ],
-      "theorem_name": "bott_periodicity_stable",
-      "kind": "lean-claim",
-      "status": "resolved",
-      "is_claim": true,
-      "provenance": "local",
-      "class": "bounded model"
-    },
-    {
-      "id": "lean/spec_v4/HorizonFrontierTests.lean",
-      "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
-      "artifact": [],
-      "theorem_name": "lean/spec_v4/HorizonFrontierTests.lean",
-      "kind": "file-reference",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "file-reference"
-    },
-    {
-      "id": "∃ h : ℤ, h = 1",
-      "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
-      "artifact": [],
-      "theorem_name": "∃ h : ℤ, h = 1",
-      "kind": "prose-term",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "prose-term"
-    },
-    {
-      "id": "∃ n : ℕ, n + 8 > n",
-      "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
-      "artifact": [],
-      "theorem_name": "∃ n : ℕ, n + 8 > n",
-      "kind": "prose-term",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "prose-term"
-    },
-    {
-      "id": "HomotopyGroup n X",
-      "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
-      "artifact": [],
-      "theorem_name": "HomotopyGroup n X",
-      "kind": "prose-term",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "prose-term"
-    },
-    {
-      "id": "ℤ",
-      "prose": "- **Scope Note:** `hopf_invariant_one` and `bott_periodicity_stable` are *not* in this module. They are test-suite existence witnesses in `lean/spec_v4/HorizonFrontierTests.lean` (`∃ h : ℤ, h = 1` and `∃ n : ℕ, n + 8 > n`), trivially inhabited. They do not formalize the Hopf invariant or Bott periodicity and must not be cited as such. `HomotopyGroup n X` is defined as `ℤ`; `pi_n_sphere_n_iso` proves only that this model admits an identity representative, not the topological isomorphism $\\pi_n(S^n) \\cong \\mathbb{Z}$ for a genuine sphere type.",
-      "artifact": [],
-      "theorem_name": "ℤ",
-      "kind": "prose-term",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "prose-term"
-    },
-    {
       "id": "TorusType",
       "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
       "artifact": [],
       "theorem_name": "TorusType",
-      "kind": "prose-term",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "prose-term"
-    },
-    {
-      "id": "TorusPi1 := ℤ × ℤ",
-      "prose": "- **Model Scope Clarification:** `TorusType` is a point type scaffold; genuine group content resides in the explicit model `TorusPi1 := ℤ × ℤ`. The module proves `torus_generators_distinct`, `torus_generators_free` (no relation), `torus_generators_span` (spanning), and their conjunction `torus_pi1_free_rank_two`. This is a proof about the declared model `ℤ × ℤ`, not a computation of the fundamental group of a topological torus. Cellular invariants `torus_betti_numbers`, `torus_euler_characteristic`, `torus_euler_from_cells`, and `torus_homology_ranks` are arithmetic identities over the declared cell counts `(1,2,1)`.",
-      "artifact": [],
-      "theorem_name": "TorusPi1 := ℤ × ℤ",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,
@@ -1769,7 +1766,7 @@
     },
     {
       "id": "python tools/full_surface_lean_audit.py",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **493** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **493/493 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **506** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **506/506 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential), 2,872.6 s. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`, receipt 2026-11-18 12:48:57). The full 506-file surface is now covered by the canonical receipt; BRIDGE-01 (4 declarations) and BRIDGE-02 (4 declarations) additionally passed exact axiom capture and mutation verification (4/4 and 3/3 killed). A BRIDGE-03 continuum compactness limit is documented as future work and is not claimed.",
       "artifact": [],
       "theorem_name": "python tools/full_surface_lean_audit.py",
       "kind": "file-reference",
@@ -1780,7 +1777,7 @@
     },
     {
       "id": "lake env lean",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **493** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **493/493 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **506** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **506/506 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential), 2,872.6 s. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`, receipt 2026-11-18 12:48:57). The full 506-file surface is now covered by the canonical receipt; BRIDGE-01 (4 declarations) and BRIDGE-02 (4 declarations) additionally passed exact axiom capture and mutation verification (4/4 and 3/3 killed). A BRIDGE-03 continuum compactness limit is documented as future work and is not claimed.",
       "artifact": [],
       "theorem_name": "lake env lean",
       "kind": "prose-term",
@@ -1791,7 +1788,7 @@
     },
     {
       "id": "reports/full_surface_lean_audit.json",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **493** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **493/493 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **506** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **506/506 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential), 2,872.6 s. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`, receipt 2026-11-18 12:48:57). The full 506-file surface is now covered by the canonical receipt; BRIDGE-01 (4 declarations) and BRIDGE-02 (4 declarations) additionally passed exact axiom capture and mutation verification (4/4 and 3/3 killed). A BRIDGE-03 continuum compactness limit is documented as future work and is not claimed.",
       "artifact": [],
       "theorem_name": "reports/full_surface_lean_audit.json",
       "kind": "file-reference",
@@ -1802,7 +1799,7 @@
     },
     {
       "id": "is_complete: true",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **493** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **493/493 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **506** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **506/506 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential), 2,872.6 s. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`, receipt 2026-11-18 12:48:57). The full 506-file surface is now covered by the canonical receipt; BRIDGE-01 (4 declarations) and BRIDGE-02 (4 declarations) additionally passed exact axiom capture and mutation verification (4/4 and 3/3 killed). A BRIDGE-03 continuum compactness limit is documented as future work and is not claimed.",
       "artifact": [],
       "theorem_name": "is_complete: true",
       "kind": "prose-term",
@@ -1813,7 +1810,7 @@
     },
     {
       "id": "verdict: PASS",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **493** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **493/493 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **506** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **506/506 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential), 2,872.6 s. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`, receipt 2026-11-18 12:48:57). The full 506-file surface is now covered by the canonical receipt; BRIDGE-01 (4 declarations) and BRIDGE-02 (4 declarations) additionally passed exact axiom capture and mutation verification (4/4 and 3/3 killed). A BRIDGE-03 continuum compactness limit is documented as future work and is not claimed.",
       "artifact": [],
       "theorem_name": "verdict: PASS",
       "kind": "prose-term",
@@ -1824,7 +1821,7 @@
     },
     {
       "id": "pass_with_warnings: 0",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **493** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **493/493 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`).",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **506** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **506/506 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential), 2,872.6 s. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`, receipt 2026-11-18 12:48:57). The full 506-file surface is now covered by the canonical receipt; BRIDGE-01 (4 declarations) and BRIDGE-02 (4 declarations) additionally passed exact axiom capture and mutation verification (4/4 and 3/3 killed). A BRIDGE-03 continuum compactness limit is documented as future work and is not claimed.",
       "artifact": [],
       "theorem_name": "pass_with_warnings: 0",
       "kind": "prose-term",
@@ -1857,7 +1854,7 @@
     },
     {
       "id": "python tools/omega_audit/substantiveness_gate.py",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest run: **493 files, 2,037 declarations, HIGH=0, verdict PASS**; negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run (pre-bridge baseline): **504 files, 2,070 declarations, HIGH=0, MEDIUM=0, verdict PASS**; BRIDGE-01 targeted run: **4 declarations, HIGH=0, MEDIUM=0, LOW=0, 4/4 mutants killed, 0 survived**; BRIDGE-02 targeted run: **4 declarations (1 auxiliary definition + 3 theorems), HIGH=0, MEDIUM=0, LOW=0, 3/3 mutants killed, 0 survived**; the audited compile surface totals **506 files / 2,078 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "python tools/omega_audit/substantiveness_gate.py",
       "kind": "file-reference",
@@ -1868,7 +1865,7 @@
     },
     {
       "id": "reports/AUDIT_METHODOLOGY.md",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest run: **493 files, 2,037 declarations, HIGH=0, verdict PASS**; negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run (pre-bridge baseline): **504 files, 2,070 declarations, HIGH=0, MEDIUM=0, verdict PASS**; BRIDGE-01 targeted run: **4 declarations, HIGH=0, MEDIUM=0, LOW=0, 4/4 mutants killed, 0 survived**; BRIDGE-02 targeted run: **4 declarations (1 auxiliary definition + 3 theorems), HIGH=0, MEDIUM=0, LOW=0, 3/3 mutants killed, 0 survived**; the audited compile surface totals **506 files / 2,078 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/AUDIT_METHODOLOGY.md",
       "kind": "file-reference",
@@ -1878,19 +1875,8 @@
       "class": "file-reference"
     },
     {
-      "id": "reports/flawed_artifacts/",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest run: **493 files, 2,037 declarations, HIGH=0, verdict PASS**; negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
-      "artifact": [],
-      "theorem_name": "reports/flawed_artifacts/",
-      "kind": "file-reference",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "file-reference"
-    },
-    {
       "id": "reports/substantiveness_gate_regression.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest run: **493 files, 2,037 declarations, HIGH=0, verdict PASS**; negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run (pre-bridge baseline): **504 files, 2,070 declarations, HIGH=0, MEDIUM=0, verdict PASS**; BRIDGE-01 targeted run: **4 declarations, HIGH=0, MEDIUM=0, LOW=0, 4/4 mutants killed, 0 survived**; BRIDGE-02 targeted run: **4 declarations (1 auxiliary definition + 3 theorems), HIGH=0, MEDIUM=0, LOW=0, 3/3 mutants killed, 0 survived**; the audited compile surface totals **506 files / 2,078 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/substantiveness_gate_regression.json",
       "kind": "file-reference",
@@ -1901,7 +1887,7 @@
     },
     {
       "id": "reports/model_scope_manifest.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest run: **493 files, 2,037 declarations, HIGH=0, verdict PASS**; negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run (pre-bridge baseline): **504 files, 2,070 declarations, HIGH=0, MEDIUM=0, verdict PASS**; BRIDGE-01 targeted run: **4 declarations, HIGH=0, MEDIUM=0, LOW=0, 4/4 mutants killed, 0 survived**; BRIDGE-02 targeted run: **4 declarations (1 auxiliary definition + 3 theorems), HIGH=0, MEDIUM=0, LOW=0, 3/3 mutants killed, 0 survived**; the audited compile surface totals **506 files / 2,078 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/model_scope_manifest.json",
       "kind": "file-reference",
@@ -2187,7 +2173,7 @@
     },
     {
       "id": "RiemannCriticalEvidence.lean",
-      "prose": "| 33+++ | **Millennium Riemann Hypothesis Unified Suite: Critical line zero interval verification (`RiemannCriticalEvidence.lean`), Adversarial zero bounds (`RiemannAdversarialEvidence.lean`), Guinand-Weil explicit trace inequalities (`MillenniumRiemannHypothesis.lean`), and DIBD invariant certificates (`RiemannZetaInvariantCertificate.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |",
+      "prose": "| 33+++ | **Millennium Riemann Hypothesis Unified Suite: rational interval records (`RiemannCriticalEvidence.lean`, renamed and scope-limited in Batch 16), Adversarial interval records (`RiemannAdversarialEvidence.lean`), Guinand-Weil explicit trace inequalities (`MillenniumRiemannHypothesis.lean`), and DIBD invariant certificates (`RiemannZetaInvariantCertificate.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |",
       "artifact": [],
       "theorem_name": "RiemannCriticalEvidence.lean",
       "kind": "file-reference",
@@ -2198,7 +2184,7 @@
     },
     {
       "id": "RiemannAdversarialEvidence.lean",
-      "prose": "| 33+++ | **Millennium Riemann Hypothesis Unified Suite: Critical line zero interval verification (`RiemannCriticalEvidence.lean`), Adversarial zero bounds (`RiemannAdversarialEvidence.lean`), Guinand-Weil explicit trace inequalities (`MillenniumRiemannHypothesis.lean`), and DIBD invariant certificates (`RiemannZetaInvariantCertificate.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |",
+      "prose": "| 33+++ | **Millennium Riemann Hypothesis Unified Suite: rational interval records (`RiemannCriticalEvidence.lean`, renamed and scope-limited in Batch 16), Adversarial interval records (`RiemannAdversarialEvidence.lean`), Guinand-Weil explicit trace inequalities (`MillenniumRiemannHypothesis.lean`), and DIBD invariant certificates (`RiemannZetaInvariantCertificate.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |",
       "artifact": [],
       "theorem_name": "RiemannAdversarialEvidence.lean",
       "kind": "file-reference",
@@ -2209,7 +2195,7 @@
     },
     {
       "id": "MillenniumRiemannHypothesis.lean",
-      "prose": "| 33+++ | **Millennium Riemann Hypothesis Unified Suite: Critical line zero interval verification (`RiemannCriticalEvidence.lean`), Adversarial zero bounds (`RiemannAdversarialEvidence.lean`), Guinand-Weil explicit trace inequalities (`MillenniumRiemannHypothesis.lean`), and DIBD invariant certificates (`RiemannZetaInvariantCertificate.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |",
+      "prose": "| 33+++ | **Millennium Riemann Hypothesis Unified Suite: rational interval records (`RiemannCriticalEvidence.lean`, renamed and scope-limited in Batch 16), Adversarial interval records (`RiemannAdversarialEvidence.lean`), Guinand-Weil explicit trace inequalities (`MillenniumRiemannHypothesis.lean`), and DIBD invariant certificates (`RiemannZetaInvariantCertificate.lean`), Examiner-proof Lean 4 kernel verification** | ✅ Sealed |",
       "artifact": [],
       "theorem_name": "MillenniumRiemannHypothesis.lean",
       "kind": "file-reference",
@@ -2450,10 +2436,10 @@
       "class": "file-reference"
     },
     {
-      "id": "3b0bcda7130e394490bf5e30d1e811a69884d89eb74f7d57a7c67292c38c67be",
-      "prose": "> **Manifest:** 1,578 rows, SHA-256 locked: `3b0bcda7130e394490bf5e30d1e811a69884d89eb74f7d57a7c67292c38c67be`",
+      "id": "fe8f6b9d0866f0aa480e79c47773b76ce55de04a819626b597d00f0c3112ba11",
+      "prose": "> **Manifest:** 1,634 rows, SHA-256 locked: `fe8f6b9d0866f0aa480e79c47773b76ce55de04a819626b597d00f0c3112ba11`",
       "artifact": [],
-      "theorem_name": "3b0bcda7130e394490bf5e30d1e811a69884d89eb74f7d57a7c67292c38c67be",
+      "theorem_name": "fe8f6b9d0866f0aa480e79c47773b76ce55de04a819626b597d00f0c3112ba11",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,
