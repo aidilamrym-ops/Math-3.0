@@ -36,9 +36,9 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
 | **Beal Lattice Solver** | Dynamic Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale. |
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
-| **Anti-Circularity Gate** | Executable check over the 504-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the same 504 files. Run with `make gate`; enforced by versioned git hooks. |
+| **Anti-Circularity Gate** | Executable check over the 505-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the audited 504-file baseline; the added BRIDGE-01 file (1 file, 4 declarations) is targeted-compiled and mutation-verified pending the next full-surface run. Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **1-bit fault sentinel** | `manifest.json` pins 1,616 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
+| **1-bit fault sentinel** | `manifest.json` pins 1,626 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
 
 ---
 
@@ -380,9 +380,9 @@ Four active frontier modules extend the formalization to finite homotopy models 
 - **Individual Certificates:** 27 certified Lean 4 certificates (21 core entries + 6 regression-armor entries) bound via cryptographic hash chains to Lean 4 kernel theorems.
 - **Certificate Index:** `reports/certificates/certificate_index.json` (legacy Phase 9 JSON-source registry: 25 entries, separate from the Lean inventory below).
 - **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every Lean file cited in this README. Latest run: **38/38 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.
-- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **504** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **504/504 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential), 2,913.8 s. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`, receipt 2026-11-18 10:20:03).
+- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **504** Lean files under `lean/spec_v4`, `Math30Kernel`, and `Math30Interfaces` with `lake env lean`. Latest run: **504/504 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential), 2,913.8 s. Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`, receipt 2026-11-18 10:20:03). The working tree now contains **505 Lean files / 2,074 declarations**; the added `bridges/ScaleInvariantEnergyBridge.lean` (BRIDGE-01, 4 declarations) is **targeted-compiled (exit 0, 0 warnings, standard axioms) and mutation-verified (4/4 killed)**. The canonical receipt remains the 504-file full-surface run; a fresh all-505 kernel run is pending.
 - **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **53/53 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
-- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest run: **504 files, 2,070 declarations, HIGH=0, MEDIUM=0, verdict PASS**; negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.
+- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-surface run: **504 files, 2,070 declarations, HIGH=0, MEDIUM=0, verdict PASS**; BRIDGE-01 targeted run: **4 declarations, HIGH=0, MEDIUM=0, LOW=0, 4/4 mutants killed, 0 survived**; the working tree surface totals **505 files / 2,074 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
 
@@ -424,10 +424,10 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-5ac5fc836e9b6ded14a2f5d6bc39c601b78ff1a7612a13ceb5e35d2d2d0a01bc
+4f9088ebd3493b7e89544cf643922894ed47372423105bbfa0de6bc7378d54a2
 ```
 
-**Manifest Rows:** 1,616 files pinned  
+**Manifest Rows:** 1,626 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Mon Nov 09 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -472,7 +472,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,616-row SHA-256 ledger
+├── manifest.json                  # 1,626-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -536,7 +536,8 @@ python mcp/t2n/core/repokeeper.py
 # Type-check every Lean file cited by this README
 python tools/readme_lean_audit.py
 
-# Type-check the entire 504-file Lean surface (single worker)
+# Type-check the Lean surface, single worker
+# (canonical receipt: 504/504 full-surface; BRIDGE-01 targeted-compiled)
 python tools/full_surface_lean_audit.py --workers 1
 
 # Verify every cited theorem/definition name exists in source
@@ -586,7 +587,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,616 rows, SHA-256 locked: `5ac5fc836e9b6ded14a2f5d6bc39c601b78ff1a7612a13ceb5e35d2d2d0a01bc`  
+> **Manifest:** 1,626 rows, SHA-256 locked: `4f9088ebd3493b7e89544cf643922894ed47372423105bbfa0de6bc7378d54a2`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 
@@ -598,8 +599,8 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 ## Auto-Facts Summary
 
 <!-- AUTO-FACTS:START -->
-- **Manifest Pinned Files:** 1,616
-- **Lean Surface:** 504 files, all compiled PASS (receipt 2026-11-18 10:20:03)
+- **Manifest Pinned Files:** 1,626
+- **Lean Surface:** 505 files — 504 full-surface audited PASS + BRIDGE-01 targeted PASS (canonical receipt 2026-11-18 10:20:03)
 - **Tracked Claims in Ledger:** 53 Lean claims
 - **Resolved README Theorem Names:** 53/53 PASS
 - **Evidence Status:** PASS

@@ -130,6 +130,10 @@ DECL_RE = re.compile(
 NS_RE = re.compile(r"(?m)^\s*namespace\s+([A-Za-z_][A-Za-z0-9_'.]*)")
 END_RE = re.compile(r"(?m)^\s*end\b(?:\s+([A-Za-z_][A-Za-z0-9_'.]*))?\s*$")
 BINDER_RE = re.compile(r"\((_?h[0-9A-Za-z_']*)\s*:\s*([^()]*?)\)")
+# Mutation targeting must also recognize Unicode hypothesis names such as `hν`
+# from the BRIDGE-01 specification.  This lexer is deliberately separate from
+# BINDER_RE so the substantiveness baseline parsing is unchanged.
+MUTATION_BINDER_RE = re.compile(r"\((_?h[^\s:()]*)\s*:\s*([^()]*?)\)")
 VAR_BINDER_RE = re.compile(r"[({]([^(){}]*?)\s*:\s*(ℕ|ℤ|Nat|Int)[)}]")
 PROP_THEOREM_RE = re.compile(r"^\s*(?:theorem|lemma)\s+([A-Za-z_][A-Za-z0-9_'.]*)", re.M)
 
@@ -661,7 +665,7 @@ def mutate_first_hypothesis(path: Path, decl: Decl) -> tuple[str, str] | None:
     lines = src.splitlines(keepends=True)
     start = sum(len(l) for l in lines[: decl.line - 1])
     stmt = src[start : start + len(decl.statement)]
-    match = BINDER_RE.search(stmt)
+    match = MUTATION_BINDER_RE.search(stmt)
     if not match or match.group(2).strip() in ("True", "False"):
         return None
     mutated_stmt = stmt[: match.start(2)] + "True" + stmt[match.end(2):]
@@ -767,6 +771,24 @@ def is_prop_hypothesis(typ: str, prop_names: set[str]) -> bool:
     if head and head.group(1) in prop_names:
         return True
     return typ in ("True", "False")
+
+
+def mutation_candidate(d: Decl, prop_names: set[str]) -> bool:
+    """Return whether the declaration has a mutation-compatible first hypothesis.
+
+    Uses the Unicode-aware mutation lexer so specifications such as
+    ``hν : 0 < ν`` are testable even though the baseline parser only records
+    ASCII ``h*`` names.
+    """
+    if d.kind not in ("theorem", "lemma"):
+        return False
+    match = MUTATION_BINDER_RE.search(d.statement)
+    if not match:
+        return False
+    typ = match.group(2).strip()
+    if typ in ("True", "False"):
+        return False
+    return is_prop_hypothesis(typ, prop_names)
 
 
 # ---------------------------------------------------------------------------
@@ -946,16 +968,14 @@ def main() -> int:
     # Optional mutation run
     mutation_rows: list[dict] = []
     if args.mutate:
-        candidates = [
-            d
-            for d in all_decls
-            if d.kind in ("theorem", "lemma")
-            and d.hyp_names
-            and is_prop_hypothesis(d.hyp_types[0], prop_names)
-        ]
+        candidates = [d for d in all_decls if mutation_candidate(d, prop_names)]
         limit = len(candidates) if args.mutation_limit <= 0 else args.mutation_limit
         for index, d in enumerate(candidates[:limit], start=1):
             path = ROOT / d.file
+            mutation_match = MUTATION_BINDER_RE.search(d.statement)
+            if not mutation_match:
+                continue
+            hyp_name = mutation_match.group(1)
             mutated = mutate_first_hypothesis(path, d)
             if not mutated:
                 continue
@@ -969,11 +989,11 @@ def main() -> int:
             mutation_rows.append({
                 "file": d.file, "declaration": d.name,
                 "verdict": "SURVIVED" if survived else "KILLED",
-                "hypothesis": d.hyp_names[0],
+                "hypothesis": hyp_name,
             })
             if survived:
                 findings.append(finding(d, "HIGH", "PREMISE_MUTATION_SURVIVED",
-                                        f"weakening `{d.hyp_names[0]}` to True still compiles"))
+                                        f"weakening `{hyp_name}` to True still compiles"))
 
     # Canonical constant definitions can be waived by an explicit registry.
     waived: list[dict] = []

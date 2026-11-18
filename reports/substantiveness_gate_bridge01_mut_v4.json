@@ -1,0 +1,58 @@
+{
+  "generated": "2026-11-18T02:45:16Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\bridges\\ScaleInvariantEnergyBridge.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 4,
+  "predicates": 0,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "verdict": "PASS",
+  "findings": [],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "declaration": "energy_nonincreasing",
+      "verdict": "KILLED",
+      "hypothesis": "hD"
+    },
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "declaration": "flat_step_zero_dissipation",
+      "verdict": "KILLED",
+      "hypothesis": "hν"
+    },
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "declaration": "no_finite_time_blowup",
+      "verdict": "KILLED",
+      "hypothesis": "hB"
+    },
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "declaration": "lattice_family_energy_bound",
+      "verdict": "KILLED",
+      "hypothesis": "hN"
+    }
+  ],
+  "mutation_summary": {
+    "total": 4,
+    "killed": 4,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}

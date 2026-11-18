@@ -1,0 +1,33 @@
+{
+  "generated": "2026-11-18T02:40:24Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\bridges\\ScaleInvariantEnergyBridge.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 4,
+  "predicates": 0,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "verdict": "PASS",
+  "findings": [],
+  "mutations": [],
+  "mutation_summary": {
+    "total": 0,
+    "killed": 0,
+    "survived": 0,
+    "survival_rate": null
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}

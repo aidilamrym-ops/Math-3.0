@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "claims": [
     {
       "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
@@ -59,11 +59,57 @@
       "level": "P4",
       "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
       "note": "Nonlinear omega proof repaired; redundant h_phi removed."
+    },
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "declaration": "energy_nonincreasing",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hD",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ E D : ℕ → ℤ, ∀ ν : ℤ, ∀ t : ℕ; infinite discrete time",
+      "note": "BRIDGE-01 discrete energy bound; the continuum limit N → ∞ is deferred to BRIDGE-02 and is not claimed here."
+    },
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "declaration": "flat_step_zero_dissipation",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hν",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ E D : ℕ → ℤ, ∀ ν : ℤ, ∀ t : ℕ; infinite discrete time",
+      "note": "BRIDGE-01 discrete energy bound; the continuum limit N → ∞ is deferred to BRIDGE-02 and is not claimed here."
+    },
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "declaration": "no_finite_time_blowup",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hB",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ E D : ℕ → ℤ, ∀ ν B : ℤ, ∀ t : ℕ; infinite discrete time",
+      "note": "BRIDGE-01 discrete energy bound; the continuum limit N → ∞ is deferred to BRIDGE-02 and is not claimed here."
+    },
+    {
+      "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+      "declaration": "lattice_family_energy_bound",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hN",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ N ≥ 1, ∀ t : ℕ; every finite lattice family Fin N and the total sum over Finset.univ",
+      "note": "BRIDGE-01 discrete energy bound; the continuum limit N → ∞ is deferred to BRIDGE-02 and is not claimed here."
     }
   ],
   "notes": [
     "All axiom footprints were captured with #print axioms from files that compile with lake env lean exit 0.",
     "The 2026-11-18 audit found kyber_poly_bound, lattice_svp_bound, and rsa_exponent_bound non-compiling at HEAD 44d344c; all three entered after the last green 493-file audit.",
-    "This matrix makes no continuum or cryptographic-hardness claim. It records finite arithmetic bounds only."
+    "This matrix makes no continuum-limit or cryptographic-hardness claim. The SMT entries record finite arithmetic bounds; BRIDGE-01 records discrete energy bounds only.",
+    "BRIDGE-01 scope is the infinite discrete lattice family ∀ N ≥ 1, ∀ t : ℕ. The continuum limit N → ∞ is deferred to BRIDGE-02.",
+    "BRIDGE-01 mutation receipt: reports/substantiveness_gate_bridge01_mut_v4.json — 4/4 declarations killed, 0 survived, one primary hypothesis per declaration."
   ]
 }

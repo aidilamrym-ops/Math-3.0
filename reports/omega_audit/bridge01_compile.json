@@ -1,0 +1,13 @@
+{
+  "command": "lake env lean spec_v4/bridges/ScaleInvariantEnergyBridge.lean",
+  "exit_code": 0,
+  "warnings": 0,
+  "axioms": [
+    "'Math30.Bridges.energy_nonincreasing' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Math30.Bridges.flat_step_zero_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Math30.Bridges.no_finite_time_blowup' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Math30.Bridges.lattice_family_energy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "timestamp_utc": "2026-11-18T02:48:02.229043+00:00",
+  "file": "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
+}

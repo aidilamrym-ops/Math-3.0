@@ -1,0 +1,4 @@
+'Math30.Bridges.energy_nonincreasing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Math30.Bridges.flat_step_zero_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Math30.Bridges.no_finite_time_blowup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Math30.Bridges.lattice_family_energy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
