@@ -1,0 +1,61 @@
+{
+  "generated": "2026-11-18 21:26:20",
+  "elapsed_seconds": 14.4,
+  "files_scanned": 1,
+  "files_with_theorems": 1,
+  "theorems_total": 3,
+  "allowlist": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_usage": {
+    "propext": 3,
+    "Classical.choice": 3,
+    "Quot.sound": 3
+  },
+  "violations": [],
+  "inconclusive": [],
+  "compile_errors": [],
+  "failed": [],
+  "results": [
+    {
+      "file": "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean",
+      "status": "PROBED",
+      "rc": 0,
+      "seconds": 14.43,
+      "theorems": [
+        {
+          "name": "Math30.Bridges.exponential_dominates_linear_bound",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.Bridges.circuit_density_ratio_vanishes",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.Bridges.gauge_action_gap_scale_invariant",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "violations": [],
+      "inconclusive": [],
+      "error": ""
+    }
+  ]
+}

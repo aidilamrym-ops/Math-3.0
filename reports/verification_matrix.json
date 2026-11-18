@@ -224,6 +224,39 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ N : ℕ, ∀ mid rad x : Fin N → ℚ with rad i ≤ mid i and mid i - rad i ≤ x i ≤ mid i + rad i; interval enclosure preserves Weil positivity",
       "note": "BRIDGE-05 Guinand–Weil explicit formula trace positivity; certified interval-to-trace positivity over compactly supported test windows. Does NOT claim a proof of the Riemann Hypothesis; RH remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean",
+      "declaration": "exponential_dominates_linear_bound",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hn",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n : ℕ with 2 ≤ n; exponential state-space growth dominates linear bound: n + 1 < 2^n",
+      "note": "BRIDGE-06 asymptotic circuit/gauge scaling; bounded lattice instances to universal scaling laws. Does NOT claim continuum Yang–Mills mass gap or P vs NP resolution."
+    },
+    {
+      "file": "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean",
+      "declaration": "circuit_density_ratio_vanishes",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hC",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ C ε > 0, ∀ ratio : ℕ → ℚ with ratio n ≤ C/n; density ratios vanish beyond finite scale threshold N₀",
+      "note": "BRIDGE-06 asymptotic circuit/gauge scaling; bounded lattice instances to universal scaling laws. Does NOT claim continuum Yang–Mills mass gap or P vs NP resolution."
+    },
+    {
+      "file": "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean",
+      "declaration": "gauge_action_gap_scale_invariant",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hQ",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ Q S : ℤ with Q ≠ 0 and Q² ≤ S; discrete action gap 1 ≤ S preserved across lattice refinements",
+      "note": "BRIDGE-06 asymptotic circuit/gauge scaling; bounded lattice instances to universal scaling laws. Does NOT claim continuum Yang–Mills mass gap or P vs NP resolution."
     }
   ],
   "notes": [
@@ -237,6 +270,8 @@
     "BRIDGE-04 mutation receipt: reports/substantiveness_gate_BRIDGE04.json — 3/3 declarations killed, 0 survived, one primary hypothesis per declaration (hb, hL, hR).",
     "BRIDGE-04 proves weak operator consistency along extracted subsequences only. It does not claim uniqueness or classical smoothness of 3D Navier–Stokes solutions.",
     "BRIDGE-05 mutation receipt: reports/substantiveness_gate_BRIDGE05.json — 3/3 declarations killed, 0 survived, one primary hypothesis per declaration (hN/hΦ, hsupp, hmargin).",
-    "BRIDGE-05 proves certified interval-to-trace positivity over compactly supported test windows. It does NOT claim a proof of the Riemann Hypothesis; RH remains OPEN."
+    "BRIDGE-05 proves certified interval-to-trace positivity over compactly supported test windows. It does NOT claim a proof of the Riemann Hypothesis; RH remains OPEN.",
+    "BRIDGE-06 mutation receipt: reports/substantiveness_gate_BRIDGE06.json — 3/3 declarations killed, 0 survived, one primary hypothesis per declaration (hn, hC, hQ).",
+    "BRIDGE-06 proves bounded circuit and gauge scaling lemmas. It does NOT claim a continuum Yang–Mills mass gap or P vs NP resolution."
   ]
 }

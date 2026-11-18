@@ -87,8 +87,25 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 
 **Scope:** Finite and rational test windows and interval enclosures. **Claims:** Certified interval-to-trace positivity over compactly supported test windows. **Does NOT claim:** a proof of the Riemann Hypothesis; RH remains OPEN.
 
----
-**Lean surface:** 509 files = 504 full-surface audited (`PASS`) + 5 bridges (`BRIDGE-01`, `BRIDGE-02`, `BRIDGE-03`, `BRIDGE-04`, `BRIDGE-05`) targeted-compiled and mutation-verified.
+#### 5.15.6 BRIDGE-06 — Asymptotic Circuit & Gauge Scaling Bridge
+**Location:** `lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean` (Batch 9)
 
-**Manifest seal (sha-256):** c3424fa528f733a750089df6210f7dfbf05e515abbdbeb34dc1ebcd32d43eeaa
-**1,645 rows** in manifest.
+**Status:** ✅ Fully validated and verified (`3/3` mutation-verified); pending operator review.
+
+**Summary:** Completes the 6-bridge multi-scale architecture by bridging bounded circuit/gauge instances to universal asymptotic scaling laws. Three core declarations:
+
+1. **`exponential_dominates_linear_bound`** — Exponential state-space growth strictly dominates linear bounds for all `n ≥ 2` (`hn : 2 ≤ n → n + 1 < 2^n`)
+2. **`circuit_density_ratio_vanishes`** — For any overhead `C > 0` and tolerance `ε > 0`, density ratios bounded by `C/n` vanish beyond a finite threshold `N₀` (`hC : 0 < C → ∃ N₀ ≥ 1, ∀ n ≥ N₀, ratio n < ε`)
+3. **`gauge_action_gap_scale_invariant`** — Non-zero topological charge `Q ≠ 0` with `Q² ≤ S` preserves integer action gap `1 ≤ S` (`hQ : Q ≠ 0 → 1 ≤ S`)
+
+**Load-bearing hypothesis:** Primary hypotheses `hn`, `hC`, `hQ` respectively; each is essential to its declaration.
+
+**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`).
+
+**Scope:** Bounded discrete lattice instances scaled to universal asymptotic laws. **Claims:** Asymptotic circuit/gauge scaling bounds. **Does NOT claim:** a continuum Yang–Mills mass gap or P vs NP resolution.
+
+---
+**Lean surface:** 510 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`, `BRIDGE-02`, `BRIDGE-03`, `BRIDGE-04`, `BRIDGE-05`, `BRIDGE-06`) targeted-compiled and mutation-verified.
+
+**Manifest seal (sha-256):** 6dff8823e90af7ea613cfe2458805403104d4d20ae184de0e4d88c8a3e9c4272
+**1,650 rows** in manifest.

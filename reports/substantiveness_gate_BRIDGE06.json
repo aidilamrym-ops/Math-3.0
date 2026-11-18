@@ -1,0 +1,52 @@
+{
+  "generated": "2026-11-18T13:34:55Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\bridges\\AsymptoticCircuitGaugeBridge.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 3,
+  "predicates": 0,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "verdict": "PASS",
+  "findings": [],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean",
+      "declaration": "exponential_dominates_linear_bound",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    },
+    {
+      "file": "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean",
+      "declaration": "circuit_density_ratio_vanishes",
+      "verdict": "KILLED",
+      "hypothesis": "hC"
+    },
+    {
+      "file": "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean",
+      "declaration": "gauge_action_gap_scale_invariant",
+      "verdict": "KILLED",
+      "hypothesis": "hQ"
+    }
+  ],
+  "mutation_summary": {
+    "total": 3,
+    "killed": 3,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}
