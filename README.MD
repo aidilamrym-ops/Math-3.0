@@ -53,6 +53,25 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 
 **Scope:** Finite-dimensional, quantified over all grid resolutions. **Claims:** Extract convergent subsequences, **does NOT claim:** full 3D Navier-Stokes global regularity or Millennium Prize resolution.
 
+#### 5.15.4 BRIDGE-04 — Weak Operator Consistency Bridge
+**Location:** `lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean` (Batch 7)
+
+**Status:** ✅ Fully validated and verified (`3/3` mutation-verified); pending commit at operator review.
+
+**Summary:** Bridges discrete finite-difference operators on dyadic grids to weak integral-form test identities. Three core declarations:
+
+1. **`discrete_summation_by_parts`** — Discrete summation-by-parts with homogeneous boundary conditions (`∀ N u φ, u 0 = 0 ∧ u N = 0 → Σ (u(i+1)-u i) φ i = -Σ u(i+1)(φ(i+1)-φ i)`)
+2. **`dyadic_grid_step_contraction`** — Total discrete variation over `2^k` dyadic cells bounded by Lipschitz constant (`0 < L ∧ |φ(i+1)-φ i| ≤ L/2^k → Σ |φ(i+1)-φ i| ≤ L`)
+3. **`weak_residual_subsequence_vanishes`** — Discrete truncation residual vanishes along any `StrictMono` extraction (`|R k| ≤ C/(k+1), C ≥ 0 → Tendsto (R ∘ φ) atTop (𝓝 0)`)
+
+**Load-bearing hypothesis:** Primary hypotheses `hb`, `hL`, `hR` respectively; each is essential to its declaration.
+
+**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`).
+
+**Scope:** Finite-dimensional / countable discrete and dyadic approximations. **Claims:** weak operator consistency along extracted subsequences. **Does NOT claim:** uniqueness or classical smoothness of 3D Navier–Stokes solutions.
+
 ---
-**Manifest seal (sha-256):** 6f546a4e8ce1d7e5eeb953275bffd5d51f4ea2c86fce01dd90af779800deb7aa
-**1,636 rows** in manifest.
+**Lean surface:** 508 files = 504 full-surface audited (`PASS`) + 4 bridges (`BRIDGE-01`, `BRIDGE-02`, `BRIDGE-03`, `BRIDGE-04`) targeted-compiled and mutation-verified.
+
+**Manifest seal (sha-256):** 80e5d6010eda2e04c59064372a00cd7294e1aaa537781066b4d894509660906b
+**1,640 rows** in manifest.

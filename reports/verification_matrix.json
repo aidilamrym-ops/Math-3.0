@@ -158,6 +158,39 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ B : ℚ, ∀ u : (k : ℕ) → Fin (2^k) → ℚ; stationary dyadic trajectories",
       "note": "BRIDGE-03 diagonal extraction; the continuum limit N → ∞ is not claimed here."
+    },
+    {
+      "file": "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean",
+      "declaration": "discrete_summation_by_parts",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hb",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ N : ℕ, ∀ u φ : ℕ → ℚ; homogeneous boundary conditions u 0 = 0 ∧ u N = 0",
+      "note": "BRIDGE-04 discrete summation-by-parts; weak operator consistency only. Does not claim uniqueness or classical smoothness of 3D Navier–Stokes solutions."
+    },
+    {
+      "file": "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean",
+      "declaration": "dyadic_grid_step_contraction",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hL",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ k : ℕ, ∀ L : ℚ with 0 < L, ∀ φ : ℕ → ℚ; Lipschitz bound |φ(i+1)-φ i| ≤ L / 2^k over 2^k dyadic cells",
+      "note": "BRIDGE-04 dyadic total-variation contraction; weak operator consistency only. Does not claim uniqueness or classical smoothness of 3D Navier–Stokes solutions."
+    },
+    {
+      "file": "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean",
+      "declaration": "weak_residual_subsequence_vanishes",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hR",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ R : ℕ → ℝ, ∀ C ≥ 0 with |R k| ≤ C/(k+1), ∀ StrictMono φ : ℕ → ℕ; extracted residual tends to 0",
+      "note": "BRIDGE-04 weak residual vanishing along extracted subsequences (StrictMono matching BRIDGE-03); weak operator consistency only. Does not claim uniqueness or classical smoothness of 3D Navier–Stokes solutions."
     }
   ],
   "notes": [
@@ -167,6 +200,8 @@
     "BRIDGE-01 scope is the infinite discrete lattice family ∀ N ≥ 1, ∀ t : ℕ; the continuum limit N → ∞ is not claimed.",
     "BRIDGE-01 mutation receipt: reports/substantiveness_gate_bridge01_mut_v4.json — 4/4 declarations killed, 0 survived, one primary hypothesis per declaration.",
     "BRIDGE-02 mutation receipt: reports/substantiveness_gate_bridge02_mut.json — 3/3 declarations killed, 0 survived, hypotheses hA, hN, hC.",
-    "BRIDGE-02 gives truncation decay only. It does not establish convergence to a continuum PDE solution."
+    "BRIDGE-02 gives truncation decay only. It does not establish convergence to a continuum PDE solution.",
+    "BRIDGE-04 mutation receipt: reports/substantiveness_gate_BRIDGE04.json — 3/3 declarations killed, 0 survived, one primary hypothesis per declaration (hb, hL, hR).",
+    "BRIDGE-04 proves weak operator consistency along extracted subsequences only. It does not claim uniqueness or classical smoothness of 3D Navier–Stokes solutions."
   ]
 }

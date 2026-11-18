@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-14 19:45:58",
-  "elapsed_seconds": 14.6,
+  "generated": "2026-11-18 19:03:33",
+  "elapsed_seconds": 14.1,
   "files_scanned": 1,
   "files_with_theorems": 1,
-  "theorems_total": 12,
+  "theorems_total": 3,
   "allowlist": [
     "Classical.choice",
     "Quot.sound",
     "propext"
   ],
   "axiom_usage": {
-    "propext": 12,
-    "Classical.choice": 12,
-    "Quot.sound": 12
+    "propext": 3,
+    "Classical.choice": 3,
+    "Quot.sound": 3
   },
   "violations": [],
   "inconclusive": [],
@@ -20,13 +20,13 @@
   "failed": [],
   "results": [
     {
-      "file": "lean/spec_v4/EvenUnimodularObstruction.lean",
+      "file": "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean",
       "status": "PROBED",
       "rc": 0,
-      "seconds": 14.57,
+      "seconds": 14.06,
       "theorems": [
         {
-          "name": "Math30.Topology.EvenUnimodular.qform_congruent",
+          "name": "Math30.Bridges.discrete_summation_by_parts",
           "status": "AXIOMS",
           "axioms": [
             "propext",
@@ -35,7 +35,7 @@
           ]
         },
         {
-          "name": "Math30.Topology.EvenUnimodular.EvenForm.congr",
+          "name": "Math30.Bridges.dyadic_grid_step_contraction",
           "status": "AXIOMS",
           "axioms": [
             "propext",
@@ -44,88 +44,7 @@
           ]
         },
         {
-          "name": "Math30.Topology.EvenUnimodular.even_diagonal_of_evenForm",
-          "status": "AXIOMS",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "name": "Math30.Topology.EvenUnimodular.two_pow_dvd_det_of_diagonal_even",
-          "status": "AXIOMS",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "name": "Math30.Topology.EvenUnimodular.not_two_pow_dvd_one",
-          "status": "AXIOMS",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "name": "Math30.Topology.EvenUnimodular.not_two_pow_dvd_neg_one",
-          "status": "AXIOMS",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "name": "Math30.Topology.EvenUnimodular.even_unimodular_diagonal_absurd",
-          "status": "AXIOMS",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "name": "Math30.Topology.EvenUnimodular.det_congruent",
-          "status": "AXIOMS",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "name": "Math30.Topology.EvenUnimodular.even_unimodular_not_diagonalizable",
-          "status": "AXIOMS",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "name": "Math30.Topology.EvenUnimodular.hyperbolic_even",
-          "status": "AXIOMS",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "name": "Math30.Topology.EvenUnimodular.hyperbolic_det",
-          "status": "AXIOMS",
-          "axioms": [
-            "propext",
-            "Classical.choice",
-            "Quot.sound"
-          ]
-        },
-        {
-          "name": "Math30.Topology.EvenUnimodular.hyperbolic_not_diagonalizable",
+          "name": "Math30.Bridges.weak_residual_subsequence_vanishes",
           "status": "AXIOMS",
           "axioms": [
             "propext",

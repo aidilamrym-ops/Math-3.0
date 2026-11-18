@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-18 16:44:58",
+  "generated": "2026-11-18 19:02:18",
   "scope": {
     "kind": "partial",
-    "only": "ContinuumCompactnessBridge",
+    "only": "WeakOperatorConsistencyBridge",
     "surfaces": [
       "lean/spec_v4",
       "Math30Kernel",
@@ -23,17 +23,17 @@
     "PASS": 1
   },
   "pass_with_warnings": 0,
-  "total_seconds": 16.1,
+  "total_seconds": 13.9,
   "failures": [],
   "warning_files": [],
   "results": [
     {
-      "path": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
-      "lean_path": "spec_v4/bridges/ContinuumCompactnessBridge.lean",
+      "path": "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean",
+      "lean_path": "spec_v4/bridges/WeakOperatorConsistencyBridge.lean",
       "rc": 0,
       "status": "PASS",
       "warnings": 0,
-      "seconds": 16.06,
+      "seconds": 13.93,
       "error": "",
       "stdout_tail": "",
       "stderr_tail": ""
