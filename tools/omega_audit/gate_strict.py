@@ -19,7 +19,10 @@ OMEGA-0013/OMEGA-0014.
 
 This wrapper does not silently replace the skill gate. It runs the skill gate
 first, forwards its verdict verbatim, then applies a stricter lexer and a
-wider trust-token policy. Both must pass. Resolution order is: explicit
+wider trust-token policy. Both must pass. The lexer is fail closed on
+malformed input: an unterminated block comment or string literal is reported
+as a finding instead of blanking the remainder of the file (the
+``fixture_b_string_comment.lean`` evasion). Resolution order is: explicit
 ``--gate``, ``ANTI_CIRCULARITY_GATE``, the repo-local vendored copy used by CI
 (``tools/omega_audit/vendor/anti_circularity_gate.py``), then the installed
 skill. The vendored copy is byte-identical to the gate of record; its hash is
@@ -97,8 +100,16 @@ def find_external_gate(explicit: str | None) -> Path | None:
     return None
 
 
-def blank_comments_and_literals(text: str) -> str:
+def lex_lean(text: str) -> tuple[str, list[tuple[str, int]]]:
     """Blank Lean comments and string/char literals, preserving line count.
+
+    Returns ``(clean_text, issues)`` where ``issues`` is a list of
+    ``(label, offset)`` pairs for lexically malformed input. The gate is fail
+    closed: an unterminated block comment or string literal is reported as a
+    finding instead of silently blanking the remainder of the file. That was
+    the ``fixture_b_string_comment.lean`` evasion, in which a stray ``/-``
+    inside a doc comment kept the comment depth above zero and hid a live
+    ``sorry``.
 
     Newlines are kept so a line number computed on the result still points at
     the same line in the original source. This lexer understands nested block
@@ -109,6 +120,8 @@ def blank_comments_and_literals(text: str) -> str:
     length = len(text)
     index = 0
     depth = 0
+    comment_start = 0
+    issues: list[tuple[str, int]] = []
 
     def blank(start: int, end: int) -> None:
         for position in range(start, min(end, length)):
@@ -141,6 +154,7 @@ def blank_comments_and_literals(text: str) -> str:
 
         if text.startswith("/-", index):
             depth = 1
+            comment_start = index
             blank(index, index + 2)
             index += 2
             continue
@@ -151,7 +165,11 @@ def blank_comments_and_literals(text: str) -> str:
             if raw:
                 closing = '"' + raw.group(1)
                 end = text.find(closing, raw.end())
-                end = length if end == -1 else end + len(closing)
+                if end == -1:
+                    issues.append(("UNTERMINATED_STRING", index))
+                    end = length
+                else:
+                    end += len(closing)
                 blank(index, end)
                 index = end
                 continue
@@ -159,15 +177,19 @@ def blank_comments_and_literals(text: str) -> str:
         if text[index] == '"':
             start = index
             index += 1
+            closed = False
             while index < length:
                 if text[index] == "\\":
                     index += 2
                     continue
                 if text[index] == '"':
                     index += 1
+                    closed = True
                     break
                 index += 1
             blank(start, index)
+            if not closed:
+                issues.append(("UNTERMINATED_STRING", start))
             continue
 
         # Character literal. A prime in an identifier (foo') is not a literal.
@@ -185,7 +207,15 @@ def blank_comments_and_literals(text: str) -> str:
 
         index += 1
 
-    return "".join(out)
+    if depth:
+        issues.append(("UNTERMINATED_COMMENT", comment_start))
+
+    return "".join(out), issues
+
+
+def blank_comments_and_literals(text: str) -> str:
+    """Backwards-compatible view of :func:`lex_lean` returning only the text."""
+    return lex_lean(text)[0]
 
 
 def collect_lean(paths: list[str]) -> tuple[list[Path], list[Path]]:
@@ -227,8 +257,19 @@ def scan(paths: list[str]) -> tuple[list[str], list[str], int]:
         except (OSError, UnicodeDecodeError) as error:
             not_run.append("UNREADABLE %s (%s)" % (path, error))
             continue
-        clean = blank_comments_and_literals(raw)
+        clean, lexical_issues = lex_lean(raw)
         seen: set[tuple[int, str]] = set()
+        for label, offset in lexical_issues:
+            line = line_at(raw, offset)
+            key = (line, label)
+            if key in seen:
+                continue
+            seen.add(key)
+            source_line = raw.splitlines()[line - 1].strip() if line - 1 < len(raw.splitlines()) else ""
+            findings.append(
+                "%s:%d: %s :: %s"
+                % (path, line, label, source_line[:160])
+            )
         for label, pattern in STRICT_TOKENS:
             for match in pattern.finditer(clean):
                 line = line_at(clean, match.start())
@@ -330,7 +371,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.json:
         receipt = {
             "tool": "math30_strict_gate",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "command": args.command,
             "external_gate": str(gate) if gate else None,

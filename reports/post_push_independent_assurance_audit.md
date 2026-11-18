@@ -1,126 +1,259 @@
 # KRONOS — Post-Push Independent Assurance Audit
+
 ## Target Repository: `aidilamrym-ops/Math-3.0`
-## Audit Baseline: Commit `f3b4d33250bd49ae5fd5b3f1595defb5f2368296` (`main`)
-## Date: November 17, 2026
+## Audit Baseline: Commit `44d344c` (`main`)
+## Date: November 18, 2026
 ## Mode: Read-Only / Adversarial / Evidence-Driven
 
 ---
 
-## 1. Audit Scope & Commit Baseline
+## 1. Audit Scope & Baseline
 
-This audit independently inspects commit `f3b4d33` ("Seal A1+C+B-1: build target, baseline gate, parameterized FLT/Ramsey"). 
+This report distinguishes the **pushed baseline** from the **post-remediation
+working tree**. It is not a claim that the baseline was correct.
 
-### Baseline Identification
-- **Commit Hash:** `f3b4d33250bd49ae5fd5b3f1595defb5f2368296`
-- **Parent Commit:** `df359e9` ("Seal Batch17/BoundedPathGraph witness hardening; ...")
-- **Working Tree State at Audit Start:** Clean (matching commit `f3b4d33`)
-- **Staged Changes:** None
-- **Total Files Changed in Commit:** 14 files (4,553 insertions, 72 deletions), encompassing:
-  1. `lean/lakefile.toml` (Batch A1: `lean_lib spec_v4` target)
-  2. `lean/spec_v4/EuclidFermatArmor.lean` (Batch B-1: Parameterized Fermat's Little Theorem)
-  3. `lean/spec_v4/ErdosSzekeresRamsey.lean` (Batch B-1: Parameterized $R(3,3) \le 6$)
-  4. `lean/spec_v4/CollatzBoundedDefeat.lean` (Batch B-1: Parameterized Collatz step facts)
-  5. `tools/omega_audit/substantiveness_gate.py` (Batch C: Substantiveness baseline enforcement)
-  6. `tools/hooks/pre-commit` (Batch C & post-commit fix for space-separated paths)
-  7. `mcp/t2n/core/repokeeper.py` (Manifest integrity & reseal updates)
-  8. `reports/substantiveness_baseline.json` (New baseline ledger: 436 keys)
-  9. `reports/substantiveness_gate.json` / `.md` / `reports/substantiveness_gate_b1.json` / `.md`
-  10. `reports/model_scope_manifest.json`
-  11. `README.MD` (Manifest seal sync: 1,587 rows)
+### 1.1 Pushed baseline
 
----
+- **Commit:** `44d344c` — "feat(omega): complete omega evolutionary audit batch 1-4,
+  1600 rows sealed, zero findings/warnings"
+- **Manifest:** 1,600 rows
+- **Seal:** `2eb2fb13109f429c1da1d98102519170b0d334d3ef872b09bd6ab8557e5e09e6`
+- **Audited surface:** 504 Lean files
+  - `lean/spec_v4`: 493
+  - `Math30Kernel`: 9
+  - `Math30Interfaces`: 2
 
-## 2. Formal Lean Theorem Audit
+The baseline commit's message claims "zero findings/warnings". That claim was
+**not supported by a 504-file kernel compile**. The last green full-surface
+audit before the seal was generated on **2026-11-16 09:13:35** over **493**
+files. Three commits landed afterwards:
 
-### A. Fermat's Little Theorem (`EuclidFermatArmor.lean`)
+| Commit | Date | Change |
+|---|---|---|
+| `f088ed7` | 2026-11-17 15:58 | RSA exponent, lattice SVP, ZKP commitment modules |
+| `5e53d5d` | 2026-11-17 17:15 | Schnorr, VRF, Kyber modules |
+| `f365c92` | 2026-11-17 | Scalar multiplication / pairing additions |
 
-#### Statement & Verification
-- **Theorem `fermat_little`:**
-  ```lean
-  theorem fermat_little (p : ℕ) (hp : p.Prime) (a : ℕ) (ha : ¬ p ∣ a) :
-      a ^ (p - 1) ≡ 1 [MOD p]
-  ```
-- **Proof Mechanism:** Maps `a` to `ZMod p`, establishes `(a : ZMod p) ≠ 0` via `ha` and `ZMod.natCast_eq_zero_iff`, applies Mathlib's finite field theorem `FiniteField.pow_card_sub_one_eq_one` (where `Fintype.card (ZMod p) = p`), and lifts back to `Nat.ModEq`.
-- **Theorem `fermat_little_pow` (Corollary):**
-  ```lean
-  theorem fermat_little_pow (p : ℕ) (hp : p.Prime) (a : ℕ) : a ^ p ≡ a [MOD p]
-  ```
-  Proven by case analysis on whether `p ∣ a` (trivial zero mod $p$) or `¬ p ∣ a` (multiplying `fermat_little` by `a`).
-- **Classification:** `VERIFIED`
-- **Axiom Footprint:** `[propext, Classical.choice, Quot.sound]` (Standard Lean 4 kernel foundations).
+The 504-file audit on **2026-11-18** found **three non-compiling modules** and
+**32 linter warnings** that the sealed baseline had never covered.
 
-### B. Ramsey $R(3,3) \le 6$ (`ErdosSzekeresRamsey.lean`)
+### 1.2 Post-remediation working tree
 
-#### Statement & Verification
-- **Theorem `ramsey_K6_mono_triangle`:**
-  ```lean
-  theorem ramsey_K6_mono_triangle (c : Fin 6 → Fin 6 → Bool) :
-      ∃ a b d : Fin 6, a ≠ b ∧ a ≠ d ∧ b ≠ d ∧ c a b = c a d ∧ c a d = c b d
-  ```
-- **Proof Mechanism:** Uses vertex `0` and its 5 neighbors in `Fin 6`. By the pigeonhole principle (`Finset.exists_subset_card_eq`), at least 3 neighbors share a common color $k$ (`true` or `false`) with vertex `0`. Within those 3 neighbors, either two are connected by color $k$ (yielding a monochromatic triangle with vertex `0`), or none are connected by color $k$ (meaning all edges between them are colored `!k`, yielding a monochromatic triangle of color `!k` among the three neighbors). The proof makes **no symmetry assumptions** on $c$, holding for arbitrary directed/ordered Bool colorings.
-- **Classification:** `VERIFIED`
-- **Axiom Footprint:** `[propext, Classical.choice, Quot.sound]`
-
-### C. Collatz Step Facts & Bounded Defeat (`CollatzBoundedDefeat.lean`)
-
-#### Statement & Verification
-- **Step Facts (`collatzStep_even_eq`, `collatzStep_odd_eq`, `collatzStep_odd_even`, `collatzStep_even_lt`, `collatzStep_capped`):**
-  Proved via `simp`, `omega`, and standard arithmetic inequalities.
-- **Horizon Defeat Theorem (`collatz_horizon_defeat`):**
-  ```lean
-  theorem collatz_horizon_defeat (n : Nat) (hn : n ≥ 1) (hn_max : n ≤ 100) (max_fuel : Nat) (h_fuel : max_fuel ≥ 5000) :
-      collatzReachesOne n max_fuel = true
-  ```
-- **Classification:** `BOUNDED_RESULT` (for $n \le 100$ up to fuel 5000) combined with `VERIFIED` inductive monotonicity (`collatzLoop_mono`). The file does **not** claim a proof of the general Collatz conjecture for all $n \in \mathbb{N}$.
-- **Axiom Footprint:** `[propext, Quot.sound]`
+- Batch 3 hardened the strict gate and audited the full surface.
+- Batch 3.5 remediated the three failures, cleaned the warnings, and fixed the
+  audit warning counter.
+- No commit or push was performed during Batch 3 or 3.5.
 
 ---
 
-## 3. Anti-Circularity & Dependency Graph Analysis
+## 2. Defects Found and Remediated
 
-An audit of the dependency graph across `Math30.NumberTheory.Foundation`, `Math30.Combinatorics.Finite`, and `Math30.Collatz` reveals:
-- **No self-referential loops or circularity detected.**
-- All proofs build on established Mathlib foundations (`Mathlib.FieldTheory.Finite.Basic`, `Mathlib.Data.Fintype.Pigeonhole`, etc.) or verified local lemmas.
-- Hypothesis non-referenced findings from the substantiveness gate are restricted to pre-existing bounded declarations (`collatz_horizon_defeat`), where auxiliary hypotheses are explicitly bound.
+### 2.1 `kyber_poly_bound` — CRITICAL: false theorem
+
+The baseline declaration quantified `q` under only `1 < q` and `q ≤ 3329`.
+The counterexample `coeff = -128, q = 2, k = 1, n = 1` satisfies every
+hypothesis and makes the conclusion `16384 < 4`, which is false.
+
+- **Archive:** `reports/flawed_artifacts/kyber_poly_bound_flawed.lean`
+  (`ARCHIVED_INVALID` header with the counterexample).
+- **Replacement:** `kyber_poly_bound_3329`, with the modulus fixed at the
+  actual Kyber prime `q = 3329`.
+- **Statement:** `coeff * coeff < 3329 * 3329` for `-128 ≤ coeff ≤ 127`.
+- **Class:** `SMT_BOUNDED_RESULT`, level `P4`.
+
+The original was not silently rewritten. It is preserved, clearly marked
+invalid, and must not be imported.
+
+### 2.2 `lattice_svp_bound` — HIGH: incomplete nonlinear proof
+
+The statement is true. `omega` is a linear decision procedure and cannot use
+the premise `lambda * lambda ≤ det + n`. The proof now splits on the sign of
+`lambda` and uses `nlinarith` for the positive branch.
+
+### 2.3 `rsa_exponent_bound` — HIGH: incomplete nonlinear proof
+
+The statement is true. `omega` cannot use the product `e * d`. The proof now
+derives `e + d ≤ e * d` from `1 < e` and `1 < d` and closes by transitivity.
+The unused premise `h_phi : 100 ≤ phi` was removed rather than retained as a
+mutation-surviving decoration.
+
+### 2.4 Warning counter — MEDIUM: double-counted diagnostics
+
+`tools/full_surface_lean_audit.py::parse_warnings` counted the substring
+`warning:` in `stdout + stderr`. Lean's unused-variable hint contains the
+phrase "silence this warning:", so every such warning was counted twice.
+
+- **Observed:** 62 reported warnings across 8 files.
+- **Actual:** 32 warnings.
+- **Fix:** count only lines matching `^\S+:\d+:\d+: warning:`.
+- **After cleanup:** 0 warnings across all 504 files.
+
+All four entries are recorded in `reports/audit_findings.json` with lineage
+(`CMP-001`, `CMP-002`, `CMP-003`, `TOOL-001`). All nine findings in that ledger
+now carry status `verified_fixed`.
 
 ---
 
-## 4. Independent Reproducibility Audit
+## 3. Batch 2 SMT-Bridge Mutation Remediation
 
-A clean-room verification in the current repository state yields:
-1. **Toolchain:** Lean 4.33.1, Mathlib v4.33.1 (pinned), Python 3.x.
-2. **Lake Build:** Executed `lake build` successfully (4,176 jobs completed, zero errors).
-3. **Substantiveness Gate:** `python tools/omega_audit/substantiveness_gate.py --enforce` → `verdict=PASS` (HIGH=0, MEDIUM=0).
-4. **Gate Selftest:** `python tools/omega_audit/gate_selftest.py` → `SELF-TEST RESULT: PASS (0 failures)`.
-5. **Manifest Verification:** `python mcp/t2n/core/repokeeper.py --verify` → `VERDICT: PASS` (1,587 rows checked, 0 missing/mismatch/unpinned).
+Five HIGH mutation findings from the previous audit (`MUT-001` … `MUT-005`)
+were remediated by coupling postconditions to the attacked premises and by
+removing three logically implied premises:
 
-### Number Discrepancies Resolution
-- **492 Lean files scanned:** Total `.lean` files present in the repository tree.
-- **481 modules reported:** Number of compiled modules in the Lake build graph for the library targets.
-- **4,176 build jobs:** Total incremental build actions/tasks dispatched by Lake.
-- **1,587 manifest entries:** Total tracked files (Lean source, Python tools, reports, configs, documentation) hashed and sealed in `manifest.json`.
+| Declaration | Remediation |
+|---|---|
+| `bls_aggregation_bound` | conclusion strengthened with `2 ≤ n` |
+| `crypto_primitive_feasibility` | `h_p_pos` removed; `0 < a` coupled into conclusion |
+| `dh_parameter_safety` | conclusion strengthened with `11 ≤ p` |
+| `ecdsa_signature_bound` | `h_n` removed; `0 ≤ r ∧ 0 < k` coupled into conclusion |
+| `pedersen_commitment_bound` | `h_p` removed; `0 ≤ m` coupled into conclusion |
 
----
-
-## 5. Gate & Security Audit
-
-- **Strict Gate & Selftest:** Verified negative fixtures (`sorry`, `sorryAx`, private axioms) correctly trigger exit code 1.
-- **Pre-commit / Pre-push Hooks:** Successfully enforced manifest verification, strict trust-token scan, and substantiveness baseline checks. (Note: A path-quoting bug for space-containing repo roots `D:/Opencode AI Agent/...` was identified in the pre-commit hook template and corrected during staging; installed hooks are now fully robust).
+Mutation receipt: **12/12 killed, 0 survived** (`reports/substantiveness_gate_smt_mut_fixed.json`).
+The Batch 3.5 repair adds **3/3 killed, 0 survived**
+(`reports/substantiveness_gate_smt_mut_batch35_final.json`).
 
 ---
 
-## 6. Summary Classification Matrix
+## 4. Formal Lean Theorem Audit
 
-| Component / Theorem | Claim Scope | Assurance Classification |
-| :--- | :--- | :--- |
-| `fermat_little` / `fermat_little_pow` | $a^{p-1} \equiv 1 \pmod p$ for prime $p$, $\neg p \mid a$ | `VERIFIED` |
-| `ramsey_K6_mono_triangle` | $R(3,3) \le 6$ over arbitrary Bool colorings of $K_6$ | `VERIFIED` |
-| `collatz_horizon_defeat` | Collatz reaches 1 for $1 \le n \le 100$ with fuel $\ge 5000$ | `BOUNDED_RESULT` + `VERIFIED` monotonicity |
-| Euclid's Infinitude of Primes | Infinitude of primes | `VERIFIED` |
+### 4.1 Fermat's Little Theorem (`EuclidFermatArmor.lean`)
+
+- `fermat_little`: for prime `p` and `¬ p ∣ a`, `a^(p-1) ≡ 1 [MOD p]`.
+- `fermat_little_pow`: `a^p ≡ a [MOD p]`.
+- **Classification:** `VERIFIED` (kernel accepted the stated finite theorem).
+- **Axioms:** `[propext, Classical.choice, Quot.sound]`.
+
+### 4.2 Ramsey `R(3,3) ≤ 6` (`ErdosSzekeresRamsey.lean`)
+
+- `ramsey_K6_mono_triangle` holds for arbitrary Bool colourings of `K_6`.
+- **Classification:** `VERIFIED` (kernel accepted the stated finite theorem).
+- **Axioms:** `[propext, Classical.choice, Quot.sound]`.
+
+### 4.3 Collatz (`CollatzBoundedDefeat.lean`)
+
+- `collatz_horizon_defeat`: for `1 ≤ n ≤ 100` and `max_fuel ≥ 5000`,
+  `collatzReachesOne n max_fuel = true`.
+- **Classification:** `BOUNDED_RESULT`, not a proof of the general Collatz
+  conjecture for all `n ∈ ℕ`.
+- **Axioms:** `[propext, Quot.sound]`.
+
+### 4.4 SMT-bridge finite arithmetic bounds
+
+Eight declarations are recorded in `reports/verification_matrix.json` as
+`SMT_BOUNDED_RESULT` / `P4`:
+
+`bls_aggregation_bound`, `crypto_primitive_feasibility`,
+`dh_parameter_safety`, `ecdsa_signature_bound`, `pedersen_commitment_bound`,
+`kyber_poly_bound_3329`, `lattice_svp_bound`, `rsa_exponent_bound`.
+
+All eight compile with `lake env lean` exit 0 and print an axiom footprint
+strictly within `[propext, Classical.choice, Quot.sound]`.
+
+These are **finite arithmetic bounds**. They are not cryptographic security
+proofs and carry no hardness or continuum claim.
 
 ---
 
-## 7. Recommendations
+## 5. Anti-Circularity & Dependency Graph
 
-1. Maintain strict pre-commit and pre-push hooks with space-safe shell expansions.
-2. Continue expanding parameterized combinatorial and number-theoretic bounds in subsequent batches while retaining explicit domain boundaries.
+- `tools/omega_audit/gate_strict.py` is now **v1.1.0**.
+- The lexer is fail-closed on `UNTERMINATED_COMMENT` and
+  `UNTERMINATED_STRING`; it no longer blanks the remainder of a file after a
+  malformed comment or literal.
+- `tools/omega_audit/gate_selftest.py`: **11/11 fixtures PASS**, including the
+  `fixture_b_string_comment.lean` parser-evasion fixture (now exit 1) and the
+  new `fixture_i_unterminated_string.lean`.
+- The `--surface` lexical sweep returns exit 0 with no false positives.
+- The Anti-Circularity Gate `lean` scan over the eleven touched files returns
+  `PASS` (`FAIL=0`, `NOT_RUN=0`), exit 0.
+- The anti-circularity gate reports no placeholder tokens on the touched
+  files. `PASS` here means the checks ran and found no placeholder; it is not
+  a proof-correctness claim.
+
+No self-referential dependency loop was introduced. The archived false
+artifact is under `reports/` and is not imported by the Lean surface.
+
+---
+
+## 6. Reproducibility Audit
+
+| Check | Command | Result |
+|---|---|---|
+| Strict gate self-test | `python tools/omega_audit/gate_selftest.py` | 11/11, exit 0 |
+| Strict gate surface sweep | `python tools/omega_audit/gate_selftest.py --surface` | exit 0 |
+| Substantiveness gate | `python tools/omega_audit/substantiveness_gate.py --enforce` | PASS, 504 files, 2,070 declarations, HIGH=0, MEDIUM=0, LOW=512 baseline-accepted, waived=4 |
+| Targeted mutation | `--mutate` on the three repaired files | 3/3 killed, 0 survived |
+| Full-surface compile | `python tools/full_surface_lean_audit.py --workers 1` | PASS — 504/504, 0 FAIL, 0 warnings, exit 0, 2,913.8 s |
+| Manifest reseal | `python mcp/t2n/core/repokeeper.py --reseal` | executed after this report is pinned |
+| Manifest verify | `python mcp/t2n/core/repokeeper.py --verify` | executed after reseal; result in the Batch 3.5 handoff |
+
+Toolchain observed: Lean 4.33.1, Lake 5.0.0, Mathlib `v4.33.1`,
+Python 3.14.4.
+
+The reseal and verify rows are post-pin steps by construction. This report is
+itself a pinned row, so it cannot embed the digest of the manifest that pins
+it. The reseal is run after this file is finalized; the verify verdict is
+reported in the Batch 3.5 handoff and the digest is published in `README.MD`.
+
+---
+
+## 7. Manifest & Seal
+
+The baseline manifest is 1,600 rows with seal
+`2eb2fb13109f429c1da1d98102519170b0d334d3ef872b09bd6ab8557e5e09e6`.
+
+After remediation and reseal the manifest contains **1,616 rows**.
+The post-remediation digest is published in `README.MD`, not in this pinned
+report: a report that is itself pinned in the manifest cannot embed the digest
+of that manifest without creating a fixed-point inconsistency. The README is
+the designated seal statement and is excluded from the manifest for exactly
+this reason.
+
+Both `reports/audit_findings.json` and `reports/verification_matrix.json` are
+present in the post-remediation manifest. The archived false artifact and the
+FAIL receipt are also pinned.
+
+---
+
+## 8. Honest Limitations
+
+1. `VERIFIED` means the Lean kernel accepted the stated declaration with the
+   recorded axiom footprint. It does not mean the theorem is absolute
+   mathematical truth, and it does not validate the physical or cryptographic
+   interpretation of the statement.
+2. The Collatz result remains `BOUNDED_RESULT` for `n ≤ 100`, fuel `≥ 5000`.
+   The general conjecture remains open.
+3. The Riemann Hypothesis, Navier–Stokes, Yang–Mills, and P vs NP remain
+   **OPEN**. No finite-lattice certificate in this repository closes them.
+4. The eight SMT-bridge declarations are finite arithmetic bounds. They are not
+   cryptographic hardness proofs. Most do not have a `.smt2` twin in `smt/`.
+5. Sigstore/GPG provenance of the pushed commit was not independently
+   verified. The manifest is an integrity ledger, not a signature.
+6. The `reports/flawed_artifacts/` directory contains invalid Lean by design.
+   It is excluded from the audited surface and must not be imported.
+
+---
+
+## 9. Classification Matrix
+
+| Component | Claim scope | Classification |
+|---|---|---|
+| `fermat_little` / `fermat_little_pow` | finite modular arithmetic for prime `p` | `VERIFIED` |
+| `ramsey_K6_mono_triangle` | `R(3,3) ≤ 6` for arbitrary Bool colourings | `VERIFIED` |
+| `collatz_horizon_defeat` | `1 ≤ n ≤ 100`, fuel `≥ 5000` | `BOUNDED_RESULT` |
+| 8 SMT-bridge declarations | finite arithmetic bounds | `SMT_BOUNDED_RESULT` / `P4` |
+| `kyber_poly_bound` (archived) | false at `q = 2` | `ARCHIVED_INVALID` |
+| Riemann / Navier–Stokes / Yang–Mills / P vs NP | open problems | `OPEN` |
+
+---
+
+## 10. Recommendations
+
+1. Never seal a manifest without a full-surface kernel compile over the exact
+   pinned surface. The `44d344c` escape is the concrete counterexample.
+2. Keep the archived false theorem and the FAIL receipt pinned as lineage.
+3. Keep mutation testing targeted at the first load-bearing hypothesis and
+   require 0 survivors before a seal.
+4. Treat `VERIFIED` as kernel acceptance, not as a claim of absolute truth.
+5. Add `.smt2` twins or explicit "no SMT twin" annotations for the SMT-bridge
+   declarations that lack them.

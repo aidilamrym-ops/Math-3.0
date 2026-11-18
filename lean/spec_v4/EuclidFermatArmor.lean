@@ -128,7 +128,7 @@ def ec_point_add {p : ℕ} [Fact p.Prime] {E : EllipticCurve p} (P Q : ECPoint p
   match P, Q with
   | ECPoint.infinity, _ => Q
   | _, ECPoint.infinity => P
-  | ECPoint.finite x₁ y₁ h₁, ECPoint.finite x₂ y₂ h₂ =>
+  | ECPoint.finite x₁ y₁ _, ECPoint.finite x₂ y₂ _ =>
     if x₁ = x₂ && y₁ = y₂ then ECPoint.infinity else ECPoint.infinity
 
 /-- Scalar multiplication by natural number n on elliptic curve points (recursive definition). -/
@@ -145,7 +145,6 @@ theorem ec_scalar_mul_zero {p : ℕ} [Fact p.Prime] {E : EllipticCurve p} (P : E
 theorem ec_scalar_mul_one {p : ℕ} [Fact p.Prime] {E : EllipticCurve p} (P : ECPoint p E) :
     ec_scalar_mul 1 P = P := by
   simp [ec_scalar_mul, ec_point_add]
-  <;> rfl
 
 /-- Bilinear pairing placeholder: verify parameter bounds for pairing-friendly curves. -/
 structure BilinearPairingParams (p : ℕ) [Fact p.Prime] where

@@ -1,0 +1,139 @@
+{
+  "generated": "2026-11-18T01:28:00Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\smt_bridge\\kyber_poly_bound.lean",
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\smt_bridge\\lattice_svp_bound.lean",
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\smt_bridge\\rsa_exponent_bound.lean"
+  ],
+  "lean_files": 3,
+  "declarations": 3,
+  "predicates": 0,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 9
+  },
+  "verdict": "PASS",
+  "findings": [
+    {
+      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
+      "line": 12,
+      "declaration": "kyber_poly_bound_3329",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_coeff : -128 ≤ coeff` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
+      "line": 12,
+      "declaration": "kyber_poly_bound_3329",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_coeff_max : coeff ≤ 127` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
+      "line": 12,
+      "declaration": "lattice_svp_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_det : 0 < det` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
+      "line": 12,
+      "declaration": "lattice_svp_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_n : 1 ≤ n` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
+      "line": 12,
+      "declaration": "lattice_svp_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_svp : lambda * lambda ≤ det + n` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
+      "line": 13,
+      "declaration": "rsa_exponent_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `he : 1 < e` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
+      "line": 13,
+      "declaration": "rsa_exponent_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hd : 1 < d` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
+      "line": 13,
+      "declaration": "rsa_exponent_bound",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `h_product : e * d ≤ phi * phi` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    }
+  ],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
+      "declaration": "kyber_poly_bound_3329",
+      "verdict": "KILLED",
+      "hypothesis": "h_coeff"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
+      "declaration": "lattice_svp_bound",
+      "verdict": "KILLED",
+      "hypothesis": "h_det"
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
+      "declaration": "rsa_exponent_bound",
+      "verdict": "KILLED",
+      "hypothesis": "he"
+    }
+  ],
+  "mutation_summary": {
+    "total": 3,
+    "killed": 3,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    }
+  ]
+}

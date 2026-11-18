@@ -33,6 +33,8 @@ CASES = (
     ("fixture_d_attributed_axiom.lean", 1),
     ("fixture_e_sorryax.lean", 1),
     ("fixture_f_string_line_comment.lean", 1),
+    ("fixture_b_string_comment.lean", 1),
+    ("fixture_i_unterminated_string.lean", 1),
     ("fixture_a_constant.lean", 1),
 )
 

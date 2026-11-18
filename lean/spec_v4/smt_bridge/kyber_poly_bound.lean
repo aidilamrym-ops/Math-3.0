@@ -2,19 +2,21 @@ import Mathlib.Tactic
 
 namespace Math30.SMTBridge
 
-/-- Kyber (ML-KEM) polynomial coefficient bounds:
-    Verify coefficient ranges for NTT-friendly parameters. -/
-theorem kyber_poly_bound (coeff q k n : ℤ) (h_q : 1 < q) (h_k : 1 ≤ k)
-    (h_n : 1 ≤ n) (h_coeff : -128 ≤ coeff) (h_coeff_max : coeff ≤ 127)
-    (h_q_size : q ≤ 3329) :
-    coeff * coeff < q * q := by
-  have h₁ : coeff * coeff ≤ 127 * 127 := by
-    nlinarith
-  have h₂ : 127 * 127 < q * q := by
-    have h₃ : q ≥ 2 := by linarith
-    nlinarith
+/-- Kyber (ML-KEM) polynomial coefficient bound at the actual Kyber prime
+    modulus `q = 3329`.
+
+    This replaces the earlier `kyber_poly_bound`, which quantified `q` under
+    only `1 < q` and was therefore false at `q = 2`. The archived false
+    declaration and its counterexample are preserved in
+    `reports/flawed_artifacts/kyber_poly_bound_flawed.lean`. -/
+theorem kyber_poly_bound_3329 (coeff : ℤ) (h_coeff : -128 ≤ coeff)
+    (h_coeff_max : coeff ≤ 127) : coeff * coeff < 3329 * 3329 := by
+  have hlo : (0 : ℤ) ≤ coeff + 128 := by linarith [h_coeff]
+  have hhi : (0 : ℤ) ≤ 128 - coeff := by linarith [h_coeff_max]
+  have hsquare : coeff * coeff ≤ 128 * 128 := by
+    nlinarith [mul_nonneg hlo hhi]
   nlinarith
 
-#print axioms kyber_poly_bound
+#print axioms kyber_poly_bound_3329
 
 end Math30.SMTBridge

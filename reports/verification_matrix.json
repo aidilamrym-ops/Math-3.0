@@ -1,0 +1,69 @@
+{
+  "version": "1.1.0",
+  "claims": [
+    {
+      "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
+      "declaration": "bls_aggregation_bound",
+      "class": "SMT_BOUNDED_RESULT",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/crypto_primitive_feasibility.lean",
+      "declaration": "crypto_primitive_feasibility",
+      "class": "SMT_BOUNDED_RESULT",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
+      "declaration": "dh_parameter_safety",
+      "class": "SMT_BOUNDED_RESULT",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
+      "declaration": "ecdsa_signature_bound",
+      "class": "SMT_BOUNDED_RESULT",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
+      "declaration": "pedersen_commitment_bound",
+      "class": "SMT_BOUNDED_RESULT",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
+      "declaration": "kyber_poly_bound_3329",
+      "class": "SMT_BOUNDED_RESULT",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "note": "Replaces the false kyber_poly_bound; the original is archived at reports/flawed_artifacts/kyber_poly_bound_flawed.lean."
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
+      "declaration": "lattice_svp_bound",
+      "class": "SMT_BOUNDED_RESULT",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "note": "Nonlinear omega proof repaired with a sign split and nlinarith."
+    },
+    {
+      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
+      "declaration": "rsa_exponent_bound",
+      "class": "SMT_BOUNDED_RESULT",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "note": "Nonlinear omega proof repaired; redundant h_phi removed."
+    }
+  ],
+  "notes": [
+    "All axiom footprints were captured with #print axioms from files that compile with lake env lean exit 0.",
+    "The 2026-11-18 audit found kyber_poly_bound, lattice_svp_bound, and rsa_exponent_bound non-compiling at HEAD 44d344c; all three entered after the last green 493-file audit.",
+    "This matrix makes no continuum or cryptographic-hardness claim. It records finite arithmetic bounds only."
+  ]
+}

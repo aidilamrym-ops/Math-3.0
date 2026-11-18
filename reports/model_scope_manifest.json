@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-17T09:40:10Z",
+  "generated": "2026-11-18T01:31:11Z",
   "counts": {
     "bounded-model": 433,
     "pure-theorem": 71,
-    "scope_undeclared": 474
+    "scope_undeclared": 473
   },
   "files": [
     {
@@ -2877,8 +2877,8 @@
     {
       "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
       "class": "bounded-model",
-      "scope_declared": false,
-      "scope_text": null
+      "scope_declared": true,
+      "scope_text": ""
     },
     {
       "file": "lean/spec_v4/smt_bridge/ledger_cross_multiplication.lean",

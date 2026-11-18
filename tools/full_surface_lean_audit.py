@@ -115,8 +115,18 @@ def display_path(path: Path) -> str:
         return str(path).replace("\\", "/")
 
 
+WARNING_LINE = re.compile(r"(?m)^\S+:\d+:\d+: warning:")
+
+
 def parse_warnings(stdout: str, stderr: str) -> int:
-    return (stdout + "\n" + stderr).count("warning:")
+    """Count actual Lean warning lines.
+
+    Lean follows an unused-variable warning with a multi-line hint whose text
+    contains the phrase "silence this warning:". A bare substring count
+    therefore counts every linter warning twice. Counting only lines of the
+    form ``path:line:col: warning:`` removes that double count.
+    """
+    return len(WARNING_LINE.findall(stdout + "\n" + stderr))
 
 
 def first_error_line(stdout: str, stderr: str) -> str:
