@@ -191,6 +191,39 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ R : ℕ → ℝ, ∀ C ≥ 0 with |R k| ≤ C/(k+1), ∀ StrictMono φ : ℕ → ℕ; extracted residual tends to 0",
       "note": "BRIDGE-04 weak residual vanishing along extracted subsequences (StrictMono matching BRIDGE-03); weak operator consistency only. Does not claim uniqueness or classical smoothness of 3D Navier–Stokes solutions."
+    },
+    {
+      "file": "lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean",
+      "declaration": "critical_line_zero_sum_nonneg",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hΦ",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ N : ℕ, ∀ m : Fin N → ℕ, ∀ γ : Fin N → ℚ, ∀ Φ : ℚ → ℚ with 0 ≤ Φ(γ i) and 1 ≤ N; non-negative critical-line weighted zero sum",
+      "note": "BRIDGE-05 Guinand–Weil explicit formula trace positivity; certified interval-to-trace positivity over compactly supported test windows. Does NOT claim a proof of the Riemann Hypothesis; RH remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean",
+      "declaration": "compact_support_tail_vanishes",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hsupp",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ R w t : ℚ, ∀ Φ : ℚ → ℚ with R < |t| → Φ t = 0; compact support cutoff makes spectral tail vanish exactly",
+      "note": "BRIDGE-05 Guinand–Weil explicit formula trace positivity; certified interval-to-trace positivity over compactly supported test windows. Does NOT claim a proof of the Riemann Hypothesis; RH remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean",
+      "declaration": "interval_enclosure_preserves_weil_positivity",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hmargin",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ N : ℕ, ∀ mid rad x : Fin N → ℚ with rad i ≤ mid i and mid i - rad i ≤ x i ≤ mid i + rad i; interval enclosure preserves Weil positivity",
+      "note": "BRIDGE-05 Guinand–Weil explicit formula trace positivity; certified interval-to-trace positivity over compactly supported test windows. Does NOT claim a proof of the Riemann Hypothesis; RH remains OPEN."
     }
   ],
   "notes": [
@@ -202,6 +235,8 @@
     "BRIDGE-02 mutation receipt: reports/substantiveness_gate_bridge02_mut.json — 3/3 declarations killed, 0 survived, hypotheses hA, hN, hC.",
     "BRIDGE-02 gives truncation decay only. It does not establish convergence to a continuum PDE solution.",
     "BRIDGE-04 mutation receipt: reports/substantiveness_gate_BRIDGE04.json — 3/3 declarations killed, 0 survived, one primary hypothesis per declaration (hb, hL, hR).",
-    "BRIDGE-04 proves weak operator consistency along extracted subsequences only. It does not claim uniqueness or classical smoothness of 3D Navier–Stokes solutions."
+    "BRIDGE-04 proves weak operator consistency along extracted subsequences only. It does not claim uniqueness or classical smoothness of 3D Navier–Stokes solutions.",
+    "BRIDGE-05 mutation receipt: reports/substantiveness_gate_BRIDGE05.json — 3/3 declarations killed, 0 survived, one primary hypothesis per declaration (hN/hΦ, hsupp, hmargin).",
+    "BRIDGE-05 proves certified interval-to-trace positivity over compactly supported test windows. It does NOT claim a proof of the Riemann Hypothesis; RH remains OPEN."
   ]
 }

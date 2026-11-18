@@ -1,0 +1,61 @@
+{
+  "generated": "2026-11-18 19:33:37",
+  "elapsed_seconds": 14.8,
+  "files_scanned": 1,
+  "files_with_theorems": 1,
+  "theorems_total": 3,
+  "allowlist": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_usage": {
+    "propext": 3,
+    "Classical.choice": 3,
+    "Quot.sound": 3
+  },
+  "violations": [],
+  "inconclusive": [],
+  "compile_errors": [],
+  "failed": [],
+  "results": [
+    {
+      "file": "lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean",
+      "status": "PROBED",
+      "rc": 0,
+      "seconds": 14.77,
+      "theorems": [
+        {
+          "name": "Math30.Bridges.critical_line_zero_sum_nonneg",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.Bridges.compact_support_tail_vanishes",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.Bridges.interval_enclosure_preserves_weil_positivity",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "violations": [],
+      "inconclusive": [],
+      "error": ""
+    }
+  ]
+}

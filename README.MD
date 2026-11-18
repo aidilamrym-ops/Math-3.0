@@ -56,7 +56,7 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 #### 5.15.4 BRIDGE-04 — Weak Operator Consistency Bridge
 **Location:** `lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean` (Batch 7)
 
-**Status:** ✅ Fully validated and verified (`3/3` mutation-verified); pending commit at operator review.
+**Status:** ✅ Fully validated and verified (`3/3` mutation-verified); committed.
 
 **Summary:** Bridges discrete finite-difference operators on dyadic grids to weak integral-form test identities. Three core declarations:
 
@@ -70,8 +70,25 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 
 **Scope:** Finite-dimensional / countable discrete and dyadic approximations. **Claims:** weak operator consistency along extracted subsequences. **Does NOT claim:** uniqueness or classical smoothness of 3D Navier–Stokes solutions.
 
----
-**Lean surface:** 508 files = 504 full-surface audited (`PASS`) + 4 bridges (`BRIDGE-01`, `BRIDGE-02`, `BRIDGE-03`, `BRIDGE-04`) targeted-compiled and mutation-verified.
+#### 5.15.5 BRIDGE-05 — Guinand–Weil Spectral Trace Bridge
+**Location:** `lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean` (Batch 8)
 
-**Manifest seal (sha-256):** 80e5d6010eda2e04c59064372a00cd7294e1aaa537781066b4d894509660906b
-**1,640 rows** in manifest.
+**Status:** ✅ Fully validated and verified (`3/3` mutation-verified); pending operator review.
+
+**Summary:** Formalizes certified interval-to-trace positivity over compactly supported test windows in the Guinand–Weil explicit formula style. Three core declarations:
+
+1. **`critical_line_zero_sum_nonneg`** — Non-negative critical-line ordinate values imply non-negative weighted sum over non-empty `Fin N` (`hΦ : ∀ i, 0 ≤ Φ (γ i) ∧ hN : 1 ≤ N → Nonempty (Fin N) ∧ 0 ≤ Σ (m i : ℚ) * Φ (γ i)`)
+2. **`compact_support_tail_vanishes`** — Compact support cutoff outside `[-R, R]` makes every weighted spectral tail contribution identically zero (`hsupp : ∀ t, R < |t| → Φ t = 0 → w * Φ t = 0`)
+3. **`interval_enclosure_preserves_weil_positivity`** — Interval enclosure with non-negative lower margin preserves true spectral sum non-negativity (`hmargin : ∀ i, rad i ≤ mid i ∧ henc : ∀ i, mid i - rad i ≤ x i ≤ mid i + rad i → 0 ≤ Σ x i`)
+
+**Load-bearing hypothesis:** Primary hypotheses `hN` (or `hΦ`), `hsupp`, `hmargin` respectively; each is essential to its declaration.
+
+**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`).
+
+**Scope:** Finite and rational test windows and interval enclosures. **Claims:** Certified interval-to-trace positivity over compactly supported test windows. **Does NOT claim:** a proof of the Riemann Hypothesis; RH remains OPEN.
+
+---
+**Lean surface:** 509 files = 504 full-surface audited (`PASS`) + 5 bridges (`BRIDGE-01`, `BRIDGE-02`, `BRIDGE-03`, `BRIDGE-04`, `BRIDGE-05`) targeted-compiled and mutation-verified.
+
+**Manifest seal (sha-256):** c3424fa528f733a750089df6210f7dfbf05e515abbdbeb34dc1ebcd32d43eeaa
+**1,645 rows** in manifest.
