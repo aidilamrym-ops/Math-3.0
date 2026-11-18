@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "claims": [
     {
       "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
@@ -103,13 +103,48 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ N ≥ 1, ∀ t : ℕ; every finite lattice family Fin N and the total sum over Finset.univ",
       "note": "BRIDGE-01 discrete energy bound; the continuum limit N → ∞ is deferred to BRIDGE-02 and is not claimed here."
+    },
+    {
+      "file": "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean",
+      "declaration": "advection_energy_neutrality",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hA",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ N : ℕ (hence every N ≥ 1), ∀ u : Fin N → ℚ, ∀ A : Fin N → Fin N → ℚ; exact double-sum neutrality",
+      "note": "BRIDGE-02 discrete skew-symmetry: an anti-symmetric interaction operator injects zero net energy. No continuum limit is claimed."
+    },
+    {
+      "file": "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean",
+      "declaration": "coupled_lattice_dissipation",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hN",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ N ≥ 1, ∀ t : ℕ; total lattice energy aggregate in the BRIDGE-01 shape",
+      "note": "BRIDGE-02 couples advection neutrality with the BRIDGE-01 total-energy aggregate shape and proves monotonicity. No continuum limit is claimed."
+    },
+    {
+      "file": "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean",
+      "declaration": "truncation_error_vanishes",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hC",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ C ε : ℚ with 0 < C and 0 < ε; explicit ε-N₀ threshold for err(N) = C / N",
+      "note": "BRIDGE-02 establishes finite-resolution truncation decay C/N < ε. It does not claim the actual continuum limit N → ∞."
     }
   ],
   "notes": [
     "All axiom footprints were captured with #print axioms from files that compile with lake env lean exit 0.",
     "The 2026-11-18 audit found kyber_poly_bound, lattice_svp_bound, and rsa_exponent_bound non-compiling at HEAD 44d344c; all three entered after the last green 493-file audit.",
-    "This matrix makes no continuum-limit or cryptographic-hardness claim. The SMT entries record finite arithmetic bounds; BRIDGE-01 records discrete energy bounds only.",
-    "BRIDGE-01 scope is the infinite discrete lattice family ∀ N ≥ 1, ∀ t : ℕ. The continuum limit N → ∞ is deferred to BRIDGE-02.",
-    "BRIDGE-01 mutation receipt: reports/substantiveness_gate_bridge01_mut_v4.json — 4/4 declarations killed, 0 survived, one primary hypothesis per declaration."
+    "This matrix makes no continuum-limit or cryptographic-hardness claim. The SMT entries record finite arithmetic bounds; BRIDGE-01 records discrete energy bounds; BRIDGE-02 records finite skew-symmetry, coupled aggregate monotonicity, and truncation decay.",
+    "BRIDGE-01 scope is the infinite discrete lattice family ∀ N ≥ 1, ∀ t : ℕ; the continuum limit N → ∞ is not claimed.",
+    "BRIDGE-01 mutation receipt: reports/substantiveness_gate_bridge01_mut_v4.json — 4/4 declarations killed, 0 survived, one primary hypothesis per declaration.",
+    "BRIDGE-02 mutation receipt: reports/substantiveness_gate_bridge02_mut.json — 3/3 declarations killed, 0 survived, hypotheses hA, hN, hC.",
+    "BRIDGE-02 gives truncation decay only. It does not establish convergence to a continuum PDE solution."
   ]
 }

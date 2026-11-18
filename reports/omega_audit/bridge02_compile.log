@@ -1,0 +1,3 @@
+'Math30.Bridges.advection_energy_neutrality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Math30.Bridges.coupled_lattice_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Math30.Bridges.truncation_error_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]

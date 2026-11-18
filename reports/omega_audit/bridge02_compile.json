@@ -1,0 +1,12 @@
+{
+  "command": "lake env lean spec_v4/bridges/SkewSymmetricAdvectionBridge.lean",
+  "exit_code": 0,
+  "warnings": 0,
+  "axioms": [
+    "'Math30.Bridges.advection_energy_neutrality' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Math30.Bridges.coupled_lattice_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Math30.Bridges.truncation_error_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "timestamp_utc": "2026-11-18T03:26:03.274550+00:00",
+  "file": "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean"
+}
