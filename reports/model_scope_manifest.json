@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-18T08:53:09Z",
+  "generated": "2026-11-18T20:23:41Z",
   "counts": {
-    "bounded-model": 1,
-    "pure-theorem": 0,
+    "bounded-model": 0,
+    "pure-theorem": 1,
     "scope_undeclared": 1
   },
   "files": [
     {
-      "file": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
-      "class": "bounded-model",
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
     }

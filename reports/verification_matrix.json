@@ -6,42 +6,66 @@
       "declaration": "bls_aggregation_bound",
       "class": "SMT_BOUNDED_RESULT",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
     },
     {
       "file": "lean/spec_v4/smt_bridge/crypto_primitive_feasibility.lean",
       "declaration": "crypto_primitive_feasibility",
       "class": "SMT_BOUNDED_RESULT",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
     },
     {
       "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
       "declaration": "dh_parameter_safety",
       "class": "SMT_BOUNDED_RESULT",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
       "declaration": "ecdsa_signature_bound",
       "class": "SMT_BOUNDED_RESULT",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
     },
     {
       "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
       "declaration": "pedersen_commitment_bound",
       "class": "SMT_BOUNDED_RESULT",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"]
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
     },
     {
       "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
       "declaration": "kyber_poly_bound_3329",
       "class": "SMT_BOUNDED_RESULT",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "note": "Replaces the false kyber_poly_bound; the original is archived at reports/flawed_artifacts/kyber_poly_bound_flawed.lean."
     },
     {
@@ -49,7 +73,11 @@
       "declaration": "lattice_svp_bound",
       "class": "SMT_BOUNDED_RESULT",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "note": "Nonlinear omega proof repaired with a sign split and nlinarith."
     },
     {
@@ -57,7 +85,11 @@
       "declaration": "rsa_exponent_bound",
       "class": "SMT_BOUNDED_RESULT",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "note": "Nonlinear omega proof repaired; redundant h_phi removed."
     },
     {
@@ -65,7 +97,11 @@
       "declaration": "energy_nonincreasing",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hD",
       "mutation_verdict": "KILLED",
       "scope": "∀ E D : ℕ → ℤ, ∀ ν : ℤ, ∀ t : ℕ; infinite discrete time",
@@ -76,7 +112,11 @@
       "declaration": "flat_step_zero_dissipation",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hν",
       "mutation_verdict": "KILLED",
       "scope": "∀ E D : ℕ → ℤ, ∀ ν : ℤ, ∀ t : ℕ; infinite discrete time",
@@ -87,7 +127,11 @@
       "declaration": "no_finite_time_blowup",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hB",
       "mutation_verdict": "KILLED",
       "scope": "∀ E D : ℕ → ℤ, ∀ ν B : ℤ, ∀ t : ℕ; infinite discrete time",
@@ -98,7 +142,11 @@
       "declaration": "lattice_family_energy_bound",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hN",
       "mutation_verdict": "KILLED",
       "scope": "∀ N ≥ 1, ∀ t : ℕ; every finite lattice family Fin N and the total sum over Finset.univ",
@@ -109,7 +157,11 @@
       "declaration": "advection_energy_neutrality",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hA",
       "mutation_verdict": "KILLED",
       "scope": "∀ N : ℕ (hence every N ≥ 1), ∀ u : Fin N → ℚ, ∀ A : Fin N → Fin N → ℚ; exact double-sum neutrality",
@@ -120,7 +172,11 @@
       "declaration": "coupled_lattice_dissipation",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hN",
       "mutation_verdict": "KILLED",
       "scope": "∀ N ≥ 1, ∀ t : ℕ; total lattice energy aggregate in the BRIDGE-01 shape",
@@ -131,7 +187,11 @@
       "declaration": "truncation_error_vanishes",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hC",
       "mutation_verdict": "KILLED",
       "scope": "∀ C ε : ℚ with 0 < C and 0 < ε; explicit ε-N₀ threshold for err(N) = C / N",
@@ -142,7 +202,11 @@
       "declaration": "grid_sequential_compactness",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hu",
       "mutation_verdict": "KILLED",
       "scope": "∀ N : ℕ, ∀ B : ℝ, ∀ u : ℕ → Fin N → ℝ; stationary trajectories",
@@ -153,7 +217,11 @@
       "declaration": "dyadic_diagonal_extraction",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hu",
       "mutation_verdict": "KILLED",
       "scope": "∀ B : ℚ, ∀ u : (k : ℕ) → Fin (2^k) → ℚ; stationary dyadic trajectories",
@@ -164,7 +232,11 @@
       "declaration": "discrete_summation_by_parts",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hb",
       "mutation_verdict": "KILLED",
       "scope": "∀ N : ℕ, ∀ u φ : ℕ → ℚ; homogeneous boundary conditions u 0 = 0 ∧ u N = 0",
@@ -175,7 +247,11 @@
       "declaration": "dyadic_grid_step_contraction",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hL",
       "mutation_verdict": "KILLED",
       "scope": "∀ k : ℕ, ∀ L : ℚ with 0 < L, ∀ φ : ℕ → ℚ; Lipschitz bound |φ(i+1)-φ i| ≤ L / 2^k over 2^k dyadic cells",
@@ -186,7 +262,11 @@
       "declaration": "weak_residual_subsequence_vanishes",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hR",
       "mutation_verdict": "KILLED",
       "scope": "∀ R : ℕ → ℝ, ∀ C ≥ 0 with |R k| ≤ C/(k+1), ∀ StrictMono φ : ℕ → ℕ; extracted residual tends to 0",
@@ -197,7 +277,11 @@
       "declaration": "critical_line_zero_sum_nonneg",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hΦ",
       "mutation_verdict": "KILLED",
       "scope": "∀ N : ℕ, ∀ m : Fin N → ℕ, ∀ γ : Fin N → ℚ, ∀ Φ : ℚ → ℚ with 0 ≤ Φ(γ i) and 1 ≤ N; non-negative critical-line weighted zero sum",
@@ -208,7 +292,11 @@
       "declaration": "compact_support_tail_vanishes",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hsupp",
       "mutation_verdict": "KILLED",
       "scope": "∀ R w t : ℚ, ∀ Φ : ℚ → ℚ with R < |t| → Φ t = 0; compact support cutoff makes spectral tail vanish exactly",
@@ -219,7 +307,11 @@
       "declaration": "interval_enclosure_preserves_weil_positivity",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hmargin",
       "mutation_verdict": "KILLED",
       "scope": "∀ N : ℕ, ∀ mid rad x : Fin N → ℚ with rad i ≤ mid i and mid i - rad i ≤ x i ≤ mid i + rad i; interval enclosure preserves Weil positivity",
@@ -230,7 +322,11 @@
       "declaration": "exponential_dominates_linear_bound",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hn",
       "mutation_verdict": "KILLED",
       "scope": "∀ n : ℕ with 2 ≤ n; exponential state-space growth dominates linear bound: n + 1 < 2^n",
@@ -241,7 +337,11 @@
       "declaration": "circuit_density_ratio_vanishes",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hC",
       "mutation_verdict": "KILLED",
       "scope": "∀ C ε > 0, ∀ ratio : ℕ → ℚ with ratio n ≤ C/n; density ratios vanish beyond finite scale threshold N₀",
@@ -252,11 +352,29 @@
       "declaration": "gauge_action_gap_scale_invariant",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
-      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
       "primary_hypothesis": "hQ",
       "mutation_verdict": "KILLED",
       "scope": "∀ Q S : ℤ with Q ≠ 0 and Q² ≤ S; discrete action gap 1 ≤ S preserved across lattice refinements",
       "note": "BRIDGE-06 asymptotic circuit/gauge scaling; bounded lattice instances to universal scaling laws. Does NOT claim continuum Yang–Mills mass gap or P vs NP resolution."
+    },
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "declaration": "dh_safe_prime_order_property",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hp",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ p : ℕ with IsSophieGermainPrime p; group order (2p + 1) - 1 = 2p",
+      "note": "Sophie Germain prime and safe prime foundational structure; supports Diffie-Hellman Pohlig-Hellman safety parameters and First Case FLT auxiliary obstruction."
     }
   ],
   "notes": [

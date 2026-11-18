@@ -1,0 +1,57 @@
+{
+  "generated": "2026-11-18T20:36:48Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\SophieGermainFermatTheorem.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 6,
+  "predicates": 2,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 2
+  },
+  "verdict": "PASS",
+  "findings": [
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 57,
+      "declaration": "sophie_germain_auxiliary_constraint",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hp : Nat.Prime p` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 57,
+      "declaration": "sophie_germain_auxiliary_constraint",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hp3 : 3 ≤ p` is not referenced in the proof"
+    }
+  ],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "declaration": "dh_safe_prime_order_property",
+      "verdict": "KILLED",
+      "hypothesis": "hp"
+    }
+  ],
+  "mutation_summary": {
+    "total": 1,
+    "killed": 1,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    }
+  ]
+}

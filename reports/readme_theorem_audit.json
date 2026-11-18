@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-18T04:50:35.616639+00:00",
+  "generated": "2026-11-18T23:38:36.966137+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "22d9ea08aa1ddbd8e07212882072bc045ad3135aa4f35a9cfe022a05a50ae751",
+  "readme_semantic_sha256": "355ea343c42c1fd77ee7f3d5ec574e9005d7669dd1baa82e415a84358f34dd0c",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 51,
-  "resolved": 51,
+  "cited_identifiers": 69,
+  "resolved": 69,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -17,6 +17,9 @@
     ],
     "actual_infinity_violates_conservation": [
       "lean/spec_v4/ActualInfinityRefutation.lean"
+    ],
+    "advection_energy_neutrality": [
+      "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean"
     ],
     "bps_bound": [
       "lean/spec_v4/LatticeInstantonBound.lean"
@@ -39,11 +42,23 @@
     "chargeZ_sq_le": [
       "lean/spec_v4/LatticeInstantonBound.lean"
     ],
+    "circuit_density_ratio_vanishes": [
+      "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean"
+    ],
     "collatzLoop_mono": [
       "lean/spec_v4/CollatzBoundedDefeat.lean"
     ],
+    "compact_support_tail_vanishes": [
+      "lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean"
+    ],
     "continuity_forces_constant_in_finite_lattice": [
       "lean/spec_v4/ContinuityRefutation.lean"
+    ],
+    "coupled_lattice_dissipation": [
+      "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean"
+    ],
+    "critical_line_zero_sum_nonneg": [
+      "lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean"
     ],
     "degreeMap_affine": [
       "lean/spec_v4/DecidableHomotopySphere.lean",
@@ -52,6 +67,9 @@
     "degreeMap_linear": [
       "lean/spec_v4/DecidableHomotopySphere.lean",
       "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "discrete_summation_by_parts": [
+      "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean"
     ],
     "dpi_card_nonexpansive": [
       "lean/spec_v4/ShannonEntropyDPI.lean"
@@ -65,6 +83,15 @@
     "dsitni_half_threshold_refuted": [
       "lean/spec_v4/certificates/DiscreteSylvesterInertiaTraceNormInvariant.lean"
     ],
+    "dyadic_diagonal_extraction": [
+      "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean"
+    ],
+    "dyadic_grid_step_contraction": [
+      "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean"
+    ],
+    "energy_nonincreasing": [
+      "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
+    ],
     "erdos_szekeres_pair": [
       "lean/spec_v4/ErdosSzekeresRamsey.lean"
     ],
@@ -74,8 +101,14 @@
     "even_unimodular_not_diagonalizable": [
       "lean/spec_v4/EvenUnimodularObstruction.lean"
     ],
+    "exponential_dominates_linear_bound": [
+      "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean"
+    ],
     "finitary_information_conservation": [
       "lean/spec_v4/UniversalFinitaryInformationConservation.lean"
+    ],
+    "flat_step_zero_dissipation": [
+      "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
     ],
     "freudenthal_stability_bound": [
       "lean/spec_v4/DecidableHomotopySphere.lean",
@@ -84,6 +117,12 @@
     "freudenthal_stable_witness": [
       "lean/spec_v4/DecidableHomotopySphere.lean",
       "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "gauge_action_gap_scale_invariant": [
+      "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean"
+    ],
+    "grid_sequential_compactness": [
+      "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean"
     ],
     "hilbert_hotel_obstruction": [
       "lean/spec_v4/ActualInfinityRefutation.lean"
@@ -109,17 +148,26 @@
     "instanton_bound_stable": [
       "lean/spec_v4/LatticeInstantonBound.lean"
     ],
+    "interval_enclosure_preserves_weil_positivity": [
+      "lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean"
+    ],
     "landauer_bits_le_energy": [
       "lean/spec_v4/LandauerBekensteinBound.lean"
     ],
     "landauer_infinite_energy_contradiction": [
       "lean/spec_v4/ActualInfinityRefutation.lean"
     ],
+    "lattice_family_energy_bound": [
+      "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
+    ],
     "no_cloning_finite": [
       "lean/spec_v4/NoCloningFiniteDim.lean"
     ],
     "no_continuous_injection_from_continuum": [
       "lean/spec_v4/ContinuityRefutation.lean"
+    ],
+    "no_finite_time_blowup": [
+      "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
     ],
     "path_induction": [
       "lean/spec_v4/HigherInductivePushout.lean",
@@ -169,6 +217,12 @@
     ],
     "torus_pi1_free_rank_two": [
       "lean/spec_v4/HigherInductivePushout.lean"
+    ],
+    "truncation_error_vanishes": [
+      "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean"
+    ],
+    "weak_residual_subsequence_vanishes": [
+      "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean"
     ]
   }
 }

@@ -1,0 +1,89 @@
+{
+  "generated": "2026-11-18T20:30:48Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\SophieGermainFermatTheorem.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 6,
+  "predicates": 2,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 5,
+    "MEDIUM": 0,
+    "LOW": 1
+  },
+  "verdict": "FAIL",
+  "findings": [
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 50,
+      "declaration": "dh_safe_prime_order_property",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hp : IsSophieGermainPrime p` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 57,
+      "declaration": "sophie_germain_auxiliary_constraint",
+      "severity": "HIGH",
+      "code": "TRIVIAL_TRUE_CONSEQUENCE",
+      "detail": "conclusion contains a vacuous `True` conjunct or codomain"
+    },
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 57,
+      "declaration": "sophie_germain_auxiliary_constraint",
+      "severity": "HIGH",
+      "code": "UNUSED_HYPOTHESIS",
+      "detail": "hypothesis `hp : Nat.Prime p` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 57,
+      "declaration": "sophie_germain_auxiliary_constraint",
+      "severity": "HIGH",
+      "code": "UNUSED_HYPOTHESIS",
+      "detail": "hypothesis `hp3 : 3 ≤ p` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 57,
+      "declaration": "sophie_germain_auxiliary_constraint",
+      "severity": "HIGH",
+      "code": "UNUSED_HYPOTHESIS",
+      "detail": "hypothesis `ha : a ^ p = 1` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 50,
+      "declaration": "dh_safe_prime_order_property",
+      "severity": "HIGH",
+      "code": "PREMISE_MUTATION_SURVIVED",
+      "detail": "weakening `hp` to True still compiles"
+    }
+  ],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "declaration": "dh_safe_prime_order_property",
+      "verdict": "SURVIVED",
+      "hypothesis": "hp"
+    }
+  ],
+  "mutation_summary": {
+    "total": 1,
+    "killed": 0,
+    "survived": 1,
+    "survival_rate": 1.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    }
+  ]
+}
