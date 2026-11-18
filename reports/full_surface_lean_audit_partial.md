@@ -1,20 +1,18 @@
 # Full-Surface Lean Compile Audit
 
-- Generated: 2026-11-14 11:50:31
+- Generated: 2026-11-18 16:44:58
 - Scope: **partial** (canonical receipt: false)
-- Verdict: **PARTIAL_FAIL** (complete: false)
+- Verdict: **PARTIAL** (complete: false)
 - Surfaces: `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`
 - Total files: **1**
 - Compiled: **1**
-- Counts: `{'FAIL': 1}`
+- Counts: `{'PASS': 1}`
 - PASS files with compiler warnings: **0**
-- Aggregate compile time: 60.9s
+- Aggregate compile time: 16.1s
 
 ## Failures
 
-| Status | File | Detail |
-|---|---|---|
-| FAIL | `lean/spec_v4/RiemannCurvatureTensorCertificate.lean` | spec_v4/RiemannCurvatureTensorCertificate.lean:28:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class |
+None. Every enumerated Lean file compiled with `exit 0`.
 
 ## Warnings (PASS with diagnostics)
 

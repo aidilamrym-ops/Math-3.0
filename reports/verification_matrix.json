@@ -136,6 +136,28 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ C ε : ℚ with 0 < C and 0 < ε; explicit ε-N₀ threshold for err(N) = C / N",
       "note": "BRIDGE-02 establishes finite-resolution truncation decay C/N < ε. It does not claim the actual continuum limit N → ∞."
+    },
+    {
+      "file": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
+      "declaration": "grid_sequential_compactness",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hu",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ N : ℕ, ∀ B : ℝ, ∀ u : ℕ → Fin N → ℝ; stationary trajectories",
+      "note": "BRIDGE-03 sequential compactness; the continuum limit N → ∞ is not claimed here."
+    },
+    {
+      "file": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
+      "declaration": "dyadic_diagonal_extraction",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": ["propext", "Classical.choice", "Quot.sound"],
+      "primary_hypothesis": "hu",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ B : ℚ, ∀ u : (k : ℕ) → Fin (2^k) → ℚ; stationary dyadic trajectories",
+      "note": "BRIDGE-03 diagonal extraction; the continuum limit N → ∞ is not claimed here."
     }
   ],
   "notes": [

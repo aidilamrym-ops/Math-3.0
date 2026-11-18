@@ -22,3 +22,15 @@
 === run start 2026-11-14 11:49:30 scope=partial files=1 pending=1 workers=1 ===
 [1/1] FAIL      60.86s lean/spec_v4/RiemannCurvatureTensorCertificate.lean :: spec_v4/RiemannCurvatureTensorCertificate.lean:28:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class
 === run end 2026-11-14 11:50:31 ===
+
+=== run start 2026-11-18 15:43:42 scope=partial files=1 pending=1 workers=2 ===
+[1/1] FAIL      18.43s lean/spec_v4/bridges/ContinuumCompactnessBridge.lean :: spec_v4/bridges/ContinuumCompactnessBridge.lean:30:11: error: Function expected at
+=== run end 2026-11-18 15:44:01 ===
+
+=== run start 2026-11-18 15:45:20 scope=partial files=1 pending=1 workers=2 ===
+[1/1] FAIL      16.40s lean/spec_v4/bridges/ContinuumCompactnessBridge.lean :: spec_v4/bridges/ContinuumCompactnessBridge.lean:30:11: error: Function expected at
+=== run end 2026-11-18 15:45:37 ===
+
+=== run start 2026-11-18 16:44:42 scope=partial files=1 pending=1 workers=2 ===
+[1/1] PASS      16.06s lean/spec_v4/bridges/ContinuumCompactnessBridge.lean
+=== run end 2026-11-18 16:44:58 ===

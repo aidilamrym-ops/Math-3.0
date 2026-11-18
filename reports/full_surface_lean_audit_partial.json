@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-14 11:50:31",
+  "generated": "2026-11-18 16:44:58",
   "scope": {
     "kind": "partial",
-    "only": "RiemannCurvatureTensorCertificate.lean",
+    "only": "ContinuumCompactnessBridge",
     "surfaces": [
       "lean/spec_v4",
       "Math30Kernel",
@@ -11,7 +11,7 @@
     "canonical_receipt": false
   },
   "is_complete": false,
-  "verdict": "PARTIAL_FAIL",
+  "verdict": "PARTIAL",
   "surfaces": [
     "lean/spec_v4",
     "Math30Kernel",
@@ -20,29 +20,22 @@
   "total_files": 1,
   "compiled": 1,
   "counts": {
-    "FAIL": 1
+    "PASS": 1
   },
   "pass_with_warnings": 0,
-  "total_seconds": 60.9,
-  "failures": [
-    {
-      "path": "lean/spec_v4/RiemannCurvatureTensorCertificate.lean",
-      "status": "FAIL",
-      "rc": 1,
-      "error": "spec_v4/RiemannCurvatureTensorCertificate.lean:28:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class"
-    }
-  ],
+  "total_seconds": 16.1,
+  "failures": [],
   "warning_files": [],
   "results": [
     {
-      "path": "lean/spec_v4/RiemannCurvatureTensorCertificate.lean",
-      "lean_path": "spec_v4/RiemannCurvatureTensorCertificate.lean",
-      "rc": 1,
-      "status": "FAIL",
-      "warnings": 19,
-      "seconds": 60.86,
-      "error": "spec_v4/RiemannCurvatureTensorCertificate.lean:28:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class",
-      "stdout_tail": "` can get typeclass resolution un-stuck.\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\n  Fin ?m.1\ndue to the absence of the instance above\nspec_v4/RiemannCurvatureTensorCertificate.lean:224:48: error: unsolved goals\n⊢ sorry () (0, 1) = -1\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:15: warning: This simp argument is unused:\n  Riemann\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, PGmetric, PG, PD, Fin.sum_univ_two]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:24: warning: This simp argument is unused:\n  PGmetric\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, Riemann, PG, PD, Fin.sum_univ_two]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:34: warning: This simp argument is unused:\n  PG\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, Riemann, PGmetric, PD, Fin.sum_univ_two]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:38: warning: This simp argument is unused:\n  PD\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, Riemann, PGmetric, PG, Fin.sum_univ_two]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:225:42: warning: This simp argument is unused:\n  Fin.sum_univ_two\n\nHint: Omit it from the simp argument list.\n  [apply] simp [lower, Riemann, PGmetric, PG, PD]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nspec_v4/RiemannCurvatureTensorCertificate.lean:228:8: warning: declaration uses `sorry`\nspec_v4/RiemannCurvatureTensorCertificate.lean:237:0: error: Invalid `end`: There is no current scope to end\n\nNote: Scopes are introduced using `namespace` and `section`\n",
+      "path": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
+      "lean_path": "spec_v4/bridges/ContinuumCompactnessBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "warnings": 0,
+      "seconds": 16.06,
+      "error": "",
+      "stdout_tail": "",
       "stderr_tail": ""
     }
   ]
