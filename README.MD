@@ -38,7 +38,7 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
 | **Anti-Circularity Gate** | Executable check over the 510-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full 510-file surface; BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **1-bit fault sentinel** | `manifest.json` pins 1,650 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
+| **1-bit fault sentinel** | `manifest.json` pins 1,651 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
 
 ---
 
@@ -333,8 +333,8 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 ---
 **Lean surface:** 510 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`, `BRIDGE-02`, `BRIDGE-03`, `BRIDGE-04`, `BRIDGE-05`, `BRIDGE-06`) targeted-compiled and mutation-verified.
 
-**Manifest seal (sha-256):** 6dff8823e90af7ea613cfe2458805403104d4d20ae184de0e4d88c8a3e9c4272
-**1,650 rows** in manifest.
+**Manifest seal (sha-256):** 81bc22c46055d67125dc55c487cbaf544d462c5f93f37957fe1612e0d39cb5d0
+**1,651 rows** in manifest.
 
 ---
 
@@ -526,10 +526,10 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-6dff8823e90af7ea613cfe2458805403104d4d20ae184de0e4d88c8a3e9c4272
+81bc22c46055d67125dc55c487cbaf544d462c5f93f37957fe1612e0d39cb5d0
 ```
 
-**Manifest Rows:** 1,650 files pinned  
+**Manifest Rows:** 1,651 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Wed Nov 18 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -540,6 +540,7 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 ```text
 Math-3.0/
+├── .github/workflows/assurance.yml   # CI assurance gate on push to main
 ├── lean/spec_v4/
 │   ├── certificates/              # formal certificate modules
 │   ├── adversarial_tests/         # Stress-test certificates
@@ -575,7 +576,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,650-row SHA-256 ledger
+├── manifest.json                  # 1,651-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -690,7 +691,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,650 rows, SHA-256 locked: `6dff8823e90af7ea613cfe2458805403104d4d20ae184de0e4d88c8a3e9c4272`  
+> **Manifest:** 1,651 rows, SHA-256 locked: `81bc22c46055d67125dc55c487cbaf544d462c5f93f37957fe1612e0d39cb5d0`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 ---
@@ -698,7 +699,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 ## Auto-Facts Summary
 
 <!-- AUTO-FACTS:START -->
-- **Manifest Pinned Files:** 1,650
+- **Manifest Pinned Files:** 1,651
 - **Lean Surface:** 510 files, all compiled PASS — 504 full-surface audited + 6 bridge modules under `bridges/` targeted-compiled and mutation-verified
 - **Tracked Claims in Ledger:** 69 Lean claims
 - **Resolved README Theorem Names:** 69/69 PASS

@@ -1,0 +1,49 @@
+name: assurance
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: assurance-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Lean toolchain
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Build Lean surface
+        working-directory: lean
+        run: |
+          lake exe cache get
+          lake build
+
+      # Seal first: later audit steps rewrite pinned report files.
+      - name: Verify manifest and README seal
+        run: python mcp/t2n/core/repokeeper.py --verify
+
+      - name: Audit cited theorem names
+        run: python tools/readme_theorem_audit.py
+
+      - name: Audit cited Lean files
+        run: python tools/readme_lean_audit.py --workers 1
+
+      - name: Full-surface compile audit
+        run: python tools/full_surface_lean_audit.py --workers 1
+
+      - name: Strict trust-token gate
+        run: python tools/omega_audit/gate_strict.py check lean/spec_v4 Math30Kernel Math30Interfaces
