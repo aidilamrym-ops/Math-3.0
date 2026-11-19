@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-19T09:39:53.542415+00:00",
+  "generated": "2026-11-19T09:49:27.579693+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "4ab121c5a25d3bba3f78812de8964e76edb50ab8ce8c8782515d2b785c2a315e",
+  "readme_semantic_sha256": "f5c62cdfd0ebe08c2566dc4f481bca60f131c11784368faad8512014fbb16866",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 86,
-  "resolved": 86,
+  "cited_identifiers": 91,
+  "resolved": 91,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -95,6 +95,9 @@
     "energy_nonincreasing": [
       "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
     ],
+    "erdos_straus_bounded_up_to_200": [
+      "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean"
+    ],
     "erdos_straus_bounded_up_to_50": [
       "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean"
     ],
@@ -142,6 +145,15 @@
     "gilbreath_parity_preservation_general": [
       "lean/spec_v4/certificates/GilbreathBoundedVerification.lean"
     ],
+    "goldbach_bounded_up_to_100": [
+      "lean/spec_v4/certificates/GoldbachBoundedVerification.lean"
+    ],
+    "goldbach_bounded_up_to_500": [
+      "lean/spec_v4/certificates/GoldbachBoundedVerification.lean"
+    ],
+    "goldbach_even_gt_six_odd_primes": [
+      "lean/spec_v4/certificates/GoldbachBoundedVerification.lean"
+    ],
     "grid_sequential_compactness": [
       "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean"
     ],
@@ -180,6 +192,9 @@
     ],
     "lattice_family_energy_bound": [
       "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
+    ],
+    "legendre_bounded_up_to_100": [
+      "lean/spec_v4/certificates/LegendreBoundedVerification.lean"
     ],
     "legendre_bounded_up_to_30": [
       "lean/spec_v4/certificates/LegendreBoundedVerification.lean"

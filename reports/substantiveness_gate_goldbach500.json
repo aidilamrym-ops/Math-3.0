@@ -1,0 +1,61 @@
+{
+  "generated": "2026-11-19T09:46:18Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\GoldbachBoundedVerification.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 4,
+  "predicates": 1,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 1
+  },
+  "verdict": "PASS",
+  "findings": [
+    {
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "line": 19,
+      "declaration": "IsGoldbachDecomposable",
+      "severity": "LOW",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `IsGoldbachDecomposable` is never applied to ground arguments or existentially witnessed"
+    }
+  ],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "declaration": "goldbach_bounded_up_to_100",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    },
+    {
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "declaration": "goldbach_bounded_up_to_500",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    },
+    {
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "declaration": "goldbach_even_gt_six_odd_primes",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    }
+  ],
+  "mutation_summary": {
+    "total": 3,
+    "killed": 3,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}

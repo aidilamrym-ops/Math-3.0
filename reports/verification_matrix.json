@@ -652,6 +652,51 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ p : ℕ with p in the explicit list of 35 twin-prime smaller members below 1000; IsTwinPrime p",
       "note": "All 35 twin-prime pairs below 1000 are sealed by explicit membership and primality checks. The full Twin Prime Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "declaration": "goldbach_bounded_up_to_500",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hn",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n : ℕ with 4 ≤ n ∧ n ≤ 500 ∧ n % 2 = 0; IsGoldbachDecomposable n",
+      "note": "All 249 even values 4 ≤ n ≤ 500 are sealed by explicit prime-pair witnesses. The full Goldbach Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
+      "declaration": "legendre_bounded_up_to_100",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hn",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n : ℕ with 1 ≤ n ∧ n ≤ 100; HasPrimeBetweenSquares n",
+      "note": "All 100 values 1 ≤ n ≤ 100 are sealed by explicit prime witnesses in (n², (n+1)²); the largest witness is 10007 < 101². The full Legendre's Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean",
+      "declaration": "erdos_straus_bounded_up_to_200",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hn",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n : ℕ with 2 ≤ n ∧ n ≤ 200; IsErdosStrausDecomposable n",
+      "note": "All 199 values 2 ≤ n ≤ 200 are sealed by explicit division-free witnesses. The remaining class n ≡ 1 (mod 4) and the full Erdős–Straus Conjecture remain OPEN."
     }
   ],
   "notes": [
@@ -681,6 +726,8 @@
     "Lehmer mutation receipt: reports/substantiveness_gate_lehmer_b18.json — 4/4 declarations killed, 0 survived, hypotheses hn and hdiv, LOW=0. The mutation parser recognizes ∣/∤ divisibility propositions.",
     "Lehmer scope: no_lehmer_composite_up_to_200 is a FORMAL_FINITE_THEOREM for 2 ≤ n ≤ 200; lehmer_composite_must_be_odd and lehmer_composite_must_be_squarefree prove the universal oddness and squarefree obstructions, combined in lehmer_composite_odd_and_squarefree. The full Lehmer Totient Conjecture remains OPEN.",
     "RangeExpansionPack I mutation receipt: reports/substantiveness_gate_pack1.json — 2/2 declarations killed, 0 survived, hypotheses hps and hp, LOW=0.",
-    "RangeExpansionPack I scope: gilbreath_first_50_primes extends the finite Gilbreath check to the first 50 primes (49 rows); twin_prime_witnesses_below_1000 seals all 35 twin-prime pairs below 1000. The full Gilbreath and Twin Prime Conjectures remain OPEN."
+    "RangeExpansionPack I scope: gilbreath_first_50_primes extends the finite Gilbreath check to the first 50 primes (49 rows); twin_prime_witnesses_below_1000 seals all 35 twin-prime pairs below 1000. The full Gilbreath and Twin Prime Conjectures remain OPEN.",
+    "RangeExpansionPack II mutation receipts: reports/substantiveness_gate_goldbach500.json (3/3 killed, LOW=1 WITNESS_MISSING pre-existing), reports/substantiveness_gate_legendre100.json (3/3 killed, LOW=2 pre-existing), reports/substantiveness_gate_erdos200.json (4/4 killed, LOW=0).",
+    "RangeExpansionPack II scope: goldbach_bounded_up_to_500 covers all 249 even values 4 ≤ n ≤ 500 with explicit prime pairs; legendre_bounded_up_to_100 covers 1 ≤ n ≤ 100 with explicit prime witnesses (largest 10007); erdos_straus_bounded_up_to_200 covers 2 ≤ n ≤ 200 with division-free witnesses. The full Goldbach, Legendre, and Erdős–Straus Conjectures remain OPEN."
   ]
 }

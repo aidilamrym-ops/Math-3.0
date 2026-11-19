@@ -38,7 +38,7 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
 | **Anti-Circularity Gate** | Executable check over the 519-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, `LehmerTotientBoundedVerification.lean`, and `RangeExpansionPack.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
+| **1-bit fault sentinel** | `manifest.json` pins 1,710 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
 
 ---
 
@@ -333,8 +333,8 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 ---
 **Lean surface:** 519 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`-`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, `LehmerTotientBoundedVerification.lean`, and `RangeExpansionPack.lean` targeted-compiled and mutation-verified.
 
-**Manifest seal (sha-256):** f0cfc9e09c11777f4dafe134c10de7038d63f688fa4c456e83fd56a47dffef39
-**1,702 rows** in manifest.
+**Manifest seal (sha-256):** 05dc3635436d86b133ee867c9274c1f4b0c9e6e22872a9dfdde3f9f464f3f0f2
+**1,710 rows** in manifest.
 
 ---
 
@@ -484,7 +484,7 @@ Four active frontier modules extend the formalization to finite homotopy models 
 - **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every live Lean file cited in this README. Archived VACUOUS certificates are cited as plain-text paths under `reports/flawed_artifacts/` and are intentionally excluded from the compile audit. Latest run: **38/38 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.
 - **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **519** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 519-file surface is covered as **514 canonical + 5 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, `LehmerTotientBoundedVerification.lean`, and `RangeExpansionPack.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.
 - **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **86/86 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
-- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,125 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full519.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-19 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed); the audited compile surface totals **519 files / 2,125 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.
+- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,128 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full520.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-20 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed; Batch 20: 13 declarations, LOW=3 pre-existing, 10/10 killed); the audited compile surface totals **519 files / 2,128 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
 
@@ -520,22 +520,24 @@ Four active frontier modules extend the formalization to finite homotopy models 
 | `EvenUnimodularObstruction.lean` | Even unimodular parity obstruction; hyperbolic witness (Phase 52) | ✅ Verified |
 | `LatticeInstantonBound.lean` | Lattice instanton/BPS bound; rigid equality and integer action gap (Phase 53–54) | ✅ Verified |
 | `SophieGermainFermatTheorem.lean` | Sophie Germain primes, safe primes, DH safe prime order, First Case FLT auxiliary obstruction | ✅ Verified |
-| `GoldbachBoundedVerification.lean` | Bounded Goldbach verification up to 100 & odd-prime decomposition properties | ✅ Verified |
-| `LegendreBoundedVerification.lean` | Bounded Legendre verification $1 \le n \le 30$ (FORMAL_FINITE_THEOREM); interval gap law (FORMAL_GENERAL_THEOREM); full conjecture OPEN | ✅ Verified |
+| `GoldbachBoundedVerification.lean` | Bounded Goldbach verification up to 500 (249 even values, FORMAL_FINITE_THEOREM); odd-prime decomposition structural theorem; full conjecture OPEN | ✅ Verified |
+| `LegendreBoundedVerification.lean` | Bounded Legendre verification $1 \le n \le 100$ (FORMAL_FINITE_THEOREM); interval gap law (FORMAL_GENERAL_THEOREM); full conjecture OPEN | ✅ Verified |
 | `TwinPrimeBoundedVerification.lean` | Bounded twin-prime witnesses below 200 (15 pairs, FORMAL_FINITE_THEOREM); mod-6/square-difference invariant (FORMAL_GENERAL_THEOREM); full conjecture OPEN | ✅ Verified |
 | `AbcConjectureBoundedVerification.lean` | Bounded Reyssat abc witness (2 + 3^10·109 = 23^5, rad = 15042, c^10 > rad^16) (FORMAL_FINITE_THEOREM); coprime radical multiplicativity (FORMAL_GENERAL_THEOREM); full conjecture OPEN | ✅ Verified |
-| `ErdosStrausBoundedVerification.lean` | Even and n ≡ 3 (mod 4) parametric decompositions (FORMAL_GENERAL_THEOREMs, 75% of integers); bounded verification 2 ≤ n ≤ 50 (FORMAL_FINITE_THEOREM); full conjecture OPEN | ✅ Verified |
+| `ErdosStrausBoundedVerification.lean` | Even and n ≡ 3 (mod 4) parametric decompositions (FORMAL_GENERAL_THEOREMs, 75% of integers); bounded verification 2 ≤ n ≤ 200 (FORMAL_FINITE_THEOREM); full conjecture OPEN | ✅ Verified |
 | `GilbreathBoundedVerification.lean` | Bounded Gilbreath head verification on the first 20 primes (19 iterated rows, FORMAL_FINITE_THEOREM); parity-lock invariant (FORMAL_GENERAL_THEOREM); full conjecture OPEN | ✅ Verified |
 | `LehmerTotientBoundedVerification.lean` | Bounded non-existence on 2 ≤ n ≤ 200 (FORMAL_FINITE_THEOREM); universal oddness and squarefree obstructions (FORMAL_GENERAL_THEOREMs); full conjecture OPEN | ✅ Verified |
 | `RangeExpansionPack.lean` | Range Expansion Pack I: Gilbreath head condition on the first 50 primes (49 iterated rows) and all 35 twin-prime pairs below 1000 (FORMAL_FINITE_THEOREMs); full conjectures OPEN | ✅ Verified |
 
-**Legendre scope boundary:** `legendre_bounded_up_to_30` is a FORMAL_FINITE_THEOREM (`1 ≤ n ≤ 30`, explicit witnesses up to `907 < 31² = 961`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.
+**Goldbach scope boundary:** `goldbach_bounded_up_to_100` and `goldbach_bounded_up_to_500` are FORMAL_FINITE_THEOREMs. The 500-bound checks all 249 even values with explicit prime-pair witnesses; the 100-bound remains as a smaller historical certificate. `goldbach_even_gt_six_odd_primes` is a structural FORMAL_GENERAL_THEOREM: any decomposition of an even n > 6 uses two odd primes. The full Goldbach Conjecture, `∀ even n ≥ 4, IsGoldbachDecomposable n`, remains **OPEN**; no density or asymptotic claim is made.
+
+**Legendre scope boundary:** `legendre_bounded_up_to_30` and `legendre_bounded_up_to_100` are FORMAL_FINITE_THEOREMs (`1 ≤ n ≤ 100`, explicit witnesses; the largest is `10007 < 101² = 10201`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.
 
 **Twin Prime scope boundary:** `twin_prime_witnesses_below_200` is a FORMAL_FINITE_THEOREM (15 pairs with smaller member below 200). `twin_prime_mod6_and_diff_sq_24` is a structural FORMAL_GENERAL_THEOREM (`p % 6 = 5` and `24 ∣ ((p + 2)² − p²)` for `p > 3`). The full Twin Prime Conjecture, `∀ N, ∃ p ≥ N, IsTwinPrime p`, remains **OPEN**.
 
 **abc scope boundary:** `reyssat_abc_triple_witness` is a FORMAL_FINITE_THEOREM sealing a single high-quality triple (`a = 2`, `b = 3^10 · 109`, `c = 23^5`, `rad(abc) = 15042`), with the division-free bound `c^10 > rad(abc)^16` (quality `q > 1.6`; the actual quality is approximately `1.6299`). `abc_coprime_radical_product` is a structural FORMAL_GENERAL_THEOREM proving coprime radical multiplicativity. The full abc Conjecture (`∀ ε > 0`, only finitely many triples satisfy `c > rad(abc)^(1+ε)`) remains **OPEN**; no finiteness, asymptotic, or logarithmic claim is made.
 
-**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.
+**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.
 
 **Gilbreath scope boundary:** `gilbreath_parity_preservation_general` is a structural FORMAL_GENERAL_THEOREM: if `xs = 2 :: x :: rest` with odd x and every element of `rest` odd, then one `gilbreathStep` has an odd leading entry and every trailing entry even. `gilbreath_first_20_primes` is a FORMAL_FINITE_THEOREM verifying that all 19 iterated absolute-difference rows of the first 20 primes have leading entry 1. This one-step parity lock does not force the leading entry to remain 1. The full Gilbreath Conjecture (`∀ n ≥ 2, SatisfiesGilbreathHead (first_n_primes n)`) remains **OPEN**; no infinitude or all-rows claim is made.
 
@@ -549,10 +551,10 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-f0cfc9e09c11777f4dafe134c10de7038d63f688fa4c456e83fd56a47dffef39
+05dc3635436d86b133ee867c9274c1f4b0c9e6e22872a9dfdde3f9f464f3f0f2
 ```
 
-**Manifest Rows:** 1,702 files pinned  
+**Manifest Rows:** 1,710 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Wed Nov 18 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -599,7 +601,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,702-row SHA-256 ledger
+├── manifest.json                  # 1,710-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -714,7 +716,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,702 rows, SHA-256 locked: `f0cfc9e09c11777f4dafe134c10de7038d63f688fa4c456e83fd56a47dffef39`  
+> **Manifest:** 1,710 rows, SHA-256 locked: `05dc3635436d86b133ee867c9274c1f4b0c9e6e22872a9dfdde3f9f464f3f0f2`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 ---
@@ -722,9 +724,9 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 ## Auto-Facts Summary
 
 <!-- AUTO-FACTS:START -->
-- **Manifest Pinned Files:** 1,702
+- **Manifest Pinned Files:** 1,710
 - **Lean Surface:** 519 files — 514 canonical full-surface PASS (receipt 2026-11-19 13:42:33) + 5 targeted-compiled (`AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, `LehmerTotientBoundedVerification.lean`, `RangeExpansionPack.lean`, exit 0, 0 warnings)
-- **Tracked Claims in Ledger:** 86 Lean claims
-- **Resolved README Theorem Names:** 86/86 PASS
+- **Tracked Claims in Ledger:** 91 Lean claims
+- **Resolved README Theorem Names:** 91/91 PASS
 - **Evidence Status:** PASS
 <!-- AUTO-FACTS:END -->

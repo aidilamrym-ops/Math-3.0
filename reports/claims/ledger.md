@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-19T09:28:19.509535+00:00
+- Generated: 2026-11-19T09:49:27.783164+00:00
 - README: `README.MD`
-- Total backticked citations: **343**
-- Lean claims: **86** (resolved: 86, unresolved: 0)
-- Citation kinds: `{'prose-term': 140, 'file-reference': 95, 'tooling': 19, 'lean-claim': 86, 'negative-reference': 3}`
+- Total backticked citations: **348**
+- Lean claims: **91** (resolved: 91, unresolved: 0)
+- Citation kinds: `{'prose-term': 140, 'file-reference': 95, 'tooling': 19, 'lean-claim': 91, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -79,7 +79,11 @@
 | `torus_euler_characteristic` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
 | `torus_euler_from_cells` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
 | `torus_homology_ranks` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `goldbach_bounded_up_to_100` | resolved | `lean/spec_v4/certificates/GoldbachBoundedVerification.lean` | `local` | `bounded model` |
+| `goldbach_bounded_up_to_500` | resolved | `lean/spec_v4/certificates/GoldbachBoundedVerification.lean` | `local` | `bounded model` |
+| `goldbach_even_gt_six_odd_primes` | resolved | `lean/spec_v4/certificates/GoldbachBoundedVerification.lean` | `local` | `bounded model` |
 | `legendre_bounded_up_to_30` | resolved | `lean/spec_v4/certificates/LegendreBoundedVerification.lean` | `local` | `numerical evidence` |
+| `legendre_bounded_up_to_100` | resolved | `lean/spec_v4/certificates/LegendreBoundedVerification.lean` | `local` | `numerical evidence` |
 | `legendre_interval_gap_grows` | resolved | `lean/spec_v4/certificates/LegendreBoundedVerification.lean` | `local` | `numerical evidence` |
 | `twin_prime_witnesses_below_200` | resolved | `lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean` | `local` | `bounded model` |
 | `twin_prime_mod6_and_diff_sq_24` | resolved | `lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean` | `local` | `bounded model` |
@@ -88,6 +92,7 @@
 | `erdos_straus_even_general` | resolved | `lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean` | `local` | `bounded model` |
 | `erdos_straus_mod4_eq3_general` | resolved | `lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean` | `local` | `bounded model` |
 | `erdos_straus_bounded_up_to_50` | resolved | `lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean` | `local` | `bounded model` |
+| `erdos_straus_bounded_up_to_200` | resolved | `lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean` | `local` | `bounded model` |
 | `gilbreath_parity_preservation_general` | resolved | `lean/spec_v4/certificates/GilbreathBoundedVerification.lean` | `local` | `bounded model` |
 | `gilbreath_first_20_primes` | resolved | `lean/spec_v4/certificates/GilbreathBoundedVerification.lean` | `local` | `bounded model` |
 | `no_lehmer_composite_up_to_200` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
@@ -286,7 +291,7 @@
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
-- `reports/substantiveness_gate_full519.json` — file-reference
+- `reports/substantiveness_gate_full520.json` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -305,8 +310,9 @@
 - `ContinuityRefutation.lean` — file-reference
 - `EvenUnimodularObstruction.lean` — file-reference
 - `LatticeInstantonBound.lean` — file-reference
-- `1 ≤ n ≤ 30` — prose-term
-- `907 < 31² = 961` — prose-term
+- `∀ even n ≥ 4, IsGoldbachDecomposable n` — prose-term
+- `1 ≤ n ≤ 100` — prose-term
+- `10007 < 101² = 10201` — prose-term
 - `(n+1)² − n² = 2n+1 ≥ 3` — prose-term
 - `∀ n ≥ 1, HasPrimeBetweenSquares n` — prose-term
 - `p % 6 = 5` — prose-term
@@ -330,7 +336,6 @@
 - `x = k + 1` — prose-term
 - `y = z = 2(k+1)(4k+3)` — prose-term
 - `n ≡ 0, 2, 3 (mod 4)` — prose-term
-- `2 ≤ n ≤ 50` — prose-term
 - `n ≡ 1 (mod 4)` — prose-term
 - `∀ n ≥ 2, IsErdosStrausDecomposable n` — prose-term
 - `xs = 2 :: x :: rest` — prose-term
@@ -355,4 +360,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `5ed41c9908003406fa293ade0315d8d1be97176925a14bef07d315e7faaa3509` — prose-term
+- `f0cfc9e09c11777f4dafe134c10de7038d63f688fa4c456e83fd56a47dffef39` — prose-term

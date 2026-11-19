@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-19T09:28:19.509535+00:00",
+  "generated": "2026-11-19T09:49:27.783164+00:00",
   "readme": "README.MD",
-  "readme_semantic_sha256": "94adfaf8e2a608230afdd28357e790794ada49f3f3d80d72a07ff72e1c1b24c8",
-  "entries": 343,
-  "claims": 86,
-  "resolved_claims": 86,
+  "readme_semantic_sha256": "f5c62cdfd0ebe08c2566dc4f481bca60f131c11784368faad8512014fbb16866",
+  "entries": 348,
+  "claims": 91,
+  "resolved_claims": 91,
   "unresolved_claims": [],
   "ledger": [
     {
@@ -262,7 +262,7 @@
     },
     {
       "id": "manifest.json",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,697 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "manifest.json",
       "kind": "file-reference",
@@ -273,7 +273,7 @@
     },
     {
       "id": "repokeeper.py --verify",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,697 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "repokeeper.py --verify",
       "kind": "prose-term",
@@ -284,7 +284,7 @@
     },
     {
       "id": ".git",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,697 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".git",
       "kind": "prose-term",
@@ -295,7 +295,7 @@
     },
     {
       "id": ".lake",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,697 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".lake",
       "kind": "prose-term",
@@ -306,7 +306,7 @@
     },
     {
       "id": "staging/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,697 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "staging/",
       "kind": "file-reference",
@@ -317,7 +317,7 @@
     },
     {
       "id": "mcp/out/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,697 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "mcp/out/",
       "kind": "file-reference",
@@ -328,7 +328,7 @@
     },
     {
       "id": "__pycache__",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,697 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "__pycache__",
       "kind": "tooling",
@@ -339,7 +339,7 @@
     },
     {
       "id": "*.pyc",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,697 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "*.pyc",
       "kind": "prose-term",
@@ -350,7 +350,7 @@
     },
     {
       "id": "README.MD",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,697 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,702 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "README.MD",
       "kind": "file-reference",
@@ -2946,7 +2946,7 @@
     },
     {
       "id": "python tools/omega_audit/substantiveness_gate.py",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,125 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full519.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-19 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed); the audited compile surface totals **519 files / 2,125 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,128 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full520.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-20 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed; Batch 20: 13 declarations, LOW=3 pre-existing, 10/10 killed); the audited compile surface totals **519 files / 2,128 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "python tools/omega_audit/substantiveness_gate.py",
       "kind": "file-reference",
@@ -2957,7 +2957,7 @@
     },
     {
       "id": "reports/AUDIT_METHODOLOGY.md",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,125 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full519.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-19 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed); the audited compile surface totals **519 files / 2,125 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,128 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full520.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-20 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed; Batch 20: 13 declarations, LOW=3 pre-existing, 10/10 killed); the audited compile surface totals **519 files / 2,128 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/AUDIT_METHODOLOGY.md",
       "kind": "file-reference",
@@ -2967,10 +2967,10 @@
       "class": "file-reference"
     },
     {
-      "id": "reports/substantiveness_gate_full519.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,125 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full519.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-19 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed); the audited compile surface totals **519 files / 2,125 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "id": "reports/substantiveness_gate_full520.json",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,128 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full520.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-20 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed; Batch 20: 13 declarations, LOW=3 pre-existing, 10/10 killed); the audited compile surface totals **519 files / 2,128 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
-      "theorem_name": "reports/substantiveness_gate_full519.json",
+      "theorem_name": "reports/substantiveness_gate_full520.json",
       "kind": "file-reference",
       "status": "not-a-declaration",
       "is_claim": false,
@@ -2979,7 +2979,7 @@
     },
     {
       "id": "reports/substantiveness_gate_regression.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,125 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full519.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-19 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed); the audited compile surface totals **519 files / 2,125 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,128 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full520.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-20 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed; Batch 20: 13 declarations, LOW=3 pre-existing, 10/10 killed); the audited compile surface totals **519 files / 2,128 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/substantiveness_gate_regression.json",
       "kind": "file-reference",
@@ -2990,7 +2990,7 @@
     },
     {
       "id": "reports/model_scope_manifest.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,125 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full519.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-19 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed); the audited compile surface totals **519 files / 2,125 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **519 files, 2,128 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full520.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-20 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed; Batch 19: 2 declarations, LOW=0, 2/2 killed; Batch 20: 13 declarations, LOW=3 pre-existing, 10/10 killed); the audited compile surface totals **519 files / 2,128 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/model_scope_manifest.json",
       "kind": "file-reference",
@@ -3176,8 +3176,58 @@
       "class": "file-reference"
     },
     {
+      "id": "goldbach_bounded_up_to_100",
+      "prose": "**Goldbach scope boundary:** `goldbach_bounded_up_to_100` and `goldbach_bounded_up_to_500` are FORMAL_FINITE_THEOREMs. The 500-bound checks all 249 even values with explicit prime-pair witnesses; the 100-bound remains as a smaller historical certificate. `goldbach_even_gt_six_odd_primes` is a structural FORMAL_GENERAL_THEOREM: any decomposition of an even n > 6 uses two odd primes. The full Goldbach Conjecture, `∀ even n ≥ 4, IsGoldbachDecomposable n`, remains **OPEN**; no density or asymptotic claim is made.",
+      "artifact": [
+        "lean/spec_v4/certificates/GoldbachBoundedVerification.lean"
+      ],
+      "theorem_name": "goldbach_bounded_up_to_100",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "bounded model"
+    },
+    {
+      "id": "goldbach_bounded_up_to_500",
+      "prose": "**Goldbach scope boundary:** `goldbach_bounded_up_to_100` and `goldbach_bounded_up_to_500` are FORMAL_FINITE_THEOREMs. The 500-bound checks all 249 even values with explicit prime-pair witnesses; the 100-bound remains as a smaller historical certificate. `goldbach_even_gt_six_odd_primes` is a structural FORMAL_GENERAL_THEOREM: any decomposition of an even n > 6 uses two odd primes. The full Goldbach Conjecture, `∀ even n ≥ 4, IsGoldbachDecomposable n`, remains **OPEN**; no density or asymptotic claim is made.",
+      "artifact": [
+        "lean/spec_v4/certificates/GoldbachBoundedVerification.lean"
+      ],
+      "theorem_name": "goldbach_bounded_up_to_500",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "bounded model"
+    },
+    {
+      "id": "goldbach_even_gt_six_odd_primes",
+      "prose": "**Goldbach scope boundary:** `goldbach_bounded_up_to_100` and `goldbach_bounded_up_to_500` are FORMAL_FINITE_THEOREMs. The 500-bound checks all 249 even values with explicit prime-pair witnesses; the 100-bound remains as a smaller historical certificate. `goldbach_even_gt_six_odd_primes` is a structural FORMAL_GENERAL_THEOREM: any decomposition of an even n > 6 uses two odd primes. The full Goldbach Conjecture, `∀ even n ≥ 4, IsGoldbachDecomposable n`, remains **OPEN**; no density or asymptotic claim is made.",
+      "artifact": [
+        "lean/spec_v4/certificates/GoldbachBoundedVerification.lean"
+      ],
+      "theorem_name": "goldbach_even_gt_six_odd_primes",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "bounded model"
+    },
+    {
+      "id": "∀ even n ≥ 4, IsGoldbachDecomposable n",
+      "prose": "**Goldbach scope boundary:** `goldbach_bounded_up_to_100` and `goldbach_bounded_up_to_500` are FORMAL_FINITE_THEOREMs. The 500-bound checks all 249 even values with explicit prime-pair witnesses; the 100-bound remains as a smaller historical certificate. `goldbach_even_gt_six_odd_primes` is a structural FORMAL_GENERAL_THEOREM: any decomposition of an even n > 6 uses two odd primes. The full Goldbach Conjecture, `∀ even n ≥ 4, IsGoldbachDecomposable n`, remains **OPEN**; no density or asymptotic claim is made.",
+      "artifact": [],
+      "theorem_name": "∀ even n ≥ 4, IsGoldbachDecomposable n",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
       "id": "legendre_bounded_up_to_30",
-      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` is a FORMAL_FINITE_THEOREM (`1 ≤ n ≤ 30`, explicit witnesses up to `907 < 31² = 961`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
+      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` and `legendre_bounded_up_to_100` are FORMAL_FINITE_THEOREMs (`1 ≤ n ≤ 100`, explicit witnesses; the largest is `10007 < 101² = 10201`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
       "artifact": [
         "lean/spec_v4/certificates/LegendreBoundedVerification.lean"
       ],
@@ -3189,10 +3239,23 @@
       "class": "numerical evidence"
     },
     {
-      "id": "1 ≤ n ≤ 30",
-      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` is a FORMAL_FINITE_THEOREM (`1 ≤ n ≤ 30`, explicit witnesses up to `907 < 31² = 961`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
+      "id": "legendre_bounded_up_to_100",
+      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` and `legendre_bounded_up_to_100` are FORMAL_FINITE_THEOREMs (`1 ≤ n ≤ 100`, explicit witnesses; the largest is `10007 < 101² = 10201`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
+      "artifact": [
+        "lean/spec_v4/certificates/LegendreBoundedVerification.lean"
+      ],
+      "theorem_name": "legendre_bounded_up_to_100",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "numerical evidence"
+    },
+    {
+      "id": "1 ≤ n ≤ 100",
+      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` and `legendre_bounded_up_to_100` are FORMAL_FINITE_THEOREMs (`1 ≤ n ≤ 100`, explicit witnesses; the largest is `10007 < 101² = 10201`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
       "artifact": [],
-      "theorem_name": "1 ≤ n ≤ 30",
+      "theorem_name": "1 ≤ n ≤ 100",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,
@@ -3200,10 +3263,10 @@
       "class": "prose-term"
     },
     {
-      "id": "907 < 31² = 961",
-      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` is a FORMAL_FINITE_THEOREM (`1 ≤ n ≤ 30`, explicit witnesses up to `907 < 31² = 961`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
+      "id": "10007 < 101² = 10201",
+      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` and `legendre_bounded_up_to_100` are FORMAL_FINITE_THEOREMs (`1 ≤ n ≤ 100`, explicit witnesses; the largest is `10007 < 101² = 10201`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
       "artifact": [],
-      "theorem_name": "907 < 31² = 961",
+      "theorem_name": "10007 < 101² = 10201",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,
@@ -3212,7 +3275,7 @@
     },
     {
       "id": "legendre_interval_gap_grows",
-      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` is a FORMAL_FINITE_THEOREM (`1 ≤ n ≤ 30`, explicit witnesses up to `907 < 31² = 961`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
+      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` and `legendre_bounded_up_to_100` are FORMAL_FINITE_THEOREMs (`1 ≤ n ≤ 100`, explicit witnesses; the largest is `10007 < 101² = 10201`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
       "artifact": [
         "lean/spec_v4/certificates/LegendreBoundedVerification.lean"
       ],
@@ -3225,7 +3288,7 @@
     },
     {
       "id": "(n+1)² − n² = 2n+1 ≥ 3",
-      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` is a FORMAL_FINITE_THEOREM (`1 ≤ n ≤ 30`, explicit witnesses up to `907 < 31² = 961`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
+      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` and `legendre_bounded_up_to_100` are FORMAL_FINITE_THEOREMs (`1 ≤ n ≤ 100`, explicit witnesses; the largest is `10007 < 101² = 10201`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
       "artifact": [],
       "theorem_name": "(n+1)² − n² = 2n+1 ≥ 3",
       "kind": "prose-term",
@@ -3236,7 +3299,7 @@
     },
     {
       "id": "∀ n ≥ 1, HasPrimeBetweenSquares n",
-      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` is a FORMAL_FINITE_THEOREM (`1 ≤ n ≤ 30`, explicit witnesses up to `907 < 31² = 961`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
+      "prose": "**Legendre scope boundary:** `legendre_bounded_up_to_30` and `legendre_bounded_up_to_100` are FORMAL_FINITE_THEOREMs (`1 ≤ n ≤ 100`, explicit witnesses; the largest is `10007 < 101² = 10201`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.",
       "artifact": [],
       "theorem_name": "∀ n ≥ 1, HasPrimeBetweenSquares n",
       "kind": "prose-term",
@@ -3442,7 +3505,7 @@
     },
     {
       "id": "erdos_straus_even_general",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [
         "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean"
       ],
@@ -3455,7 +3518,7 @@
     },
     {
       "id": "n = 2k",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "n = 2k",
       "kind": "prose-term",
@@ -3466,7 +3529,7 @@
     },
     {
       "id": "k ≥ 1",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "k ≥ 1",
       "kind": "prose-term",
@@ -3477,7 +3540,7 @@
     },
     {
       "id": "x = k",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "x = k",
       "kind": "prose-term",
@@ -3488,7 +3551,7 @@
     },
     {
       "id": "y = z = 2k",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "y = z = 2k",
       "kind": "prose-term",
@@ -3499,7 +3562,7 @@
     },
     {
       "id": "erdos_straus_mod4_eq3_general",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [
         "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean"
       ],
@@ -3512,7 +3575,7 @@
     },
     {
       "id": "n = 4k + 3",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "n = 4k + 3",
       "kind": "prose-term",
@@ -3523,7 +3586,7 @@
     },
     {
       "id": "x = k + 1",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "x = k + 1",
       "kind": "prose-term",
@@ -3534,7 +3597,7 @@
     },
     {
       "id": "y = z = 2(k+1)(4k+3)",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "y = z = 2(k+1)(4k+3)",
       "kind": "prose-term",
@@ -3545,7 +3608,7 @@
     },
     {
       "id": "n ≡ 0, 2, 3 (mod 4)",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "n ≡ 0, 2, 3 (mod 4)",
       "kind": "prose-term",
@@ -3556,7 +3619,7 @@
     },
     {
       "id": "erdos_straus_bounded_up_to_50",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [
         "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean"
       ],
@@ -3568,19 +3631,21 @@
       "class": "bounded model"
     },
     {
-      "id": "2 ≤ n ≤ 50",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
-      "artifact": [],
-      "theorem_name": "2 ≤ n ≤ 50",
-      "kind": "prose-term",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "prose-term"
+      "id": "erdos_straus_bounded_up_to_200",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "artifact": [
+        "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean"
+      ],
+      "theorem_name": "erdos_straus_bounded_up_to_200",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "bounded model"
     },
     {
       "id": "n ≡ 1 (mod 4)",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "n ≡ 1 (mod 4)",
       "kind": "prose-term",
@@ -3591,7 +3656,7 @@
     },
     {
       "id": "∀ n ≥ 2, IsErdosStrausDecomposable n",
-      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` is a FORMAL_FINITE_THEOREM sealing `2 ≤ n ≤ 50` by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
+      "prose": "**Erdős–Straus scope boundary:** `erdos_straus_even_general` is a FORMAL_GENERAL_THEOREM covering every even `n = 2k` with `k ≥ 1` via the division-free witness `x = k`, `y = z = 2k`; `erdos_straus_mod4_eq3_general` is a FORMAL_GENERAL_THEOREM covering every `n = 4k + 3` via `x = k + 1`, `y = z = 2(k+1)(4k+3)`. Together they cover 75% of integers (`n ≡ 0, 2, 3 (mod 4)`). `erdos_straus_bounded_up_to_50` and `erdos_straus_bounded_up_to_200` are FORMAL_FINITE_THEOREMs sealing their ranges by explicit division-free witnesses. The remaining class `n ≡ 1 (mod 4)` and the full Erdős–Straus Conjecture (`∀ n ≥ 2, IsErdosStrausDecomposable n`) remain **OPEN**; no general `n ≡ 1 (mod 4)` claim is made.",
       "artifact": [],
       "theorem_name": "∀ n ≥ 2, IsErdosStrausDecomposable n",
       "kind": "prose-term",
@@ -3947,10 +4012,10 @@
       "class": "file-reference"
     },
     {
-      "id": "5ed41c9908003406fa293ade0315d8d1be97176925a14bef07d315e7faaa3509",
-      "prose": "> **Manifest:** 1,697 rows, SHA-256 locked: `5ed41c9908003406fa293ade0315d8d1be97176925a14bef07d315e7faaa3509`",
+      "id": "f0cfc9e09c11777f4dafe134c10de7038d63f688fa4c456e83fd56a47dffef39",
+      "prose": "> **Manifest:** 1,702 rows, SHA-256 locked: `f0cfc9e09c11777f4dafe134c10de7038d63f688fa4c456e83fd56a47dffef39`",
       "artifact": [],
-      "theorem_name": "5ed41c9908003406fa293ade0315d8d1be97176925a14bef07d315e7faaa3509",
+      "theorem_name": "f0cfc9e09c11777f4dafe134c10de7038d63f688fa4c456e83fd56a47dffef39",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,

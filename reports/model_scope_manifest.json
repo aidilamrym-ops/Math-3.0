@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-19T09:28:07Z",
+  "generated": "2026-11-19T09:49:12Z",
   "counts": {
     "bounded-model": 0,
     "pure-theorem": 9,
-    "scope_undeclared": 2
+    "scope_undeclared": 1
   },
   "files": [
     {
@@ -15,8 +15,8 @@
     {
       "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
       "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
+      "scope_declared": true,
+      "scope_text": "Scope: `goldbach_bounded_up_to_100` and `goldbach_bounded_up_to_500` are"
     },
     {
       "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
