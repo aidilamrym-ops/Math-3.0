@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-18T23:38:36.966137+00:00",
+  "generated": "2026-11-19T04:32:33.014073+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "355ea343c42c1fd77ee7f3d5ec574e9005d7669dd1baa82e415a84358f34dd0c",
+  "readme_semantic_sha256": "454f19b5779766c0f80c4f5b2447dc5b200580dcb8f5b29fb8c4aca736d610f3",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 69,
-  "resolved": 69,
+  "cited_identifiers": 71,
+  "resolved": 71,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -159,6 +159,12 @@
     ],
     "lattice_family_energy_bound": [
       "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
+    ],
+    "legendre_bounded_up_to_30": [
+      "lean/spec_v4/certificates/LegendreBoundedVerification.lean"
+    ],
+    "legendre_interval_gap_grows": [
+      "lean/spec_v4/certificates/LegendreBoundedVerification.lean"
     ],
     "no_cloning_finite": [
       "lean/spec_v4/NoCloningFiniteDim.lean"

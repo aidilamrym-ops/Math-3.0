@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-18T20:23:41Z",
+  "generated": "2026-11-19T03:47:55Z",
   "counts": {
     "bounded-model": 0,
-    "pure-theorem": 1,
-    "scope_undeclared": 1
+    "pure-theorem": 3,
+    "scope_undeclared": 2
   },
   "files": [
     {
@@ -11,6 +11,18 @@
       "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": ""
     }
   ]
 }

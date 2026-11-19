@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-15T06:15:49.482874+00:00",
+  "generated": "2026-11-19T04:32:28.783630+00:00",
   "readme": "README.MD",
   "workers": 1,
-  "cited_unique_files": 38,
+  "cited_unique_files": 33,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 38
+    "PASS": 33
   },
   "results": [
     {
@@ -29,7 +29,7 @@
       "lean_path": "spec_v4\\CollatzBoundedDefeat.lean",
       "rc": 0,
       "status": "PASS",
-      "stdout": "'Math30.Collatz.collatz_horizon_defeat' depends on axioms: [propext]\n",
+      "stdout": "'Math30.Collatz.collatz_horizon_defeat' depends on axioms: [propext]\n'Math30.Collatz.collatzStep_even_lt' depends on axioms: [propext]\n'Math30.Collatz.collatzStep_capped' depends on axioms: [propext, Quot.sound]\n",
       "stderr": ""
     },
     {
@@ -45,7 +45,7 @@
       "lean_path": "spec_v4\\ErdosSzekeresRamsey.lean",
       "rc": 0,
       "status": "PASS",
-      "stdout": "",
+      "stdout": "'Math30.Combinatorics.Finite.pigeonhole_finite' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Combinatorics.Finite.ramsey_K6_mono_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
       "stderr": ""
     },
     {
@@ -53,7 +53,7 @@
       "lean_path": "spec_v4\\EuclidFermatArmor.lean",
       "rc": 0,
       "status": "PASS",
-      "stdout": "",
+      "stdout": "'Math30.NumberTheory.Foundation.ec_scalar_mul_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.NumberTheory.Foundation.ec_scalar_mul_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.NumberTheory.Foundation.bilinear_params_consistent' depends on axioms: [propext]\n",
       "stderr": ""
     },
     {
@@ -62,54 +62,6 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\FiniteLatticeSpectralGravity.lean",
-      "lean_path": "spec_v4\\FiniteLatticeSpectralGravity.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\FiniteNavierStokesDissipation.lean",
-      "lean_path": "spec_v4\\FiniteNavierStokesDissipation.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\FinitePvNPSeparationLattice.lean",
-      "lean_path": "spec_v4\\FinitePvNPSeparationLattice.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\FiniteRiemannZetaLattice.lean",
-      "lean_path": "spec_v4\\FiniteRiemannZetaLattice.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\FiniteYangMillsMassGapLattice.lean",
-      "lean_path": "spec_v4\\FiniteYangMillsMassGapLattice.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\HorizonFrontierTests.lean",
-      "lean_path": "spec_v4\\HorizonFrontierTests.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'TestHigherInductive.circle_base_loops' does not depend on any axioms\n'TestTopos.terminal_sheaf_always_valid' does not depend on any axioms\n'TestHomotopySphere.pi_n_sphere_iso_test' does not depend on any axioms\n'TestPhysicsApplication.vortex_winding_classification' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
       "stderr": ""
     },
     {
@@ -129,54 +81,6 @@
       "stderr": ""
     },
     {
-      "path": "lean\\spec_v4\\MillenniumBirchSwinnertonDyer.lean",
-      "lean_path": "spec_v4\\MillenniumBirchSwinnertonDyer.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.Millennium.BirchSwinnertonDyer.bsd_rank_consistency' depends on axioms: [propext]\n'Math30.Millennium.BirchSwinnertonDyer.bsd_tateshafarevich_bounded' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\MillenniumCollatzGeneralization.lean",
-      "lean_path": "spec_v4\\MillenniumCollatzGeneralization.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\MillenniumHodgeConjecture.lean",
-      "lean_path": "spec_v4\\MillenniumHodgeConjecture.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.Millennium.HodgeConjecture.hodge_cycle_consistency' depends on axioms: [propext]\n'Math30.Millennium.HodgeConjecture.hodge_cycle_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\MillenniumNavierStokesSmoothness.lean",
-      "lean_path": "spec_v4\\MillenniumNavierStokesSmoothness.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.Millennium.NavierStokes.navier_stokes_energy_bounded' depends on axioms: [propext, Quot.sound]\n'Math30.Millennium.NavierStokes.navier_stokes_pressure_regularity' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\MillenniumPoincareConjecture.lean",
-      "lean_path": "spec_v4\\MillenniumPoincareConjecture.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.Millennium.PoincareConjecture.poincare_conjecture_sphere_homeomorphism' does not depend on any axioms\n'Math30.Millennium.PoincareConjecture.ricci_flow_non_collapse_bound' depends on axioms: [propext, Quot.sound]\n",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\MillenniumRiemannHypothesis.lean",
-      "lean_path": "spec_v4\\MillenniumRiemannHypothesis.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.Millennium.RiemannHypothesis.riemann_hypothesis_critical_line_bound' depends on axioms: [propext, Quot.sound]\n'Math30.Millennium.RiemannHypothesis.riemann_explicit_formula_positivity' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
-      "stderr": ""
-    },
-    {
       "path": "lean\\spec_v4\\NoCloningFiniteDim.lean",
       "lean_path": "spec_v4\\NoCloningFiniteDim.lean",
       "rc": 0,
@@ -189,7 +93,7 @@
       "lean_path": "spec_v4\\RiemannAdversarialEvidence.lean",
       "rc": 0,
       "status": "PASS",
-      "stdout": "\"RiemannAdversarialEvidence compiled with zero placeholders.\"\n",
+      "stdout": "\"RiemannAdversarialEvidence compiled: rational interval records only.\"\n",
       "stderr": ""
     },
     {
@@ -197,7 +101,7 @@
       "lean_path": "spec_v4\\RiemannCriticalEvidence.lean",
       "rc": 0,
       "status": "PASS",
-      "stdout": "'Math30.Riemann.CriticalEvidence.riemann_critical_evidence_sealed' does not depend on any axioms\n",
+      "stdout": "'Math30.Riemann.CriticalEvidence.rational_interval_ordered' does not depend on any axioms\n",
       "stderr": ""
     },
     {
@@ -217,24 +121,56 @@
       "stderr": ""
     },
     {
-      "path": "lean\\spec_v4\\UniversalQuantumCoherencePhaseLock.lean",
-      "lean_path": "spec_v4\\UniversalQuantumCoherencePhaseLock.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.SpecV4.universal_quantum_coherence_phase_lock' depends on axioms: [propext, Quot.sound]\n",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\UniversalTopologicalInvariantSingularityResolution.lean",
-      "lean_path": "spec_v4\\UniversalTopologicalInvariantSingularityResolution.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "'Math30.SpecV4.universal_topological_singularity_resolution' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
-      "stderr": ""
-    },
-    {
       "path": "lean\\spec_v4\\adversarial_tests\\CoreGateAdversarialStressTest.lean",
       "lean_path": "spec_v4\\adversarial_tests\\CoreGateAdversarialStressTest.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\bridges\\AsymptoticCircuitGaugeBridge.lean",
+      "lean_path": "spec_v4\\bridges\\AsymptoticCircuitGaugeBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\bridges\\ContinuumCompactnessBridge.lean",
+      "lean_path": "spec_v4\\bridges\\ContinuumCompactnessBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Bridges.grid_sequential_compactness' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Bridges.dyadic_diagonal_extraction' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\bridges\\GuinandWeilSpectralBridge.lean",
+      "lean_path": "spec_v4\\bridges\\GuinandWeilSpectralBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\bridges\\ScaleInvariantEnergyBridge.lean",
+      "lean_path": "spec_v4\\bridges\\ScaleInvariantEnergyBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Bridges.energy_nonincreasing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Bridges.flat_step_zero_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Bridges.no_finite_time_blowup' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Bridges.lattice_family_energy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\bridges\\SkewSymmetricAdvectionBridge.lean",
+      "lean_path": "spec_v4\\bridges\\SkewSymmetricAdvectionBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "'Math30.Bridges.advection_energy_neutrality' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Bridges.coupled_lattice_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Bridges.truncation_error_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\bridges\\WeakOperatorConsistencyBridge.lean",
+      "lean_path": "spec_v4\\bridges\\WeakOperatorConsistencyBridge.lean",
       "rc": 0,
       "status": "PASS",
       "stdout": "",
@@ -265,11 +201,35 @@
       "stderr": ""
     },
     {
+      "path": "lean\\spec_v4\\certificates\\GoldbachBoundedVerification.lean",
+      "lean_path": "spec_v4\\certificates\\GoldbachBoundedVerification.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"GoldbachBoundedVerification certificate compiled with zero placeholders.\"\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\LegendreBoundedVerification.lean",
+      "lean_path": "spec_v4\\certificates\\LegendreBoundedVerification.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"LegendreBoundedVerification certificate compiled with zero placeholders.\"\n",
+      "stderr": ""
+    },
+    {
       "path": "lean\\spec_v4\\certificates\\RiemannZetaInvariantCertificate.lean",
       "lean_path": "spec_v4\\certificates\\RiemannZetaInvariantCertificate.lean",
       "rc": 0,
       "status": "PASS",
       "stdout": "'Math30.Core.Certificate.universal_dibd_invariant_nat' depends on axioms: [propext]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\SophieGermainFermatTheorem.lean",
+      "lean_path": "spec_v4\\certificates\\SophieGermainFermatTheorem.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
       "stderr": ""
     },
     {

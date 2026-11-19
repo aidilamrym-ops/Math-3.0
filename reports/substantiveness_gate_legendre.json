@@ -1,0 +1,63 @@
+{
+  "generated": "2026-11-19T03:48:53Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\LegendreBoundedVerification.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 3,
+  "predicates": 1,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 2
+  },
+  "verdict": "PASS",
+  "findings": [
+    {
+      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
+      "line": 64,
+      "declaration": "legendre_interval_gap_grows",
+      "severity": "LOW",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "detail": "hypothesis `hn : 1 ≤ n` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
+      "line": 22,
+      "declaration": "HasPrimeBetweenSquares",
+      "severity": "LOW",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `HasPrimeBetweenSquares` is never applied to ground arguments or existentially witnessed"
+    }
+  ],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
+      "declaration": "legendre_bounded_up_to_30",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
+      "declaration": "legendre_interval_gap_grows",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    }
+  ],
+  "mutation_summary": {
+    "total": 2,
+    "killed": 2,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}

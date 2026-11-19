@@ -1,110 +1,52 @@
 {
-  "generated": "2026-11-18T20:23:41Z",
+  "generated": "2026-11-19T01:20:00Z",
   "surfaces": [
-    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\SophieGermainFermatTheorem.lean"
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\GoldbachBoundedVerification.lean"
   ],
   "lean_files": 1,
-  "declarations": 6,
-  "predicates": 2,
+  "declarations": 3,
+  "predicates": 1,
   "z3_available": true,
   "waivers_applied": [],
   "counts": {
-    "HIGH": 2,
-    "MEDIUM": 4,
-    "LOW": 3
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 1
   },
-  "verdict": "FAIL",
+  "verdict": "PASS",
   "findings": [
     {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "line": 50,
-      "declaration": "dh_safe_prime_order_property",
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "line": 7,
+      "declaration": "IsGoldbachDecomposable",
       "severity": "LOW",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "detail": "hypothesis `_hq : IsSafePrime q` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "line": 50,
-      "declaration": "dh_safe_prime_order_property",
-      "severity": "LOW",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "detail": "hypothesis `_hp : IsSophieGermainPrime p` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "line": 50,
-      "declaration": "dh_safe_prime_order_property",
-      "severity": "LOW",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "detail": "hypothesis `heq : q = 2 * p + 1` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "line": 56,
-      "declaration": "sophie_germain_auxiliary_constraint",
-      "severity": "HIGH",
-      "code": "TRUE_CONCLUSION",
-      "detail": "theorem states `True`"
-    },
-    {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "line": 56,
-      "declaration": "sophie_germain_auxiliary_constraint",
-      "severity": "MEDIUM",
-      "code": "DECORATIVE_HYPOTHESIS",
-      "detail": "hypothesis `_hp_prime : Nat.Prime p` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "line": 56,
-      "declaration": "sophie_germain_auxiliary_constraint",
-      "severity": "MEDIUM",
-      "code": "DECORATIVE_HYPOTHESIS",
-      "detail": "hypothesis `_hq_prime : Nat.Prime q` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "line": 56,
-      "declaration": "sophie_germain_auxiliary_constraint",
-      "severity": "MEDIUM",
-      "code": "DECORATIVE_HYPOTHESIS",
-      "detail": "hypothesis `_heq : q = 2 * p + 1` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "line": 56,
-      "declaration": "sophie_germain_auxiliary_constraint",
-      "severity": "MEDIUM",
-      "code": "DECORATIVE_HYPOTHESIS",
-      "detail": "hypothesis `_ha : a ≠ 0` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "line": 50,
-      "declaration": "dh_safe_prime_order_property",
-      "severity": "HIGH",
-      "code": "PREMISE_MUTATION_SURVIVED",
-      "detail": "weakening `_hq` to True still compiles"
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `IsGoldbachDecomposable` is never applied to ground arguments or existentially witnessed"
     }
   ],
   "mutations": [
     {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "declaration": "dh_safe_prime_order_property",
-      "verdict": "SURVIVED",
-      "hypothesis": "_hq"
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "declaration": "goldbach_bounded_up_to_100",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    },
+    {
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "declaration": "goldbach_even_gt_six_odd_primes",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
     }
   ],
   "mutation_summary": {
-    "total": 1,
-    "killed": 0,
-    "survived": 1,
-    "survival_rate": 1.0
+    "total": 2,
+    "killed": 2,
+    "survived": 0,
+    "survival_rate": 0.0
   },
   "scope": [
     {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
       "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
