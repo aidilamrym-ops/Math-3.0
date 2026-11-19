@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-19T11:24:56.259301+00:00",
+  "generated": "2026-11-19T13:22:08.848298+00:00",
   "readme": "README.MD",
   "workers": 1,
-  "cited_unique_files": 39,
+  "cited_unique_files": 40,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 39
+    "PASS": 40
   },
   "results": [
     {
@@ -246,6 +246,14 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "\"LehmerTotientBoundedVerification certificate compiled with zero placeholders.\"\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\NewConjectureBatchI.lean",
+      "lean_path": "spec_v4\\certificates\\NewConjectureBatchI.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"NewConjectureBatchI certificate compiled with zero placeholders.\"\n",
       "stderr": ""
     },
     {

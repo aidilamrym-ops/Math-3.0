@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-19T11:14:01.586701+00:00",
+  "generated": "2026-11-19T13:11:14.188556+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "ae160cfda4e73fa75d2c34d20df3fc8a541acb2eb1a270f40a95365bdf1b2f60",
+  "readme_semantic_sha256": "833a0e88648223fa08c75888112315d04b45c91832e7c9ebdb272cb5c3d59440",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 92,
-  "resolved": 92,
+  "cited_identifiers": 93,
+  "resolved": 93,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -225,6 +225,9 @@
     ],
     "no_lehmer_composite_up_to_200": [
       "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
+    ],
+    "oppermann_bounded_up_to_100": [
+      "lean/spec_v4/certificates/NewConjectureBatchI.lean"
     ],
     "path_induction": [
       "lean/spec_v4/HigherInductivePushout.lean",

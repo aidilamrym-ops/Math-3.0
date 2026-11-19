@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-19T11:14:01.911928+00:00
+- Generated: 2026-11-19T13:11:14.484307+00:00
 - README: `README.MD`
-- Total backticked citations: **349**
-- Lean claims: **92** (resolved: 92, unresolved: 0)
-- Citation kinds: `{'prose-term': 140, 'file-reference': 95, 'tooling': 19, 'lean-claim': 92, 'negative-reference': 3}`
+- Total backticked citations: **353**
+- Lean claims: **93** (resolved: 93, unresolved: 0)
+- Citation kinds: `{'prose-term': 140, 'file-reference': 98, 'tooling': 19, 'lean-claim': 93, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -102,6 +102,7 @@
 | `lehmer_composite_odd_and_squarefree` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `numerical evidence` |
 | `gilbreath_first_50_primes` | resolved | `lean/spec_v4/certificates/RangeExpansionPack.lean` | `local` | `bounded model` |
 | `twin_prime_witnesses_below_1000` | resolved | `lean/spec_v4/certificates/RangeExpansionPack.lean` | `local` | `bounded model` |
+| `oppermann_bounded_up_to_100` | resolved | `lean/spec_v4/certificates/NewConjectureBatchI.lean` | `local` | `bounded model` |
 
 ## Non-declaration citations
 
@@ -130,6 +131,7 @@
 - `make gate` — prose-term
 - `manifest.json` — file-reference
 - `repokeeper.py --verify` — prose-term
+- `tools/seal_pipeline.py` — file-reference
 - `.git` — prose-term
 - `.lake` — prose-term
 - `staging/` — file-reference
@@ -288,11 +290,12 @@
 - `is_complete: true` — prose-term
 - `verdict: PASS` — prose-term
 - `pass_with_warnings: 0` — prose-term
+- `NewConjectureBatchI.lean` — file-reference
 - `python tools/readme_theorem_audit.py` — file-reference
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
-- `reports/substantiveness_gate_full521.json` — file-reference
+- `reports/substantiveness_gate_full522.json` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -360,5 +363,6 @@
 - `lean/spec_v4/LatticeInstantonBound.lean` — file-reference
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
+- `lean/spec_v4/certificates/NewConjectureBatchI.lean` — file-reference
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `05dc3635436d86b133ee867c9274c1f4b0c9e6e22872a9dfdde3f9f464f3f0f2` — prose-term
+- `d80c47ef29c4283416a694dd8ec912ac8df64aff77f7897332d7da221ca7569b` — prose-term
