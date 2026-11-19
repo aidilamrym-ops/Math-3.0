@@ -582,6 +582,21 @@
     },
     {
       "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "declaration": "no_lehmer_composite_up_to_1000",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hn",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n : ℕ with 2 ≤ n ∧ n ≤ 1000; ¬ IsLehmerCompositeWitness n",
+      "note": "All 999 values 2 ≤ n ≤ 1000 are classified by case: primes by hypothesis, even values by the oddness obstruction, odd multiples of a prime square by the squarefree obstruction, and remaining odd squarefree composites via Euler's product formula for pairwise distinct prime lists. The kernel never evaluates Nat.totient numeral by numeral. The full Lehmer Totient Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
       "declaration": "lehmer_composite_must_be_squarefree",
       "class": "FORMAL_GENERAL_THEOREM",
       "level": "P4",
@@ -728,6 +743,8 @@
     "RangeExpansionPack I mutation receipt: reports/substantiveness_gate_pack1.json — 2/2 declarations killed, 0 survived, hypotheses hps and hp, LOW=0.",
     "RangeExpansionPack I scope: gilbreath_first_50_primes extends the finite Gilbreath check to the first 50 primes (49 rows); twin_prime_witnesses_below_1000 seals all 35 twin-prime pairs below 1000. The full Gilbreath and Twin Prime Conjectures remain OPEN.",
     "RangeExpansionPack II mutation receipts: reports/substantiveness_gate_goldbach500.json (3/3 killed, LOW=1 WITNESS_MISSING pre-existing), reports/substantiveness_gate_legendre100.json (3/3 killed, LOW=2 pre-existing), reports/substantiveness_gate_erdos200.json (4/4 killed, LOW=0).",
-    "RangeExpansionPack II scope: goldbach_bounded_up_to_500 covers all 249 even values 4 ≤ n ≤ 500 with explicit prime pairs; legendre_bounded_up_to_100 covers 1 ≤ n ≤ 100 with explicit prime witnesses (largest 10007); erdos_straus_bounded_up_to_200 covers 2 ≤ n ≤ 200 with division-free witnesses. The full Goldbach, Legendre, and Erdős–Straus Conjectures remain OPEN."
+    "RangeExpansionPack II scope: goldbach_bounded_up_to_500 covers all 249 even values 4 ≤ n ≤ 500 with explicit prime pairs; legendre_bounded_up_to_100 covers 1 ≤ n ≤ 100 with explicit prime witnesses (largest 10007); erdos_straus_bounded_up_to_200 covers 2 ≤ n ≤ 200 with division-free witnesses. The full Goldbach, Legendre, and Erdős–Straus Conjectures remain OPEN.",
+    "Lehmer 1000 mutation receipt: reports/substantiveness_gate_lehmer1000.json — 6/6 declarations killed, 0 survived, LOW=0, one primary hypothesis per declaration (hn or hdiv).",
+    "Lehmer 1000 scope: no_lehmer_composite_up_to_1000 is a FORMAL_FINITE_THEOREM for 2 ≤ n ≤ 1000. Its per-case proof uses the oddness and squarefree obstructions plus totient_prod_primes (Euler's product formula for pairwise distinct prime lists), avoiding kernel evaluation of Nat.totient. The full Lehmer Totient Conjecture remains OPEN."
   ]
 }

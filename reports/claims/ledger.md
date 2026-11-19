@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-19T09:49:27.783164+00:00
+- Generated: 2026-11-19T11:14:01.911928+00:00
 - README: `README.MD`
-- Total backticked citations: **348**
-- Lean claims: **91** (resolved: 91, unresolved: 0)
-- Citation kinds: `{'prose-term': 140, 'file-reference': 95, 'tooling': 19, 'lean-claim': 91, 'negative-reference': 3}`
+- Total backticked citations: **349**
+- Lean claims: **92** (resolved: 92, unresolved: 0)
+- Citation kinds: `{'prose-term': 140, 'file-reference': 95, 'tooling': 19, 'lean-claim': 92, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -95,10 +95,11 @@
 | `erdos_straus_bounded_up_to_200` | resolved | `lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean` | `local` | `bounded model` |
 | `gilbreath_parity_preservation_general` | resolved | `lean/spec_v4/certificates/GilbreathBoundedVerification.lean` | `local` | `bounded model` |
 | `gilbreath_first_20_primes` | resolved | `lean/spec_v4/certificates/GilbreathBoundedVerification.lean` | `local` | `bounded model` |
-| `no_lehmer_composite_up_to_200` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
-| `lehmer_composite_must_be_odd` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
-| `lehmer_composite_must_be_squarefree` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
-| `lehmer_composite_odd_and_squarefree` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
+| `no_lehmer_composite_up_to_200` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `numerical evidence` |
+| `no_lehmer_composite_up_to_1000` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `numerical evidence` |
+| `lehmer_composite_must_be_odd` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `numerical evidence` |
+| `lehmer_composite_must_be_squarefree` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `numerical evidence` |
+| `lehmer_composite_odd_and_squarefree` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `numerical evidence` |
 | `gilbreath_first_50_primes` | resolved | `lean/spec_v4/certificates/RangeExpansionPack.lean` | `local` | `bounded model` |
 | `twin_prime_witnesses_below_1000` | resolved | `lean/spec_v4/certificates/RangeExpansionPack.lean` | `local` | `bounded model` |
 
@@ -291,7 +292,7 @@
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
-- `reports/substantiveness_gate_full520.json` — file-reference
+- `reports/substantiveness_gate_full521.json` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -360,4 +361,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `f0cfc9e09c11777f4dafe134c10de7038d63f688fa4c456e83fd56a47dffef39` — prose-term
+- `05dc3635436d86b133ee867c9274c1f4b0c9e6e22872a9dfdde3f9f464f3f0f2` — prose-term

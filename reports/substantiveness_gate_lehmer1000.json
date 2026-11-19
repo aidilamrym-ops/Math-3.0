@@ -1,0 +1,70 @@
+{
+  "generated": "2026-11-19T11:12:55Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\LehmerTotientBoundedVerification.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 8,
+  "predicates": 1,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "verdict": "PASS",
+  "findings": [],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "declaration": "no_lehmer_composite_up_to_200",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "declaration": "lehmer_composite_must_be_squarefree",
+      "verdict": "KILLED",
+      "hypothesis": "hdiv"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "declaration": "lehmer_composite_must_be_odd",
+      "verdict": "KILLED",
+      "hypothesis": "hdiv"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "declaration": "lehmer_composite_odd_and_squarefree",
+      "verdict": "KILLED",
+      "hypothesis": "hdiv"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "declaration": "totient_prod_primes",
+      "verdict": "KILLED",
+      "hypothesis": "hprime"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "declaration": "no_lehmer_composite_up_to_1000",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    }
+  ],
+  "mutation_summary": {
+    "total": 6,
+    "killed": 6,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}

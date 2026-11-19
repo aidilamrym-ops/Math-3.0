@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-19T09:49:27.579693+00:00",
+  "generated": "2026-11-19T11:14:01.586701+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "f5c62cdfd0ebe08c2566dc4f481bca60f131c11784368faad8512014fbb16866",
+  "readme_semantic_sha256": "ae160cfda4e73fa75d2c34d20df3fc8a541acb2eb1a270f40a95365bdf1b2f60",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 91,
-  "resolved": 91,
+  "cited_identifiers": 92,
+  "resolved": 92,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -219,6 +219,9 @@
     ],
     "no_finite_time_blowup": [
       "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
+    ],
+    "no_lehmer_composite_up_to_1000": [
+      "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
     ],
     "no_lehmer_composite_up_to_200": [
       "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
