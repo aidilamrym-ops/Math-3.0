@@ -36,9 +36,9 @@ An entry that is only a bounded model is never presented as a proof of the full 
 | **6-gate verification** | Each result passes through interval bounds, morphology audits, inertia classification, Newton contraction, rational extraction, and formal decision. |
 | **Beal Lattice Solver** | Dynamic Sylvester matrix search for $A^x + B^y = C^z$ counterexamples up to $10^{18}$ scale. |
 | **Quantum Topology Solver** | Colored Jones polynomial asymptotic log-growth boundary & hyperbolic Dehn filling validation via DIBD invariant. |
-| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |
+| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |
 | **Sylvester inertia certification** | Interval pivot signs classified; zero-straddle triggers precision escalation circuit breaker. |
-| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
+| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |
 
 ---
 
@@ -331,10 +331,10 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 **Scope:** Bounded discrete lattice instances scaled to universal asymptotic laws. **Claims:** Asymptotic circuit/gauge scaling bounds. **Does NOT claim:** a continuum Yang–Mills mass gap or P vs NP resolution.
 
 ---
-**Lean surface:** 517 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`–`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled and mutation-verified.
+**Lean surface:** 518 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`-`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled and mutation-verified.
 
-**Manifest seal (sha-256):** 8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069
-**1,690 rows** in manifest.
+**Manifest seal (sha-256):** c0a2f08a35cf3d1bd9b93fb7601648bd4b4946a4b2412b20cb868916838c6312
+**1,695 rows** in manifest.
 
 ---
 
@@ -481,10 +481,10 @@ Four active frontier modules extend the formalization to finite homotopy models 
 - **Master Laboratory Report:** `reports/math30_laboratory_report.json` (SHA-256 locked, zero placeholders).
 - **Individual Certificates:** 27 certified Lean 4 certificates (21 core entries + 6 regression-armor entries) bound via cryptographic hash chains to Lean 4 kernel theorems.
 - **Certificate Index:** `reports/certificates/certificate_index.json` (legacy Phase 9 JSON-source registry: 25 entries, separate from the Lean inventory below).
-- **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every live Lean file cited in this README. Archived VACUOUS certificates are cited as plain-text paths under `reports/flawed_artifacts/` and are intentionally excluded from the compile audit. Latest run: **37/37 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.
-- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **517** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 517-file surface is covered as **514 canonical + 3 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.
-- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **80/80 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
-- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **517 files, 2,117 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full517.json`); BRIDGE-01 through BRIDGE-06 and Batch 10–16 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed); the audited compile surface totals **517 files / 2,117 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.
+- **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every live Lean file cited in this README. Archived VACUOUS certificates are cited as plain-text paths under `reports/flawed_artifacts/` and are intentionally excluded from the compile audit. Latest run: **38/38 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.
+- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **518** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 518-file surface is covered as **514 canonical + 4 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.
+- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **82/82 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.
+- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.
 
 ### Lean 4 Certificate Inventory (sorry-free)
 
@@ -526,6 +526,7 @@ Four active frontier modules extend the formalization to finite homotopy models 
 | `AbcConjectureBoundedVerification.lean` | Bounded Reyssat abc witness (2 + 3^10·109 = 23^5, rad = 15042, c^10 > rad^16) (FORMAL_FINITE_THEOREM); coprime radical multiplicativity (FORMAL_GENERAL_THEOREM); full conjecture OPEN | ✅ Verified |
 | `ErdosStrausBoundedVerification.lean` | Even and n ≡ 3 (mod 4) parametric decompositions (FORMAL_GENERAL_THEOREMs, 75% of integers); bounded verification 2 ≤ n ≤ 50 (FORMAL_FINITE_THEOREM); full conjecture OPEN | ✅ Verified |
 | `GilbreathBoundedVerification.lean` | Bounded Gilbreath head verification on the first 20 primes (19 iterated rows, FORMAL_FINITE_THEOREM); parity-lock invariant (FORMAL_GENERAL_THEOREM); full conjecture OPEN | ✅ Verified |
+| `LehmerTotientBoundedVerification.lean` | Bounded non-existence on 2 ≤ n ≤ 100 (FORMAL_FINITE_THEOREM); universal squarefree obstruction (FORMAL_GENERAL_THEOREM); full conjecture OPEN | ✅ Verified |
 
 **Legendre scope boundary:** `legendre_bounded_up_to_30` is a FORMAL_FINITE_THEOREM (`1 ≤ n ≤ 30`, explicit witnesses up to `907 < 31² = 961`). `legendre_interval_gap_grows` is a structural FORMAL_GENERAL_THEOREM establishing only `(n+1)² − n² = 2n+1 ≥ 3`. The full Legendre's Conjecture, `∀ n ≥ 1, HasPrimeBetweenSquares n`, remains **OPEN**.
 
@@ -537,16 +538,18 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 **Gilbreath scope boundary:** `gilbreath_parity_preservation_general` is a structural FORMAL_GENERAL_THEOREM: if `xs = 2 :: x :: rest` with odd x and every element of `rest` odd, then one `gilbreathStep` has an odd leading entry and every trailing entry even. `gilbreath_first_20_primes` is a FORMAL_FINITE_THEOREM verifying that all 19 iterated absolute-difference rows of the first 20 primes have leading entry 1. This one-step parity lock does not force the leading entry to remain 1. The full Gilbreath Conjecture (`∀ n ≥ 2, SatisfiesGilbreathHead (first_n_primes n)`) remains **OPEN**; no infinitude or all-rows claim is made.
 
+**Lehmer scope boundary:** `no_lehmer_composite_up_to_100` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 100 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. The squarefree obstruction is necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.
+
 ---
 
 ## 11. Master Cryptographic Seal
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069
+c0a2f08a35cf3d1bd9b93fb7601648bd4b4946a4b2412b20cb868916838c6312
 ```
 
-**Manifest Rows:** 1,690 files pinned  
+**Manifest Rows:** 1,695 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Wed Nov 18 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -593,7 +596,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,690-row SHA-256 ledger
+├── manifest.json                  # 1,695-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -708,7 +711,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,690 rows, SHA-256 locked: `8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069`  
+> **Manifest:** 1,695 rows, SHA-256 locked: `c0a2f08a35cf3d1bd9b93fb7601648bd4b4946a4b2412b20cb868916838c6312`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 ---
@@ -716,9 +719,9 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 ## Auto-Facts Summary
 
 <!-- AUTO-FACTS:START -->
-- **Manifest Pinned Files:** 1,690
-- **Lean Surface:** 517 files — 514 canonical full-surface PASS (receipt 2026-11-19 13:42:33) + 3 targeted-compiled (`AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, exit 0, 0 warnings)
-- **Tracked Claims in Ledger:** 80 Lean claims
-- **Resolved README Theorem Names:** 80/80 PASS
+- **Manifest Pinned Files:** 1,695
+- **Lean Surface:** 518 files — 514 canonical full-surface PASS (receipt 2026-11-19 13:42:33) + 4 targeted-compiled (`AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, `LehmerTotientBoundedVerification.lean`, exit 0, 0 warnings)
+- **Tracked Claims in Ledger:** 82 Lean claims
+- **Resolved README Theorem Names:** 82/82 PASS
 - **Evidence Status:** PASS
 <!-- AUTO-FACTS:END -->

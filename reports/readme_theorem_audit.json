@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-19T07:40:55.239897+00:00",
+  "generated": "2026-11-19T07:49:43.862849+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "0dc95b120c329de2fd9ba42406c614e5819b583cd6676d246bddbed193d9e5cb",
+  "readme_semantic_sha256": "aa1fea6927a6e587ea451b4529cbcdfe3a1e4eea245ed5e3c2e9c756cc750934",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 80,
-  "resolved": 80,
+  "cited_identifiers": 82,
+  "resolved": 82,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -184,6 +184,9 @@
     "legendre_interval_gap_grows": [
       "lean/spec_v4/certificates/LegendreBoundedVerification.lean"
     ],
+    "lehmer_composite_must_be_squarefree": [
+      "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
+    ],
     "no_cloning_finite": [
       "lean/spec_v4/NoCloningFiniteDim.lean"
     ],
@@ -192,6 +195,9 @@
     ],
     "no_finite_time_blowup": [
       "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
+    ],
+    "no_lehmer_composite_up_to_100": [
+      "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
     ],
     "path_induction": [
       "lean/spec_v4/HigherInductivePushout.lean",

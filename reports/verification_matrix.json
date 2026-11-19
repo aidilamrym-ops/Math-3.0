@@ -564,6 +564,36 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ xs : List ℕ with xs = 2 :: x :: rest, x odd, and every element of xs.drop 2 odd; one gilbreathStep yields an odd head and an all-even tail",
       "note": "Structural parity-lock invariant only. It does not force the leading entry to remain 1 at every iteration; the full Gilbreath Conjecture is not claimed."
+    },
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "declaration": "no_lehmer_composite_up_to_100",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hn",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n : ℕ with 2 ≤ n ∧ n ≤ 100; ¬ IsLehmerCompositeWitness n",
+      "note": "All 99 values 2 ≤ n ≤ 100 are checked by interval_cases and decide. The full Lehmer Totient Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "declaration": "lehmer_composite_must_be_squarefree",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hdiv",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n p : ℕ with Nat.totient n ∣ (n - 1), 1 < n, and p prime with p ^ 2 ∣ n; False",
+      "note": "Structural squarefree obstruction only: a Lehmer counterexample must be squarefree. It does not prove the full Totient Conjecture."
     }
   ],
   "notes": [
@@ -589,6 +619,8 @@
     "Erdős–Straus mutation receipt: reports/substantiveness_gate_erdosstraus.json — 3/3 declarations killed, 0 survived, hypotheses heven, hmod, hn.",
     "Erdős–Straus scope: erdos_straus_even_general covers n ≡ 0, 2 (mod 4) and erdos_straus_mod4_eq3_general covers n ≡ 3 (mod 4), together 75% of integers; erdos_straus_bounded_up_to_50 is a FORMAL_FINITE_THEOREM for 2 ≤ n ≤ 50. The remaining class n ≡ 1 (mod 4) and the full Erdős–Straus Conjecture remain OPEN.",
     "Gilbreath mutation receipt: reports/substantiveness_gate_gilbreath.json — 2/2 declarations killed, 0 survived, hypotheses hps and hhead.",
-    "Gilbreath scope: gilbreath_first_20_primes is a FORMAL_FINITE_THEOREM for the first 20 primes (19 iterated rows); gilbreath_parity_preservation_general proves only the one-step parity lock (odd head, even tail). The full Gilbreath Conjecture remains OPEN."
+    "Gilbreath scope: gilbreath_first_20_primes is a FORMAL_FINITE_THEOREM for the first 20 primes (19 iterated rows); gilbreath_parity_preservation_general proves only the one-step parity lock (odd head, even tail). The full Gilbreath Conjecture remains OPEN.",
+    "Lehmer mutation receipt: reports/substantiveness_gate_lehmer.json — 2/2 declarations killed, 0 survived, hypotheses hn and hdiv. The mutation parser now recognizes ∣/∤ divisibility propositions.",
+    "Lehmer scope: no_lehmer_composite_up_to_100 is a FORMAL_FINITE_THEOREM for 2 ≤ n ≤ 100; lehmer_composite_must_be_squarefree proves only the universal squarefree obstruction. The full Lehmer Totient Conjecture remains OPEN."
   ]
 }

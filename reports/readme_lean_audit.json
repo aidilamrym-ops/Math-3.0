@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-19T07:40:41.104209+00:00",
+  "generated": "2026-11-19T07:58:27.092883+00:00",
   "readme": "README.MD",
   "workers": 1,
-  "cited_unique_files": 37,
+  "cited_unique_files": 38,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 37
+    "PASS": 38
   },
   "results": [
     {
@@ -238,6 +238,14 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "\"LegendreBoundedVerification certificate compiled with zero placeholders.\"\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\LehmerTotientBoundedVerification.lean",
+      "lean_path": "spec_v4\\certificates\\LehmerTotientBoundedVerification.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"LehmerTotientBoundedVerification certificate compiled with zero placeholders.\"\n",
       "stderr": ""
     },
     {

@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-19T07:40:55.448365+00:00",
+  "generated": "2026-11-19T07:58:49.108257+00:00",
   "readme": "README.MD",
-  "readme_semantic_sha256": "0dc95b120c329de2fd9ba42406c614e5819b583cd6676d246bddbed193d9e5cb",
-  "entries": 333,
-  "claims": 80,
-  "resolved_claims": 80,
+  "readme_semantic_sha256": "c9247637e638dbf21b338f84191b6444d8d74aa09767348a5f147e980c555bf8",
+  "entries": 338,
+  "claims": 82,
+  "resolved_claims": 82,
   "unresolved_claims": [],
   "ledger": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "id": "lean/spec_v4",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "lean/spec_v4",
       "kind": "file-reference",
@@ -42,7 +42,7 @@
     },
     {
       "id": "Math30Kernel",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "Math30Kernel",
       "kind": "prose-term",
@@ -53,7 +53,7 @@
     },
     {
       "id": "Math30Interfaces",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "Math30Interfaces",
       "kind": "prose-term",
@@ -64,7 +64,7 @@
     },
     {
       "id": "bridges/",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "bridges/",
       "kind": "file-reference",
@@ -75,7 +75,7 @@
     },
     {
       "id": "sorry",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "sorry",
       "kind": "tooling",
@@ -86,7 +86,7 @@
     },
     {
       "id": "sorryAx",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "sorryAx",
       "kind": "tooling",
@@ -97,7 +97,7 @@
     },
     {
       "id": "admit",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "admit",
       "kind": "tooling",
@@ -108,7 +108,7 @@
     },
     {
       "id": "axiom",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "axiom",
       "kind": "tooling",
@@ -119,7 +119,7 @@
     },
     {
       "id": "constant",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "constant",
       "kind": "tooling",
@@ -130,7 +130,7 @@
     },
     {
       "id": "opaque",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "opaque",
       "kind": "tooling",
@@ -141,7 +141,7 @@
     },
     {
       "id": "partial def",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "partial def",
       "kind": "prose-term",
@@ -152,7 +152,7 @@
     },
     {
       "id": "native_decide",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "native_decide",
       "kind": "tooling",
@@ -163,7 +163,7 @@
     },
     {
       "id": "implemented_by",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "implemented_by",
       "kind": "tooling",
@@ -174,7 +174,7 @@
     },
     {
       "id": "extern",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "extern",
       "kind": "tooling",
@@ -185,7 +185,7 @@
     },
     {
       "id": "tools/full_surface_lean_audit.py",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "tools/full_surface_lean_audit.py",
       "kind": "file-reference",
@@ -196,7 +196,7 @@
     },
     {
       "id": "AbcConjectureBoundedVerification.lean",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "AbcConjectureBoundedVerification.lean",
       "kind": "file-reference",
@@ -207,7 +207,7 @@
     },
     {
       "id": "ErdosStrausBoundedVerification.lean",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "ErdosStrausBoundedVerification.lean",
       "kind": "file-reference",
@@ -218,7 +218,7 @@
     },
     {
       "id": "GilbreathBoundedVerification.lean",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "GilbreathBoundedVerification.lean",
       "kind": "file-reference",
@@ -228,8 +228,19 @@
       "class": "file-reference"
     },
     {
+      "id": "LehmerTotientBoundedVerification.lean",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "artifact": [],
+      "theorem_name": "LehmerTotientBoundedVerification.lean",
+      "kind": "file-reference",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "file-reference"
+    },
+    {
       "id": "make gate",
-      "prose": "| **Anti-Circularity Gate** | Executable check over the 517-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
+      "prose": "| **Anti-Circularity Gate** | Executable check over the 518-file Lean surface (`lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, `bridges/`): the installed gate and the repo-local strict wrapper must both report zero `sorry`, `sorryAx`, `admit`, `axiom`, `constant`, `opaque`, `partial def`, `native_decide`, `implemented_by`, and `extern` trust tokens. Token scanning does not type-check, so `tools/full_surface_lean_audit.py` performs a kernel compile pass over the full surface (514-file canonical receipt + `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled); BRIDGE-01 through BRIDGE-06 (6 files, 18 declarations) are additionally mutation-verified (18/18 killed). Run with `make gate`; enforced by versioned git hooks. |",
       "artifact": [],
       "theorem_name": "make gate",
       "kind": "prose-term",
@@ -240,7 +251,7 @@
     },
     {
       "id": "manifest.json",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,685 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "manifest.json",
       "kind": "file-reference",
@@ -251,7 +262,7 @@
     },
     {
       "id": "repokeeper.py --verify",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,685 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "repokeeper.py --verify",
       "kind": "prose-term",
@@ -262,7 +273,7 @@
     },
     {
       "id": ".git",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,685 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".git",
       "kind": "prose-term",
@@ -273,7 +284,7 @@
     },
     {
       "id": ".lake",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,685 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".lake",
       "kind": "prose-term",
@@ -284,7 +295,7 @@
     },
     {
       "id": "staging/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,685 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "staging/",
       "kind": "file-reference",
@@ -295,7 +306,7 @@
     },
     {
       "id": "mcp/out/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,685 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "mcp/out/",
       "kind": "file-reference",
@@ -306,7 +317,7 @@
     },
     {
       "id": "__pycache__",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,685 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "__pycache__",
       "kind": "tooling",
@@ -317,7 +328,7 @@
     },
     {
       "id": "*.pyc",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,685 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "*.pyc",
       "kind": "prose-term",
@@ -328,7 +339,7 @@
     },
     {
       "id": "README.MD",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,685 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "README.MD",
       "kind": "file-reference",
@@ -1916,7 +1927,7 @@
     },
     {
       "id": "PASS",
-      "prose": "**Lean surface:** 517 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`–`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled and mutation-verified.",
+      "prose": "**Lean surface:** 518 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`-`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled and mutation-verified.",
       "artifact": [],
       "theorem_name": "PASS",
       "kind": "prose-term",
@@ -1927,7 +1938,7 @@
     },
     {
       "id": "BRIDGE-01",
-      "prose": "**Lean surface:** 517 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`–`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled and mutation-verified.",
+      "prose": "**Lean surface:** 518 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`-`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled and mutation-verified.",
       "artifact": [],
       "theorem_name": "BRIDGE-01",
       "kind": "prose-term",
@@ -1938,7 +1949,7 @@
     },
     {
       "id": "BRIDGE-06",
-      "prose": "**Lean surface:** 517 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`–`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled and mutation-verified.",
+      "prose": "**Lean surface:** 518 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`-`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled and mutation-verified.",
       "artifact": [],
       "theorem_name": "BRIDGE-06",
       "kind": "prose-term",
@@ -1949,7 +1960,7 @@
     },
     {
       "id": "SophieGermainFermatTheorem.lean",
-      "prose": "**Lean surface:** 517 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`–`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled and mutation-verified.",
+      "prose": "**Lean surface:** 518 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`-`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled and mutation-verified.",
       "artifact": [],
       "theorem_name": "SophieGermainFermatTheorem.lean",
       "kind": "file-reference",
@@ -1960,7 +1971,7 @@
     },
     {
       "id": "GoldbachBoundedVerification.lean",
-      "prose": "**Lean surface:** 517 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`–`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled and mutation-verified.",
+      "prose": "**Lean surface:** 518 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`-`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled and mutation-verified.",
       "artifact": [],
       "theorem_name": "GoldbachBoundedVerification.lean",
       "kind": "file-reference",
@@ -1971,7 +1982,7 @@
     },
     {
       "id": "LegendreBoundedVerification.lean",
-      "prose": "**Lean surface:** 517 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`–`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled and mutation-verified.",
+      "prose": "**Lean surface:** 518 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`-`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled and mutation-verified.",
       "artifact": [],
       "theorem_name": "LegendreBoundedVerification.lean",
       "kind": "file-reference",
@@ -1982,7 +1993,7 @@
     },
     {
       "id": "TwinPrimeBoundedVerification.lean",
-      "prose": "**Lean surface:** 517 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`–`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` targeted-compiled and mutation-verified.",
+      "prose": "**Lean surface:** 518 files = 504 full-surface audited (`PASS`) + 6 bridges (`BRIDGE-01`-`BRIDGE-06`) + `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, `TwinPrimeBoundedVerification.lean`, `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` targeted-compiled and mutation-verified.",
       "artifact": [],
       "theorem_name": "TwinPrimeBoundedVerification.lean",
       "kind": "file-reference",
@@ -2814,7 +2825,7 @@
     },
     {
       "id": "python tools/readme_lean_audit.py",
-      "prose": "- **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every live Lean file cited in this README. Archived VACUOUS certificates are cited as plain-text paths under `reports/flawed_artifacts/` and are intentionally excluded from the compile audit. Latest run: **37/37 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.",
+      "prose": "- **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every live Lean file cited in this README. Archived VACUOUS certificates are cited as plain-text paths under `reports/flawed_artifacts/` and are intentionally excluded from the compile audit. Latest run: **38/38 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.",
       "artifact": [],
       "theorem_name": "python tools/readme_lean_audit.py",
       "kind": "file-reference",
@@ -2825,7 +2836,7 @@
     },
     {
       "id": "reports/readme_lean_audit.json",
-      "prose": "- **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every live Lean file cited in this README. Archived VACUOUS certificates are cited as plain-text paths under `reports/flawed_artifacts/` and are intentionally excluded from the compile audit. Latest run: **37/37 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.",
+      "prose": "- **README claim audit:** `python tools/readme_lean_audit.py` resolves and type-checks every live Lean file cited in this README. Archived VACUOUS certificates are cited as plain-text paths under `reports/flawed_artifacts/` and are intentionally excluded from the compile audit. Latest run: **38/38 PASS, 0 unresolved**, single worker (sequential). The machine-readable result is `reports/readme_lean_audit.json`.",
       "artifact": [],
       "theorem_name": "reports/readme_lean_audit.json",
       "kind": "file-reference",
@@ -2836,7 +2847,7 @@
     },
     {
       "id": "python tools/full_surface_lean_audit.py",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **517** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 517-file surface is covered as **514 canonical + 3 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **518** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 518-file surface is covered as **514 canonical + 4 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
       "artifact": [],
       "theorem_name": "python tools/full_surface_lean_audit.py",
       "kind": "file-reference",
@@ -2847,7 +2858,7 @@
     },
     {
       "id": "lake env lean",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **517** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 517-file surface is covered as **514 canonical + 3 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **518** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 518-file surface is covered as **514 canonical + 4 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
       "artifact": [],
       "theorem_name": "lake env lean",
       "kind": "prose-term",
@@ -2858,7 +2869,7 @@
     },
     {
       "id": "reports/full_surface_lean_audit.json",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **517** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 517-file surface is covered as **514 canonical + 3 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **518** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 518-file surface is covered as **514 canonical + 4 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
       "artifact": [],
       "theorem_name": "reports/full_surface_lean_audit.json",
       "kind": "file-reference",
@@ -2869,7 +2880,7 @@
     },
     {
       "id": "is_complete: true",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **517** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 517-file surface is covered as **514 canonical + 3 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **518** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 518-file surface is covered as **514 canonical + 4 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
       "artifact": [],
       "theorem_name": "is_complete: true",
       "kind": "prose-term",
@@ -2880,7 +2891,7 @@
     },
     {
       "id": "verdict: PASS",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **517** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 517-file surface is covered as **514 canonical + 3 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **518** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 518-file surface is covered as **514 canonical + 4 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
       "artifact": [],
       "theorem_name": "verdict: PASS",
       "kind": "prose-term",
@@ -2891,7 +2902,7 @@
     },
     {
       "id": "pass_with_warnings: 0",
-      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **517** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 517-file surface is covered as **514 canonical + 3 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, and `GilbreathBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
+      "prose": "- **Full-surface compile audit:** `python tools/full_surface_lean_audit.py` type-checks all **518** Lean files under `lean/spec_v4`, `Math30Kernel`, `Math30Interfaces`, and `bridges/` with `lake env lean`. Latest canonical run: **514/514 PASS, 0 FAIL, 0 TIMEOUT, 0 files with linter warnings**, single worker (sequential). Result: `reports/full_surface_lean_audit.json` (`is_complete: true`, `verdict: PASS`, `pass_with_warnings: 0`). The 518-file surface is covered as **514 canonical + 4 targeted-compiled**: `AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, and `LehmerTotientBoundedVerification.lean` compile with exit 0 and 0 warnings; BRIDGE-01 through BRIDGE-06 (18 declarations), `SophieGermainFermatTheorem.lean`, `GoldbachBoundedVerification.lean`, `LegendreBoundedVerification.lean`, and `TwinPrimeBoundedVerification.lean` additionally passed exact axiom capture and mutation verification.",
       "artifact": [],
       "theorem_name": "pass_with_warnings: 0",
       "kind": "prose-term",
@@ -2902,7 +2913,7 @@
     },
     {
       "id": "python tools/readme_theorem_audit.py",
-      "prose": "- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **80/80 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.",
+      "prose": "- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **82/82 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.",
       "artifact": [],
       "theorem_name": "python tools/readme_theorem_audit.py",
       "kind": "file-reference",
@@ -2913,7 +2924,7 @@
     },
     {
       "id": "reports/readme_theorem_audit.json",
-      "prose": "- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **80/80 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.",
+      "prose": "- **Theorem-name audit:** `python tools/readme_theorem_audit.py` checks that every backticked theorem/definition identifier cited by this README resolves to a real Lean declaration. Latest run: **82/82 resolved, 0 missing**. Result: `reports/readme_theorem_audit.json`.",
       "artifact": [],
       "theorem_name": "reports/readme_theorem_audit.json",
       "kind": "file-reference",
@@ -2924,7 +2935,7 @@
     },
     {
       "id": "python tools/omega_audit/substantiveness_gate.py",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **517 files, 2,117 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full517.json`); BRIDGE-01 through BRIDGE-06 and Batch 10–16 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed); the audited compile surface totals **517 files / 2,117 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "python tools/omega_audit/substantiveness_gate.py",
       "kind": "file-reference",
@@ -2935,7 +2946,7 @@
     },
     {
       "id": "reports/AUDIT_METHODOLOGY.md",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **517 files, 2,117 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full517.json`); BRIDGE-01 through BRIDGE-06 and Batch 10–16 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed); the audited compile surface totals **517 files / 2,117 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/AUDIT_METHODOLOGY.md",
       "kind": "file-reference",
@@ -2945,10 +2956,10 @@
       "class": "file-reference"
     },
     {
-      "id": "reports/substantiveness_gate_full517.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **517 files, 2,117 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full517.json`); BRIDGE-01 through BRIDGE-06 and Batch 10–16 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed); the audited compile surface totals **517 files / 2,117 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "id": "reports/substantiveness_gate_full518.json",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
-      "theorem_name": "reports/substantiveness_gate_full517.json",
+      "theorem_name": "reports/substantiveness_gate_full518.json",
       "kind": "file-reference",
       "status": "not-a-declaration",
       "is_claim": false,
@@ -2957,7 +2968,7 @@
     },
     {
       "id": "reports/substantiveness_gate_regression.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **517 files, 2,117 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full517.json`); BRIDGE-01 through BRIDGE-06 and Batch 10–16 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed); the audited compile surface totals **517 files / 2,117 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/substantiveness_gate_regression.json",
       "kind": "file-reference",
@@ -2968,7 +2979,7 @@
     },
     {
       "id": "reports/model_scope_manifest.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **517 files, 2,117 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full517.json`); BRIDGE-01 through BRIDGE-06 and Batch 10–16 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed); the audited compile surface totals **517 files / 2,117 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/model_scope_manifest.json",
       "kind": "file-reference",
@@ -3649,6 +3660,54 @@
       "class": "prose-term"
     },
     {
+      "id": "no_lehmer_composite_up_to_100",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_100` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 100 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. The squarefree obstruction is necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "artifact": [
+        "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
+      ],
+      "theorem_name": "no_lehmer_composite_up_to_100",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "bounded model"
+    },
+    {
+      "id": "lehmer_composite_must_be_squarefree",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_100` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 100 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. The squarefree obstruction is necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "artifact": [
+        "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
+      ],
+      "theorem_name": "lehmer_composite_must_be_squarefree",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "bounded model"
+    },
+    {
+      "id": "Nat.totient n ∣ (n - 1)",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_100` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 100 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. The squarefree obstruction is necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "artifact": [],
+      "theorem_name": "Nat.totient n ∣ (n - 1)",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
+      "id": "∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_100` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 100 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. The squarefree obstruction is necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "artifact": [],
+      "theorem_name": "∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
       "id": "tools/",
       "prose": "| 15 | Consolidation into `tools/`, manifest & README sync | ✅ Sealed |",
       "artifact": [],
@@ -3825,10 +3884,10 @@
       "class": "file-reference"
     },
     {
-      "id": "5dd5c101b5fad3bc83dabd898d60c9da2b801c5cd3209949ceb23cc60eb51576",
-      "prose": "> **Manifest:** 1,685 rows, SHA-256 locked: `5dd5c101b5fad3bc83dabd898d60c9da2b801c5cd3209949ceb23cc60eb51576`",
+      "id": "8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069",
+      "prose": "> **Manifest:** 1,690 rows, SHA-256 locked: `8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069`",
       "artifact": [],
-      "theorem_name": "5dd5c101b5fad3bc83dabd898d60c9da2b801c5cd3209949ceb23cc60eb51576",
+      "theorem_name": "8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,
