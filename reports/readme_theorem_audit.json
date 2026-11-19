@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-19T06:10:08.118528+00:00",
+  "generated": "2026-11-19T06:42:21.616601+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "d2bdb094f4db4513dd1a41abf79b4bcd838cefcf5104d28a8b41c9340489e797",
+  "readme_semantic_sha256": "5430a3a3d55dc8e474bd319eb68c68a78626fb4701b43b0e3aa918664854b466",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 75,
-  "resolved": 75,
+  "cited_identifiers": 78,
+  "resolved": 78,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -94,6 +94,15 @@
     ],
     "energy_nonincreasing": [
       "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
+    ],
+    "erdos_straus_bounded_up_to_50": [
+      "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean"
+    ],
+    "erdos_straus_even_general": [
+      "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean"
+    ],
+    "erdos_straus_mod4_eq3_general": [
+      "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean"
     ],
     "erdos_szekeres_pair": [
       "lean/spec_v4/ErdosSzekeresRamsey.lean"

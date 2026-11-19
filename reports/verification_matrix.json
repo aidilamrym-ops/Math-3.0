@@ -493,6 +493,50 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ a b : ℕ with Nat.Coprime a b, 0 < a, and 0 < b; Nat.Coprime (a * b) (a + b) ∧ radical (a * b * (a + b)) = radical a * radical b * radical (a + b)",
       "note": "Exact radical decomposition for coprime additive triples. Structural only; does NOT establish the abc Conjecture, finiteness, or any logarithmic/asymptotic bound."
+    },
+    {
+      "file": "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean",
+      "declaration": "erdos_straus_even_general",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "heven",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n : ℕ with ∃ k : ℕ, 1 ≤ k ∧ n = 2 * k; IsErdosStrausDecomposable n",
+      "note": "Every even n = 2k with k ≥ 1 decomposes as 4/(2k) = 1/k + 1/(2k) + 1/(2k), using the division-free cross-multiplied witness x = k, y = z = 2k. Covers n ≡ 0 and n ≡ 2 (mod 4). Does NOT cover odd n."
+    },
+    {
+      "file": "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean",
+      "declaration": "erdos_straus_mod4_eq3_general",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hmod",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n : ℕ with ∃ k : ℕ, n = 4 * k + 3; IsErdosStrausDecomposable n",
+      "note": "Every n ≡ 3 (mod 4) decomposes with x = k + 1 and y = z = 2(k+1)(4k+3), stated without division. Together with the even family this covers 75% of integers. Does NOT cover n ≡ 1 (mod 4)."
+    },
+    {
+      "file": "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean",
+      "declaration": "erdos_straus_bounded_up_to_50",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hn",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ n : ℕ with 2 ≤ n ∧ n ≤ 50; IsErdosStrausDecomposable n",
+      "note": "All 49 values 2 ≤ n ≤ 50 sealed by explicit division-free witnesses and norm_num. The full Erdős–Straus Conjecture, including the remaining class n ≡ 1 (mod 4), remains OPEN."
     }
   ],
   "notes": [
@@ -514,6 +558,8 @@
     "Twin Prime mutation receipt: reports/substantiveness_gate_twinprime.json — 2/2 declarations killed, 0 survived, hypotheses hp (membership) and htwin. The mutation parser now recognizes ∈/∉ membership hypotheses.",
     "Twin Prime scope: twin_prime_witnesses_below_200 is a FORMAL_FINITE_THEOREM sealing 15 pairs below 200; twin_prime_mod6_and_diff_sq_24 proves only the modular/square-difference invariant for p > 3. The full Twin Prime Conjecture remains OPEN.",
     "abc mutation receipt: reports/substantiveness_gate_abc.json — 2/2 declarations killed, 0 survived, hypotheses htrip and hab. The mutation parser now recognizes Nat.Coprime propositions.",
-    "abc scope: reyssat_abc_triple_witness is a FORMAL_FINITE_THEOREM for the single Reyssat triple, with rad(abc) = 15042 and c^10 > rad(abc)^16 (q > 1.6; actual q ≈ 1.6299). abc_coprime_radical_product proves only structural coprime radical multiplicativity. The full abc Conjecture remains OPEN."
+    "abc scope: reyssat_abc_triple_witness is a FORMAL_FINITE_THEOREM for the single Reyssat triple, with rad(abc) = 15042 and c^10 > rad(abc)^16 (q > 1.6; actual q ≈ 1.6299). abc_coprime_radical_product proves only structural coprime radical multiplicativity. The full abc Conjecture remains OPEN.",
+    "Erdős–Straus mutation receipt: reports/substantiveness_gate_erdosstraus.json — 3/3 declarations killed, 0 survived, hypotheses heven, hmod, hn.",
+    "Erdős–Straus scope: erdos_straus_even_general covers n ≡ 0, 2 (mod 4) and erdos_straus_mod4_eq3_general covers n ≡ 3 (mod 4), together 75% of integers; erdos_straus_bounded_up_to_50 is a FORMAL_FINITE_THEOREM for 2 ≤ n ≤ 50. The remaining class n ≡ 1 (mod 4) and the full Erdős–Straus Conjecture remain OPEN."
   ]
 }

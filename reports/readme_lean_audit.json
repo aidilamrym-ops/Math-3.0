@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-19T06:10:03.022562+00:00",
+  "generated": "2026-11-19T06:42:15.666773+00:00",
   "readme": "README.MD",
   "workers": 1,
-  "cited_unique_files": 35,
+  "cited_unique_files": 36,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 35
+    "PASS": 36
   },
   "results": [
     {
@@ -206,6 +206,14 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\ErdosStrausBoundedVerification.lean",
+      "lean_path": "spec_v4\\certificates\\ErdosStrausBoundedVerification.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"ErdosStrausBoundedVerification certificate compiled with zero placeholders.\"\n",
       "stderr": ""
     },
     {
