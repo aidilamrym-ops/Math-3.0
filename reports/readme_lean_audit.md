@@ -1,10 +1,10 @@
 # README Lean Claim Audit
 
-- Generated: 2026-11-19T08:29:59.450629+00:00
+- Generated: 2026-11-19T09:39:17.350374+00:00
 - Workers: 1
-- Cited unique files: 38
+- Cited unique files: 39
 - Unresolved citations: 0
-- Counts: {'PASS': 38}
+- Counts: {'PASS': 39}
 
 | Status | File | Notes |
 |---|---|---|
@@ -38,6 +38,7 @@
 | PASS | `lean\spec_v4\certificates\GoldbachBoundedVerification.lean` |  |
 | PASS | `lean\spec_v4\certificates\LegendreBoundedVerification.lean` |  |
 | PASS | `lean\spec_v4\certificates\LehmerTotientBoundedVerification.lean` |  |
+| PASS | `lean\spec_v4\certificates\RangeExpansionPack.lean` |  |
 | PASS | `lean\spec_v4\certificates\RiemannZetaInvariantCertificate.lean` |  |
 | PASS | `lean\spec_v4\certificates\SophieGermainFermatTheorem.lean` |  |
 | PASS | `lean\spec_v4\certificates\TwinPrimeBoundedVerification.lean` |  |

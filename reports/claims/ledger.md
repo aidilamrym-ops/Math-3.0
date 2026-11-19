@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-19T08:30:19.537230+00:00
+- Generated: 2026-11-19T09:28:19.509535+00:00
 - README: `README.MD`
-- Total backticked citations: **340**
-- Lean claims: **84** (resolved: 84, unresolved: 0)
-- Citation kinds: `{'prose-term': 140, 'file-reference': 94, 'tooling': 19, 'lean-claim': 84, 'negative-reference': 3}`
+- Total backticked citations: **343**
+- Lean claims: **86** (resolved: 86, unresolved: 0)
+- Citation kinds: `{'prose-term': 140, 'file-reference': 95, 'tooling': 19, 'lean-claim': 86, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -94,6 +94,8 @@
 | `lehmer_composite_must_be_odd` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
 | `lehmer_composite_must_be_squarefree` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
 | `lehmer_composite_odd_and_squarefree` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
+| `gilbreath_first_50_primes` | resolved | `lean/spec_v4/certificates/RangeExpansionPack.lean` | `local` | `bounded model` |
+| `twin_prime_witnesses_below_1000` | resolved | `lean/spec_v4/certificates/RangeExpansionPack.lean` | `local` | `bounded model` |
 
 ## Non-declaration citations
 
@@ -118,6 +120,7 @@
 - `ErdosStrausBoundedVerification.lean` — file-reference
 - `GilbreathBoundedVerification.lean` — file-reference
 - `LehmerTotientBoundedVerification.lean` — file-reference
+- `RangeExpansionPack.lean` — file-reference
 - `make gate` — prose-term
 - `manifest.json` — file-reference
 - `repokeeper.py --verify` — prose-term
@@ -283,7 +286,7 @@
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
-- `reports/substantiveness_gate_full518.json` — file-reference
+- `reports/substantiveness_gate_full519.json` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -352,4 +355,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `c0a2f08a35cf3d1bd9b93fb7601648bd4b4946a4b2412b20cb868916838c6312` — prose-term
+- `5ed41c9908003406fa293ade0315d8d1be97176925a14bef07d315e7faaa3509` — prose-term

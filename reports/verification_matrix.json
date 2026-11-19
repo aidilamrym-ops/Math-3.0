@@ -624,6 +624,34 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ n : ℕ with Nat.totient n ∣ (n - 1) and 2 < n; Odd n ∧ ∀ p, Nat.Prime p → ¬ p ^ 2 ∣ n",
       "note": "Combines the oddness and squarefree obstructions. Necessity is not sufficiency: the full Lehmer Totient Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/RangeExpansionPack.lean",
+      "declaration": "gilbreath_first_50_primes",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext"
+      ],
+      "primary_hypothesis": "hps",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ ps : List ℕ with ps = first 50 primes; SatisfiesGilbreathHead ps",
+      "note": "All 49 iterated absolute-difference rows of the first 50 primes have leading entry 1. The full Gilbreath Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/RangeExpansionPack.lean",
+      "declaration": "twin_prime_witnesses_below_1000",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hp",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ p : ℕ with p in the explicit list of 35 twin-prime smaller members below 1000; IsTwinPrime p",
+      "note": "All 35 twin-prime pairs below 1000 are sealed by explicit membership and primality checks. The full Twin Prime Conjecture remains OPEN."
     }
   ],
   "notes": [
@@ -651,6 +679,8 @@
     "Gilbreath mutation receipt: reports/substantiveness_gate_gilbreath.json — 2/2 declarations killed, 0 survived, hypotheses hps and hhead.",
     "Gilbreath scope: gilbreath_first_20_primes is a FORMAL_FINITE_THEOREM for the first 20 primes (19 iterated rows); gilbreath_parity_preservation_general proves only the one-step parity lock (odd head, even tail). The full Gilbreath Conjecture remains OPEN.",
     "Lehmer mutation receipt: reports/substantiveness_gate_lehmer_b18.json — 4/4 declarations killed, 0 survived, hypotheses hn and hdiv, LOW=0. The mutation parser recognizes ∣/∤ divisibility propositions.",
-    "Lehmer scope: no_lehmer_composite_up_to_200 is a FORMAL_FINITE_THEOREM for 2 ≤ n ≤ 200; lehmer_composite_must_be_odd and lehmer_composite_must_be_squarefree prove the universal oddness and squarefree obstructions, combined in lehmer_composite_odd_and_squarefree. The full Lehmer Totient Conjecture remains OPEN."
+    "Lehmer scope: no_lehmer_composite_up_to_200 is a FORMAL_FINITE_THEOREM for 2 ≤ n ≤ 200; lehmer_composite_must_be_odd and lehmer_composite_must_be_squarefree prove the universal oddness and squarefree obstructions, combined in lehmer_composite_odd_and_squarefree. The full Lehmer Totient Conjecture remains OPEN.",
+    "RangeExpansionPack I mutation receipt: reports/substantiveness_gate_pack1.json — 2/2 declarations killed, 0 survived, hypotheses hps and hp, LOW=0.",
+    "RangeExpansionPack I scope: gilbreath_first_50_primes extends the finite Gilbreath check to the first 50 primes (49 rows); twin_prime_witnesses_below_1000 seals all 35 twin-prime pairs below 1000. The full Gilbreath and Twin Prime Conjectures remain OPEN."
   ]
 }

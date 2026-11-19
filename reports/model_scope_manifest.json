@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-19T03:47:55Z",
+  "generated": "2026-11-19T09:28:07Z",
   "counts": {
     "bounded-model": 0,
-    "pure-theorem": 8,
+    "pure-theorem": 9,
     "scope_undeclared": 2
   },
   "files": [
@@ -50,6 +50,12 @@
     },
     {
       "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": ""
+    },
+    {
+      "file": "lean/spec_v4/certificates/RangeExpansionPack.lean",
       "class": "pure-theorem",
       "scope_declared": true,
       "scope_text": ""

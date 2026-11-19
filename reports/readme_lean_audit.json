@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-19T08:29:59.450629+00:00",
+  "generated": "2026-11-19T09:39:17.350374+00:00",
   "readme": "README.MD",
   "workers": 1,
-  "cited_unique_files": 38,
+  "cited_unique_files": 39,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 38
+    "PASS": 39
   },
   "results": [
     {
@@ -246,6 +246,14 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "\"LehmerTotientBoundedVerification certificate compiled with zero placeholders.\"\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\RangeExpansionPack.lean",
+      "lean_path": "spec_v4\\certificates\\RangeExpansionPack.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"RangeExpansionPack certificate compiled with zero placeholders.\"\n",
       "stderr": ""
     },
     {

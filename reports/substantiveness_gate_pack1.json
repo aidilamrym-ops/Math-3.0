@@ -1,0 +1,46 @@
+{
+  "generated": "2026-11-19T09:26:26Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\RangeExpansionPack.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 2,
+  "predicates": 0,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "verdict": "PASS",
+  "findings": [],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/certificates/RangeExpansionPack.lean",
+      "declaration": "gilbreath_first_50_primes",
+      "verdict": "KILLED",
+      "hypothesis": "hps"
+    },
+    {
+      "file": "lean/spec_v4/certificates/RangeExpansionPack.lean",
+      "declaration": "twin_prime_witnesses_below_1000",
+      "verdict": "KILLED",
+      "hypothesis": "hp"
+    }
+  ],
+  "mutation_summary": {
+    "total": 2,
+    "killed": 2,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/certificates/RangeExpansionPack.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-19T08:20:06.211924+00:00",
+  "generated": "2026-11-19T09:39:53.542415+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "dc80b2d836be6caa623e9ecbf17e6e83a599350f075d5e3ce7ed1fb8deaa5c6e",
+  "readme_semantic_sha256": "4ab121c5a25d3bba3f78812de8964e76edb50ab8ce8c8782515d2b785c2a315e",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 84,
-  "resolved": 84,
+  "cited_identifiers": 86,
+  "resolved": 86,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -136,6 +136,9 @@
     "gilbreath_first_20_primes": [
       "lean/spec_v4/certificates/GilbreathBoundedVerification.lean"
     ],
+    "gilbreath_first_50_primes": [
+      "lean/spec_v4/certificates/RangeExpansionPack.lean"
+    ],
     "gilbreath_parity_preservation_general": [
       "lean/spec_v4/certificates/GilbreathBoundedVerification.lean"
     ],
@@ -262,6 +265,9 @@
     ],
     "twin_prime_mod6_and_diff_sq_24": [
       "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean"
+    ],
+    "twin_prime_witnesses_below_1000": [
+      "lean/spec_v4/certificates/RangeExpansionPack.lean"
     ],
     "twin_prime_witnesses_below_200": [
       "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean"
