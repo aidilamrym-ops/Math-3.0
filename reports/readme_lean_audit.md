@@ -1,10 +1,10 @@
 # README Lean Claim Audit
 
-- Generated: 2026-11-19T06:42:15.666773+00:00
+- Generated: 2026-11-19T07:40:41.104209+00:00
 - Workers: 1
-- Cited unique files: 36
+- Cited unique files: 37
 - Unresolved citations: 0
-- Counts: {'PASS': 36}
+- Counts: {'PASS': 37}
 
 | Status | File | Notes |
 |---|---|---|
@@ -34,6 +34,7 @@
 | PASS | `lean\spec_v4\certificates\DiscreteInertiaBoundaryDeterminant.lean` |  |
 | PASS | `lean\spec_v4\certificates\DiscreteSylvesterInertiaTraceNormInvariant.lean` |  |
 | PASS | `lean\spec_v4\certificates\ErdosStrausBoundedVerification.lean` |  |
+| PASS | `lean\spec_v4\certificates\GilbreathBoundedVerification.lean` |  |
 | PASS | `lean\spec_v4\certificates\GoldbachBoundedVerification.lean` |  |
 | PASS | `lean\spec_v4\certificates\LegendreBoundedVerification.lean` |  |
 | PASS | `lean\spec_v4\certificates\RiemannZetaInvariantCertificate.lean` |  |

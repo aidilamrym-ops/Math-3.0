@@ -1,0 +1,55 @@
+{
+  "generated": "2026-11-19T06:48:09Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\GilbreathBoundedVerification.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 5,
+  "predicates": 1,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 1
+  },
+  "verdict": "PASS",
+  "findings": [
+    {
+      "file": "lean/spec_v4/certificates/GilbreathBoundedVerification.lean",
+      "line": 36,
+      "declaration": "SatisfiesGilbreathHead",
+      "severity": "LOW",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `SatisfiesGilbreathHead` is never applied to ground arguments or existentially witnessed"
+    }
+  ],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/certificates/GilbreathBoundedVerification.lean",
+      "declaration": "gilbreath_first_20_primes",
+      "verdict": "KILLED",
+      "hypothesis": "hps"
+    },
+    {
+      "file": "lean/spec_v4/certificates/GilbreathBoundedVerification.lean",
+      "declaration": "gilbreath_parity_preservation_general",
+      "verdict": "KILLED",
+      "hypothesis": "hhead"
+    }
+  ],
+  "mutation_summary": {
+    "total": 2,
+    "killed": 2,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/certificates/GilbreathBoundedVerification.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}

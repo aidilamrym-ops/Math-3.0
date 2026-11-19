@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-19T06:42:26.873055+00:00
+- Generated: 2026-11-19T07:40:55.448365+00:00
 - README: `README.MD`
-- Total backticked citations: **326**
-- Lean claims: **78** (resolved: 78, unresolved: 0)
-- Citation kinds: `{'prose-term': 134, 'file-reference': 92, 'tooling': 19, 'lean-claim': 78, 'negative-reference': 3}`
+- Total backticked citations: **333**
+- Lean claims: **80** (resolved: 80, unresolved: 0)
+- Citation kinds: `{'prose-term': 138, 'file-reference': 93, 'tooling': 19, 'lean-claim': 80, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -88,6 +88,8 @@
 | `erdos_straus_even_general` | resolved | `lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean` | `local` | `bounded model` |
 | `erdos_straus_mod4_eq3_general` | resolved | `lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean` | `local` | `bounded model` |
 | `erdos_straus_bounded_up_to_50` | resolved | `lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean` | `local` | `bounded model` |
+| `gilbreath_parity_preservation_general` | resolved | `lean/spec_v4/certificates/GilbreathBoundedVerification.lean` | `local` | `bounded model` |
+| `gilbreath_first_20_primes` | resolved | `lean/spec_v4/certificates/GilbreathBoundedVerification.lean` | `local` | `bounded model` |
 
 ## Non-declaration citations
 
@@ -110,6 +112,7 @@
 - `tools/full_surface_lean_audit.py` — file-reference
 - `AbcConjectureBoundedVerification.lean` — file-reference
 - `ErdosStrausBoundedVerification.lean` — file-reference
+- `GilbreathBoundedVerification.lean` — file-reference
 - `make gate` — prose-term
 - `manifest.json` — file-reference
 - `repokeeper.py --verify` — prose-term
@@ -275,7 +278,7 @@
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
-- `reports/substantiveness_gate_full516.json` — file-reference
+- `reports/substantiveness_gate_full517.json` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -322,6 +325,10 @@
 - `2 ≤ n ≤ 50` — prose-term
 - `n ≡ 1 (mod 4)` — prose-term
 - `∀ n ≥ 2, IsErdosStrausDecomposable n` — prose-term
+- `xs = 2 :: x :: rest` — prose-term
+- `rest` — prose-term
+- `gilbreathStep` — prose-term
+- `∀ n ≥ 2, SatisfiesGilbreathHead (first_n_primes n)` — prose-term
 - `tools/` — file-reference
 - `reports/flawed_artifacts` — file-reference
 - `RiemannCriticalEvidence.lean` — file-reference
@@ -338,4 +345,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `fef90d27cd03a069f63afbb8d9e348c029a28c794b92ddbd953674e386901dab` — prose-term
+- `5dd5c101b5fad3bc83dabd898d60c9da2b801c5cd3209949ceb23cc60eb51576` — prose-term

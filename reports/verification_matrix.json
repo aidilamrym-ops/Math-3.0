@@ -537,6 +537,33 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ n : ℕ with 2 ≤ n ∧ n ≤ 50; IsErdosStrausDecomposable n",
       "note": "All 49 values 2 ≤ n ≤ 50 sealed by explicit division-free witnesses and norm_num. The full Erdős–Straus Conjecture, including the remaining class n ≡ 1 (mod 4), remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/GilbreathBoundedVerification.lean",
+      "declaration": "gilbreath_first_20_primes",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext"
+      ],
+      "primary_hypothesis": "hps",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ ps : List ℕ with ps = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]; SatisfiesGilbreathHead ps",
+      "note": "All 19 iterated absolute-difference rows of the first 20 primes have leading entry 1. The full Gilbreath Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/GilbreathBoundedVerification.lean",
+      "declaration": "gilbreath_parity_preservation_general",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hhead",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ xs : List ℕ with xs = 2 :: x :: rest, x odd, and every element of xs.drop 2 odd; one gilbreathStep yields an odd head and an all-even tail",
+      "note": "Structural parity-lock invariant only. It does not force the leading entry to remain 1 at every iteration; the full Gilbreath Conjecture is not claimed."
     }
   ],
   "notes": [
@@ -560,6 +587,8 @@
     "abc mutation receipt: reports/substantiveness_gate_abc.json — 2/2 declarations killed, 0 survived, hypotheses htrip and hab. The mutation parser now recognizes Nat.Coprime propositions.",
     "abc scope: reyssat_abc_triple_witness is a FORMAL_FINITE_THEOREM for the single Reyssat triple, with rad(abc) = 15042 and c^10 > rad(abc)^16 (q > 1.6; actual q ≈ 1.6299). abc_coprime_radical_product proves only structural coprime radical multiplicativity. The full abc Conjecture remains OPEN.",
     "Erdős–Straus mutation receipt: reports/substantiveness_gate_erdosstraus.json — 3/3 declarations killed, 0 survived, hypotheses heven, hmod, hn.",
-    "Erdős–Straus scope: erdos_straus_even_general covers n ≡ 0, 2 (mod 4) and erdos_straus_mod4_eq3_general covers n ≡ 3 (mod 4), together 75% of integers; erdos_straus_bounded_up_to_50 is a FORMAL_FINITE_THEOREM for 2 ≤ n ≤ 50. The remaining class n ≡ 1 (mod 4) and the full Erdős–Straus Conjecture remain OPEN."
+    "Erdős–Straus scope: erdos_straus_even_general covers n ≡ 0, 2 (mod 4) and erdos_straus_mod4_eq3_general covers n ≡ 3 (mod 4), together 75% of integers; erdos_straus_bounded_up_to_50 is a FORMAL_FINITE_THEOREM for 2 ≤ n ≤ 50. The remaining class n ≡ 1 (mod 4) and the full Erdős–Straus Conjecture remain OPEN.",
+    "Gilbreath mutation receipt: reports/substantiveness_gate_gilbreath.json — 2/2 declarations killed, 0 survived, hypotheses hps and hhead.",
+    "Gilbreath scope: gilbreath_first_20_primes is a FORMAL_FINITE_THEOREM for the first 20 primes (19 iterated rows); gilbreath_parity_preservation_general proves only the one-step parity lock (odd head, even tail). The full Gilbreath Conjecture remains OPEN."
   ]
 }

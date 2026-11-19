@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-19T06:42:15.666773+00:00",
+  "generated": "2026-11-19T07:40:41.104209+00:00",
   "readme": "README.MD",
   "workers": 1,
-  "cited_unique_files": 36,
+  "cited_unique_files": 37,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 36
+    "PASS": 37
   },
   "results": [
     {
@@ -214,6 +214,14 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "\"ErdosStrausBoundedVerification certificate compiled with zero placeholders.\"\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\GilbreathBoundedVerification.lean",
+      "lean_path": "spec_v4\\certificates\\GilbreathBoundedVerification.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"GilbreathBoundedVerification certificate compiled with zero placeholders.\"\n",
       "stderr": ""
     },
     {
