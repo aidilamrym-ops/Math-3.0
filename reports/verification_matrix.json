@@ -463,6 +463,36 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ p : ℕ with IsTwinPrime p and 3 < p; p % 6 = 5 ∧ 24 ∣ ((p + 2) ^ 2 - p ^ 2)",
       "note": "Derived modular and square-difference invariant (p % 6 = 5, 24 ∣ (p+2)² − p²). Does NOT establish infinitude of twin primes."
+    },
+    {
+      "file": "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean",
+      "declaration": "reyssat_abc_triple_witness",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "htrip",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ a b c : ℕ with a = 2 ∧ b = 3 ^ 10 * 109 ∧ c = 23 ^ 5; IsAbcTriple a b c ∧ radical (a * b * c) = 15042 ∧ c ^ 10 > (radical (a * b * c)) ^ 16",
+      "note": "Reyssat high-quality abc triple 2 + 3^10 * 109 = 23^5; rad(abc) = 15042; the formal division-free inequality proves q > 1.6 (the actual quality is approximately 1.6299). The full abc Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean",
+      "declaration": "abc_coprime_radical_product",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hab",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ a b : ℕ with Nat.Coprime a b, 0 < a, and 0 < b; Nat.Coprime (a * b) (a + b) ∧ radical (a * b * (a + b)) = radical a * radical b * radical (a + b)",
+      "note": "Exact radical decomposition for coprime additive triples. Structural only; does NOT establish the abc Conjecture, finiteness, or any logarithmic/asymptotic bound."
     }
   ],
   "notes": [
@@ -482,6 +512,8 @@
     "Legendre mutation receipt: reports/substantiveness_gate_legendre.json — 2/2 declarations killed, 0 survived, one primary hypothesis per declaration (hn).",
     "Legendre scope: legendre_bounded_up_to_30 is a FORMAL_FINITE_THEOREM for 1 ≤ n ≤ 30 with explicit prime witnesses; legendre_interval_gap_grows proves only the structural gap 2n+1. The full Legendre's Conjecture remains OPEN.",
     "Twin Prime mutation receipt: reports/substantiveness_gate_twinprime.json — 2/2 declarations killed, 0 survived, hypotheses hp (membership) and htwin. The mutation parser now recognizes ∈/∉ membership hypotheses.",
-    "Twin Prime scope: twin_prime_witnesses_below_200 is a FORMAL_FINITE_THEOREM sealing 15 pairs below 200; twin_prime_mod6_and_diff_sq_24 proves only the modular/square-difference invariant for p > 3. The full Twin Prime Conjecture remains OPEN."
+    "Twin Prime scope: twin_prime_witnesses_below_200 is a FORMAL_FINITE_THEOREM sealing 15 pairs below 200; twin_prime_mod6_and_diff_sq_24 proves only the modular/square-difference invariant for p > 3. The full Twin Prime Conjecture remains OPEN.",
+    "abc mutation receipt: reports/substantiveness_gate_abc.json — 2/2 declarations killed, 0 survived, hypotheses htrip and hab. The mutation parser now recognizes Nat.Coprime propositions.",
+    "abc scope: reyssat_abc_triple_witness is a FORMAL_FINITE_THEOREM for the single Reyssat triple, with rad(abc) = 15042 and c^10 > rad(abc)^16 (q > 1.6; actual q ≈ 1.6299). abc_coprime_radical_product proves only structural coprime radical multiplicativity. The full abc Conjecture remains OPEN."
   ]
 }

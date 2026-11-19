@@ -1,17 +1,20 @@
 {
-  "generated": "2026-11-19T05:52:02.268523+00:00",
+  "generated": "2026-11-19T06:10:08.118528+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "d776ecceaea6987484a66a4a7e262deb69d34f22b97dbac11892245f9645c224",
+  "readme_semantic_sha256": "d2bdb094f4db4513dd1a41abf79b4bcd838cefcf5104d28a8b41c9340489e797",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 73,
-  "resolved": 73,
+  "cited_identifiers": 75,
+  "resolved": 75,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
+    "abc_coprime_radical_product": [
+      "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean"
+    ],
     "action_gap_sharp": [
       "lean/spec_v4/LatticeInstantonBound.lean"
     ],
@@ -190,6 +193,9 @@
     ],
     "ramsey_one_edge": [
       "lean/spec_v4/ErdosSzekeresRamsey.lean"
+    ],
+    "reyssat_abc_triple_witness": [
+      "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean"
     ],
     "signChanges_pos_neg": [
       "lean/spec_v4/SturmTarskiIsolation.lean"

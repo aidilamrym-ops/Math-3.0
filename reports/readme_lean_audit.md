@@ -1,10 +1,10 @@
 # README Lean Claim Audit
 
-- Generated: 2026-11-19T05:50:58.847587+00:00
+- Generated: 2026-11-19T06:10:03.022562+00:00
 - Workers: 1
-- Cited unique files: 34
+- Cited unique files: 35
 - Unresolved citations: 0
-- Counts: {'PASS': 34}
+- Counts: {'PASS': 35}
 
 | Status | File | Notes |
 |---|---|---|
@@ -29,6 +29,7 @@
 | PASS | `lean\spec_v4\bridges\ScaleInvariantEnergyBridge.lean` |  |
 | PASS | `lean\spec_v4\bridges\SkewSymmetricAdvectionBridge.lean` |  |
 | PASS | `lean\spec_v4\bridges\WeakOperatorConsistencyBridge.lean` |  |
+| PASS | `lean\spec_v4\certificates\AbcConjectureBoundedVerification.lean` |  |
 | PASS | `lean\spec_v4\certificates\BealScale10to18Certificate.lean` |  |
 | PASS | `lean\spec_v4\certificates\DiscreteInertiaBoundaryDeterminant.lean` |  |
 | PASS | `lean\spec_v4\certificates\DiscreteSylvesterInertiaTraceNormInvariant.lean` |  |

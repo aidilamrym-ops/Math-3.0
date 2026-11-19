@@ -767,6 +767,10 @@ def is_prop_hypothesis(typ: str, prop_names: set[str]) -> bool:
         return False
     if re.search(r"[<≤>≥=≠¬∧∨→∀∃∈∉]", typ):
         return True
+    # `Nat.Coprime` is a proposition but contains no symbolic connective, so
+    # recognise it explicitly for mutation targeting (Batch 14 abc certificate).
+    if re.match(r"(?:Nat\.)?Coprime\b", typ):
+        return True
     head = re.match(r"([A-Za-z_][A-Za-z0-9_'.]*)", typ)
     if head and head.group(1) in prop_names:
         return True

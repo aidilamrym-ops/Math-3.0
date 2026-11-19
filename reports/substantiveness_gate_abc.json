@@ -1,0 +1,55 @@
+{
+  "generated": "2026-11-19T05:57:29Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\certificates\\AbcConjectureBoundedVerification.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 4,
+  "predicates": 1,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 1
+  },
+  "verdict": "PASS",
+  "findings": [
+    {
+      "file": "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean",
+      "line": 27,
+      "declaration": "IsAbcTriple",
+      "severity": "LOW",
+      "code": "WITNESS_MISSING",
+      "detail": "predicate `IsAbcTriple` is never applied to ground arguments or existentially witnessed"
+    }
+  ],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean",
+      "declaration": "reyssat_abc_triple_witness",
+      "verdict": "KILLED",
+      "hypothesis": "htrip"
+    },
+    {
+      "file": "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean",
+      "declaration": "abc_coprime_radical_product",
+      "verdict": "KILLED",
+      "hypothesis": "hab"
+    }
+  ],
+  "mutation_summary": {
+    "total": 2,
+    "killed": 2,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}

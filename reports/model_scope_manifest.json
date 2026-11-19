@@ -2,7 +2,7 @@
   "generated": "2026-11-19T03:47:55Z",
   "counts": {
     "bounded-model": 0,
-    "pure-theorem": 4,
+    "pure-theorem": 5,
     "scope_undeclared": 2
   },
   "files": [
@@ -26,6 +26,12 @@
     },
     {
       "file": "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean",
+      "class": "pure-theorem",
+      "scope_declared": true,
+      "scope_text": ""
+    },
+    {
+      "file": "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean",
       "class": "pure-theorem",
       "scope_declared": true,
       "scope_text": ""

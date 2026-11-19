@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-19T05:52:23.211489+00:00
+- Generated: 2026-11-19T06:10:18.776579+00:00
 - README: `README.MD`
-- Total backticked citations: **299**
-- Lean claims: **73** (resolved: 73, unresolved: 0)
-- Citation kinds: `{'prose-term': 114, 'file-reference': 90, 'tooling': 19, 'lean-claim': 73, 'negative-reference': 3}`
+- Total backticked citations: **311**
+- Lean claims: **75** (resolved: 75, unresolved: 0)
+- Citation kinds: `{'prose-term': 123, 'file-reference': 91, 'tooling': 19, 'lean-claim': 75, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -83,6 +83,8 @@
 | `legendre_interval_gap_grows` | resolved | `lean/spec_v4/certificates/LegendreBoundedVerification.lean` | `local` | `numerical evidence` |
 | `twin_prime_witnesses_below_200` | resolved | `lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean` | `local` | `bounded model` |
 | `twin_prime_mod6_and_diff_sq_24` | resolved | `lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean` | `local` | `bounded model` |
+| `reyssat_abc_triple_witness` | resolved | `lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean` | `local` | `bounded model` |
+| `abc_coprime_radical_product` | resolved | `lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean` | `local` | `bounded model` |
 
 ## Non-declaration citations
 
@@ -103,6 +105,7 @@
 - `implemented_by` — tooling
 - `extern` — tooling
 - `tools/full_surface_lean_audit.py` — file-reference
+- `AbcConjectureBoundedVerification.lean` — file-reference
 - `make gate` — prose-term
 - `manifest.json` — file-reference
 - `repokeeper.py --verify` — prose-term
@@ -268,7 +271,7 @@
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
-- `reports/substantiveness_gate_full514.json` — file-reference
+- `reports/substantiveness_gate_full515.json` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -295,6 +298,15 @@
 - `24 ∣ ((p + 2)² − p²)` — prose-term
 - `p > 3` — prose-term
 - `∀ N, ∃ p ≥ N, IsTwinPrime p` — prose-term
+- `a = 2` — prose-term
+- `b = 3^10 · 109` — prose-term
+- `c = 23^5` — prose-term
+- `rad(abc) = 15042` — prose-term
+- `c^10 > rad(abc)^16` — prose-term
+- `q > 1.6` — prose-term
+- `1.6299` — prose-term
+- `∀ ε > 0` — prose-term
+- `c > rad(abc)^(1+ε)` — prose-term
 - `tools/` — file-reference
 - `reports/flawed_artifacts` — file-reference
 - `RiemannCriticalEvidence.lean` — file-reference
@@ -311,4 +323,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `171c5a09daf9b56159d4d868733afccd96fe7670e161f8c534076e1db2cdadf8` — prose-term
+- `263c772693ec079cdbcb19363176c90e1e7e30dfc4b63ee2599e3eeceaa1d12f` — prose-term
