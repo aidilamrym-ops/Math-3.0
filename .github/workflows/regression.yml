@@ -50,6 +50,15 @@ jobs:
       - name: Anti-Circularity Gate (strict) over audited surface
         run: python tools/omega_audit/gate_strict.py check lean/spec_v4 Math30Kernel Math30Interfaces
 
+      - name: Strict-gate falsification self-test
+        run: python tools/omega_audit/gate_selftest.py
+
+      - name: Mutation-parser Unicode regression (divisibility)
+        run: python tools/omega_audit/mutation_parser_selftest.py
+
+      - name: Substantiveness gate (scan only, no pinned report writes)
+        run: python tools/omega_audit/substantiveness_gate.py --strict --no-report
+
       - name: Full-Surface Lean compile audit (493 files, 1 worker)
         run: python tools/full_surface_lean_audit.py --workers 1
 

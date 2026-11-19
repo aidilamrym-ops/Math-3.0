@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install Z3 for Python audits
+        run: pip install z3-solver
+
       - name: Install Lean toolchain
         run: |
           curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
@@ -33,8 +36,17 @@ jobs:
           lake build
 
       # Seal first: later audit steps rewrite pinned report files.
-      - name: Verify manifest and README seal
-        run: python mcp/t2n/core/repokeeper.py --verify
+      - name: One-command seal verification (manifest + independent ledger)
+        run: python tools/seal_pipeline.py --check
+
+      - name: Strict-gate falsification self-test
+        run: python tools/omega_audit/gate_selftest.py
+
+      - name: Mutation-parser Unicode regression (divisibility)
+        run: python tools/omega_audit/mutation_parser_selftest.py
+
+      - name: Substantiveness gate (scan only, no pinned report writes)
+        run: python tools/omega_audit/substantiveness_gate.py --strict --no-report
 
       - name: Audit cited theorem names
         run: python tools/readme_theorem_audit.py
