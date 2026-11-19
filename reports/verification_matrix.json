@@ -433,6 +433,36 @@
       "mutation_verdict": "KILLED",
       "scope": "∀ n : ℕ with 1 ≤ n; (n + 1) ^ 2 - n ^ 2 = 2 * n + 1 ∧ 3 ≤ (n + 1) ^ 2 - n ^ 2",
       "note": "Structural interval-width growth: consecutive-square gap is exactly 2n+1, hence non-degenerate for n ≥ 1. Does NOT establish prime existence."
+    },
+    {
+      "file": "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean",
+      "declaration": "twin_prime_witnesses_below_200",
+      "class": "FORMAL_FINITE_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "hp",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ p : ℕ with p ∈ [3, 5, 11, 17, 29, 41, 59, 71, 101, 107, 137, 149, 179, 191, 197]; IsTwinPrime p",
+      "note": "15 twin prime pairs with smaller member below 200 sealed by explicit membership and primality checks. The full Twin Prime Conjecture remains OPEN."
+    },
+    {
+      "file": "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean",
+      "declaration": "twin_prime_mod6_and_diff_sq_24",
+      "class": "FORMAL_GENERAL_THEOREM",
+      "level": "P4",
+      "axiom_footprint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "primary_hypothesis": "htwin",
+      "mutation_verdict": "KILLED",
+      "scope": "∀ p : ℕ with IsTwinPrime p and 3 < p; p % 6 = 5 ∧ 24 ∣ ((p + 2) ^ 2 - p ^ 2)",
+      "note": "Derived modular and square-difference invariant (p % 6 = 5, 24 ∣ (p+2)² − p²). Does NOT establish infinitude of twin primes."
     }
   ],
   "notes": [
@@ -450,6 +480,8 @@
     "BRIDGE-06 mutation receipt: reports/substantiveness_gate_BRIDGE06.json — 3/3 declarations killed, 0 survived, one primary hypothesis per declaration (hn, hC, hQ).",
     "BRIDGE-06 proves bounded circuit and gauge scaling lemmas. It does NOT claim a continuum Yang–Mills mass gap or P vs NP resolution.",
     "Legendre mutation receipt: reports/substantiveness_gate_legendre.json — 2/2 declarations killed, 0 survived, one primary hypothesis per declaration (hn).",
-    "Legendre scope: legendre_bounded_up_to_30 is a FORMAL_FINITE_THEOREM for 1 ≤ n ≤ 30 with explicit prime witnesses; legendre_interval_gap_grows proves only the structural gap 2n+1. The full Legendre's Conjecture remains OPEN."
+    "Legendre scope: legendre_bounded_up_to_30 is a FORMAL_FINITE_THEOREM for 1 ≤ n ≤ 30 with explicit prime witnesses; legendre_interval_gap_grows proves only the structural gap 2n+1. The full Legendre's Conjecture remains OPEN.",
+    "Twin Prime mutation receipt: reports/substantiveness_gate_twinprime.json — 2/2 declarations killed, 0 survived, hypotheses hp (membership) and htwin. The mutation parser now recognizes ∈/∉ membership hypotheses.",
+    "Twin Prime scope: twin_prime_witnesses_below_200 is a FORMAL_FINITE_THEOREM sealing 15 pairs below 200; twin_prime_mod6_and_diff_sq_24 proves only the modular/square-difference invariant for p > 3. The full Twin Prime Conjecture remains OPEN."
   ]
 }

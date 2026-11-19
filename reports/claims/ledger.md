@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-18T04:50:35.819704+00:00
+- Generated: 2026-11-19T05:52:23.211489+00:00
 - README: `README.MD`
-- Total backticked citations: **212**
-- Lean claims: **51** (resolved: 51, unresolved: 0)
-- Citation kinds: `{'prose-term': 51, 'file-reference': 88, 'tooling': 19, 'lean-claim': 51, 'negative-reference': 3}`
+- Total backticked citations: **299**
+- Lean claims: **73** (resolved: 73, unresolved: 0)
+- Citation kinds: `{'prose-term': 114, 'file-reference': 90, 'tooling': 19, 'lean-claim': 73, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -27,6 +27,24 @@
 | `landauer_infinite_energy_contradiction` | resolved | `lean/spec_v4/ActualInfinityRefutation.lean` | `local` | `bounded model` |
 | `continuity_forces_constant_in_finite_lattice` | resolved | `lean/spec_v4/ContinuityRefutation.lean` | `local` | `bounded model` |
 | `no_continuous_injection_from_continuum` | resolved | `lean/spec_v4/ContinuityRefutation.lean` | `local` | `kernel theorem` |
+| `energy_nonincreasing` | resolved | `lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean` | `local` | `kernel theorem` |
+| `flat_step_zero_dissipation` | resolved | `lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean` | `local` | `kernel theorem` |
+| `no_finite_time_blowup` | resolved | `lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean` | `local` | `bounded model` |
+| `lattice_family_energy_bound` | resolved | `lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean` | `local` | `bounded model` |
+| `advection_energy_neutrality` | resolved | `lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean` | `local` | `kernel theorem` |
+| `coupled_lattice_dissipation` | resolved | `lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean` | `local` | `bounded model` |
+| `truncation_error_vanishes` | resolved | `lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean` | `local` | `bounded model` |
+| `grid_sequential_compactness` | resolved | `lean/spec_v4/bridges/ContinuumCompactnessBridge.lean` | `local` | `kernel theorem` |
+| `dyadic_diagonal_extraction` | resolved | `lean/spec_v4/bridges/ContinuumCompactnessBridge.lean` | `local` | `kernel theorem` |
+| `discrete_summation_by_parts` | resolved | `lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean` | `local` | `kernel theorem` |
+| `dyadic_grid_step_contraction` | resolved | `lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean` | `local` | `bounded model` |
+| `weak_residual_subsequence_vanishes` | resolved | `lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean` | `local` | `kernel theorem` |
+| `critical_line_zero_sum_nonneg` | resolved | `lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean` | `local` | `numerical evidence` |
+| `compact_support_tail_vanishes` | resolved | `lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean` | `local` | `numerical evidence` |
+| `interval_enclosure_preserves_weil_positivity` | resolved | `lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean` | `local` | `numerical evidence` |
+| `exponential_dominates_linear_bound` | resolved | `lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean` | `local` | `kernel theorem` |
+| `circuit_density_ratio_vanishes` | resolved | `lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean` | `local` | `bounded model` |
+| `gauge_action_gap_scale_invariant` | resolved | `lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean` | `local` | `kernel theorem` |
 | `collatzLoop_mono` | resolved | `lean/spec_v4/CollatzBoundedDefeat.lean` | `local` | `kernel theorem` |
 | `signChanges_pos_neg` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `kernel theorem` |
 | `signChanges_zero_ignored` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `kernel theorem` |
@@ -61,6 +79,10 @@
 | `torus_euler_characteristic` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
 | `torus_euler_from_cells` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
 | `torus_homology_ranks` | resolved | `lean/spec_v4/HigherInductivePushout.lean` | `local` | `bounded model` |
+| `legendre_bounded_up_to_30` | resolved | `lean/spec_v4/certificates/LegendreBoundedVerification.lean` | `local` | `numerical evidence` |
+| `legendre_interval_gap_grows` | resolved | `lean/spec_v4/certificates/LegendreBoundedVerification.lean` | `local` | `numerical evidence` |
+| `twin_prime_witnesses_below_200` | resolved | `lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean` | `local` | `bounded model` |
+| `twin_prime_mod6_and_diff_sq_24` | resolved | `lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean` | `local` | `bounded model` |
 
 ## Non-declaration citations
 
@@ -69,6 +91,7 @@
 - `lean/spec_v4` — file-reference
 - `Math30Kernel` — prose-term
 - `Math30Interfaces` — prose-term
+- `bridges/` — file-reference
 - `sorry` — tooling
 - `sorryAx` — tooling
 - `admit` — tooling
@@ -126,6 +149,79 @@
 - `f : ℝ → Fin N` — prose-term
 - `lean/spec_v4/ContinuityRefutation.lean` — file-reference
 - `smt/phase4/continuity_refutation.smt2` — file-reference
+- `lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean` — file-reference
+- `d75b0d9` — prose-term
+- `E(t+1)+νD(t)=E(t)` — prose-term
+- `∀t, E t ≤ E 0` — prose-term
+- `E(t+1)=E t → D t = 0` — prose-term
+- `∀t, ¬(B < E t)` — prose-term
+- `N ≥ 1` — prose-term
+- `hD : ∀t, 0 ≤ D t` — prose-term
+- `hD` — prose-term
+- `hν` — prose-term
+- `hB` — prose-term
+- `t : ℕ` — prose-term
+- `N → ∞` — prose-term
+- `lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean` — file-reference
+- `1d8775a` — prose-term
+- `Σ_i Σ_j u_i A_i j u_j = 0` — prose-term
+- `Nonempty (Fin N) ∧ ∀t, totalLatticeEnergy N e t ≤ totalLatticeEnergy N e 0` — prose-term
+- `C / N < ε` — file-reference
+- `N > C/ε` — file-reference
+- `hA : ∀ i j, A i j = -A j i` — prose-term
+- `hA` — prose-term
+- `hN` — prose-term
+- `hC` — prose-term
+- `lean/spec_v4/bridges/ContinuumCompactnessBridge.lean` — file-reference
+- `2/2` — file-reference
+- `∃ φ : ℕ → ℕ, StrictMono φ ∧ ∃ L : Fin N → ℝ, ∀ i, Tendsto (fun t => u (φ t) i) atTop (𝓝 (L i))` — prose-term
+- `∃ φ : ℕ → ℕ, StrictMono φ ∧ ∃ F : ℚ → ℚ, ∀ q ∈ Set.Icc 0 1, Tendsto (fun k => u (φ k) ⟨0, ...⟩) atTop (𝓝 (F q))` — prose-term
+- `hu` — prose-term
+- `∀ t i, u t i = u 0 i` — prose-term
+- `0 findings` — prose-term
+- `0 surviving mutants` — prose-term
+- `[propext, Classical.choice, Quot.sound]` — prose-term
+- `lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean` — file-reference
+- `3/3` — file-reference
+- `∀ N u φ, u 0 = 0 ∧ u N = 0 → Σ (u(i+1)-u i) φ i = -Σ u(i+1)(φ(i+1)-φ i)` — prose-term
+- `2^k` — prose-term
+- `0 < L ∧ |φ(i+1)-φ i| ≤ L/2^k → Σ |φ(i+1)-φ i| ≤ L` — file-reference
+- `StrictMono` — prose-term
+- `|R k| ≤ C/(k+1), C ≥ 0 → Tendsto (R ∘ φ) atTop (𝓝 0)` — file-reference
+- `hb` — prose-term
+- `hL` — prose-term
+- `hR` — prose-term
+- `0 warnings` — prose-term
+- `#print axioms` — prose-term
+- `lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean` — file-reference
+- `hΦ : ∀ i, 0 ≤ Φ (γ i) ∧ hN : 1 ≤ N → Nonempty (Fin N) ∧ 0 ≤ Σ (m i : ℚ) * Φ (γ i)` — prose-term
+- `[-R, R]` — prose-term
+- `hsupp : ∀ t, R < |t| → Φ t = 0 → w * Φ t = 0` — prose-term
+- `hmargin : ∀ i, rad i ≤ mid i ∧ henc : ∀ i, mid i - rad i ≤ x i ≤ mid i + rad i → 0 ≤ Σ x i` — prose-term
+- `hΦ` — prose-term
+- `hsupp` — prose-term
+- `hmargin` — prose-term
+- `lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean` — file-reference
+- `n ≥ 2` — prose-term
+- `hn : 2 ≤ n → n + 1 < 2^n` — prose-term
+- `C > 0` — prose-term
+- `ε > 0` — prose-term
+- `C/n` — file-reference
+- `N₀` — prose-term
+- `hC : 0 < C → ∃ N₀ ≥ 1, ∀ n ≥ N₀, ratio n < ε` — prose-term
+- `Q ≠ 0` — prose-term
+- `Q² ≤ S` — prose-term
+- `1 ≤ S` — prose-term
+- `hQ : Q ≠ 0 → 1 ≤ S` — prose-term
+- `hn` — prose-term
+- `hQ` — prose-term
+- `PASS` — prose-term
+- `BRIDGE-01` — prose-term
+- `BRIDGE-06` — prose-term
+- `SophieGermainFermatTheorem.lean` — file-reference
+- `GoldbachBoundedVerification.lean` — file-reference
+- `LegendreBoundedVerification.lean` — file-reference
+- `TwinPrimeBoundedVerification.lean` — file-reference
 - `[10, 0, 0]` — prose-term
 - `false` — tooling
 - `decide` — tooling
@@ -135,7 +231,6 @@
 - `linarith` — tooling
 - `∃ roots_count, roots_count ≥ 0` — prose-term
 - `reports/FOUR_DIMENSIONAL_TOPOLOGY_NOTES.md` — file-reference
-- `[propext, Classical.choice, Quot.sound]` — prose-term
 - `box_feasibility_witness.lean` — file-reference
 - `norm_num` — tooling
 - `contraction_bound.lean` — file-reference
@@ -173,6 +268,7 @@
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
+- `reports/substantiveness_gate_full514.json` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -182,36 +278,27 @@
 - `RiemannZetaInvariantCertificate.lean` — file-reference
 - `CoreGateAdversarialStressTest.lean` — file-reference
 - `CollatzBoundedDefeat.lean` — file-reference
-- `UniversalTopologicalInvariantSingularityResolution.lean` — file-reference
-- `UniversalQuantumCoherencePhaseLock.lean` — file-reference
 - `smt_bridge/sign_flip_absence.lean` — file-reference
 - `smt_bridge/ledger_cross_multiplication.lean` — file-reference
 - `smt_bridge/contraction_bound.lean` — file-reference
 - `smt_bridge/box_feasibility_witness.lean` — file-reference
 - `UniversalFinitaryInformationConservation.lean` — file-reference
-- `FiniteLatticeSpectralGravity.lean` — file-reference
-- `FiniteNavierStokesDissipation.lean` — file-reference
-- `FiniteRiemannZetaLattice.lean` — file-reference
-- `FinitePvNPSeparationLattice.lean` — file-reference
-- `FiniteYangMillsMassGapLattice.lean` — file-reference
 - `ActualInfinityRefutation.lean` — file-reference
 - `ContinuityRefutation.lean` — file-reference
 - `EvenUnimodularObstruction.lean` — file-reference
 - `LatticeInstantonBound.lean` — file-reference
+- `1 ≤ n ≤ 30` — prose-term
+- `907 < 31² = 961` — prose-term
+- `(n+1)² − n² = 2n+1 ≥ 3` — prose-term
+- `∀ n ≥ 1, HasPrimeBetweenSquares n` — prose-term
+- `p % 6 = 5` — prose-term
+- `24 ∣ ((p + 2)² − p²)` — prose-term
+- `p > 3` — prose-term
+- `∀ N, ∃ p ≥ N, IsTwinPrime p` — prose-term
 - `tools/` — file-reference
-- `lean/spec_v4/MillenniumNavierStokesSmoothness.lean` — file-reference
+- `reports/flawed_artifacts` — file-reference
 - `RiemannCriticalEvidence.lean` — file-reference
 - `RiemannAdversarialEvidence.lean` — file-reference
-- `MillenniumRiemannHypothesis.lean` — file-reference
-- `MillenniumBirchSwinnertonDyer.lean` — file-reference
-- `lean/spec_v4/MillenniumHodgeConjecture.lean` — file-reference
-- `lean/spec_v4/MillenniumPoincareConjecture.lean` — file-reference
-- `lean/spec_v4/MillenniumCollatzGeneralization.lean` — file-reference
-- `lean/spec_v4/FiniteLatticeSpectralGravity.lean` — file-reference
-- `lean/spec_v4/FiniteNavierStokesDissipation.lean` — file-reference
-- `lean/spec_v4/FiniteRiemannZetaLattice.lean` — file-reference
-- `lean/spec_v4/FinitePvNPSeparationLattice.lean` — file-reference
-- `lean/spec_v4/FiniteYangMillsMassGapLattice.lean` — file-reference
 - `lean/spec_v4/CantorDiagonalization.lean` — file-reference
 - `lean/spec_v4/ShannonEntropyDPI.lean` — file-reference
 - `lean/spec_v4/LandauerBekensteinBound.lean` — file-reference
@@ -224,4 +311,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `fe8f6b9d0866f0aa480e79c47773b76ce55de04a819626b597d00f0c3112ba11` — prose-term
+- `171c5a09daf9b56159d4d868733afccd96fe7670e161f8c534076e1db2cdadf8` — prose-term

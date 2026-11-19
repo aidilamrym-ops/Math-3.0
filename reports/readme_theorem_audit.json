@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-19T04:32:33.014073+00:00",
+  "generated": "2026-11-19T05:52:02.268523+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "454f19b5779766c0f80c4f5b2447dc5b200580dcb8f5b29fb8c4aca736d610f3",
+  "readme_semantic_sha256": "d776ecceaea6987484a66a4a7e262deb69d34f22b97dbac11892245f9645c224",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 71,
-  "resolved": 71,
+  "cited_identifiers": 73,
+  "resolved": 73,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -226,6 +226,12 @@
     ],
     "truncation_error_vanishes": [
       "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean"
+    ],
+    "twin_prime_mod6_and_diff_sq_24": [
+      "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean"
+    ],
+    "twin_prime_witnesses_below_200": [
+      "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean"
     ],
     "weak_residual_subsequence_vanishes": [
       "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean"

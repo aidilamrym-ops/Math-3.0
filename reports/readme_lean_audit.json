@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-19T04:32:28.783630+00:00",
+  "generated": "2026-11-19T05:50:58.847587+00:00",
   "readme": "README.MD",
   "workers": 1,
-  "cited_unique_files": 33,
+  "cited_unique_files": 34,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 33
+    "PASS": 34
   },
   "results": [
     {
@@ -230,6 +230,14 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\TwinPrimeBoundedVerification.lean",
+      "lean_path": "spec_v4\\certificates\\TwinPrimeBoundedVerification.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"TwinPrimeBoundedVerification certificate compiled with zero placeholders.\"\n",
       "stderr": ""
     },
     {

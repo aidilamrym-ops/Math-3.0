@@ -765,7 +765,7 @@ def is_prop_hypothesis(typ: str, prop_names: set[str]) -> bool:
     typ = typ.strip()
     if not typ:
         return False
-    if re.search(r"[<≤>≥=≠¬∧∨→∀∃]", typ):
+    if re.search(r"[<≤>≥=≠¬∧∨→∀∃∈∉]", typ):
         return True
     head = re.match(r"([A-Za-z_][A-Za-z0-9_'.]*)", typ)
     if head and head.group(1) in prop_names:
