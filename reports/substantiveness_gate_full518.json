@@ -1,12 +1,12 @@
 {
-  "generated": "2026-11-19T07:58:38Z",
+  "generated": "2026-11-19T08:20:15Z",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
   "lean_files": 518,
-  "declarations": 2120,
+  "declarations": 2123,
   "predicates": 28,
   "z3_available": true,
   "waivers_applied": [
@@ -54,7 +54,7 @@
   "counts": {
     "HIGH": 0,
     "MEDIUM": 0,
-    "LOW": 523
+    "LOW": 522
   },
   "verdict": "PASS",
   "findings": [
@@ -865,14 +865,6 @@
       "severity": "LOW",
       "code": "WITNESS_MISSING",
       "detail": "predicate `HasPrimeBetweenSquares` is never applied to ground arguments or existentially witnessed"
-    },
-    {
-      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
-      "line": 26,
-      "declaration": "IsLehmerCompositeWitness",
-      "severity": "LOW",
-      "code": "WITNESS_MISSING",
-      "detail": "predicate `IsLehmerCompositeWitness` is never applied to ground arguments or existentially witnessed"
     },
     {
       "file": "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean",

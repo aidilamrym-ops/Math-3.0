@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-19T07:58:49.108257+00:00",
+  "generated": "2026-11-19T08:30:19.537230+00:00",
   "readme": "README.MD",
-  "readme_semantic_sha256": "c9247637e638dbf21b338f84191b6444d8d74aa09767348a5f147e980c555bf8",
-  "entries": 338,
-  "claims": 82,
-  "resolved_claims": 82,
+  "readme_semantic_sha256": "a21350f228c4b1b01c7865ceddca233d668afa5e5c1025cbd6cdfc95bef40aa0",
+  "entries": 340,
+  "claims": 84,
+  "resolved_claims": 84,
   "unresolved_claims": [],
   "ledger": [
     {
@@ -251,7 +251,7 @@
     },
     {
       "id": "manifest.json",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "manifest.json",
       "kind": "file-reference",
@@ -262,7 +262,7 @@
     },
     {
       "id": "repokeeper.py --verify",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "repokeeper.py --verify",
       "kind": "prose-term",
@@ -273,7 +273,7 @@
     },
     {
       "id": ".git",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".git",
       "kind": "prose-term",
@@ -284,7 +284,7 @@
     },
     {
       "id": ".lake",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": ".lake",
       "kind": "prose-term",
@@ -295,7 +295,7 @@
     },
     {
       "id": "staging/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "staging/",
       "kind": "file-reference",
@@ -306,7 +306,7 @@
     },
     {
       "id": "mcp/out/",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "mcp/out/",
       "kind": "file-reference",
@@ -317,7 +317,7 @@
     },
     {
       "id": "__pycache__",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "__pycache__",
       "kind": "tooling",
@@ -328,7 +328,7 @@
     },
     {
       "id": "*.pyc",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "*.pyc",
       "kind": "prose-term",
@@ -339,7 +339,7 @@
     },
     {
       "id": "README.MD",
-      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,690 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
+      "prose": "| **1-bit fault sentinel** | `manifest.json` pins 1,695 source, report and artifact files; every pinned change fails closed under `repokeeper.py --verify`. Excluded by design: `.git`, `.lake` build caches, `staging/`, `mcp/out/`, `__pycache__`, `*.pyc`, transient audit checkpoints, `manifest.json` itself, and `README.MD` (which carries the manifest digest and would otherwise be circular). |",
       "artifact": [],
       "theorem_name": "README.MD",
       "kind": "file-reference",
@@ -2935,7 +2935,7 @@
     },
     {
       "id": "python tools/omega_audit/substantiveness_gate.py",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,123 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-18 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed); the audited compile surface totals **518 files / 2,123 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "python tools/omega_audit/substantiveness_gate.py",
       "kind": "file-reference",
@@ -2946,7 +2946,7 @@
     },
     {
       "id": "reports/AUDIT_METHODOLOGY.md",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,123 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-18 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed); the audited compile surface totals **518 files / 2,123 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/AUDIT_METHODOLOGY.md",
       "kind": "file-reference",
@@ -2957,7 +2957,7 @@
     },
     {
       "id": "reports/substantiveness_gate_full518.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,123 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-18 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed); the audited compile surface totals **518 files / 2,123 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/substantiveness_gate_full518.json",
       "kind": "file-reference",
@@ -2968,7 +2968,7 @@
     },
     {
       "id": "reports/substantiveness_gate_regression.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,123 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-18 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed); the audited compile surface totals **518 files / 2,123 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/substantiveness_gate_regression.json",
       "kind": "file-reference",
@@ -2979,7 +2979,7 @@
     },
     {
       "id": "reports/model_scope_manifest.json",
-      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,120 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-17 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed); the audited compile surface totals **518 files / 2,120 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
+      "prose": "- **Substantiveness gate:** `python tools/omega_audit/substantiveness_gate.py` implements the five controls in `reports/AUDIT_METHODOLOGY.md`: Z3 inhabitance/counter-model checks, hypothesis mutation, constant-definition and tautology scanning, and pure-theorem versus bounded-model scope separation. Latest full-suite substantiveness run: **518 files, 2,123 declarations, HIGH=0, MEDIUM=0, verdict PASS** (`reports/substantiveness_gate_full518.json`); BRIDGE-01 through BRIDGE-06 and Batch 10-18 targeted runs: **HIGH=0, MEDIUM=0, all mutants killed** (Batch 13: 3 declarations, LOW=2, 2/2 killed; Batch 14: 4 declarations, LOW=1, 2/2 killed; Batch 15: 4 declarations, LOW=0, 3/3 killed; Batch 16: 5 declarations, LOW=1, 2/2 killed; Batch 17: 3 declarations, LOW=1, 2/2 killed; Batch 18: 6 declarations, LOW=0, 4/4 killed); the audited compile surface totals **518 files / 2,123 declarations**. Negative control over `reports/flawed_artifacts/` detects the archived vacuous certificates (`reports/substantiveness_gate_regression.json`). Scope classes are recorded in `reports/model_scope_manifest.json`.",
       "artifact": [],
       "theorem_name": "reports/model_scope_manifest.json",
       "kind": "file-reference",
@@ -3660,12 +3660,12 @@
       "class": "prose-term"
     },
     {
-      "id": "no_lehmer_composite_up_to_100",
-      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_100` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 100 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. The squarefree obstruction is necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "id": "no_lehmer_composite_up_to_200",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_200` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 200 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_odd` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 2, then n is odd. `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. `lehmer_composite_odd_and_squarefree` combines both: every Lehmer counterexample is odd and squarefree. These obstructions are necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
       "artifact": [
         "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
       ],
-      "theorem_name": "no_lehmer_composite_up_to_100",
+      "theorem_name": "no_lehmer_composite_up_to_200",
       "kind": "lean-claim",
       "status": "resolved",
       "is_claim": true,
@@ -3673,8 +3673,32 @@
       "class": "bounded model"
     },
     {
+      "id": "lehmer_composite_must_be_odd",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_200` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 200 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_odd` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 2, then n is odd. `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. `lehmer_composite_odd_and_squarefree` combines both: every Lehmer counterexample is odd and squarefree. These obstructions are necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "artifact": [
+        "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
+      ],
+      "theorem_name": "lehmer_composite_must_be_odd",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "bounded model"
+    },
+    {
+      "id": "Nat.totient n ∣ (n - 1)",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_200` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 200 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_odd` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 2, then n is odd. `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. `lehmer_composite_odd_and_squarefree` combines both: every Lehmer counterexample is odd and squarefree. These obstructions are necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "artifact": [],
+      "theorem_name": "Nat.totient n ∣ (n - 1)",
+      "kind": "prose-term",
+      "status": "not-a-declaration",
+      "is_claim": false,
+      "provenance": "n/a",
+      "class": "prose-term"
+    },
+    {
       "id": "lehmer_composite_must_be_squarefree",
-      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_100` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 100 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. The squarefree obstruction is necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_200` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 200 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_odd` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 2, then n is odd. `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. `lehmer_composite_odd_and_squarefree` combines both: every Lehmer counterexample is odd and squarefree. These obstructions are necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
       "artifact": [
         "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
       ],
@@ -3686,19 +3710,21 @@
       "class": "bounded model"
     },
     {
-      "id": "Nat.totient n ∣ (n - 1)",
-      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_100` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 100 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. The squarefree obstruction is necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
-      "artifact": [],
-      "theorem_name": "Nat.totient n ∣ (n - 1)",
-      "kind": "prose-term",
-      "status": "not-a-declaration",
-      "is_claim": false,
-      "provenance": "n/a",
-      "class": "prose-term"
+      "id": "lehmer_composite_odd_and_squarefree",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_200` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 200 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_odd` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 2, then n is odd. `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. `lehmer_composite_odd_and_squarefree` combines both: every Lehmer counterexample is odd and squarefree. These obstructions are necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "artifact": [
+        "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
+      ],
+      "theorem_name": "lehmer_composite_odd_and_squarefree",
+      "kind": "lean-claim",
+      "status": "resolved",
+      "is_claim": true,
+      "provenance": "local",
+      "class": "bounded model"
     },
     {
       "id": "∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n",
-      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_100` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 100 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. The squarefree obstruction is necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
+      "prose": "**Lehmer scope boundary:** `no_lehmer_composite_up_to_200` is a FORMAL_FINITE_THEOREM verifying that no composite n with 2 ≤ n ≤ 200 satisfies φ(n) ∣ (n − 1). `lehmer_composite_must_be_odd` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 2, then n is odd. `lehmer_composite_must_be_squarefree` is a structural FORMAL_GENERAL_THEOREM: if `Nat.totient n ∣ (n - 1)` and n > 1, then p² ∤ n for every prime p. `lehmer_composite_odd_and_squarefree` combines both: every Lehmer counterexample is odd and squarefree. These obstructions are necessary but not sufficient. The full Lehmer Totient Conjecture (`∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n`) remains **OPEN**.",
       "artifact": [],
       "theorem_name": "∀ n > 1, Nat.totient n ∣ (n - 1) → Nat.Prime n",
       "kind": "prose-term",
@@ -3884,10 +3910,10 @@
       "class": "file-reference"
     },
     {
-      "id": "8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069",
-      "prose": "> **Manifest:** 1,690 rows, SHA-256 locked: `8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069`",
+      "id": "c0a2f08a35cf3d1bd9b93fb7601648bd4b4946a4b2412b20cb868916838c6312",
+      "prose": "> **Manifest:** 1,695 rows, SHA-256 locked: `c0a2f08a35cf3d1bd9b93fb7601648bd4b4946a4b2412b20cb868916838c6312`",
       "artifact": [],
-      "theorem_name": "8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069",
+      "theorem_name": "c0a2f08a35cf3d1bd9b93fb7601648bd4b4946a4b2412b20cb868916838c6312",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,

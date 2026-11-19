@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-19T07:58:49.108257+00:00
+- Generated: 2026-11-19T08:30:19.537230+00:00
 - README: `README.MD`
-- Total backticked citations: **338**
-- Lean claims: **82** (resolved: 82, unresolved: 0)
-- Citation kinds: `{'prose-term': 140, 'file-reference': 94, 'tooling': 19, 'lean-claim': 82, 'negative-reference': 3}`
+- Total backticked citations: **340**
+- Lean claims: **84** (resolved: 84, unresolved: 0)
+- Citation kinds: `{'prose-term': 140, 'file-reference': 94, 'tooling': 19, 'lean-claim': 84, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -90,8 +90,10 @@
 | `erdos_straus_bounded_up_to_50` | resolved | `lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean` | `local` | `bounded model` |
 | `gilbreath_parity_preservation_general` | resolved | `lean/spec_v4/certificates/GilbreathBoundedVerification.lean` | `local` | `bounded model` |
 | `gilbreath_first_20_primes` | resolved | `lean/spec_v4/certificates/GilbreathBoundedVerification.lean` | `local` | `bounded model` |
-| `no_lehmer_composite_up_to_100` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
+| `no_lehmer_composite_up_to_200` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
+| `lehmer_composite_must_be_odd` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
 | `lehmer_composite_must_be_squarefree` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
+| `lehmer_composite_odd_and_squarefree` | resolved | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean` | `local` | `bounded model` |
 
 ## Non-declaration citations
 
@@ -350,4 +352,4 @@
 - `Q²=mS ⇔ F=cη` — prose-term
 - `Q≠0 ⇒ S≥1` — prose-term
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `8c49daf5f1aaa4159374a54c97349fc882610b47932a944737b0d108a1d5c069` — prose-term
+- `c0a2f08a35cf3d1bd9b93fb7601648bd4b4946a4b2412b20cb868916838c6312` — prose-term

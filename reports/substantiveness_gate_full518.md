@@ -1,9 +1,9 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-19T07:58:38Z
-- Lean files: **518**  declarations: **2120**  predicates: **28**
+- Generated: 2026-11-19T08:20:15Z
+- Lean files: **518**  declarations: **2123**  predicates: **28**
 - Z3 premise check: **available**
-- Findings: HIGH **0**, MEDIUM **0**, LOW **523**
+- Findings: HIGH **0**, MEDIUM **0**, LOW **522**
 - Waived constant definitions: **4**
 - Verdict: **PASS**
 
@@ -532,7 +532,6 @@
 | LOW | `WITNESS_MISSING` | `lean/spec_v4/certificates/GilbreathBoundedVerification.lean:36` | `SatisfiesGilbreathHead` | predicate `SatisfiesGilbreathHead` is never applied to ground arguments or existentially witnessed |
 | LOW | `WITNESS_MISSING` | `lean/spec_v4/certificates/GoldbachBoundedVerification.lean:7` | `IsGoldbachDecomposable` | predicate `IsGoldbachDecomposable` is never applied to ground arguments or existentially witnessed |
 | LOW | `WITNESS_MISSING` | `lean/spec_v4/certificates/LegendreBoundedVerification.lean:22` | `HasPrimeBetweenSquares` | predicate `HasPrimeBetweenSquares` is never applied to ground arguments or existentially witnessed |
-| LOW | `WITNESS_MISSING` | `lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean:26` | `IsLehmerCompositeWitness` | predicate `IsLehmerCompositeWitness` is never applied to ground arguments or existentially witnessed |
 | LOW | `WITNESS_MISSING` | `lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean:21` | `IsTwinPrime` | predicate `IsTwinPrime` is never applied to ground arguments or existentially witnessed |
 
 ## Waived Constant Definitions
