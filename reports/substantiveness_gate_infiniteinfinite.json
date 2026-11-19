@@ -1,0 +1,64 @@
+{
+  "generated": "2026-11-19T14:46:50Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\InfiniteInFiniteSpace.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 24,
+  "predicates": 0,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "verdict": "PASS",
+  "findings": [],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/InfiniteInFiniteSpace.lean",
+      "declaration": "pigeonhole_finite",
+      "verdict": "KILLED",
+      "hypothesis": "h"
+    },
+    {
+      "file": "lean/spec_v4/InfiniteInFiniteSpace.lean",
+      "declaration": "pow_strict",
+      "verdict": "KILLED",
+      "hypothesis": "hab"
+    },
+    {
+      "file": "lean/spec_v4/InfiniteInFiniteSpace.lean",
+      "declaration": "grid_pigeonhole",
+      "verdict": "KILLED",
+      "hypothesis": "hn"
+    },
+    {
+      "file": "lean/spec_v4/InfiniteInFiniteSpace.lean",
+      "declaration": "landauer_bound",
+      "verdict": "KILLED",
+      "hypothesis": "hc"
+    },
+    {
+      "file": "lean/spec_v4/InfiniteInFiniteSpace.lean",
+      "declaration": "landauer_bound_mut",
+      "verdict": "KILLED",
+      "hypothesis": "hc"
+    }
+  ],
+  "mutation_summary": {
+    "total": 5,
+    "killed": 5,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/InfiniteInFiniteSpace.lean",
+      "class": "bounded-model",
+      "scope_declared": true,
+      "scope_text": ""
+    }
+  ]
+}

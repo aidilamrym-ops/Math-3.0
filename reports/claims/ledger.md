@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-19T13:11:14.484307+00:00
+- Generated: 2026-11-19T15:47:26.724913+00:00
 - README: `README.MD`
-- Total backticked citations: **353**
-- Lean claims: **93** (resolved: 93, unresolved: 0)
-- Citation kinds: `{'prose-term': 140, 'file-reference': 98, 'tooling': 19, 'lean-claim': 93, 'negative-reference': 3}`
+- Total backticked citations: **362**
+- Lean claims: **97** (resolved: 97, unresolved: 0)
+- Citation kinds: `{'prose-term': 142, 'file-reference': 101, 'tooling': 19, 'lean-claim': 97, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -19,7 +19,7 @@
 | `landauer_bits_le_energy` | resolved | `lean/spec_v4/LandauerBekensteinBound.lean` | `local` | `bounded model` |
 | `no_cloning_finite` | resolved | `lean/spec_v4/NoCloningFiniteDim.lean` | `local` | `bounded model` |
 | `euclid_infinite_primes` | resolved | `lean/spec_v4/EuclidFermatArmor.lean` | `local` | `bounded model` |
-| `pigeonhole_finite` | resolved | `lean/spec_v4/ErdosSzekeresRamsey.lean` | `local` | `bounded model` |
+| `pigeonhole_finite` | resolved | `lean/spec_v4/ErdosSzekeresRamsey.lean, lean/spec_v4/InfiniteInFiniteSpace.lean` | `local` | `bounded model` |
 | `erdos_szekeres_pair` | resolved | `lean/spec_v4/ErdosSzekeresRamsey.lean` | `local` | `bounded model` |
 | `ramsey_one_edge` | resolved | `lean/spec_v4/ErdosSzekeresRamsey.lean` | `local` | `bounded model` |
 | `actual_infinity_violates_conservation` | resolved | `lean/spec_v4/ActualInfinityRefutation.lean` | `local` | `kernel theorem` |
@@ -45,6 +45,10 @@
 | `exponential_dominates_linear_bound` | resolved | `lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean` | `local` | `kernel theorem` |
 | `circuit_density_ratio_vanishes` | resolved | `lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean` | `local` | `bounded model` |
 | `gauge_action_gap_scale_invariant` | resolved | `lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean` | `local` | `kernel theorem` |
+| `pow_strict` | resolved | `lean/spec_v4/InfiniteInFiniteSpace.lean` | `local` | `kernel theorem` |
+| `grid_pigeonhole` | resolved | `lean/spec_v4/InfiniteInFiniteSpace.lean` | `local` | `kernel theorem` |
+| `addedArea_lt_one` | resolved | `lean/spec_v4/InfiniteInFiniteSpace.lean` | `local` | `bounded model` |
+| `no_surjection_finite` | resolved | `lean/spec_v4/InfiniteInFiniteSpace.lean` | `local` | `bounded model` |
 | `collatzLoop_mono` | resolved | `lean/spec_v4/CollatzBoundedDefeat.lean` | `local` | `kernel theorem` |
 | `signChanges_pos_neg` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `kernel theorem` |
 | `signChanges_zero_ignored` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `kernel theorem` |
@@ -123,11 +127,6 @@
 - `implemented_by` — tooling
 - `extern` — tooling
 - `tools/full_surface_lean_audit.py` — file-reference
-- `AbcConjectureBoundedVerification.lean` — file-reference
-- `ErdosStrausBoundedVerification.lean` — file-reference
-- `GilbreathBoundedVerification.lean` — file-reference
-- `LehmerTotientBoundedVerification.lean` — file-reference
-- `RangeExpansionPack.lean` — file-reference
 - `make gate` — prose-term
 - `manifest.json` — file-reference
 - `repokeeper.py --verify` — prose-term
@@ -241,13 +240,20 @@
 - `hQ : Q ≠ 0 → 1 ≤ S` — prose-term
 - `hn` — prose-term
 - `hQ` — prose-term
+- `lean/spec_v4/InfiniteInFiniteSpace.lean` — file-reference
+- `5/5` — file-reference
+- `4^n` — prose-term
+- `2^n` — prose-term
+- `Fin n → Fin (2^n)` — prose-term
+- `[]` — prose-term
 - `PASS` — prose-term
-- `BRIDGE-01` — prose-term
-- `BRIDGE-06` — prose-term
-- `SophieGermainFermatTheorem.lean` — file-reference
-- `GoldbachBoundedVerification.lean` — file-reference
-- `LegendreBoundedVerification.lean` — file-reference
-- `TwinPrimeBoundedVerification.lean` — file-reference
+- `AbcConjectureBoundedVerification.lean` — file-reference
+- `ErdosStrausBoundedVerification.lean` — file-reference
+- `GilbreathBoundedVerification.lean` — file-reference
+- `LehmerTotientBoundedVerification.lean` — file-reference
+- `NewConjectureBatchI.lean` — file-reference
+- `RangeExpansionPack.lean` — file-reference
+- `InfiniteInFiniteSpace.lean` — file-reference
 - `[10, 0, 0]` — prose-term
 - `false` — tooling
 - `decide` — tooling
@@ -290,12 +296,15 @@
 - `is_complete: true` — prose-term
 - `verdict: PASS` — prose-term
 - `pass_with_warnings: 0` — prose-term
-- `NewConjectureBatchI.lean` — file-reference
+- `SophieGermainFermatTheorem.lean` — file-reference
+- `GoldbachBoundedVerification.lean` — file-reference
+- `LegendreBoundedVerification.lean` — file-reference
+- `TwinPrimeBoundedVerification.lean` — file-reference
 - `python tools/readme_theorem_audit.py` — file-reference
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
-- `reports/substantiveness_gate_full522.json` — file-reference
+- `reports/substantiveness_gate_full523.json` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -365,4 +374,4 @@
 - `Q≠0 ⇒ S≥1` — prose-term
 - `lean/spec_v4/certificates/NewConjectureBatchI.lean` — file-reference
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `d80c47ef29c4283416a694dd8ec912ac8df64aff77f7897332d7da221ca7569b` — prose-term
+- `3b91dabbaf2eaa8618ca1d929cb9247ff4c770de4ec0a90a719cc44afe65b726` — prose-term

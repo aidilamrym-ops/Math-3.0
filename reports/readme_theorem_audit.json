@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-19T13:31:46.626823+00:00",
+  "generated": "2026-11-19T15:45:39.023633+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "1e4586e6ab80529cf8e19142e17d62fdf1633168ea0d636dfd1bc1e3bf1ccb56",
+  "readme_semantic_sha256": "b541a81c9c00c9489658b76059ccfbd59f771589b18be3cad71b6b938f97bffa",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 93,
-  "resolved": 93,
+  "cited_identifiers": 97,
+  "resolved": 97,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -20,6 +20,9 @@
     ],
     "actual_infinity_violates_conservation": [
       "lean/spec_v4/ActualInfinityRefutation.lean"
+    ],
+    "addedArea_lt_one": [
+      "lean/spec_v4/InfiniteInFiniteSpace.lean"
     ],
     "advection_energy_neutrality": [
       "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean"
@@ -154,6 +157,9 @@
     "goldbach_even_gt_six_odd_primes": [
       "lean/spec_v4/certificates/GoldbachBoundedVerification.lean"
     ],
+    "grid_pigeonhole": [
+      "lean/spec_v4/InfiniteInFiniteSpace.lean"
+    ],
     "grid_sequential_compactness": [
       "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean"
     ],
@@ -226,6 +232,9 @@
     "no_lehmer_composite_up_to_200": [
       "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
     ],
+    "no_surjection_finite": [
+      "lean/spec_v4/InfiniteInFiniteSpace.lean"
+    ],
     "oppermann_bounded_up_to_100": [
       "lean/spec_v4/certificates/NewConjectureBatchI.lean"
     ],
@@ -240,7 +249,11 @@
       "lean/spec_v4/DecidableHomotopySphere.lean"
     ],
     "pigeonhole_finite": [
-      "lean/spec_v4/ErdosSzekeresRamsey.lean"
+      "lean/spec_v4/ErdosSzekeresRamsey.lean",
+      "lean/spec_v4/InfiniteInFiniteSpace.lean"
+    ],
+    "pow_strict": [
+      "lean/spec_v4/InfiniteInFiniteSpace.lean"
     ],
     "ramsey_one_edge": [
       "lean/spec_v4/ErdosSzekeresRamsey.lean"
