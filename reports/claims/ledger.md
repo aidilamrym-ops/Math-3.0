@@ -1,10 +1,10 @@
 # Claims Ledger
 
-- Generated: 2026-11-20T04:39:11.615764+00:00
+- Generated: 2026-11-20T05:45:17.920977+00:00
 - README: `README.MD`
-- Total backticked citations: **362**
-- Lean claims: **97** (resolved: 97, unresolved: 0)
-- Citation kinds: `{'prose-term': 142, 'file-reference': 101, 'tooling': 19, 'lean-claim': 97, 'negative-reference': 3}`
+- Total backticked citations: **401**
+- Lean claims: **117** (resolved: 117, unresolved: 0)
+- Citation kinds: `{'prose-term': 155, 'file-reference': 107, 'tooling': 19, 'lean-claim': 117, 'negative-reference': 3}`
 
 ## Lean claims
 
@@ -49,6 +49,26 @@
 | `grid_pigeonhole` | resolved | `lean/spec_v4/InfiniteInFiniteSpace.lean` | `local` | `kernel theorem` |
 | `addedArea_lt_one` | resolved | `lean/spec_v4/InfiniteInFiniteSpace.lean` | `local` | `bounded model` |
 | `no_surjection_finite` | resolved | `lean/spec_v4/InfiniteInFiniteSpace.lean` | `local` | `bounded model` |
+| `geom_half_sum` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `geom_half_sum_le_two` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `geom_half_pow_le_one` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `finite_telescope_bound` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `finite_telescope_bound_lower` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `finite_oscillation_bound` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `geometric_step_bound` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `geometric_trapped` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `geometric_tail_bound` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `kernel theorem` |
+| `geometric_window_bound` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `kernel theorem` |
+| `discrete_cluster_point` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `shifted_pigeonhole` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `arbitrarily_late_repetition` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `finite_orbit_recurrence` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `orbit_periodic_of_repeat` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `descent_budget` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `no_infinite_nat_descent` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `bounded_nat_repetition` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `bounded_nat_image_card` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
+| `bounded_grid_accumulation` | resolved | `lean/spec_v4/FiniteLimitBoundary.lean` | `local` | `bounded model` |
 | `collatzLoop_mono` | resolved | `lean/spec_v4/CollatzBoundedDefeat.lean` | `local` | `kernel theorem` |
 | `signChanges_pos_neg` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `kernel theorem` |
 | `signChanges_zero_ignored` | resolved | `lean/spec_v4/SturmTarskiIsolation.lean` | `local` | `kernel theorem` |
@@ -127,6 +147,7 @@
 - `implemented_by` — tooling
 - `extern` — tooling
 - `tools/full_surface_lean_audit.py` — file-reference
+- `FiniteLimitBoundary.lean` — file-reference
 - `make gate` — prose-term
 - `manifest.json` — file-reference
 - `repokeeper.py --verify` — prose-term
@@ -246,6 +267,24 @@
 - `2^n` — prose-term
 - `Fin n → Fin (2^n)` — prose-term
 - `[]` — prose-term
+- `lean/spec_v4/FiniteLimitBoundary.lean` — file-reference
+- `9/9` — file-reference
+- `∑_{k<N} 2^{-k} = 2 - 2·2^{-N}` — prose-term
+- `N·d` — prose-term
+- `±M/2^k` — file-reference
+- `[a 0 - 2M, a 0 + 2M]` — prose-term
+- `2M/2^i` — file-reference
+- `2M` — prose-term
+- `Fin K` — prose-term
+- `K` — prose-term
+- `a N + N ≤ a 0` — prose-term
+- `ℕ` — prose-term
+- `B+1` — prose-term
+- `reports/axiom_footprint_audit_FiniteLimitBoundary.json` — file-reference
+- `#print axioms ⊆ [propext, Classical.choice, Quot.sound]` — prose-term
+- `HIGH=0` — prose-term
+- `MEDIUM=0` — prose-term
+- `LOW=0` — prose-term
 - `PASS` — prose-term
 - `AbcConjectureBoundedVerification.lean` — file-reference
 - `ErdosStrausBoundedVerification.lean` — file-reference
@@ -304,7 +343,7 @@
 - `reports/readme_theorem_audit.json` — file-reference
 - `python tools/omega_audit/substantiveness_gate.py` — file-reference
 - `reports/AUDIT_METHODOLOGY.md` — file-reference
-- `reports/substantiveness_gate_full523.json` — file-reference
+- `reports/substantiveness_gate_full524.json` — file-reference
 - `reports/substantiveness_gate_regression.json` — file-reference
 - `reports/model_scope_manifest.json` — file-reference
 - `DiscreteSylvesterInertiaTraceNormInvariant.lean` — file-reference
@@ -374,4 +413,4 @@
 - `Q≠0 ⇒ S≥1` — prose-term
 - `lean/spec_v4/certificates/NewConjectureBatchI.lean` — file-reference
 - `tools/audit_hardcoded_nodes.py` — file-reference
-- `b890297caf65fed8fd882445b6c72b7339db9ea98077d654a342aa74646052f2` — prose-term
+- `60ef6db384f2ef7c2de5ead403f6d4c89659bd0018530b9f5a2e91fb2ea677fd` — prose-term

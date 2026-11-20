@@ -1,10 +1,10 @@
 # README Lean Claim Audit
 
-- Generated: 2026-11-19T13:22:08.848298+00:00
-- Workers: 1
-- Cited unique files: 40
+- Generated: 2026-11-20T05:54:01.527001+00:00
+- Workers: 2
+- Cited unique files: 42
 - Unresolved citations: 0
-- Counts: {'PASS': 40}
+- Counts: {'PASS': 42}
 
 | Status | File | Notes |
 |---|---|---|
@@ -15,6 +15,8 @@
 | PASS | `lean\spec_v4\ErdosSzekeresRamsey.lean` |  |
 | PASS | `lean\spec_v4\EuclidFermatArmor.lean` |  |
 | PASS | `lean\spec_v4\EvenUnimodularObstruction.lean` |  |
+| PASS | `lean\spec_v4\FiniteLimitBoundary.lean` |  |
+| PASS | `lean\spec_v4\InfiniteInFiniteSpace.lean` |  |
 | PASS | `lean\spec_v4\LandauerBekensteinBound.lean` |  |
 | PASS | `lean\spec_v4\LatticeInstantonBound.lean` |  |
 | PASS | `lean\spec_v4\NoCloningFiniteDim.lean` |  |

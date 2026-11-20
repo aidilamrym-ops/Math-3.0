@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-20T04:38:25.727477+00:00",
+  "generated": "2026-11-20T05:45:17.703990+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "01ce72e253fc916494e69205830d3eea9c27c0a5acaabc627604d3058946f69d",
+  "readme_semantic_sha256": "21b63b8be838839e33c0b1d8477c5898ab164ad60dd0e0e452a7509bf04a6e7c",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 97,
-  "resolved": 97,
+  "cited_identifiers": 117,
+  "resolved": 117,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -26,6 +26,18 @@
     ],
     "advection_energy_neutrality": [
       "lean/spec_v4/bridges/SkewSymmetricAdvectionBridge.lean"
+    ],
+    "arbitrarily_late_repetition": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "bounded_grid_accumulation": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "bounded_nat_image_card": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "bounded_nat_repetition": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
     ],
     "bps_bound": [
       "lean/spec_v4/LatticeInstantonBound.lean"
@@ -73,6 +85,12 @@
     "degreeMap_linear": [
       "lean/spec_v4/DecidableHomotopySphere.lean",
       "lean/spec_v4/HorizonFrontierTests.lean"
+    ],
+    "descent_budget": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "discrete_cluster_point": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
     ],
     "discrete_summation_by_parts": [
       "lean/spec_v4/bridges/WeakOperatorConsistencyBridge.lean"
@@ -125,6 +143,18 @@
     "finitary_information_conservation": [
       "lean/spec_v4/UniversalFinitaryInformationConservation.lean"
     ],
+    "finite_orbit_recurrence": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "finite_oscillation_bound": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "finite_telescope_bound": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "finite_telescope_bound_lower": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
     "flat_step_zero_dissipation": [
       "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
     ],
@@ -138,6 +168,27 @@
     ],
     "gauge_action_gap_scale_invariant": [
       "lean/spec_v4/bridges/AsymptoticCircuitGaugeBridge.lean"
+    ],
+    "geom_half_pow_le_one": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "geom_half_sum": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "geom_half_sum_le_two": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "geometric_step_bound": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "geometric_tail_bound": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "geometric_trapped": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "geometric_window_bound": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
     ],
     "gilbreath_first_20_primes": [
       "lean/spec_v4/certificates/GilbreathBoundedVerification.lean"
@@ -226,6 +277,9 @@
     "no_finite_time_blowup": [
       "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
     ],
+    "no_infinite_nat_descent": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
     "no_lehmer_composite_up_to_1000": [
       "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
     ],
@@ -237,6 +291,9 @@
     ],
     "oppermann_bounded_up_to_100": [
       "lean/spec_v4/certificates/NewConjectureBatchI.lean"
+    ],
+    "orbit_periodic_of_repeat": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
     ],
     "path_induction": [
       "lean/spec_v4/HigherInductivePushout.lean",
@@ -260,6 +317,9 @@
     ],
     "reyssat_abc_triple_witness": [
       "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean"
+    ],
+    "shifted_pigeonhole": [
+      "lean/spec_v4/FiniteLimitBoundary.lean"
     ],
     "signChanges_pos_neg": [
       "lean/spec_v4/SturmTarskiIsolation.lean"

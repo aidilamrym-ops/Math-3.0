@@ -1,0 +1,274 @@
+{
+  "generated": "2026-11-20 13:41:00",
+  "elapsed_seconds": 19.0,
+  "files_scanned": 1,
+  "files_with_theorems": 1,
+  "theorems_total": 28,
+  "allowlist": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_usage": {
+    "propext": 26,
+    "Quot.sound": 26,
+    "Classical.choice": 22
+  },
+  "violations": [],
+  "inconclusive": [],
+  "compile_errors": [],
+  "failed": [],
+  "results": [
+    {
+      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
+      "status": "PROBED",
+      "rc": 0,
+      "seconds": 19.02,
+      "theorems": [
+        {
+          "name": "Math30.FiniteLimitBoundary.geom_half_sum",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.geom_half_sum_le_two",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.geom_half_pow_le_one",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.finite_telescope_bound",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.finite_telescope_bound_lower",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.finite_oscillation_bound",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.geometric_step_bound",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.geometric_trapped",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.geometric_tail_bound",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.geometric_window_bound",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.discrete_cluster_point",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.shifted_pigeonhole",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.arbitrarily_late_repetition",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.orbit_zero",
+          "status": "CLEAN",
+          "axioms": []
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.orbit_succ",
+          "status": "CLEAN",
+          "axioms": []
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.orbit_periodic_of_repeat",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.finite_orbit_recurrence",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.descent_budget",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.no_infinite_nat_descent",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.bounded_nat_repetition",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.bounded_nat_image_card",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.bounded_grid_accumulation",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.finite_telescope_bound_mut",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.geometric_step_bound_mut",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.arbitrarily_late_repetition_mut",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.finite_orbit_recurrence_mut",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.no_infinite_nat_descent_mut",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math30.FiniteLimitBoundary.bounded_grid_accumulation_mut",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "violations": [],
+      "inconclusive": [],
+      "error": ""
+    }
+  ]
+}

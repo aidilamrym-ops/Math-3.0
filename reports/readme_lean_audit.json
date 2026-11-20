@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-19T13:22:08.848298+00:00",
+  "generated": "2026-11-20T05:54:01.527001+00:00",
   "readme": "README.MD",
-  "workers": 1,
-  "cited_unique_files": 40,
+  "workers": 2,
+  "cited_unique_files": 42,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 40
+    "PASS": 42
   },
   "results": [
     {
@@ -62,6 +62,22 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\FiniteLimitBoundary.lean",
+      "lean_path": "spec_v4\\FiniteLimitBoundary.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"FiniteLimitBoundary module compiled with zero placeholders.\"\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\InfiniteInFiniteSpace.lean",
+      "lean_path": "spec_v4\\InfiniteInFiniteSpace.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"InfiniteInFiniteSpace module compiled with zero placeholders.\"\n",
       "stderr": ""
     },
     {

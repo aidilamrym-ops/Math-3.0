@@ -1,46 +1,79 @@
 {
-  "generated": "2026-11-20T04:37:47Z",
+  "generated": "2026-11-20T05:39:46Z",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\FiniteLimitBoundary.lean"
   ],
   "lean_files": 1,
-  "declarations": 4,
+  "declarations": 29,
   "predicates": 0,
   "z3_available": true,
   "waivers_applied": [],
   "counts": {
     "HIGH": 0,
     "MEDIUM": 0,
-    "LOW": 1
+    "LOW": 0
   },
   "verdict": "PASS",
-  "findings": [
-    {
-      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
-      "line": 34,
-      "declaration": "finite_telescope_bound",
-      "severity": "LOW",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "detail": "hypothesis `_hd : 0 ≤ d` is not referenced in the proof"
-    }
-  ],
+  "findings": [],
   "mutations": [
     {
       "file": "lean/spec_v4/FiniteLimitBoundary.lean",
-      "declaration": "finite_telescope_bound",
+      "declaration": "geometric_step_bound",
       "verdict": "KILLED",
-      "hypothesis": "_hd"
+      "hypothesis": "hM"
     },
     {
       "file": "lean/spec_v4/FiniteLimitBoundary.lean",
-      "declaration": "finite_telescope_bound_mut",
+      "declaration": "geometric_trapped",
       "verdict": "KILLED",
-      "hypothesis": "_hd"
+      "hypothesis": "hM"
+    },
+    {
+      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
+      "declaration": "geometric_tail_bound",
+      "verdict": "KILLED",
+      "hypothesis": "hM"
+    },
+    {
+      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
+      "declaration": "geometric_window_bound",
+      "verdict": "KILLED",
+      "hypothesis": "hM"
+    },
+    {
+      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
+      "declaration": "bounded_nat_repetition",
+      "verdict": "KILLED",
+      "hypothesis": "hz"
+    },
+    {
+      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
+      "declaration": "bounded_nat_image_card",
+      "verdict": "KILLED",
+      "hypothesis": "hz"
+    },
+    {
+      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
+      "declaration": "bounded_grid_accumulation",
+      "verdict": "KILLED",
+      "hypothesis": "hbound"
+    },
+    {
+      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
+      "declaration": "geometric_step_bound_mut",
+      "verdict": "KILLED",
+      "hypothesis": "hM"
+    },
+    {
+      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
+      "declaration": "bounded_grid_accumulation_mut",
+      "verdict": "KILLED",
+      "hypothesis": "hbound"
     }
   ],
   "mutation_summary": {
-    "total": 2,
-    "killed": 2,
+    "total": 9,
+    "killed": 9,
     "survived": 0,
     "survival_rate": 0.0
   },
