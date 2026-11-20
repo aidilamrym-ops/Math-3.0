@@ -1,62 +1,14 @@
 {
-  "generated": "2026-11-19T11:13:31Z",
+  "generated": "2026-11-20T04:37:47Z",
   "counts": {
-    "bounded-model": 0,
-    "pure-theorem": 9,
-    "scope_undeclared": 1
+    "bounded-model": 1,
+    "pure-theorem": 0,
+    "scope_undeclared": 0
   },
   "files": [
     {
-      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
-      "class": "pure-theorem",
-      "scope_declared": false,
-      "scope_text": null
-    },
-    {
-      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
-      "class": "pure-theorem",
-      "scope_declared": true,
-      "scope_text": "Scope: `goldbach_bounded_up_to_100` and `goldbach_bounded_up_to_500` are"
-    },
-    {
-      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
-      "class": "pure-theorem",
-      "scope_declared": true,
-      "scope_text": ""
-    },
-    {
-      "file": "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean",
-      "class": "pure-theorem",
-      "scope_declared": true,
-      "scope_text": ""
-    },
-    {
-      "file": "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean",
-      "class": "pure-theorem",
-      "scope_declared": true,
-      "scope_text": ""
-    },
-    {
-      "file": "lean/spec_v4/certificates/ErdosStrausBoundedVerification.lean",
-      "class": "pure-theorem",
-      "scope_declared": true,
-      "scope_text": ""
-    },
-    {
-      "file": "lean/spec_v4/certificates/GilbreathBoundedVerification.lean",
-      "class": "pure-theorem",
-      "scope_declared": true,
-      "scope_text": ""
-    },
-    {
-      "file": "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean",
-      "class": "pure-theorem",
-      "scope_declared": true,
-      "scope_text": ""
-    },
-    {
-      "file": "lean/spec_v4/certificates/RangeExpansionPack.lean",
-      "class": "pure-theorem",
+      "file": "lean/spec_v4/FiniteLimitBoundary.lean",
+      "class": "bounded-model",
       "scope_declared": true,
       "scope_text": ""
     }

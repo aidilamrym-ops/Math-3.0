@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-20T01:14:12.356400+00:00",
+  "generated": "2026-11-20T04:39:11.615764+00:00",
   "readme": "README.MD",
-  "readme_semantic_sha256": "09d1cff4f16f412a48e0942a14cf2233cd0fb6be8f1ec38f108a5c3ac82dc520",
+  "readme_semantic_sha256": "01ce72e253fc916494e69205830d3eea9c27c0a5acaabc627604d3058946f69d",
   "entries": 362,
   "claims": 97,
   "resolved_claims": 97,
@@ -4179,10 +4179,10 @@
       "class": "file-reference"
     },
     {
-      "id": "3768f7aae266f0e81ebc6842aade33211063ea394a02235e301ab406f87a037a",
-      "prose": "> **Manifest:** 1,726 rows, SHA-256 locked: `3768f7aae266f0e81ebc6842aade33211063ea394a02235e301ab406f87a037a`",
+      "id": "b890297caf65fed8fd882445b6c72b7339db9ea98077d654a342aa74646052f2",
+      "prose": "> **Manifest:** 1,727 rows, SHA-256 locked: `b890297caf65fed8fd882445b6c72b7339db9ea98077d654a342aa74646052f2`",
       "artifact": [],
-      "theorem_name": "3768f7aae266f0e81ebc6842aade33211063ea394a02235e301ab406f87a037a",
+      "theorem_name": "b890297caf65fed8fd882445b6c72b7339db9ea98077d654a342aa74646052f2",
       "kind": "prose-term",
       "status": "not-a-declaration",
       "is_claim": false,

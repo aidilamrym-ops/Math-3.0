@@ -1,7 +1,7 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-19T01:20:00Z
-- Lean files: **1**  declarations: **3**  predicates: **1**
+- Generated: 2026-11-20T04:37:47Z
+- Lean files: **1**  declarations: **4**  predicates: **0**
 - Z3 premise check: **available**
 - Findings: HIGH **0**, MEDIUM **0**, LOW **1**
 - Waived constant definitions: **0**
@@ -11,7 +11,7 @@
 
 | Severity | Code | File:Line | Declaration | Detail |
 |---|---|---|---|---|
-| LOW | `WITNESS_MISSING` | `lean/spec_v4/certificates/GoldbachBoundedVerification.lean:7` | `IsGoldbachDecomposable` | predicate `IsGoldbachDecomposable` is never applied to ground arguments or existentially witnessed |
+| LOW | `HYPOTHESIS_NOT_REFERENCED` | `lean/spec_v4/FiniteLimitBoundary.lean:34` | `finite_telescope_bound` | hypothesis `_hd : 0 ≤ d` is not referenced in the proof |
 
 ## Mutation Results
 
@@ -19,6 +19,6 @@
 
 | File | Declaration | Hypothesis | Verdict |
 |---|---|---|---|
-| `lean/spec_v4/certificates/GoldbachBoundedVerification.lean` | `goldbach_bounded_up_to_100` | `hn` | **KILLED** |
-| `lean/spec_v4/certificates/GoldbachBoundedVerification.lean` | `goldbach_even_gt_six_odd_primes` | `hn` | **KILLED** |
+| `lean/spec_v4/FiniteLimitBoundary.lean` | `finite_telescope_bound` | `_hd` | **KILLED** |
+| `lean/spec_v4/FiniteLimitBoundary.lean` | `finite_telescope_bound_mut` | `_hd` | **KILLED** |
 
