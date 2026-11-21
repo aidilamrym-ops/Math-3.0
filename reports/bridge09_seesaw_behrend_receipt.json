@@ -1,16 +1,142 @@
 {
+  "generated_utc": "2026-11-21T14:10:59.259243+00:00",
+  "bridge": "BRIDGE-09 SeesawBehrendLatticeBridge",
+  "validator_version": "2026-11-21-honest-rebuild",
   "status": "PASS_REAL_FLINT",
-  "n_neg": 0,
-  "zero_straddle": false,
-  "dsitni_ratio": 0.24,
-  "dibd_ratio": 0.58,
+  "precision_bits": 6000,
+  "matrix_definition": "64x64 symmetric tridiagonal: M[i][i] = i + 10, M[i][i+1] = M[i+1][i] = -1",
+  "matrix_role": "independent numerical witness for kernel inertia, DSITNI and DIBD; the Lean theorems are parametric and do not assume this matrix",
   "inertia": [
     64,
     0,
     0
   ],
+  "n_neg": 0,
+  "zero_straddle": false,
+  "eigenvalue_isolation_certified": true,
+  "eigenvalue_enclosures_sample": [
+    "[9.253805817096642429413116032327944259688742197533292979661343457957269709398607485001628494434304120754399779201444159",
+    "[10.78932135266695351167230036606637973302798109340878284822935251576478277809928177738596207576661824208721473774220023",
+    "[11.96105888069355911023259409736288115180413714129503779604884217907358142038099271619691997890983291922810265663863161"
+  ],
+  "sylvester_leading_minors_positive": true,
+  "dsitni_ratio": {
+    "num": 1493052349626679378417046310076264648513458539140136327322432550123451445219157181760979596410100334834940,
+    "den": 239030813970234220280755833630784473828591093969790722722023153075275393699515249628085411677150419093827497
+  },
+  "dsitni_ratio_decimal": "0.006246275636",
+  "dsitni_below_half": true,
+  "dibd_ratio": {
+    "num": 11294745061099019429737849384040128969766688396551451148516775475629408012853901064838335701717984225,
+    "den": 11294745061099019429737849384040128969766688396551451148516775475629408012853901064838335701718116416
+  },
+  "dibd_ratio_decimal": "0.999999999999",
+  "dibd_below_one": true,
   "exact_rational_enclosure": {
-    "num": 4142,
-    "den": 10000
-  }
+    "num": 10,
+    "den": 1,
+    "meaning": "minimum leading principal minor D_1..D_64 (exact Sylvester witness)"
+  },
+  "determinant": {
+    "num": 11294745061099019429737849384040128969766688396551451148516775475629408012853901064838335701717984225,
+    "den": 1
+  },
+  "theorem_checks": {
+    "period_invariance": {
+      "name": "rallis_seesaw_period_invariance",
+      "ok": true,
+      "reference_sum": {
+        "num": 2080,
+        "den": 97
+      },
+      "channel_sums": [
+        {
+          "num": 2080,
+          "den": 97
+        },
+        {
+          "num": 2080,
+          "den": 97
+        },
+        {
+          "num": 2080,
+          "den": 97
+        }
+      ],
+      "zero_period_case_ok": true,
+      "empty_index_case_ok": true,
+      "channels": 3
+    },
+    "poincare_bound": {
+      "name": "poincare_column_orthogonality_bound",
+      "ok": true,
+      "sum_of_margins": {
+        "num": 821,
+        "den": 2
+      },
+      "min_margin": {
+        "num": 1,
+        "den": 1
+      },
+      "negative_offdiagonal_witness": "-1/2",
+      "equality_boundary_ok": true,
+      "empty_sum_ok": true
+    },
+    "behrend_ceiling": {
+      "name": "behrend_lattice_density_ceiling",
+      "ok": true,
+      "density_sum": {
+        "num": 8,
+        "den": 25
+      },
+      "density_cap": {
+        "num": 4143,
+        "den": 10000
+      },
+      "density_sum_below_cap": true,
+      "cap_equality_case_ok": true,
+      "unit_density_boundary_ok": true,
+      "sqrt2_minus_one_enclosure": {
+        "lower": {
+          "num": 2071,
+          "den": 5000
+        },
+        "upper": {
+          "num": 4143,
+          "den": 10000
+        },
+        "lower_square_below_two": true,
+        "upper_square_above_two": true,
+        "ok": true,
+        "meaning": "4142/10000 < sqrt(2)-1 < 4143/10000, checked by integer squares"
+      }
+    }
+  },
+  "negative_controls": [
+    {
+      "control": "indefinite_diagonal",
+      "expected": [
+        2,
+        1,
+        0
+      ],
+      "observed_inertia": [
+        2,
+        1,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "control": "singular_diagonal_fail_closed",
+      "expected": "not certified or zero_straddle",
+      "observed_inertia": [
+        0,
+        0,
+        0
+      ],
+      "non_isolated_eigenvalues": 3,
+      "ok": true
+    }
+  ]
 }

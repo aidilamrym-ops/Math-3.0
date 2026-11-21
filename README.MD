@@ -377,7 +377,7 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 
 **Load-bearing hypothesis:** Primary hypotheses `hinv`/`hnonneg`, `hdom`, and `hind`/`hcap` respectively; each is essential to its declaration.
 
-**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`). Python-flint validator: `tools/seesaw_behrend_bridge_validator.py` (PASS_REAL_FLINT, inertia `[64,0,0]`, `dsitni_ratio=0.24`, `dibd_ratio=0.58`).
+**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`). Python-flint validator: `tools/seesaw_behrend_bridge_validator.py` (PASS_REAL_FLINT, 6000-bit `arb_mat.eig` inertia `[64,0,0]`, `certified=true`, `zero_straddle=false`, `dsitni=0.006246275636 < 1/2`, `dibd=0.999999999999 < 1`, min leading minor `10`, certified `sqrt(2)-1` enclosure `4142/10000 < sqrt(2)-1 < 4143/10000`, indefinite + singular negative controls PASS).
 
 **Scope:** Finite Iwasawa lattice dimension `N : ℕ`. **Claims:** Rallis seesaw period invariance, Poincaré column orthogonality bound, Behrend density ceiling. **Does NOT claim:** full Behrend extremal density or Iwasawa-Tate convergence.
 
@@ -394,7 +394,7 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 
 **Load-bearing hypothesis:** Primary hypotheses `hunit`, `hw`/`hΦ`, and `hrad`/`henc` respectively; each is essential to its declaration.
 
-**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`). Python-flint validator: `tools/grh_character_bridge_validator.py` (PASS_REAL_FLINT, inertia `[64,0,0]`, `dsitni_ratio=0.21`, `dibd_ratio=0.52`).
+**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`). Python-flint validator: `tools/grh_character_bridge_validator.py` (PASS_REAL_FLINT, 6000-bit `arb_mat.eig` inertia `[64,0,0]`, `certified=true`, `zero_straddle=false`, `dsitni=0.005849113223 < 1/2`, `dibd=0.999999999999 < 1`, min leading minor `4`, exact character/window/endpoint theorem checks PASS, indefinite + singular negative controls PASS).
 
 **Scope:** Finite character lattice dimension `N : ℕ`. **Claims:** Character orthogonality bound, GRH window positivity, Masullo gap enclosure. **Does NOT claim:** proof of GRH or Riemann Hypothesis; GRH remains OPEN.
 
@@ -658,10 +658,10 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-3c9d71bcd8b3147e40943dd89b371ae039f1f52d46960681b41e85efad28fdb7
+bbf3f6552ae6de218d3738c2caaec12425595bd0dc0fd32aa18357438609c79f
 ```
 
-**Manifest Rows:** 1,749 files pinned  
+**Manifest Rows:** 1,751 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Sat Nov 21 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -708,7 +708,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,749-row SHA-256 ledger
+├── manifest.json                  # 1,751-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -835,7 +835,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,749 rows, SHA-256 locked: `3c9d71bcd8b3147e40943dd89b371ae039f1f52d46960681b41e85efad28fdb7`  
+> **Manifest:** 1,751 rows, SHA-256 locked: `bbf3f6552ae6de218d3738c2caaec12425595bd0dc0fd32aa18357438609c79f`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 ---

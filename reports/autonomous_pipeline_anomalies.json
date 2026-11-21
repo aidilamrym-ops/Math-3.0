@@ -953,7 +953,33 @@
       "impact": "The README advertised a real-flint inertia receipt for BRIDGE-08 that no computation ever produced; the certificate could not fail.",
       "action": "Rebuilt with exact-rational theorem checks (Bost height budget boundary, Parseval energy bound, iterated remainder suppression), genuine 64x64 arb_mat eigenvalue inertia at 6000 bits, exact DSITNI/DIBD from the same matrix, and two negative controls. Observed: inertia [64,0,0], certified=True, dsitni=0.006347484063, dibd=0.999999999999, min leading minor 3. Exit 0 only when every check passes.",
       "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0073",
+      "batch": 16,
+      "asset": "tools/seesaw_behrend_bridge_validator.py",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "CRITICAL",
+      "category": "FABRICATED_PASS",
+      "finding": "The BRIDGE-09 validator printed PASS_REAL_FLINT while every reported quantity was a literal: n_neg=0, zero_straddle=False, dsitni_ratio=0.24, dibd_ratio=0.58, inertia=[64,0,0], exact_rational_enclosure=4142/10000. Its only flint operation was (sqrt(2)-1)*64, unrelated to any seesaw Gram matrix; a missing flint import silently downgraded to PASS_CERTIFIED_FALLBACK.",
+      "evidence": "Original source lines 10-27: density_cap = flint.arb(\"0.414213...\"); total_cap = density_cap * 64; then a hard-coded results dict. No matrix, no eigenvalue, no DSITNI/DIBD computation existed. Archived at reports/flawed_artifacts/bridge_validator_hardcode_2026-11-21/seesaw_behrend_bridge_validator.hardcoded.original.py.",
+      "impact": "The README advertised a real-flint inertia receipt for BRIDGE-09 that no computation ever produced; the certificate could not fail, and absence of flint still produced a pass.",
+      "action": "Rebuilt with exact-rational instantiation checks of rallis_seesaw_period_invariance, poincare_column_orthogonality_bound and behrend_lattice_density_ceiling (empty-index, equality and unit-density boundaries); certified 4142/10000 < sqrt(2)-1 < 4143/10000 by integer squaring; genuine 64x64 arb_mat eigenvalue inertia at 6000 bits; exact DSITNI/DIBD; two negative controls; missing flint exits 2 with a FAIL receipt. Observed: inertia [64, 0, 0], certified=True, zero_straddle=False, dsitni=0.006246275636, dibd=0.999999999999, min leading minor 10/1, both controls PASS. Blocked-flint test observed exit 2 for both rebuilt validators.",
+      "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0074",
+      "batch": 16,
+      "asset": "tools/grh_character_bridge_validator.py",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "CRITICAL",
+      "category": "FABRICATED_PASS",
+      "finding": "The BRIDGE-10 validator printed PASS_REAL_FLINT while every reported quantity was a literal: n_neg=0, zero_straddle=False, dsitni_ratio=0.21, dibd_ratio=0.52, inertia=[64,0,0], exact_rational_enclosure=100/1. Its only flint operation was 1.0*64; a missing flint import silently downgraded to PASS_CERTIFIED_FALLBACK.",
+      "evidence": "Original source lines 10-27: char_ortho_bound = flint.arb(\"1.0\"); total_energy = char_ortho_bound * 64; then a hard-coded results dict. No matrix, no character sum, no eigenvalue or DSITNI/DIBD computation existed. Archived at reports/flawed_artifacts/bridge_validator_hardcode_2026-11-21/grh_character_bridge_validator.hardcoded.original.py.",
+      "impact": "The README advertised a real-flint inertia receipt for BRIDGE-10 that no computation ever produced; the certificate could not fail, and absence of flint still produced a pass.",
+      "action": "Rebuilt with exact-rational instantiation checks of dirichlet_character_orthogonality_bound, grh_explicit_window_positivity and masullo_gap_isolation_enclosure (empty-index, unit-modulus, zero-weight and endpoint-enclosure boundaries); genuine 64x64 arb_mat eigenvalue inertia at 6000 bits; exact DSITNI/DIBD; two negative controls; missing flint exits 2 with a FAIL receipt. Observed: inertia [64, 0, 0], certified=True, zero_straddle=False, dsitni=0.005849113223, dibd=0.999999999999, min leading minor 4/1, both controls PASS.",
+      "status": "FIXED"
     }
   ],
-  "updated_utc": "2026-11-21T13:55:02Z"
+  "updated_utc": "2026-11-21T14:11:40Z"
 }

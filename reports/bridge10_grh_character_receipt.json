@@ -1,16 +1,119 @@
 {
+  "generated_utc": "2026-11-21T14:11:21.307777+00:00",
+  "bridge": "BRIDGE-10 GrhCharacterLatticeBridge",
+  "validator_version": "2026-11-21-honest-rebuild",
   "status": "PASS_REAL_FLINT",
-  "n_neg": 0,
-  "zero_straddle": false,
-  "dsitni_ratio": 0.21,
-  "dibd_ratio": 0.52,
+  "precision_bits": 6000,
+  "matrix_definition": "64x64 symmetric tridiagonal: M[i][i] = 4, M[i][i+1] = M[i+1][i] = -1",
+  "matrix_role": "independent numerical witness for kernel inertia, DSITNI and DIBD; the Lean theorems are parametric and do not assume this matrix",
   "inertia": [
     64,
     0,
     0
   ],
+  "n_neg": 0,
+  "zero_straddle": false,
+  "eigenvalue_isolation_certified": true,
+  "eigenvalue_enclosures_sample": [
+    "[2.002335546335346823486764606759976369156207441776987127120945575134684966497262174767211773346149873635039701960371079",
+    "[2.009336730564702741970186496756722546998130579478910413091616636068942121915368359880449994979312629065699234150625887",
+    "[2.020987201097897795260315248640825102133260524780911237031240141716513530415432061896562057190957723761156280553934395"
+  ],
+  "sylvester_leading_minors_positive": true,
+  "dsitni_ratio": {
+    "num": 1661791572853671623512497415999598460500,
+    "den": 284110002548115853539491851701823524341507
+  },
+  "dsitni_ratio_decimal": "0.005849113223",
+  "dsitni_below_half": true,
+  "dibd_ratio": {
+    "num": 4335108450922621626554341085216343809,
+    "den": 4335108450922621626554341085216344960
+  },
+  "dibd_ratio_decimal": "0.999999999999",
+  "dibd_below_one": true,
   "exact_rational_enclosure": {
-    "num": 100,
+    "num": 4,
+    "den": 1,
+    "meaning": "minimum leading principal minor D_1..D_64 (exact Sylvester witness)"
+  },
+  "determinant": {
+    "num": 4335108450922621626554341085216343809,
     "den": 1
-  }
+  },
+  "theorem_checks": {
+    "character_orthogonality": {
+      "name": "dirichlet_character_orthogonality_bound",
+      "ok": true,
+      "square_sum": {
+        "num": 63,
+        "den": 2
+      },
+      "dimension_bound": 64,
+      "unit_modulus_boundary_equality": true,
+      "empty_index_case_ok": true,
+      "values": [
+        "-1",
+        "-1/2",
+        "0",
+        "1/2",
+        "1"
+      ]
+    },
+    "window_positivity": {
+      "name": "grh_explicit_window_positivity",
+      "ok": true,
+      "window_sum": {
+        "num": 318,
+        "den": 35
+      },
+      "min_term": {
+        "num": 1,
+        "den": 35
+      },
+      "zero_weight_case_ok": true,
+      "empty_sum_ok": true
+    },
+    "gap_isolation": {
+      "name": "masullo_gap_isolation_enclosure",
+      "ok": true,
+      "sum_at_lower_endpoints": {
+        "num": 536,
+        "den": 1
+      },
+      "min_lower_endpoint": {
+        "num": 1,
+        "den": 2
+      },
+      "interior_case_ok": true,
+      "empty_sum_ok": true
+    }
+  },
+  "negative_controls": [
+    {
+      "control": "indefinite_diagonal",
+      "expected": [
+        2,
+        1,
+        0
+      ],
+      "observed_inertia": [
+        2,
+        1,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "control": "singular_diagonal_fail_closed",
+      "expected": "not certified or zero_straddle",
+      "observed_inertia": [
+        0,
+        0,
+        0
+      ],
+      "non_isolated_eigenvalues": 3,
+      "ok": true
+    }
+  ]
 }
