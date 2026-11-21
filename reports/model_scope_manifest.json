@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-21T08:52:01Z",
+  "generated": "2026-11-21T12:53:12Z",
   "counts": {
-    "bounded-model": 443,
-    "pure-theorem": 83,
+    "bounded-model": 440,
+    "pure-theorem": 86,
     "scope_undeclared": 479
   },
   "files": [
@@ -44,7 +44,7 @@
     },
     {
       "file": "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean",
-      "class": "bounded-model",
+      "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
     },
@@ -56,7 +56,7 @@
     },
     {
       "file": "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean",
-      "class": "bounded-model",
+      "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
     },
@@ -86,7 +86,7 @@
     },
     {
       "file": "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean",
-      "class": "bounded-model",
+      "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
     },

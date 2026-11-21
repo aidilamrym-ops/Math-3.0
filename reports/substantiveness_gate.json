@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T08:52:01Z",
+  "generated": "2026-11-21T12:53:12Z",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
@@ -54,7 +54,7 @@
   "counts": {
     "HIGH": 0,
     "MEDIUM": 0,
-    "LOW": 528
+    "LOW": 525
   },
   "verdict": "PASS",
   "findings": [
@@ -899,14 +899,6 @@
       "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
     },
     {
-      "file": "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean",
-      "line": 1,
-      "declaration": "-",
-      "severity": "LOW",
-      "code": "SCOPE_UNDECLARED",
-      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
-    },
-    {
       "file": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
       "line": 1,
       "declaration": "-",
@@ -915,23 +907,7 @@
       "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
     },
     {
-      "file": "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean",
-      "line": 1,
-      "declaration": "-",
-      "severity": "LOW",
-      "code": "SCOPE_UNDECLARED",
-      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
-    },
-    {
       "file": "lean/spec_v4/bridges/SeesawBehrendLatticeBridge.lean",
-      "line": 1,
-      "declaration": "-",
-      "severity": "LOW",
-      "code": "SCOPE_UNDECLARED",
-      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
-    },
-    {
-      "file": "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean",
       "line": 1,
       "declaration": "-",
       "severity": "LOW",
@@ -4329,7 +4305,7 @@
     },
     {
       "file": "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean",
-      "class": "bounded-model",
+      "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
     },
@@ -4341,7 +4317,7 @@
     },
     {
       "file": "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean",
-      "class": "bounded-model",
+      "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
     },
@@ -4371,7 +4347,7 @@
     },
     {
       "file": "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean",
-      "class": "bounded-model",
+      "class": "pure-theorem",
       "scope_declared": false,
       "scope_text": null
     },

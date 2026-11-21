@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-21T08:59:36.367052+00:00",
+  "generated": "2026-11-21T13:13:17.316153+00:00",
   "readme": "D:\\Opencode AI Agent\\Math 3.0 Tools\\README.MD",
-  "readme_semantic_sha256": "d86a1e34e2e5f35019e4be51ea5f1e718df52f00dfc9b355dbb25fb5cb49c6a6",
+  "readme_semantic_sha256": "dee03f7b2f023ca094fdfc427e9850dd29dfe70bd62db51ce9bb31ec28057e55",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "cited_identifiers": 117,
-  "resolved": 117,
+  "cited_identifiers": 129,
+  "resolved": 129,
   "missing": 0,
   "missing_names": [],
   "resolved_map": {
@@ -29,6 +29,12 @@
     ],
     "arbitrarily_late_repetition": [
       "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "behrend_lattice_density_ceiling": [
+      "lean/spec_v4/bridges/SeesawBehrendLatticeBridge.lean"
+    ],
+    "bost_slope_height_budget_bound": [
+      "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean"
     ],
     "bounded_grid_accumulation": [
       "lean/spec_v4/FiniteLimitBoundary.lean"
@@ -88,6 +94,9 @@
     ],
     "descent_budget": [
       "lean/spec_v4/FiniteLimitBoundary.lean"
+    ],
+    "dirichlet_character_orthogonality_bound": [
+      "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean"
     ],
     "discrete_cluster_point": [
       "lean/spec_v4/FiniteLimitBoundary.lean"
@@ -155,6 +164,9 @@
     "finite_telescope_bound_lower": [
       "lean/spec_v4/FiniteLimitBoundary.lean"
     ],
+    "finite_theta_chain_truncation_bound": [
+      "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean"
+    ],
     "flat_step_zero_dissipation": [
       "lean/spec_v4/bridges/ScaleInvariantEnergyBridge.lean"
     ],
@@ -208,6 +220,9 @@
     "goldbach_even_gt_six_odd_primes": [
       "lean/spec_v4/certificates/GoldbachBoundedVerification.lean"
     ],
+    "grh_explicit_window_positivity": [
+      "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean"
+    ],
     "grid_pigeonhole": [
       "lean/spec_v4/InfiniteInFiniteSpace.lean"
     ],
@@ -238,8 +253,14 @@
     "instanton_bound_stable": [
       "lean/spec_v4/LatticeInstantonBound.lean"
     ],
+    "interlacing_determinant_positivity": [
+      "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean"
+    ],
     "interval_enclosure_preserves_weil_positivity": [
       "lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean"
+    ],
+    "iterated_parseval_remainder_suppression": [
+      "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean"
     ],
     "landauer_bits_le_energy": [
       "lean/spec_v4/LandauerBekensteinBound.lean"
@@ -267,6 +288,9 @@
     ],
     "lehmer_composite_odd_and_squarefree": [
       "lean/spec_v4/certificates/LehmerTotientBoundedVerification.lean"
+    ],
+    "masullo_gap_isolation_enclosure": [
+      "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean"
     ],
     "no_cloning_finite": [
       "lean/spec_v4/NoCloningFiniteDim.lean"
@@ -299,6 +323,9 @@
       "lean/spec_v4/HigherInductivePushout.lean",
       "lean/spec_v4/HorizonFrontierTests.lean"
     ],
+    "path_quadric_parseval_energy_conservation": [
+      "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean"
+    ],
     "pi_n_sphere_n_iso": [
       "lean/spec_v4/DecidableHomotopySphere.lean"
     ],
@@ -309,8 +336,14 @@
       "lean/spec_v4/ErdosSzekeresRamsey.lean",
       "lean/spec_v4/InfiniteInFiniteSpace.lean"
     ],
+    "poincare_column_orthogonality_bound": [
+      "lean/spec_v4/bridges/SeesawBehrendLatticeBridge.lean"
+    ],
     "pow_strict": [
       "lean/spec_v4/InfiniteInFiniteSpace.lean"
+    ],
+    "rallis_seesaw_period_invariance": [
+      "lean/spec_v4/bridges/SeesawBehrendLatticeBridge.lean"
     ],
     "ramsey_one_edge": [
       "lean/spec_v4/ErdosSzekeresRamsey.lean"
@@ -329,6 +362,9 @@
     ],
     "sturm_remainder_invariant": [
       "lean/spec_v4/SturmTarskiIsolation.lean"
+    ],
+    "theta_lift_interval_containment": [
+      "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean"
     ],
     "torus_betti_numbers": [
       "lean/spec_v4/HigherInductivePushout.lean"

@@ -1,9 +1,9 @@
 # Substantiveness Gate
 
-- Generated: 2026-11-21T08:52:01Z
+- Generated: 2026-11-21T12:53:12Z
 - Lean files: **526**  declarations: **2201**  predicates: **31**
 - Z3 premise check: **available**
-- Findings: HIGH **0**, MEDIUM **0**, LOW **528**
+- Findings: HIGH **0**, MEDIUM **0**, LOW **525**
 - Waived constant definitions: **4**
 - Verdict: **PASS**
 
@@ -126,11 +126,8 @@
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/GravitationalSingularityContainment.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/HigherInductivePushout.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/RamseyLatticeEnclosure.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
-| LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/bridges/BostSlopeParsevalBridge.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/bridges/ContinuumCompactnessBridge.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
-| LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/bridges/SeesawBehrendLatticeBridge.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
-| LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/certificates/AndersonEnclosureBoundsCertificate.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |
 | LOW | `SCOPE_UNDECLARED` | `lean/spec_v4/certificates/BealScale10to18Certificate.lean:1` | `-` | bounded-model file has no explicit Scope/Cakupan/Batas klaim header |

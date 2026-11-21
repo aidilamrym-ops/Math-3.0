@@ -1,10 +1,10 @@
 # README Lean Claim Audit
 
-- Generated: 2026-11-21T09:23:27.188649+00:00
-- Workers: 1
-- Cited unique files: 42
+- Generated: 2026-11-21T13:13:16.980770+00:00
+- Workers: 2
+- Cited unique files: 46
 - Unresolved citations: 0
-- Counts: {'PASS': 41, 'TIMEOUT': 1}
+- Counts: {'PASS': 46}
 
 | Status | File | Notes |
 |---|---|---|
@@ -26,10 +26,14 @@
 | PASS | `lean\spec_v4\UniversalFinitaryInformationConservation.lean` |  |
 | PASS | `lean\spec_v4\adversarial_tests\CoreGateAdversarialStressTest.lean` |  |
 | PASS | `lean\spec_v4\bridges\AsymptoticCircuitGaugeBridge.lean` |  |
+| PASS | `lean\spec_v4\bridges\BostSlopeParsevalBridge.lean` |  |
 | PASS | `lean\spec_v4\bridges\ContinuumCompactnessBridge.lean` |  |
+| PASS | `lean\spec_v4\bridges\GrhCharacterLatticeBridge.lean` |  |
 | PASS | `lean\spec_v4\bridges\GuinandWeilSpectralBridge.lean` |  |
 | PASS | `lean\spec_v4\bridges\ScaleInvariantEnergyBridge.lean` |  |
+| PASS | `lean\spec_v4\bridges\SeesawBehrendLatticeBridge.lean` |  |
 | PASS | `lean\spec_v4\bridges\SkewSymmetricAdvectionBridge.lean` |  |
+| PASS | `lean\spec_v4\bridges\ThetaLiftDeterminantBridge.lean` |  |
 | PASS | `lean\spec_v4\bridges\WeakOperatorConsistencyBridge.lean` |  |
 | PASS | `lean\spec_v4\certificates\AbcConjectureBoundedVerification.lean` |  |
 | PASS | `lean\spec_v4\certificates\BealScale10to18Certificate.lean` |  |
@@ -40,6 +44,7 @@
 | PASS | `lean\spec_v4\certificates\GoldbachBoundedVerification.lean` |  |
 | PASS | `lean\spec_v4\certificates\LegendreBoundedVerification.lean` |  |
 | PASS | `lean\spec_v4\certificates\LehmerTotientBoundedVerification.lean` |  |
+| PASS | `lean\spec_v4\certificates\NewConjectureBatchI.lean` |  |
 | PASS | `lean\spec_v4\certificates\RangeExpansionPack.lean` |  |
 | PASS | `lean\spec_v4\certificates\RiemannZetaInvariantCertificate.lean` |  |
 | PASS | `lean\spec_v4\certificates\SophieGermainFermatTheorem.lean` |  |
@@ -49,4 +54,3 @@
 | PASS | `lean\spec_v4\smt_bridge\contraction_bound.lean` |  |
 | PASS | `lean\spec_v4\smt_bridge\ledger_cross_multiplication.lean` |  |
 | PASS | `lean\spec_v4\smt_bridge\sign_flip_absence.lean` |  |
-| TIMEOUT | `lean\spec_v4\certificates\NewConjectureBatchI.lean` |  |

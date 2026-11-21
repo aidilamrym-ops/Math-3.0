@@ -1,12 +1,11 @@
 {
-  "generated": "2026-11-21T09:23:27.188649+00:00",
+  "generated": "2026-11-21T13:13:16.980770+00:00",
   "readme": "README.MD",
-  "workers": 1,
-  "cited_unique_files": 42,
+  "workers": 2,
+  "cited_unique_files": 46,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 41,
-    "TIMEOUT": 1
+    "PASS": 46
   },
   "results": [
     {
@@ -154,11 +153,27 @@
       "stderr": ""
     },
     {
+      "path": "lean\\spec_v4\\bridges\\BostSlopeParsevalBridge.lean",
+      "lean_path": "spec_v4\\bridges\\BostSlopeParsevalBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
       "path": "lean\\spec_v4\\bridges\\ContinuumCompactnessBridge.lean",
       "lean_path": "spec_v4\\bridges\\ContinuumCompactnessBridge.lean",
       "rc": 0,
       "status": "PASS",
       "stdout": "'Math30.Bridges.grid_sequential_compactness' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Bridges.dyadic_diagonal_extraction' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\bridges\\GrhCharacterLatticeBridge.lean",
+      "lean_path": "spec_v4\\bridges\\GrhCharacterLatticeBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
       "stderr": ""
     },
     {
@@ -178,11 +193,27 @@
       "stderr": ""
     },
     {
+      "path": "lean\\spec_v4\\bridges\\SeesawBehrendLatticeBridge.lean",
+      "lean_path": "spec_v4\\bridges\\SeesawBehrendLatticeBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
       "path": "lean\\spec_v4\\bridges\\SkewSymmetricAdvectionBridge.lean",
       "lean_path": "spec_v4\\bridges\\SkewSymmetricAdvectionBridge.lean",
       "rc": 0,
       "status": "PASS",
       "stdout": "'Math30.Bridges.advection_energy_neutrality' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Bridges.coupled_lattice_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Math30.Bridges.truncation_error_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\bridges\\ThetaLiftDeterminantBridge.lean",
+      "lean_path": "spec_v4\\bridges\\ThetaLiftDeterminantBridge.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "",
       "stderr": ""
     },
     {
@@ -266,6 +297,14 @@
       "stderr": ""
     },
     {
+      "path": "lean\\spec_v4\\certificates\\NewConjectureBatchI.lean",
+      "lean_path": "spec_v4\\certificates\\NewConjectureBatchI.lean",
+      "rc": 0,
+      "status": "PASS",
+      "stdout": "\"NewConjectureBatchI certificate compiled with zero placeholders.\"\n",
+      "stderr": ""
+    },
+    {
       "path": "lean\\spec_v4\\certificates\\RangeExpansionPack.lean",
       "lean_path": "spec_v4\\certificates\\RangeExpansionPack.lean",
       "rc": 0,
@@ -335,14 +374,6 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "'Math30.SMTBridge.sign_flip_absence_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
-      "stderr": ""
-    },
-    {
-      "path": "lean\\spec_v4\\certificates\\NewConjectureBatchI.lean",
-      "lean_path": "spec_v4\\certificates\\NewConjectureBatchI.lean",
-      "rc": null,
-      "status": "TIMEOUT",
-      "stdout": "",
       "stderr": ""
     }
   ]
