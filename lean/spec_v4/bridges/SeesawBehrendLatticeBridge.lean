@@ -2,6 +2,7 @@ import Mathlib
 
 -- [MATH3-SCOPE: FORMAL_GENERAL_THEOREM]
 -- BRIDGE-09: Rallis Seesaw Period Invariance & Behrend-Iwasawa Lattice Density Ceiling
+-- Scope: finite Iwasawa lattice dimension N; does not claim full Behrend extremal density or Iwasawa-Tate convergence.
 namespace Math3
 namespace Bridges
 

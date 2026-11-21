@@ -1,0 +1,61 @@
+{
+  "generated": "2026-11-21 22:49:37",
+  "elapsed_seconds": 23.9,
+  "files_scanned": 1,
+  "files_with_theorems": 1,
+  "theorems_total": 3,
+  "allowlist": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_usage": {
+    "propext": 3,
+    "Classical.choice": 3,
+    "Quot.sound": 3
+  },
+  "violations": [],
+  "inconclusive": [],
+  "compile_errors": [],
+  "failed": [],
+  "results": [
+    {
+      "file": "lean/spec_v4/bridges/SeesawBehrendLatticeBridge.lean",
+      "status": "PROBED",
+      "rc": 0,
+      "seconds": 23.93,
+      "theorems": [
+        {
+          "name": "Math3.Bridges.rallis_seesaw_period_invariance",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math3.Bridges.poincare_column_orthogonality_bound",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math3.Bridges.behrend_lattice_density_ceiling",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "violations": [],
+      "inconclusive": [],
+      "error": ""
+    }
+  ]
+}

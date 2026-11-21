@@ -1,0 +1,61 @@
+{
+  "generated": "2026-11-21 22:42:59",
+  "elapsed_seconds": 24.1,
+  "files_scanned": 1,
+  "files_with_theorems": 1,
+  "theorems_total": 3,
+  "allowlist": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_usage": {
+    "propext": 3,
+    "Classical.choice": 3,
+    "Quot.sound": 3
+  },
+  "violations": [],
+  "inconclusive": [],
+  "compile_errors": [],
+  "failed": [],
+  "results": [
+    {
+      "file": "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean",
+      "status": "PROBED",
+      "rc": 0,
+      "seconds": 24.04,
+      "theorems": [
+        {
+          "name": "Math3.Bridges.dirichlet_character_orthogonality_bound",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math3.Bridges.grh_explicit_window_positivity",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math3.Bridges.masullo_gap_isolation_enclosure",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "violations": [],
+      "inconclusive": [],
+      "error": ""
+    }
+  ]
+}

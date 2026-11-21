@@ -658,10 +658,10 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-e151caaf69d209022a12e5d8e0f00bc18b5e102563740fe69d6591413b691e10
+cea4e8ceae275e095c2b072734db929e5f8ed72a7fbafac49c8cf442f9e11ba6
 ```
 
-**Manifest Rows:** 1,759 files pinned  
+**Manifest Rows:** 1,767 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Sat Nov 21 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -708,7 +708,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,759-row SHA-256 ledger
+├── manifest.json                  # 1,767-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -835,7 +835,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,759 rows, SHA-256 locked: `e151caaf69d209022a12e5d8e0f00bc18b5e102563740fe69d6591413b691e10`  
+> **Manifest:** 1,767 rows, SHA-256 locked: `cea4e8ceae275e095c2b072734db929e5f8ed72a7fbafac49c8cf442f9e11ba6`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 ---
