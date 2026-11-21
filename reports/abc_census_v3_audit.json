@@ -1,5 +1,5 @@
 {
-  "status": "PASS",
+  "status": "FAIL",
   "triples_audited": 17,
   "data": [
     {
@@ -190,5 +190,6 @@
       "valid": false
     }
   ],
-  "z3_tribunal_status": "UNSAT_NO_COUNTEREXAMPLE_ABOVE_BOUND"
+  "z3_tribunal_status": "NOT_RUN_OPEN_CONJECTURE",
+  "note": "c/rad(abc) > 1 is a bounded radical check, not a Z3 proof"
 }
