@@ -1,12 +1,12 @@
 {
-  "generated": "2026-11-21T08:23:34Z",
+  "generated": "2026-11-21T08:52:01Z",
   "surfaces": [
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Kernel",
     "D:\\Opencode AI Agent\\Math 3.0 Tools\\Math30Interfaces"
   ],
-  "lean_files": 525,
-  "declarations": 2198,
+  "lean_files": 526,
+  "declarations": 2201,
   "predicates": 31,
   "z3_available": true,
   "waivers_applied": [
@@ -54,7 +54,7 @@
   "counts": {
     "HIGH": 0,
     "MEDIUM": 0,
-    "LOW": 527
+    "LOW": 528
   },
   "verdict": "PASS",
   "findings": [
@@ -908,6 +908,14 @@
     },
     {
       "file": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
+      "line": 1,
+      "declaration": "-",
+      "severity": "LOW",
+      "code": "SCOPE_UNDECLARED",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean",
       "line": 1,
       "declaration": "-",
       "severity": "LOW",
@@ -4332,6 +4340,12 @@
       "scope_text": null
     },
     {
+      "file": "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
       "file": "lean/spec_v4/bridges/GuinandWeilSpectralBridge.lean",
       "class": "pure-theorem",
       "scope_declared": true,
@@ -7433,10 +7447,5 @@
       "scope_declared": false,
       "scope_text": null
     }
-  ],
-  "baseline": {
-    "path": "D:\\Opencode AI Agent\\Math 3.0 Tools\\reports\\substantiveness_baseline.json",
-    "new_findings": [],
-    "new_blocking": 0
-  }
+  ]
 }

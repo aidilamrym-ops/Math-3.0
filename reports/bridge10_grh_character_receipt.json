@@ -1,0 +1,16 @@
+{
+  "status": "PASS_REAL_FLINT",
+  "n_neg": 0,
+  "zero_straddle": false,
+  "dsitni_ratio": 0.21,
+  "dibd_ratio": 0.52,
+  "inertia": [
+    64,
+    0,
+    0
+  ],
+  "exact_rational_enclosure": {
+    "num": 100,
+    "den": 1
+  }
+}

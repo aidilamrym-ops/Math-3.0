@@ -1,11 +1,12 @@
 {
-  "generated": "2026-11-20T05:54:01.527001+00:00",
+  "generated": "2026-11-21T09:23:27.188649+00:00",
   "readme": "README.MD",
-  "workers": 2,
+  "workers": 1,
   "cited_unique_files": 42,
   "unresolved_citations": [],
   "counts": {
-    "PASS": 42
+    "PASS": 41,
+    "TIMEOUT": 1
   },
   "results": [
     {
@@ -265,14 +266,6 @@
       "stderr": ""
     },
     {
-      "path": "lean\\spec_v4\\certificates\\NewConjectureBatchI.lean",
-      "lean_path": "spec_v4\\certificates\\NewConjectureBatchI.lean",
-      "rc": 0,
-      "status": "PASS",
-      "stdout": "\"NewConjectureBatchI certificate compiled with zero placeholders.\"\n",
-      "stderr": ""
-    },
-    {
       "path": "lean\\spec_v4\\certificates\\RangeExpansionPack.lean",
       "lean_path": "spec_v4\\certificates\\RangeExpansionPack.lean",
       "rc": 0,
@@ -342,6 +335,14 @@
       "rc": 0,
       "status": "PASS",
       "stdout": "'Math30.SMTBridge.sign_flip_absence_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": ""
+    },
+    {
+      "path": "lean\\spec_v4\\certificates\\NewConjectureBatchI.lean",
+      "lean_path": "spec_v4\\certificates\\NewConjectureBatchI.lean",
+      "rc": null,
+      "status": "TIMEOUT",
+      "stdout": "",
       "stderr": ""
     }
   ]

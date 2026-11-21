@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-21T08:23:08Z",
+  "generated": "2026-11-21T08:52:01Z",
   "description": "Sealed substantiveness baseline: the accepted finding set; a finding outside this set blocks commits under --enforce.",
   "counts": {
     "HIGH": 0,
     "MEDIUM": 0,
-    "LOW": 527
+    "LOW": 528
   },
   "keys": [
     "Math30Kernel/BealConjectureDefeat.lean|SCOPE_UNDECLARED|-",
@@ -43,6 +43,7 @@
     "lean/spec_v4/UniversalContractionFixedPointTheorem.lean|HYPOTHESIS_NOT_REFERENCED|convergence_bounded",
     "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/bridges/SeesawBehrendLatticeBridge.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean|SCOPE_UNDECLARED|-",
@@ -767,6 +768,14 @@
     },
     {
       "file": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean",
       "line": 1,
       "declaration": "-",
       "code": "SCOPE_UNDECLARED",

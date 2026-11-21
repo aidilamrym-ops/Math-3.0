@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-21T08:23:34Z",
+  "generated": "2026-11-21T08:52:01Z",
   "counts": {
-    "bounded-model": 442,
+    "bounded-model": 443,
     "pure-theorem": 83,
-    "scope_undeclared": 478
+    "scope_undeclared": 479
   },
   "files": [
     {
@@ -50,6 +50,12 @@
     },
     {
       "file": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
+      "class": "bounded-model",
+      "scope_declared": false,
+      "scope_text": null
+    },
+    {
+      "file": "lean/spec_v4/bridges/GrhCharacterLatticeBridge.lean",
       "class": "bounded-model",
       "scope_declared": false,
       "scope_text": null
