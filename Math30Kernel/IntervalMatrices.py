@@ -5,8 +5,24 @@ except ImportError:
     print("FATAL: python-flint library missing.")
     sys.exit(2)
 
+
 class IntervalMatrixBuilder:
+    """Exact-width arb matrix builder.
+
+    Entries are stored as `python-flint` balls, never as Python floats. The
+    radius argument of :meth:`set_entry_exact` is a true radius about the
+    midpoint, so `set_entry_exact(i, j, "1", "0.5")` stores `[0.5, 1.5]`.
+    """
+
     def __init__(self, dimension: int, precision_bits: int = 6000):
+        if not isinstance(dimension, int) or isinstance(dimension, bool):
+            raise TypeError("dimension must be an integer.")
+        if dimension < 0:
+            raise ValueError("dimension must be nonnegative.")
+        if not isinstance(precision_bits, int) or isinstance(precision_bits, bool):
+            raise TypeError("precision_bits must be an integer.")
+        if precision_bits < 2:
+            raise ValueError("precision_bits must be at least 2.")
         self.dim = dimension
         self.prec = precision_bits
         flint.ctx.prec = precision_bits
@@ -16,7 +32,15 @@ class IntervalMatrixBuilder:
     def set_entry_exact(self, i: int, j: int, mid_str: str, rad_str: str = "0"):
         if i >= self.dim or j >= self.dim or i < 0 or j < 0:
             raise IndexError("Matrix allocation index out of bounds.")
-        self.matrix[i, j] = flint.arb(mid_str) + flint.arb(rad_str)
+        midpoint = flint.arb(mid_str)
+        radius = flint.arb(rad_str)
+        if not midpoint.is_finite():
+            raise ValueError("mid_str must encode a finite real number.")
+        # `radius >= 0` is certainly-true comparison semantics in python-flint:
+        # a radius that straddles zero (or is nan) is rejected, not coerced.
+        if not radius.is_finite() or not (radius >= 0):
+            raise ValueError("rad_str must encode a finite nonnegative radius.")
+        self.matrix[i, j] = midpoint + flint.arb(0, radius)
 
     def audit_linear_morphology(self) -> dict:
         r_toep, r_hank = flint.arb("0"), flint.arb("0")
@@ -35,4 +59,6 @@ class IntervalMatrixBuilder:
         }
 
     def get_matrix_snapshot(self) -> flint.arb_mat:
-        return self.matrix
+        # arb_mat(other) copies; returning self.matrix would expose the live
+        # builder state to callers despite the "snapshot" contract.
+        return flint.arb_mat(self.matrix)

@@ -1,0 +1,153 @@
+{
+  "stage": "post_repair",
+  "flint_version": "0.9.0",
+  "checked_utc": "2026-11-21T15:08:30Z",
+  "cases": [
+    {
+      "case": "radius_true_ball",
+      "outcome": "CERTIFIED",
+      "detail": "[1e+0 +/- 0.501]"
+    },
+    {
+      "case": "radius_endpoint_zero",
+      "outcome": "FAIL_CLOSED",
+      "detail": "zero at interval endpoint"
+    },
+    {
+      "case": "negative_radius_rejected",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ValueError: rad_str must encode a finite nonnegative radius."
+    },
+    {
+      "case": "nan_midpoint_rejected",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ValueError: mid_str must encode a finite real number."
+    },
+    {
+      "case": "nan_radius_rejected",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ValueError: rad_str must encode a finite nonnegative radius."
+    },
+    {
+      "case": "negative_dimension_rejected",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ValueError: dimension must be nonnegative."
+    },
+    {
+      "case": "fractional_dimension_rejected",
+      "outcome": "FAIL_CLOSED",
+      "detail": "TypeError: dimension must be an integer."
+    },
+    {
+      "case": "low_precision_rejected",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ValueError: precision_bits must be at least 2."
+    },
+    {
+      "case": "out_of_bounds_rejected",
+      "outcome": "FAIL_CLOSED",
+      "detail": "IndexError: Matrix allocation index out of bounds."
+    },
+    {
+      "case": "snapshot_is_copy",
+      "outcome": "CERTIFIED",
+      "detail": "mutating snapshot leaves builder intact"
+    },
+    {
+      "case": "empty_0x0",
+      "outcome": "CERTIFIED",
+      "detail": "(0, 0, 0)"
+    },
+    {
+      "case": "one_by_one_positive",
+      "outcome": "CERTIFIED",
+      "detail": "(1, 0, 0)"
+    },
+    {
+      "case": "one_by_one_negative",
+      "outcome": "CERTIFIED",
+      "detail": "(0, 1, 0)"
+    },
+    {
+      "case": "one_by_one_near_zero",
+      "outcome": "CERTIFIED",
+      "detail": "(1, 0, 0)"
+    },
+    {
+      "case": "one_by_one_zero",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ResolutionAlarm: Inertia computation failed: Zero-straddling eigenvalue at 0: 0"
+    },
+    {
+      "case": "singular_3x3",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ResolutionAlarm: Inertia computation failed: Zero-straddling eigenvalue at 0: [+/- 5.88e-37931]"
+    },
+    {
+      "case": "singular_2x2",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ResolutionAlarm: Inertia computation failed: Zero-straddling eigenvalue at 0: 0"
+    },
+    {
+      "case": "mixed_inertia_repeated",
+      "outcome": "CERTIFIED",
+      "detail": "(2, 1, 0)"
+    },
+    {
+      "case": "mixed_inertia_offdiag",
+      "outcome": "CERTIFIED",
+      "detail": "(1, 1, 0)"
+    },
+    {
+      "case": "matrix_with_offdiag",
+      "outcome": "CERTIFIED",
+      "detail": "(3, 0, 0)"
+    },
+    {
+      "case": "identity_100_repeated_spectrum",
+      "outcome": "CERTIFIED",
+      "detail": "(100, 0, 0)"
+    },
+    {
+      "case": "non_symmetric_triangular",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ResolutionAlarm: Inertia computation failed: matrix is not symmetric at (0, 1)"
+    },
+    {
+      "case": "rotation_complex_spectrum",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ResolutionAlarm: Inertia computation failed: matrix is not symmetric at (0, 1)"
+    },
+    {
+      "case": "non_square_raw_matrix",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ResolutionAlarm: Inertia computation failed: matrix must be square, got 2x3"
+    },
+    {
+      "case": "negative_raw_dimension",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ResolutionAlarm: Inertia computation failed: invalid matrix dimension -1"
+    },
+    {
+      "case": "pivot_ball_contains_zero",
+      "outcome": "FAIL_CLOSED",
+      "detail": "ResolutionAlarm: Inertia computation failed: Zero-straddling eigenvalue at 0: [+/- 1.01e-30]"
+    },
+    {
+      "case": "pivot_ball_excludes_zero",
+      "outcome": "CERTIFIED",
+      "detail": "(2, 0, 0)"
+    },
+    {
+      "case": "symmetric_interval_mixed",
+      "outcome": "CERTIFIED",
+      "detail": "(1, 1, 0)"
+    },
+    {
+      "case": "morphology_threshold_equality",
+      "outcome": "FAIL_CLOSED",
+      "detail": "{'r_toep': [1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-10 +/- 2.49e-1817], 'r_hank': 0, 'is_toeplitz_approximate': False, 'is_hankel_approximate': True}"
+    }
+  ],
+  "verdict": "PASS"
+}

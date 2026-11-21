@@ -1,0 +1,159 @@
+{
+  "stage": "pre_repair",
+  "flint_version": "0.9.0",
+  "observations": {
+    "symmetric_mixed_2x2_expected_1_1_0": {
+      "entries": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "1"
+        ]
+      ],
+      "shape": [
+        2,
+        2
+      ],
+      "inertia": [
+        1,
+        1,
+        0
+      ],
+      "eig_nan": [
+        false,
+        false
+      ]
+    },
+    "non_symmetric_triangular": {
+      "entries": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "shape": [
+        2,
+        2
+      ],
+      "inertia": [
+        1,
+        1,
+        0
+      ],
+      "eig_nan": [
+        true,
+        true
+      ]
+    },
+    "identity_2": {
+      "entries": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "shape": [
+        2,
+        2
+      ],
+      "inertia": [
+        2,
+        0,
+        0
+      ],
+      "eig_nan": [
+        true,
+        true
+      ]
+    },
+    "singular_3x3": {
+      "entries": [
+        [
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2"
+        ]
+      ],
+      "shape": [
+        3,
+        3
+      ],
+      "inertia_exception": "ResolutionAlarm: Inertia computation failed: Zero-straddling eigenvalue at 0: 0",
+      "eig_nan": [
+        true,
+        true,
+        true
+      ]
+    },
+    "one_by_one_near_zero": {
+      "entries": [
+        [
+          "1e-100"
+        ]
+      ],
+      "shape": [
+        1,
+        1
+      ],
+      "inertia": [
+        1,
+        0,
+        0
+      ],
+      "eig_nan": [
+        false
+      ]
+    },
+    "radius_semantics_mid1_rad0.5": {
+      "entry": "1.5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mid": "1.5000000000000000000000000000000000000000000000000000000000",
+      "rad": "0",
+      "contains_zero": false
+    },
+    "negative_radius": {
+      "accepted": true,
+      "entry": "0.5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "negative_dimension": {
+      "requested": -1,
+      "shape": [
+        -1,
+        -1
+      ]
+    },
+    "empty_eig_multiple": {
+      "count": 0,
+      "exception": null
+    }
+  },
+  "api": {
+    "arb_has_is_inf": false,
+    "arb_has_is_finite": true,
+    "arb_mat_has_copy": false
+  },
+  "source_sha256": {
+    "Math30Kernel/IntervalMatrices.py": "1db7bb7cb82a217c8e65a2e30752bdec8045345bb6f253b77b9c835e67ce2780",
+    "Math30Solvers/IntervalLDLT.py": "4a9ba36e9dc073654944a7af1b513760cbcf9a410dd0ddf9045beb08ac51b48a"
+  }
+}
