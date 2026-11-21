@@ -1,0 +1,52 @@
+{
+  "generated": "2026-11-21T14:29:03Z",
+  "surfaces": [
+    "D:\\Opencode AI Agent\\Math 3.0 Tools\\lean\\spec_v4\\bridges\\ThetaLiftDeterminantBridge.lean"
+  ],
+  "lean_files": 1,
+  "declarations": 3,
+  "predicates": 0,
+  "z3_available": true,
+  "waivers_applied": [],
+  "counts": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "verdict": "PASS",
+  "findings": [],
+  "mutations": [
+    {
+      "file": "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean",
+      "declaration": "finite_theta_chain_truncation_bound",
+      "verdict": "KILLED",
+      "hypothesis": "hcost"
+    },
+    {
+      "file": "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean",
+      "declaration": "interlacing_determinant_positivity",
+      "verdict": "KILLED",
+      "hypothesis": "hw"
+    },
+    {
+      "file": "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean",
+      "declaration": "theta_lift_interval_containment",
+      "verdict": "KILLED",
+      "hypothesis": "hrad"
+    }
+  ],
+  "mutation_summary": {
+    "total": 3,
+    "killed": 3,
+    "survived": 0,
+    "survival_rate": 0.0
+  },
+  "scope": [
+    {
+      "file": "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean",
+      "class": "pure-theorem",
+      "scope_declared": false,
+      "scope_text": null
+    }
+  ]
+}

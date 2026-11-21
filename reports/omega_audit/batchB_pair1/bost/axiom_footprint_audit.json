@@ -1,0 +1,61 @@
+{
+  "generated": "2026-11-21 22:22:33",
+  "elapsed_seconds": 27.4,
+  "files_scanned": 1,
+  "files_with_theorems": 1,
+  "theorems_total": 3,
+  "allowlist": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_usage": {
+    "propext": 3,
+    "Classical.choice": 3,
+    "Quot.sound": 3
+  },
+  "violations": [],
+  "inconclusive": [],
+  "compile_errors": [],
+  "failed": [],
+  "results": [
+    {
+      "file": "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean",
+      "status": "PROBED",
+      "rc": 0,
+      "seconds": 27.39,
+      "theorems": [
+        {
+          "name": "Math3.Bridges.bost_slope_height_budget_bound",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math3.Bridges.path_quadric_parseval_energy_conservation",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "name": "Math3.Bridges.iterated_parseval_remainder_suppression",
+          "status": "AXIOMS",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "violations": [],
+      "inconclusive": [],
+      "error": ""
+    }
+  ]
+}
