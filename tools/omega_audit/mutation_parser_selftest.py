@@ -91,7 +91,7 @@ def main() -> int:
                 print("        " + mutated_stmt.replace("\n", " ")[:160])
                 failures += 1
                 continue
-            print(f"[OK] {name}: ({hyp} : {typ}) -> ({hyp} : True)")
+            print(f"[OK] {name}: mutation verified")
 
         d = decls.get("no_hyp")
         if d is None:
@@ -109,7 +109,7 @@ def main() -> int:
             print(f"[FAIL] is_prop_hypothesis({typ!r}) = {actual}, expected {expected}")
             failures += 1
         else:
-            print(f"[OK] is_prop_hypothesis({typ!r}) = {actual}")
+            print(f"[OK] is_prop_hypothesis verified")
 
     print(f"SELF-TEST RESULT: {'PASS' if failures == 0 else 'FAIL'} ({failures} failures)")
     return 0 if failures == 0 else 1
