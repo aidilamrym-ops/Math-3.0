@@ -369,8 +369,8 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 
 **Lean surface:** 522 files = 514 full-surface audited (`PASS`) + 8 targeted-compiled certificates (`AbcConjectureBoundedVerification.lean`, `ErdosStrausBoundedVerification.lean`, `GilbreathBoundedVerification.lean`, `LehmerTotientBoundedVerification.lean`, `NewConjectureBatchI.lean`, `RangeExpansionPack.lean`, `InfiniteInFiniteSpace.lean`, `FiniteLimitBoundary.lean`), mutation-verified (BRIDGE-01 through BRIDGE-06; Batch 24 9/9).
 
-**Manifest seal (sha-256):** 12ca1d046e8aa67221d580bf314a97702be7a49165204fc45cb79ff280223e5b
-**1,739 rows** in manifest.
+**Manifest seal (sha-256):** 3d0f006c756752cfec503de1a974e82d7d9e27593b6be7fe91b5631b53dcf783
+**1,742 rows** in manifest.
 
 ---
 
@@ -587,10 +587,10 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-12ca1d046e8aa67221d580bf314a97702be7a49165204fc45cb79ff280223e5b
+3d0f006c756752cfec503de1a974e82d7d9e27593b6be7fe91b5631b53dcf783
 ```
 
-**Manifest Rows:** 1,739 files pinned  
+**Manifest Rows:** 1,742 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Wed Nov 18 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -637,7 +637,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,739-row SHA-256 ledger
+├── manifest.json                  # 1,742-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -763,7 +763,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,739 rows, SHA-256 locked: `12ca1d046e8aa67221d580bf314a97702be7a49165204fc45cb79ff280223e5b`  
+> **Manifest:** 1,742 rows, SHA-256 locked: `3d0f006c756752cfec503de1a974e82d7d9e27593b6be7fe91b5631b53dcf783`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 ---

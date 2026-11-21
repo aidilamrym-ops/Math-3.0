@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-17T09:40:10Z",
+  "generated": "2026-11-21T08:23:08Z",
   "description": "Sealed substantiveness baseline: the accepted finding set; a finding outside this set blocks commits under --enforce.",
   "counts": {
     "HIGH": 0,
     "MEDIUM": 0,
-    "LOW": 529
+    "LOW": 527
   },
   "keys": [
     "Math30Kernel/BealConjectureDefeat.lean|SCOPE_UNDECLARED|-",
@@ -41,7 +41,12 @@
     "lean/spec_v4/RamseyLatticeEnclosure.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/SpectralOperatorEvolution.lean|HYPOTHESIS_NOT_REFERENCED|cheeger_isoperimetric_eigenvalue_bound",
     "lean/spec_v4/UniversalContractionFixedPointTheorem.lean|HYPOTHESIS_NOT_REFERENCED|convergence_bounded",
+    "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/bridges/SeesawBehrendLatticeBridge.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean|WITNESS_MISSING|IsAbcTriple",
     "lean/spec_v4/certificates/AndersonEnclosureBoundsCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/BealScale10to18Certificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/BoxFeasibilityWitnessCertificate.lean|SCOPE_UNDECLARED|-",
@@ -51,14 +56,20 @@
     "lean/spec_v4/certificates/ContractionBoundCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/FailedWorldTraceCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/FtcCollapseStressTestCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/GilbreathBoundedVerification.lean|WITNESS_MISSING|SatisfiesGilbreathHead",
     "lean/spec_v4/certificates/GoedelContainmentStressTestCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/GoldbachBoundedVerification.lean|WITNESS_MISSING|IsGoldbachDecomposable",
     "lean/spec_v4/certificates/GravitationalSingularityStressTestCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/HeisenbergUncertaintyStressTestCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/IntegrityAuditCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/LedgerCrossMultiplicationCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/LegendreBoundedVerification.lean|HYPOTHESIS_NOT_REFERENCED|legendre_interval_gap_grows",
+    "lean/spec_v4/certificates/LegendreBoundedVerification.lean|WITNESS_MISSING|HasPrimeBetweenSquares",
     "lean/spec_v4/certificates/LteSpectralValidationCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/MetaBlindspotAuditCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/NavierStokesBlowupTraceCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/NewConjectureBatchI.lean|WITNESS_MISSING|IsOppermannWitness",
+    "lean/spec_v4/certificates/NewConjectureBatchI.lean|WITNESS_MISSING|SatisfiesOppermann",
     "lean/spec_v4/certificates/OpenaiFamily001Certificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/OpenaiFamily002Certificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/OpenaiFamily003Certificate.lean|SCOPE_UNDECLARED|-",
@@ -439,8 +450,11 @@
     "lean/spec_v4/certificates/RhExtremeStressTestCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/RhSpectralAnomaliesCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/SignFlipAbsenceCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean|HYPOTHESIS_NOT_REFERENCED|sophie_germain_auxiliary_constraint",
     "lean/spec_v4/certificates/TopologicalUniquenessCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/certificates/TriadStateTransitionsCertificate.lean|SCOPE_UNDECLARED|-",
+    "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean|HYPOTHESIS_NOT_REFERENCED|twin_prime_mod6_and_diff_sq_24",
+    "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean|WITNESS_MISSING|IsTwinPrime",
     "lean/spec_v4/certificates/Z3TribunalBoundsCertificate.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/smt_bridge/auto_generated_bridge.lean|HYPOTHESIS_NOT_REFERENCED|auto_generated_unsat",
     "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean|HYPOTHESIS_NOT_REFERENCED|bls_aggregation_bound",
@@ -448,12 +462,8 @@
     "lean/spec_v4/smt_bridge/dh_parameter_safety.lean|HYPOTHESIS_NOT_REFERENCED|dh_parameter_safety",
     "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean|HYPOTHESIS_NOT_REFERENCED|ecdsa_signature_bound",
     "lean/spec_v4/smt_bridge/elliptic_curve_point_bound.lean|HYPOTHESIS_NOT_REFERENCED|elliptic_curve_hassee_bound_11",
-    "lean/spec_v4/smt_bridge/kyber_poly_bound.lean|HYPOTHESIS_NOT_REFERENCED|kyber_poly_bound",
-    "lean/spec_v4/smt_bridge/lattice_svp_bound.lean|HYPOTHESIS_NOT_REFERENCED|lattice_svp_bound",
-    "lean/spec_v4/smt_bridge/lattice_svp_bound.lean|SCOPE_UNDECLARED|-",
     "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean|HYPOTHESIS_NOT_REFERENCED|pedersen_commitment_bound",
     "lean/spec_v4/smt_bridge/ramsey_clique_bound.lean|HYPOTHESIS_NOT_REFERENCED|ramsey_clique_bound_unsat",
-    "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean|HYPOTHESIS_NOT_REFERENCED|rsa_exponent_bound",
     "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean|HYPOTHESIS_NOT_REFERENCED|schnorr_signature_bound",
     "lean/spec_v4/smt_bridge/vrf_output_bound.lean|HYPOTHESIS_NOT_REFERENCED|vrf_output_bound",
     "lean/spec_v4/smt_bridge/zkp_commitment_bound.lean|HYPOTHESIS_NOT_REFERENCED|zkp_commitment_bound"
@@ -748,12 +758,52 @@
       "detail": "hypothesis `hx : x ≤ 10` is not referenced in the proof"
     },
     {
+      "file": "lean/spec_v4/bridges/BostSlopeParsevalBridge.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/bridges/ContinuumCompactnessBridge.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/bridges/SeesawBehrendLatticeBridge.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/bridges/ThetaLiftDeterminantBridge.lean",
+      "line": 1,
+      "declaration": "-",
+      "code": "SCOPE_UNDECLARED",
+      "severity": "LOW",
+      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
       "file": "lean/spec_v4/certificates/AbcCensusV3AuditCertificate.lean",
       "line": 1,
       "declaration": "-",
       "code": "SCOPE_UNDECLARED",
       "severity": "LOW",
       "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/AbcConjectureBoundedVerification.lean",
+      "line": 27,
+      "declaration": "IsAbcTriple",
+      "code": "WITNESS_MISSING",
+      "severity": "LOW",
+      "detail": "predicate `IsAbcTriple` is never applied to ground arguments or existentially witnessed"
     },
     {
       "file": "lean/spec_v4/certificates/AndersonEnclosureBoundsCertificate.lean",
@@ -828,12 +878,28 @@
       "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
     },
     {
+      "file": "lean/spec_v4/certificates/GilbreathBoundedVerification.lean",
+      "line": 36,
+      "declaration": "SatisfiesGilbreathHead",
+      "code": "WITNESS_MISSING",
+      "severity": "LOW",
+      "detail": "predicate `SatisfiesGilbreathHead` is never applied to ground arguments or existentially witnessed"
+    },
+    {
       "file": "lean/spec_v4/certificates/GoedelContainmentStressTestCertificate.lean",
       "line": 1,
       "declaration": "-",
       "code": "SCOPE_UNDECLARED",
       "severity": "LOW",
       "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/GoldbachBoundedVerification.lean",
+      "line": 19,
+      "declaration": "IsGoldbachDecomposable",
+      "code": "WITNESS_MISSING",
+      "severity": "LOW",
+      "detail": "predicate `IsGoldbachDecomposable` is never applied to ground arguments or existentially witnessed"
     },
     {
       "file": "lean/spec_v4/certificates/GravitationalSingularityStressTestCertificate.lean",
@@ -868,6 +934,22 @@
       "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
     },
     {
+      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
+      "line": 173,
+      "declaration": "legendre_interval_gap_grows",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hn : 1 ≤ n` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/LegendreBoundedVerification.lean",
+      "line": 23,
+      "declaration": "HasPrimeBetweenSquares",
+      "code": "WITNESS_MISSING",
+      "severity": "LOW",
+      "detail": "predicate `HasPrimeBetweenSquares` is never applied to ground arguments or existentially witnessed"
+    },
+    {
       "file": "lean/spec_v4/certificates/LteSpectralValidationCertificate.lean",
       "line": 1,
       "declaration": "-",
@@ -890,6 +972,22 @@
       "code": "SCOPE_UNDECLARED",
       "severity": "LOW",
       "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/NewConjectureBatchI.lean",
+      "line": 29,
+      "declaration": "IsOppermannWitness",
+      "code": "WITNESS_MISSING",
+      "severity": "LOW",
+      "detail": "predicate `IsOppermannWitness` is never applied to ground arguments or existentially witnessed"
+    },
+    {
+      "file": "lean/spec_v4/certificates/NewConjectureBatchI.lean",
+      "line": 35,
+      "declaration": "SatisfiesOppermann",
+      "code": "WITNESS_MISSING",
+      "severity": "LOW",
+      "detail": "predicate `SatisfiesOppermann` is never applied to ground arguments or existentially witnessed"
     },
     {
       "file": "lean/spec_v4/certificates/OpenaiFamily001Certificate.lean",
@@ -3932,6 +4030,22 @@
       "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
     },
     {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 57,
+      "declaration": "sophie_germain_auxiliary_constraint",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `_hp : Nat.Prime p` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/SophieGermainFermatTheorem.lean",
+      "line": 57,
+      "declaration": "sophie_germain_auxiliary_constraint",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `_hp3 : 3 ≤ p` is not referenced in the proof"
+    },
+    {
       "file": "lean/spec_v4/certificates/TopologicalUniquenessCertificate.lean",
       "line": 1,
       "declaration": "-",
@@ -3946,6 +4060,22 @@
       "code": "SCOPE_UNDECLARED",
       "severity": "LOW",
       "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
+    },
+    {
+      "file": "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean",
+      "line": 35,
+      "declaration": "twin_prime_mod6_and_diff_sq_24",
+      "code": "HYPOTHESIS_NOT_REFERENCED",
+      "severity": "LOW",
+      "detail": "hypothesis `hgt3 : 3 < p` is not referenced in the proof"
+    },
+    {
+      "file": "lean/spec_v4/certificates/TwinPrimeBoundedVerification.lean",
+      "line": 21,
+      "declaration": "IsTwinPrime",
+      "code": "WITNESS_MISSING",
+      "severity": "LOW",
+      "detail": "predicate `IsTwinPrime` is never applied to ground arguments or existentially witnessed"
     },
     {
       "file": "lean/spec_v4/certificates/Z3TribunalBoundsCertificate.lean",
@@ -4061,7 +4191,7 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
-      "line": 7,
+      "line": 9,
       "declaration": "bls_aggregation_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4069,63 +4199,55 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
-      "line": 7,
+      "line": 9,
       "declaration": "bls_aggregation_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_sig : 0 ≤ sig_agg` is not referenced in the proof"
+      "detail": "hypothesis `_h_sig : 0 ≤ sig_agg` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
-      "line": 7,
+      "line": 9,
       "declaration": "bls_aggregation_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_sig_max : sig_agg < n` is not referenced in the proof"
+      "detail": "hypothesis `_h_sig_max : sig_agg < n` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
-      "line": 7,
+      "line": 9,
       "declaration": "bls_aggregation_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_pk : 0 ≤ pk_agg` is not referenced in the proof"
+      "detail": "hypothesis `_h_pk : 0 ≤ pk_agg` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
-      "line": 7,
+      "line": 9,
       "declaration": "bls_aggregation_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_pk_max : pk_agg < n` is not referenced in the proof"
+      "detail": "hypothesis `_h_pk_max : pk_agg < n` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
-      "line": 7,
+      "line": 9,
       "declaration": "bls_aggregation_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_msg : 0 ≤ msg_hash` is not referenced in the proof"
+      "detail": "hypothesis `_h_msg : 0 ≤ msg_hash` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/bls_aggregation_bound.lean",
-      "line": 7,
+      "line": 9,
       "declaration": "bls_aggregation_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_msg_max : msg_hash < n` is not referenced in the proof"
+      "detail": "hypothesis `_h_msg_max : msg_hash < n` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/crypto_primitive_feasibility.lean",
-      "line": 6,
-      "declaration": "crypto_primitive_feasibility",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_p_pos : 0 < p` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/crypto_primitive_feasibility.lean",
-      "line": 6,
+      "line": 9,
       "declaration": "crypto_primitive_feasibility",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4133,7 +4255,7 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/crypto_primitive_feasibility.lean",
-      "line": 6,
+      "line": 9,
       "declaration": "crypto_primitive_feasibility",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4141,7 +4263,7 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
-      "line": 8,
+      "line": 9,
       "declaration": "dh_parameter_safety",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4149,39 +4271,39 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
-      "line": 8,
+      "line": 9,
       "declaration": "dh_parameter_safety",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hg_low : 1 < g` is not referenced in the proof"
+      "detail": "hypothesis `_hg_low : 1 < g` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
-      "line": 8,
+      "line": 9,
       "declaration": "dh_parameter_safety",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hg_high : g < p` is not referenced in the proof"
+      "detail": "hypothesis `_hg_high : g < p` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
-      "line": 8,
+      "line": 9,
       "declaration": "dh_parameter_safety",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `ha_low : 0 < a` is not referenced in the proof"
+      "detail": "hypothesis `_ha_low : 0 < a` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
-      "line": 8,
+      "line": 9,
       "declaration": "dh_parameter_safety",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hb_low : 0 < b` is not referenced in the proof"
+      "detail": "hypothesis `_hb_low : 0 < b` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
-      "line": 8,
+      "line": 9,
       "declaration": "dh_parameter_safety",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4189,7 +4311,7 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/dh_parameter_safety.lean",
-      "line": 8,
+      "line": 9,
       "declaration": "dh_parameter_safety",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4197,15 +4319,7 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
-      "declaration": "ecdsa_signature_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_n : 1 < n` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4213,7 +4327,7 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4221,15 +4335,15 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hs : 0 ≤ s` is not referenced in the proof"
+      "detail": "hypothesis `_hs : 0 ≤ s` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4237,7 +4351,7 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4245,7 +4359,7 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4253,35 +4367,35 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hh : 0 ≤ h` is not referenced in the proof"
+      "detail": "hypothesis `_hh : 0 ≤ h` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hm : 0 ≤ m` is not referenced in the proof"
+      "detail": "hypothesis `_hm : 0 ≤ m` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hd : 0 ≤ d` is not referenced in the proof"
+      "detail": "hypothesis `_hd : 0 ≤ d` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/ecdsa_signature_bound.lean",
-      "line": 8,
+      "line": 11,
       "declaration": "ecdsa_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_sum : h + m + d < n * n` is not referenced in the proof"
+      "detail": "hypothesis `_h_sum : h + m + d < n * n` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/elliptic_curve_point_bound.lean",
@@ -4300,96 +4414,8 @@
       "detail": "hypothesis `h_upper : n ≤ 17` is not referenced in the proof"
     },
     {
-      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
-      "line": 7,
-      "declaration": "kyber_poly_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_q : 1 < q` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
-      "line": 7,
-      "declaration": "kyber_poly_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_k : 1 ≤ k` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
-      "line": 7,
-      "declaration": "kyber_poly_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_n : 1 ≤ n` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
-      "line": 7,
-      "declaration": "kyber_poly_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_coeff : -128 ≤ coeff` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
-      "line": 7,
-      "declaration": "kyber_poly_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_coeff_max : coeff ≤ 127` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/kyber_poly_bound.lean",
-      "line": 7,
-      "declaration": "kyber_poly_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_q_size : q ≤ 3329` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
-      "line": 7,
-      "declaration": "lattice_svp_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_det : 0 < det` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
-      "line": 7,
-      "declaration": "lattice_svp_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_n : 1 ≤ n` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
-      "line": 7,
-      "declaration": "lattice_svp_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_svp : lambda * lambda ≤ det + n` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/lattice_svp_bound.lean",
-      "line": 1,
-      "declaration": "-",
-      "code": "SCOPE_UNDECLARED",
-      "severity": "LOW",
-      "detail": "bounded-model file has no explicit Scope/Cakupan/Batas klaim header"
-    },
-    {
       "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
-      "line": 7,
-      "declaration": "pedersen_commitment_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_p : 1 < p` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
-      "line": 7,
+      "line": 10,
       "declaration": "pedersen_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4397,7 +4423,7 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
-      "line": 7,
+      "line": 10,
       "declaration": "pedersen_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4405,15 +4431,15 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
-      "line": 7,
+      "line": 10,
       "declaration": "pedersen_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hr : 0 ≤ r` is not referenced in the proof"
+      "detail": "hypothesis `_hr : 0 ≤ r` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
-      "line": 7,
+      "line": 10,
       "declaration": "pedersen_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4421,15 +4447,15 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
-      "line": 7,
+      "line": 10,
       "declaration": "pedersen_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hg : 1 < g` is not referenced in the proof"
+      "detail": "hypothesis `_hg : 1 < g` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
-      "line": 7,
+      "line": 10,
       "declaration": "pedersen_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4437,15 +4463,15 @@
     },
     {
       "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
-      "line": 7,
+      "line": 10,
       "declaration": "pedersen_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hh : 1 < h` is not referenced in the proof"
+      "detail": "hypothesis `_hh : 1 < h` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/pedersen_commitment_bound.lean",
-      "line": 7,
+      "line": 10,
       "declaration": "pedersen_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
@@ -4460,36 +4486,12 @@
       "detail": "hypothesis `htotal : 13 ≤ ∑ i, r i` is not referenced in the proof"
     },
     {
-      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
+      "file": "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean",
       "line": 7,
-      "declaration": "rsa_exponent_bound",
+      "declaration": "schnorr_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `he : 1 < e` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
-      "line": 7,
-      "declaration": "rsa_exponent_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `hd : 1 < d` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
-      "line": 7,
-      "declaration": "rsa_exponent_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_phi : 100 ≤ phi` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/rsa_exponent_bound.lean",
-      "line": 7,
-      "declaration": "rsa_exponent_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `h_product : e * d ≤ phi * phi` is not referenced in the proof"
+      "detail": "hypothesis `_h_n : 1 < n` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean",
@@ -4497,15 +4499,7 @@
       "declaration": "schnorr_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_n : 1 < n` is not referenced in the proof"
-    },
-    {
-      "file": "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean",
-      "line": 7,
-      "declaration": "schnorr_signature_bound",
-      "code": "HYPOTHESIS_NOT_REFERENCED",
-      "severity": "LOW",
-      "detail": "hypothesis `hs : 0 ≤ s` is not referenced in the proof"
+      "detail": "hypothesis `_hs : 0 ≤ s` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean",
@@ -4521,7 +4515,7 @@
       "declaration": "schnorr_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hk : 0 ≤ k` is not referenced in the proof"
+      "detail": "hypothesis `_hk : 0 ≤ k` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean",
@@ -4537,7 +4531,7 @@
       "declaration": "schnorr_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hc : 0 ≤ c` is not referenced in the proof"
+      "detail": "hypothesis `_hc : 0 ≤ c` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean",
@@ -4553,7 +4547,7 @@
       "declaration": "schnorr_signature_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hx : 0 ≤ x` is not referenced in the proof"
+      "detail": "hypothesis `_hx : 0 ≤ x` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/schnorr_signature_bound.lean",
@@ -4569,7 +4563,7 @@
       "declaration": "vrf_output_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_n : 1 < n` is not referenced in the proof"
+      "detail": "hypothesis `_h_n : 1 < n` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/vrf_output_bound.lean",
@@ -4577,7 +4571,7 @@
       "declaration": "vrf_output_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `ho : 0 ≤ output` is not referenced in the proof"
+      "detail": "hypothesis `_ho : 0 ≤ output` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/vrf_output_bound.lean",
@@ -4593,7 +4587,7 @@
       "declaration": "vrf_output_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hp : 0 ≤ proof` is not referenced in the proof"
+      "detail": "hypothesis `_hp : 0 ≤ proof` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/vrf_output_bound.lean",
@@ -4609,7 +4603,7 @@
       "declaration": "vrf_output_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hpk : 0 ≤ pk` is not referenced in the proof"
+      "detail": "hypothesis `_hpk : 0 ≤ pk` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/vrf_output_bound.lean",
@@ -4625,7 +4619,7 @@
       "declaration": "vrf_output_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `hsk : 0 ≤ sk` is not referenced in the proof"
+      "detail": "hypothesis `_hsk : 0 ≤ sk` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/vrf_output_bound.lean",
@@ -4641,7 +4635,7 @@
       "declaration": "vrf_output_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `halpha : 0 ≤ alpha` is not referenced in the proof"
+      "detail": "hypothesis `_halpha : 0 ≤ alpha` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/vrf_output_bound.lean",
@@ -4673,7 +4667,7 @@
       "declaration": "zkp_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_r : 0 ≤ r` is not referenced in the proof"
+      "detail": "hypothesis `_h_r : 0 ≤ r` is not referenced in the proof"
     },
     {
       "file": "lean/spec_v4/smt_bridge/zkp_commitment_bound.lean",
@@ -4689,7 +4683,7 @@
       "declaration": "zkp_commitment_bound",
       "code": "HYPOTHESIS_NOT_REFERENCED",
       "severity": "LOW",
-      "detail": "hypothesis `h_q : 1024 ≤ q` is not referenced in the proof"
+      "detail": "hypothesis `_h_q : 1024 ≤ q` is not referenced in the proof"
     }
   ]
 }

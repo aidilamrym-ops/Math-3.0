@@ -1,3 +1,4 @@
+-- [MATH3-SCOPE: FORMAL_GENERAL_THEOREM]
 -- BRIDGE-08: Bost Slope Inequality & Path Quadric Parseval Bound
 namespace Math3
 namespace Bridges

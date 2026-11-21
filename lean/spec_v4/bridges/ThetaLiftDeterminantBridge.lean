@@ -1,3 +1,4 @@
+-- [MATH3-SCOPE: FORMAL_GENERAL_THEOREM]
 -- BRIDGE-07: Hardened Lean 4 Finitary Lattice Bridge
 namespace Math3
 namespace Bridges
