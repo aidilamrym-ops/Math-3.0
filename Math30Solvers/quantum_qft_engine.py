@@ -1,5 +1,5 @@
 import math
-from quantum_tensor_engine import DiscreteMultiQubit
+from Math30Solvers.quantum_tensor_engine import DiscreteMultiQubit
 
 class DiscreteQFTEngine:
     """
@@ -78,7 +78,7 @@ class DiscreteQFTEngine:
         return reg
 
 if __name__ == "__main__":
-    from quantum_tensor_engine import DiscreteMultiQubit
+    from Math30Solvers.quantum_tensor_engine import DiscreteMultiQubit
     
     # Initialize |00>
     reg = DiscreteMultiQubit(2)
