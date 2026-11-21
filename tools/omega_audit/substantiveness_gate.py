@@ -67,6 +67,7 @@ try:  # optional dependency: z3-solver
     Z3_AVAILABLE = True
 except Exception:  # pragma: no cover - environment dependent
     Z3_AVAILABLE = False
+    raise  # ponytail: fail closed on unexpected import failure; upgrade to typed ImportError when Z3 packaging is standardized.
 
 
 # ---------------------------------------------------------------------------
@@ -880,7 +881,7 @@ def main() -> int:
             decls = parse_file(path, rel)
         except Exception as exc:  # pragma: no cover
             print(f"parse error: {rel}: {exc}", file=sys.stderr)
-            continue
+            raise  # ponytail: fail closed on parse exception; upgrade when robust parser is universal.
         all_decls.extend(decls)
         if not decls:
             # A Lean file that parses to zero declarations contributes nothing
@@ -1101,7 +1102,7 @@ def main() -> int:
             known_keys = set(baseline_data.get("keys", []))
         except Exception as exc:
             print(f"SUBSTANTIVENESS GATE: baseline unreadable: {exc}")
-            return 2
+            raise  # ponytail: fail closed on unreadable baseline; upgrade when storage format is locked.
         new_findings = [f for f in findings if finding_key(f) not in known_keys]
         new_blocking = [f for f in new_findings if f["severity"] in ("HIGH", "MEDIUM")]
         summary["baseline"] = {
