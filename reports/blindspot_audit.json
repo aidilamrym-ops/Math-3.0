@@ -1,19 +1,63 @@
 {
   "audit": "math30_blindspot_audit",
   "audit_version": "1.0.0",
-  "timestamp": "2026-11-12T02:51:44.404493+00:00",
+  "timestamp": "2026-11-21T17:30:51.419010+00:00",
   "root": "D:\\Opencode AI Agent\\Math 3.0 Tools",
   "stats": {
-    "lean_files": 521,
-    "lean_declarations": 1857,
-    "lean_theorems": 760,
-    "python_files": 121,
-    "python_functions": 508,
+    "lean_files": 554,
+    "lean_declarations": 2326,
+    "lean_theorems": 1094,
+    "python_files": 128,
+    "python_functions": 597,
     "python_constant_returns": 0,
-    "finding_count": 0,
-    "warning_count": 0
+    "finding_count": 3,
+    "warning_count": 3
   },
-  "findings": [],
-  "warnings": [],
-  "verdict": "PASSED"
+  "findings": [
+    {
+      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/omega_audit/substantiveness_gate.py",
+      "line": 68,
+      "rule": "audit-swallow",
+      "message": "broad exception handler does not re-raise or fail closed",
+      "severity": "FAIL"
+    },
+    {
+      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/omega_audit/substantiveness_gate.py",
+      "line": 881,
+      "rule": "audit-swallow",
+      "message": "broad exception handler does not re-raise or fail closed",
+      "severity": "FAIL"
+    },
+    {
+      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/omega_audit/substantiveness_gate.py",
+      "line": 1102,
+      "rule": "audit-swallow",
+      "message": "broad exception handler does not re-raise or fail closed",
+      "severity": "FAIL"
+    }
+  ],
+  "warnings": [
+    {
+      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/omega_audit/check_interval_ldlt.py",
+      "line": 182,
+      "rule": "audit-hardcoded-verdict",
+      "message": "hard-coded PASS/SUCCESS verdict literal found",
+      "severity": "WARN"
+    },
+    {
+      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/omega_audit/substantiveness_gate.py",
+      "line": 1052,
+      "rule": "audit-hardcoded-verdict",
+      "message": "hard-coded PASS/SUCCESS verdict literal found",
+      "severity": "WARN"
+    },
+    {
+      "path": "D:/Opencode AI Agent/Math 3.0 Tools/tools/omega_audit/substantiveness_gate.py",
+      "line": 1124,
+      "rule": "audit-hardcoded-verdict",
+      "message": "hard-coded PASS/SUCCESS verdict literal found",
+      "severity": "WARN"
+    }
+  ],
+  "verdict": "FAILED"
 }
