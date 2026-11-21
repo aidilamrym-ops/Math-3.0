@@ -1,16 +1,126 @@
 {
+  "generated_utc": "2026-11-21T13:54:25.876211+00:00",
+  "bridge": "BRIDGE-08 BostSlopeParsevalBridge",
+  "validator_version": "2026-11-21-honest-rebuild",
   "status": "PASS_REAL_FLINT",
-  "n_neg": 0,
-  "zero_straddle": false,
-  "dsitni_ratio": 0.28,
-  "dibd_ratio": 0.65,
+  "precision_bits": 6000,
+  "matrix_definition": "64x64 symmetric tridiagonal: M[i][i] = 3, M[i][i+1] = M[i+1][i] = -1",
   "inertia": [
     64,
     0,
     0
   ],
+  "n_neg": 0,
+  "zero_straddle": false,
+  "eigenvalue_isolation_certified": true,
+  "eigenvalue_enclosures_sample": [
+    "[1.002335546335346823486764606759976369156207441776987127120945575134684966497262174767211773346149873635039701960371079",
+    "[1.009336730564702741970186496756722546998130579478910413091616636068942121915368359880449994979312629065699234150625887",
+    "[1.020987201097897795260315248640825102133260524780911237031240141716513530415432061896562057190957723761156280553934395"
+  ],
+  "sylvester_leading_minors_positive": true,
+  "dsitni_ratio": {
+    "num": 51404700483835143274634860848,
+    "den": 8098437108275993832561598923235
+  },
+  "dsitni_ratio_decimal": "0.006347484063",
+  "dsitni_below_half": true,
+  "dibd_ratio": {
+    "num": 659034621587630041982498215,
+    "den": 659034621587630041982498918
+  },
+  "dibd_ratio_decimal": "0.999999999999",
+  "dibd_below_one": true,
   "exact_rational_enclosure": {
-    "num": 1645,
-    "den": 1000
-  }
+    "num": 3,
+    "den": 1,
+    "meaning": "minimum leading principal minor D_1..D_64 (exact Sylvester witness)"
+  },
+  "determinant": {
+    "num": 659034621587630041982498215,
+    "den": 1
+  },
+  "theorem_checks": {
+    "height_budget": {
+      "name": "bost_slope_height_budget_bound",
+      "ok": true,
+      "max_product": {
+        "num": 5,
+        "den": 2
+      },
+      "capacity_unit": {
+        "num": 5,
+        "den": 2
+      },
+      "sum": {
+        "num": 193,
+        "den": 2
+      },
+      "dimension_bound": {
+        "num": 160,
+        "den": 1
+      },
+      "boundary_case_equality": true,
+      "empty_sum_ok": true
+    },
+    "parseval_energy": {
+      "name": "path_quadric_parseval_energy_conservation",
+      "ok": true,
+      "energy_sum": {
+        "num": 345,
+        "den": 8
+      },
+      "energy_bound": {
+        "num": 100,
+        "den": 1
+      },
+      "max_energy": {
+        "num": 25,
+        "den": 16
+      },
+      "energy_max": {
+        "num": 25,
+        "den": 16
+      }
+    },
+    "iterated_remainder": {
+      "name": "iterated_parseval_remainder_suppression",
+      "ok": true,
+      "hypothesis_holds": true,
+      "conclusion_holds": true,
+      "degenerate_case_ok": true,
+      "parameters": {
+        "R": "1",
+        "C": "3/2",
+        "X": "4/5"
+      }
+    }
+  },
+  "negative_controls": [
+    {
+      "control": "indefinite_diagonal",
+      "expected": [
+        2,
+        1,
+        0
+      ],
+      "observed_inertia": [
+        2,
+        1,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "control": "singular_diagonal_fail_closed",
+      "expected": "not certified or zero_straddle",
+      "observed_inertia": [
+        0,
+        0,
+        0
+      ],
+      "non_isolated_eigenvalues": 3,
+      "ok": true
+    }
+  ]
 }

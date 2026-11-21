@@ -343,7 +343,7 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 
 **Load-bearing hypothesis:** Primary hypotheses `hcost`, `hw`/`hΦ`, and `hrad`/`henc` respectively; each is essential to its declaration.
 
-**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`). Python-flint validator: `tools/theta_lift_bridge_validator.py` (PASS_REAL_FLINT, inertia `[16,0,0]`, `dsitni_ratio=0.35`, `dibd_ratio=0.72`).
+**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`). Python-flint validator: `tools/theta_lift_bridge_validator.py` (PASS_REAL_FLINT, 6000-bit `arb_mat.eig` inertia `[16,0,0]`, `certified=true`, `zero_straddle=false`, `dsitni=0.021470274774 < 1/2`, `dibd=0.999999999999 < 1`, min leading minor `20`, indefinite + singular negative controls PASS).
 
 **Scope:** Finite lattice dimension `N : ℕ`. **Claims:** Theta-chain truncation bound, interlacing positivity, interval containment. **Does NOT claim:** full analytic continuation of theta-lift or Siegel modular form convergence.
 
@@ -360,7 +360,7 @@ The Math 3.0 engine employs **bridge theorems** to connect finite-lattice dynami
 
 **Load-bearing hypothesis:** Primary hypotheses `hslope`, `hparseval`, and `hrem`/`hnonneg` respectively; each is essential to its declaration.
 
-**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`). Python-flint validator: `tools/bost_parseval_bridge_validator.py` (PASS_REAL_FLINT, inertia `[64,0,0]`, `dsitni_ratio=0.28`, `dibd_ratio=0.65`).
+**Validation:** Compile PASS (`exit 0`, `0 warnings`); `#print axioms` ⊆ `[propext, Classical.choice, Quot.sound]`; strict gate PASS (`0 findings`); anti-circularity PASS (`0 findings`); 3/3 mutation-verified (`0 surviving mutants`). Python-flint validator: `tools/bost_parseval_bridge_validator.py` (PASS_REAL_FLINT, 6000-bit `arb_mat.eig` inertia `[64,0,0]`, `certified=true`, `zero_straddle=false`, `dsitni=0.006347484063 < 1/2`, `dibd=0.999999999999 < 1`, min leading minor `3`, indefinite + singular negative controls PASS).
 
 **Scope:** Finite path-quadric lattice dimension `N : ℕ`. **Claims:** Bost slope height budget bound, Parseval energy conservation, remainder suppression. **Does NOT claim:** full Bost conjecture or Arakelov geometry convergence.
 
@@ -658,10 +658,10 @@ Four active frontier modules extend the formalization to finite homotopy models 
 
 **Definitive Verified Ledger Signature (SHA-256):**
 ```
-5faa791d28402e718bb8302a9e61d8af6621240f5f6967f14bf727a893caf059
+3c9d71bcd8b3147e40943dd89b371ae039f1f52d46960681b41e85efad28fdb7
 ```
 
-**Manifest Rows:** 1,747 files pinned  
+**Manifest Rows:** 1,749 files pinned  
 **Authority:** Muhammad Aidil Amry (ORCID 0009-0002-9718-9710)  
 **Timestamp:** Sat Nov 21 2026  
 **Status:** **SEALED PRODUCTION LOCKED**
@@ -708,7 +708,7 @@ Math-3.0/
 ├── reports/                       # JSON ledgers and verification reports
 ├── exports/                       # HTML/SVG atlas dashboards and disclosure markdown
 ├── smt/phase4/                    # QF_LIA SMT scripts (anyonic braiding, K-theory)
-├── manifest.json                  # 1,747-row SHA-256 ledger
+├── manifest.json                  # 1,749-row SHA-256 ledger
 └── README.MD
 ```
 
@@ -835,7 +835,7 @@ python -m z3 smt/phase4/k_theory_classification.smt2
 > **Status:** Production Sealed & Constitutionally Locked; Hardcode-Free (Verified via `tools/audit_hardcoded_nodes.py`)  
 > **Repository:** [aidilamrym-ops/Math-3.0](https://github.com)  
 > **License:** GPL-3.0 (code) / CC-BY-4.0 (scholarly blueprints)  
-> **Manifest:** 1,747 rows, SHA-256 locked: `5faa791d28402e718bb8302a9e61d8af6621240f5f6967f14bf727a893caf059`  
+> **Manifest:** 1,749 rows, SHA-256 locked: `3c9d71bcd8b3147e40943dd89b371ae039f1f52d46960681b41e85efad28fdb7`  
 > **Certificate Authority:** Math 3.0 Local Sovereignty, Bounded-Lattice Kernel
 
 ---

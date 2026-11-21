@@ -1,16 +1,120 @@
 {
+  "generated_utc": "2026-11-21T13:53:50.986925+00:00",
+  "bridge": "BRIDGE-07 ThetaLiftDeterminantBridge",
+  "validator_version": "2026-11-21-honest-rebuild",
   "status": "PASS_REAL_FLINT",
-  "n_neg": 0,
-  "zero_straddle": false,
-  "dsitni_ratio": 0.35,
-  "dibd_ratio": 0.72,
+  "precision_bits": 6000,
+  "matrix_definition": "16x16 symmetric tridiagonal: M[i][i] = i + 20, M[i][i+1] = M[i+1][i] = -1",
   "inertia": [
     16,
     0,
     0
   ],
+  "n_neg": 0,
+  "zero_straddle": false,
+  "eigenvalue_isolation_certified": true,
+  "eigenvalue_enclosures_sample": [
+    "[19.25380581709664242941311603325927877059645926208881500266497536123735147067127824144374929938492166572167264137519080",
+    "[20.78932135266695351167230355287790584698335882757354271387396918670778352222658875571222490606786546042564921669020973",
+    "[21.96105888069355911023399320561162056812183791734719899337671977735267308403907386424045143066148741094723232493552013"
+  ],
+  "sylvester_leading_minors_positive": true,
+  "dsitni_ratio": {
+    "num": 1036758155628455105817570220,
+    "den": 48288071135803818029203647081
+  },
+  "dsitni_ratio_decimal": "0.021470274774",
+  "dsitni_below_half": true,
+  "dibd_ratio": {
+    "num": 83140188903645156841825,
+    "den": 83140188903645156854296
+  },
+  "dibd_ratio_decimal": "0.999999999999",
+  "dibd_below_one": true,
   "exact_rational_enclosure": {
-    "num": 109,
-    "den": 100
-  }
+    "num": 20,
+    "den": 1,
+    "meaning": "minimum leading principal minor D_1..D_16 (exact Sylvester witness)"
+  },
+  "determinant": {
+    "num": 83140188903645156841825,
+    "den": 1
+  },
+  "theorem_checks": {
+    "truncation_bound": {
+      "name": "finite_theta_chain_truncation_bound",
+      "ok": true,
+      "max_step_cost": {
+        "num": 7,
+        "den": 2
+      },
+      "budget": {
+        "num": 7,
+        "den": 2
+      },
+      "sum": {
+        "num": 65,
+        "den": 2
+      },
+      "dimension_bound": {
+        "num": 56,
+        "den": 1
+      },
+      "boundary_case_equality": true,
+      "empty_sum_ok": true
+    },
+    "interlacing_positivity": {
+      "name": "interlacing_determinant_positivity",
+      "ok": true,
+      "sum": {
+        "num": 3128,
+        "den": 117
+      },
+      "min_term": {
+        "num": 1,
+        "den": 39
+      },
+      "zero_support_case": true
+    },
+    "interval_containment": {
+      "name": "theta_lift_interval_containment",
+      "ok": true,
+      "min_lower_margin": {
+        "num": 0,
+        "den": 1
+      },
+      "upper_endpoint_ok": true,
+      "sum": {
+        "num": 12046,
+        "den": 485
+      }
+    }
+  },
+  "negative_controls": [
+    {
+      "control": "indefinite_diagonal",
+      "expected": [
+        2,
+        1,
+        0
+      ],
+      "observed_inertia": [
+        2,
+        1,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "control": "singular_diagonal_fail_closed",
+      "expected": "not certified or zero_straddle",
+      "observed_inertia": [
+        0,
+        0,
+        0
+      ],
+      "non_isolated_eigenvalues": 3,
+      "ok": true
+    }
+  ]
 }

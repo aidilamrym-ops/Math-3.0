@@ -927,7 +927,33 @@
       "impact": "The file advertised a discrete index theorem that it never stated.",
       "action": "Replaced both placeholders with an explicit constant spinor and a proved kernel theorem for the 3-cycle Dirac operator; rewrote the header claim limits. Recompiled EXIT=0 with 0 warnings; strict and anti-circularity gates PASS; substantiveness gate HIGH=0.",
       "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0071",
+      "batch": 16,
+      "asset": "tools/theta_lift_bridge_validator.py",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "CRITICAL",
+      "category": "FABRICATED_PASS",
+      "finding": "The BRIDGE-07 validator printed PASS_REAL_FLINT while every reported quantity was a literal: n_neg=0, zero_straddle=False, dsitni_ratio=0.35, dibd_ratio=0.72, inertia=[16,0,0], exact_rational_enclosure=109/100. Its only flint operation was pi*pi, unrelated to any theta-lift matrix.",
+      "evidence": "Original source lines 10-26: x = flint.arb(\"3.14159265358979323846\"); res = x*x; then a hard-coded results dict. No matrix, no eigenvalue, no DSITNI/DIBD computation existed. Archived at reports/flawed_artifacts/bridge_validator_hardcode_2026-11-21/theta_lift_bridge_validator.hardcoded.original.py.",
+      "impact": "The README advertised a real-flint inertia receipt for BRIDGE-07 that no computation ever produced; the certificate could not fail.",
+      "action": "Rebuilt with exact-rational theorem checks (truncation boundary, interlacing positivity, interval containment), genuine 16x16 arb_mat eigenvalue inertia at 6000 bits, exact DSITNI/DIBD from the same matrix, and two negative controls. Observed: inertia [16,0,0], certified=True, dsitni=0.021470274774, dibd=0.999999999999, min leading minor 20. Exit 0 only when every check passes.",
+      "status": "FIXED"
+    },
+    {
+      "id": "OMEGA-0072",
+      "batch": 16,
+      "asset": "tools/bost_parseval_bridge_validator.py",
+      "stage": "ADVERSARIAL_AUDIT",
+      "severity": "CRITICAL",
+      "category": "FABRICATED_PASS",
+      "finding": "The BRIDGE-08 validator printed PASS_REAL_FLINT while every reported quantity was a literal: n_neg=0, zero_straddle=False, dsitni_ratio=0.28, dibd_ratio=0.65, inertia=[64,0,0], exact_rational_enclosure=1645/1000. Its only flint operation was (pi^2/6)*64, an unrelated scalar product.",
+      "evidence": "Original source lines 10-26: e_max = flint.arb(\"1.644934...\"); total_energy = e_max*64; then a hard-coded results dict. No matrix, no Parseval sum, no DSITNI/DIBD computation existed. Archived at reports/flawed_artifacts/bridge_validator_hardcode_2026-11-21/bost_parseval_bridge_validator.hardcoded.original.py.",
+      "impact": "The README advertised a real-flint inertia receipt for BRIDGE-08 that no computation ever produced; the certificate could not fail.",
+      "action": "Rebuilt with exact-rational theorem checks (Bost height budget boundary, Parseval energy bound, iterated remainder suppression), genuine 64x64 arb_mat eigenvalue inertia at 6000 bits, exact DSITNI/DIBD from the same matrix, and two negative controls. Observed: inertia [64,0,0], certified=True, dsitni=0.006347484063, dibd=0.999999999999, min leading minor 3. Exit 0 only when every check passes.",
+      "status": "FIXED"
     }
   ],
-  "updated_utc": "2026-11-16T01:12:40Z"
+  "updated_utc": "2026-11-21T13:55:02Z"
 }
