@@ -1,0 +1,14 @@
+{
+  "files_extracted": 7,
+  "classification": {
+    "src/Main.lean": "PROVED_ALGEBRAIC",
+    "src/Supplements/Kernels/MainTheorems.lean": "PROVED_ALGEBRAIC",
+    "src/Formalism/VW.lean": "PROVED_ALGEBRAIC",
+    "src/UpperTheory/FinalTheorems.lean": "PROVED_ALGEBRAIC",
+    "src/UpperTheory/GalStar.lean": "PROVED_ALGEBRAIC",
+    "src/Development/AutomorphicArithmetic/ThetaCorrespondence/RowSrc.lean": "CONTINUUM_ABSTRACTION_PROJECTED",
+    "src/Development/AutomorphicArithmetic/Foundations/EtaleClopenDescent/LefschetzFixedPointFiniteEtaleCorrespondence.lean": "CONTINUUM_ABSTRACTION_PROJECTED"
+  },
+  "disk_space_remaining_gb": 15.85,
+  "readiness_stage_2": true
+}
