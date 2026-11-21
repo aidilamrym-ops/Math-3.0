@@ -1059,7 +1059,7 @@
   "reports/certificates/z3_tribunal_bounds_certificate.json": "f58ef669438c944b93ad62f899528db8f5e3639dffb29cb1b3f7bd58f660ba3b",
   "reports/claims/ledger.json": "11203ad60fa2369a2a5c4372dccc21c8a62d2e5f206e8b0467fcd7e66a0fbdce",
   "reports/claims/ledger.md": "8f0f8018939ff8fbbeeaf3e5db11e7a2e10ef7f99741bb5111e613d98fd6f1c5",
-  "reports/continuum_density_stress_test.json": "d4bf23e8336cbf9eb157b8ceb4ca64b3ea220cdcf4e148aad9fa6a4ad0c8fbb0",
+  "reports/continuum_density_stress_test.json": "39e2f97e3032d147f1d5fdcfc991c682fb4e85e1f38fc0bd212765bdd80df9d4",
   "reports/error_diagnostics_summary.json": "8501c8718a81829bca662c70790809f9db3bb151537adb9a1894dc01fc358eea",
   "reports/external_rh_dependency_manifest.json": "6407279373b9a82e30964b07e7e2280678126b2ec22ed2ff4f47dd745054fe71",
   "reports/flawed_artifacts/AbcCensusEvidence.lean": "79f7858f1f8bd4d8630a0428ca7fe95178792886b01f779e8aef5e58a0b9255a",
