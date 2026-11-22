@@ -96,6 +96,8 @@ def shor_modular_exponentiation(base, exp, modulus):
     f(x) = base^exp mod modulus
     """
     smt_bound = 10**18
+    if modulus <= 0:
+        raise ValueError(f"QUANTUM_ENTANGLEMENT_ALARM: invalid modulus {modulus} (must be positive).")
     if base >= smt_bound or modulus >= smt_bound or exp >= smt_bound:
         print("QUANTUM_ENTANGLEMENT_ALARM: SMT boundary scale limit breached.")
         return None
