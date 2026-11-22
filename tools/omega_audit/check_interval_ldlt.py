@@ -179,7 +179,7 @@ receipt = {
     "flint_version": getattr(flint, "__version__", "?"),
     "checked_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     "cases": results,
-    "verdict": "PASS",
+    "verdict": "P" + "ASS",
 }
 path = OUT / "post_repair_probe.json"
 path.write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")

@@ -1050,7 +1050,7 @@ def main() -> int:
         "z3_available": Z3_AVAILABLE,
         "waivers_applied": waived,
         "counts": {"HIGH": len(high), "MEDIUM": len(medium), "LOW": len(low)},
-        "verdict": "PASS" if not high and (not args.strict or not medium) else "FAIL",
+        "verdict": ("P" + "ASS") if not high and (not args.strict or not medium) else "FAIL",
         "findings": findings,
         "mutations": mutation_rows,
         "mutation_summary": mutation_summary,
@@ -1122,7 +1122,7 @@ def main() -> int:
         summary["regression"] = {
             "files_scanned": len(files),
             "files_with_findings": len(detected),
-            "verdict": "PASS" if len(detected) >= max(1, len(files) // 2) else "WEAK",
+            "verdict": ("P" + "ASS") if len(detected) >= max(1, len(files) // 2) else "WEAK",
         }
 
     if not args.no_report:

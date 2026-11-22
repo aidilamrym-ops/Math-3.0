@@ -1,17 +1,17 @@
 {
   "gate": "GATE_5_EXACT_RATIONAL_EXTRACTION",
-  "timestamp": "2026-11-21T18:59:58.823240+00:00",
+  "timestamp": "2026-11-21T23:19:58.622713+00:00",
   "verdict": "PASSED",
   "sources": {
     "lte_spectral_validation": {
       "path": "reports\\lte_spectral_validation.json",
-      "sha256": "c502df51297021911165bdc51fe42831399c1e7fffef3b2dd0c57014b3df2d90",
+      "sha256": "4d40c81ecbf4570f8e29c57802ecc89da5906bb23f729e70ee203eed0b9cad43",
       "precision_bits": 24000,
       "pivots": 3
     },
     "topological_uniqueness": {
       "path": "reports\\topological_uniqueness.json",
-      "sha256": "3738329c2598f69b09ab27d780e1f9c6038c1b67c6d0e0d04c9b32ef569e2901",
+      "sha256": "6822c14d5af397cc738ec1c499c0da8764cdd8cfe80d4464cf9f34f737d1f0bb",
       "precision_bits": 24000,
       "pivots": 3
     }
@@ -23,7 +23,7 @@
   },
   "certificate": {
     "path": "lean\\spec_v4\\Gate5RationalExtractionValidation.lean",
-    "sha256": "840a06c2e3359c809e90c57b2a2191af39e7420c74877d6de144342165f36a17",
+    "sha256": "af2be3f62d76b544ea1057ec2dd96d2b3e3428f9f4d3ea8f40ab54a70f955aec",
     "bytes": 402072,
     "lines": 326,
     "definitions": 18,
@@ -97,8 +97,8 @@
     "timed_out": false,
     "stdout": "",
     "stderr": "",
-    "elapsed_s": 67.754
+    "elapsed_s": 36.35
   },
-  "elapsed_s": 68.304,
+  "elapsed_s": 36.697,
   "scope_note": "This gate certifies exact transport of the Gate 4 interval endpoints and their signs. It does not certify the upstream floating-point matrix entries from which those balls were computed; that trust boundary remains the python-flint arb construction."
 }
