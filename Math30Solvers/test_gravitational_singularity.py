@@ -31,15 +31,17 @@ class GravitationalSingularityStressTest:
         collapsed_vol = flint.arb("1e-110")
         
         singularity_alarm = False
-        try:
-            # Division by sub-Planck volume (zero-straddling / singularity approach)
-            density = mass / collapsed_vol
-            if collapsed_vol <= planck_vol:
-                singularity_alarm = True
-                print("  -> GRAVITATIONAL_SINGULARITY_ALARM: Sub-Planck volume division intercepted. Infinity blocked.")
-        except Exception as e:
+        # ResolutionAlarm guard BEFORE division. arb returns nan silently for a
+        # zero/sub-Planck divisor; intercept first so infinity is never formed.
+        if collapsed_vol <= 0 or collapsed_vol <= planck_vol:
             singularity_alarm = True
-            print(f"  -> GRAVITATIONAL_SINGULARITY_ALARM triggered via exception: {e}")
+            print("  -> GRAVITATIONAL_SINGULARITY_ALARM: Sub-Planck volume division intercepted. Infinity blocked.")
+        else:
+            density = mass / collapsed_vol
+            if not density.is_finite():
+                raise RuntimeError(
+                    "GRAVITATIONAL_SINGULARITY_ALARM: non-finite density after bounded volume division."
+                )
 
         report = {
             "test": "GRAVITATIONAL_SINGULARITY_DISMANTLEMENT",
