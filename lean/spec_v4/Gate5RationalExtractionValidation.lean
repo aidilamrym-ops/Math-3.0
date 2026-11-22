@@ -7,8 +7,8 @@
   no decimal or floating-point literal occurs in this file.
 
   bridge_source_sha256:  6e0b5dc0aa825c20c470284ef18078763bd45a4b43ae023a30be10b563def29d
-  lte_source_sha256:     b04d01a33704948b38db46eeb97bffb3f5157ab7db940b0c07a4eb646925cca9
-  newton_source_sha256:  90ed6b146b49a7bf99ef59735bcd44fde2feef608c04f5ab13aa057cccf4aa1b
+  lte_source_sha256:     bebf46e0bbc08a026170d01119c5433014776262fe84384864c2db52ac22f165
+  newton_source_sha256:  d45236ccfb6798be98de0b25abdf0d5fbd49848bd18bad46b1a57d10e893e96d
 
   The generic bridge source is embedded as a re-namespaced snapshot
   (Math30.Gate5.Certified) with its SHA-256 pinned below.  The file is
